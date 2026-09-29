@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Whale Watch · sports prediction markets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E9EDF1; --panel:#FFFFFF; --ink:#15202B; --muted:#5E6B78; --line:#D3DAE1;
+  --buy:#1F56E0; --sell:#C7372F; --win:#1B8A4B; --sharp:#B0850F; --sharp-bg:#FFF4D1; --chip:#F3F5F8;
+  --num:"Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  --body:"Archivo", -apple-system, "Segoe UI", Roboto, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#101820; --panel:#18232E; --ink:#E7ECF1; --muted:#93A1AF; --line:#2A3846;
+    --buy:#6F95FF; --sell:#FF7A70; --win:#4CD08A; --sharp:#F2C44B; --sharp-bg:#3A3015; --chip:#1F2C38;
+  }
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 var(--body)}
+.wrap{max-width:780px;margin:0 auto;padding:18px 14px 60px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}
+h1{font:700 44px/0.9 var(--num);margin:0;letter-spacing:-0.5px}
+.sub{color:var(--muted);font-size:13px;margin-top:6px}
+button,select{font:inherit;color:inherit}
+.btn{background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:9px 16px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn:disabled{opacity:.5}
+.controls{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;gap:10px;margin-bottom:12px}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.row > span{color:var(--muted);font-size:13px;min-width:70px}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;font-size:14px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.sharp[aria-pressed="true"]{background:var(--sharp);border-color:var(--sharp);color:#1b1400}
+select{background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:5px 8px}
+:focus-visible{outline:2px solid var(--buy);outline-offset:2px}
+.tabs{display:flex;gap:4px;margin:4px 0 10px}
+.tab{flex:1;background:transparent;border:0;border-bottom:3px solid var(--line);padding:8px;font-weight:600;cursor:pointer;color:var(--muted)}
+.tab[aria-selected="true"]{border-color:var(--ink);color:var(--ink)}
+.status{color:var(--muted);font-size:13px;margin:6px 2px 10px;min-height:18px}
+.status.err{color:var(--sell)}
+.list{display:grid;gap:8px}
+.bet{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px 12px;display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px}
+.bet.is-sharp{border-left:5px solid var(--sharp)}
+.amt{font:700 30px/1 var(--num);grid-row:span 2;min-width:78px}
+.amt small{display:block;font:500 12px/1.3 var(--body);color:var(--muted);margin-top:4px}
+.score{grid-row:span 2;align-self:start;text-align:center;border-radius:10px;padding:4px 8px;min-width:48px;font:700 26px/1 var(--num);border:2px solid currentColor;cursor:pointer;background:transparent}
+.score small{display:block;font:500 10px/1.2 var(--body);color:var(--muted)}
+.pick{font-weight:600}
+.side{font-weight:700}
+.side.buy{color:var(--buy)} .side.sell{color:var(--sell)}
+.mkt{color:var(--muted);font-size:13px;overflow:hidden;text-overflow:ellipsis}
+.who{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;color:var(--muted);margin-top:4px}
+.why{grid-column:1 / -1;font-size:13px;color:var(--muted);background:var(--chip);border-radius:8px;padding:8px 10px;display:none}
+.why.open{display:block}
+.badge{background:var(--sharp-bg);color:var(--sharp);font-weight:700;border-radius:6px;padding:1px 7px;font-size:12px}
+.lg{border:1px solid var(--line);border-radius:6px;padding:0 6px;font-size:12px}
+.venue{font-weight:700;font-size:12px;border-radius:6px;padding:0 6px;background:var(--chip)}
+.venue.k{color:#0E8F6E}.venue.p{color:var(--buy)}
+.who a{color:inherit}
+.cons,.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+.cons h3{margin:0 0 2px;font-size:15px}
+.bar{height:8px;border-radius:4px;background:var(--chip);overflow:hidden;margin:8px 0 4px;display:flex}
+.bar i{display:block;height:100%}
+.empty{background:var(--panel);border:1px dashed var(--line);border-radius:12px;padding:22px;text-align:center;color:var(--muted)}
+.tblwrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:right;color:var(--muted);font-weight:500;font-size:12px;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{text-align:right;padding:9px 8px;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left}
+td.bk{font:700 20px/1 var(--num)}
+.pos{color:var(--win);font-weight:600} .neg{color:var(--sell);font-weight:600}
+tr.total td{font-weight:700;border-bottom:0}
+.card p{margin:.4em 0;color:var(--muted);font-size:13px}
+.card ul{margin:.3em 0;padding-left:18px;color:var(--muted);font-size:13px}
+footer{color:var(--muted);font-size:12px;margin-top:22px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Whale Watch</h1>
+      <div class="sub">Biggest sports bets on Polymarket and Kalshi, scored and tracked</div>
+    </div>
+    <button class="btn" id="refresh">Refresh</button>
+  </header>
+
+  <div class="controls">
+    <div class="row" id="minRow"><span>Min bet</span></div>
+    <div class="row" id="scoreRow"><span>Min score</span></div>
+    <div class="row" id="venueRow"><span>Venue</span></div>
+    <div class="row">
+      <span>Show</span>
+      <button class="chip" id="fAll" aria-pressed="false">All whales</button>
+      <button class="chip sharp" id="fSharp" aria-pressed="false">Sharps only</button>
+      <button class="chip" id="fBuys" aria-pressed="false">Buys only</button>
+    </div>
+    <div class="row">
+      <span>League</span>
+      <select id="league"><option value="">All sports</option></select>
+    </div>
+    <div class="row" id="sortRow"><span>Sort by</span>
+      <button class="chip" data-v="score">Score</button>
+      <button class="chip" data-v="size">Size</button>
+      <button class="chip" data-v="time">Newest</button>
+    </div>
+    <div class="row">
+      <span>Sharp badge</span>
+      <select id="period">
+        <option value="MONTH">30-day profit</option>
+        <option value="ALL">All-time profit</option>
+        <option value="WEEK">7-day profit</option>
+      </select>
+      <button class="chip" id="auto" aria-pressed="false">Auto-refresh 60s</button>
+      <button class="chip" id="proxyBtn">Proxy URL</button>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="tape">Bet tape</button>
+    <button class="tab" role="tab" data-tab="cons">Consensus</button>
+    <button class="tab" role="tab" data-tab="results">Results</button>
+  </div>
+  <div class="status" id="status">Loading…</div>
+  <div class="list" id="out"></div>
+
+  <footer>
+    Sharps = top 100 wallets on Polymarket's Sports profit leaderboard. Trades come from Polymarket's and Kalshi's public APIs; Kalshi trades are anonymous.
+    Your results log is saved in this browser only. Not financial advice.
+  </footer>
+</div>
+
+<script>
+const DATA = "https://data-api.polymarket.com";
+const GAMMA = "https://gamma-api.polymarket.com";
+const KALSHI_HOSTS = ["https://external-api.kalshi.com/trade-api/v2", "https://api.elections.kalshi.com/trade-api/v2"];
+let kHost = 0;
+async function kget(path){
+  let err;
+  for (let n = 0; n < KALSHI_HOSTS.length; n++){
+    const i = (kHost + n) % KALSHI_HOSTS.length;
+    try { const j = await getJSON(KALSHI_HOSTS[i] + path); kHost = i; return j; } catch(e){ err = e; }
+  }
+  throw err;
+}
+const VENUES = ["", "Polymarket", "Kalshi"];
+const FETCH_FLOOR = 1000;
+const MINS = [1000, 2500, 5000, 10000, 25000, 50000];
+const SCORE_MINS = [0, 50, 60, 70, 80, 90];
+const BUCKETS = [[90,100],[80,89],[70,79],[60,69],[50,59],[40,49],[0,39]];
+
+const defaults = { min: 5000, minScore: 0, sharpOnly: false, buysOnly: false, league: "", period: "MONTH", tab: "tape", sort: "score", incBackfill: true, venue: "", proxy: "" };
+const state = Object.assign({}, defaults, loadLS("ww-state") || {});
+if (!state.v2){ state.sort = "score"; state.v2 = true; }
+if (!state.proxy && !state.proxyCleared) state.proxy = "https://wandering-brook-9f12.luke-blasig.workers.dev";
+let ledger = loadLS("ww-ledger") || {};
+let trades = [], posMap = new Map(), marketMeta = new Map(), seenNames = new Map(), kalshiMeta = new Map();
+let sharpsBy = { WEEK: new Map(), MONTH: new Map(), ALL: new Map() };
+let timer = null, busy = false, openWhy = new Set();
+
+function loadLS(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } }
+function saveLS(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+const save = () => saveLS("ww-state", state);
+let hosted = null;
+const saveLedger = () => { if (!hosted) saveLS("ww-ledger", ledger); };
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = n => { const a = Math.abs(n), sg = n < 0 ? "-" : ""; return sg + (a >= 1e6 ? "$" + (a/1e6).toFixed(2) + "M" : a >= 1e3 ? "$" + (a/1e3).toFixed(a >= 1e5 ? 0 : 1) + "k" : "$" + Math.round(a)); };
+const american = p => { if (!(p > 0 && p < 1)) return "—"; const o = p >= .5 ? -(p/(1-p))*100 : ((1-p)/p)*100; return (o > 0 ? "+" : "") + Math.round(o); };
+const ago = ts => { const s = Math.max(0, Date.now()/1000 - ts); if (s < 60) return "just now"; if (s < 3600) return Math.floor(s/60) + "m ago"; if (s < 86400) return Math.floor(s/3600) + "h ago"; return Math.floor(s/86400) + "d ago"; };
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const parseArr = v => { try { return Array.isArray(v) ? v : JSON.parse(v || "[]"); } catch(e){ return []; } };
+const scoreColor = s => s >= 80 ? "var(--win)" : s >= 60 ? "var(--sharp)" : s >= 40 ? "var(--muted)" : "var(--sell)";
+
+const LEAGUES = [
+  [/^nfl-/, "NFL"], [/^(cfb|ncaaf)-/, "CFB"], [/^nba-/, "NBA"], [/^wnba-/, "WNBA"], [/^(cbb|ncaab)-/, "CBB"],
+  [/^mlb-/, "MLB"], [/^nhl-/, "NHL"], [/^epl-/, "EPL"], [/^(lal|laliga)-/, "La Liga"], [/^ucl-/, "UCL"],
+  [/^uel-/, "UEL"], [/^(bun|bundesliga)-/, "Bundesliga"], [/^(sea|seriea)-/, "Serie A"], [/^(fl1|ligue1)-/, "Ligue 1"],
+  [/^mls-/, "MLS"], [/^nwsl-/, "NWSL"], [/^ufc-/, "UFC"], [/^(atp|wta)-/, "Tennis"], [/^(pga|golf)-/, "Golf"],
+  [/^(f1|formula)/, "F1"], [/^(ipl|cricket|crint)-/, "Cricket"], [/^(boxing|box)-/, "Boxing"]
+];
+function leagueOf(slug){ for (const [re, name] of LEAGUES) if (re.test(slug || "")) return name; return "Other"; }
+
+/* ---------- network ---------- */
+const NAMES = ["direct", "your proxy", "allorigins", "codetabs"];
+const ROUTES = [
+  u => u,
+  u => state.proxy ? state.proxy + (state.proxy.includes("?") ? "&" : "?") + "url=" + encodeURIComponent(u) : null,
+  u => "https://api.allorigins.win/raw?url=" + encodeURIComponent(u),
+  u => "https://api.codetabs.com/v1/proxy/?quest=" + encodeURIComponent(u)
+];
+const routeIdx = {};
+async function getJSON(url){
+  const errs = []; const host = new URL(url).host;
+  const order = [...new Set([routeIdx[host] ?? 0, 0, 1, 2, 3])];
+  for (const i of order){
+    const target = ROUTES[i](url); if (!target) continue;
+    try {
+      const ctrl = new AbortController(); const to = setTimeout(() => ctrl.abort(), 9000);
+      const r = await fetch(target, { signal: ctrl.signal }); clearTimeout(to);
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      const j = await r.json(); routeIdx[host] = i; return j;
+    } catch(e){ errs.push(NAMES[i] + ": " + (e.name === "TypeError" ? "blocked by browser" : e.name === "AbortError" ? "timed out" : e.message)); }
+  }
+  throw new Error(errs.join(", "));
+}
+
+
+async function loadSharps(period){
+  const pages = await Promise.all([0, 50].map(o =>
+    getJSON(`${DATA}/v1/leaderboard?category=SPORTS&timePeriod=${period}&orderBy=PNL&limit=50&offset=${o}`).catch(() => [])));
+  const m = new Map();
+  pages.flat().forEach(r => { if (r && r.proxyWallet && Number(r.pnl) > 0) m.set(r.proxyWallet.toLowerCase(), { rank: Number(r.rank), pnl: Number(r.pnl) }); });
+  return m;
+}
+
+function indexEvents(evs){
+  evs.forEach(e => (e.markets || []).forEach(m => { if (m.conditionId) marketMeta.set(m.conditionId, m); }));
+}
+
+async function tradesForEvents(evs){
+  const ids = evs.map(e => e.id);
+  const chunks = []; for (let i = 0; i < ids.length; i += 25) chunks.push(ids.slice(i, i+25));
+  const batches = await Promise.all(chunks.map(c =>
+    getJSON(`${DATA}/trades?eventId=${c.join(",")}&filterType=CASH&filterAmount=${FETCH_FLOOR}&limit=500&takerOnly=true`).catch(() => [])));
+  return normalize(batches.flat());
+}
+
+function normalize(raw){
+  const seen = new Set(), out = [];
+  raw.forEach(t => {
+    if (!t || !t.conditionId) return;
+    const k = t.transactionHash + "|" + t.asset + "|" + t.size;
+    if (seen.has(k)) return; seen.add(k);
+    const price = Number(t.price), size = Number(t.size), idx = Number(t.outcomeIndex);
+    const names = seenNames.get(t.conditionId) || []; names[idx] = t.outcome; seenNames.set(t.conditionId, names);
+    out.push({ ...t, venue: "Polymarket", id: t.transactionHash + t.asset, price, size, idx, usd: price * size, league: leagueOf(t.eventSlug), wallet: (t.proxyWallet || "").toLowerCase() });
+  });
+  return out.sort((a, b) => b.timestamp - a.timestamp);
+}
+
+async function loadLive(){
+  let evs = [];
+  try { evs = await getJSON(`${GAMMA}/events?tag_slug=sports&active=true&closed=false&limit=200&order=volume24hr&ascending=false`); } catch(e){}
+  evs = Array.isArray(evs) ? evs.filter(e => e && e.id) : [];
+  indexEvents(evs);
+  if (evs.length) return tradesForEvents(evs.slice(0, 150));
+  const all = await getJSON(`${DATA}/trades?filterType=CASH&filterAmount=${FETCH_FLOOR}&limit=1000&takerOnly=true`);
+  return normalize(all).filter(t => t.league !== "Other");
+}
+
+/* ---------- Kalshi ---------- */
+const KALSHI_LG = [[/^KXNFL/,"NFL"],[/^KXNCAAF/,"CFB"],[/^KXWNBA/,"WNBA"],[/^KXNBA/,"NBA"],[/^KXNCAA(MB|B)/,"CBB"],[/^KXMLB/,"MLB"],
+  [/^KXNHL/,"NHL"],[/^KXEPL/,"EPL"],[/^KXUCL/,"UCL"],[/^KXUEL/,"UEL"],[/^KXMLS/,"MLS"],[/^KXLALIGA/,"La Liga"],[/^KXSERIEA/,"Serie A"],
+  [/^KXBUNDESLIGA/,"Bundesliga"],[/^KXLIGUE1/,"Ligue 1"],[/^KXUFC/,"UFC"],[/^KX(ATP|WTA)/,"Tennis"],[/^KXPGA/,"Golf"],[/^KXF1/,"F1"]];
+function kalshiLeague(tk){ if (!tk || /^KXMVE/.test(tk)) return null; for (const [re, n] of KALSHI_LG) if (re.test(tk)) return n; return null; }
+function kalshiNames(m){ const y = m.yes_sub_title || "Yes"; const n = m.no_sub_title && m.no_sub_title !== y ? m.no_sub_title : "Not " + y; return [y, n]; }
+function kalshiLink(tk){ const m = kalshiMeta.get(tk); const series = ((m && m.event_ticker) || tk).split("-")[0].toLowerCase(); return "https://kalshi.com/markets/" + series; }
+function resolveKalshi(m){ if (!m) return null; if (m.result === "yes") return 0; if (m.result === "no") return 1; return null; }
+async function loadKalshiMeta(tickers){
+  const chunks = []; for (let i = 0; i < tickers.length; i += 40) chunks.push(tickers.slice(i, i + 40));
+  await Promise.all(chunks.map(c => kget(`/markets?tickers=${c.join(",")}&limit=100`)
+    .then(j => (j.markets || []).forEach(m => kalshiMeta.set(m.ticker, m))).catch(() => {})));
+}
+const K_SERIES = ["KXNFLGAME","KXNFLSPREAD","KXNFLTOTAL","KXNCAAFGAME","KXNCAAFSPREAD","KXNCAAFTOTAL",
+  "KXMLBGAME","KXMLBSPREAD","KXMLBTOTAL","KXNHLGAME","KXNBAGAME","KXWNBAGAME","KXNCAAMBGAME",
+  "KXEPLGAME","KXUCLGAME","KXLALIGAGAME","KXSERIEAGAME","KXBUNDESLIGAGAME","KXLIGUE1GAME","KXMLSGAME",
+  "KXUFCFIGHT","KXATPMATCH","KXWTAMATCH"];
+let kCache = { t: 0, data: [] };
+async function loadKalshi(){
+  if (Date.now() - kCache.t < 240000) return kCache.data;
+  const since = Math.floor(Date.now() / 1000) - 86400;
+  let firstErr = null;
+  const lists = await Promise.all(K_SERIES.map(s => kget(`/markets?series_ticker=${s}&status=open&limit=200`)
+    .then(j => j.markets || []).catch(e => { firstErr = firstErr || e; return null; })));
+  if (lists.every(l => l === null)) throw firstErr || new Error("no response");
+  const markets = lists.flat().filter(Boolean);
+  markets.forEach(m => kalshiMeta.set(m.ticker, m));
+  const vol = m => Number(m.volume_24h_fp ?? m.volume_24h ?? 0);
+  const top = markets.filter(m => vol(m) > 0).sort((a, b) => vol(b) - vol(a)).slice(0, 40);
+  const tradeLists = await Promise.all(top.map(m => kget(`/markets/trades?ticker=${m.ticker}&limit=1000&min_ts=${since}`)
+    .then(j => j.trades || []).catch(() => [])));
+  const raw = tradeLists.flat(), out = [];
+  raw.forEach(t => {
+    const lg = kalshiLeague(t.ticker) || "Other";
+    const idx = (t.taker_outcome_side || t.taker_side) === "no" ? 1 : 0;
+    const price = Number(idx ? (t.no_price_dollars ?? t.no_price / 100) : (t.yes_price_dollars ?? t.yes_price / 100));
+    const size = Number(t.count_fp ?? t.count), usd = price * size;
+    if (!(usd >= FETCH_FLOOR) || !(price > 0)) return;
+    const m = kalshiMeta.get(t.ticker);
+    out.push({ venue: "Kalshi", id: t.trade_id, transactionHash: t.trade_id, asset: "", wallet: "", conditionId: t.ticker, side: "BUY",
+      idx, price, size, usd, timestamp: Date.parse(t.created_time) / 1000, league: lg, block: !!t.is_block_trade,
+      outcome: m ? kalshiNames(m)[idx] : (idx ? "No" : "Yes"), title: (m && m.title) || t.ticker, eventSlug: t.ticker });
+  });
+  window.__kDiag = `${markets.length} open Kalshi sports markets, ${raw.length} trades in the last 24h across the ${top.length} busiest`;
+  kCache = { t: Date.now(), data: out };
+  return out;
+}
+const linkFor = x => x.venue === "Kalshi" ? kalshiLink(x.conditionId) : "https://polymarket.com/event/" + encodeURIComponent(x.slug || x.eventSlug);
+
+/* ---------- scoring ---------- */
+function outcomeNames(cid){
+  const m = marketMeta.get(cid); const o = m ? parseArr(m.outcomes) : [];
+  return o.length ? o : (seenNames.get(cid) || []);
+}
+function effective(t){
+  if (t.side === "BUY") return { idx: t.idx, name: t.outcome, q: t.price };
+  const other = 1 - t.idx;
+  return { idx: other, name: outcomeNames(t.conditionId)[other] || ("Not " + t.outcome), q: 1 - t.price };
+}
+const isSharp = w => sharpsBy.MONTH.has(w) || sharpsBy.ALL.has(w);
+const rankPts = (r, lo, hi) => lo + (hi - lo) * (1 - clamp((r - 1) / 99, 0, 1));
+
+function buildPositions(list){
+  const m = new Map();
+  list.forEach(t => {
+    const e = effective(t), key = (t.wallet || "anon:" + t.id) + "|" + t.conditionId + "|" + e.idx;
+    const p = m.get(key) || { key, venue: t.venue, block: !!t.block, wallet: t.wallet, conditionId: t.conditionId, title: t.title, slug: t.eventSlug, league: t.league,
+      idx: e.idx, name: e.name, shares: 0, cost: 0, usd: 0, ts: t.timestamp, buys: 0, sells: 0 };
+    p.shares += t.size; p.cost += t.size * e.q; p.usd += t.usd; p.ts = Math.min(p.ts, t.timestamp);
+    t.side === "BUY" ? p.buys++ : p.sells++;
+    t.pos = key; m.set(key, p);
+  });
+  const sideSharps = new Map();
+  m.forEach(p => { if (isSharp(p.wallet)){ const k = p.conditionId + "|" + p.idx; (sideSharps.get(k) || sideSharps.set(k, new Set()).get(k)).add(p.wallet); } });
+  m.forEach(p => {
+    p.q = p.shares ? p.cost / p.shares : 0;
+    p.entryBuy = p.buys >= p.sells;
+    p.sharp = isSharp(p.wallet);
+    const mo = sharpsBy.MONTH.get(p.wallet), al = sharpsBy.ALL.get(p.wallet);
+    const trader = (mo ? rankPts(mo.rank, 10, 25) : 0) + (al ? rankPts(al.rank, 8, 20) : 0);
+    const size = clamp(20 * (Math.log10(Math.max(p.usd, 1)) - 3) / 2, 0, 20);
+    const withS = (sideSharps.get(p.conditionId + "|" + p.idx) || new Set()), against = (sideSharps.get(p.conditionId + "|" + (1 - p.idx)) || new Set());
+    const others = withS.size - (withS.has(p.wallet) ? 1 : 0);
+    const cons = clamp(6 * others - 6 * against.size, -15, 20);
+    const price = p.q >= .9 ? -10 : p.q >= .8 ? 0 : p.q >= .25 ? 10 : 3;
+    const kal = p.venue === "Kalshi";
+    const entry = !kal && p.entryBuy ? 5 : 0, block = kal && p.block ? 10 : 0;
+    p.parts = { trader: Math.round(trader), size: Math.round(size), cons, price, entry, block, others, against: against.size, kal };
+    p.score = clamp(Math.round(trader + size + cons + price + entry + block), 0, 100);
+  });
+  return m;
+}
+
+/* ---------- ledger / P&L ---------- */
+const venueOf = e => e.venue || "Polymarket";
+const resolveEntry = e => venueOf(e) === "Kalshi" ? resolveKalshi(kalshiMeta.get(e.conditionId)) : resolveMarket(marketMeta.get(e.conditionId));
+function resolveMarket(mkt){
+  if (!mkt || !mkt.closed) return null;
+  const px = parseArr(mkt.outcomePrices).map(Number);
+  const w = px.findIndex(x => x >= 0.99);
+  if (w >= 0) return w;
+  if (px.length && px.every(x => Math.abs(x - 0.5) < 0.02)) return "push";
+  return null;
+}
+function settle(e, res){
+  if (res === null || res === undefined) return;
+  if (res === "push"){ e.result = "P"; e.units = 0; e.whale = 0; return; }
+  const won = res === e.idx;
+  e.result = won ? "W" : "L";
+  e.units = won ? (1 - e.q) / e.q : -1;
+  e.whale = won ? e.shares * (1 - e.q) : -e.shares * e.q;
+}
+function logPositions(pm, source){
+  pm.forEach(p => {
+    const cur = ledger[p.key];
+    if (cur && cur.result) return;
+    ledger[p.key] = { key: p.key, venue: p.venue, wallet: p.wallet, conditionId: p.conditionId, title: p.title, slug: p.slug, league: p.league,
+      idx: p.idx, name: p.name, q: p.q, shares: p.shares, usd: p.usd, ts: p.ts, score: cur && cur.source === "live" ? Math.max(cur.score, p.score) : p.score,
+      sharp: p.sharp, entryBuy: p.entryBuy, source: cur ? cur.source : source, result: null };
+    settle(ledger[p.key], resolveEntry(ledger[p.key]));
+  });
+  const keys = Object.keys(ledger);
+  if (keys.length > 6000) keys.sort((a, b) => ledger[a].ts - ledger[b].ts).slice(0, keys.length - 6000).forEach(k => delete ledger[k]);
+  saveLedger();
+}
+async function checkResults(){
+  const open = Object.values(ledger).filter(e => !e.result && Date.now()/1000 - e.ts > 3600);
+  const kPending = [...new Set(open.filter(e => venueOf(e) === "Kalshi").map(e => e.conditionId))];
+  kalshiMeta = new Map([...kalshiMeta].filter(([k]) => !kPending.includes(k)));
+  if (kPending.length) await loadKalshiMeta(kPending);
+  const pending = [...new Set(open.filter(e => venueOf(e) === "Polymarket").map(e => e.conditionId))];
+  for (let i = 0; i < pending.length; i += 20){
+    const c = pending.slice(i, i + 20);
+    try {
+      const ms = await getJSON(`${GAMMA}/markets?limit=50&closed=true&` + c.map(x => "condition_ids=" + x).join("&"));
+      (Array.isArray(ms) ? ms : []).forEach(m => { if (m.conditionId) marketMeta.set(m.conditionId, m); });
+    } catch(e){}
+  }
+  Object.values(ledger).forEach(e => { if (!e.result) settle(e, resolveEntry(e)); });
+  saveLedger();
+}
+async function backfill(){
+  if (busy) return; busy = true; setStatus("Backfilling recently settled sports markets… this takes a moment.");
+  try {
+    if (!sharpsBy.MONTH.size) await loadAllSharps();
+    let evs = await getJSON(`${GAMMA}/events?tag_slug=sports&closed=true&limit=150&order=endDate&ascending=false`);
+    evs = Array.isArray(evs) ? evs.filter(e => e && e.id) : [];
+    indexEvents(evs);
+    const t = await tradesForEvents(evs);
+    logPositions(buildPositions(t), "backfill");
+    setStatus(`Backfilled ${evs.length} settled events.`);
+  } catch(e){ setStatus("Backfill failed: " + e.message, true); }
+  busy = false; render();
+}
+
+/* ---------- main load ---------- */
+async function loadAllSharps(){
+  const [w, m, a] = await Promise.all(["WEEK", "MONTH", "ALL"].map(loadSharps));
+  sharpsBy = { WEEK: w, MONTH: m, ALL: a };
+}
+function applyTrades(list){
+  trades = list.sort((a, b) => b.timestamp - a.timestamp);
+  posMap = buildPositions(trades);
+  logPositions(posMap, "live");
+  buildLeagues(); render();
+}
+async function loadHosted(){
+  const bust = "?t=" + Date.now();
+  const f = await fetch("data/feed.json" + bust);
+  if (!f.ok) return false;
+  const feed = await f.json();
+  const l = await fetch("data/ledger.json" + bust);
+  const toMap = o => new Map(Object.entries(o || {}));
+  sharpsBy = { WEEK: toMap(feed.sharps.WEEK), MONTH: toMap(feed.sharps.MONTH), ALL: toMap(feed.sharps.ALL) };
+  seenNames = toMap(feed.names);
+  ledger = l.ok ? await l.json() : {};
+  window.__kErr = ` Server log updated ${ago(feed.updated)}.`;
+  trades = (feed.trades || []).sort((a, b) => b.timestamp - a.timestamp);
+  posMap = buildPositions(trades);
+  buildLeagues(); render();
+  return true;
+}
+async function refresh(){
+  if (busy) return;
+  if (hosted !== false){
+    busy = true; $("#refresh").disabled = true;
+    try { hosted = await loadHosted(); } catch(e){ hosted = hosted ? true : false; if (hosted) setStatus("Couldn't load the server log: " + e.message, true); }
+    busy = false; $("#refresh").disabled = false;
+    if (hosted) return;
+  }
+  busy = true; $("#refresh").disabled = true;
+  window.__kErr = " Kalshi loading…";
+  setStatus("Pulling Polymarket trades and the sports leaderboard…");
+  const kalshiP = Promise.race([loadKalshi(),
+    new Promise((_, rej) => setTimeout(() => rej(new Error("took over 60s; the proxy may be down")), 60000))]);
+  let poly = [];
+  try {
+    const [t] = await Promise.all([loadLive(), loadAllSharps()]);
+    poly = t; applyTrades([...poly]);
+  } catch(e){
+    setStatus("Polymarket failed: " + e.message + ". Still trying Kalshi…", true);
+  }
+  try {
+    const k = await kalshiP;
+    window.__kErr = k.length ? "" : " Kalshi: no bets over $1k yet (" + (window.__kDiag || "") + ").";
+    applyTrades([...poly, ...k]);
+  } catch(e){
+    window.__kErr = " Kalshi unavailable (" + e.message + ").";
+    if (poly.length) render(); else setStatus("Couldn't load either venue. Kalshi: " + e.message + ". If you're viewing this inside the Claude app's preview, open it in Safari or Chrome instead.", true);
+  }
+  checkResults().then(() => { if (state.tab === "results") render(); });
+  busy = false; $("#refresh").disabled = false;
+}
+function setStatus(msg, err){ const el = $("#status"); el.textContent = msg; el.classList.toggle("err", !!err); }
+
+function buildLeagues(){
+  const counts = {}; trades.forEach(t => counts[t.league] = (counts[t.league] || 0) + 1);
+  Object.values(ledger).forEach(e => { if (!(e.league in counts)) counts[e.league] = 0; });
+  const sel = $("#league");
+  sel.innerHTML = '<option value="">All sports</option>' + Object.keys(counts).sort().map(l => `<option value="${esc(l)}">${esc(l)}${counts[l] ? " (" + counts[l] + ")" : ""}</option>`).join("");
+  sel.value = state.league && (state.league in counts) ? state.league : "";
+}
+
+/* ---------- render ---------- */
+const badgeSharps = () => sharpsBy[state.period] || sharpsBy.MONTH;
+function filtered(){
+  const bs = badgeSharps();
+  return trades.filter(t => {
+    const p = posMap.get(t.pos);
+    return t.usd >= state.min && (!state.league || t.league === state.league) && (!state.venue || t.venue === state.venue)
+      && (!state.buysOnly || t.side === "BUY") && (!state.sharpOnly || bs.has(t.wallet))
+      && (p ? p.score : 0) >= state.minScore;
+  });
+}
+function render(){
+  const out = $("#out");
+  if (state.tab === "results") return renderResults(out);
+  const list = filtered();
+  if (state.sort === "score") list.sort((a, b) => (posMap.get(b.pos)?.score || 0) - (posMap.get(a.pos)?.score || 0) || (posMap.get(b.pos)?.usd || 0) - (posMap.get(a.pos)?.usd || 0) || b.timestamp - a.timestamp);
+  else if (state.sort === "size") list.sort((a, b) => b.usd - a.usd);
+  const bs = badgeSharps();
+  const upd = new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
+  setStatus(`${list.length} bets of ${money(state.min)}+ · ${list.filter(t => bs.has(t.wallet)).length} from sharps · updated ${upd}.${window.__kErr || ""}`);
+  if (state.tab === "cons") return renderCons(out);
+  if (!list.length){ out.innerHTML = `<div class="empty">No bets match. Lower the minimum bet or score.</div>`; return; }
+  out.innerHTML = list.slice(0, 200).map((t, i) => {
+    const s = bs.get(t.wallet), p = posMap.get(t.pos) || { score: 0, parts: {} }, pp = p.parts;
+    const kal = t.venue === "Kalshi";
+    const name = kal ? "Anonymous" : (t.name || t.pseudonym || (t.wallet.slice(0, 6) + "…" + t.wallet.slice(-4)));
+    const id = t.id;
+    return `<div class="bet ${s ? "is-sharp" : ""}">
+      <div class="amt">${money(t.usd)}<small>${ago(t.timestamp)}</small></div>
+      <div class="pick"><span class="side ${t.side === "BUY" ? "buy" : "sell"}">${t.side === "BUY" ? "Bought" : "Sold"}</span> ${esc(t.outcome)} @ ${Math.round(t.price*100)}¢ <span style="color:var(--muted);font-weight:500">(${american(t.price)})</span></div>
+      <button class="score" data-why="${esc(id)}" style="color:${scoreColor(p.score)}" aria-label="Score ${p.score}, show breakdown">${p.score}<small>score</small></button>
+      <a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>
+      <div class="who"><span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>
+        ${s ? `<span class="badge">Sharp #${s.rank} · +${money(s.pnl)}</span>` : ""}
+        ${t.block ? `<span class="badge">Block trade</span>` : ""}
+        ${kal ? `<span>${name}</span>` : `<a href="https://polymarket.com/profile/${esc(t.wallet)}" target="_blank" rel="noopener">${esc(name)}</a>`}
+        ${p.usd > t.usd * 1.05 ? `<span>· ${money(p.usd)} total position</span>` : ""}</div>
+      <div class="why ${openWhy.has(id) ? "open" : ""}">${pp.kal ? `Size ${pp.size}/20 · Price ${pp.price > 0 ? "+" : ""}${pp.price} · Block trade ${pp.block}/10. Kalshi doesn't show who placed a bet, so there are no trader or sharp-agreement points.` : `Trader ${pp.trader}/45 · Size ${pp.size}/20 · Sharp agreement ${pp.cons > 0 ? "+" : ""}${pp.cons} (${pp.others} with, ${pp.against} against) · Price ${pp.price > 0 ? "+" : ""}${pp.price} · New entry ${pp.entry}/5`}</div>
+    </div>`;
+  }).join("");
+}
+
+function renderCons(out){
+  const pool = trades.filter(t => t.venue === "Polymarket" && isSharp(t.wallet) && t.usd >= Math.min(state.min, 2500) && (!state.league || t.league === state.league));
+  const mk = new Map();
+  pool.forEach(t => {
+    const p = posMap.get(t.pos); if (!p) return;
+    const m = mk.get(t.conditionId) || { title: t.title, slug: t.eventSlug, league: t.league, sides: {} };
+    m.last = Math.max(m.last || 0, t.timestamp);
+    const o = m.sides[p.idx] || { name: p.name, net: 0, wallets: new Set(), cost: 0, sh: 0, best: 0 };
+    o.net += t.usd; o.wallets.add(t.wallet); o.cost += p.q * t.size; o.sh += t.size; o.best = Math.max(o.best, p.score);
+    m.sides[p.idx] = o; mk.set(t.conditionId, m);
+  });
+  const rows = [...mk.values()].map(m => {
+    const sides = Object.values(m.sides).sort((a, b) => b.net - a.net);
+    return { ...m, sides, top: sides[0], total: sides.reduce((a, s) => a + s.net, 0) };
+  }).filter(r => r.top).sort((a, b) => {
+    const net = r => r.top.net - (r.sides[1]?.net || 0);
+    if (state.sort === "score") return b.top.best - a.top.best || net(b) - net(a);
+    if (state.sort === "time") return b.last - a.last;
+    return net(b) - net(a);
+  });
+  if (!rows.length){ out.innerHTML = `<div class="empty">No sharp money in the current window yet.</div>`; return; }
+  out.innerHTML = rows.slice(0, 60).map(r => {
+    const t = r.top, other = r.sides[1], avg = t.sh ? t.cost / t.sh : 0;
+    const pct = r.total ? Math.round(t.net / r.total * 100) : 100;
+    return `<div class="cons">
+      <h3>${esc(t.name)} @ ${Math.round(avg*100)}¢ (${american(avg)}) <span style="color:${scoreColor(t.best)};font-family:var(--num);font-size:20px;margin-left:6px">${t.best}</span></h3>
+      <a class="mkt" href="${linkFor({ venue: "Polymarket", slug: r.slug })}" target="_blank" rel="noopener">${esc(r.title)}</a>
+      <div class="bar"><i style="width:${pct}%;background:var(--sharp)"></i><i style="width:${100-pct}%;background:var(--line)"></i></div>
+      <div class="who"><span class="lg">${esc(r.league)}</span>
+        <strong style="color:var(--ink)">${money(t.net)}</strong> from ${t.wallets.size} sharp${t.wallets.size > 1 ? "s" : ""}
+        ${other ? ` · ${money(other.net)} on ${esc(other.name)}` : " · nothing on the other side"}</div>
+    </div>`;
+  }).join("");
+}
+
+function renderResults(out){
+  const all = Object.values(ledger);
+  const rows = all.filter(e => e.usd >= state.min && (!state.league || e.league === state.league) && (!state.venue || venueOf(e) === state.venue)
+    && (!state.sharpOnly || e.sharp) && (!state.buysOnly || e.entryBuy) && (state.incBackfill || e.source === "live"));
+  const done = rows.filter(e => e.result), pending = rows.length - done.length;
+  const pl = n => `<span class="${n > 0 ? "pos" : n < 0 ? "neg" : ""}">${n > 0 ? "+" : ""}${n.toFixed(2)}u</span>`;
+  const plD = n => `<span class="${n > 0 ? "pos" : n < 0 ? "neg" : ""}">${n > 0 ? "+" : ""}${money(n)}</span>`;
+  const agg = list => {
+    const w = list.filter(e => e.result === "W").length, l = list.filter(e => e.result === "L").length, p = list.filter(e => e.result === "P").length;
+    const u = list.reduce((a, e) => a + e.units, 0), wh = list.reduce((a, e) => a + e.whale, 0);
+    const avg = list.length ? list.reduce((a, e) => a + e.q, 0) / list.length : 0;
+    return { n: list.length, w, l, p, u, wh, roi: list.length ? u / list.length * 100 : 0, wp: (w + l) ? w / (w + l) * 100 : 0, avg };
+  };
+  const line = (label, a, cls) => `<tr class="${cls || ""}"><td class="bk">${label}</td><td>${a.n}</td><td>${a.w}-${a.l}${a.p ? "-" + a.p : ""}</td><td>${a.n ? a.wp.toFixed(0) + "%" : "—"}</td><td>${a.n ? american(a.avg) : "—"}</td><td>${pl(a.u)}</td><td>${a.n ? (a.roi > 0 ? "+" : "") + a.roi.toFixed(1) + "%" : "—"}</td><td>${plD(a.wh)}</td></tr>`;
+  const body = BUCKETS.map(([lo, hi]) => line(`${lo}–${hi}`, agg(done.filter(e => e.score >= lo && e.score <= hi)))).join("")
+    + line("All", agg(done), "total");
+  setStatus(`${rows.length} bets logged · ${done.length} settled · ${pending} pending`);
+  out.innerHTML = `
+    <div class="card">
+      <div class="row" style="margin-bottom:8px">
+        <button class="chip" id="rLive" aria-pressed="${!state.incBackfill}">Live-logged only</button>
+        <button class="chip" id="rAll" aria-pressed="${state.incBackfill}">Include backfill</button>
+      </div>
+      <div class="tblwrap"><table>
+        <thead><tr><th>Score</th><th>Bets</th><th>W-L</th><th>Win %</th><th>Avg odds</th><th>Tail 1u</th><th>ROI</th><th>Whale $</th></tr></thead>
+        <tbody>${body}</tbody>
+      </table></div>
+      <p>"Tail 1u" is what you'd make risking 1 unit on each bet at the whale's price. "Whale $" is the whales' actual profit on those positions. Each wallet's fills on one side of a market count as one bet. The Venue, Min bet, League, Sharps only, and Buys only filters apply here too.</p>
+      ${hosted ? `<p>Logged automatically by your server about every 15 minutes, including Kalshi and results.</p>` : `<div class="row" style="margin-top:10px">
+        <button class="btn" id="bBack">Backfill recent results</button>
+        <button class="btn ghost" id="bCheck">Check pending results</button>
+        <button class="btn ghost" id="bClear">Clear log</button>
+      </div>`}
+    </div>
+    <div class="card">
+      <h3 style="margin:0 0 4px;font-size:15px">How the score works (0–100)</h3>
+      <ul>
+        <li>Trader, up to 45: rank on the Sports 30-day profit board (10–25) plus the all-time board (8–20).</li>
+        <li>Size, up to 20: $1k is 0, $10k is 10, $100k+ is 20. Uses the wallet's whole position, not one fill.</li>
+        <li>Sharp agreement, −15 to +20: +6 for each other sharp on the same side, −6 for each sharp on the other side.</li>
+        <li>Price, −10 to +10: +10 between 25¢ and 80¢, 0 from 80–90¢, −10 at 90¢+ (often in-game scalps or hedges).</li>
+        <li>New entry, 5: buying rather than selling, since sells are often profit-taking.</li>
+        <li>Kalshi bets are anonymous, so they only get Size, Price, and +10 for a block trade (a negotiated off-book fill). They top out around 40; compare them to each other, not to Polymarket scores.</li>
+      </ul>
+      <p>Backfill covers Polymarket only. Kalshi bets build up from your refreshes, so turn on auto-refresh while games are on. Backfilled bets are scored against today's leaderboard, which already includes profits from those bets. That flatters high scores, so trust the live-logged numbers once they build up.</p>
+    </div>`;
+  $("#rLive").onclick = () => { state.incBackfill = false; save(); render(); };
+  $("#rAll").onclick = () => { state.incBackfill = true; save(); render(); };
+  if (!hosted){
+    $("#bBack").onclick = backfill;
+    $("#bCheck").onclick = async () => { setStatus("Checking results…"); await checkResults(); render(); };
+    $("#bClear").onclick = () => { if (confirm("Clear every logged bet?")){ ledger = {}; saveLedger(); render(); } };
+  }
+}
+
+/* ---------- controls ---------- */
+function syncControls(){
+  document.querySelectorAll("#minRow .chip").forEach(b => b.setAttribute("aria-pressed", String(Number(b.dataset.v) === state.min)));
+  document.querySelectorAll("#venueRow .chip").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state.venue)));
+  document.querySelectorAll("#scoreRow .chip").forEach(b => b.setAttribute("aria-pressed", String(Number(b.dataset.v) === state.minScore)));
+  $("#fAll").setAttribute("aria-pressed", String(!state.sharpOnly));
+  $("#fSharp").setAttribute("aria-pressed", String(state.sharpOnly));
+  $("#fBuys").setAttribute("aria-pressed", String(state.buysOnly));
+  $("#proxyBtn").setAttribute("aria-pressed", String(!!state.proxy)); $("#proxyBtn").textContent = state.proxy ? "Proxy on" : "Proxy URL";
+  $("#period").value = state.period;
+  document.querySelectorAll("#sortRow .chip").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state.sort)));
+  document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
+}
+$("#minRow").insertAdjacentHTML("beforeend", MINS.map(v => `<button class="chip" data-v="${v}">${money(v)}+</button>`).join(""));
+$("#scoreRow").insertAdjacentHTML("beforeend", SCORE_MINS.map(v => `<button class="chip" data-v="${v}">${v ? v + "+" : "Any"}</button>`).join(""));
+$("#venueRow").insertAdjacentHTML("beforeend", VENUES.map(v => `<button class="chip" data-v="${v}">${v || "All"}</button>`).join(""));
+$("#venueRow").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.venue = b.dataset.v; save(); syncControls(); render(); });
+$("#minRow").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.min = Number(b.dataset.v); save(); syncControls(); render(); });
+$("#scoreRow").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.minScore = Number(b.dataset.v); save(); syncControls(); render(); });
+$("#fAll").onclick = () => { state.sharpOnly = false; save(); syncControls(); render(); };
+$("#fSharp").onclick = () => { state.sharpOnly = true; save(); syncControls(); render(); };
+$("#fBuys").onclick = () => { state.buysOnly = !state.buysOnly; save(); syncControls(); render(); };
+$("#league").onchange = e => { state.league = e.target.value; save(); render(); };
+$("#sortRow").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.sort = b.dataset.v; save(); syncControls(); render(); });
+$("#period").onchange = e => { state.period = e.target.value; save(); render(); };
+document.querySelectorAll(".tab").forEach(b => b.onclick = () => { state.tab = b.dataset.tab; save(); syncControls(); render(); });
+$("#out").addEventListener("click", e => {
+  const b = e.target.closest("[data-why]"); if (!b) return;
+  const id = b.dataset.why; openWhy.has(id) ? openWhy.delete(id) : openWhy.add(id);
+  b.parentElement.querySelector(".why").classList.toggle("open");
+});
+$("#refresh").onclick = refresh;
+$("#proxyBtn").onclick = () => {
+  const v = prompt("Paste your Cloudflare Worker URL (leave blank to remove):", state.proxy || "");
+  if (v === null) return;
+  state.proxy = v.trim().replace(/\/$/, ""); state.proxyCleared = !state.proxy; save(); syncControls(); refresh();
+};
+$("#auto").onclick = () => {
+  const on = $("#auto").getAttribute("aria-pressed") !== "true";
+  $("#auto").setAttribute("aria-pressed", String(on));
+  clearInterval(timer); if (on) timer = setInterval(refresh, 60000);
+};
+syncControls();
+refresh();
+</script>
+</body>
+</html>
