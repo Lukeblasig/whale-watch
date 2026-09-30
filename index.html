@@ -78,6 +78,19 @@ th:first-child,td:first-child{text-align:left}
 td.bk{font:700 20px/1 var(--num)}
 .pos{color:var(--win);font-weight:600} .neg{color:var(--sell);font-weight:600}
 tr.total td{font-weight:700;border-bottom:0}
+tr.bkrow{cursor:pointer}
+tr.bkrow:hover td{background:var(--chip)}
+tr.bkrow.sel td{background:var(--sharp-bg)}
+td .caret{display:inline-block;width:12px;color:var(--muted);font:500 12px var(--body)}
+.betlist{margin-top:12px;border-top:1px solid var(--line);padding-top:10px;display:grid;gap:6px}
+.betlist h4{margin:0 0 4px;font-size:15px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.rbet{display:grid;grid-template-columns:34px 1fr;gap:2px 10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.rbet:last-child{border-bottom:0}
+.res{grid-row:span 2;align-self:start;text-align:center;font:700 18px/28px var(--num);border-radius:7px;color:#fff}
+.res.W{background:var(--win)} .res.L{background:var(--sell)} .res.P{background:var(--muted)}
+.rbet .pk{font-weight:600;font-size:14px}
+.rbet .pk a{color:inherit;text-decoration:none}
+.rbet .mt{font-size:12.5px;color:var(--muted)}
 .card p{margin:.4em 0;color:var(--muted);font-size:13px}
 .card ul{margin:.3em 0;padding-left:18px;color:var(--muted);font-size:13px}
 footer{color:var(--muted);font-size:12px;margin-top:22px}
@@ -134,7 +147,7 @@ footer{color:var(--muted);font-size:12px;margin-top:22px}
 
   <footer>
     Sharps = top 100 wallets on Polymarket's Sports profit leaderboard. Trades come from Polymarket's and Kalshi's public APIs; Kalshi trades are anonymous.
-    Your results log is saved in this browser only. Not financial advice.
+    Not financial advice.
   </footer>
 </div>
 
@@ -155,7 +168,8 @@ const VENUES = ["", "Polymarket", "Kalshi"];
 const FETCH_FLOOR = 1000;
 const MINS = [1000, 2500, 5000, 10000, 25000, 50000];
 const SCORE_MINS = [0, 50, 60, 70, 80, 90];
-const BUCKETS = [[90,100],[80,89],[70,79],[60,69],[50,59],[40,49],[0,39]];
+const BUCKETS = [[90,100],[80,89],[70,79],[60,69],[50,59]];
+let openBucket = null, betFilter = "all", showAllBets = false;
 
 const defaults = { min: 5000, minScore: 0, sharpOnly: false, buysOnly: false, league: "", period: "MONTH", tab: "tape", sort: "score", incBackfill: true, venue: "", proxy: "" };
 const state = Object.assign({}, defaults, loadLS("ww-state") || {});
@@ -319,6 +333,47 @@ function effective(t){
 const isSharp = w => sharpsBy.MONTH.has(w) || sharpsBy.ALL.has(w);
 const rankPts = (r, lo, hi) => lo + (hi - lo) * (1 - clamp((r - 1) / 99, 0, 1));
 
+/* ---------- score v2 (identical in index.html and collect.mjs) ---------- */
+const SCORE_VERSION = 2;
+function scorePositions(m, ctx){
+  const cl = (x, a, b) => Math.max(a, Math.min(b, x));
+  const rankPts = (r, lo, hi) => lo + (hi - lo) * (1 - cl((r - 1) / 99, 0, 1));
+  const byMkt = new Map();
+  m.forEach(p => { (byMkt.get(p.conditionId) || byMkt.set(p.conditionId, []).get(p.conditionId)).push(p); });
+  m.forEach(p => {
+    const peers = byMkt.get(p.conditionId).filter(o => o !== p);
+    let on = 0, off = 0; peers.forEach(o => { if (o.idx === p.idx) on += o.usd; else off += o.usd; });
+    const f = on + off ? (on - off) / (on + off) : 0;
+    const flow = cl(Math.round(f * 25 * Math.min(1, peers.length / 3)), -15, 25);
+    const abs = cl(15 * (Math.log10(Math.max(p.usd, 1)) - 3) / 2, 0, 15);
+    const vol = ctx.volOf(p.conditionId) || 0;
+    const rel = vol > 0 ? cl(7.5 * Math.log10((p.usd / vol) / 0.002), 0, 20) : 8;
+    const price = p.q >= .9 ? 0 : p.q >= .8 ? 5 : p.q >= .25 ? 15 : 5;
+    let edge = 0, edgeWhy = "";
+    if (p.venue === "Kalshi"){
+      const burst = peers.filter(o => o.idx === p.idx && Math.abs(o.ts - p.ts) <= 7200).length;
+      edge = (p.block ? 10 : 0) + Math.min(15, 5 * burst);
+      edgeWhy = (p.block ? "block trade, " : "") + burst + " other big fill" + (burst === 1 ? "" : "s") + " on this side within 2h";
+    } else {
+      const mo = ctx.sharpM(p.wallet), al = ctx.sharpA(p.wallet);
+      edge = (mo ? rankPts(mo.rank, 5, 15) : 0) + (al ? rankPts(al.rank, 3, 10) : 0);
+      edgeWhy = mo || al ? "sports board: 30-day #" + (mo ? mo.rank : "–") + ", all-time #" + (al ? al.rank : "–") : "not on the sports profit boards";
+    }
+    const sellPen = p.venue !== "Kalshi" && !p.entryBuy ? -5 : 0;
+    p.parts = { abs: Math.round(abs), rel: Math.round(rel), relKnown: vol > 0, flow, n: peers.length, price, edge: Math.round(edge), edgeWhy, sellPen };
+    p.score = cl(Math.round(abs + rel + flow + price + edge + sellPen), 0, 100);
+    p.sv = SCORE_VERSION;
+  });
+  return m;
+}
+let volMap = new Map();
+function volOf(cid){
+  if (volMap.has(cid)) return volMap.get(cid);
+  const k = kalshiMeta.get(cid);
+  if (k) return Number(k.volume_24h_fp ?? k.volume_24h ?? 0) * Number(k.last_price_dollars ?? 0.5);
+  const pm = marketMeta.get(cid);
+  return pm ? Number(pm.volume24hr ?? pm.volume24hrClob ?? 0) : 0;
+}
 function buildPositions(list){
   const m = new Map();
   list.forEach(t => {
@@ -329,24 +384,12 @@ function buildPositions(list){
     t.side === "BUY" ? p.buys++ : p.sells++;
     t.pos = key; m.set(key, p);
   });
-  const sideSharps = new Map();
-  m.forEach(p => { if (isSharp(p.wallet)){ const k = p.conditionId + "|" + p.idx; (sideSharps.get(k) || sideSharps.set(k, new Set()).get(k)).add(p.wallet); } });
   m.forEach(p => {
     p.q = p.shares ? p.cost / p.shares : 0;
     p.entryBuy = p.buys >= p.sells;
     p.sharp = isSharp(p.wallet);
-    const mo = sharpsBy.MONTH.get(p.wallet), al = sharpsBy.ALL.get(p.wallet);
-    const trader = (mo ? rankPts(mo.rank, 10, 25) : 0) + (al ? rankPts(al.rank, 8, 20) : 0);
-    const size = clamp(20 * (Math.log10(Math.max(p.usd, 1)) - 3) / 2, 0, 20);
-    const withS = (sideSharps.get(p.conditionId + "|" + p.idx) || new Set()), against = (sideSharps.get(p.conditionId + "|" + (1 - p.idx)) || new Set());
-    const others = withS.size - (withS.has(p.wallet) ? 1 : 0);
-    const cons = clamp(6 * others - 6 * against.size, -15, 20);
-    const price = p.q >= .9 ? -10 : p.q >= .8 ? 0 : p.q >= .25 ? 10 : 3;
-    const kal = p.venue === "Kalshi";
-    const entry = !kal && p.entryBuy ? 5 : 0, block = kal && p.block ? 10 : 0;
-    p.parts = { trader: Math.round(trader), size: Math.round(size), cons, price, entry, block, others, against: against.size, kal };
-    p.score = clamp(Math.round(trader + size + cons + price + entry + block), 0, 100);
   });
+  scorePositions(m, { volOf, sharpM: w => sharpsBy.MONTH.get(w), sharpA: w => sharpsBy.ALL.get(w) });
   return m;
 }
 
@@ -372,9 +415,11 @@ function settle(e, res){
 function logPositions(pm, source){
   pm.forEach(p => {
     const cur = ledger[p.key];
-    if (cur && cur.result) return;
+    if (cur && cur.result && cur.sv === SCORE_VERSION) return;
+    if (cur && cur.result){ cur.score = p.score; cur.sv = SCORE_VERSION; cur.sharp = p.sharp; return; }
+    const keep = cur && cur.sv === SCORE_VERSION && cur.source === "live";
     ledger[p.key] = { key: p.key, venue: p.venue, wallet: p.wallet, conditionId: p.conditionId, title: p.title, slug: p.slug, league: p.league,
-      idx: p.idx, name: p.name, q: p.q, shares: p.shares, usd: p.usd, ts: p.ts, score: cur && cur.source === "live" ? Math.max(cur.score, p.score) : p.score,
+      idx: p.idx, name: p.name, q: p.q, shares: p.shares, usd: p.usd, ts: p.ts, score: keep ? Math.max(cur.score, p.score) : p.score, sv: SCORE_VERSION,
       sharp: p.sharp, entryBuy: p.entryBuy, source: cur ? cur.source : source, result: null };
     settle(ledger[p.key], resolveEntry(ledger[p.key]));
   });
@@ -423,17 +468,49 @@ function applyTrades(list){
   logPositions(posMap, "live");
   buildLeagues(); render();
 }
+let storeBase = null, storeIndex = null, loadedMonths = [], wantAllMonths = false;
+function dataBases(){
+  const b = [];
+  if (location.hostname.endsWith(".github.io")){
+    const owner = location.hostname.split(".")[0], repo = location.pathname.split("/").filter(Boolean)[0];
+    if (repo) b.push(`https://raw.githubusercontent.com/${owner}/${repo}/data/`);
+  }
+  b.push("data/");
+  return b;
+}
+async function fetchJ(u){ const r = await fetch(u + "?t=" + Date.now()); if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }
 async function loadHosted(){
-  const bust = "?t=" + Date.now();
-  const f = await fetch("data/feed.json" + bust);
-  if (!f.ok) return false;
-  const feed = await f.json();
-  const l = await fetch("data/ledger.json" + bust);
+  let feed, L = {};
+  storeIndex = null;
+  for (const b of dataBases()){
+    try { storeIndex = await fetchJ(b + "index.json"); storeBase = b; break; } catch(e){}
+  }
+  if (storeIndex){
+    const months = storeIndex.months || [];
+    loadedMonths = wantAllMonths ? months : months.slice(-2);
+    const [f, pend, ...ms] = await Promise.all([fetchJ(storeBase + "feed.json"), fetchJ(storeBase + "pending.json").catch(() => ({})),
+      ...loadedMonths.map(m => fetchJ(storeBase + `settled-${m}.json`).catch(() => ({})))]);
+    feed = f; ms.forEach(o => Object.assign(L, o)); Object.assign(L, pend);
+  } else {
+    let f;
+    try { f = await fetch("data/feed.json?t=" + Date.now()); } catch(e){ return false; }
+    if (!f.ok) return false;
+    feed = await f.json();
+    const l = await fetch("data/ledger.json?t=" + Date.now());
+    L = l.ok ? await l.json() : {};
+  }
   const toMap = o => new Map(Object.entries(o || {}));
   sharpsBy = { WEEK: toMap(feed.sharps.WEEK), MONTH: toMap(feed.sharps.MONTH), ALL: toMap(feed.sharps.ALL) };
   seenNames = toMap(feed.names);
-  ledger = l.ok ? await l.json() : {};
+  volMap = toMap(feed.vols);
+  ledger = L;
   window.__kErr = ` Server log updated ${ago(feed.updated)}.`;
+  const kd = storeIndex && storeIndex.meta && storeIndex.meta.kalshi;
+  if (kd){
+    if (!kd.markets) window.__kErr += ` Kalshi: no sports markets found${kd.errors && kd.errors.length ? " (" + kd.errors[0] + ")" : ""}.`;
+    else if (!kd.bigFills) window.__kErr += ` Kalshi: ${kd.markets} sports markets, ${kd.tradesScanned} trades in 24h, none over $1k${kd.tradeErrors ? `, ${kd.tradeErrors} trade requests failed (${kd.errors[kd.errors.length - 1] || ""})` : ""}.`;
+    else window.__kErr += ` Kalshi: ${kd.bigFills} big fills from ${kd.markets} markets.`;
+  }
   trades = (feed.trades || []).sort((a, b) => b.timestamp - a.timestamp);
   posMap = buildPositions(trades);
   buildLeagues(); render();
@@ -517,7 +594,7 @@ function render(){
         ${t.block ? `<span class="badge">Block trade</span>` : ""}
         ${kal ? `<span>${name}</span>` : `<a href="https://polymarket.com/profile/${esc(t.wallet)}" target="_blank" rel="noopener">${esc(name)}</a>`}
         ${p.usd > t.usd * 1.05 ? `<span>· ${money(p.usd)} total position</span>` : ""}</div>
-      <div class="why ${openWhy.has(id) ? "open" : ""}">${pp.kal ? `Size ${pp.size}/20 · Price ${pp.price > 0 ? "+" : ""}${pp.price} · Block trade ${pp.block}/10. Kalshi doesn't show who placed a bet, so there are no trader or sharp-agreement points.` : `Trader ${pp.trader}/45 · Size ${pp.size}/20 · Sharp agreement ${pp.cons > 0 ? "+" : ""}${pp.cons} (${pp.others} with, ${pp.against} against) · Price ${pp.price > 0 ? "+" : ""}${pp.price} · New entry ${pp.entry}/5`}</div>
+      <div class="why ${openWhy.has(id) ? "open" : ""}">Size ${pp.abs}/15 · Size vs market ${pp.rel}/20${pp.relKnown ? "" : " (volume unknown)"} · Money flow ${pp.flow > 0 ? "+" : ""}${pp.flow} (${pp.n} other big bet${pp.n === 1 ? "" : "s"} in this market) · Price ${pp.price}/15 · ${t.venue === "Kalshi" ? "Pattern" : "Trader"} ${pp.edge}/25 (${esc(pp.edgeWhy)})${pp.sellPen ? " · Sell −5" : ""}</div>
     </div>`;
   }).join("");
 }
@@ -559,8 +636,19 @@ function renderCons(out){
 
 function renderResults(out){
   const all = Object.values(ledger);
-  const rows = all.filter(e => e.usd >= state.min && (!state.league || e.league === state.league) && (!state.venue || venueOf(e) === state.venue)
-    && (!state.sharpOnly || e.sharp) && (!state.buysOnly || e.entryBuy) && (state.incBackfill || e.source === "live"));
+  let rows = all.filter(e => e.usd >= state.min && (!state.league || e.league === state.league) && (!state.venue || venueOf(e) === state.venue)
+    && (!state.sharpOnly || e.sharp) && (!state.buysOnly || e.entryBuy) && (state.incBackfill || e.source === "live") && (state.oldScores || e.sv === SCORE_VERSION));
+  if (state.dedupe){
+    const g = new Map();
+    rows.forEach(e => {
+      const k = venueOf(e) + "|" + e.conditionId + "|" + e.idx, c = g.get(k);
+      if (!c){ g.set(k, { ...e, dup: 1, whale: e.whale || 0 }); return; }
+      c.dup++; c.usd += e.usd; c.whale += e.whale || 0; c.sharp = c.sharp || e.sharp; c.ts = Math.min(c.ts, e.ts);
+      if (!c.result && e.result) Object.assign(c, { result: e.result, units: e.units });
+      if (e.score > c.score) Object.assign(c, { score: e.score, q: e.q, units: e.result ? e.units : c.units });
+    });
+    rows = [...g.values()];
+  }
   const done = rows.filter(e => e.result), pending = rows.length - done.length;
   const pl = n => `<span class="${n > 0 ? "pos" : n < 0 ? "neg" : ""}">${n > 0 ? "+" : ""}${n.toFixed(2)}u</span>`;
   const plD = n => `<span class="${n > 0 ? "pos" : n < 0 ? "neg" : ""}">${n > 0 ? "+" : ""}${money(n)}</span>`;
@@ -570,13 +658,43 @@ function renderResults(out){
     const avg = list.length ? list.reduce((a, e) => a + e.q, 0) / list.length : 0;
     return { n: list.length, w, l, p, u, wh, roi: list.length ? u / list.length * 100 : 0, wp: (w + l) ? w / (w + l) * 100 : 0, avg };
   };
-  const line = (label, a, cls) => `<tr class="${cls || ""}"><td class="bk">${label}</td><td>${a.n}</td><td>${a.w}-${a.l}${a.p ? "-" + a.p : ""}</td><td>${a.n ? a.wp.toFixed(0) + "%" : "—"}</td><td>${a.n ? american(a.avg) : "—"}</td><td>${pl(a.u)}</td><td>${a.n ? (a.roi > 0 ? "+" : "") + a.roi.toFixed(1) + "%" : "—"}</td><td>${plD(a.wh)}</td></tr>`;
-  const body = BUCKETS.map(([lo, hi]) => line(`${lo}–${hi}`, agg(done.filter(e => e.score >= lo && e.score <= hi)))).join("")
-    + line("All", agg(done), "total");
+  const line = (label, a, cls, id) => `<tr class="bkrow ${cls || ""} ${openBucket === id ? "sel" : ""}" data-bk="${id}"><td class="bk"><span class="caret">${openBucket === id ? "▾" : "▸"}</span>${label}</td><td>${a.n}</td><td>${a.w}-${a.l}${a.p ? "-" + a.p : ""}</td><td>${a.n ? a.wp.toFixed(0) + "%" : "—"}</td><td>${a.n ? american(a.avg) : "—"}</td><td>${pl(a.u)}</td><td>${a.n ? (a.roi > 0 ? "+" : "") + a.roi.toFixed(1) + "%" : "—"}</td><td>${plD(a.wh)}</td></tr>`;
+  const inB = id => { if (id === "all") return done.filter(e => e.score >= 50); const [lo, hi] = id.split("-").map(Number); return done.filter(e => e.score >= lo && e.score <= hi); };
+  const body = BUCKETS.map(([lo, hi]) => line(`${lo}–${hi}`, agg(inB(lo + "-" + hi)), "", lo + "-" + hi)).join("")
+    + line("All 50+", agg(inB("all")), "total", "all");
+  let panel = "";
+  if (openBucket){
+    const bl = inB(openBucket);
+    const shown = bl.filter(e => betFilter === "all" || e.result === betFilter).sort((a, b) => b.ts - a.ts);
+    const cap = showAllBets ? shown.length : 100;
+    const label = openBucket === "all" ? "All 50+" : openBucket.replace("-", "–");
+    const cnt = r => bl.filter(e => e.result === r).length;
+    panel = `<div class="betlist">
+      <h4><span>Score ${label} · ${bl.length} settled bets</span>
+        <span class="row">
+          <button class="chip" data-bf="all" aria-pressed="${betFilter === "all"}">All</button>
+          <button class="chip" data-bf="W" aria-pressed="${betFilter === "W"}">Wins (${cnt("W")})</button>
+          <button class="chip" data-bf="L" aria-pressed="${betFilter === "L"}">Losses (${cnt("L")})</button>
+        </span></h4>
+      ${shown.length ? shown.slice(0, cap).map(e => {
+        const d = new Date(e.ts * 1000).toLocaleDateString([], { month: "short", day: "numeric" });
+        const v = venueOf(e), link = linkFor({ venue: v, conditionId: e.conditionId, slug: e.slug });
+        return `<div class="rbet"><div class="res ${e.result}">${e.result}</div>
+          <div class="pk"><a href="${link}" target="_blank" rel="noopener">${esc(e.name)} @ ${Math.round(e.q * 100)}¢ (${american(e.q)})</a> <span style="font-weight:400;color:var(--muted)">· ${esc(e.title)}</span></div>
+          <div class="mt">${d} · ${v} · ${esc(e.league)} · score ${e.score} · ${money(e.usd)}${e.sharp ? " · sharp" : ""}${e.source === "backfill" ? " · backfill" : ""}${e.dup > 1 ? ` · ${e.dup} bets merged` : ""} · ${pl(e.units)} · whale ${plD(e.whale)}</div></div>`;
+      }).join("") : `<p>No bets here yet.</p>`}
+      ${shown.length > cap ? `<button class="btn ghost" id="moreBets">Show all ${shown.length}</button>` : ""}
+    </div>`;
+  }
   setStatus(`${rows.length} bets logged · ${done.length} settled · ${pending} pending`);
   out.innerHTML = `
     <div class="card">
       <div class="row" style="margin-bottom:8px">
+        <label style="display:flex;align-items:center;gap:6px;font-size:14px;margin-right:6px;cursor:pointer">
+          <input type="checkbox" id="rDedupe" ${state.dedupe ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--ink)">
+          Remove duplicates
+        </label>
+        <button class="chip" id="rOld" aria-pressed="${!!state.oldScores}">Include old scores</button>
         <button class="chip" id="rLive" aria-pressed="${!state.incBackfill}">Live-logged only</button>
         <button class="chip" id="rAll" aria-pressed="${state.incBackfill}">Include backfill</button>
       </div>
@@ -584,8 +702,10 @@ function renderResults(out){
         <thead><tr><th>Score</th><th>Bets</th><th>W-L</th><th>Win %</th><th>Avg odds</th><th>Tail 1u</th><th>ROI</th><th>Whale $</th></tr></thead>
         <tbody>${body}</tbody>
       </table></div>
-      <p>"Tail 1u" is what you'd make risking 1 unit on each bet at the whale's price. "Whale $" is the whales' actual profit on those positions. Each wallet's fills on one side of a market count as one bet. The Venue, Min bet, League, Sharps only, and Buys only filters apply here too.</p>
-      ${hosted ? `<p>Logged automatically by your server about every 15 minutes, including Kalshi and results.</p>` : `<div class="row" style="margin-top:10px">
+      ${openBucket ? panel : `<p style="margin-top:8px">Tap a score row to see the bets in it.</p>`}
+      <p>"Tail 1u" is what you'd make risking 1 unit on each bet at the whale's price. "Whale $" is the whales' actual profit on those positions. Each wallet's fills on one side of a market count as one bet. "Remove duplicates" goes further and counts each pick once no matter how many whales took it, keeping the highest-scoring bet's score and price (Whale $ still adds up every whale on that pick). The Venue, Min bet, League, Sharps only, and Buys only filters apply here too.</p>
+      ${hosted ? `<p>Logged automatically by your server about every 15 minutes, including Kalshi and results. Nothing is ever trimmed.${storeIndex && storeIndex.months.length > loadedMonths.length ? ` Showing ${loadedMonths.length === 1 ? "this month" : "the last " + loadedMonths.length + " months"}.` : ""}</p>
+        ${storeIndex && storeIndex.months.length > loadedMonths.length ? `<button class="btn ghost" id="allMonths">Load full history (${storeIndex.months.length} months)</button>` : ""}` : `<div class="row" style="margin-top:10px">
         <button class="btn" id="bBack">Backfill recent results</button>
         <button class="btn ghost" id="bCheck">Check pending results</button>
         <button class="btn ghost" id="bClear">Clear log</button>
@@ -594,17 +714,25 @@ function renderResults(out){
     <div class="card">
       <h3 style="margin:0 0 4px;font-size:15px">How the score works (0–100)</h3>
       <ul>
-        <li>Trader, up to 45: rank on the Sports 30-day profit board (10–25) plus the all-time board (8–20).</li>
-        <li>Size, up to 20: $1k is 0, $10k is 10, $100k+ is 20. Uses the wallet's whole position, not one fill.</li>
-        <li>Sharp agreement, −15 to +20: +6 for each other sharp on the same side, −6 for each sharp on the other side.</li>
-        <li>Price, −10 to +10: +10 between 25¢ and 80¢, 0 from 80–90¢, −10 at 90¢+ (often in-game scalps or hedges).</li>
-        <li>New entry, 5: buying rather than selling, since sells are often profit-taking.</li>
-        <li>Kalshi bets are anonymous, so they only get Size, Price, and +10 for a block trade (a negotiated off-book fill). They top out around 40; compare them to each other, not to Polymarket scores.</li>
+        <li>Size, up to 15: $1k is 0, $10k is 7.5, $100k+ is 15.</li>
+        <li>Size vs market, up to 20: how big the bet is compared with that market's last-24h volume. $20k into a $50k market scores far higher than $20k into a $5M market.</li>
+        <li>Money flow, −15 to +25: which side the other big bets in the same market are on. All-in on the same side is +25; mostly against is negative. Counts fully once there are 3+ other big bets.</li>
+        <li>Price, up to 15: 25¢–80¢ gets 15, 80–90¢ and under 25¢ get 5, 90¢+ gets 0 (usually in-game scalps or hedges).</li>
+        <li>Trader or pattern, up to 25. Polymarket: rank on the Sports 30-day profit board (5–15) plus the all-time board (3–10). Kalshi is anonymous, so instead: +10 for a block trade and +5 for each other big fill on the same side within 2 hours (up to 15), the footprint of one player splitting a big bet.</li>
+        <li>Polymarket sells lose 5, since they're often profit-taking rather than a new opinion.</li>
       </ul>
       <p>Backfill covers Polymarket only. Kalshi bets build up from your refreshes, so turn on auto-refresh while games are on. Backfilled bets are scored against today's leaderboard, which already includes profits from those bets. That flatters high scores, so trust the live-logged numbers once they build up.</p>
     </div>`;
+  out.querySelectorAll("tr.bkrow").forEach(tr => tr.onclick = () => {
+    const id = tr.dataset.bk; openBucket = openBucket === id ? null : id; betFilter = "all"; showAllBets = false; render();
+  });
+  out.querySelectorAll("[data-bf]").forEach(b => b.onclick = () => { betFilter = b.dataset.bf; showAllBets = false; render(); });
+  if ($("#moreBets")) $("#moreBets").onclick = () => { showAllBets = true; render(); };
+  $("#rDedupe").onchange = e => { state.dedupe = e.target.checked; save(); render(); };
+  $("#rOld").onclick = () => { state.oldScores = !state.oldScores; save(); render(); };
   $("#rLive").onclick = () => { state.incBackfill = false; save(); render(); };
   $("#rAll").onclick = () => { state.incBackfill = true; save(); render(); };
+  if ($("#allMonths")) $("#allMonths").onclick = async () => { wantAllMonths = true; setStatus("Loading full history…"); await loadHosted(); };
   if (!hosted){
     $("#bBack").onclick = backfill;
     $("#bCheck").onclick = async () => { setStatus("Checking results…"); await checkResults(); render(); };
