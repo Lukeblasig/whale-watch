@@ -106,6 +106,10 @@ function loadStore() {
     Object.assign(L, readJSON(`${STORE}/pending.json`, {}));
     return { L, meta: idx.meta || {}, feed: readJSON(`${STORE}/feed.json`, { trades: [], names: {}, vols: {} }) };
   }
+  // Safety: if the data branch exists but didn't load, stop without saving so nothing gets overwritten.
+  let remote = "";
+  try { remote = execSync("git ls-remote --heads origin data", { encoding: "utf8" }).trim(); } catch {}
+  if (remote) { console.error("Saved data exists on the data branch but didn't load. Stopping without saving; the next run will retry."); process.exit(1); }
   // first run on the new layout: import the old ledger from main, plus every bet the old 12k cap trimmed or shrank
   Object.values(readJSON("data/ledger.json", {})).forEach(e => mergeEntry(L, e));
   const recovered = recoverHistory(L);
@@ -297,13 +301,24 @@ function resolvePM(mk) {
   return null;
 }
 const resolveK = mk => !mk ? null : mk.result === "yes" ? 0 : mk.result === "no" ? 1 : null;
-const resolveEntry = e => e.venue === "Kalshi" ? resolveK(kMarkets.get(e.conditionId)) : resolvePM(pmMarkets.get(e.conditionId));
+const clobMarkets = new Map(); // conditionId -> CLOB market (fallback when Gamma can't see a market)
+function resolveClob(mk, cid) {
+  if (!mk || !mk.closed || !Array.isArray(mk.tokens)) return null;
+  const w = mk.tokens.findIndex(t => t.winner === true);
+  if (w < 0) return null;
+  const ix = (names[cid] || []).indexOf(mk.tokens[w].outcome);
+  return ix >= 0 ? ix : w;
+}
+const resolveEntry = e => e.venue === "Kalshi" ? resolveK(kMarkets.get(e.conditionId))
+  : (resolvePM(pmMarkets.get(e.conditionId)) ?? resolveClob(clobMarkets.get(e.conditionId), e.conditionId));
 function settle(e, res) {
   if (res === null || res === undefined) return;
   if (res === "push") { Object.assign(e, { result: "P", units: 0, whale: 0 }); return; }
   const won = res === e.idx;
   Object.assign(e, { result: won ? "W" : "L", units: won ? (1 - e.q) / e.q : -1, whale: won ? e.shares * (1 - e.q) : -e.shares * e.q });
 }
+// stamp when a result first lands, so the page can show "last result logged"
+function settleStamp(e, res) { const was = e.result; settle(e, res); if (!was && e.result) e.settledAt = now(); }
 const r2 = x => Math.round(x * 1e4) / 1e4;
 function log(pm, source) {
   pm.forEach(p => {
@@ -329,7 +344,11 @@ async function settlePending() {
   const pc = []; for (let i = 0; i < pp.length; i += 20) pc.push(pp.slice(i, i + 20));
   await pool(pc, 4, c => getJSON(`${GAMMA}/markets?limit=50&closed=true&` + c.map(x => "condition_ids=" + x).join("&"))
     .then(ms => (Array.isArray(ms) ? ms : []).forEach(m => m.conditionId && pmMarkets.set(m.conditionId, m))).catch(() => {}));
-  Object.values(ledger).forEach(e => { if (!e.result) settle(e, resolveEntry(e)); });
+  // Gamma misses some markets entirely; ask Polymarket's order-book API for anything still unresolved after 3h
+  const stuck = [...new Set(Object.values(ledger).filter(e => !e.result && e.venue !== "Kalshi" && now() - e.ts > 3 * 3600
+    && resolvePM(pmMarkets.get(e.conditionId)) === null).map(e => e.conditionId))].slice(0, 120);
+  await pool(stuck, 4, cid => getJSON(`https://clob.polymarket.com/markets/${cid}`, 2).then(m => clobMarkets.set(cid, m)).catch(() => {}));
+  Object.values(ledger).forEach(e => { if (!e.result) settleStamp(e, resolveEntry(e)); });
 }
 
 /* ---------- run ---------- */
@@ -371,6 +390,10 @@ Object.values(ledger).forEach(e => {
   const m = new Date(e.ts * 1000).toISOString().slice(0, 7);
   (months[m] ||= {})[e.key] = e;
 });
+// Safety: settled results should only ever grow. If the count dropped, something went wrong, so don't save.
+const prevSettled = Object.values((readJSON(`${STORE}/index.json`, {}) || {}).counts || {}).reduce((a, b) => a + b, 0);
+const newSettled = Object.values(months).reduce((a, o) => a + Object.keys(o).length, 0);
+if (newSettled < prevSettled) { console.error(`Settled results would drop from ${prevSettled} to ${newSettled}. Stopping without saving.`); process.exit(1); }
 fs.readdirSync(STORE).filter(f => /^settled-\d{4}-\d{2}\.json$/.test(f)).forEach(f => fs.unlinkSync(`${STORE}/${f}`));
 Object.entries(months).forEach(([m, o]) => fs.writeFileSync(`${STORE}/settled-${m}.json`, JSON.stringify(o)));
 fs.writeFileSync(`${STORE}/pending.json`, JSON.stringify(pending));
