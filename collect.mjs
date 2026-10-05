@@ -45,13 +45,39 @@ async function pool(items, n, fn) {
 
 /* ---------- leagues ---------- */
 const PM_LEAGUES = [
-  [/^nfl-/, "NFL"], [/^(cfb|ncaaf)-/, "CFB"], [/^nba-/, "NBA"], [/^wnba-/, "WNBA"], [/^(cbb|ncaab)-/, "CBB"],
-  [/^mlb-/, "MLB"], [/^nhl-/, "NHL"], [/^epl-/, "EPL"], [/^(lal|laliga)-/, "La Liga"], [/^ucl-/, "UCL"],
-  [/^uel-/, "UEL"], [/^(bun|bundesliga)-/, "Bundesliga"], [/^(sea|seriea)-/, "Serie A"], [/^(fl1|ligue1)-/, "Ligue 1"],
-  [/^mls-/, "MLS"], [/^nwsl-/, "NWSL"], [/^ufc-/, "UFC"], [/^(atp|wta)-/, "Tennis"], [/^(pga|golf)-/, "Golf"],
-  [/^(f1|formula)/, "F1"], [/^(ipl|cricket|crint)-/, "Cricket"], [/^(boxing|box)-/, "Boxing"]
+  [/^nfl-/, "NFL"], [/^(cfb|ncaaf)-/, "CFB"], [/^nba-/, "NBA"], [/^wnba-/, "WNBA"], [/^(cbb|ncaab|cwbb|ncaaw)-/, "CBB"],
+  [/^mlb-/, "MLB"], [/^(kbo|npb|cpbl)-/, "Intl baseball"], [/^nhl-/, "NHL"], [/^(khl|shl|ahl)-/, "Intl hockey"],
+  [/^epl-/, "EPL"], [/^(lal|laliga)-/, "La Liga"], [/^ucl-/, "UCL"], [/^uel-/, "UEL"], [/^(uecl|uefcl)-/, "Conference League"],
+  [/^(bun|bundesliga)-/, "Bundesliga"], [/^(sea|seriea)-/, "Serie A"], [/^(fl1|ligue1)-/, "Ligue 1"], [/^mls-/, "MLS"], [/^nwsl-/, "NWSL"],
+  [/^(ere|eredivisie|por|primeira|efl|elc|championship|sco|spfl|tur|bel|den|nor|swe|sui|aut|gre|arg|bra|mex|ligamx|col|chi|jpn|j1|kor|k1|aus|aleague|csl|sau|spl|mar|egy|bun2|lal2|sea2|fl2|fifwc|wcq|afcon|copa|euro|unl|concacaf|friendly|intl)-/, "Other soccer"],
+  [/^ufc-/, "UFC"], [/^(boxing|box)-/, "Boxing"], [/^(atp|wta|itf|tennis)-/, "Tennis"], [/^(pga|golf|liv|lpga|dpw)-/, "Golf"],
+  [/^(f1|formula|nascar|indycar|motogp)/, "Motorsport"], [/^(ipl|cricket|crint|bbl|psl|cpl|t20|odi|test)-/, "Cricket"],
+  [/^(cs2|csgo|cs|lol|val|valorant|dota2|dota|r6|cod|rl|ow|esports)-/, "Esports"],
+  [/^(nrl|afl|rugby|super-rugby|six-nations|urc)-/, "Rugby/Aussie rules"], [/^(euroleague|nbl|bbl-basket|acb|lnb)-/, "Intl basketball"],
+  [/^(darts|snooker|table-tennis|volleyball|handball|mma|pfl|bellator)-/, "Other sports"]
 ];
 const pmLeague = s => { for (const [re, n] of PM_LEAGUES) if (re.test(s || "")) return n; return "Other"; };
+// league from Polymarket's own event tags, for slugs the prefix list doesn't recognize
+const TAG_LEAGUES = [
+  [/^(nfl)$/, "NFL"], [/^(ncaaf|cfb|college-football)$/, "CFB"], [/^(nba)$/, "NBA"], [/^(wnba)$/, "WNBA"],
+  [/^(ncaab|cbb|college-basketball|march-madness|ncaaw)$/, "CBB"], [/^(mlb)$/, "MLB"], [/^(nhl)$/, "NHL"],
+  [/^(epl|premier-league)$/, "EPL"], [/^(la-liga|laliga)$/, "La Liga"], [/^(ucl|champions-league)$/, "UCL"], [/^(uel|europa-league)$/, "UEL"],
+  [/^(bundesliga)$/, "Bundesliga"], [/^(serie-a)$/, "Serie A"], [/^(ligue-1)$/, "Ligue 1"], [/^(mls)$/, "MLS"], [/^(nwsl)$/, "NWSL"],
+  [/^(ufc|mma)$/, "UFC"], [/^(boxing)$/, "Boxing"], [/^(tennis|atp|wta)$/, "Tennis"], [/^(golf|pga)$/, "Golf"],
+  [/^(f1|formula-1|nascar|motorsport)$/, "Motorsport"], [/^(cricket|ipl)$/, "Cricket"],
+  [/^(esports|cs2|counter-strike|league-of-legends|lol|valorant|dota-2|dota2)$/, "Esports"],
+  [/^(soccer|football-soccer)$/, "Other soccer"], [/^(baseball)$/, "Intl baseball"], [/^(hockey)$/, "Intl hockey"], [/^(basketball)$/, "Intl basketball"]
+];
+const GENERIC_TAGS = new Set(["sports", "games", "all", "featured", "trending", "recurring", "hide-from-new", "daily", "weekly", "new", "breaking"]);
+function tagsLeague(tags) {
+  const slugs = (Array.isArray(tags) ? tags : []).map(t => String(t.slug || t.label || "").toLowerCase().replace(/\s+/g, "-")).filter(s => s && !GENERIC_TAGS.has(s));
+  // specific leagues first, then sport-level fallbacks (the last few patterns)
+  for (const [re, n] of TAG_LEAGUES.slice(0, -4)) if (slugs.some(s => re.test(s))) return n;
+  for (const [re, n] of TAG_LEAGUES.slice(-4)) if (slugs.some(s => re.test(s))) return n;
+  return null;
+}
+const evLeagueBySlug = new Map(), startByCid = new Map();
+const parseStart = v => { const t = Date.parse(String(v || "").replace(" ", "T").replace(/\+00$/, "Z")); return isNaN(t) ? null : Math.floor(t / 1000); };
 const K_LEAGUES = [[/^KXNFL/, "NFL"], [/^KXNCAAF/, "CFB"], [/^KXWNBA/, "WNBA"], [/^KXNBA/, "NBA"], [/^KXNCAA(MB|B)/, "CBB"], [/^KXMLB/, "MLB"],
   [/^KXNHL/, "NHL"], [/^KXEPL/, "EPL"], [/^KXUCL/, "UCL"], [/^KXUEL/, "UEL"], [/^KXMLS/, "MLS"], [/^KXLALIGA/, "La Liga"], [/^KXSERIEA/, "Serie A"],
   [/^KXBUNDESLIGA/, "Bundesliga"], [/^KXLIGUE1/, "Ligue 1"], [/^KXUFC/, "UFC"], [/^KX(ATP|WTA)/, "Tennis"], [/^KXPGA/, "Golf"], [/^KXF1/, "F1"]];
@@ -131,9 +157,15 @@ async function sharps(period) {
 
 /* ---------- Polymarket ---------- */
 function indexEvents(evs) {
+  evs.forEach(e => {
+    const lg = tagsLeague(e.tags);
+    if (e.slug && lg) evLeagueBySlug.set(e.slug, lg);
+  });
   evs.forEach(e => (e.markets || []).forEach(m => {
     if (!m.conditionId) return;
     pmMarkets.set(m.conditionId, m);
+    const st = parseStart(m.gameStartTime || e.startTime || m.eventStartTime);
+    if (st) startByCid.set(m.conditionId, st);
     const o = parseArr(m.outcomes); if (o.length) names[m.conditionId] = o;
   }));
 }
@@ -152,7 +184,7 @@ async function pmTrades(evs) {
     if (!names[t.conditionId][idx]) names[t.conditionId][idx] = t.outcome;
     out.push({ venue: "Polymarket", id, wallet: (t.proxyWallet || "").toLowerCase(), name: t.name || t.pseudonym || "",
       conditionId: t.conditionId, side: t.side, idx, outcome: t.outcome, price, size, usd: price * size,
-      timestamp: t.timestamp, title: t.title, eventSlug: t.eventSlug, league: pmLeague(t.eventSlug) });
+      timestamp: t.timestamp, title: t.title, eventSlug: t.eventSlug, league: pmLeague(t.eventSlug) !== "Other" ? pmLeague(t.eventSlug) : (evLeagueBySlug.get(t.eventSlug) || "Other") });
   });
   return out;
 }
@@ -209,6 +241,8 @@ async function kalshiLive() {
     m.title = m.title || ev.title || m.ticker;
     m._league = ev._league && ev._league !== "Other" ? ev._league : (leagueFromTitle(m.title) || kLeague(m.ticker));
     kMarkets.set(m.ticker, m); names[m.ticker] = kNames(m); markets.push(m);
+    const st = parseStart(m.occurrence_datetime || ev.occurrence_datetime || ev.strike_date);
+    if (st) startByCid.set(m.ticker, st);
   }));
   kDiag.markets = markets.length;
 
@@ -331,8 +365,11 @@ function log(pm, source) {
     ledger[p.key] = { key: p.key, venue: p.venue, wallet: p.wallet, conditionId: p.conditionId, title: p.title, slug: p.slug, league: p.league,
       idx: p.idx, name: p.name, q: src.q, shares: src.shares, usd: src.usd, ts: src.ts,
       score: keep ? Math.max(cur.score, p.score) : p.score, sv: SCORE_VERSION,
-      sharp: p.sharp, entryBuy: p.entryBuy, source: cur ? cur.source : source, result: null };
-    settle(ledger[p.key], resolveEntry(ledger[p.key]));
+      sharp: p.sharp, entryBuy: p.entryBuy, source: cur ? cur.source : source, result: null,
+      // what went into the score, kept so the page can show which factors actually win
+      f: { abs: p.parts.abs, rel: p.parts.rel, relKnown: p.parts.relKnown, flow: p.parts.flow, n: p.parts.n, price: p.parts.price, edge: p.parts.edge },
+      block: !!p.block, start: startByCid.get(p.conditionId) || (cur && cur.start) || null };
+    settleStamp(ledger[p.key], resolveEntry(ledger[p.key]));
   });
 }
 async function settlePending() {
@@ -373,6 +410,15 @@ if (!meta.backfilledAt || meta.sv !== SCORE_VERSION || process.env.BACKFILL === 
   meta.backfilledAt = now(); meta.sv = SCORE_VERSION;
 }
 await settlePending();
+
+// Re-label bets stuck in "Other": first the prefix list, then Polymarket's own event tags (cached between runs)
+const leagueCache = readJSON(`${STORE}/leagues.json`, {});
+Object.values(ledger).forEach(e => { if (e.league === "Other" && e.venue !== "Kalshi") { const l = pmLeague(e.slug); if (l !== "Other") e.league = l; } });
+const unknown = [...new Set(Object.values(ledger).filter(e => e.league === "Other" && e.venue !== "Kalshi" && e.slug && !(e.slug in leagueCache)).map(e => e.slug))].slice(0, 60);
+await pool(unknown, 4, slug => getJSON(`${GAMMA}/events?slug=${encodeURIComponent(slug)}`, 2)
+  .then(j => { const ev = Array.isArray(j) ? j[0] : null; leagueCache[slug] = (ev && tagsLeague(ev.tags)) || "Other"; }).catch(() => {}));
+Object.values(ledger).forEach(e => { if (e.league === "Other" && leagueCache[e.slug] && leagueCache[e.slug] !== "Other") e.league = leagueCache[e.slug]; });
+fs.writeFileSync(`${STORE}/leagues.json`, JSON.stringify(leagueCache));
 
 // drop bets that never settled after two weeks (voided or delisted markets)
 Object.values(ledger).forEach(e => { if (!e.result && now() - e.ts > PENDING_DAYS * 86400) delete ledger[e.key]; });
