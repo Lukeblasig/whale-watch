@@ -232,10 +232,11 @@ const BUCKETS = [[90,100],[80,89],[70,79],[60,69],[50,59]];
 let openBucket = null, betFilter = "all", showAllBets = false;
 
 const RECOMMENDED = { min: 5000, minScore: 60, venue: "Polymarket", sharpOnly: true, buysOnly: false, league: "", sort: "score", period: "ALL", auto: true };
-const defaults = Object.assign({ tab: "tape", incBackfill: true, proxy: "", theme: "dark", rVenue: "", rWho: "all", rMin: 1000, rLeague: "", dedupe: true, wwFactor: "league", ww50: false }, RECOMMENDED);
+const defaults = Object.assign({ tab: "tape", incBackfill: true, proxy: "", theme: "dark", rVenue: "", rWho: "all", rMin: 1000, rLeague: "", dedupe: true, wwFactor: "league", wwMin: 0 }, RECOMMENDED);
 const state = Object.assign({}, defaults, loadLS("ww-state") || {});
 if (!state.v3){ Object.assign(state, RECOMMENDED); state.v3 = true; }
 if (!state.v4){ state.dedupe = true; state.v4 = true; }
+if (state.wwMin === undefined) state.wwMin = state.ww50 ? 50 : 0;
 if (!state.v2){ state.sort = "score"; state.v2 = true; }
 if (!state.proxy && !state.proxyCleared) state.proxy = "https://wandering-brook-9f12.luke-blasig.workers.dev";
 let ledger = loadLS("ww-ledger") || {};
@@ -823,7 +824,7 @@ function renderResults(out){
   const line = (label, a, cls, id) => `<tr class="bkrow ${cls || ""} ${openBucket === id ? "sel" : ""}" data-bk="${id}"><td class="bk"><span class="caret">${openBucket === id ? "▾" : "▸"}</span>${label}</td><td>${a.n}</td><td>${a.w}-${a.l}${a.p ? "-" + a.p : ""}</td><td>${a.n ? a.wp.toFixed(0) + "%" : "—"}</td><td>${a.n ? american(a.avg) : "—"}</td><td>${pl(a.u)}</td><td>${a.n ? (a.roi > 0 ? "+" : "") + a.roi.toFixed(1) + "%" : "—"}</td><td>${plD(a.wh)}</td><td>${signal(a.list)}</td></tr>`;
   const inB = id => {
     if (id === "pending") return pend;
-    if (id.startsWith("g:")){ const fx = FACTORS[state.wwFactor]; const v = id.slice(2); return done.filter(e => (!state.ww50 || e.score >= 50) && fx.fn(e) === v); }
+    if (id.startsWith("g:")){ const fx = FACTORS[state.wwFactor]; const v = id.slice(2); return done.filter(e => e.score >= (state.wwMin || 0) && fx.fn(e) === v); }
     if (id === "all") return done.filter(e => e.score >= 50);
     const [lo, hi] = id.split("-").map(Number); return done.filter(e => e.score >= lo && e.score <= hi);
   };
@@ -857,7 +858,7 @@ function renderResults(out){
     </div>`;
   }
   const fx = FACTORS[state.wwFactor] || FACTORS.league;
-  const wwRows = done.filter(e => !state.ww50 || e.score >= 50);
+  const wwRows = done.filter(e => e.score >= (state.wwMin || 0));
   const groups = new Map();
   wwRows.forEach(e => { const g = fx.fn(e); (groups.get(g) || groups.set(g, []).get(g)).push(e); });
   const gKeys = [...groups.keys()].sort((a, b) => fx.order ? fx.order.indexOf(a) - fx.order.indexOf(b) : groups.get(b).length - groups.get(a).length);
@@ -868,7 +869,7 @@ function renderResults(out){
       <h3>What's working</h3>
       <p>Every settled bet in your filters above, split by one factor at a time. Look for groups marked "Likely real edge" with plenty of bets.</p>
       <div class="row" style="margin:8px 0">${Object.entries(FACTORS).map(([k, v]) => `<button class="chip" data-ww="${k}" aria-pressed="${state.wwFactor === k}">${v.label}</button>`).join("")}</div>
-      <label style="display:flex;align-items:center;gap:6px;cursor:pointer;margin-bottom:8px;font-size:14px"><input type="checkbox" id="ww50" ${state.ww50 ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--buy)">Only bets scoring 50+</label>
+      <div class="row" style="margin-bottom:8px;gap:14px"><span>Only scores</span>${[50, 60, 70, 80].map(v => `<label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:14px"><input type="checkbox" data-wwmin="${v}" ${state.wwMin === v ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--buy)">${v}+</label>`).join("")}</div>
       <div class="tblwrap"><table>
         <thead><tr><th>${fx.label}</th><th>Bets</th><th>W-L</th><th>Win %</th><th>Avg odds</th><th>Tail 1u</th><th>ROI</th><th>Signal</th></tr></thead>
         <tbody>${gKeys.length ? gKeys.map(gLine).join("") : `<tr><td colspan="8" style="text-align:left">No settled bets in these filters yet.</td></tr>`}</tbody>
@@ -933,7 +934,11 @@ function renderResults(out){
     const k = b.dataset.rk; state[k] = k === "rMin" ? Number(b.dataset.rv) : b.dataset.rv; save(); render();
   });
   out.querySelectorAll("[data-ww]").forEach(b => b.onclick = () => { state.wwFactor = b.dataset.ww; if (openBucket && openBucket.startsWith("g:")) openBucket = null; save(); render(); });
-  $("#ww50").onchange = e => { state.ww50 = e.target.checked; save(); render(); };
+  out.querySelectorAll("[data-wwmin]").forEach(cb => cb.onchange = e => {
+    state.wwMin = e.target.checked ? Number(cb.dataset.wwmin) : 0;
+    if (openBucket && openBucket.startsWith("g:")) openBucket = null;
+    save(); render();
+  });
   $("#rLeague").onchange = e => { state.rLeague = e.target.value; save(); render(); };
   if ($("#moreBets")) $("#moreBets").onclick = () => { showAllBets = true; render(); };
   $("#rDedupe").onchange = e => { state.dedupe = e.target.checked; save(); render(); };
