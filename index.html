@@ -174,6 +174,7 @@ footer{color:var(--muted);font-size:12px;margin-top:22px}
       <span>Show</span>
       <button class="chip" id="fAll" aria-pressed="false">All whales</button>
       <button class="chip sharp" id="fSharp" aria-pressed="false">Sharps only</button>
+      <button class="chip sharp" id="fSharpK" aria-pressed="false">Sharps + Kalshi</button>
       <button class="chip" id="fBuys" aria-pressed="false">Buys only</button>
     </div>
     <div class="row">
@@ -635,7 +636,7 @@ function filtered(){
   return trades.filter(t => {
     const p = posMap.get(t.pos);
     return t.price >= 0.03 && t.price <= 0.97 && t.usd >= state.min && (!state.league || t.league === state.league) && (!state.venue || t.venue === state.venue)
-      && (!state.buysOnly || t.side === "BUY") && (!state.sharpOnly || bs.has(t.wallet))
+      && (!state.buysOnly || t.side === "BUY") && (!state.sharpOnly || bs.has(t.wallet) || (state.sharpOnly === "k" && t.venue === "Kalshi"))
       && (p ? p.score : 0) >= state.minScore;
   });
 }
@@ -800,7 +801,7 @@ function renderResults(out){
   const leagues = [...new Set(all.map(e => e.league))].sort();
   const junkCount = all.filter(e => isJunk(e)).length;
   let rows = all.filter(e => (state.showJunk || !isJunk(e)) && e.usd >= state.rMin && (!state.rLeague || e.league === state.rLeague) && (!state.rVenue || venueOf(e) === state.rVenue)
-    && (state.rWho !== "sharps" || e.sharp) && (state.incBackfill || e.source === "live") && (state.oldScores || e.sv === SCORE_VERSION));
+    && (state.rWho === "all" || e.sharp || (state.rWho === "sharpsK" && venueOf(e) === "Kalshi")) && (state.incBackfill || e.source === "live") && (state.oldScores || e.sv === SCORE_VERSION));
   if (state.dedupe){
     const g = new Map();
     rows.forEach(e => {
@@ -890,7 +891,7 @@ function renderResults(out){
       </div>
       <div style="display:grid;gap:8px;margin-bottom:10px">
         <div class="row"><span>Venue</span>${chips("rVenue", [["", "All"], ["Polymarket", "Polymarket"], ["Kalshi", "Kalshi"]])}</div>
-        <div class="row"><span>Bettors</span>${chips("rWho", [["all", "Everyone"], ["sharps", "Sharps only"]])}</div>
+        <div class="row"><span>Bettors</span>${chips("rWho", [["all", "Everyone"], ["sharps", "Sharps only"], ["sharpsK", "Sharps + Kalshi"]])}</div>
         <div class="row"><span>Min bet</span>${chips("rMin", R_MINS.map(v => [v, money(v) + "+"]))}</div>
         <div class="row"><span>League</span><select id="rLeague"><option value="">All sports</option>${leagues.map(l => `<option ${state.rLeague === l ? "selected" : ""}>${esc(l)}</option>`).join("")}</select></div>
         <div class="row"><span>Also</span>
@@ -959,7 +960,8 @@ function syncControls(){
   document.querySelectorAll("#venueRow .chip").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state.venue)));
   document.querySelectorAll("#scoreRow .chip").forEach(b => b.setAttribute("aria-pressed", String(Number(b.dataset.v) === state.minScore)));
   $("#fAll").setAttribute("aria-pressed", String(!state.sharpOnly));
-  $("#fSharp").setAttribute("aria-pressed", String(state.sharpOnly));
+  $("#fSharp").setAttribute("aria-pressed", String(state.sharpOnly === true));
+  $("#fSharpK").setAttribute("aria-pressed", String(state.sharpOnly === "k"));
   $("#fBuys").setAttribute("aria-pressed", String(state.buysOnly));
   $("#proxyBtn").setAttribute("aria-pressed", String(!!state.proxy)); $("#proxyBtn").textContent = state.proxy ? "Proxy on" : "Proxy URL";
   $("#period").value = state.period;
@@ -977,6 +979,7 @@ $("#minRow").addEventListener("click", e => { const b = e.target.closest(".chip"
 $("#scoreRow").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.minScore = Number(b.dataset.v); save(); syncControls(); render(); });
 $("#fAll").onclick = () => { state.sharpOnly = false; save(); syncControls(); render(); };
 $("#fSharp").onclick = () => { state.sharpOnly = true; save(); syncControls(); render(); };
+$("#fSharpK").onclick = () => { state.sharpOnly = "k"; if (state.venue === "Polymarket") state.venue = ""; save(); syncControls(); render(); };
 $("#fBuys").onclick = () => { state.buysOnly = !state.buysOnly; save(); syncControls(); render(); };
 $("#league").onchange = e => { state.league = e.target.value; save(); render(); };
 $("#sortRow").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.sort = b.dataset.v; save(); syncControls(); render(); });
