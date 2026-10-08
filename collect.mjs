@@ -180,6 +180,7 @@ async function pmTrades(evs) {
     const id = t.transactionHash + t.asset + "|" + t.size;
     if (seen.has(id)) return; seen.add(id);
     const price = Number(t.price), size = Number(t.size), idx = Number(t.outcomeIndex);
+    if (isJunkPrice(price)) return; // 0–2¢ / 98–100¢ fills are after-the-fact clean-up, not real bets
     if (!names[t.conditionId]) names[t.conditionId] = [];
     if (!names[t.conditionId][idx]) names[t.conditionId][idx] = t.outcome;
     out.push({ venue: "Polymarket", id, wallet: (t.proxyWallet || "").toLowerCase(), name: t.name || t.pseudonym || "",
@@ -258,7 +259,7 @@ async function kalshiLive() {
     const idx = (t.taker_outcome_side || t.taker_side) === "no" ? 1 : 0;
     const price = Number(idx ? (t.no_price_dollars ?? t.no_price / 100) : (t.yes_price_dollars ?? t.yes_price / 100));
     const size = Number(t.count_fp ?? t.count), usd = price * size;
-    if (!(usd >= FLOOR) || !(price > 0)) return;
+    if (!(usd >= FLOOR) || !(price > 0) || isJunkPrice(price)) return;
     const m = kMarkets.get(t.ticker);
     out.push({ venue: "Kalshi", id: t.trade_id, wallet: "", name: "", conditionId: t.ticker, side: "BUY", idx,
       outcome: m ? kNames(m)[idx] : (idx ? "No" : "Yes"), price, size, usd, timestamp: Math.floor(Date.parse(t.created_time) / 1000),
@@ -334,7 +335,13 @@ function resolvePM(mk) {
   if (px.length && px.every(x => Math.abs(x - 0.5) < 0.02)) return "push";
   return null;
 }
-const resolveK = mk => !mk ? null : mk.result === "yes" ? 0 : mk.result === "no" ? 1 : null;
+const resolveK = mk => {
+  if (!mk) return null;
+  const r = String(mk.result || "").toLowerCase();
+  if (r === "yes") return 0; if (r === "no") return 1;
+  if (r === "void") return "push";
+  return null;
+};
 const clobMarkets = new Map(); // conditionId -> CLOB market (fallback when Gamma can't see a market)
 function resolveClob(mk, cid) {
   if (!mk || !mk.closed || !Array.isArray(mk.tokens)) return null;
@@ -354,6 +361,7 @@ function settle(e, res) {
 // stamp when a result first lands, so the page can show "last result logged"
 function settleStamp(e, res) { const was = e.result; settle(e, res); if (!was && e.result) e.settledAt = now(); }
 const r2 = x => Math.round(x * 1e4) / 1e4;
+function isJunkPrice(p) { return p < 0.03 || p > 0.97; }
 function log(pm, source) {
   pm.forEach(p => {
     const cur = ledger[p.key];
@@ -377,7 +385,10 @@ async function settlePending() {
   const kp = [...new Set(open.filter(e => e.venue === "Kalshi").map(e => e.conditionId))];
   const pp = [...new Set(open.filter(e => e.venue !== "Kalshi").map(e => e.conditionId))];
   const kc = []; for (let i = 0; i < kp.length; i += 40) kc.push(kp.slice(i, i + 40));
-  await pool(kc, 4, c => kget(`/markets?tickers=${c.join(",")}&limit=100`).then(j => (j.markets || []).forEach(m => kMarkets.set(m.ticker, m))).catch(() => {}));
+  await pool(kc, 4, c => kget(`/markets?tickers=${c.join(",")}&limit=100`).then(j => (j.markets || []).forEach(m => { if (kp.includes(m.ticker)) kMarkets.set(m.ticker, m); })).catch(() => {}));
+  // The batch lookup doesn't always return settled markets, so look up anything still unresolved one at a time
+  const kStuck = kp.filter(t => resolveK(kMarkets.get(t)) === null).slice(0, 200);
+  await pool(kStuck, 5, t => kget(`/markets/${encodeURIComponent(t)}`).then(j => { if (j && j.market) kMarkets.set(t, j.market); }).catch(() => {}));
   const pc = []; for (let i = 0; i < pp.length; i += 20) pc.push(pp.slice(i, i + 20));
   await pool(pc, 4, c => getJSON(`${GAMMA}/markets?limit=50&closed=true&` + c.map(x => "condition_ids=" + x).join("&"))
     .then(ms => (Array.isArray(ms) ? ms : []).forEach(m => m.conditionId && pmMarkets.set(m.conditionId, m))).catch(() => {}));
@@ -420,6 +431,7 @@ await pool(unknown, 4, slug => getJSON(`${GAMMA}/events?slug=${encodeURIComponen
 Object.values(ledger).forEach(e => { if (e.league === "Other" && leagueCache[e.slug] && leagueCache[e.slug] !== "Other") e.league = leagueCache[e.slug]; });
 fs.writeFileSync(`${STORE}/leagues.json`, JSON.stringify(leagueCache));
 
+Object.values(ledger).forEach(e => { if (isJunkPrice(e.q)) e.junk = true; });
 // drop bets that never settled after two weeks (voided or delisted markets)
 Object.values(ledger).forEach(e => { if (!e.result && now() - e.ts > PENDING_DAYS * 86400) delete ledger[e.key]; });
 

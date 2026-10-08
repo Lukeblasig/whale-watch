@@ -633,7 +633,7 @@ function filtered(){
   const bs = badgeSharps();
   return trades.filter(t => {
     const p = posMap.get(t.pos);
-    return t.usd >= state.min && (!state.league || t.league === state.league) && (!state.venue || t.venue === state.venue)
+    return t.price >= 0.03 && t.price <= 0.97 && t.usd >= state.min && (!state.league || t.league === state.league) && (!state.venue || t.venue === state.venue)
       && (!state.buysOnly || t.side === "BUY") && (!state.sharpOnly || bs.has(t.wallet))
       && (p ? p.score : 0) >= state.minScore;
   });
@@ -767,6 +767,7 @@ function openPlay(cid, idx, from){
 }
 
 /* ---------- results ---------- */
+const isJunk = e => e.junk || e.q < 0.03 || e.q > 0.97;
 // How sure can we be that a group's ROI isn't luck? Compares the average result per bet with its spread.
 function signal(list){
   const n = list.length;
@@ -796,7 +797,8 @@ const R_MINS = [1000, 5000, 10000, 25000];
 function renderResults(out){
   const all = Object.values(ledger);
   const leagues = [...new Set(all.map(e => e.league))].sort();
-  let rows = all.filter(e => e.usd >= state.rMin && (!state.rLeague || e.league === state.rLeague) && (!state.rVenue || venueOf(e) === state.rVenue)
+  const junkCount = all.filter(e => isJunk(e)).length;
+  let rows = all.filter(e => (state.showJunk || !isJunk(e)) && e.usd >= state.rMin && (!state.rLeague || e.league === state.rLeague) && (!state.rVenue || venueOf(e) === state.rVenue)
     && (state.rWho !== "sharps" || e.sharp) && (state.incBackfill || e.source === "live") && (state.oldScores || e.sv === SCORE_VERSION));
   if (state.dedupe){
     const g = new Map();
@@ -893,6 +895,7 @@ function renderResults(out){
         <div class="row"><span>Also</span>
           <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" id="rDedupe" ${state.dedupe ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--buy)">One bet per pick</label>
           <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" id="rBack" ${state.incBackfill ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--buy)">Include backfill</label>
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" id="rJunk" ${state.showJunk ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--buy)">Include 0–2¢ / 98–100¢ fills (${junkCount})</label>
           <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" id="rOld" ${state.oldScores ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--buy)">Include old scores</label>
         </div>
       </div>
@@ -935,6 +938,7 @@ function renderResults(out){
   if ($("#moreBets")) $("#moreBets").onclick = () => { showAllBets = true; render(); };
   $("#rDedupe").onchange = e => { state.dedupe = e.target.checked; save(); render(); };
   $("#rBack").onchange = e => { state.incBackfill = e.target.checked; save(); render(); };
+  $("#rJunk").onchange = e => { state.showJunk = e.target.checked; save(); render(); };
   $("#rOld").onchange = e => { state.oldScores = e.target.checked; save(); render(); };
   if ($("#allMonths")) $("#allMonths").onclick = async () => { wantAllMonths = true; setStatus("Loading full history…"); await loadHosted(); };
   if (!hosted){
