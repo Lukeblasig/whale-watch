@@ -11,6 +11,8 @@ const FLOOR = 1000;
 const STORE = process.env.STORE || "store";
 const PENDING_DAYS = 14;
 const now = () => Math.floor(Date.now() / 1000);
+// Time budget: optional catch-up work is skipped once a run gets long, so every run finishes and saves.
+const T0 = Date.now(), elapsed = () => (Date.now() - T0) / 1000, skipped = [];
 const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
 const parseArr = v => { try { return Array.isArray(v) ? v : JSON.parse(v || "[]"); } catch { return []; } };
 const readJSON = (p, d) => { try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch { return d; } };
@@ -219,6 +221,7 @@ async function kalshiLive() {
   // 2) every open event (with its markets), keeping sports ones
   const events = []; let cursor = "";
   for (let i = 0; i < 40; i++) {
+    if (elapsed() > 240) { skipped.push("rest of Kalshi event scan"); break; }
     let j;
     try { j = await kget(`/events?status=open&with_nested_markets=true&limit=200${cursor ? "&cursor=" + encodeURIComponent(cursor) : ""}`); }
     catch (e) { kErr("events page " + (i + 1), e); break; }
@@ -388,14 +391,14 @@ async function settlePending() {
   await pool(kc, 4, c => kget(`/markets?tickers=${c.join(",")}&limit=100`).then(j => (j.markets || []).forEach(m => { if (kp.includes(m.ticker)) kMarkets.set(m.ticker, m); })).catch(() => {}));
   // The batch lookup doesn't always return settled markets, so look up anything still unresolved one at a time
   const kStuck = kp.filter(t => resolveK(kMarkets.get(t)) === null).slice(0, 200);
-  await pool(kStuck, 5, t => kget(`/markets/${encodeURIComponent(t)}`).then(j => { if (j && j.market) kMarkets.set(t, j.market); }).catch(() => {}));
+  if (elapsed() > 480) skipped.push("Kalshi result lookups"); else await pool(kStuck, 5, t => kget(`/markets/${encodeURIComponent(t)}`).then(j => { if (j && j.market) kMarkets.set(t, j.market); }).catch(() => {}));
   const pc = []; for (let i = 0; i < pp.length; i += 20) pc.push(pp.slice(i, i + 20));
   await pool(pc, 4, c => getJSON(`${GAMMA}/markets?limit=50&closed=true&` + c.map(x => "condition_ids=" + x).join("&"))
     .then(ms => (Array.isArray(ms) ? ms : []).forEach(m => m.conditionId && pmMarkets.set(m.conditionId, m))).catch(() => {}));
   // Gamma misses some markets entirely; ask Polymarket's order-book API for anything still unresolved after 3h
   const stuck = [...new Set(Object.values(ledger).filter(e => !e.result && e.venue !== "Kalshi" && now() - e.ts > 3 * 3600
     && resolvePM(pmMarkets.get(e.conditionId)) === null).map(e => e.conditionId))].slice(0, 120);
-  await pool(stuck, 4, cid => getJSON(`https://clob.polymarket.com/markets/${cid}`, 2).then(m => clobMarkets.set(cid, m)).catch(() => {}));
+  if (elapsed() > 540) skipped.push("Polymarket backup result lookups"); else await pool(stuck, 4, cid => getJSON(`https://clob.polymarket.com/markets/${cid}`, 2).then(m => clobMarkets.set(cid, m)).catch(() => {}));
   Object.values(ledger).forEach(e => { if (!e.result) settleStamp(e, resolveEntry(e)); });
 }
 
@@ -426,7 +429,7 @@ await settlePending();
 const leagueCache = readJSON(`${STORE}/leagues.json`, {});
 Object.values(ledger).forEach(e => { if (e.league === "Other" && e.venue !== "Kalshi") { const l = pmLeague(e.slug); if (l !== "Other") e.league = l; } });
 const unknown = [...new Set(Object.values(ledger).filter(e => e.league === "Other" && e.venue !== "Kalshi" && e.slug && !(e.slug in leagueCache)).map(e => e.slug))].slice(0, 60);
-await pool(unknown, 4, slug => getJSON(`${GAMMA}/events?slug=${encodeURIComponent(slug)}`, 2)
+if (elapsed() > 600) skipped.push("league lookups"); else await pool(unknown, 4, slug => getJSON(`${GAMMA}/events?slug=${encodeURIComponent(slug)}`, 2)
   .then(j => { const ev = Array.isArray(j) ? j[0] : null; leagueCache[slug] = (ev && tagsLeague(ev.tags)) || "Other"; }).catch(() => {}));
 Object.values(ledger).forEach(e => { if (e.league === "Other" && leagueCache[e.slug] && leagueCache[e.slug] !== "Other") e.league = leagueCache[e.slug]; });
 fs.writeFileSync(`${STORE}/leagues.json`, JSON.stringify(leagueCache));
@@ -455,7 +458,7 @@ if (newSettled < prevSettled) { console.error(`Settled results would drop from $
 fs.readdirSync(STORE).filter(f => /^settled-\d{4}-\d{2}\.json$/.test(f)).forEach(f => fs.unlinkSync(`${STORE}/${f}`));
 Object.entries(months).forEach(([m, o]) => fs.writeFileSync(`${STORE}/settled-${m}.json`, JSON.stringify(o)));
 fs.writeFileSync(`${STORE}/pending.json`, JSON.stringify(pending));
-meta.updated = now(); meta.errors = errors.slice(0, 10); meta.kalshi = kDiag;
+meta.updated = now(); meta.errors = errors.slice(0, 10); meta.kalshi = kDiag; meta.runSeconds = Math.round(elapsed()); meta.skipped = skipped;
 fs.writeFileSync(`${STORE}/feed.json`, JSON.stringify({ updated: meta.updated, sharps: S, names: feedNames, vols: feedVols, trades: feedTrades }));
 const counts = Object.fromEntries(Object.entries(months).map(([m, o]) => [m, Object.keys(o).length]));
 fs.writeFileSync(`${STORE}/index.json`, JSON.stringify({ updated: meta.updated, months: Object.keys(months).sort(), counts, pending: Object.keys(pending).length, meta }));

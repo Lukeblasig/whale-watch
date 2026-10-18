@@ -576,7 +576,8 @@ async function loadHosted(){
   volMap = toMap(feed.vols);
   Object.values(L).forEach(e => { if (e.league === "Other" && venueOf(e) === "Polymarket"){ const l = leagueOf(e.slug); if (l !== "Other") e.league = l; } });
   ledger = L;
-  window.__kErr = ` Server log updated ${ago(feed.updated)}.`;
+  const staleMin = (Date.now() / 1000 - feed.updated) / 60;
+  window.__kErr = ` Server log updated ${ago(feed.updated)}${staleMin > 45 ? " (later than usual; GitHub sometimes delays scheduled runs)" : ""}.`;
   const kd = storeIndex && storeIndex.meta && storeIndex.meta.kalshi;
   if (kd){
     if (!kd.markets) window.__kErr += ` Kalshi: no sports markets found${kd.errors && kd.errors.length ? " (" + kd.errors[0] + ")" : ""}.`;
