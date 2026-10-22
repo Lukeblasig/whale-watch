@@ -183,6 +183,8 @@ async function pmTrades(evs) {
     if (seen.has(id)) return; seen.add(id);
     const price = Number(t.price), size = Number(t.size), idx = Number(t.outcomeIndex);
     if (isJunkPrice(price)) return; // 0–2¢ / 98–100¢ fills are after-the-fact clean-up, not real bets
+    const endT = Date.parse((pmMarkets.get(t.conditionId) || {}).endDate || "");
+    if (endT && endT / 1000 - now() > 7 * 86400) return; // season-long futures, not games
     if (!names[t.conditionId]) names[t.conditionId] = [];
     if (!names[t.conditionId][idx]) names[t.conditionId][idx] = t.outcome;
     out.push({ venue: "Polymarket", id, wallet: (t.proxyWallet || "").toLowerCase(), name: t.name || t.pseudonym || "",
@@ -242,6 +244,7 @@ async function kalshiLive() {
   const markets = [];
   events.forEach(ev => (ev.markets || []).forEach(m => {
     if (!m.ticker) return;
+    if (!/\d{2}[A-Z]{3}\d{2}/.test(m.event_ticker || ev.event_ticker || m.ticker)) return; // season-long futures, not games
     m.title = m.title || ev.title || m.ticker;
     m._league = ev._league && ev._league !== "Other" ? ev._league : (leagueFromTitle(m.title) || kLeague(m.ticker));
     kMarkets.set(m.ticker, m); names[m.ticker] = kNames(m); markets.push(m);
@@ -424,6 +427,21 @@ if (!meta.backfilledAt || meta.sv !== SCORE_VERSION || process.env.BACKFILL === 
   meta.backfilledAt = now(); meta.sv = SCORE_VERSION;
 }
 await settlePending();
+
+// One-time: re-score bets that were logged under an older score system so they count in Results again.
+// Market volume from back then isn't saved, so "size vs market" uses the neutral middle value for these.
+if (meta.rescoredV !== SCORE_VERSION) {
+  const old = Object.values(ledger).filter(e => e.sv !== SCORE_VERSION);
+  const m = new Map(old.map(e => [e.key, { ...e, block: !!e.block, entryBuy: e.entryBuy !== false }]));
+  scorePositions(m, { volOf: () => 0, sharpM: w => S.MONTH[w], sharpA: w => S.ALL[w] });
+  m.forEach(p => {
+    const e = ledger[p.key];
+    e.oldScore = e.score; e.score = p.score; e.sv = SCORE_VERSION; e.rescored = true;
+    e.f = { abs: p.parts.abs, rel: p.parts.rel, relKnown: false, flow: p.parts.flow, n: p.parts.n, price: p.parts.price, edge: p.parts.edge };
+  });
+  meta.rescoredV = SCORE_VERSION;
+  console.log(`Re-scored ${old.length} older bets with the current score system.`);
+}
 
 // Re-label bets stuck in "Other": first the prefix list, then Polymarket's own event tags (cached between runs)
 const leagueCache = readJSON(`${STORE}/leagues.json`, {});

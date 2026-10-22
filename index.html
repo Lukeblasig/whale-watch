@@ -906,6 +906,15 @@ function renderResults(out){
         <thead><tr><th>Score</th><th>Bets</th><th>W-L</th><th>Win %</th><th>Avg odds</th><th>Tail 1u</th><th>ROI</th><th>Whale $</th><th>Signal</th></tr></thead>
         <tbody>${body}</tbody>
       </table></div>
+      <p>${(() => {
+        const hidden = all.filter(e => e.result).length - done.length;
+        if (hidden <= 0) return "Showing every settled bet.";
+        const parts = [];
+        const jk = all.filter(e => e.result && isJunk(e) && !state.showJunk).length; if (jk) parts.push(`${jk} at 0–2¢ / 98–100¢`);
+        const bf = all.filter(e => e.result && e.source === "backfill" && !state.incBackfill).length; if (bf) parts.push(`${bf} from backfill`);
+        const os = all.filter(e => e.result && e.sv !== SCORE_VERSION && !state.oldScores).length; if (os) parts.push(`${os} with old scores`);
+        return `${hidden} settled bets are hidden or combined by the filters above${parts.length ? " (including " + parts.join(", ") + ")" : ""}; "One bet per pick" also merges duplicates. Nothing is deleted.`;
+      })()}</p>
       ${openBucket && !openBucket.startsWith("g:") ? panel : `<p style="margin-top:8px">Tap a row to see its bets, then tap a bet to see everyone who took it.</p>`}
       ${hosted ? `<p>Your server logs bets and results about every 15 minutes and never deletes them. A bet shows up under Waiting first, then moves into its score row a few hours after the game ends.${storeIndex && storeIndex.months.length > loadedMonths.length ? ` Showing ${loadedMonths.length === 1 ? "this month" : "the last " + loadedMonths.length + " months"}.` : ""}</p>
         ${storeIndex && storeIndex.months.length > loadedMonths.length ? `<button class="btn ghost" id="allMonths">Load full history (${storeIndex.months.length} months)</button>` : ""}` : `<div class="row" style="margin-top:10px">
