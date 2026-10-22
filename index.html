@@ -110,6 +110,8 @@ td.bk{font:700 20px/1 var(--num)}
 tr.total td{font-weight:700}
 tr.pend td{color:var(--muted)}
 tr.bkrow{cursor:pointer}
+.thsort{background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer;white-space:nowrap}
+.thsort:hover,.thsort.on{color:var(--buy)}
 tr.bkrow:hover td{background:var(--panel2)}
 tr.bkrow.sel td{background:color-mix(in srgb, var(--buy) 14%, transparent)}
 td .caret{display:inline-block;width:14px;color:var(--muted);font:500 12px var(--body)}
@@ -146,6 +148,20 @@ td .caret{display:inline-block;width:14px;color:var(--muted);font:500 12px var(-
 .sig.down{background:color-mix(in srgb, var(--sell) 18%, transparent);color:var(--sell)}
 .sig.maybe{background:color-mix(in srgb, var(--violet) 18%, transparent);color:var(--violet)}
 .sig.few{color:var(--muted)}
+.preset{display:grid;grid-template-columns:28px 1fr auto auto;gap:4px 12px;align-items:center;width:100%;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;cursor:pointer;color:var(--ink);font:inherit}
+.preset:hover{border-color:color-mix(in srgb, var(--buy) 50%, var(--line))}
+.preset.on{border-color:var(--win);box-shadow:0 0 0 2px color-mix(in srgb, var(--win) 30%, transparent)}
+.prank{font:700 22px/1 var(--num);color:var(--muted)}
+.pmain{display:grid;gap:3px;min-width:0}
+.pname{font-weight:600}
+.psub{font-size:12.5px;color:var(--muted);display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.proi,.plive{font:700 26px/1 var(--num);text-align:right;min-width:62px}
+.proi small,.plive small{display:block;font:500 11px/1.3 var(--body);color:var(--muted)}
+.plive{color:var(--muted)} .plive.has{color:var(--buy)}
+.badge.rec{background:color-mix(in srgb, var(--win) 18%, transparent);color:var(--win)}
+.pnote{color:var(--muted);font-size:12.5px;margin:4px 2px}
+.presetbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--win);border-radius:12px;padding:10px 12px}
+@media (max-width:520px){.preset{grid-template-columns:22px 1fr auto}.plive{grid-column:2 / -1;text-align:left;display:flex;gap:6px;align-items:baseline;font-size:18px}.plive small{display:inline}}
 footer{color:var(--muted);font-size:12px;margin-top:22px}
 </style>
 </head>
@@ -199,6 +215,7 @@ footer{color:var(--muted);font-size:12px;margin-top:22px}
   </div>
 
   <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="best">Best filters</button>
     <button class="tab" role="tab" data-tab="tape">Bet tape</button>
     <button class="tab" role="tab" data-tab="cons">Consensus</button>
     <button class="tab" role="tab" data-tab="results">Results</button>
@@ -232,11 +249,13 @@ const SCORE_MINS = [0, 50, 60, 70, 80, 90];
 const BUCKETS = [[90,100],[80,89],[70,79],[60,69],[50,59]];
 let openBucket = null, betFilter = "all", showAllBets = false;
 
-const RECOMMENDED = { min: 5000, minScore: 60, venue: "Polymarket", sharpOnly: true, buysOnly: false, league: "", sort: "score", period: "ALL", auto: true };
+const RECOMMENDED = { preset: "agree7090", preOnly: true, min: 1000, minScore: 0, venue: "", sharpOnly: false, buysOnly: false, league: "", sort: "score", period: "ALL", auto: true };
 const defaults = Object.assign({ tab: "tape", incBackfill: true, proxy: "", theme: "dark", rVenue: "", rWho: "all", rMin: 1000, rLeague: "", dedupe: true, wwFactor: "league", wwMin: 0 }, RECOMMENDED);
 const state = Object.assign({}, defaults, loadLS("ww-state") || {});
 if (!state.v3){ Object.assign(state, RECOMMENDED); state.v3 = true; }
 if (!state.v4){ state.dedupe = true; state.v4 = true; }
+if (!state.v6){ state.preOnly = true; state.v6 = true; }
+if (!state.v5){ Object.assign(state, RECOMMENDED); state.tab = "best"; state.v5 = true; }
 if (state.wwMin === undefined) state.wwMin = state.ww50 ? 50 : 0;
 if (!state.v2){ state.sort = "score"; state.v2 = true; }
 if (!state.proxy && !state.proxyCleared) state.proxy = "https://wandering-brook-9f12.luke-blasig.workers.dev";
@@ -448,7 +467,7 @@ function buildPositions(list){
   const m = new Map();
   list.forEach(t => {
     const e = effective(t), key = (t.wallet || "anon:" + t.id) + "|" + t.conditionId + "|" + e.idx;
-    const p = m.get(key) || { key, venue: t.venue, block: !!t.block, wallet: t.wallet, conditionId: t.conditionId, title: t.title, slug: t.eventSlug, league: t.league,
+    const p = m.get(key) || { key, venue: t.venue, block: !!t.block, wallet: t.wallet, conditionId: t.conditionId, title: t.title, slug: t.eventSlug, league: t.league, start: t.start || null,
       idx: e.idx, name: e.name, shares: 0, cost: 0, usd: 0, ts: t.timestamp, buys: 0, sells: 0 };
     p.shares += t.size; p.cost += t.size * e.q; p.usd += t.usd; p.ts = Math.min(p.ts, t.timestamp);
     t.side === "BUY" ? p.buys++ : p.sells++;
@@ -633,6 +652,8 @@ function buildLeagues(){
 /* ---------- render ---------- */
 const badgeSharps = () => sharpsBy[state.period] || sharpsBy.MONTH;
 function filtered(){
+  const pr = state.preset && PRESETS.find(x => x.id === state.preset);
+  if (pr) return trades.filter(t => { const p = posMap.get(t.pos); return t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!state.preOnly || upcoming(p)); });
   const bs = badgeSharps();
   return trades.filter(t => {
     const p = posMap.get(t.pos);
@@ -641,6 +662,76 @@ function filtered(){
       && (p ? p.score : 0) >= state.minScore;
   });
 }
+
+/* ---------- best filters (presets) ---------- */
+// Each preset was picked from the results analysis; its record is recomputed live from the settled bets.
+const SOCCER = new Set(["Other soccer", "EPL", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "UCL", "UEL", "Conference League", "MLS", "NWSL"]);
+const PRESETS = [
+  { id: "agree7090", name: "70–90¢ · score 50+ · big money agrees", t: b => b.q >= .7 && b.q < .9 && b.score >= 50 && b.flow === "agree" },
+  { id: "soc60", name: "Other soccer · score 60+", t: b => b.league === "Other soccer" && b.score >= 60 },
+  { id: "soc50", name: "Other soccer · score 50+", t: b => b.league === "Other soccer" && b.score >= 50 },
+  { id: "allsoc50", name: "All soccer · score 50+", t: b => SOCCER.has(b.league) && b.score >= 50 },
+  { id: "epl50", name: "EPL · score 50+", t: b => b.league === "EPL" && b.score >= 50 },
+  { id: "lal50", name: "La Liga · score 50+", t: b => b.league === "La Liga" && b.score >= 50 },
+  { id: "mls50", name: "MLS · score 50+", t: b => b.league === "MLS" && b.score >= 50 },
+  { id: "p7080s70", name: "70–80¢ · score 70+", t: b => b.q >= .7 && b.q < .8 && b.score >= 70 },
+  { id: "soc6080", name: "Soccer favorites 60–80¢ · score 50+", t: b => b.league === "Other soccer" && b.q >= .6 && b.q < .8 && b.score >= 50 },
+  { id: "agree7080", name: "70–80¢ · score 50+ · big money agrees", t: b => b.q >= .7 && b.q < .8 && b.score >= 50 && b.flow === "agree" },
+  { id: "agree6090", name: "60–90¢ · score 50+ · big money agrees", t: b => b.q >= .6 && b.q < .9 && b.score >= 50 && b.flow === "agree" },
+  { id: "agree7090any", name: "70–90¢ · big money agrees · any score", t: b => b.q >= .7 && b.q < .9 && b.flow === "agree" },
+  { id: "p7080s50", name: "70–80¢ · score 50+", t: b => b.q >= .7 && b.q < .8 && b.score >= 50 },
+  { id: "p7090noNFL", name: "70–90¢ · score 50+ · no NFL", t: b => b.q >= .7 && b.q < .9 && b.score >= 50 && b.league !== "NFL" },
+  { id: "ten7080", name: "Tennis 70–80¢ · score 50+", t: b => b.league === "Tennis" && b.q >= .7 && b.q < .8 && b.score >= 50 },
+  { id: "live7080", name: "70–80¢ · score 50+ · in-game", t: b => b.q >= .7 && b.q < .8 && b.score >= 50 && b.timing === "live" },
+  { id: "esp7090", name: "Esports 70–90¢", t: b => b.league === "Esports" && b.q >= .7 && b.q < .9 },
+  { id: "sharp7080", name: "70–80¢ · sharps · score 60+", t: b => b.q >= .7 && b.q < .8 && b.score >= 60 && b.sharp },
+  { id: "pre8090", name: "80–90¢ · before the game", t: b => b.q >= .8 && b.q < .9 && b.timing === "pre" },
+  { id: "p8090s50", name: "80–90¢ · score 50+", t: b => b.q >= .8 && b.q < .9 && b.score >= 50 }
+];
+const flowOf = (flow, n) => n === 0 ? "none" : flow >= 10 ? "agree" : flow <= -5 ? "disagree" : "mixed";
+const normL = e => ({ q: e.q, score: e.score, league: e.league || "Other", venue: venueOf(e), sharp: !!e.sharp, usd: e.usd,
+  flow: e.f ? flowOf(e.f.flow, e.f.n) : null, timing: e.start ? (e.ts < e.start ? "pre" : "live") : null });
+const normP = p => ({ q: p.q, score: p.score, league: p.league || "Other", venue: p.venue, sharp: !!p.sharp, usd: p.usd,
+  flow: p.parts ? flowOf(p.parts.flow, p.parts.n) : null, timing: p.start ? (p.ts < p.start ? "pre" : "live") : null });
+let pickCache = { src: null, n: -1, list: [] };
+function presetPicks(){
+  const all = Object.values(ledger);
+  if (pickCache.src === ledger && pickCache.n === all.length) return pickCache.list;
+  const g = new Map();
+  all.forEach(e => {
+    if (!e.result || e.usd < 1000 || e.source === "backfill" || e.q < 0.03 || e.q > 0.97 || e.junk) return;
+    const k = venueOf(e) + "|" + e.conditionId + "|" + e.idx, c = g.get(k);
+    if (!c || e.score > c.score) g.set(k, e);
+  });
+  pickCache = { src: ledger, n: all.length, list: [...g.values()] };
+  return pickCache.list;
+}
+// "Upcoming": the bet was placed before the game and the game hasn't started yet, so it can still be copied pre-game.
+const upcoming = p => !!p.start && p.ts < p.start && p.start > Date.now() / 1000;
+function presetStats(){
+  const picks = presetPicks().map(e => [e, normL(e)]).filter(([, b]) => !state.preOnly || b.timing === "pre");
+  const livePos = [...posMap.values()].filter(p => p.usd >= 1000 && p.q >= 0.03 && p.q <= 0.97 && (!state.preOnly || upcoming(p))).map(p => normP(p));
+  return PRESETS.map(pr => {
+    const list = picks.filter(([, b]) => pr.t(b)).map(([e]) => e);
+    const n = list.length, u = list.reduce((a, e) => a + (e.units || 0), 0);
+    return { ...pr, list, n, w: list.filter(e => e.result === "W").length, l: list.filter(e => e.result === "L").length,
+      u, roi: n ? u / n * 100 : 0, live: livePos.filter(b => pr.t(b)).length };
+  }).sort((a, b) => (b.n >= 30) - (a.n >= 30) || b.roi - a.roi);
+}
+function renderBest(out){
+  const st = presetStats();
+  setStatus(`Best filters, ranked by ROI on settled bets. Tap one to see its bets.${window.__kErr || ""}`);
+  out.innerHTML = `<div class="presetbar" style="border-color:var(--line)"><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:600"><input type="checkbox" id="preOnly" ${state.preOnly ? "checked" : ""} style="width:20px;height:20px;accent-color:var(--win)">Pre-game only</label><span class="psub">${state.preOnly ? "Records use only bets placed before the game. Live now = games that haven't started yet." : "Records include in-game bets, which are hard to copy at the same price."}</span></div>` + st.map((s, i) => `<button class="preset ${s.id === state.preset ? "on" : ""}" data-preset="${s.id}">
+      <span class="prank">${i + 1}</span>
+      <span class="pmain"><span class="pname">${esc(s.name)}${s.id === RECOMMENDED.preset ? ` <span class="badge rec">Recommended</span>` : ""}</span>
+        <span class="psub">${s.w}-${s.l} on ${s.n} bets ${signal(s.list)}</span></span>
+      <span class="proi ${s.roi > 0 ? "pos" : s.roi < 0 ? "neg" : ""}">${s.roi > 0 ? "+" : ""}${s.roi.toFixed(1)}%<small>ROI</small></span>
+      <span class="plive ${s.live ? "has" : ""}">${s.live}<small>live now</small></span>
+    </button>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. "Live now" counts matching bets from the last 24 hours${state.preOnly ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 30 settled bets sink to the bottom.</p>`;
+  $("#preOnly").onchange = e => { state.preOnly = e.target.checked; save(); render(); };
+  out.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { state.preset = b.dataset.preset; state.tab = "tape"; save(); syncControls(); render(); window.scrollTo(0, 0); });
+}
+
 function crowdIndex(){
   const m = new Map();
   posMap.forEach(p => { const k = p.conditionId + "|" + p.idx; const c = m.get(k) || { n: 0, usd: 0 }; c.n++; c.usd += p.usd; m.set(k, c); });
@@ -652,8 +743,10 @@ function whyText(pp, venue){
 }
 function render(){
   const out = $("#out");
-  $(".controls").hidden = state.tab === "results";
+  const pr = state.preset && PRESETS.find(x => x.id === state.preset);
+  $(".controls").hidden = state.tab === "results" || state.tab === "best" || (state.tab === "tape" && !!pr);
   if (state.tab === "results") return renderResults(out);
+  if (state.tab === "best") return renderBest(out);
   const list = filtered();
   if (state.sort === "score") list.sort((a, b) => (posMap.get(b.pos)?.score || 0) - (posMap.get(a.pos)?.score || 0) || (posMap.get(b.pos)?.usd || 0) - (posMap.get(a.pos)?.usd || 0) || b.timestamp - a.timestamp);
   else if (state.sort === "size") list.sort((a, b) => b.usd - a.usd);
@@ -661,9 +754,12 @@ function render(){
   const upd = new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
   setStatus(`${list.length} bets of ${money(state.min)}+, ${list.filter(t => bs.has(t.wallet)).length} from sharps. Updated ${upd}.${window.__kErr || ""}`);
   if (state.tab === "cons") return renderCons(out);
-  if (!list.length){ out.innerHTML = `<div class="empty">No bets match these filters. Lower the minimum bet or score, or tap Recommended settings.</div>`; return; }
+  const bar = pr && state.tab === "tape" ? `<div class="presetbar"><span>Filter: <b>${esc(pr.name)}</b>${state.preOnly ? " · pre-game, not started yet" : ""}</span><button class="btn ghost" id="clearPreset">Show all bets</button></div>` : "";
+  const wireBar = () => { const c = $("#clearPreset"); if (c) c.onclick = () => { state.preset = ""; save(); syncControls(); render(); }; };
+  if (!list.length){ out.innerHTML = bar + `<div class="empty">${pr ? `No bets match this filter${state.preOnly ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours, or pick another filter on the Best filters tab.` : "No bets match these filters. Lower the minimum bet or score, or tap Recommended settings."}</div>`; wireBar(); return; }
   const crowd = crowdIndex();
-  out.innerHTML = list.slice(0, 200).map(t => {
+  setTimeout(wireBar, 0);
+  out.innerHTML = bar + list.slice(0, 200).map(t => {
     const s = bs.get(t.wallet), p = posMap.get(t.pos) || { score: 0, parts: {}, idx: t.idx }, pp = p.parts;
     const kal = t.venue === "Kalshi";
     const name = kal ? "Anonymous" : nameOf(t.wallet, t.name || t.pseudonym);
@@ -832,7 +928,11 @@ function renderResults(out){
   };
   const tot = agg(inB("all"));
   const lastSettled = done.reduce((m, e) => Math.max(m, e.settledAt || 0), 0);
-  const body = BUCKETS.map(([lo, hi]) => line(`${lo}–${hi}`, agg(inB(lo + "-" + hi)), "", lo + "-" + hi)).join("")
+  const sortBy = (arr, s, get) => s ? arr.sort((x, y) => (s.k !== "n" ? (get(y).n >= 30) - (get(x).n >= 30) : 0) || (get(y)[s.k] - get(x)[s.k]) * s.d) : arr;
+  const bks = sortBy(BUCKETS.map(([lo, hi]) => ({ id: lo + "-" + hi, label: `${lo}–${hi}`, a: agg(inB(lo + "-" + hi)) })), state.sortM, b => b.a);
+  const thS = (tbl, label, k) => { const s = tbl === "m" ? state.sortM : state.sortW, on = s && s.k === k;
+    return `<th><button class="thsort ${on ? "on" : ""}" data-sort="${tbl}:${k}" title="Sort by ${label}">${label}${on ? (s.d > 0 ? " ▼" : " ▲") : ""}</button></th>`; };
+  const body = bks.map(b => line(b.label, b.a, "", b.id)).join("")
     + line("All 50+", tot, "total", "all")
     + `<tr class="bkrow pend ${openBucket === "pending" ? "sel" : ""}" data-bk="pending"><td class="bk"><span class="caret">${openBucket === "pending" ? "▾" : "▸"}</span>Waiting</td><td>${pend.length}</td><td colspan="7" style="text-align:left">Games not finished yet. These move into the rows above once they settle.</td></tr>`;
   let panel = "";
@@ -863,7 +963,9 @@ function renderResults(out){
   const wwRows = done.filter(e => e.score >= (state.wwMin || 0));
   const groups = new Map();
   wwRows.forEach(e => { const g = fx.fn(e); (groups.get(g) || groups.set(g, []).get(g)).push(e); });
-  const gKeys = [...groups.keys()].sort((a, b) => fx.order ? fx.order.indexOf(a) - fx.order.indexOf(b) : groups.get(b).length - groups.get(a).length);
+  const gAgg = new Map([...groups.keys()].map(g => [g, agg(groups.get(g))]));
+  const gKeys = [...groups.keys()].sort((a, b) => state.sortW ? ((state.sortW.k !== "n" ? (gAgg.get(b).n >= 30) - (gAgg.get(a).n >= 30) : 0) || (gAgg.get(b)[state.sortW.k] - gAgg.get(a)[state.sortW.k]) * state.sortW.d)
+    : fx.order ? fx.order.indexOf(a) - fx.order.indexOf(b) : groups.get(b).length - groups.get(a).length);
   const gLine = g => { const a = agg(groups.get(g)), id = "g:" + g;
     return `<tr class="bkrow ${openBucket === id ? "sel" : ""}" data-bk="${esc(id)}"><td><span class="caret">${openBucket === id ? "▾" : "▸"}</span>${esc(g)}</td><td>${a.n}</td><td>${a.w}-${a.l}${a.p ? "-" + a.p : ""}</td><td>${a.n ? a.wp.toFixed(0) + "%" : "—"}</td><td>${a.n ? american(a.avg) : "—"}</td><td>${pl(a.u)}</td><td>${a.n ? (a.roi > 0 ? "+" : "") + a.roi.toFixed(1) + "%" : "—"}</td><td>${signal(a.list)}</td></tr>`; };
   const gOpen = openBucket && openBucket.startsWith("g:");
@@ -873,7 +975,7 @@ function renderResults(out){
       <div class="row" style="margin:8px 0">${Object.entries(FACTORS).map(([k, v]) => `<button class="chip" data-ww="${k}" aria-pressed="${state.wwFactor === k}">${v.label}</button>`).join("")}</div>
       <div class="row" style="margin-bottom:8px;gap:14px"><span>Only scores</span>${[50, 60, 70, 80].map(v => `<label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:14px"><input type="checkbox" data-wwmin="${v}" ${state.wwMin === v ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--buy)">${v}+</label>`).join("")}</div>
       <div class="tblwrap"><table>
-        <thead><tr><th>${fx.label}</th><th>Bets</th><th>W-L</th><th>Win %</th><th>Avg odds</th><th>Tail 1u</th><th>ROI</th><th>Signal</th></tr></thead>
+        <thead><tr><th><button class="thsort" data-sort="w:" title="Default order">${fx.label}</button></th>${thS("w", "Bets", "n")}<th>W-L</th>${thS("w", "Win %", "wp")}${thS("w", "Avg odds", "avg")}${thS("w", "Tail 1u", "u")}${thS("w", "ROI", "roi")}<th>Signal</th></tr></thead>
         <tbody>${gKeys.length ? gKeys.map(gLine).join("") : `<tr><td colspan="8" style="text-align:left">No settled bets in these filters yet.</td></tr>`}</tbody>
       </table></div>
       ${gOpen ? panel : ""}
@@ -903,7 +1005,7 @@ function renderResults(out){
         </div>
       </div>
       <div class="tblwrap"><table>
-        <thead><tr><th>Score</th><th>Bets</th><th>W-L</th><th>Win %</th><th>Avg odds</th><th>Tail 1u</th><th>ROI</th><th>Whale $</th><th>Signal</th></tr></thead>
+        <thead><tr><th><button class="thsort" data-sort="m:" title="Default order">Score</button></th>${thS("m", "Bets", "n")}<th>W-L</th>${thS("m", "Win %", "wp")}${thS("m", "Avg odds", "avg")}${thS("m", "Tail 1u", "u")}${thS("m", "ROI", "roi")}${thS("m", "Whale $", "wh")}<th>Signal</th></tr></thead>
         <tbody>${body}</tbody>
       </table></div>
       <p>${(() => {
@@ -943,6 +1045,11 @@ function renderResults(out){
   out.querySelectorAll("[data-bf]").forEach(b => b.onclick = () => { betFilter = b.dataset.bf; showAllBets = false; render(); });
   out.querySelectorAll("[data-rk]").forEach(b => b.onclick = () => {
     const k = b.dataset.rk; state[k] = k === "rMin" ? Number(b.dataset.rv) : b.dataset.rv; save(); render();
+  });
+  out.querySelectorAll("[data-sort]").forEach(b => b.onclick = () => {
+    const [tbl, k] = b.dataset.sort.split(":"), key = tbl === "m" ? "sortM" : "sortW", cur = state[key];
+    state[key] = !k ? null : cur && cur.k === k ? (cur.d > 0 ? { k, d: -1 } : null) : { k, d: 1 };
+    save(); render();
   });
   out.querySelectorAll("[data-ww]").forEach(b => b.onclick = () => { state.wwFactor = b.dataset.ww; if (openBucket && openBucket.startsWith("g:")) openBucket = null; save(); render(); });
   out.querySelectorAll("[data-wwmin]").forEach(cb => cb.onchange = e => {
@@ -1019,7 +1126,7 @@ function setAuto(on){
 }
 $("#auto").onclick = () => { setAuto(!state.auto); syncControls(); };
 $("#recBtn").onclick = () => {
-  Object.assign(state, RECOMMENDED); save();
+  Object.assign(state, RECOMMENDED); state.tab = "tape"; save();
   setAuto(true); syncControls(); render();
 };
 function applyTheme(){

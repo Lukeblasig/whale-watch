@@ -416,6 +416,7 @@ const fresh = [...pm, ...k];
 const cutoff = now() - 86400, byId = new Map();
 [...(prevFeed.trades || []), ...fresh].forEach(t => { if (t.timestamp >= cutoff) byId.set(t.id, t); });
 const feedTrades = [...byId.values()].sort((a, b) => b.timestamp - a.timestamp).slice(0, 6000);
+feedTrades.forEach(t => { if (!t.start) t.start = startByCid.get(t.conditionId) || null; });
 log(buildPositions(feedTrades, S), "live");
 
 if (!meta.backfilledAt || meta.sv !== SCORE_VERSION || process.env.BACKFILL === "true") {
