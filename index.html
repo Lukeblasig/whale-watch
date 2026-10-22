@@ -110,6 +110,13 @@ td.bk{font:700 20px/1 var(--num)}
 tr.total td{font-weight:700}
 tr.pend td{color:var(--muted)}
 tr.bkrow{cursor:pointer}
+.msel{position:relative;display:inline-block}
+.mselbtn{background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:5px 10px;cursor:pointer;color:var(--ink);font:inherit}
+.mselpanel{position:absolute;z-index:30;top:calc(100% + 4px);left:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px;max-height:340px;overflow:auto;min-width:220px;box-shadow:var(--shadow)}
+.mopt{display:flex;gap:8px;align-items:center;padding:7px 6px;cursor:pointer;border-radius:8px;font-size:14px}
+.mopt:hover{background:var(--panel2)}
+.mopt input{width:17px;height:17px;accent-color:var(--buy)}
+.mcount{margin-left:auto;color:var(--muted);font-size:12px}
 .thsort{background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer;white-space:nowrap}
 .thsort:hover,.thsort.on{color:var(--buy)}
 tr.bkrow:hover td{background:var(--panel2)}
@@ -159,6 +166,8 @@ td .caret{display:inline-block;width:14px;color:var(--muted);font:500 12px var(-
 .proi small,.plive small{display:block;font:500 11px/1.3 var(--body);color:var(--muted)}
 .plive{color:var(--muted)} .plive.has{color:var(--buy)}
 .badge.rec{background:color-mix(in srgb, var(--win) 18%, transparent);color:var(--win)}
+.pwrap{display:grid;gap:6px}
+.plist{display:grid;gap:8px;padding:2px 0 8px 14px;border-left:3px solid var(--win);margin-left:10px}
 .pnote{color:var(--muted);font-size:12.5px;margin:4px 2px}
 .presetbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--win);border-radius:12px;padding:10px 12px}
 @media (max-width:520px){.preset{grid-template-columns:22px 1fr auto}.plive{grid-column:2 / -1;text-align:left;display:flex;gap:6px;align-items:baseline;font-size:18px}.plive small{display:inline}}
@@ -195,7 +204,7 @@ footer{color:var(--muted);font-size:12px;margin-top:22px}
     </div>
     <div class="row">
       <span>League</span>
-      <select id="league"><option value="">All sports</option></select>
+      <span id="leagueBox"></span>
     </div>
     <div class="row" id="sortRow"><span>Sort by</span>
       <button class="chip" data-v="score">Score</button>
@@ -249,12 +258,13 @@ const SCORE_MINS = [0, 50, 60, 70, 80, 90];
 const BUCKETS = [[90,100],[80,89],[70,79],[60,69],[50,59]];
 let openBucket = null, betFilter = "all", showAllBets = false;
 
-const RECOMMENDED = { preset: "agree7090", preOnly: true, min: 1000, minScore: 0, venue: "", sharpOnly: false, buysOnly: false, league: "", sort: "score", period: "ALL", auto: true };
+const RECOMMENDED = { preset: "agree7090", min: 1000, minScore: 0, venue: "", sharpOnly: false, buysOnly: false, league: [], sort: "score", period: "ALL", auto: true };
 const defaults = Object.assign({ tab: "tape", incBackfill: true, proxy: "", theme: "dark", rVenue: "", rWho: "all", rMin: 1000, rLeague: "", dedupe: true, wwFactor: "league", wwMin: 0 }, RECOMMENDED);
 const state = Object.assign({}, defaults, loadLS("ww-state") || {});
 if (!state.v3){ Object.assign(state, RECOMMENDED); state.v3 = true; }
 if (!state.v4){ state.dedupe = true; state.v4 = true; }
-if (!state.v6){ state.preOnly = true; state.v6 = true; }
+for (const k of ["league", "rLeague"]) if (!Array.isArray(state[k])) state[k] = state[k] ? [state[k]] : [];
+if (!state.v6){ state.v6 = true; }
 if (!state.v5){ Object.assign(state, RECOMMENDED); state.tab = "best"; state.v5 = true; }
 if (state.wwMin === undefined) state.wwMin = state.ww50 ? 50 : 0;
 if (!state.v2){ state.sort = "score"; state.v2 = true; }
@@ -641,23 +651,45 @@ async function refresh(){
 }
 function setStatus(msg, err){ const el = $("#status"); el.textContent = msg; el.classList.toggle("err", !!err); }
 
+const inLeagues = (arr, lg) => !arr || !arr.length || arr.includes(lg);
+let openMsel = null;
+function mselHTML(id, key, opts){
+  const sel = state[key] || [];
+  const label = !sel.length ? "All sports" : sel.length === 1 ? sel[0] : `${sel.length} leagues`;
+  return `<div class="msel" id="${id}" data-key="${key}"><button type="button" class="mselbtn" aria-expanded="${openMsel === id}">${esc(label)} ▾</button>
+    <div class="mselpanel" ${openMsel === id ? "" : "hidden"}>
+      <label class="mopt"><input type="checkbox" data-all ${!sel.length ? "checked" : ""}>All sports</label>
+      ${opts.map(o => `<label class="mopt"><input type="checkbox" value="${esc(o.name)}" ${sel.includes(o.name) ? "checked" : ""}>${esc(o.name)}${o.count ? ` <span class="mcount">${o.count}</span>` : ""}</label>`).join("")}
+    </div></div>`;
+}
 function buildLeagues(){
   const counts = {}; trades.forEach(t => counts[t.league] = (counts[t.league] || 0) + 1);
   Object.values(ledger).forEach(e => { if (!(e.league in counts)) counts[e.league] = 0; });
-  const sel = $("#league");
-  sel.innerHTML = '<option value="">All sports</option>' + Object.keys(counts).sort().map(l => `<option value="${esc(l)}">${esc(l)}${counts[l] ? " (" + counts[l] + ")" : ""}</option>`).join("");
-  sel.value = state.league && (state.league in counts) ? state.league : "";
+  $("#leagueBox").innerHTML = mselHTML("mselTape", "league", Object.keys(counts).sort().map(n => ({ name: n, count: counts[n] })));
 }
+document.addEventListener("click", e => {
+  const b = e.target.closest(".mselbtn");
+  if (b){ const id = b.parentElement.id; openMsel = openMsel === id ? null : id; document.querySelectorAll(".msel").forEach(m => { m.querySelector(".mselpanel").hidden = m.id !== openMsel; m.querySelector(".mselbtn").setAttribute("aria-expanded", String(m.id === openMsel)); }); return; }
+  if (openMsel && !e.target.closest(".msel")){ openMsel = null; document.querySelectorAll(".mselpanel").forEach(p => p.hidden = true); }
+});
+document.addEventListener("change", e => {
+  const cb = e.target.closest(".msel input"); if (!cb) return;
+  const key = cb.closest(".msel").dataset.key;
+  if (cb.hasAttribute("data-all")) state[key] = [];
+  else { const set = new Set(state[key] || []); cb.checked ? set.add(cb.value) : set.delete(cb.value); state[key] = [...set]; }
+  if (key === "league") state.preset = "";
+  save(); if (key === "league") buildLeagues(); syncControls(); render();
+});
 
 /* ---------- render ---------- */
 const badgeSharps = () => sharpsBy[state.period] || sharpsBy.MONTH;
 function filtered(){
   const pr = state.preset && PRESETS.find(x => x.id === state.preset);
-  if (pr) return trades.filter(t => { const p = posMap.get(t.pos); return t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!state.preOnly || upcoming(p)); });
+  if (pr) return presetTrades(pr);
   const bs = badgeSharps();
   return trades.filter(t => {
     const p = posMap.get(t.pos);
-    return t.price >= 0.03 && t.price <= 0.97 && t.usd >= state.min && (!state.league || t.league === state.league) && (!state.venue || t.venue === state.venue)
+    return t.price >= 0.03 && t.price <= 0.97 && t.usd >= state.min && inLeagues(state.league, t.league) && (!state.venue || t.venue === state.venue)
       && (!state.buysOnly || t.side === "BUY") && (!state.sharpOnly || bs.has(t.wallet) || (state.sharpOnly === "k" && t.venue === "Kalshi"))
       && (p ? p.score : 0) >= state.minScore;
   });
@@ -707,10 +739,15 @@ function presetPicks(){
   return pickCache.list;
 }
 // "Upcoming": the bet was placed before the game and the game hasn't started yet, so it can still be copied pre-game.
+const PRE_ONLY = true; // the tool tracks pre-game bets only: records use bets placed before the game, live bets are games not yet started
 const upcoming = p => !!p.start && p.ts < p.start && p.start > Date.now() / 1000;
+function presetTrades(pr){
+  return trades.filter(t => { const p = posMap.get(t.pos); return t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!PRE_ONLY || upcoming(p)); });
+}
+let openPreset = null;
 function presetStats(){
-  const picks = presetPicks().map(e => [e, normL(e)]).filter(([, b]) => !state.preOnly || b.timing === "pre");
-  const livePos = [...posMap.values()].filter(p => p.usd >= 1000 && p.q >= 0.03 && p.q <= 0.97 && (!state.preOnly || upcoming(p))).map(p => normP(p));
+  const picks = presetPicks().map(e => [e, normL(e)]).filter(([, b]) => !PRE_ONLY || b.timing === "pre");
+  const livePos = [...posMap.values()].filter(p => p.usd >= 1000 && p.q >= 0.03 && p.q <= 0.97 && (!PRE_ONLY || upcoming(p))).map(p => normP(p));
   return PRESETS.map(pr => {
     const list = picks.filter(([, b]) => pr.t(b)).map(([e]) => e);
     const n = list.length, u = list.reduce((a, e) => a + (e.units || 0), 0);
@@ -720,18 +757,39 @@ function presetStats(){
 }
 function renderBest(out){
   const st = presetStats();
-  setStatus(`Best filters, ranked by ROI on settled bets. Tap one to see its bets.${window.__kErr || ""}`);
-  out.innerHTML = `<div class="presetbar" style="border-color:var(--line)"><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:600"><input type="checkbox" id="preOnly" ${state.preOnly ? "checked" : ""} style="width:20px;height:20px;accent-color:var(--win)">Pre-game only</label><span class="psub">${state.preOnly ? "Records use only bets placed before the game. Live now = games that haven't started yet." : "Records include in-game bets, which are hard to copy at the same price."}</span></div>` + st.map((s, i) => `<button class="preset ${s.id === state.preset ? "on" : ""}" data-preset="${s.id}">
+  setStatus(`Best pre-game filters, ranked by ROI on settled bets placed before the game. Tap one to drop down bets on games that haven't started yet.${window.__kErr || ""}`);
+  const bs = badgeSharps(), crowd = crowdIndex();
+  const sortS = l => l.sort((a, b) => (posMap.get(b.pos)?.score || 0) - (posMap.get(a.pos)?.score || 0) || b.timestamp - a.timestamp);
+  out.innerHTML = st.map((s, i) => `<div class="pwrap"><button class="preset ${s.id === openPreset ? "on" : ""}" data-preset="${s.id}" aria-expanded="${s.id === openPreset}">
       <span class="prank">${i + 1}</span>
       <span class="pmain"><span class="pname">${esc(s.name)}${s.id === RECOMMENDED.preset ? ` <span class="badge rec">Recommended</span>` : ""}</span>
         <span class="psub">${s.w}-${s.l} on ${s.n} bets ${signal(s.list)}</span></span>
       <span class="proi ${s.roi > 0 ? "pos" : s.roi < 0 ? "neg" : ""}">${s.roi > 0 ? "+" : ""}${s.roi.toFixed(1)}%<small>ROI</small></span>
-      <span class="plive ${s.live ? "has" : ""}">${s.live}<small>live now</small></span>
-    </button>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. "Live now" counts matching bets from the last 24 hours${state.preOnly ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 30 settled bets sink to the bottom.</p>`;
-  $("#preOnly").onchange = e => { state.preOnly = e.target.checked; save(); render(); };
-  out.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { state.preset = b.dataset.preset; state.tab = "tape"; save(); syncControls(); render(); window.scrollTo(0, 0); });
+      <span class="plive ${s.live ? "has" : ""}">${s.live}<small>live now ${s.id === openPreset ? "▴" : "▾"}</small></span>
+    </button>${s.id === openPreset ? (() => { const l = sortS(presetTrades(s));
+      return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 30 settled bets sink to the bottom.</p>`;
+  out.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { openPreset = openPreset === b.dataset.preset ? null : b.dataset.preset; render(); });
 }
 
+function betCard(t, bs, crowd){
+    const s = bs.get(t.wallet), p = posMap.get(t.pos) || { score: 0, parts: {}, idx: t.idx }, pp = p.parts;
+    const kal = t.venue === "Kalshi";
+    const name = kal ? "Anonymous" : nameOf(t.wallet, t.name || t.pseudonym);
+    const c = crowd.get(t.conditionId + "|" + p.idx) || { n: 1 };
+    return `<div class="bet ${s ? "is-sharp" : ""}" data-play="${esc(t.conditionId)}|${p.idx}|live">
+      <div class="amt">${money(t.usd)}<small>${ago(t.timestamp)}</small></div>
+      <div class="pick"><span class="side ${t.side === "BUY" ? "buy" : "sell"}">${t.side === "BUY" ? "Bought" : "Sold"}</span> ${esc(t.outcome)} @ ${Math.round(t.price*100)}¢ <span class="odds">(${american(t.price)})</span></div>
+      <button class="score" data-why="${esc(t.id)}" style="color:${scoreColor(p.score)}" aria-label="Score ${p.score}, show breakdown">${p.score}<small>score</small></button>
+      <a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>
+      <div class="who"><span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>
+        ${s ? `<span class="badge">Sharp #${s.rank}, +${money(s.pnl)}</span>` : ""}
+        ${t.block ? `<span class="badge">Block trade</span>` : ""}
+        ${kal ? `<span>${name}</span>` : `<a href="https://polymarket.com/profile/${esc(t.wallet)}" target="_blank" rel="noopener">${esc(name)}</a>`}
+        ${p.usd > t.usd * 1.05 ? `<span>${money(p.usd)} total position</span>` : ""}
+        <button class="crowd" data-open="1">${c.n > 1 ? `${c.n} whales on this side` : "See who took it"}</button></div>
+      <div class="why ${openWhy.has(t.id) ? "open" : ""}">${whyText(pp, t.venue)}</div>
+    </div>`;
+}
 function crowdIndex(){
   const m = new Map();
   posMap.forEach(p => { const k = p.conditionId + "|" + p.idx; const c = m.get(k) || { n: 0, usd: 0 }; c.n++; c.usd += p.usd; m.set(k, c); });
@@ -754,34 +812,16 @@ function render(){
   const upd = new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
   setStatus(`${list.length} bets of ${money(state.min)}+, ${list.filter(t => bs.has(t.wallet)).length} from sharps. Updated ${upd}.${window.__kErr || ""}`);
   if (state.tab === "cons") return renderCons(out);
-  const bar = pr && state.tab === "tape" ? `<div class="presetbar"><span>Filter: <b>${esc(pr.name)}</b>${state.preOnly ? " · pre-game, not started yet" : ""}</span><button class="btn ghost" id="clearPreset">Show all bets</button></div>` : "";
+  const bar = pr && state.tab === "tape" ? `<div class="presetbar"><span>Filter: <b>${esc(pr.name)}</b>${PRE_ONLY ? " · pre-game, not started yet" : ""}</span><button class="btn ghost" id="clearPreset">Show all bets</button></div>` : "";
   const wireBar = () => { const c = $("#clearPreset"); if (c) c.onclick = () => { state.preset = ""; save(); syncControls(); render(); }; };
-  if (!list.length){ out.innerHTML = bar + `<div class="empty">${pr ? `No bets match this filter${state.preOnly ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours, or pick another filter on the Best filters tab.` : "No bets match these filters. Lower the minimum bet or score, or tap Recommended settings."}</div>`; wireBar(); return; }
+  if (!list.length){ out.innerHTML = bar + `<div class="empty">${pr ? `No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours, or pick another filter on the Best filters tab.` : "No bets match these filters. Lower the minimum bet or score, or tap Recommended settings."}</div>`; wireBar(); return; }
   const crowd = crowdIndex();
   setTimeout(wireBar, 0);
-  out.innerHTML = bar + list.slice(0, 200).map(t => {
-    const s = bs.get(t.wallet), p = posMap.get(t.pos) || { score: 0, parts: {}, idx: t.idx }, pp = p.parts;
-    const kal = t.venue === "Kalshi";
-    const name = kal ? "Anonymous" : nameOf(t.wallet, t.name || t.pseudonym);
-    const c = crowd.get(t.conditionId + "|" + p.idx) || { n: 1 };
-    return `<div class="bet ${s ? "is-sharp" : ""}" data-play="${esc(t.conditionId)}|${p.idx}|live">
-      <div class="amt">${money(t.usd)}<small>${ago(t.timestamp)}</small></div>
-      <div class="pick"><span class="side ${t.side === "BUY" ? "buy" : "sell"}">${t.side === "BUY" ? "Bought" : "Sold"}</span> ${esc(t.outcome)} @ ${Math.round(t.price*100)}¢ <span class="odds">(${american(t.price)})</span></div>
-      <button class="score" data-why="${esc(t.id)}" style="color:${scoreColor(p.score)}" aria-label="Score ${p.score}, show breakdown">${p.score}<small>score</small></button>
-      <a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>
-      <div class="who"><span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>
-        ${s ? `<span class="badge">Sharp #${s.rank}, +${money(s.pnl)}</span>` : ""}
-        ${t.block ? `<span class="badge">Block trade</span>` : ""}
-        ${kal ? `<span>${name}</span>` : `<a href="https://polymarket.com/profile/${esc(t.wallet)}" target="_blank" rel="noopener">${esc(name)}</a>`}
-        ${p.usd > t.usd * 1.05 ? `<span>${money(p.usd)} total position</span>` : ""}
-        <button class="crowd" data-open="1">${c.n > 1 ? `${c.n} whales on this side` : "See who took it"}</button></div>
-      <div class="why ${openWhy.has(t.id) ? "open" : ""}">${whyText(pp, t.venue)}</div>
-    </div>`;
-  }).join("");
+  out.innerHTML = bar + list.slice(0, 200).map(t => betCard(t, bs, crowd)).join("");
 }
 
 function renderCons(out){
-  const pool = trades.filter(t => t.venue === "Polymarket" && isSharp(t.wallet) && t.usd >= Math.min(state.min, 2500) && (!state.league || t.league === state.league));
+  const pool = trades.filter(t => t.venue === "Polymarket" && isSharp(t.wallet) && t.usd >= Math.min(state.min, 2500) && inLeagues(state.league, t.league));
   const mk = new Map();
   pool.forEach(t => {
     const p = posMap.get(t.pos); if (!p) return;
@@ -897,7 +937,7 @@ function renderResults(out){
   const all = Object.values(ledger);
   const leagues = [...new Set(all.map(e => e.league))].sort();
   const junkCount = all.filter(e => isJunk(e)).length;
-  let rows = all.filter(e => (state.showJunk || !isJunk(e)) && e.usd >= state.rMin && (!state.rLeague || e.league === state.rLeague) && (!state.rVenue || venueOf(e) === state.rVenue)
+  let rows = all.filter(e => (state.showJunk || !isJunk(e)) && e.usd >= state.rMin && inLeagues(state.rLeague, e.league) && (!state.rVenue || venueOf(e) === state.rVenue)
     && (state.rWho === "all" || e.sharp || (state.rWho === "sharpsK" && venueOf(e) === "Kalshi")) && (state.incBackfill || e.source === "live") && (state.oldScores || e.sv === SCORE_VERSION));
   if (state.dedupe){
     const g = new Map();
@@ -928,7 +968,7 @@ function renderResults(out){
   };
   const tot = agg(inB("all"));
   const lastSettled = done.reduce((m, e) => Math.max(m, e.settledAt || 0), 0);
-  const sortBy = (arr, s, get) => s ? arr.sort((x, y) => (s.k !== "n" ? (get(y).n >= 30) - (get(x).n >= 30) : 0) || (get(y)[s.k] - get(x)[s.k]) * s.d) : arr;
+  const sortBy = (arr, s, get) => s ? arr.sort((x, y) => (get(y)[s.k] - get(x)[s.k]) * s.d) : arr;
   const bks = sortBy(BUCKETS.map(([lo, hi]) => ({ id: lo + "-" + hi, label: `${lo}–${hi}`, a: agg(inB(lo + "-" + hi)) })), state.sortM, b => b.a);
   const thS = (tbl, label, k) => { const s = tbl === "m" ? state.sortM : state.sortW, on = s && s.k === k;
     return `<th><button class="thsort ${on ? "on" : ""}" data-sort="${tbl}:${k}" title="Sort by ${label}">${label}${on ? (s.d > 0 ? " ▼" : " ▲") : ""}</button></th>`; };
@@ -964,7 +1004,7 @@ function renderResults(out){
   const groups = new Map();
   wwRows.forEach(e => { const g = fx.fn(e); (groups.get(g) || groups.set(g, []).get(g)).push(e); });
   const gAgg = new Map([...groups.keys()].map(g => [g, agg(groups.get(g))]));
-  const gKeys = [...groups.keys()].sort((a, b) => state.sortW ? ((state.sortW.k !== "n" ? (gAgg.get(b).n >= 30) - (gAgg.get(a).n >= 30) : 0) || (gAgg.get(b)[state.sortW.k] - gAgg.get(a)[state.sortW.k]) * state.sortW.d)
+  const gKeys = [...groups.keys()].sort((a, b) => state.sortW ? (gAgg.get(b)[state.sortW.k] - gAgg.get(a)[state.sortW.k]) * state.sortW.d
     : fx.order ? fx.order.indexOf(a) - fx.order.indexOf(b) : groups.get(b).length - groups.get(a).length);
   const gLine = g => { const a = agg(groups.get(g)), id = "g:" + g;
     return `<tr class="bkrow ${openBucket === id ? "sel" : ""}" data-bk="${esc(id)}"><td><span class="caret">${openBucket === id ? "▾" : "▸"}</span>${esc(g)}</td><td>${a.n}</td><td>${a.w}-${a.l}${a.p ? "-" + a.p : ""}</td><td>${a.n ? a.wp.toFixed(0) + "%" : "—"}</td><td>${a.n ? american(a.avg) : "—"}</td><td>${pl(a.u)}</td><td>${a.n ? (a.roi > 0 ? "+" : "") + a.roi.toFixed(1) + "%" : "—"}</td><td>${signal(a.list)}</td></tr>`; };
@@ -996,7 +1036,7 @@ function renderResults(out){
         <div class="row"><span>Venue</span>${chips("rVenue", [["", "All"], ["Polymarket", "Polymarket"], ["Kalshi", "Kalshi"]])}</div>
         <div class="row"><span>Bettors</span>${chips("rWho", [["all", "Everyone"], ["sharps", "Sharps only"], ["sharpsK", "Sharps + Kalshi"]])}</div>
         <div class="row"><span>Min bet</span>${chips("rMin", R_MINS.map(v => [v, money(v) + "+"]))}</div>
-        <div class="row"><span>League</span><select id="rLeague"><option value="">All sports</option>${leagues.map(l => `<option ${state.rLeague === l ? "selected" : ""}>${esc(l)}</option>`).join("")}</select></div>
+        <div class="row"><span>League</span>${mselHTML("mselRes", "rLeague", leagues.map(n => ({ name: n })))}</div>
         <div class="row"><span>Also</span>
           <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" id="rDedupe" ${state.dedupe ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--buy)">One bet per pick</label>
           <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" id="rBack" ${state.incBackfill ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--buy)">Include backfill</label>
@@ -1057,7 +1097,6 @@ function renderResults(out){
     if (openBucket && openBucket.startsWith("g:")) openBucket = null;
     save(); render();
   });
-  $("#rLeague").onchange = e => { state.rLeague = e.target.value; save(); render(); };
   if ($("#moreBets")) $("#moreBets").onclick = () => { showAllBets = true; render(); };
   $("#rDedupe").onchange = e => { state.dedupe = e.target.checked; save(); render(); };
   $("#rBack").onchange = e => { state.incBackfill = e.target.checked; save(); render(); };
@@ -1084,7 +1123,7 @@ function syncControls(){
   $("#period").value = state.period;
   document.querySelectorAll("#sortRow .chip").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state.sort)));
   document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
-  const isRec = Object.keys(RECOMMENDED).every(k => state[k] === RECOMMENDED[k]);
+  const isRec = Object.keys(RECOMMENDED).every(k => JSON.stringify(state[k]) === JSON.stringify(RECOMMENDED[k]));
   $("#recBtn").classList.toggle("on", isRec);
   $("#recBtn").textContent = isRec ? "✓ Recommended settings" : "Recommended settings";
 }
@@ -1098,7 +1137,6 @@ $("#fAll").onclick = () => { state.sharpOnly = false; save(); syncControls(); re
 $("#fSharp").onclick = () => { state.sharpOnly = true; save(); syncControls(); render(); };
 $("#fSharpK").onclick = () => { state.sharpOnly = "k"; if (state.venue === "Polymarket") state.venue = ""; save(); syncControls(); render(); };
 $("#fBuys").onclick = () => { state.buysOnly = !state.buysOnly; save(); syncControls(); render(); };
-$("#league").onchange = e => { state.league = e.target.value; save(); render(); };
 $("#sortRow").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.sort = b.dataset.v; save(); syncControls(); render(); });
 $("#period").onchange = e => { state.period = e.target.value; save(); render(); };
 document.querySelectorAll(".tab").forEach(b => b.onclick = () => { state.tab = b.dataset.tab; save(); syncControls(); render(); });
