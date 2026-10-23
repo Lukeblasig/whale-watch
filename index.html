@@ -699,6 +699,15 @@ function filtered(){
 // Each preset was picked from the results analysis; its record is recomputed live from the settled bets.
 const SOCCER = new Set(["Other soccer", "EPL", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "UCL", "UEL", "Conference League", "MLS", "NWSL"]);
 const PRESETS = [
+  { id: "socSharp4050", name: "Soccer · sharps · 40–50¢", t: b => SOCCER.has(b.league) && b.sharp && b.q >= .4 && b.q < .5 },
+  { id: "socSharp4050s50", name: "Soccer · sharps · 40–50¢ · score 50+", t: b => SOCCER.has(b.league) && b.sharp && b.q >= .4 && b.q < .5 && b.score >= 50 },
+  { id: "soc4050s40", name: "Soccer · 40–50¢ · score 40+", t: b => SOCCER.has(b.league) && b.q >= .4 && b.q < .5 && b.score >= 40 },
+  { id: "soc2560s60", name: "Soccer · 25–60¢ · score 60+", t: b => SOCCER.has(b.league) && b.q >= .25 && b.q < .6 && b.score >= 60 },
+  { id: "soc4560agree", name: "Soccer · 45–60¢ · score 50+ · big money agrees", t: b => SOCCER.has(b.league) && b.q >= .45 && b.q < .6 && b.score >= 50 && b.flow === "agree" },
+  { id: "sharp4050", name: "Sharps · 40–50¢ · all sports", t: b => b.sharp && b.q >= .4 && b.q < .5 },
+  { id: "cfb5060", name: "CFB · 50–60¢ · big money not against", t: b => b.league === "CFB" && b.q >= .5 && b.q < .6 && (b.flow === "agree" || b.flow === "none") },
+  { id: "ucl4060", name: "UCL · sharps · 40–60¢", t: b => b.league === "UCL" && b.sharp && b.q >= .4 && b.q < .6 },
+  { id: "nba4060", name: "NBA · sharps · 40–60¢", t: b => b.league === "NBA" && b.sharp && b.q >= .4 && b.q < .6 },
   { id: "agree7090", name: "70–90¢ · score 50+ · big money agrees", t: b => b.q >= .7 && b.q < .9 && b.score >= 50 && b.flow === "agree" },
   { id: "soc60", name: "Other soccer · score 60+", t: b => b.league === "Other soccer" && b.score >= 60 },
   { id: "soc50", name: "Other soccer · score 50+", t: b => b.league === "Other soccer" && b.score >= 50 },
@@ -708,17 +717,12 @@ const PRESETS = [
   { id: "mls50", name: "MLS · score 50+", t: b => b.league === "MLS" && b.score >= 50 },
   { id: "p7080s70", name: "70–80¢ · score 70+", t: b => b.q >= .7 && b.q < .8 && b.score >= 70 },
   { id: "soc6080", name: "Soccer favorites 60–80¢ · score 50+", t: b => b.league === "Other soccer" && b.q >= .6 && b.q < .8 && b.score >= 50 },
-  { id: "agree7080", name: "70–80¢ · score 50+ · big money agrees", t: b => b.q >= .7 && b.q < .8 && b.score >= 50 && b.flow === "agree" },
   { id: "agree6090", name: "60–90¢ · score 50+ · big money agrees", t: b => b.q >= .6 && b.q < .9 && b.score >= 50 && b.flow === "agree" },
-  { id: "agree7090any", name: "70–90¢ · big money agrees · any score", t: b => b.q >= .7 && b.q < .9 && b.flow === "agree" },
   { id: "p7080s50", name: "70–80¢ · score 50+", t: b => b.q >= .7 && b.q < .8 && b.score >= 50 },
-  { id: "p7090noNFL", name: "70–90¢ · score 50+ · no NFL", t: b => b.q >= .7 && b.q < .9 && b.score >= 50 && b.league !== "NFL" },
   { id: "ten7080", name: "Tennis 70–80¢ · score 50+", t: b => b.league === "Tennis" && b.q >= .7 && b.q < .8 && b.score >= 50 },
-  { id: "live7080", name: "70–80¢ · score 50+ · in-game", t: b => b.q >= .7 && b.q < .8 && b.score >= 50 && b.timing === "live" },
   { id: "esp7090", name: "Esports 70–90¢", t: b => b.league === "Esports" && b.q >= .7 && b.q < .9 },
   { id: "sharp7080", name: "70–80¢ · sharps · score 60+", t: b => b.q >= .7 && b.q < .8 && b.score >= 60 && b.sharp },
-  { id: "pre8090", name: "80–90¢ · before the game", t: b => b.q >= .8 && b.q < .9 && b.timing === "pre" },
-  { id: "p8090s50", name: "80–90¢ · score 50+", t: b => b.q >= .8 && b.q < .9 && b.score >= 50 }
+  { id: "pre8090", name: "80–90¢ favorites", t: b => b.q >= .8 && b.q < .9 && b.timing === "pre" },
 ];
 const flowOf = (flow, n) => n === 0 ? "none" : flow >= 10 ? "agree" : flow <= -5 ? "disagree" : "mixed";
 const normL = e => ({ q: e.q, score: e.score, league: e.league || "Other", venue: venueOf(e), sharp: !!e.sharp, usd: e.usd,
@@ -755,12 +759,14 @@ function presetStats(){
       u, roi: n ? u / n * 100 : 0, live: livePos.filter(b => pr.t(b)).length };
   }).sort((a, b) => (b.n >= 30) - (a.n >= 30) || b.roi - a.roi);
 }
+const ZONES = [["", "All prices"], ["lo", "Under 60¢"], ["hi", "60¢ and up"]];
+const presetZone = s => { const qs = s.list.map(e => e.q); if (!qs.length) return ""; const avg = qs.reduce((a, b) => a + b, 0) / qs.length; return avg < .6 ? "lo" : "hi"; };
 function renderBest(out){
-  const st = presetStats();
+  const st = presetStats().filter(s => !state.bestZone || presetZone(s) === state.bestZone);
   setStatus(`Best pre-game filters, ranked by ROI on settled bets placed before the game. Tap one to drop down bets on games that haven't started yet.${window.__kErr || ""}`);
   const bs = badgeSharps(), crowd = crowdIndex();
   const sortS = l => l.sort((a, b) => (posMap.get(b.pos)?.score || 0) - (posMap.get(a.pos)?.score || 0) || b.timestamp - a.timestamp);
-  out.innerHTML = st.map((s, i) => `<div class="pwrap"><button class="preset ${s.id === openPreset ? "on" : ""}" data-preset="${s.id}" aria-expanded="${s.id === openPreset}">
+  out.innerHTML = `<div class="row" style="margin-bottom:4px">${ZONES.map(([v, l]) => `<button class="chip" data-zone="${v}" aria-pressed="${(state.bestZone || "") === v}">${l}</button>`).join("")}</div>` + st.map((s, i) => `<div class="pwrap"><button class="preset ${s.id === openPreset ? "on" : ""}" data-preset="${s.id}" aria-expanded="${s.id === openPreset}">
       <span class="prank">${i + 1}</span>
       <span class="pmain"><span class="pname">${esc(s.name)}${s.id === RECOMMENDED.preset ? ` <span class="badge rec">Recommended</span>` : ""}</span>
         <span class="psub">${s.w}-${s.l} on ${s.n} bets ${signal(s.list)}</span></span>
@@ -768,6 +774,7 @@ function renderBest(out){
       <span class="plive ${s.live ? "has" : ""}">${s.live}<small>live now ${s.id === openPreset ? "▴" : "▾"}</small></span>
     </button>${s.id === openPreset ? (() => { const l = sortS(presetTrades(s));
       return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 30 settled bets sink to the bottom.</p>`;
+  out.querySelectorAll("[data-zone]").forEach(b => b.onclick = () => { state.bestZone = b.dataset.zone; save(); render(); });
   out.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { openPreset = openPreset === b.dataset.preset ? null : b.dataset.preset; render(); });
 }
 
