@@ -727,7 +727,11 @@ const PRESETS = [
   { id: "p7090ok", name: "70–90¢ · big money not against · all sports", t: b => b.q >= .7 && b.q < .9 && (b.flow === "agree" || b.flow === "none") },
   { id: "sharp4050", name: "Sharps · 40–50¢ · all sports", t: b => b.sharp && b.q >= .4 && b.q < .5 },
   { id: "cfb5060", name: "CFB · 50–60¢ · big money not against", t: b => b.league === "CFB" && b.q >= .5 && b.q < .6 && (b.flow === "agree" || b.flow === "none") },
-  { id: "mls50", name: "MLS · score 50+", t: b => b.league === "MLS" && b.score >= 50 }
+  { id: "mls50", name: "MLS · score 50+", t: b => b.league === "MLS" && b.score >= 50 },
+  // brought back on request; these faded in the Oct 23–Nov 1 check, so watch their records
+  { id: "soc60", name: "Other soccer · score 60+", t: b => b.league === "Other soccer" && b.score >= 60 },
+  { id: "soc50", name: "Other soccer · score 50+", t: b => b.league === "Other soccer" && b.score >= 50 },
+  { id: "esp7090", name: "Esports 70–90¢", t: b => b.league === "Esports" && b.q >= .7 && b.q < .9 }
 ];
 const flowOf = (flow, n) => n === 0 ? "none" : flow >= 10 ? "agree" : flow <= -5 ? "disagree" : "mixed";
 const normL = e => ({ q: e.q, score: e.score, league: e.league || "Other", venue: venueOf(e), sharp: !!e.sharp, usd: e.usd,
