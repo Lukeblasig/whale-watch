@@ -171,6 +171,10 @@ td .caret{display:inline-block;width:14px;color:var(--muted);font:500 12px var(-
 .pnote{color:var(--muted);font-size:12.5px;margin:4px 2px}
 .presetbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--win);border-radius:12px;padding:10px 12px}
 @media (max-width:520px){.preset{grid-template-columns:22px 1fr auto}.plive{grid-column:2 / -1;text-align:left;display:flex;gap:6px;align-items:baseline;font-size:18px}.plive small{display:inline}}
+.kick{font-weight:600;font-size:12px;border-radius:6px;padding:1px 7px}
+.kick.soon{background:color-mix(in srgb, var(--win) 16%, transparent);color:var(--win)}
+.kick.soon.now{background:color-mix(in srgb, var(--sharp) 18%, transparent);color:var(--sharp)}
+.kick.past{background:var(--panel2);color:var(--muted)}
 footer{color:var(--muted);font-size:12px;margin-top:22px}
 </style>
 </head>
@@ -210,6 +214,11 @@ footer{color:var(--muted);font-size:12px;margin-top:22px}
       <button class="chip" data-v="score">Score</button>
       <button class="chip" data-v="size">Size</button>
       <button class="chip" data-v="time">Newest</button>
+      <button class="chip" data-v="start">Starting soonest</button>
+    </div>
+    <div class="row" id="gameRow"><span>Games</span>
+      <button class="chip" data-v="1">Not started yet</button>
+      <button class="chip" data-v="0">All</button>
     </div>
     <div class="row">
       <span>Sharp badge</span>
@@ -258,12 +267,13 @@ const SCORE_MINS = [0, 50, 60, 70, 80, 90];
 const BUCKETS = [[90,100],[80,89],[70,79],[60,69],[50,59]];
 let openBucket = null, betFilter = "all", showAllBets = false;
 
-const RECOMMENDED = { preset: "agree7090", min: 1000, minScore: 0, venue: "", sharpOnly: false, buysOnly: false, league: [], sort: "score", period: "ALL", auto: true };
+const RECOMMENDED = { preset: "soc6090agree", hideStarted: true, min: 1000, minScore: 0, venue: "", sharpOnly: false, buysOnly: false, league: [], sort: "score", period: "ALL", auto: true };
 const defaults = Object.assign({ tab: "tape", incBackfill: true, proxy: "", theme: "dark", rVenue: "", rWho: "all", rMin: 1000, rLeague: "", dedupe: true, wwFactor: "league", wwMin: 0 }, RECOMMENDED);
 const state = Object.assign({}, defaults, loadLS("ww-state") || {});
 if (!state.v3){ Object.assign(state, RECOMMENDED); state.v3 = true; }
 if (!state.v4){ state.dedupe = true; state.v4 = true; }
 for (const k of ["league", "rLeague"]) if (!Array.isArray(state[k])) state[k] = state[k] ? [state[k]] : [];
+if (!state.v7){ state.hideStarted = true; state.preset = "soc6090agree"; state.v7 = true; }
 if (!state.v6){ state.v6 = true; }
 if (!state.v5){ Object.assign(state, RECOMMENDED); state.tab = "best"; state.v5 = true; }
 if (state.wwMin === undefined) state.wwMin = state.ww50 ? 50 : 0;
@@ -691,7 +701,8 @@ function filtered(){
     const p = posMap.get(t.pos);
     return t.price >= 0.03 && t.price <= 0.97 && t.usd >= state.min && inLeagues(state.league, t.league) && (!state.venue || t.venue === state.venue)
       && (!state.buysOnly || t.side === "BUY") && (!state.sharpOnly || bs.has(t.wallet) || (state.sharpOnly === "k" && t.venue === "Kalshi"))
-      && (p ? p.score : 0) >= state.minScore;
+      && (p ? p.score : 0) >= state.minScore
+      && (!state.hideStarted || !startOf(t) || startOf(t) > Date.now() / 1000);
   });
 }
 
@@ -699,30 +710,24 @@ function filtered(){
 // Each preset was picked from the results analysis; its record is recomputed live from the settled bets.
 const SOCCER = new Set(["Other soccer", "EPL", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "UCL", "UEL", "Conference League", "MLS", "NWSL"]);
 const PRESETS = [
-  { id: "socSharp4050", name: "Soccer · sharps · 40–50¢", t: b => SOCCER.has(b.league) && b.sharp && b.q >= .4 && b.q < .5 },
+  // Rebuilt Nov 1 from pre-game results: each was profitable both before and after Oct 23 and survives the multiple-testing check.
+  { id: "soc7090agree40", name: "Soccer · 70–90¢ · score 40+ · big money agrees", t: b => SOCCER.has(b.league) && b.q >= .7 && b.q < .9 && b.score >= 40 && b.flow === "agree" },
+  { id: "socSharp4060agree60", name: "Soccer · sharps · 40–60¢ · score 60+ · big money agrees", t: b => SOCCER.has(b.league) && b.sharp && b.q >= .4 && b.q < .6 && b.score >= 60 && b.flow === "agree" },
+  { id: "socSharpAgree60", name: "Soccer · sharps · score 60+ · big money agrees", t: b => SOCCER.has(b.league) && b.sharp && b.score >= 60 && b.flow === "agree" },
+  { id: "socSharp6090agree50", name: "Soccer · sharps · 60–90¢ · score 50+ · big money agrees", t: b => SOCCER.has(b.league) && b.sharp && b.q >= .6 && b.q < .9 && b.score >= 50 && b.flow === "agree" },
+  { id: "soc6090agree", name: "Soccer · 60–90¢ · big money agrees", t: b => SOCCER.has(b.league) && b.q >= .6 && b.q < .9 && b.flow === "agree" },
+  { id: "socAgree40", name: "Soccer · score 40+ · big money agrees", t: b => SOCCER.has(b.league) && b.score >= 40 && b.flow === "agree" },
   { id: "socSharp4050s50", name: "Soccer · sharps · 40–50¢ · score 50+", t: b => SOCCER.has(b.league) && b.sharp && b.q >= .4 && b.q < .5 && b.score >= 50 },
-  { id: "soc4050s40", name: "Soccer · 40–50¢ · score 40+", t: b => SOCCER.has(b.league) && b.q >= .4 && b.q < .5 && b.score >= 40 },
-  { id: "soc2560s60", name: "Soccer · 25–60¢ · score 60+", t: b => SOCCER.has(b.league) && b.q >= .25 && b.q < .6 && b.score >= 60 },
   { id: "soc4560agree", name: "Soccer · 45–60¢ · score 50+ · big money agrees", t: b => SOCCER.has(b.league) && b.q >= .45 && b.q < .6 && b.score >= 50 && b.flow === "agree" },
+  { id: "socSharp4050", name: "Soccer · sharps · 40–50¢", t: b => SOCCER.has(b.league) && b.sharp && b.q >= .4 && b.q < .5 },
+  { id: "soc8090ok", name: "Soccer · 80–90¢ · big money not against", t: b => SOCCER.has(b.league) && b.q >= .8 && b.q < .9 && (b.flow === "agree" || b.flow === "none") },
+  { id: "p8090ok", name: "80–90¢ · big money not against · all sports", t: b => b.q >= .8 && b.q < .9 && (b.flow === "agree" || b.flow === "none") },
+  { id: "soc7090ok", name: "Soccer · 70–90¢ · big money not against", t: b => SOCCER.has(b.league) && b.q >= .7 && b.q < .9 && (b.flow === "agree" || b.flow === "none") },
+  { id: "sharp6090agree", name: "Sharps · 60–90¢ · big money agrees · all sports", t: b => b.sharp && b.q >= .6 && b.q < .9 && b.flow === "agree" },
+  { id: "p7090ok", name: "70–90¢ · big money not against · all sports", t: b => b.q >= .7 && b.q < .9 && (b.flow === "agree" || b.flow === "none") },
   { id: "sharp4050", name: "Sharps · 40–50¢ · all sports", t: b => b.sharp && b.q >= .4 && b.q < .5 },
   { id: "cfb5060", name: "CFB · 50–60¢ · big money not against", t: b => b.league === "CFB" && b.q >= .5 && b.q < .6 && (b.flow === "agree" || b.flow === "none") },
-  { id: "ucl4060", name: "UCL · sharps · 40–60¢", t: b => b.league === "UCL" && b.sharp && b.q >= .4 && b.q < .6 },
-  { id: "nba4060", name: "NBA · sharps · 40–60¢", t: b => b.league === "NBA" && b.sharp && b.q >= .4 && b.q < .6 },
-  { id: "agree7090", name: "70–90¢ · score 50+ · big money agrees", t: b => b.q >= .7 && b.q < .9 && b.score >= 50 && b.flow === "agree" },
-  { id: "soc60", name: "Other soccer · score 60+", t: b => b.league === "Other soccer" && b.score >= 60 },
-  { id: "soc50", name: "Other soccer · score 50+", t: b => b.league === "Other soccer" && b.score >= 50 },
-  { id: "allsoc50", name: "All soccer · score 50+", t: b => SOCCER.has(b.league) && b.score >= 50 },
-  { id: "epl50", name: "EPL · score 50+", t: b => b.league === "EPL" && b.score >= 50 },
-  { id: "lal50", name: "La Liga · score 50+", t: b => b.league === "La Liga" && b.score >= 50 },
-  { id: "mls50", name: "MLS · score 50+", t: b => b.league === "MLS" && b.score >= 50 },
-  { id: "p7080s70", name: "70–80¢ · score 70+", t: b => b.q >= .7 && b.q < .8 && b.score >= 70 },
-  { id: "soc6080", name: "Soccer favorites 60–80¢ · score 50+", t: b => b.league === "Other soccer" && b.q >= .6 && b.q < .8 && b.score >= 50 },
-  { id: "agree6090", name: "60–90¢ · score 50+ · big money agrees", t: b => b.q >= .6 && b.q < .9 && b.score >= 50 && b.flow === "agree" },
-  { id: "p7080s50", name: "70–80¢ · score 50+", t: b => b.q >= .7 && b.q < .8 && b.score >= 50 },
-  { id: "ten7080", name: "Tennis 70–80¢ · score 50+", t: b => b.league === "Tennis" && b.q >= .7 && b.q < .8 && b.score >= 50 },
-  { id: "esp7090", name: "Esports 70–90¢", t: b => b.league === "Esports" && b.q >= .7 && b.q < .9 },
-  { id: "sharp7080", name: "70–80¢ · sharps · score 60+", t: b => b.q >= .7 && b.q < .8 && b.score >= 60 && b.sharp },
-  { id: "pre8090", name: "80–90¢ favorites", t: b => b.q >= .8 && b.q < .9 && b.timing === "pre" },
+  { id: "mls50", name: "MLS · score 50+", t: b => b.league === "MLS" && b.score >= 50 }
 ];
 const flowOf = (flow, n) => n === 0 ? "none" : flow >= 10 ? "agree" : flow <= -5 ? "disagree" : "mixed";
 const normL = e => ({ q: e.q, score: e.score, league: e.league || "Other", venue: venueOf(e), sharp: !!e.sharp, usd: e.usd,
@@ -778,6 +783,14 @@ function renderBest(out){
   out.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { openPreset = openPreset === b.dataset.preset ? null : b.dataset.preset; render(); });
 }
 
+const startOf = t => { const p = posMap.get(t.pos); return (p && p.start) || t.start || null; };
+function startLabel(s){
+  if (!s) return "";
+  const now = Date.now() / 1000, d = s - now, abs = Math.abs(d);
+  const span = abs < 3600 ? `${Math.max(1, Math.round(abs / 60))}m` : abs < 86400 ? `${Math.floor(abs / 3600)}h ${Math.round((abs % 3600) / 60)}m` : `${Math.round(abs / 86400)}d`;
+  const when = new Date(s * 1000).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" });
+  return d > 0 ? `<span class="kick soon${d < 3600 ? " now" : ""}">Starts ${when} · in ${span}</span>` : `<span class="kick past">Started ${span} ago</span>`;
+}
 function betCard(t, bs, crowd){
     const s = bs.get(t.wallet), p = posMap.get(t.pos) || { score: 0, parts: {}, idx: t.idx }, pp = p.parts;
     const kal = t.venue === "Kalshi";
@@ -788,7 +801,7 @@ function betCard(t, bs, crowd){
       <div class="pick"><span class="side ${t.side === "BUY" ? "buy" : "sell"}">${t.side === "BUY" ? "Bought" : "Sold"}</span> ${esc(t.outcome)} @ ${Math.round(t.price*100)}¢ <span class="odds">(${american(t.price)})</span></div>
       <button class="score" data-why="${esc(t.id)}" style="color:${scoreColor(p.score)}" aria-label="Score ${p.score}, show breakdown">${p.score}<small>score</small></button>
       <a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>
-      <div class="who"><span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>
+      <div class="who">${startLabel(startOf(t))}<span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>
         ${s ? `<span class="badge">Sharp #${s.rank}, +${money(s.pnl)}</span>` : ""}
         ${t.block ? `<span class="badge">Block trade</span>` : ""}
         ${kal ? `<span>${name}</span>` : `<a href="https://polymarket.com/profile/${esc(t.wallet)}" target="_blank" rel="noopener">${esc(name)}</a>`}
@@ -815,6 +828,7 @@ function render(){
   const list = filtered();
   if (state.sort === "score") list.sort((a, b) => (posMap.get(b.pos)?.score || 0) - (posMap.get(a.pos)?.score || 0) || (posMap.get(b.pos)?.usd || 0) - (posMap.get(a.pos)?.usd || 0) || b.timestamp - a.timestamp);
   else if (state.sort === "size") list.sort((a, b) => b.usd - a.usd);
+  else if (state.sort === "start") list.sort((a, b) => (startOf(a) || 9e12) - (startOf(b) || 9e12) || (posMap.get(b.pos)?.score || 0) - (posMap.get(a.pos)?.score || 0));
   const bs = badgeSharps();
   const upd = new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
   setStatus(`${list.length} bets of ${money(state.min)}+, ${list.filter(t => bs.has(t.wallet)).length} from sharps. Updated ${upd}.${window.__kErr || ""}`);
@@ -915,15 +929,21 @@ function openPlay(cid, idx, from){
 /* ---------- results ---------- */
 const isJunk = e => e.junk || e.q < 0.03 || e.q > 0.97;
 // How sure can we be that a group's ROI isn't luck? Compares the average result per bet with its spread.
+// Is a group's ROI bigger than luck? Bets on the same game rise and fall together, so the spread is measured per game,
+// and the bar for "real" is set high because the tables show many groups at once.
 function signal(list){
   const n = list.length;
   if (n < 30) return `<span class="sig few">Too few bets</span>`;
-  const u = list.map(e => e.units || 0), mean = u.reduce((a, b) => a + b, 0) / n;
-  const sd = Math.sqrt(u.reduce((a, b) => a + (b - mean) ** 2, 0) / (n - 1)) || 1;
-  const z = mean / (sd / Math.sqrt(n));
-  if (z >= 2) return `<span class="sig up">Likely real edge</span>`;
-  if (z <= -2) return `<span class="sig down">Likely real loser</span>`;
-  if (Math.abs(z) >= 1) return `<span class="sig maybe">Maybe, keep watching</span>`;
+  const mean = list.reduce((a, e) => a + (e.units || 0), 0) / n;
+  const g = new Map();
+  list.forEach(e => { const k = (e.venue || "") + "|" + (e.slug || e.eventSlug || e.conditionId); g.set(k, (g.get(k) || 0) + (e.units || 0) - mean); });
+  const G = g.size; if (G < 15) return `<span class="sig few">Too few games</span>`;
+  let ss = 0; g.forEach(v => ss += v * v);
+  const se = Math.sqrt(ss * G / (G - 1)) / n || 1, z = mean / se;
+  if (z >= 2.5) return `<span class="sig up">Likely real edge</span>`;
+  if (z <= -2.5) return `<span class="sig down">Likely real loser</span>`;
+  if (z >= 1.5) return `<span class="sig maybe">Promising, keep watching</span>`;
+  if (z <= -1.5) return `<span class="sig maybe">Leaning negative</span>`;
   return `<span class="sig few">Could be luck</span>`;
 }
 const PRICE_BUCKETS = [[0, .25, "Under 25¢"], [.25, .4, "25–40¢"], [.4, .5, "40–50¢"], [.5, .6, "50–60¢"], [.6, .7, "60–70¢"], [.7, .8, "70–80¢"], [.8, .9, "80–90¢"], [.9, 1.01, "90¢ and up"]];
@@ -1075,7 +1095,7 @@ function renderResults(out){
     ${working}
     <div class="card">
       <h3>Reading the table</h3>
-      <p>Tail 1u is what you'd make risking 1 unit on every bet at the whale's price; following a whale in real life usually gets a slightly worse price. Whale $ is what the whales actually made. Signal checks whether a result is bigger than luck alone would usually produce. Under 30 bets it can't tell, and even "Likely real" can fade, so keep checking as bets add up. Each wallet's fills on one side of a game count as one bet; "One bet per pick" goes further and counts each pick once, at its highest score.</p>
+      <p>Tail 1u is what you'd make risking 1 unit on every bet at the whale's price; following a whale in real life usually gets a slightly worse price. Whale $ is what the whales actually made. Signal checks whether a result is bigger than luck alone would usually produce, counting bets on the same game together. Under 30 bets it can't tell, and even "Likely real" can fade, so keep checking as bets add up. Each wallet's fills on one side of a game count as one bet; "One bet per pick" goes further and counts each pick once, at its highest score.</p>
       <h3 style="margin-top:12px">How the score works (0–100)</h3>
       <ul>
         <li>Size, up to 15: $1k is 0, $10k is 7.5, $100k+ is 15.</li>
@@ -1129,6 +1149,7 @@ function syncControls(){
   $("#proxyBtn").setAttribute("aria-pressed", String(!!state.proxy)); $("#proxyBtn").textContent = state.proxy ? "Proxy on" : "Proxy URL";
   $("#period").value = state.period;
   document.querySelectorAll("#sortRow .chip").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state.sort)));
+  document.querySelectorAll("#gameRow .chip").forEach(b => b.setAttribute("aria-pressed", String((b.dataset.v === "1") === !!state.hideStarted)));
   document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
   const isRec = Object.keys(RECOMMENDED).every(k => JSON.stringify(state[k]) === JSON.stringify(RECOMMENDED[k]));
   $("#recBtn").classList.toggle("on", isRec);
@@ -1144,6 +1165,7 @@ $("#fAll").onclick = () => { state.sharpOnly = false; save(); syncControls(); re
 $("#fSharp").onclick = () => { state.sharpOnly = true; save(); syncControls(); render(); };
 $("#fSharpK").onclick = () => { state.sharpOnly = "k"; if (state.venue === "Polymarket") state.venue = ""; save(); syncControls(); render(); };
 $("#fBuys").onclick = () => { state.buysOnly = !state.buysOnly; save(); syncControls(); render(); };
+$("#gameRow").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.hideStarted = b.dataset.v === "1"; save(); syncControls(); render(); });
 $("#sortRow").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.sort = b.dataset.v; save(); syncControls(); render(); });
 $("#period").onchange = e => { state.period = e.target.value; save(); render(); };
 document.querySelectorAll(".tab").forEach(b => b.onclick = () => { state.tab = b.dataset.tab; save(); syncControls(); render(); });

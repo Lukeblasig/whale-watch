@@ -220,25 +220,20 @@ async function kalshiLive() {
   K_SERIES.forEach(s => { if (!sports.has(s)) sports.set(s, kLeague(s)); });
   kDiag.sportsSeries = sports.size;
 
-  // 2) every open event (with its markets), keeping sports ones
-  const events = []; let cursor = "";
-  for (let i = 0; i < 40; i++) {
-    if (elapsed() > 240) { skipped.push("rest of Kalshi event scan"); break; }
-    let j;
-    try { j = await kget(`/events?status=open&with_nested_markets=true&limit=200${cursor ? "&cursor=" + encodeURIComponent(cursor) : ""}`); }
-    catch (e) { kErr("events page " + (i + 1), e); break; }
-    (j.events || []).forEach(ev => {
-      const st = ev.series_ticker || (ev.event_ticker || "").split("-")[0];
-      if (/^KXMVE/.test(st)) return;
-      if (sports.has(st) || kLeague(st) !== "Other") events.push({ ...ev, _league: sports.get(st) || kLeague(st) });
-    });
-    cursor = j.cursor; if (!cursor) break;
-  }
-  // fallback if the events listing failed: query the known series directly
-  if (!events.length) {
-    const lists = await pool(K_SERIES, 5, s => kget(`/markets?series_ticker=${s}&status=open&limit=200`).then(j => j.markets || []).catch(e => { kErr(s, e); return []; }));
-    lists.flat().forEach(m => events.push({ event_ticker: m.event_ticker, title: "", markets: [m], _league: kLeague(m.ticker) }));
-  }
+  // 2) open events for game-type series only. Scanning every open Kalshi event no longer reaches the sports
+  //    games (the full list is far too long), so ask each game series for its events directly.
+  // main game markets only (moneyline, spread, total); skip halves, quarters, team totals, props and parlays
+  const GAME_RE = /(GAME|SPREAD|TOTAL|MATCH|FIGHT)$/, SKIP_RE = /(1H|2H|1Q|2Q|3Q|4Q|1P|2P|3P|TEAMTOTAL|BTTS|MVE|PREPACK|SGP|CELEBRITY|SERIES)/;
+  const gameSeries = [...new Set([...K_SERIES, ...[...sports.keys()].filter(s => GAME_RE.test(s) && !SKIP_RE.test(s))])].slice(0, 900);
+  kDiag.gameSeries = gameSeries.length;
+  const events = [];
+  const evLists = await pool(gameSeries, 8, async st => {
+    if (elapsed() > 300) return [];
+    try { const j = await kget(`/events?series_ticker=${st}&status=open&with_nested_markets=true&limit=200`); return (j.events || []).map(ev => ({ ...ev, _league: sports.get(st) || kLeague(st) })); }
+    catch (err) { kErr("events " + st, err); return []; }
+  });
+  evLists.flat().forEach(ev => events.push(ev));
+  if (elapsed() > 300) skipped.push("rest of Kalshi series");
   kDiag.events = events.length;
 
   const markets = [];
@@ -255,7 +250,7 @@ async function kalshiLive() {
 
   // 3) trades from the busiest markets over the last 24h
   const act = m => Number(m.volume_24h_fp ?? m.volume_24h ?? 0) || Number(m.open_interest_fp ?? m.open_interest ?? 0) / 10;
-  const top = markets.filter(m => act(m) > 0).sort((a, b) => act(b) - act(a)).slice(0, 80);
+  const top = markets.filter(m => act(m) > 0).sort((a, b) => act(b) - act(a)).slice(0, 120);
   kDiag.busy = top.length;
   const tl = await pool(top, 5, m => kget(`/markets/trades?ticker=${m.ticker}&limit=1000&min_ts=${since}`).then(j => j.trades || [])
     .catch(e => { kDiag.tradeErrors++; kErr("trades " + m.ticker, e); return []; }));
