@@ -787,9 +787,9 @@ const startOf = t => { const p = posMap.get(t.pos); return (p && p.start) || t.s
 function startLabel(s){
   if (!s) return "";
   const now = Date.now() / 1000, d = s - now, abs = Math.abs(d);
-  const span = abs < 3600 ? `${Math.max(1, Math.round(abs / 60))}m` : abs < 86400 ? `${Math.floor(abs / 3600)}h ${Math.round((abs % 3600) / 60)}m` : `${Math.round(abs / 86400)}d`;
+  const span = abs < 3600 ? `${Math.max(1, Math.floor(abs / 60))}m` : abs < 86400 ? `${Math.floor(abs / 3600)}h ${Math.floor((abs % 3600) / 60)}m` : `${Math.floor(abs / 86400)}d`;
   const when = new Date(s * 1000).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" });
-  return d > 0 ? `<span class="kick soon${d < 3600 ? " now" : ""}">Starts ${when} · in ${span}</span>` : `<span class="kick past">Started ${span} ago</span>`;
+  return d > 0 ? `<span class="kick soon${d < 3600 ? " now" : ""}" title="Starts ${when}">${span}</span>` : `<span class="kick past" title="Started ${when}">Started ${span} ago</span>`;
 }
 function betCard(t, bs, crowd){
     const s = bs.get(t.wallet), p = posMap.get(t.pos) || { score: 0, parts: {}, idx: t.idx }, pp = p.parts;
