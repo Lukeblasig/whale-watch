@@ -755,17 +755,17 @@ function presetPicks(){
 const PRE_ONLY = true; // the tool tracks pre-game bets only: records use bets placed before the game, live bets are games not yet started
 const upcoming = p => !!p.start && p.ts < p.start && p.start > Date.now() / 1000;
 function presetTrades(pr){
-  return trades.filter(t => { const p = posMap.get(t.pos); return t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!PRE_ONLY || upcoming(p)); });
+  return trades.filter(t => { const p = posMap.get(t.pos); return t.venue === "Polymarket" && t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!PRE_ONLY || upcoming(p)); });
 }
 let openPreset = null;
 function presetStats(){
   const picks = presetPicks().map(e => [e, normL(e)]).filter(([, b]) => !PRE_ONLY || b.timing === "pre");
   const livePos = [...posMap.values()].filter(p => p.usd >= 1000 && p.q >= 0.03 && p.q <= 0.97 && (!PRE_ONLY || upcoming(p))).map(p => normP(p));
   return PRESETS.map(pr => {
-    const list = picks.filter(([, b]) => pr.t(b)).map(([e]) => e);
+    const list = picks.filter(([, b]) => b.venue === "Polymarket" && pr.t(b)).map(([e]) => e);
     const n = list.length, u = list.reduce((a, e) => a + (e.units || 0), 0);
     return { ...pr, list, n, w: list.filter(e => e.result === "W").length, l: list.filter(e => e.result === "L").length,
-      u, roi: n ? u / n * 100 : 0, live: livePos.filter(b => pr.t(b)).length };
+      u, roi: n ? u / n * 100 : 0, live: livePos.filter(b => b.venue === "Polymarket" && pr.t(b)).length };
   }).sort((a, b) => (b.n >= 30) - (a.n >= 30) || b.roi - a.roi);
 }
 const ZONES = [["", "All prices"], ["lo", "Under 60¢"], ["hi", "60¢ and up"]];
@@ -782,7 +782,7 @@ function renderBest(out){
       <span class="proi ${s.roi > 0 ? "pos" : s.roi < 0 ? "neg" : ""}">${s.roi > 0 ? "+" : ""}${s.roi.toFixed(1)}%<small>ROI</small></span>
       <span class="plive ${s.live ? "has" : ""}">${s.live}<small>live now ${s.id === openPreset ? "▴" : "▾"}</small></span>
     </button>${s.id === openPreset ? (() => { const l = sortS(presetTrades(s));
-      return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 30 settled bets sink to the bottom.</p>`;
+      return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. Best filters use Polymarket bets only, since that is where their records come from; Kalshi is anonymous and still too new to grade. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 30 settled bets sink to the bottom.</p>`;
   out.querySelectorAll("[data-zone]").forEach(b => b.onclick = () => { state.bestZone = b.dataset.zone; save(); render(); });
   out.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { openPreset = openPreset === b.dataset.preset ? null : b.dataset.preset; render(); });
 }
@@ -810,7 +810,7 @@ function betCard(t, bs, crowd){
         ${t.block ? `<span class="badge">Block trade</span>` : ""}
         ${kal ? `<span>${name}</span>` : `<a href="https://polymarket.com/profile/${esc(t.wallet)}" target="_blank" rel="noopener">${esc(name)}</a>`}
         ${p.usd > t.usd * 1.05 ? `<span>${money(p.usd)} total position</span>` : ""}
-        <button class="crowd" data-open="1">${c.n > 1 ? `${c.n} whales on this side` : "See who took it"}</button></div>
+        <button class="crowd" data-open="1">${c.n > 1 ? `${c.n} ${kal ? "fills" : "whales"} on this side` : "See who took it"}</button></div>
       <div class="why ${openWhy.has(t.id) ? "open" : ""}">${whyText(pp, t.venue)}</div>
     </div>`;
 }
