@@ -99,7 +99,9 @@ select{background:var(--chip);border:1px solid var(--line);border-radius:8px;pad
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:12px}
 .stat{background:var(--panel2);border-radius:12px;padding:10px 12px}
 .stat b{display:block;font:700 26px/1 var(--num)}
-.stat span{font-size:12px;color:var(--muted)}
+.stat small{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+.stat.good{background:color-mix(in srgb, var(--win) 14%, var(--panel2))} .stat.good b{color:var(--win)}
+.stat.bad{background:color-mix(in srgb, var(--sell) 14%, var(--panel2))} .stat.bad b{color:var(--sell)}
 .tblwrap{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:14px}
 th{text-align:right;color:var(--muted);font-weight:500;font-size:12px;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
@@ -337,11 +339,15 @@ async function getJSON(url){
 }
 
 
+// Polymarket moved trades to /v2 (snake_case fields, {data:[...]}); map back to the field names used here
+const v2list = j => Array.isArray(j) ? j : (j && j.data) || [];
+const v2t = t => t && ({ ...t, proxyWallet: t.proxyWallet ?? t.proxy_wallet, transactionHash: t.transactionHash ?? t.transaction_hash,
+  asset: t.asset ?? t.token_id, conditionId: t.conditionId ?? t.condition_id, outcomeIndex: t.outcomeIndex ?? t.outcome_index, eventSlug: t.eventSlug ?? t.event_slug });
+const V2_PERIOD = { DAY: "day", WEEK: "week", MONTH: "month", ALL: "all" };
 async function loadSharps(period){
-  const pages = await Promise.all([0, 50].map(o =>
-    getJSON(`${DATA}/v1/leaderboard?category=SPORTS&timePeriod=${period}&orderBy=PNL&limit=50&offset=${o}`).catch(() => [])));
+  const j = await getJSON(`${DATA}/v2/leaderboard?category=sports&time_period=${V2_PERIOD[period]}&limit=100`).catch(() => []);
   const m = new Map();
-  pages.flat().forEach(r => { if (r && r.proxyWallet && Number(r.pnl) > 0) m.set(r.proxyWallet.toLowerCase(), { rank: Number(r.rank), pnl: Number(r.pnl) }); });
+  v2list(j).forEach(r => { const w = r && (r.user_id || r.proxyWallet); if (w && Number(r.pnl) > 0) m.set(w.toLowerCase(), { rank: Number(r.rank), pnl: Number(r.pnl) }); });
   return m;
 }
 
@@ -351,10 +357,10 @@ function indexEvents(evs){
 
 async function tradesForEvents(evs){
   const ids = evs.map(e => e.id);
-  const chunks = []; for (let i = 0; i < ids.length; i += 25) chunks.push(ids.slice(i, i+25));
+  const chunks = []; for (let i = 0; i < ids.length; i += 20) chunks.push(ids.slice(i, i+20));
   const batches = await Promise.all(chunks.map(c =>
-    getJSON(`${DATA}/trades?eventId=${c.join(",")}&filterType=CASH&filterAmount=${FETCH_FLOOR}&limit=500&takerOnly=true`).catch(() => [])));
-  return normalize(batches.flat());
+    getJSON(`${DATA}/v2/trades?event_id=${c.join(",")}&filter_type=CASH&filter_amount=${FETCH_FLOOR}&limit=1000&taker_only=true`).then(v2list).catch(() => [])));
+  return normalize(batches.flat().map(v2t));
 }
 
 function normalize(raw){
@@ -376,8 +382,8 @@ async function loadLive(){
   evs = Array.isArray(evs) ? evs.filter(e => e && e.id) : [];
   indexEvents(evs);
   if (evs.length) return tradesForEvents(evs.slice(0, 150));
-  const all = await getJSON(`${DATA}/trades?filterType=CASH&filterAmount=${FETCH_FLOOR}&limit=1000&takerOnly=true`);
-  return normalize(all).filter(t => t.league !== "Other");
+  const all = await getJSON(`${DATA}/v2/trades?filter_type=CASH&filter_amount=${FETCH_FLOOR}&limit=1000&taker_only=true`);
+  return normalize(v2list(all).map(v2t)).filter(t => t.league !== "Other");
 }
 
 /* ---------- Kalshi ---------- */
@@ -1057,11 +1063,11 @@ function renderResults(out){
   out.innerHTML = `
     <div class="card">
       <div class="stats">
-        <div class="stat"><b>${done.length}</b><span>settled bets</span></div>
-        <div class="stat"><b>${pend.length}</b><span>waiting on games</span></div>
-        <div class="stat"><b>${tot.w}-${tot.l}</b><span>record at 50+</span></div>
-        <div class="stat"><b>${pl(tot.u)}</b><span>tailing 1u at 50+</span></div>
-        <div class="stat"><b>${lastSettled ? ago(lastSettled) : "—"}</b><span>last result logged</span></div>
+        <div class="stat"><b>${done.length.toLocaleString("en-US")}</b><small>settled bets</small></div>
+        <div class="stat"><b>${pend.length.toLocaleString("en-US")}</b><small>waiting on games</small></div>
+        <div class="stat"><b>${tot.w}-${tot.l}</b><small>record at score 50+</small></div>
+        <div class="stat ${tot.u > 0 ? "good" : tot.u < 0 ? "bad" : ""}"><b>${tot.u > 0 ? "+" : ""}${tot.u.toFixed(1)}u</b><small>profit tailing 1u at 50+${tot.n ? ` · ${tot.roi > 0 ? "+" : ""}${tot.roi.toFixed(1)}% ROI` : ""}</small></div>
+        <div class="stat"><b>${lastSettled ? ago(lastSettled) : "—"}</b><small>last result logged</small></div>
       </div>
       <div style="display:grid;gap:8px;margin-bottom:10px">
         <div class="row"><span>Venue</span>${chips("rVenue", [["", "All"], ["Polymarket", "Polymarket"], ["Kalshi", "Kalshi"]])}</div>

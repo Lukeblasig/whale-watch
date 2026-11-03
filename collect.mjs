@@ -148,12 +148,16 @@ const loaded = loadStore();
 const ledger = loaded.L, prevFeed = loaded.feed, meta = loaded.meta;
 Object.entries(prevFeed.names || {}).forEach(([k, v]) => { if (!names[k]) names[k] = v; });
 
+// Polymarket moved trades to /v2 (snake_case fields, {data:[...]}); map back to the field names used here
+const v2list = j => Array.isArray(j) ? j : (j && j.data) || [];
+const v2t = t => t && ({ ...t, proxyWallet: t.proxyWallet ?? t.proxy_wallet, transactionHash: t.transactionHash ?? t.transaction_hash,
+  asset: t.asset ?? t.token_id, conditionId: t.conditionId ?? t.condition_id, outcomeIndex: t.outcomeIndex ?? t.outcome_index, eventSlug: t.eventSlug ?? t.event_slug });
+const V2_PERIOD = { DAY: "day", WEEK: "week", MONTH: "month", ALL: "all" };
 /* ---------- sharps ---------- */
 async function sharps(period) {
-  const pages = await Promise.all([0, 50].map(o =>
-    getJSON(`${DATA}/v1/leaderboard?category=SPORTS&timePeriod=${period}&orderBy=PNL&limit=50&offset=${o}`).catch(e => { errors.push(e.message); return []; })));
+  const j = await getJSON(`${DATA}/v2/leaderboard?category=sports&time_period=${V2_PERIOD[period]}&limit=100`).catch(e => { errors.push(e.message); return []; });
   const out = {};
-  pages.flat().forEach(r => { if (r && r.proxyWallet && Number(r.pnl) > 0) out[r.proxyWallet.toLowerCase()] = { rank: Number(r.rank), pnl: Number(r.pnl) }; });
+  v2list(j).forEach(r => { const w = r && (r.user_id || r.proxyWallet); if (w && Number(r.pnl) > 0) out[w.toLowerCase()] = { rank: Number(r.rank), pnl: Number(r.pnl) }; });
   return out;
 }
 
@@ -173,11 +177,11 @@ function indexEvents(evs) {
 }
 async function pmTrades(evs) {
   const ids = evs.map(e => e.id), chunks = [];
-  for (let i = 0; i < ids.length; i += 25) chunks.push(ids.slice(i, i + 25));
+  for (let i = 0; i < ids.length; i += 20) chunks.push(ids.slice(i, i + 20));
   const lists = await pool(chunks, 4, c =>
-    getJSON(`${DATA}/trades?eventId=${c.join(",")}&filterType=CASH&filterAmount=${FLOOR}&limit=500&takerOnly=true`).catch(e => { errors.push(e.message); return []; }));
+    getJSON(`${DATA}/v2/trades?event_id=${c.join(",")}&filter_type=CASH&filter_amount=${FLOOR}&limit=1000&taker_only=true`).then(v2list).catch(e => { errors.push(e.message); return []; }));
   const seen = new Set(), out = [];
-  lists.flat().forEach(t => {
+  lists.flat().map(v2t).forEach(t => {
     if (!t || !t.conditionId) return;
     const id = t.transactionHash + t.asset + "|" + t.size;
     if (seen.has(id)) return; seen.add(id);
