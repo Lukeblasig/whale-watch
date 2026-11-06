@@ -167,6 +167,7 @@ td .caret{display:inline-block;width:14px;color:var(--muted);font:500 12px var(-
 .proi,.plive{font:700 26px/1 var(--num);text-align:right;min-width:62px}
 .proi small,.plive small{display:block;font:500 11px/1.3 var(--body);color:var(--muted)}
 .plive{color:var(--muted)} .plive.has{color:var(--buy)}
+.badge.hot{background:color-mix(in srgb, var(--sharp) 20%, transparent);color:var(--sharp)}
 .badge.rec{background:color-mix(in srgb, var(--win) 18%, transparent);color:var(--win)}
 .pwrap{display:grid;gap:6px}
 .plist{display:grid;gap:8px;padding:2px 0 8px 14px;border-left:3px solid var(--win);margin-left:10px}
@@ -733,6 +734,21 @@ const PRESETS = [
   { id: "p7090ok", name: "70–90¢ · big money not against · all sports", t: b => b.q >= .7 && b.q < .9 && (b.flow === "agree" || b.flow === "none") },
   { id: "sharp4050", name: "Sharps · 40–50¢ · all sports", t: b => b.sharp && b.q >= .4 && b.q < .5 },
   { id: "cfb5060", name: "CFB · 50–60¢ · big money not against", t: b => b.league === "CFB" && b.q >= .5 && b.q < .6 && (b.flow === "agree" || b.flow === "none") },
+  { id: "ten70", name: "Tennis · score 70+", t: b => b.league === "Tennis" && b.score >= 70 },
+  // Nov 6: smaller groups with big ROI that were positive in both halves of the data; watch them as they grow
+  { id: "ucl7090s60", name: "UCL · 70–90¢ · score 60+", t: b => b.league === "UCL" && b.q >= .7 && b.q < .9 && b.score >= 60 },
+  { id: "osoc60agree", name: "Other soccer · score 60+ · big money agrees", t: b => b.league === "Other soccer" && b.score >= 60 && b.flow === "agree" },
+  { id: "osoc4060s60agree", name: "Other soccer · 40–60¢ · score 60+ · big money agrees", t: b => b.league === "Other soccer" && b.q >= .4 && b.q < .6 && b.score >= 60 && b.flow === "agree" },
+  { id: "osoc70", name: "Other soccer · score 70+", t: b => b.league === "Other soccer" && b.score >= 70 },
+  { id: "ucl50agree", name: "UCL · score 50+ · big money agrees", t: b => b.league === "UCL" && b.score >= 50 && b.flow === "agree" },
+  { id: "ucl4060agree", name: "UCL · 40–60¢ · big money agrees", t: b => b.league === "UCL" && b.q >= .4 && b.q < .6 && b.flow === "agree" },
+  { id: "esp6090s70", name: "Esports · 60–90¢ · score 70+", t: b => b.league === "Esports" && b.q >= .6 && b.q < .9 && b.score >= 70 },
+  { id: "esp4060agree", name: "Esports · 40–60¢ · big money agrees", t: b => b.league === "Esports" && b.q >= .4 && b.q < .6 && b.flow === "agree" },
+  { id: "seraSharp50", name: "Serie A · sharps · score 50+", t: b => b.league === "Serie A" && b.sharp && b.score >= 50 },
+  { id: "sera6090agree", name: "Serie A · 60–90¢ · big money agrees", t: b => b.league === "Serie A" && b.q >= .6 && b.q < .9 && b.flow === "agree" },
+  { id: "nbaSharp7090s60", name: "NBA · sharps · 70–90¢ · score 60+", t: b => b.league === "NBA" && b.sharp && b.q >= .7 && b.q < .9 && b.score >= 60 },
+  { id: "uel7090s50", name: "UEL · 70–90¢ · score 50+", t: b => b.league === "UEL" && b.q >= .7 && b.q < .9 && b.score >= 50 },
+  { id: "ufc5070", name: "UFC · 50–70¢", t: b => b.league === "UFC" && b.q >= .5 && b.q < .7 },
   { id: "mls50", name: "MLS · score 50+", t: b => b.league === "MLS" && b.score >= 50 },
   // brought back on request; these faded in the Oct 23–Nov 1 check, so watch their records
   { id: "soc60", name: "Other soccer · score 60+", t: b => b.league === "Other soccer" && b.score >= 60 },
@@ -772,7 +788,7 @@ function presetStats(){
     const n = list.length, u = list.reduce((a, e) => a + (e.units || 0), 0);
     return { ...pr, list, n, w: list.filter(e => e.result === "W").length, l: list.filter(e => e.result === "L").length,
       u, roi: n ? u / n * 100 : 0, live: livePos.filter(b => b.venue === "Polymarket" && pr.t(b)).length };
-  }).sort((a, b) => (b.n >= 30) - (a.n >= 30) || b.roi - a.roi);
+  }).sort((a, b) => (b.n >= 10) - (a.n >= 10) || b.roi - a.roi);
 }
 const ZONES = [["", "All prices"], ["lo", "Under 60¢"], ["hi", "60¢ and up"]];
 const presetZone = s => { const qs = s.list.map(e => e.q); if (!qs.length) return ""; const avg = qs.reduce((a, b) => a + b, 0) / qs.length; return avg < .6 ? "lo" : "hi"; };
@@ -784,11 +800,11 @@ function renderBest(out){
   out.innerHTML = `<div class="row" style="margin-bottom:4px">${ZONES.map(([v, l]) => `<button class="chip" data-zone="${v}" aria-pressed="${(state.bestZone || "") === v}">${l}</button>`).join("")}</div>` + st.map((s, i) => `<div class="pwrap"><button class="preset ${s.id === openPreset ? "on" : ""}" data-preset="${s.id}" aria-expanded="${s.id === openPreset}">
       <span class="prank">${i + 1}</span>
       <span class="pmain"><span class="pname">${esc(s.name)}${s.id === RECOMMENDED.preset ? ` <span class="badge rec">Recommended</span>` : ""}</span>
-        <span class="psub">${s.w}-${s.l} on ${s.n} bets ${signal(s.list)}</span></span>
+        <span class="psub">${s.w}-${s.l} on ${s.n} bets ${s.n >= 10 && s.n < 60 && s.roi >= 15 ? `<span class="badge hot">Hot · small sample</span>` : signal(s.list)}</span></span>
       <span class="proi ${s.roi > 0 ? "pos" : s.roi < 0 ? "neg" : ""}">${s.roi > 0 ? "+" : ""}${s.roi.toFixed(1)}%<small>ROI</small></span>
       <span class="plive ${s.live ? "has" : ""}">${s.live}<small>live now ${s.id === openPreset ? "▴" : "▾"}</small></span>
     </button>${s.id === openPreset ? (() => { const l = sortS(presetTrades(s));
-      return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. Best filters use Polymarket bets only, since that is where their records come from; Kalshi is anonymous and still too new to grade. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 30 settled bets sink to the bottom.</p>`;
+      return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. Best filters use Polymarket bets only, since that is where their records come from; Kalshi is anonymous and still too new to grade. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 10 settled bets sink to the bottom; "Hot · small sample" marks filters under 60 bets with +15% ROI or better.</p>`;
   out.querySelectorAll("[data-zone]").forEach(b => b.onclick = () => { state.bestZone = b.dataset.zone; save(); render(); });
   out.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { openPreset = openPreset === b.dataset.preset ? null : b.dataset.preset; render(); });
 }
