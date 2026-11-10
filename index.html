@@ -668,7 +668,17 @@ async function refresh(){
 }
 function setStatus(msg, err){ const el = $("#status"); el.textContent = msg; el.classList.toggle("err", !!err); }
 
-const inLeagues = (arr, lg) => !arr || !arr.length || arr.includes(lg);
+// Sports with fewer than 30 settled bets ever (e.g. F1) are hidden everywhere: too little data to judge, they just clog the lists
+const MIN_LEAGUE_SETTLED = 30;
+let tinyLeagues = new Set();
+function refreshTinyLeagues(){
+  const c = {}; let total = 0;
+  Object.values(ledger).forEach(e => { if ((e.result === "W" || e.result === "L") && !isJunk(e)){ c[e.league] = (c[e.league] || 0) + 1; total++; } });
+  const seen = new Set([...Object.keys(c), ...trades.map(t => t.league)]);
+  // Until results have loaded, hide nothing
+  tinyLeagues = total < 200 ? new Set() : new Set([...seen].filter(l => (c[l] || 0) < MIN_LEAGUE_SETTLED));
+}
+const inLeagues = (arr, lg) => !tinyLeagues.has(lg) && (!arr || !arr.length || arr.includes(lg));
 let openMsel = null;
 function mselHTML(id, key, opts){
   const sel = state[key] || [];
@@ -680,8 +690,10 @@ function mselHTML(id, key, opts){
     </div></div>`;
 }
 function buildLeagues(){
+  refreshTinyLeagues();
   const counts = {}; trades.forEach(t => counts[t.league] = (counts[t.league] || 0) + 1);
   Object.values(ledger).forEach(e => { if (!(e.league in counts)) counts[e.league] = 0; });
+  tinyLeagues.forEach(l => delete counts[l]);
   $("#leagueBox").innerHTML = mselHTML("mselTape", "league", Object.keys(counts).sort().map(n => ({ name: n, count: counts[n] })));
 }
 document.addEventListener("click", e => {
@@ -734,7 +746,10 @@ const PRESETS = [
   { id: "p7090ok", name: "70–90¢ · big money not against · all sports", t: b => b.q >= .7 && b.q < .9 && (b.flow === "agree" || b.flow === "none") },
   { id: "sharp4050", name: "Sharps · 40–50¢ · all sports", t: b => b.sharp && b.q >= .4 && b.q < .5 },
   { id: "cfb5060", name: "CFB · 50–60¢ · big money not against", t: b => b.league === "CFB" && b.q >= .5 && b.q < .6 && (b.flow === "agree" || b.flow === "none") },
-  { id: "ten70", name: "Tennis · score 70+", t: b => b.league === "Tennis" && b.score >= 70 },
+  // Tennis: Kalshi now has its own record here (pre-game 70+: 69-24), so these include both venues
+  { id: "ten70", name: "Tennis · score 70+", venues: ["Polymarket", "Kalshi"], t: b => b.league === "Tennis" && b.score >= 70 },
+  { id: "ten60", name: "Tennis · score 60+", venues: ["Polymarket", "Kalshi"], t: b => b.league === "Tennis" && b.score >= 60 },
+  { id: "ten50", name: "Tennis · score 50+", venues: ["Polymarket", "Kalshi"], t: b => b.league === "Tennis" && b.score >= 50 },
   // Nov 6: smaller groups with big ROI that were positive in both halves of the data; watch them as they grow
   { id: "ucl7090s60", name: "UCL · 70–90¢ · score 60+", t: b => b.league === "UCL" && b.q >= .7 && b.q < .9 && b.score >= 60 },
   { id: "osoc60agree", name: "Other soccer · score 60+ · big money agrees", t: b => b.league === "Other soccer" && b.score >= 60 && b.flow === "agree" },
@@ -776,18 +791,20 @@ function presetPicks(){
 // "Upcoming": the bet was placed before the game and the game hasn't started yet, so it can still be copied pre-game.
 const PRE_ONLY = true; // the tool tracks pre-game bets only: records use bets placed before the game, live bets are games not yet started
 const upcoming = p => !!p.start && p.ts < p.start && p.start > Date.now() / 1000;
+// Filters use Polymarket only unless they list Kalshi too (only where Kalshi has its own track record)
+const venueOk = (pr, v) => (pr.venues || ["Polymarket"]).includes(v);
 function presetTrades(pr){
-  return trades.filter(t => { const p = posMap.get(t.pos); return t.venue === "Polymarket" && t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!PRE_ONLY || upcoming(p)); });
+  return trades.filter(t => { const p = posMap.get(t.pos); return venueOk(pr, t.venue) && t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!PRE_ONLY || upcoming(p)); });
 }
 let openPreset = null;
 function presetStats(){
   const picks = presetPicks().map(e => [e, normL(e)]).filter(([, b]) => !PRE_ONLY || b.timing === "pre");
   const livePos = [...posMap.values()].filter(p => p.usd >= 1000 && p.q >= 0.03 && p.q <= 0.97 && (!PRE_ONLY || upcoming(p))).map(p => normP(p));
   return PRESETS.map(pr => {
-    const list = picks.filter(([, b]) => b.venue === "Polymarket" && pr.t(b)).map(([e]) => e);
+    const list = picks.filter(([, b]) => venueOk(pr, b.venue) && pr.t(b)).map(([e]) => e);
     const n = list.length, u = list.reduce((a, e) => a + (e.units || 0), 0);
     return { ...pr, list, n, w: list.filter(e => e.result === "W").length, l: list.filter(e => e.result === "L").length,
-      u, roi: n ? u / n * 100 : 0, live: livePos.filter(b => b.venue === "Polymarket" && pr.t(b)).length };
+      u, roi: n ? u / n * 100 : 0, live: livePos.filter(b => venueOk(pr, b.venue) && pr.t(b)).length };
   }).sort((a, b) => (b.n >= 10) - (a.n >= 10) || b.roi - a.roi);
 }
 const ZONES = [["", "All prices"], ["lo", "Under 60¢"], ["hi", "60¢ and up"]];
@@ -799,12 +816,12 @@ function renderBest(out){
   const sortS = l => l.sort((a, b) => (posMap.get(b.pos)?.score || 0) - (posMap.get(a.pos)?.score || 0) || b.timestamp - a.timestamp);
   out.innerHTML = `<div class="row" style="margin-bottom:4px">${ZONES.map(([v, l]) => `<button class="chip" data-zone="${v}" aria-pressed="${(state.bestZone || "") === v}">${l}</button>`).join("")}</div>` + st.map((s, i) => `<div class="pwrap"><button class="preset ${s.id === openPreset ? "on" : ""}" data-preset="${s.id}" aria-expanded="${s.id === openPreset}">
       <span class="prank">${i + 1}</span>
-      <span class="pmain"><span class="pname">${esc(s.name)}${s.id === RECOMMENDED.preset ? ` <span class="badge rec">Recommended</span>` : ""}</span>
+      <span class="pmain"><span class="pname">${esc(s.name)}${(s.venues || []).includes("Kalshi") ? ` <span class="badge rec">+ Kalshi</span>` : ""}${s.id === RECOMMENDED.preset ? ` <span class="badge rec">Recommended</span>` : ""}</span>
         <span class="psub">${s.w}-${s.l} on ${s.n} bets ${s.n >= 10 && s.n < 60 && s.roi >= 15 ? `<span class="badge hot">Hot · small sample</span>` : signal(s.list)}</span></span>
       <span class="proi ${s.roi > 0 ? "pos" : s.roi < 0 ? "neg" : ""}">${s.roi > 0 ? "+" : ""}${s.roi.toFixed(1)}%<small>ROI</small></span>
       <span class="plive ${s.live ? "has" : ""}">${s.live}<small>live now ${s.id === openPreset ? "▴" : "▾"}</small></span>
     </button>${s.id === openPreset ? (() => { const l = sortS(presetTrades(s));
-      return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. Best filters use Polymarket bets only, since that is where their records come from; Kalshi is anonymous and still too new to grade. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 10 settled bets sink to the bottom; "Hot · small sample" marks filters under 60 bets with +15% ROI or better.</p>`;
+      return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. Best filters use Polymarket bets unless marked "+ Kalshi"; Kalshi is only included where it has built its own record. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 10 settled bets sink to the bottom; "Hot · small sample" marks filters under 60 bets with +15% ROI or better.</p>`;
   out.querySelectorAll("[data-zone]").forEach(b => b.onclick = () => { state.bestZone = b.dataset.zone; save(); render(); });
   out.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { openPreset = openPreset === b.dataset.preset ? null : b.dataset.preset; render(); });
 }
@@ -846,6 +863,7 @@ function whyText(pp, venue){
   return `Size ${pp.abs}/15 · Size vs market ${pp.rel}/20${pp.relKnown ? "" : " (volume unknown)"} · Money flow ${pp.flow > 0 ? "+" : ""}${pp.flow} (${pp.n} other big bet${pp.n === 1 ? "" : "s"} in this market) · Price ${pp.price}/15 · ${venue === "Kalshi" ? "Pattern" : "Trader"} ${pp.edge}/25 (${esc(pp.edgeWhy)})${pp.sellPen ? " · Sell −5" : ""}`;
 }
 function render(){
+  refreshTinyLeagues();
   const out = $("#out");
   const pr = state.preset && PRESETS.find(x => x.id === state.preset);
   $(".controls").hidden = state.tab === "results" || state.tab === "best" || (state.tab === "tape" && !!pr);
@@ -988,7 +1006,7 @@ const FACTORS = {
 const R_MINS = [1000, 5000, 10000, 25000];
 function renderResults(out){
   const all = Object.values(ledger);
-  const leagues = [...new Set(all.map(e => e.league))].sort();
+  const leagues = [...new Set(all.map(e => e.league))].filter(l => !tinyLeagues.has(l)).sort();
   const junkCount = all.filter(e => isJunk(e)).length;
   let rows = all.filter(e => (state.showJunk || !isJunk(e)) && e.usd >= state.rMin && inLeagues(state.rLeague, e.league) && (!state.rVenue || venueOf(e) === state.rVenue)
     && (state.rWho === "all" || e.sharp || (state.rWho === "sharpsK" && venueOf(e) === "Kalshi")) && (state.incBackfill || e.source === "live") && (state.oldScores || e.sv === SCORE_VERSION));
