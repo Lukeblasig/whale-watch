@@ -170,6 +170,36 @@ td .caret{display:inline-block;width:14px;color:var(--muted);font:500 12px var(-
 .badge.hot{background:color-mix(in srgb, var(--sharp) 20%, transparent);color:var(--sharp)}
 .badge.rec{background:color-mix(in srgb, var(--win) 18%, transparent);color:var(--win)}
 .pwrap{display:grid;gap:6px}
+/* Filter results: side panel on wide screens, sheet on small ones */
+.phead{position:relative}
+.phead .preset{padding-right:78px}
+.pres{position:absolute;right:10px;top:50%;transform:translateY(-50%);display:grid;justify-items:center;gap:2px;background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:10px;padding:7px 8px 5px;font:600 11px/1 var(--body);cursor:pointer;min-width:56px}
+.pres svg{width:18px;height:18px}
+.pres:hover,.pres.on{border-color:var(--buy);color:var(--buy)}
+#resPanel{display:none}
+@media (min-width:1240px){
+  body.on-best .wrap{margin-left:max(14px, calc(50vw - 610px))}
+  body.on-best #resPanel{display:block;position:fixed;top:16px;right:16px;width:384px;max-height:calc(100vh - 32px);overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:16px;z-index:20}
+}
+.rp h3{margin:0 0 2px;font-size:17px}
+.rp .rpsub{color:var(--muted);font-size:12.5px;margin-bottom:12px}
+.rp .rpstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.rp .rpstats div{background:var(--panel2);border-radius:10px;padding:8px 10px;font:700 22px/1 var(--num)}
+.rp .rpstats small{display:block;font:500 11px/1.4 var(--body);color:var(--muted);margin-top:3px}
+.rp .pos{color:var(--win)} .rp .neg{color:var(--sell)}
+.rp h4{margin:14px 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.rp table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+.rp td:nth-child(2){width:58px}.rp td:nth-child(3){width:64px}.rp td:nth-child(4){width:104px}
+.rp td{padding:5px 4px;border-bottom:1px solid var(--line);white-space:nowrap}
+.rp td:first-child{white-space:normal}
+.rp td.n{text-align:right;font-variant-numeric:tabular-nums}
+.rp .barbox{display:inline-block;width:40px;margin-left:6px;text-align:left;vertical-align:middle;line-height:0}
+.rp .bar{display:inline-block;height:6px;border-radius:3px}
+.rp .chart{width:100%;height:96px;display:block;background:var(--panel2);border-radius:10px}
+.rp .rl{display:grid;grid-template-columns:24px 1fr auto;gap:2px 8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);font-size:13px}
+.rp .rl .res{grid-row:span 2;font-size:14px;line-height:22px}
+.rp .rl .t{color:var(--muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rp .hint{color:var(--muted);font-size:12px;margin-top:10px}
 .plist{display:grid;gap:8px;padding:2px 0 8px 14px;border-left:3px solid var(--win);margin-left:10px}
 .pnote{color:var(--muted);font-size:12.5px;margin:4px 2px}
 .presetbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--win);border-radius:12px;padding:10px 12px}
@@ -750,6 +780,11 @@ const PRESETS = [
   { id: "ten70", name: "Tennis · score 70+", venues: ["Polymarket", "Kalshi"], t: b => b.league === "Tennis" && b.score >= 70 },
   { id: "ten60", name: "Tennis · score 60+", venues: ["Polymarket", "Kalshi"], t: b => b.league === "Tennis" && b.score >= 60 },
   { id: "ten50", name: "Tennis · score 50+", venues: ["Polymarket", "Kalshi"], t: b => b.league === "Tennis" && b.score >= 50 },
+  // Same tennis filters split by venue, so each one's own record shows
+  { id: "tenP70", name: "Tennis · Polymarket · score 70+", venues: ["Polymarket"], t: b => b.league === "Tennis" && b.score >= 70 },
+  { id: "tenP50", name: "Tennis · Polymarket · score 50+", venues: ["Polymarket"], t: b => b.league === "Tennis" && b.score >= 50 },
+  { id: "tenK70", name: "Tennis · Kalshi · score 70+", venues: ["Kalshi"], t: b => b.league === "Tennis" && b.score >= 70 },
+  { id: "tenK60", name: "Tennis · Kalshi · score 60+", venues: ["Kalshi"], t: b => b.league === "Tennis" && b.score >= 60 },
   // Nov 6: smaller groups with big ROI that were positive in both halves of the data; watch them as they grow
   { id: "ucl7090s60", name: "UCL · 70–90¢ · score 60+", t: b => b.league === "UCL" && b.q >= .7 && b.q < .9 && b.score >= 60 },
   { id: "osoc60agree", name: "Other soccer · score 60+ · big money agrees", t: b => b.league === "Other soccer" && b.score >= 60 && b.flow === "agree" },
@@ -809,19 +844,102 @@ function presetStats(){
 }
 const ZONES = [["", "All prices"], ["lo", "Under 60¢"], ["hi", "60¢ and up"]];
 const presetZone = s => { const qs = s.list.map(e => e.q); if (!qs.length) return ""; const avg = qs.reduce((a, b) => a + b, 0) / qs.length; return avg < .6 ? "lo" : "hi"; };
+let panelPreset = null, bestShown = [];
+const wideScreen = () => matchMedia("(min-width:1240px)").matches;
+function setResPanel(id){
+  if (panelPreset === id) return;
+  panelPreset = id; showResPanel();
+  document.querySelectorAll("[data-res]").forEach(b => b.classList.toggle("on", b.dataset.res === id));
+}
+function showResPanel(){
+  let el = document.getElementById("resPanel");
+  if (!el){ el = document.createElement("aside"); el.id = "resPanel"; el.setAttribute("aria-live", "polite"); document.body.appendChild(el); }
+  const s = bestShown.find(x => x.id === panelPreset);
+  el.innerHTML = s ? `<div class="rp">${resultsHTML(s)}<p class="hint">Hover or tap "Results" on any filter to see its breakdown here.</p></div>` : "";
+}
+function openResSheet(id){
+  const s = bestShown.find(x => x.id === id); if (!s) return;
+  const bg = document.createElement("div");
+  bg.className = "sheet-bg";
+  bg.innerHTML = `<div class="sheet rp" role="dialog" aria-modal="true" aria-label="Filter results"><header style="display:flex;justify-content:flex-end"><button class="x" aria-label="Close">✕</button></header>${resultsHTML(s)}</div>`;
+  bg.addEventListener("click", e => { if (e.target === bg || e.target.closest(".x")) closeSheet(); });
+  document.body.appendChild(bg);
+  document.addEventListener("keydown", escClose);
+  bg.querySelector(".x").focus();
+}
+function resultsHTML(s){
+  const list = [...s.list].sort((a, b) => a.ts - b.ts);
+  const n = list.length, sumU = l => l.reduce((a, e) => a + (e.units || 0), 0);
+  const w = list.filter(e => e.result === "W").length, l = list.filter(e => e.result === "L").length, pu = n - w - l;
+  const u = sumU(list), roi = n ? u / n * 100 : 0, avgQ = n ? list.reduce((a, e) => a + e.q, 0) / n : 0;
+  const cls = v => v > 0 ? "pos" : v < 0 ? "neg" : "";
+  const sg = v => (v > 0 ? "+" : "") + v.toFixed(1);
+  const tag = (s.venues || ["Polymarket"]).join(" + ");
+  // cumulative units chart
+  let chart = "";
+  if (n >= 2){
+    let c = 0; const pts = [0, ...list.map(e => c += (e.units || 0))];
+    const lo = Math.min(0, ...pts), hi = Math.max(0, ...pts), span = hi - lo || 1, W = 360, H = 96, pad = 8;
+    const x = i => pad + i / (pts.length - 1) * (W - 2 * pad), y = v => pad + (hi - v) / span * (H - 2 * pad);
+    chart = `<h4>Profit over time (units)</h4><svg class="chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Running profit, ending at ${sg(u)} units">
+      <line x1="${pad}" x2="${W - pad}" y1="${y(0)}" y2="${y(0)}" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <polyline fill="none" stroke="${u >= 0 ? "var(--win)" : "var(--sell)"}" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke" points="${pts.map((v, i) => x(i).toFixed(1) + "," + y(v).toFixed(1)).join(" ")}"/></svg>`;
+  }
+  const table = (title, keyFn, order) => {
+    const g = new Map(); list.forEach(e => { const k = keyFn(e); if (!g.has(k)) g.set(k, []); g.get(k).push(e); });
+    if (g.size < 2) return "";
+    const keys = order ? order.filter(k => g.has(k)) : [...g.keys()].sort((a, b) => g.get(b).length - g.get(a).length);
+    const maxAbs = Math.max(...keys.map(k => Math.abs(sumU(g.get(k)) / g.get(k).length * 100)), 1);
+    return `<h4>${title}</h4><table>${keys.map(k => { const L = g.get(k), uu = sumU(L), r = uu / L.length * 100;
+      return `<tr><td>${esc(k)}</td><td class="n">${L.filter(e => e.result === "W").length}-${L.filter(e => e.result === "L").length}</td><td class="n ${cls(uu)}">${sg(uu)}u</td><td class="n ${cls(r)}">${sg(r)}%<span class="barbox"><span class="bar" style="width:${Math.max(3, Math.round(Math.abs(r) / maxAbs * 36))}px;background:${r >= 0 ? "var(--win)" : "var(--sell)"}"></span></span></td></tr>`; }).join("")}</table>`;
+  };
+  const PB = [[0, .4, "Under 40¢"], [.4, .5, "40–49¢"], [.5, .6, "50–59¢"], [.6, .7, "60–69¢"], [.7, .8, "70–79¢"], [.8, .9, "80–89¢"], [.9, 1.01, "90¢+"]];
+  const SB = [[0, 50, "Under 50"], [50, 60, "50–59"], [60, 70, "60–69"], [70, 80, "70–79"], [80, 101, "80+"]];
+  const band = (B, v) => (B.find(([a, b]) => v >= a && v < b) || B[B.length - 1])[2];
+  const mon = e => new Date(e.ts * 1000).toLocaleDateString([], { month: "short", year: "numeric" });
+  const months = [...new Set(list.map(mon))];
+  const recent = list.slice(-12).reverse();
+  return `<h3>${esc(s.name)}</h3><div class="rpsub">${esc(tag)} · pre-game bets · one bet per pick</div>
+    <div class="rpstats">
+      <div>${w}-${l}${pu ? "-" + pu : ""}<small>${n} settled bets</small></div>
+      <div class="${cls(u)}">${sg(u)}u<small>profit, 1u each</small></div>
+      <div class="${cls(roi)}">${sg(roi)}%<small>ROI</small></div>
+      <div>${n ? Math.round(w / Math.max(1, w + l) * 100) : 0}%<small>win rate</small></div>
+      <div>${n ? american(avgQ) : "—"}<small>avg odds</small></div>
+      <div>${s.live}<small>live now</small></div>
+    </div>
+    <div>${n ? signal(list) : ""}</div>
+    ${n ? chart : `<p class="hint">No settled bets yet.</p>`}
+    ${table("By price", e => band(PB, e.q), PB.map(b => b[2]).reverse())}
+    ${table("By score", e => band(SB, e.score), SB.map(b => b[2]))}
+    ${table("By venue", e => venueOf(e))}
+    ${table("By league", e => e.league || "Other")}
+    ${table("By month", mon, [...months].reverse())}
+    ${recent.length ? `<h4>Latest results</h4>${recent.map(e => `<div class="rl"><span class="res ${e.result}">${e.result}</span>
+      <span>@ ${Math.round(e.q * 100)}¢ (${american(e.q)}) · score ${e.score}</span><span class="${cls(e.units || 0)}">${sg(e.units || 0)}u</span>
+      <span class="t" title="${esc(e.title || "")}">${esc(e.title || "")}</span><span class="t">${new Date(e.ts * 1000).toLocaleDateString([], { month: "short", day: "numeric" })}</span></div>`).join("")}` : ""}`;
+}
 function renderBest(out){
   const st = presetStats().filter(s => !state.bestZone || presetZone(s) === state.bestZone);
-  setStatus(`Best pre-game filters, ranked by ROI on settled bets placed before the game. Tap one to drop down bets on games that haven't started yet.${window.__kErr || ""}`);
+  setStatus(`Best pre-game filters, ranked by ROI on settled bets placed before the game. Tap one to drop down bets on games that haven't started yet, or hit Results for its full breakdown.${window.__kErr || ""}`);
   const bs = badgeSharps(), crowd = crowdIndex();
   const sortS = l => l.sort((a, b) => (posMap.get(b.pos)?.score || 0) - (posMap.get(a.pos)?.score || 0) || b.timestamp - a.timestamp);
-  out.innerHTML = `<div class="row" style="margin-bottom:4px">${ZONES.map(([v, l]) => `<button class="chip" data-zone="${v}" aria-pressed="${(state.bestZone || "") === v}">${l}</button>`).join("")}</div>` + st.map((s, i) => `<div class="pwrap"><button class="preset ${s.id === openPreset ? "on" : ""}" data-preset="${s.id}" aria-expanded="${s.id === openPreset}">
+  out.innerHTML = `<div class="row" style="margin-bottom:4px">${ZONES.map(([v, l]) => `<button class="chip" data-zone="${v}" aria-pressed="${(state.bestZone || "") === v}">${l}</button>`).join("")}</div>` + st.map((s, i) => `<div class="pwrap"><div class="phead"><button class="preset ${s.id === openPreset ? "on" : ""}" data-preset="${s.id}" aria-expanded="${s.id === openPreset}">
       <span class="prank">${i + 1}</span>
-      <span class="pmain"><span class="pname">${esc(s.name)}${(s.venues || []).includes("Kalshi") ? ` <span class="badge rec">+ Kalshi</span>` : ""}${s.id === RECOMMENDED.preset ? ` <span class="badge rec">Recommended</span>` : ""}</span>
+      <span class="pmain"><span class="pname">${esc(s.name)}${(s.venues || []).includes("Kalshi") ? ` <span class="badge rec">${s.venues.includes("Polymarket") ? "Poly + Kalshi" : "Kalshi only"}</span>` : ""}${s.id === RECOMMENDED.preset ? ` <span class="badge rec">Recommended</span>` : ""}</span>
         <span class="psub">${s.w}-${s.l} on ${s.n} bets ${s.n >= 10 && s.n < 60 && s.roi >= 15 ? `<span class="badge hot">Hot · small sample</span>` : signal(s.list)}</span></span>
       <span class="proi ${s.roi > 0 ? "pos" : s.roi < 0 ? "neg" : ""}">${s.roi > 0 ? "+" : ""}${s.roi.toFixed(1)}%<small>ROI</small></span>
       <span class="plive ${s.live ? "has" : ""}">${s.live}<small>live now ${s.id === openPreset ? "▴" : "▾"}</small></span>
-    </button>${s.id === openPreset ? (() => { const l = sortS(presetTrades(s));
-      return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. Best filters use Polymarket bets unless marked "+ Kalshi"; Kalshi is only included where it has built its own record. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 10 settled bets sink to the bottom; "Hot · small sample" marks filters under 60 bets with +15% ROI or better.</p>`;
+    </button><button class="pres ${s.id === panelPreset ? "on" : ""}" data-res="${s.id}" aria-label="Show results for ${esc(s.name)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Results</button></div>${s.id === openPreset ? (() => { const l = sortS(presetTrades(s));
+      return `<div class="plist">${l.length ? l.slice(0, 60).map(t => betCard(t, bs, crowd)).join("") : `<div class="empty">No bets match this filter${PRE_ONLY ? " on games that haven't started yet" : " in the last 24 hours"}. Check back in a couple of hours.</div>`}</div>`; })() : ""}</div>`).join("") + `<p class="pnote">ROI is what risking 1 unit on every past bet in the filter would have made at the whale's price, one bet per pick. Best filters use Polymarket bets unless tagged "Poly + Kalshi" or "Kalshi only"; Kalshi is only included where it has built its own record. "Live now" counts matching bets from the last 24 hours${PRE_ONLY ? " on games that haven't started" : ""}. Pre-game records only cover bets logged since early October, when start times began being saved. Filters with under 10 settled bets sink to the bottom; "Hot · small sample" marks filters under 60 bets with +15% ROI or better.</p>`;
+  bestShown = st;
+  if (!st.some(s => s.id === panelPreset)) panelPreset = (st.find(s => s.id === openPreset) || st[0] || {}).id || null;
+  showResPanel();
+  out.querySelectorAll("[data-res]").forEach(b => {
+    b.onmouseenter = () => { if (wideScreen()) setResPanel(b.dataset.res); };
+    b.onfocus = () => { if (wideScreen()) setResPanel(b.dataset.res); };
+    b.onclick = () => { if (wideScreen()) setResPanel(b.dataset.res); else openResSheet(b.dataset.res); };
+  });
   out.querySelectorAll("[data-zone]").forEach(b => b.onclick = () => { state.bestZone = b.dataset.zone; save(); render(); });
   out.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { openPreset = openPreset === b.dataset.preset ? null : b.dataset.preset; render(); });
 }
@@ -864,6 +982,7 @@ function whyText(pp, venue){
 }
 function render(){
   refreshTinyLeagues();
+  document.body.classList.toggle("on-best", state.tab === "best");
   const out = $("#out");
   const pr = state.preset && PRESETS.find(x => x.id === state.preset);
   $(".controls").hidden = state.tab === "results" || state.tab === "best" || (state.tab === "tape" && !!pr);
