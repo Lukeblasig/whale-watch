@@ -148,6 +148,18 @@ const loaded = loadStore();
 const ledger = loaded.L, prevFeed = loaded.feed, meta = loaded.meta;
 Object.entries(prevFeed.names || {}).forEach(([k, v]) => { if (!names[k]) names[k] = v; });
 
+// Kalshi's occurrence time for a game is 3 hours after the real start (checked against Polymarket's start times for the
+// same NBA, NFL, CFB, college hoops, UCL and tennis games). Start times are taken back 3 hours, and once, every Kalshi
+// start saved before this fix is moved back too, so in-game Kalshi bets stop being counted as pre-game.
+const K_START_LAG = 3 * 3600;
+if (!meta.kStartFixed) {
+  let n = 0;
+  Object.values(ledger).forEach(e => { if (e.venue === "Kalshi" && e.start) { e.start -= K_START_LAG; n++; } });
+  (prevFeed.trades || []).forEach(t => { if (t.venue === "Kalshi" && t.start) t.start -= K_START_LAG; });
+  meta.kStartFixed = now();
+  console.log(`Moved ${n} saved Kalshi start times back 3 hours.`);
+}
+
 // Polymarket moved trades to /v2 (snake_case fields, {data:[...]}); map back to the field names used here
 const v2list = j => Array.isArray(j) ? j : (j && j.data) || [];
 const v2t = t => t && ({ ...t, proxyWallet: t.proxyWallet ?? t.proxy_wallet, transactionHash: t.transactionHash ?? t.transaction_hash,
@@ -248,7 +260,7 @@ async function kalshiLive() {
     m._league = ev._league && ev._league !== "Other" ? ev._league : (leagueFromTitle(m.title) || kLeague(m.ticker));
     kMarkets.set(m.ticker, m); names[m.ticker] = kNames(m); markets.push(m);
     const st = parseStart(m.occurrence_datetime || ev.occurrence_datetime || ev.strike_date);
-    if (st) startByCid.set(m.ticker, st);
+    if (st) startByCid.set(m.ticker, st - K_START_LAG);
   }));
   kDiag.markets = markets.length;
 
@@ -415,7 +427,7 @@ const fresh = [...pm, ...k];
 const cutoff = now() - 86400, byId = new Map();
 [...(prevFeed.trades || []), ...fresh].forEach(t => { if (t.timestamp >= cutoff) byId.set(t.id, t); });
 const feedTrades = [...byId.values()].sort((a, b) => b.timestamp - a.timestamp).slice(0, 6000);
-feedTrades.forEach(t => { if (!t.start) t.start = startByCid.get(t.conditionId) || null; });
+feedTrades.forEach(t => { t.start = startByCid.get(t.conditionId) || t.start || null; });
 log(buildPositions(feedTrades, S), "live");
 
 if (!meta.backfilledAt || meta.sv !== SCORE_VERSION || process.env.BACKFILL === "true") {
