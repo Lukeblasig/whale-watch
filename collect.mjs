@@ -130,7 +130,8 @@ function loadStore() {
   const idx = readJSON(`${STORE}/index.json`, null);
   const L = {};
   if (idx) {
-    (idx.months || []).forEach(m => Object.assign(L, readJSON(`${STORE}/settled-${m}.json`, {})));
+    // each month can be split into several part files (see "write" below)
+    (idx.months || []).forEach(m => ((idx.parts || {})[m] || [m]).forEach(k => Object.assign(L, readJSON(`${STORE}/settled-${k}.json`, {}))));
     Object.assign(L, readJSON(`${STORE}/pending.json`, {}));
     return { L, meta: idx.meta || {}, feed: readJSON(`${STORE}/feed.json`, { trades: [], names: {}, vols: {} }) };
   }
@@ -485,12 +486,25 @@ Object.values(ledger).forEach(e => {
 const prevSettled = Object.values((readJSON(`${STORE}/index.json`, {}) || {}).counts || {}).reduce((a, b) => a + b, 0);
 const newSettled = Object.values(months).reduce((a, o) => a + Object.keys(o).length, 0);
 if (newSettled < prevSettled) { console.error(`Settled results would drop from ${prevSettled} to ${newSettled}. Stopping without saving.`); process.exit(1); }
-fs.readdirSync(STORE).filter(f => /^settled-\d{4}-\d{2}\.json$/.test(f)).forEach(f => fs.unlinkSync(`${STORE}/${f}`));
-Object.entries(months).forEach(([m, o]) => fs.writeFileSync(`${STORE}/settled-${m}.json`, JSON.stringify(o)));
+// GitHub refuses any file over 100 MB (November hit 105 MB and every save failed), so a busy month is split
+// into parts of at most PART_SIZE bets, oldest first: settled-2026-11.1.json, settled-2026-11.2.json, ...
+const PART_SIZE = 40000, parts = {};
+fs.readdirSync(STORE).filter(f => /^settled-\d{4}-\d{2}(\.\d+)?\.json$/.test(f)).forEach(f => fs.unlinkSync(`${STORE}/${f}`));
+Object.entries(months).forEach(([m, o]) => {
+  const list = Object.values(o).sort((a, b) => a.ts - b.ts || (a.key < b.key ? -1 : 1));
+  const n = Math.max(1, Math.ceil(list.length / PART_SIZE));
+  parts[m] = [];
+  for (let i = 0; i < n; i++) {
+    const k = n === 1 ? m : `${m}.${i + 1}`, part = {};
+    list.slice(i * PART_SIZE, (i + 1) * PART_SIZE).forEach(e => part[e.key] = e);
+    fs.writeFileSync(`${STORE}/settled-${k}.json`, JSON.stringify(part));
+    parts[m].push(k);
+  }
+});
 fs.writeFileSync(`${STORE}/pending.json`, JSON.stringify(pending));
 meta.updated = now(); meta.errors = errors.slice(0, 10); meta.kalshi = kDiag; meta.runSeconds = Math.round(elapsed()); meta.skipped = skipped;
 fs.writeFileSync(`${STORE}/feed.json`, JSON.stringify({ updated: meta.updated, sharps: S, names: feedNames, vols: feedVols, trades: feedTrades }));
 const counts = Object.fromEntries(Object.entries(months).map(([m, o]) => [m, Object.keys(o).length]));
-fs.writeFileSync(`${STORE}/index.json`, JSON.stringify({ updated: meta.updated, months: Object.keys(months).sort(), counts, pending: Object.keys(pending).length, meta }));
+fs.writeFileSync(`${STORE}/index.json`, JSON.stringify({ updated: meta.updated, months: Object.keys(months).sort(), parts, counts, pending: Object.keys(pending).length, meta }));
 console.log('Kalshi check:', JSON.stringify(kDiag));
 console.log(`Polymarket ${pm.length}, Kalshi ${k.length} fills this run. Settled ${Object.values(counts).reduce((a, b) => a + b, 0)}, pending ${Object.keys(pending).length}. Errors: ${errors.length}`);

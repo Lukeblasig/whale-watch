@@ -635,8 +635,10 @@ async function loadHosted(){
   if (storeIndex){
     const months = storeIndex.months || [];
     loadedMonths = wantAllMonths ? months : months.slice(-2);
+    // busy months are saved as several part files (settled-2026-11.1.json, .2, ...)
+    const files = loadedMonths.flatMap(m => (storeIndex.parts || {})[m] || [m]);
     const [f, pend, ...ms] = await Promise.all([fetchJ(storeBase + "feed.json"), fetchJ(storeBase + "pending.json").catch(() => ({})),
-      ...loadedMonths.map(m => fetchJ(storeBase + `settled-${m}.json`).catch(() => ({})))]);
+      ...files.map(k => fetchJ(storeBase + `settled-${k}.json`).catch(() => ({})))]);
     feed = f; ms.forEach(o => Object.assign(L, o)); Object.assign(L, pend);
   } else {
     let f;
@@ -776,7 +778,7 @@ const PRESETS = [
   { id: "p7090ok", name: "70–90¢ · big money not against · all sports", t: b => b.q >= .7 && b.q < .9 && (b.flow === "agree" || b.flow === "none") },
   { id: "sharp4050", name: "Sharps · 40–50¢ · all sports", t: b => b.sharp && b.q >= .4 && b.q < .5 },
   { id: "cfb5060", name: "CFB · 50–60¢ · big money not against", t: b => b.league === "CFB" && b.q >= .5 && b.q < .6 && (b.flow === "agree" || b.flow === "none") },
-  // Tennis: Kalshi now has its own record here (pre-game 70+: 69-24), so these include both venues
+  // Tennis: both venues. Kalshi start times were 3h late until Nov 10, so its older "pre-game" tennis bets were mostly in-game; the collector fixed them
   { id: "ten70", name: "Tennis · score 70+", venues: ["Polymarket", "Kalshi"], t: b => b.league === "Tennis" && b.score >= 70 },
   { id: "ten60", name: "Tennis · score 60+", venues: ["Polymarket", "Kalshi"], t: b => b.league === "Tennis" && b.score >= 60 },
   { id: "ten50", name: "Tennis · score 50+", venues: ["Polymarket", "Kalshi"], t: b => b.league === "Tennis" && b.score >= 50 },
