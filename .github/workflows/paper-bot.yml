@@ -1,0 +1,56 @@
+name: Paper bot
+
+# Runs right after every collector save. Paper only: no keys, no secrets, no order calls.
+on:
+  workflow_run:
+    workflows: ["Collect whale bets"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-bot
+  cancel-in-progress: false
+
+jobs:
+  paper:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get the bot's log
+        uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          ref: bot-log
+          path: botlog
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Limit tests
+        run: node --test bot/test/limits.test.mjs
+
+      - name: Paper run
+        env:
+          BOT_LOG_DIR: botlog
+          # Kill switch you can flip from the GitHub app: Settings > Secrets and variables > Actions > Variables > WW_KILL = true
+          WW_KILL: ${{ vars.WW_KILL }}
+        run: node bot/paper.mjs
+
+      - name: Save the log
+        if: always()
+        run: |
+          cd botlog
+          if [ ! -d .git ]; then git init -q -b bot-log; fi
+          git config user.name "whale-watch-bot"
+          git config user.email "whale-watch-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -qm "Paper run $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" HEAD:bot-log

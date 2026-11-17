@@ -1,0 +1,51 @@
+{
+  "_readme": "Luke edits this file, nobody else. The bot re-reads it before every order and stops (places nothing) if anything here is missing or invalid. Numbers marked PLACEHOLDER are paper-only starting values, not Luke's limits.",
+
+  "mode": "paper",
+  "killSwitch": false,
+
+  "_filters": "Filter ids from filters.js, in priority order. When several fire on the same pick, the order is credited to the first one listed here. Starting set: every filter currently marked 'Likely real edge' (z >= 2.5), strongest first.",
+  "filters": [
+    "p8090ok",
+    "soc8090ok",
+    "p7090ok",
+    "soc7090agree40",
+    "soc7090ok",
+    "soc6090agree",
+    "sharp6090agree",
+    "socAgree40",
+    "socSharpAgree60",
+    "osoc60agree",
+    "socSharp6090agree50"
+  ],
+  "_watchFilters": "Logged as 'would have fired' only. Never orders, never count toward limits.",
+  "watchFilters": [
+    "ten70",
+    "tenK70",
+    "tenK60",
+    "socSharp4060agree60",
+    "ucl50agree",
+    "mls50"
+  ],
+
+  "_unitUsd": "Dollars per unit. Not needed for paper (everything is in units). Live mode refuses to start while this is null.",
+  "unitUsd": null,
+
+  "limits": {
+    "stakeUnits": 1,
+    "maxUnitsPerDay": 25,
+    "maxOpenUnits": 40,
+    "lossStopUnits": 20,
+    "_placeholders": "maxUnitsPerDay, maxOpenUnits and lossStopUnits are PLACEHOLDERS for paper. Day = Central time. Loss stop = drawdown from the high point of settled results since lossStopResetAt."
+  },
+  "lossStopResetAt": null,
+
+  "checks": {
+    "maxPriceRiseCents": 3,
+    "maxPriceDropCents": 3,
+    "startCutoffMinutes": 10,
+    "maxDataAgeMinutes": 45,
+    "maxQuoteAgeMinutes": 30,
+    "_note": "Suggestions to test on paper, not findings. Rise: the limit price is the whale's price + this; above it the order rests until it fills or the cutoff. Drop: if the price fell this far below the whale's, the market moved against the whale, so skip."
+  }
+}
