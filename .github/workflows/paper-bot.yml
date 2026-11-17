@@ -43,6 +43,16 @@ jobs:
           WW_KILL: ${{ vars.WW_KILL }}
         run: node bot/paper.mjs
 
+      # Each filter's full settled record, for the tracker's paper-vs-history comparison. Reads every settled file, so once a day.
+      - name: Daily filter baseline
+        continue-on-error: true
+        run: |
+          if node -e "try{const b=require('./botlog/baseline.json');process.exit(Date.now()/1000-b.updated>20*3600?0:1)}catch(e){process.exit(0)}"; then
+            node --max-old-space-size=4000 bot/baseline.mjs botlog/baseline.json
+          else
+            echo "Baseline is fresh"
+          fi
+
       - name: Save the log
         if: always()
         run: |

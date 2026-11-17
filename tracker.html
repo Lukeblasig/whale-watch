@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paper Trader · Whale Watch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<script>try{var s=JSON.parse(localStorage.getItem("ww-state"));if(s&&s.theme==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+<style>
+/* Same deep-water palette as the main Whale Watch page */
+:root{
+  --bg:#0A1430; --panel:#122150; --panel2:#18295E; --ink:#EEF3FF; --muted:#97A6D1; --line:#26386F;
+  --buy:#2BD9FF; --sell:#FF6B5E; --win:#3BE38A; --warn:#FFC24B; --sharp:#FF4FA3; --chip-on-ink:#05213A;
+  /* chart series: validated for the dark surface (lightness band, CVD separation, contrast) */
+  --s1:#0F9CC6; --s2:#8F7CFF;
+  --num:"Barlow Condensed","Arial Narrow",Impact,sans-serif; --body:"Archivo",-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:dark; box-sizing:border-box;
+}
+:root[data-theme="light"]{
+  --bg:#EAF2FF; --panel:#FFFFFF; --panel2:#F2F6FF; --ink:#0B1638; --muted:#53618A; --line:#D2DDF3;
+  --buy:#0088C7; --sell:#E0413A; --win:#0E9F57; --warn:#B7791F; --sharp:#E0237A; --chip-on-ink:#fff;
+  --s1:#0088C7; --s2:#5D47E6;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:inherit}
+html,body{background:var(--bg)}
+body{margin:0;color:var(--ink);font:15px/1.45 var(--body);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:18px 14px 60px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+h1{font:700 44px/0.9 var(--num);margin:0;letter-spacing:-.5px}
+.sub{color:var(--muted);font-size:13px;margin-top:6px}
+.hbtns{display:flex;gap:8px}
+.btn{background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:600 14px var(--body);cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{border-color:var(--buy)}
+:focus-visible{outline:2px solid var(--buy);outline-offset:2px}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 10px;font-size:13px;color:var(--muted)}
+.pill b{color:var(--ink);font-weight:600}
+.pill.ok::before,.pill.bad::before,.pill.warn::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--win)}
+.pill.bad{border-color:var(--sell);color:var(--ink)} .pill.bad::before{background:var(--sell)}
+.pill.warn{border-color:var(--warn)} .pill.warn::before{background:var(--warn)}
+.paper{background:var(--warn);color:#1b1300;border-color:var(--warn);font-weight:700}
+section{margin:0 0 16px}
+h2{font:700 24px/1 var(--num);margin:0 0 8px;letter-spacing:.2px}
+.hint{color:var(--muted);font-size:13px;margin:-2px 0 10px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px}
+.stat .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.stat .v{font:700 34px/1.05 var(--num);margin-top:4px}
+.stat .d{font-size:12px;color:var(--muted);margin-top:4px}
+.stat.hero{grid-column:span 2;border-color:color-mix(in srgb,var(--buy) 45%,var(--line))}
+@media (max-width:520px){.stat.hero{grid-column:span 1}.stat .v{font-size:30px}}
+.pos{color:var(--win)} .neg{color:var(--sell)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.gates{display:grid;gap:8px}
+.gate{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:center}
+.gate .ic{grid-row:span 2;font:700 12px var(--body);border-radius:999px;padding:3px 9px;border:1px solid var(--line);color:var(--muted);min-width:72px;text-align:center}
+.gate .ic.pass{color:var(--win);border-color:var(--win)} .gate .ic.fail{color:var(--sell);border-color:var(--sell)}
+.gate .lab{font-weight:600}
+.gate .det{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.prog{flex:none;width:90px;height:6px;border-radius:3px;background:var(--panel2);overflow:hidden}
+.prog i{display:block;height:100%;background:var(--buy)}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:760px){.charts{grid-template-columns:1fr}}
+.chart h3{margin:0;font-size:15px}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin:4px 0 6px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:3px;border-radius:2px;display:inline-block}
+.plot{position:relative}
+.plot svg{display:block;width:100%;height:auto;overflow:visible}
+.tip{position:absolute;pointer-events:none;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:12px;white-space:nowrap;box-shadow:0 6px 18px rgba(0,0,0,.3);display:none;z-index:2}
+.tip b{font-weight:600}
+details{margin-top:8px;font-size:13px;color:var(--muted)}
+details summary{cursor:pointer}
+.tabs{display:flex;gap:4px;margin:0 0 10px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px}
+.tab{flex:1;background:transparent;border:0;border-radius:999px;padding:8px;font:600 14px var(--body);cursor:pointer;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--buy);color:var(--chip-on-ink)}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:10px}
+.chip{background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer;font:500 14px var(--body);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--buy);color:var(--chip-on-ink);border-color:var(--buy);font-weight:600}
+select{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 8px;color:var(--ink);font:inherit;max-width:100%}
+.list{display:grid;gap:8px}
+.bet{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;grid-template-columns:auto 1fr auto;gap:2px 12px;align-items:center}
+.st{grid-row:span 2;font:700 13px var(--body);border-radius:10px;padding:6px 8px;min-width:64px;text-align:center;border:1px solid var(--line);color:var(--muted)}
+.st.W{color:var(--win);border-color:var(--win)} .st.L{color:var(--sell);border-color:var(--sell)} .st.open{color:var(--buy);border-color:var(--buy)}
+.st.rest{color:var(--warn);border-color:var(--warn)}
+.pick{font-weight:600;min-width:0}
+.mkt{color:var(--muted);font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.u{grid-row:span 2;font:700 24px/1 var(--num);text-align:right}
+.u small{display:block;font:500 11px var(--body);color:var(--muted);margin-top:3px}
+.facts{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--muted);margin-top:6px;padding-top:6px;border-top:1px dashed var(--line)}
+.facts b{color:var(--ink);font-weight:600}
+.tag{border:1px solid var(--line);border-radius:6px;padding:0 6px;font-size:12px}
+.tag.shadow{border-style:dashed}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+th:first-child,td:first-child{text-align:left}
+td small{display:block;color:var(--muted);font-size:12px}
+.tscroll{overflow-x:auto}
+.empty{background:var(--panel);border:1px dashed var(--line);border-radius:14px;padding:22px;text-align:center;color:var(--muted)}
+.err{color:var(--sell)}
+.bars{display:grid;gap:6px}
+.barrow{display:grid;grid-template-columns:minmax(0,1fr) 56px;gap:4px 10px;font-size:13px;align-items:center}
+.barrow .b{grid-column:1 / -1;height:6px;border-radius:3px;background:var(--panel2);overflow:hidden}
+.barrow .b i{display:block;height:100%;background:var(--muted)}
+.barrow .n{text-align:right;font-weight:600}
+.log{display:grid;gap:4px;font-size:13px}
+.log div{display:grid;grid-template-columns:86px 72px 1fr;gap:8px;padding:6px 0;border-bottom:1px solid var(--line)}
+.log .ty{font-weight:600}
+.log .ty.order,.log .ty.fill{color:var(--buy)} .log .ty.skip,.log .ty.cancel{color:var(--muted)} .log .ty.settle{color:var(--win)} .log .ty.run{color:var(--muted)}
+@media (max-width:520px){.log div{grid-template-columns:70px 1fr}.log div > :last-child{grid-column:1 / -1}}
+.more{margin:10px auto 0;display:block}
+footer{color:var(--muted);font-size:12px;margin-top:24px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Paper Trader</h1>
+      <div class="sub">Whale Watch auto-bettor · paper money only, no real orders</div>
+    </div>
+    <div class="hbtns">
+      <a class="btn" href="./">← Whale Watch</a>
+      <button class="btn" id="refresh" type="button">Refresh</button>
+    </div>
+  </header>
+  <div class="pills" id="pills" aria-live="polite"><span class="pill">Loading the bot's log…</span></div>
+  <main id="main"></main>
+  <footer id="foot"></footer>
+</div>
+
+<script src="filters.js"></script>
+<script src="bot/stats.js"></script>
+<script>
+"use strict";
+const F = window.WWFilters, W = window.WWStats;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const sg = (x, d = 1) => x == null || !isFinite(x) ? "–" : (x > 0 ? "+" : "") + x.toFixed(d);
+const cls = x => x > 0 ? "pos" : x < 0 ? "neg" : "";
+const pc = p => p == null ? "–" : Math.round(p * 1000) / 10 + "¢";
+const money = n => n >= 1e6 ? "$" + (n / 1e6).toFixed(1) + "M" : n >= 1e3 ? "$" + (n / 1e3).toFixed(n >= 1e4 ? 0 : 1) + "k" : "$" + Math.round(n);
+const now = () => Date.now() / 1000;
+const ago = t => { const m = Math.round((now() - t) / 60); return m < 1 ? "just now" : m < 60 ? m + " min ago" : m < 1440 ? Math.round(m / 60) + " h ago" : Math.round(m / 1440) + " d ago"; };
+const until = t => { const m = Math.round((t - now()) / 60); return m < 0 ? "started" : m < 60 ? "in " + m + " min" : m < 1440 ? "in " + Math.floor(m / 60) + "h " + (m % 60) + "m" : "in " + Math.round(m / 1440) + " d"; };
+const when = t => new Date(t * 1000).toLocaleString([], { timeZone: "America/Chicago", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+const ruleName = id => (F.RULES.get(id) || {}).name || id;
+
+// The bot writes its log to the bot-log branch. ?log=<url/> points the page at another copy (for testing).
+function logBase(){
+  const q = new URLSearchParams(location.search).get("log");
+  if (q) return q.endsWith("/") ? q : q + "/";
+  if (location.hostname.endsWith(".github.io")){
+    const owner = location.hostname.split(".")[0], repo = location.pathname.split("/").filter(Boolean)[0];
+    if (repo) return `https://raw.githubusercontent.com/${owner}/${repo}/bot-log/`;
+  }
+  return "botlog/";
+}
+async function getJ(u, text){ const r = await fetch(u + (u.includes("?") ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" }); if (!r.ok) throw new Error(r.status); return text ? r.text() : r.json(); }
+
+// Reference results the trial is checked against (from the Nov 17 P/L audit and its point-in-time checks)
+const REFERENCE = {
+  pmSharp3h: "Audit backtest: +4.5% net on 3,658 bets; +2.4% at 1¢ worse",
+  pmSharp3hML: "Audit backtest: +5.5% net on 1,444 bets",
+  flowAgree2080s70: "Point-in-time check: about +4.9% net on 925 pre-game bets (score still partly hindsight)"
+};
+
+let D = null, view = { tab: "bets", who: "real", status: "open", show: 60 };
+try { Object.assign(view, JSON.parse(sessionStorage.getItem("pt-view") || "{}")); } catch(e){}
+const saveView = () => { try { sessionStorage.setItem("pt-view", JSON.stringify(view)); } catch(e){} };
+
+async function load(){
+  const base = logBase();
+  $("#refresh").disabled = true;
+  try {
+    const [summary, state] = await Promise.all([getJ(base + "summary.json"), getJ(base + "state.json")]);
+    const m = new Date(), cur = m.toISOString().slice(0, 7), prev = new Date(Date.UTC(m.getUTCFullYear(), m.getUTCMonth() - 1, 1)).toISOString().slice(0, 7);
+    const [baseline, ...logs] = await Promise.all([getJ(base + "baseline.json").catch(() => null),
+      ...[prev, cur].map(k => getJ(base + `decisions/${k}.jsonl`, true).catch(() => ""))]);
+    const decisions = logs.join("\n").split("\n").filter(Boolean).map(l => { try { return JSON.parse(l); } catch(e){ return null; } }).filter(Boolean);
+    D = { summary, orders: state.orders || [], baseline, decisions, cfg: summary.config };
+    render();
+  } catch(e){
+    D = null;
+    $("#pills").innerHTML = `<span class="pill bad">Couldn't load the bot's log (${esc(e.message)})</span>`;
+    $("#main").innerHTML = `<div class="empty">No paper-trading log yet at <code>${esc(base)}</code>.<br>It appears after the first "Paper bot" run on GitHub, which follows the next collector save.</div>`;
+  }
+  $("#refresh").disabled = false;
+}
+
+function render(){
+  const { summary: s, orders, cfg } = D;
+  const real = orders.filter(o => !o.shadow);
+  const rec = W.record(real), gates = W.gates(rec, cfg.trialGates, summary_started(real), now());
+  // status pills
+  const lr = s.lastRun || {}, dataAge = s.dataUpdated ? (now() - s.dataUpdated) / 60 : null, runAge = lr.at ? (now() - lr.at) / 60 : null;
+  const pills = [`<span class="pill paper">PAPER</span>`];
+  pills.push(`<span class="pill ${lr.status === "ok" && runAge < 45 ? "ok" : lr.status === "error" ? "bad" : "warn"}">Last run <b>${lr.at ? ago(lr.at) : "–"}</b>${lr.status && lr.status !== "ok" ? " · " + esc(lr.status) : ""}</span>`);
+  if (dataAge != null) pills.push(`<span class="pill ${dataAge <= cfg.checks.maxDataAgeMinutes ? "ok" : "warn"}">Whale data <b>${Math.round(dataAge)} min</b> old at that run</span>`);
+  if (s.killSwitch) pills.push(`<span class="pill bad">Kill switch <b>ON</b></span>`);
+  if (s.lossStop) pills.push(`<span class="pill bad">Loss stop hit: paused</span>`);
+  if (rec.liveQuotePct != null && rec.liveQuotePct < 100) pills.push(`<span class="pill warn"><b>${Math.round(100 - rec.liveQuotePct)}%</b> of fills used a past fill, not a live quote</span>`);
+  pills.push(`<span class="pill">Trading <b>${esc(cfg.filters.join(", "))}</b></span>`);
+  $("#pills").innerHTML = pills.join("");
+
+  const L = cfg.limits;
+  const openU = real.filter(o => o.status === "filled" || o.status === "resting").reduce((a, o) => a + o.stakeUnits, 0);
+  const todayK = W.dayKey(now());
+  const todayU = real.filter(o => ["resting", "filled", "settled"].includes(o.status) && W.dayKey(o.createdAt) === todayK).reduce((a, o) => a + o.stakeUnits, 0);
+  const dd = s.drawdown || { current: 0 };
+  const ci = r => r ? ` · 90% range ${sg(r[0])} to ${sg(r[1])}` : "";
+  $("#main").innerHTML = `
+  <section aria-labelledby="h-trial">
+    <h2 id="h-trial">The trial</h2>
+    <p class="hint">${esc(ruleName(cfg.filters[0]))}. 1 unit flat. Closing line value (CLV) reads fastest: it compares our fill with the mid price at the last check before the game starts.</p>
+    <div class="stats">
+      <div class="stat hero"><div class="k">Closing line value</div>
+        <div class="v ${cls(rec.clvAvgCents)}">${rec.clvAvgCents == null ? "–" : sg(rec.clvAvgCents, 2) + "¢"}</div>
+        <div class="d">${rec.clvN ? `avg per bet on ${rec.clvN} bets · beat the close ${Math.round(rec.clvBeatPct)}% of the time${rec.clvCI ? ` · 90% range ${sg(rec.clvCI[0], 2)}¢ to ${sg(rec.clvCI[1], 2)}¢` : ""}` : "No closing prices yet"}</div></div>
+      <div class="stat hero"><div class="k">Net ROI after fees</div>
+        <div class="v ${cls(rec.netRoi)}">${rec.netRoi == null ? "–" : sg(rec.netRoi) + "%"}</div>
+        <div class="d">${rec.settled ? `${rec.settled} settled${ci(rec.netRoiCI)}` : "Nothing settled yet"}</div></div>
+      <div class="stat"><div class="k">Record</div><div class="v">${rec.w}-${rec.l}</div><div class="d">${rec.p ? rec.p + " push · " : ""}${rec.open} open · ${rec.resting} resting</div></div>
+      <div class="stat"><div class="k">Net units</div><div class="v ${cls(rec.netUnits)}">${sg(rec.netUnits)}u</div><div class="d">fees ${rec.fees ?? 0}u · ${rec.takerPct == null ? "–" : Math.round(rec.takerPct) + "%"} taker fills</div></div>
+      <div class="stat"><div class="k">At the whale's price</div><div class="v ${cls(rec.whaleRoi)}">${rec.whaleRoi == null ? "–" : sg(rec.whaleRoi) + "%"}</div><div class="d">same bets, before fees: what backtests measure</div></div>
+      <div class="stat"><div class="k">Fill vs whale</div><div class="v">${rec.medianSlipCents == null ? "–" : sg(rec.medianSlipCents, 1) + "¢"}</div><div class="d">median over ${rec.fills} fills · avg ${sg(rec.avgSlipCents, 2)}¢</div></div>
+      <div class="stat"><div class="k">Open now</div><div class="v">${openU}u</div><div class="d">limit ${L.maxOpenUnits}u</div></div>
+      <div class="stat"><div class="k">Today</div><div class="v">${todayU}u</div><div class="d">daily limit ${L.maxUnitsPerDay}u (Central)</div></div>
+      <div class="stat"><div class="k">Drawdown</div><div class="v ${dd.current > 0 ? "neg" : ""}">${(dd.current || 0).toFixed(1)}u</div><div class="d">loss stop at ${L.lossStopUnits}u · worst ${(dd.max || 0).toFixed(1)}u</div></div>
+    </div>
+  </section>
+  <section aria-labelledby="h-gates">
+    <h2 id="h-gates">Stop rules</h2>
+    <p class="hint">From the audit's trial plan. Any "Stop" means pause and rethink, not tune the filter.</p>
+    <div class="card gates">${gates.map(g => `<div class="gate"><span class="ic ${g.status}">${g.status === "pass" ? "✓ Pass" : g.status === "fail" ? "✕ Stop" : "Waiting"}</span>
+      <span class="lab">${esc(g.label)}</span><span class="det"><span class="prog" aria-hidden="true"><i style="width:${Math.round(g.progress * 100)}%"></i></span>${esc(g.detail)}</span></div>`).join("")}</div>
+  </section>
+  <section aria-labelledby="h-charts">
+    <h2 id="h-charts">Over time</h2>
+    <div class="charts">
+      <div class="card chart"><h3>Profit (units)</h3>
+        <div class="legend"><span><i style="background:var(--s1)"></i>Ours, net of fees</span><span><i style="background:var(--s2)"></i>At the whale's price</span></div>
+        <div class="plot" id="pl1"></div></div>
+      <div class="card chart"><h3>Average closing line value (¢)</h3>
+        <div class="legend"><span>Running average per bet, in settle order, from bet 20 on</span></div>
+        <div class="plot" id="pl2"></div></div>
+    </div>
+    <details><summary>Show as a table, by day</summary><div class="tscroll" id="daytable"></div></details>
+  </section>
+  <section>
+    <div class="tabs" role="tablist">
+      ${[["bets", "Bets"], ["rules", "Rules"], ["log", "Decisions"]].map(([k, l]) => `<button class="tab" role="tab" data-tab="${k}" aria-selected="${view.tab === k}">${l}</button>`).join("")}
+    </div>
+    <div id="tabbody"></div>
+  </section>`;
+  drawCharts(real);
+  dayTable(real);
+  renderTab();
+  $("#foot").innerHTML = `Limits come from <code>bot/config.json</code>: stake ${L.stakeUnits}u flat · limit price = whale's + ${cfg.checks.maxPriceRiseCents}¢ · no orders within ${cfg.checks.startCutoffMinutes} min of the start · taker fee ${cfg.fees.Polymarket} × P × (1 − P) on Polymarket, ${cfg.fees.Kalshi} on Kalshi, none on resting fills.
+    Closing price = mid at the bot's last check before the start (it runs after each collector save, so usually 10–25 min before).
+    Log from <code>${esc(logBase())}</code>, updated ${ago(D.summary.updated)}.`;
+}
+const summary_started = list => list.length ? Math.min(...list.map(o => o.createdAt)) : null;
+
+/* ---------- charts (one axis each; hover shows exact values) ---------- */
+function lineChart(el, series, fmt){
+  const pts = series[0].data;
+  if (pts.length < 2){ el.innerHTML = `<div class="empty">Needs at least 2 settled bets</div>`; return; }
+  const W_ = Math.max(260, Math.round(el.clientWidth || 460)), H = 200, padL = 46, padR = 12, padT = 10, padB = 24;
+  const all = series.flatMap(s => s.data.map(p => p.y)).filter(v => v != null);
+  let lo = Math.min(0, ...all), hi = Math.max(0, ...all); if (hi === lo) hi = lo + 1;
+  const span = hi - lo; lo -= span * .06; hi += span * .06;
+  const x = i => padL + i / (pts.length - 1) * (W_ - padL - padR), y = v => padT + (hi - v) / (hi - lo) * (H - padT - padB);
+  const ticks = niceTicks(lo, hi, 4);
+  const path = d => d.map((p, i) => p.y == null ? null : `${x(i).toFixed(1)},${y(p.y).toFixed(1)}`).filter(Boolean).join(" ");
+  el.innerHTML = `<svg viewBox="0 0 ${W_} ${H}" width="${W_}" height="${H}" role="img" aria-label="${esc(series.map(s => s.name + " ends at " + fmt(s.data[s.data.length - 1].y)).join("; "))}">
+    ${ticks.map(t => `<line x1="${padL}" x2="${W_ - padR}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)" stroke-width="1" ${t === 0 ? "" : 'stroke-dasharray="2 4"'} vector-effect="non-scaling-stroke"/>
+      <text x="${padL - 6}" y="${y(t) + 4}" text-anchor="end" font-size="11" fill="var(--muted)">${fmt(t)}</text>`).join("")}
+    <text x="${padL}" y="${H - 6}" font-size="11" fill="var(--muted)">${esc(when(pts[0].t).split(",")[0])}</text>
+    <text x="${W_ - padR}" y="${H - 6}" font-size="11" fill="var(--muted)" text-anchor="end">${esc(when(pts[pts.length - 1].t).split(",")[0])} · ${pts.length} bets</text>
+    ${series.map(s => `<polyline fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke" points="${path(s.data)}"/>`).join("")}
+    <line class="xh" y1="${padT}" y2="${H - padB}" stroke="var(--muted)" stroke-width="1" vector-effect="non-scaling-stroke" style="display:none"/>
+    <rect x="${padL}" y="0" width="${W_ - padL - padR}" height="${H}" fill="transparent" class="hit"/>
+  </svg><div class="tip"></div>`;
+  const svg = el.querySelector("svg"), tip = el.querySelector(".tip"), xh = el.querySelector(".xh");
+  const show = ev => {
+    const r = svg.getBoundingClientRect(), fx = (ev.clientX - r.left) / r.width * W_;
+    const i = Math.max(0, Math.min(pts.length - 1, Math.round((fx - padL) / (W_ - padL - padR) * (pts.length - 1))));
+    xh.setAttribute("x1", x(i)); xh.setAttribute("x2", x(i)); xh.style.display = "";
+    tip.innerHTML = `<div>Bet ${i + 1} · ${esc(when(pts[i].t))}</div>` + series.map(s => `<div><i style="display:inline-block;width:10px;height:3px;background:${s.color};margin-right:6px;vertical-align:middle"></i>${esc(s.name)}: <b>${fmt(s.data[i].y)}</b></div>`).join("");
+    tip.style.display = "block";
+    const px = x(i) / W_ * r.width;
+    tip.style.left = Math.min(r.width - tip.offsetWidth, Math.max(0, px - tip.offsetWidth / 2)) + "px"; tip.style.top = "-6px";
+  };
+  svg.addEventListener("pointermove", show); svg.addEventListener("pointerdown", show);
+  svg.addEventListener("pointerleave", () => { tip.style.display = "none"; xh.style.display = "none"; });
+}
+function niceTicks(lo, hi, n){
+  const raw = (hi - lo) / n, mag = Math.pow(10, Math.floor(Math.log10(raw))), step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= raw) || mag * 10;
+  const out = []; for (let t = Math.ceil(lo / step) * step; t <= hi + 1e-9; t += step) out.push(+t.toFixed(10)); return out;
+}
+function drawCharts(real){
+  const c = W.curve(real);
+  lineChart($("#pl1"), [{ name: "Ours, net", color: "var(--s1)", data: c.map(p => ({ t: p.t, y: p.net })) },
+    { name: "Whale's price", color: "var(--s2)", data: c.map(p => ({ t: p.t, y: p.whale })) }], v => v == null ? "–" : sg(v) + "u");
+  lineChart($("#pl2"), [{ name: "Avg CLV", color: "var(--s1)", data: c.map((p, i) => ({ t: p.t, y: i < 19 ? null : p.clvAvg })) }], v => v == null ? "–" : sg(v, 2) + "¢");
+}
+function dayTable(real){
+  const g = new Map();
+  real.filter(o => o.status === "settled").forEach(o => { const k = W.dayKey(o.settledAt); (g.get(k) || g.set(k, []).get(k)).push(o); });
+  const keys = [...g.keys()].sort().reverse();
+  if (!keys.length){ $("#daytable").innerHTML = "<p>Nothing settled yet.</p>"; return; }
+  let cum = 0; const cumBy = {}; [...keys].reverse().forEach(k => { cum += g.get(k).reduce((a, o) => a + o.units, 0); cumBy[k] = cum; });
+  $("#daytable").innerHTML = `<table><thead><tr><th>Day settled</th><th>Bets</th><th>W-L</th><th>Net units</th><th>Running</th><th>Avg CLV</th></tr></thead><tbody>${keys.map(k => { const r = W.record(g.get(k));
+    return `<tr><td>${k}</td><td>${r.settled}</td><td>${r.w}-${r.l}</td><td class="${cls(r.netUnits)}">${sg(r.netUnits, 2)}</td><td>${sg(cumBy[k], 2)}</td><td>${r.clvAvgCents == null ? "–" : sg(r.clvAvgCents, 2) + "¢"}</td></tr>`; }).join("")}</tbody></table>`;
+}
+
+/* ---------- tabs ---------- */
+function renderTab(){
+  document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === view.tab)));
+  ({ bets: betsTab, rules: rulesTab, log: logTab })[view.tab]();
+}
+function betsTab(){
+  const { orders, cfg } = D;
+  const who = view.who === "real" ? orders.filter(o => !o.shadow) : orders.filter(o => o.shadow && o.rule === view.who);
+  const by = { open: who.filter(o => o.status === "filled" || o.status === "resting"), settled: who.filter(o => o.status === "settled" || o.status === "void"),
+    cancelled: who.filter(o => o.status === "cancelled"), all: who };
+  const list = [...by[view.status]].sort(view.status === "open" ? (a, b) => a.start - b.start : (a, b) => (b.settledAt || b.cancelledAt || b.createdAt) - (a.settledAt || a.cancelledAt || a.createdAt));
+  const opts = [["real", "Trial bets (" + cfg.filters.join(", ") + ")"], ...cfg.shadowFilters.map(id => [id, "Shadow: " + ruleName(id)])];
+  $("#tabbody").innerHTML = `<div class="row">
+      <label class="sr" for="who" style="position:absolute;left:-9999px">Which bets</label>
+      <select id="who">${opts.map(([v, l]) => `<option value="${esc(v)}" ${view.who === v ? "selected" : ""}>${esc(l)}</option>`).join("")}</select>
+      ${[["open", "Open"], ["settled", "Settled"], ["cancelled", "Unfilled"], ["all", "All"]].map(([k, l]) => `<button class="chip" data-status="${k}" aria-pressed="${view.status === k}">${l} ${by[k].length}</button>`).join("")}
+    </div>
+    ${view.who !== "real" ? `<p class="hint">Shadow bets use the same price rules with no stake limits. They don't affect the trial.</p>` : ""}
+    <div class="list">${list.length ? list.slice(0, view.show).map(betCard).join("") : `<div class="empty">${view.status === "open" ? "No open bets right now. New ones appear after the next collector save." : "None yet."}</div>`}</div>
+    ${list.length > view.show ? `<button class="btn more" id="more">Show more (${list.length - view.show} left)</button>` : ""}`;
+}
+function betCard(o){
+  const c = W.clvOf(o), live = o.start > now();
+  const st = o.status === "settled" ? `<span class="st ${o.result}">${o.result === "W" ? "WIN" : o.result === "L" ? "LOSS" : "PUSH"}</span>`
+    : o.status === "filled" ? `<span class="st open">${live ? "OPEN" : "IN PLAY"}</span>`
+    : o.status === "resting" ? `<span class="st rest">RESTING</span>` : `<span class="st">${o.status === "void" ? "VOID" : "UNFILLED"}</span>`;
+  const u = o.status === "settled" ? `<span class="u ${cls(o.units)}">${sg(o.units, 2)}u<small>at whale's: ${sg(o.whaleUnits, 2)}u</small></span>`
+    : `<span class="u">${o.fillPrice != null ? pc(o.fillPrice) : pc(o.limitPrice)}<small>${o.fillPrice != null ? "our fill" : "limit"}</small></span>`;
+  const gap = o.fillPrice != null ? (o.fillPrice - o.whale.q) * 100 : null;
+  return `<article class="bet">${st}
+    <div class="pick">${esc(o.name)} <span style="color:var(--muted);font-weight:500">@ ${pc(o.fillPrice ?? o.limitPrice)}</span></div>${u}
+    <div class="mkt">${esc(o.title)} · ${esc(o.league)} · ${esc(o.marketType || F.marketType(o.title))} · ${esc(o.venue)}${o.shadow ? ` · <span class="tag shadow">shadow</span>` : ""}</div>
+    <div class="facts">
+      <span>Whale <b>${pc(o.whale.q)}</b> ${money(o.whale.usd)}${o.whale.sharp ? " · sharp" : ""}</span>
+      <span>${o.fillPrice != null ? `We paid <b>${pc(o.fillPrice)}</b> (${sg(gap, 1)}¢${o.taker ? `, fee ${o.feeUnits}u` : ", resting fill, no fee"})` : `Limit <b>${pc(o.limitPrice)}</b>${o.cancelReason ? " · " + esc(o.cancelReason) : ""}`}</span>
+      <span>${o.close ? `${live ? "Latest" : "Close"} <b>${pc(o.close.mid)}</b> ${o.close.minsBefore} min before start` : "No close yet"}${c ? ` → CLV${live ? " so far" : ""} <b class="${cls(c.cents)}">${sg(c.cents, 1)}¢</b>` : ""}</span>
+      <span>${live ? "Starts " + until(o.start) : "Started " + esc(when(o.start))}</span>
+      <span>${esc(ruleName(o.rule))}</span>
+    </div></article>`;
+}
+function rulesTab(){
+  const { orders, cfg, baseline } = D;
+  const row = (id, list, kind) => {
+    const r = W.record(list), b = baseline && baseline.filters && baseline.filters[id];
+    const ref = REFERENCE[id] || (b ? `Site record (counts later bets): ${sg(b.roi)}% on ${b.n} bets · ${b.signal}` : "");
+    return `<tr><td><b>${esc(ruleName(id))}</b><small>${esc(id)} · ${kind}</small>${ref ? `<small>${esc(ref)}</small>` : ""}</td>
+      <td>${r.orders}<small>${r.open} open</small></td><td>${r.w}-${r.l}</td>
+      <td class="${cls(r.netRoi)}">${r.netRoi == null ? "–" : sg(r.netRoi) + "%"}${r.netRoiCI ? `<small>${sg(r.netRoiCI[0])} to ${sg(r.netRoiCI[1])}</small>` : ""}</td>
+      <td class="${cls(r.netUnits)}">${sg(r.netUnits)}</td>
+      <td class="${cls(r.clvAvgCents)}">${r.clvAvgCents == null ? "–" : sg(r.clvAvgCents, 2) + "¢"}<small>${r.clvBeatPct == null ? "" : Math.round(r.clvBeatPct) + "% beat"}</small></td>
+      <td>${r.medianSlipCents == null ? "–" : sg(r.medianSlipCents, 1) + "¢"}</td></tr>`;
+  };
+  $("#tabbody").innerHTML = `<p class="hint">Every rule's paper record from the bot's log. Shadow rules are tracked with the same price rules and fees but no stake limits, so they can be compared without affecting the trial. Net ROI shows a 90% range once there are enough bets.</p>
+    <div class="card tscroll"><table><thead><tr><th>Rule</th><th>Bets</th><th>W-L</th><th>Net ROI</th><th>Net u</th><th>CLV</th><th>Fill vs whale</th></tr></thead><tbody>
+    ${cfg.filters.map(id => row(id, orders.filter(o => !o.shadow && o.rule === id), "trial")).join("")}
+    ${cfg.shadowFilters.map(id => row(id, orders.filter(o => o.shadow && o.rule === id), "shadow")).join("")}
+    </tbody></table></div>
+    ${baseline ? `<p class="hint" style="margin-top:8px">Site records refreshed ${ago(baseline.updated)}. They count big bets placed after the whale's bet, so they read high (see the Nov 17 audit).</p>` : ""}`;
+}
+function logTab(){
+  const ds = D.decisions.filter(d => !d.shadow);
+  const reasons = {}; ds.filter(d => d.type === "skip").forEach(d => { const k = /^price fell/.test(d.reason) ? "price fell below the whale's (market moved against it)" : /^loss stop/.test(d.reason) ? "loss stop" : d.reason; reasons[k] = (reasons[k] || 0) + 1; });
+  const rs = Object.entries(reasons).sort((a, b) => b[1] - a[1]), max = rs.length ? rs[0][1] : 1;
+  const recent = ds.filter(d => d.type !== "run" || d.status !== "ok").slice(-200).reverse();
+  const line = d => {
+    const p = d.pick ? `${esc(d.pick.side)} @ ${pc(d.pick.q)} · ${esc(d.pick.title)}` : "";
+    const what = d.type === "order" ? `${d.status === "resting" ? "Resting at " + pc(d.limit) : "Filled at " + pc(d.ask)} · ${p}`
+      : d.type === "skip" ? `${esc(d.reason)} · ${p}` : d.type === "fill" ? `Resting order filled at ${pc(d.price)}`
+      : d.type === "cancel" ? esc(d.reason) : d.type === "settle" ? `${esc(d.result)} · ${sg(d.units, 2)}u` : esc(d.note || d.error || d.status || "");
+    return `<div><span>${esc(when(d.t))}</span><span class="ty ${d.type}">${d.type}</span><span>${what}</span></div>`;
+  };
+  $("#tabbody").innerHTML = `<div class="charts">
+    <div class="card"><h3 style="margin:0 0 8px;font-size:15px">Why trial bets were skipped</h3>
+      ${rs.length ? `<div class="bars">${rs.map(([k, n]) => `<div class="barrow"><span>${esc(k)}</span><span class="n">${n}</span><span class="b"><i style="width:${Math.max(2, n / max * 100)}%"></i></span></div>`).join("")}</div>` : `<p class="hint">No skips yet.</p>`}
+      <p class="hint" style="margin-top:10px">Each skip is logged once per bet and reason. A bet skipped for its price is re-checked every run until the cutoff.</p></div>
+    <div class="card"><h3 style="margin:0 0 8px;font-size:15px">Recent decisions (trial)</h3>
+      <div class="log">${recent.length ? recent.map(line).join("") : `<p class="hint">Nothing logged yet.</p>`}</div></div>
+  </div>`;
+}
+
+document.addEventListener("click", e => {
+  const t = e.target.closest(".tab"); if (t){ view.tab = t.dataset.tab; view.show = 60; saveView(); renderTab(); return; }
+  const c = e.target.closest("[data-status]"); if (c){ view.status = c.dataset.status; view.show = 60; saveView(); renderTab(); return; }
+  if (e.target.id === "more"){ view.show += 100; renderTab(); }
+});
+document.addEventListener("change", e => { if (e.target.id === "who"){ view.who = e.target.value; view.show = 60; saveView(); renderTab(); } });
+$("#refresh").addEventListener("click", load);
+let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { if (D) drawCharts(D.orders.filter(o => !o.shadow)); }, 150); });
+load();
+setInterval(() => { if (!document.hidden) load(); }, 120000);
+</script>
+</body>
+</html>

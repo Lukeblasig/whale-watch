@@ -108,6 +108,27 @@
   // A position that can be copied right now: the same test the site's presetTrades() applies
   const liveEligible = (e, nowSec) => e.usd >= 1000 && e.q >= 0.03 && e.q <= 0.97 && !e.junk && (!PRE_ONLY || upcoming(e, nowSec));
 
-  const api = { SOCCER, PRESETS, flowOf, venueOf, normL, normP, PRE_ONLY, upcoming, venueOk, isJunk, presetPicks, edgeSignal, presetRecord, liveEligible };
+  // Market type from the title: moneyline, spread, total or draw
+  const marketType = t => /draw/i.test(t || "") ? "draw" : /spread|\([+-]\d/i.test(t || "") ? "spread" : /o\/u|\bover\b|\bunder\b|total/i.test(t || "") ? "total" : "moneyline";
+
+  /* Trial rules (Nov 17 P/L audit). Unlike the Best filters, these only use what was known when the whale bet:
+     venue, sharp flag, minutes before start, market type. Each takes a raw ledger entry (needs ts, start, title).
+     firstPerMarket: only the earliest qualifying alert in a market counts; later alerts there, either side, are ignored. */
+  const lead = e => e.start && e.ts ? e.start - e.ts : -1;
+  const pmSharp3h = e => venueOf(e) === "Polymarket" && !!e.sharp && lead(e) >= 600 && lead(e) <= 3 * 3600;
+  const TRIAL_RULES = [
+    { id: "pmSharp3h", name: "Polymarket sharp · bet 10 min–3 h before start · first alert per market", firstPerMarket: true, t: pmSharp3h },
+    { id: "pmSharp3hML", name: "Same, moneylines only", firstPerMarket: true, t: e => pmSharp3h(e) && marketType(e.title) === "moneyline" },
+    // The score + money-flow cut from the Results analysis, forward-tested at the moment it fires (flow then can only count earlier bets)
+    { id: "flowAgree2080s70", name: "Money flow agrees · 20–80¢ · score 70+", t: e => { const b = normL(e); return b.flow === "agree" && e.q >= .2 && e.q <= .8 && e.score >= 70; } }
+  ];
+  // Every rule the bot can trade or shadow, by id: trial rules, plus each Best filter wrapped to take a raw entry
+  const RULES = new Map([
+    ...TRIAL_RULES.map(r => [r.id, r]),
+    ...PRESETS.map(pr => [pr.id, { id: pr.id, name: pr.name, firstPerMarket: false, t: e => { const b = normL(e); return venueOk(pr, b.venue) && pr.t(b); } }])
+  ]);
+
+  const api = { SOCCER, PRESETS, flowOf, venueOf, normL, normP, PRE_ONLY, upcoming, venueOk, isJunk, presetPicks, edgeSignal, presetRecord, liveEligible,
+    marketType, TRIAL_RULES, RULES };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.WWFilters = api;
 })(typeof globalThis !== "undefined" ? globalThis : this);

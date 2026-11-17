@@ -38,13 +38,13 @@ export function decide(sig, orders, cfg, quote, now) {
   if (openUnits(orders) + stake > L.maxOpenUnits) return skip(`open exposure limit of ${L.maxOpenUnits}u reached`);
   if (!quote || !(quote.ask > 0 && quote.ask < 1)) return skip("no current price");
   if (now - quote.at > K.maxQuoteAgeMinutes * 60) return skip(`price is over ${K.maxQuoteAgeMinutes} min old`);
-  const q = sig.q, limitPrice = round2(Math.min(0.99, q + K.maxPriceRiseCents / 100));
+  // limit = whale's price + the allowed rise, rounded DOWN to a whole cent so it's never worse than allowed
+  const q = sig.q, limitPrice = Math.min(0.99, Math.floor((q + K.maxPriceRiseCents / 100) * 100 + 1e-6) / 100);
   if (K.maxPriceDropCents !== null && quote.ask < q - K.maxPriceDropCents / 100 - 1e-9)
     return skip(`price fell ${c(q - quote.ask)} below the whale's ${c(q)}: market moved against it`);
   return { action: "order", limitPrice, fill: quote.ask <= limitPrice + 1e-9 ? quote.ask : null };
 }
 const skip = (reason, kind = "skip") => ({ action: "skip", reason, kind });
-const round2 = x => Math.round(x * 100) / 100;
 const c = x => Math.round(x * 100) + "¢";
 
 // A resting (unfilled) order: fill it if the price came back under the limit, cancel it at the cutoff.
@@ -56,3 +56,12 @@ export function updateResting(o, quote, cfg, now) {
 
 // Units won or lost on our own fill price (risk 1 unit to win (1 - p) / p)
 export const unitsFor = (result, price, stake) => result === "W" ? stake * (1 - price) / price : result === "L" ? -stake : 0;
+
+// Taker fee in units: rate × P × (1 − P) per contract, and 1 unit buys 1/P contracts, so rate × (1 − P) per unit staked
+export const feeUnits = (venue, price, stake, cfg) => (cfg.fees[venue] ?? 0.07) * (1 - price) * stake;
+
+// Closing line value: the mid price at the last quote before the start, minus what we paid. Positive = we beat the close.
+export function clvOf(o) {
+  if (o.fillPrice == null || !o.close || !(o.close.mid > 0)) return null;
+  return { cents: +((o.close.mid - o.fillPrice) * 100).toFixed(2), pct: +((o.close.mid / o.fillPrice - 1) * 100).toFixed(2) };
+}

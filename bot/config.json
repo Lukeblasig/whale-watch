@@ -1,51 +1,49 @@
 {
-  "_readme": "Luke edits this file, nobody else. The bot re-reads it before every order and stops (places nothing) if anything here is missing or invalid. Numbers marked PLACEHOLDER are paper-only starting values, not Luke's limits.",
+  "_readme": "Luke edits this file, nobody else. The bot re-reads it every run and places nothing if anything here is missing or invalid. Numbers marked PLACEHOLDER are paper-only starting values, not Luke's limits.",
 
   "mode": "paper",
   "killSwitch": false,
 
-  "_filters": "Filter ids from filters.js, in priority order. When several fire on the same pick, the order is credited to the first one listed here. Starting set: every filter currently marked 'Likely real edge' (z >= 2.5), strongest first.",
-  "filters": [
-    "p8090ok",
-    "soc8090ok",
-    "p7090ok",
-    "soc7090agree40",
-    "soc7090ok",
-    "soc6090agree",
-    "sharp6090agree",
-    "socAgree40",
-    "socSharpAgree60",
-    "osoc60agree",
-    "socSharp6090agree50"
-  ],
-  "_watchFilters": "Logged as 'would have fired' only. Never orders, never count toward limits.",
-  "watchFilters": [
-    "ten70",
-    "tenK70",
-    "tenK60",
-    "socSharp4060agree60",
-    "ucl50agree",
-    "mls50"
-  ],
+  "_filters": "Rules the bot trades (paper), in priority order. pmSharp3h is the Nov 17 audit's best-supported rule set: Polymarket, sharp wallet, whale bet 10 min to 3 h before start, first alert per market only.",
+  "filters": ["pmSharp3h"],
+
+  "_shadowFilters": "Paper-tracked separately with the same price rules but no stake limits, so their forward records can be compared. They never use up a pick or a limit for the real rules.",
+  "shadowFilters": ["pmSharp3hML", "flowAgree2080s70", "p7090ok", "soc7090agree40", "sharp6090agree", "socAgree40"],
 
   "_unitUsd": "Dollars per unit. Not needed for paper (everything is in units). Live mode refuses to start while this is null.",
   "unitUsd": null,
 
   "limits": {
     "stakeUnits": 1,
-    "maxUnitsPerDay": 25,
-    "maxOpenUnits": 40,
-    "lossStopUnits": 20,
-    "_placeholders": "maxUnitsPerDay, maxOpenUnits and lossStopUnits are PLACEHOLDERS for paper. Day = Central time. Loss stop = drawdown from the high point of settled results since lossStopResetAt."
+    "maxUnitsPerDay": 120,
+    "maxOpenUnits": 150,
+    "lossStopUnits": 75,
+    "_placeholders": "PLACEHOLDERS for paper, sized to the audit: about 83 bets a day, worst drawdown 51u, 'size so a 75-unit drawdown is survivable'. Day = Central time. Loss stop = drawdown from the high point of settled net results since lossStopResetAt."
   },
   "lossStopResetAt": null,
 
   "checks": {
-    "maxPriceRiseCents": 3,
-    "maxPriceDropCents": 3,
+    "maxPriceRiseCents": 1,
+    "maxPriceDropCents": null,
     "startCutoffMinutes": 10,
     "maxDataAgeMinutes": 45,
     "maxQuoteAgeMinutes": 30,
-    "_note": "Suggestions to test on paper, not findings. Rise: the limit price is the whale's price + this; above it the order rests until it fills or the cutoff. Drop: if the price fell this far below the whale's, the market moved against the whale, so skip."
+    "_note": "Limit price = whale's price + maxPriceRiseCents (audit: don't chase past +1¢). Above it the order rests until it fills or hits the cutoff. maxPriceDropCents null = take a better price than the whale's. A quote older than maxQuoteAgeMinutes is treated as no quote."
+  },
+
+  "fees": {
+    "_note": "Taker fee per contract = rate × P × (1 − P), charged win or lose. Paper charges it when an order fills on placement (crossing the spread). An order that rests and fills later is treated as a maker fill: no fee.",
+    "Polymarket": 0.03,
+    "Kalshi": 0.07
+  },
+
+  "trialGates": {
+    "_note": "Audit stop rules, shown on the tracker. Stop if, after clvBets bets, fills don't beat the close on average; or after roiBets bets net ROI is below minNetRoiPct; or the median fill is more than maxMedianSlipCents worse than the whale's.",
+    "clvBets": 500,
+    "roiBets": 1000,
+    "minNetRoiPct": -2,
+    "maxMedianSlipCents": 1,
+    "trialBets": 1500,
+    "trialWeeks": 4
   }
 }

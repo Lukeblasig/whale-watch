@@ -11,6 +11,8 @@ async function getJSON(url, ms = 8000) {
 }
 const parseArr = x => Array.isArray(x) ? x : (() => { try { return JSON.parse(x || "[]"); } catch { return []; } })();
 const now = () => Math.floor(Date.now() / 1000);
+// mid = halfway between bid and ask: the fairest single price for closing line value; falls back to the ask
+const quote = (ask, bid, depth, source) => ({ ask, bid, mid: bid != null && bid <= ask ? Math.round((ask + bid) / 2 * 1e4) / 1e4 : ask, depth, at: now(), source });
 
 // Polymarket (international book, where the Whale Watch signals come from): lowest ask on the outcome's token
 async function polymarketAsk(cid, idx) {
@@ -24,7 +26,8 @@ async function polymarketAsk(cid, idx) {
   const asks = (book.asks || []).map(a => ({ p: Number(a.price), s: Number(a.size) })).filter(a => a.p > 0 && a.s > 0);
   if (!asks.length) throw new Error("no asks on the book");
   const best = asks.reduce((a, b) => b.p < a.p ? b : a);
-  return { ask: best.p, depth: best.s, at: now(), source: "polymarket book" };
+  const bids = (book.bids || []).map(b => Number(b.price)).filter(p => p > 0 && p < 1);
+  return quote(best.p, bids.length ? Math.max(...bids) : null, best.s, "polymarket book");
 }
 
 // Kalshi: yes/no ask on the market (idx 0 = yes, 1 = no, as the collector records it)
@@ -40,7 +43,9 @@ async function kalshiAsk(ticker, idx) {
         : (m.no_ask_dollars ?? (m.no_ask != null ? m.no_ask / 100 : null));
       const ask = Number(dollars);
       if (!(ask > 0 && ask < 1)) throw new Error("no ask");
-      return { ask, depth: null, at: now(), source: "kalshi market" };
+      const bidD = idx === 0 ? (m.yes_bid_dollars ?? (m.yes_bid != null ? m.yes_bid / 100 : null)) : (m.no_bid_dollars ?? (m.no_bid != null ? m.no_bid / 100 : null));
+      const bid = Number(bidD);
+      return quote(ask, bid > 0 && bid < 1 ? bid : null, null, "kalshi market");
     } catch (e) { lastErr = e; }
   }
   throw lastErr;
@@ -52,7 +57,7 @@ export function lastFill(feed, cid, idx) {
   for (const t of feed.trades || []) {
     if (t.conditionId !== cid) continue;
     const side = t.side === "BUY" ? t.idx : 1 - t.idx, p = t.side === "BUY" ? t.price : 1 - t.price;
-    if (side === idx && (!best || t.timestamp > best.at)) best = { ask: p, depth: null, at: t.timestamp, source: "last fill in feed (not a live quote)" };
+    if (side === idx && (!best || t.timestamp > best.at)) best = { ask: p, bid: null, mid: p, depth: null, at: t.timestamp, source: "last fill in feed (not a live quote)" };
   }
   return best;
 }
