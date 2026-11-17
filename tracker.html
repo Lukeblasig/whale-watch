@@ -200,7 +200,8 @@ function render(){
   // status pills
   const lr = s.lastRun || {}, dataAge = s.dataUpdated ? (now() - s.dataUpdated) / 60 : null, runAge = lr.at ? (now() - lr.at) / 60 : null;
   const pills = [`<span class="pill paper">PAPER</span>`];
-  pills.push(`<span class="pill ${lr.status === "ok" && runAge < 45 ? "ok" : lr.status === "error" ? "bad" : "warn"}">Last run <b>${lr.at ? ago(lr.at) : "–"}</b>${lr.status && lr.status !== "ok" ? " · " + esc(lr.status) : ""}</span>`);
+  if (!lr.at) pills.push(`<span class="pill warn">Waiting for the first paper run</span>`);
+  else pills.push(`<span class="pill ${lr.status === "ok" && runAge < 45 ? "ok" : lr.status === "error" ? "bad" : "warn"}">Last run <b>${ago(lr.at)}</b>${lr.status && lr.status !== "ok" ? " · " + esc(lr.status) : ""}</span>`);
   if (dataAge != null) pills.push(`<span class="pill ${dataAge <= cfg.checks.maxDataAgeMinutes ? "ok" : "warn"}">Whale data <b>${Math.round(dataAge)} min</b> old at that run</span>`);
   if (s.killSwitch) pills.push(`<span class="pill bad">Kill switch <b>ON</b></span>`);
   if (s.lossStop) pills.push(`<span class="pill bad">Loss stop hit: paused</span>`);
@@ -215,6 +216,7 @@ function render(){
   const dd = s.drawdown || { current: 0 };
   const ci = r => r ? ` · 90% range ${sg(r[0])} to ${sg(r[1])}` : "";
   $("#main").innerHTML = `
+  ${real.length ? "" : `<div class="empty" style="margin-bottom:16px">No paper bets yet. The trial starts with the first bet that matches the rule; everything below fills in from the bot's own log.</div>`}
   <section aria-labelledby="h-trial">
     <h2 id="h-trial">The trial</h2>
     <p class="hint">${esc(ruleName(cfg.filters[0]))}. 1 unit flat. Closing line value (CLV) reads fastest: it compares our fill with the mid price at the last check before the game starts.</p>
@@ -263,7 +265,7 @@ function render(){
   renderTab();
   $("#foot").innerHTML = `Limits come from <code>bot/config.json</code>: stake ${L.stakeUnits}u flat · limit price = whale's + ${cfg.checks.maxPriceRiseCents}¢ · no orders within ${cfg.checks.startCutoffMinutes} min of the start · taker fee ${cfg.fees.Polymarket} × P × (1 − P) on Polymarket, ${cfg.fees.Kalshi} on Kalshi, none on resting fills.
     Closing price = mid at the bot's last check before the start (it runs after each collector save, so usually 10–25 min before).
-    Log from <code>${esc(logBase())}</code>, updated ${ago(D.summary.updated)}.`;
+    Log from <code>${esc(logBase())}</code>${D.summary.lastRun ? ", updated " + ago(D.summary.updated) : ""}.`;
 }
 const summary_started = list => list.length ? Math.min(...list.map(o => o.createdAt)) : null;
 
