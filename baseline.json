@@ -1,23 +1,23 @@
 {
- "updated": 1794969390,
- "dataUpdated": 1794969303,
- "picks": 49988,
+ "updated": 1795041996,
+ "dataUpdated": 1795041926,
+ "picks": 51785,
  "filters": {
   "soc7090agree40": {
    "name": "Soccer · 70–90¢ · score 40+ · big money agrees",
    "venues": [
     "Polymarket"
    ],
-   "n": 175,
-   "w": 164,
+   "n": 176,
+   "w": 165,
    "l": 11,
-   "units": 30.99,
+   "units": 31.17,
    "roi": 17.71,
    "avgPrice": 0.798,
    "signal": "Likely real edge",
    "signalKey": "up",
-   "z": 7.32,
-   "games": 164
+   "z": 7.36,
+   "games": 165
   },
   "socSharp4060agree60": {
    "name": "Soccer · sharps · 40–60¢ · score 60+ · big money agrees",
@@ -56,64 +56,64 @@
    "venues": [
     "Polymarket"
    ],
-   "n": 160,
-   "w": 130,
+   "n": 161,
+   "w": 131,
    "l": 30,
-   "units": 18.61,
-   "roi": 11.63,
+   "units": 18.79,
+   "roi": 11.67,
    "avgPrice": 0.723,
    "signal": "Likely real edge",
    "signalKey": "up",
-   "z": 2.66,
-   "games": 154
+   "z": 2.69,
+   "games": 155
   },
   "soc6090agree": {
    "name": "Soccer · 60–90¢ · big money agrees",
    "venues": [
     "Polymarket"
    ],
-   "n": 291,
-   "w": 244,
+   "n": 292,
+   "w": 245,
    "l": 47,
-   "units": 38.44,
-   "roi": 13.21,
-   "avgPrice": 0.736,
+   "units": 38.62,
+   "roi": 13.23,
+   "avgPrice": 0.737,
    "signal": "Likely real edge",
    "signalKey": "up",
-   "z": 4.35,
-   "games": 262
+   "z": 4.37,
+   "games": 263
   },
   "socAgree40": {
    "name": "Soccer · score 40+ · big money agrees",
    "venues": [
     "Polymarket"
    ],
-   "n": 690,
-   "w": 488,
+   "n": 691,
+   "w": 489,
    "l": 202,
-   "units": 83.32,
+   "units": 83.5,
    "roi": 12.08,
    "avgPrice": 0.631,
    "signal": "Likely real edge",
    "signalKey": "up",
-   "z": 3.8,
-   "games": 576
+   "z": 3.81,
+   "games": 577
   },
   "socSharp4050s50": {
    "name": "Soccer · sharps · 40–50¢ · score 50+",
    "venues": [
     "Polymarket"
    ],
-   "n": 232,
-   "w": 120,
+   "n": 233,
+   "w": 121,
    "l": 112,
-   "units": 30.48,
-   "roi": 13.14,
+   "units": 31.75,
+   "roi": 13.63,
    "avgPrice": 0.455,
    "signal": "Promising, keep watching",
    "signalKey": "maybe",
-   "z": 1.83,
-   "games": 224
+   "z": 1.91,
+   "games": 225
   },
   "soc4560agree": {
    "name": "Soccer · 45–60¢ · score 50+ · big money agrees",
@@ -136,128 +136,128 @@
    "venues": [
     "Polymarket"
    ],
-   "n": 644,
-   "w": 315,
+   "n": 646,
+   "w": 317,
    "l": 329,
-   "units": 56.06,
-   "roi": 8.71,
+   "units": 58.71,
+   "roi": 9.09,
    "avgPrice": 0.451,
    "signal": "Promising, keep watching",
    "signalKey": "maybe",
-   "z": 2.01,
-   "games": 587
+   "z": 2.1,
+   "games": 589
   },
   "soc8090ok": {
    "name": "Soccer · 80–90¢ · big money not against",
    "venues": [
     "Polymarket"
    ],
-   "n": 401,
-   "w": 377,
+   "n": 404,
+   "w": 380,
    "l": 24,
-   "units": 44.51,
-   "roi": 11.1,
+   "units": 45.06,
+   "roi": 11.15,
    "avgPrice": 0.847,
    "signal": "Likely real edge",
    "signalKey": "up",
-   "z": 7.62,
-   "games": 345
+   "z": 7.71,
+   "games": 348
   },
   "p8090ok": {
    "name": "80–90¢ · big money not against · all sports",
    "venues": [
     "Polymarket"
    ],
-   "n": 593,
-   "w": 554,
+   "n": 602,
+   "w": 562,
    "l": 38,
-   "units": 62.05,
-   "roi": 10.46,
+   "units": 63.42,
+   "roi": 10.53,
    "avgPrice": 0.848,
    "signal": "Likely real edge",
    "signalKey": "up",
-   "z": 8.57,
-   "games": 514
+   "z": 8.75,
+   "games": 523
   },
   "soc7090ok": {
    "name": "Soccer · 70–90¢ · big money not against",
    "venues": [
     "Polymarket"
    ],
-   "n": 713,
-   "w": 628,
-   "l": 85,
-   "units": 67.02,
-   "roi": 9.4,
+   "n": 717,
+   "w": 631,
+   "l": 86,
+   "units": 66.58,
+   "roi": 9.29,
    "avgPrice": 0.805,
    "signal": "Likely real edge",
    "signalKey": "up",
-   "z": 6.1,
-   "games": 571
+   "z": 6.03,
+   "games": 575
   },
   "sharp6090agree": {
    "name": "Sharps · 60–90¢ · big money agrees · all sports",
    "venues": [
     "Polymarket"
    ],
-   "n": 413,
-   "w": 334,
-   "l": 79,
-   "units": 47.27,
-   "roi": 11.45,
-   "avgPrice": 0.723,
+   "n": 420,
+   "w": 338,
+   "l": 81,
+   "units": 46.46,
+   "roi": 11.06,
+   "avgPrice": 0.724,
    "signal": "Likely real edge",
    "signalKey": "up",
-   "z": 4.14,
-   "games": 400
+   "z": 4.02,
+   "games": 407
   },
   "p7090ok": {
    "name": "70–90¢ · big money not against · all sports",
    "venues": [
     "Polymarket"
    ],
-   "n": 1260,
-   "w": 1090,
-   "l": 168,
-   "units": 112.84,
-   "roi": 8.96,
+   "n": 1278,
+   "w": 1104,
+   "l": 171,
+   "units": 113.05,
+   "roi": 8.85,
    "avgPrice": 0.795,
    "signal": "Likely real edge",
    "signalKey": "up",
-   "z": 7.18,
-   "games": 1011
+   "z": 7.15,
+   "games": 1028
   },
   "sharp4050": {
    "name": "Sharps · 40–50¢ · all sports",
    "venues": [
     "Polymarket"
    ],
-   "n": 2093,
-   "w": 1000,
-   "l": 1091,
-   "units": 87.52,
-   "roi": 4.18,
+   "n": 2135,
+   "w": 1017,
+   "l": 1116,
+   "units": 82.58,
+   "roi": 3.87,
    "avgPrice": 0.46,
    "signal": "Promising, keep watching",
    "signalKey": "maybe",
-   "z": 1.85,
-   "games": 1415
+   "z": 1.74,
+   "games": 1430
   },
   "cfb5060": {
    "name": "CFB · 50–60¢ · big money not against",
    "venues": [
     "Polymarket"
    ],
-   "n": 523,
-   "w": 292,
-   "l": 230,
-   "units": 25.1,
-   "roi": 4.8,
+   "n": 525,
+   "w": 293,
+   "l": 231,
+   "units": 25.06,
+   "roi": 4.77,
    "avgPrice": 0.535,
    "signal": "Could be luck",
    "signalKey": "few",
    "z": 1.13,
-   "games": 280
+   "games": 282
   },
   "ten70": {
    "name": "Tennis · score 70+",
@@ -265,16 +265,16 @@
     "Polymarket",
     "Kalshi"
    ],
-   "n": 60,
-   "w": 43,
-   "l": 17,
-   "units": 10.73,
-   "roi": 17.88,
-   "avgPrice": 0.62,
+   "n": 62,
+   "w": 44,
+   "l": 18,
+   "units": 10.03,
+   "roi": 16.18,
+   "avgPrice": 0.624,
    "signal": "Promising, keep watching",
    "signalKey": "maybe",
-   "z": 1.76,
-   "games": 57
+   "z": 1.61,
+   "games": 59
   },
   "ten60": {
    "name": "Tennis · score 60+",
@@ -282,16 +282,16 @@
     "Polymarket",
     "Kalshi"
    ],
-   "n": 127,
-   "w": 81,
-   "l": 43,
-   "units": 7.49,
-   "roi": 5.9,
-   "avgPrice": 0.62,
+   "n": 131,
+   "w": 83,
+   "l": 45,
+   "units": 7.3,
+   "roi": 5.57,
+   "avgPrice": 0.619,
    "signal": "Could be luck",
    "signalKey": "few",
-   "z": 0.8,
-   "games": 119
+   "z": 0.76,
+   "games": 123
   },
   "ten50": {
    "name": "Tennis · score 50+",
@@ -299,28 +299,28 @@
     "Polymarket",
     "Kalshi"
    ],
-   "n": 242,
-   "w": 156,
-   "l": 81,
-   "units": 16.79,
-   "roi": 6.94,
+   "n": 250,
+   "w": 161,
+   "l": 84,
+   "units": 17.03,
+   "roi": 6.81,
    "avgPrice": 0.617,
    "signal": "Could be luck",
    "signalKey": "few",
-   "z": 1.37,
-   "games": 222
+   "z": 1.36,
+   "games": 229
   },
   "tenP70": {
    "name": "Tennis · Polymarket · score 70+",
    "venues": [
     "Polymarket"
    ],
-   "n": 18,
-   "w": 14,
+   "n": 19,
+   "w": 15,
    "l": 4,
-   "units": 4.19,
-   "roi": 23.28,
-   "avgPrice": 0.636,
+   "units": 4.49,
+   "roi": 23.62,
+   "avgPrice": 0.643,
    "signal": "Too few bets",
    "signalKey": "few",
    "z": null,
@@ -331,48 +331,48 @@
    "venues": [
     "Polymarket"
    ],
-   "n": 176,
-   "w": 115,
-   "l": 56,
-   "units": 15.09,
-   "roi": 8.57,
+   "n": 182,
+   "w": 120,
+   "l": 57,
+   "units": 17.33,
+   "roi": 9.52,
    "avgPrice": 0.625,
    "signal": "Promising, keep watching",
    "signalKey": "maybe",
-   "z": 1.5,
-   "games": 163
+   "z": 1.69,
+   "games": 168
   },
   "tenK70": {
    "name": "Tennis · Kalshi · score 70+",
    "venues": [
     "Kalshi"
    ],
-   "n": 42,
+   "n": 43,
    "w": 29,
-   "l": 13,
-   "units": 6.54,
-   "roi": 15.57,
-   "avgPrice": 0.613,
+   "l": 14,
+   "units": 5.54,
+   "roi": 12.89,
+   "avgPrice": 0.615,
    "signal": "Could be luck",
    "signalKey": "few",
-   "z": 1.23,
-   "games": 39
+   "z": 1.02,
+   "games": 40
   },
   "tenK60": {
    "name": "Tennis · Kalshi · score 60+",
    "venues": [
     "Kalshi"
    ],
-   "n": 59,
+   "n": 61,
    "w": 39,
-   "l": 20,
-   "units": 5.59,
-   "roi": 9.48,
+   "l": 22,
+   "units": 3.59,
+   "roi": 5.89,
    "avgPrice": 0.606,
    "signal": "Could be luck",
    "signalKey": "few",
-   "z": 0.87,
-   "games": 54
+   "z": 0.54,
+   "games": 56
   },
   "ucl7090s60": {
    "name": "UCL · 70–90¢ · score 60+",
@@ -475,32 +475,32 @@
    "venues": [
     "Polymarket"
    ],
-   "n": 29,
+   "n": 30,
    "w": 24,
-   "l": 5,
-   "units": 4.63,
-   "roi": 15.97,
-   "avgPrice": 0.717,
-   "signal": "Too few bets",
+   "l": 6,
+   "units": 3.63,
+   "roi": 12.11,
+   "avgPrice": 0.715,
+   "signal": "Could be luck",
    "signalKey": "few",
-   "z": null,
-   "games": null
+   "z": 1.13,
+   "games": 29
   },
   "esp4060agree": {
    "name": "Esports · 40–60¢ · big money agrees",
    "venues": [
     "Polymarket"
    ],
-   "n": 93,
+   "n": 94,
    "w": 56,
-   "l": 36,
-   "units": 17.97,
-   "roi": 19.33,
-   "avgPrice": 0.51,
+   "l": 37,
+   "units": 16.97,
+   "roi": 18.06,
+   "avgPrice": 0.509,
    "signal": "Promising, keep watching",
    "signalKey": "maybe",
-   "z": 1.97,
-   "games": 89
+   "z": 1.85,
+   "games": 90
   },
   "seraSharp50": {
    "name": "Serie A · sharps · score 50+",
@@ -539,16 +539,16 @@
    "venues": [
     "Polymarket"
    ],
-   "n": 43,
-   "w": 35,
-   "l": 8,
-   "units": 1.76,
-   "roi": 4.09,
+   "n": 45,
+   "w": 36,
+   "l": 9,
+   "units": 1.13,
+   "roi": 2.51,
    "avgPrice": 0.773,
    "signal": "Could be luck",
    "signalKey": "few",
-   "z": 0.53,
-   "games": 43
+   "z": 0.32,
+   "games": 45
   },
   "uel7090s50": {
    "name": "UEL · 70–90¢ · score 50+",
@@ -619,32 +619,32 @@
    "venues": [
     "Polymarket"
    ],
-   "n": 573,
-   "w": 350,
-   "l": 223,
-   "units": 32.77,
-   "roi": 5.72,
-   "avgPrice": 0.58,
-   "signal": "Promising, keep watching",
-   "signalKey": "maybe",
-   "z": 1.52,
-   "games": 471
+   "n": 578,
+   "w": 353,
+   "l": 225,
+   "units": 32.31,
+   "roi": 5.59,
+   "avgPrice": 0.581,
+   "signal": "Could be luck",
+   "signalKey": "few",
+   "z": 1.49,
+   "games": 475
   },
   "esp7090": {
    "name": "Esports 70–90¢",
    "venues": [
     "Polymarket"
    ],
-   "n": 275,
-   "w": 218,
+   "n": 277,
+   "w": 220,
    "l": 56,
-   "units": 7.31,
-   "roi": 2.66,
+   "units": 8.03,
+   "roi": 2.9,
    "avgPrice": 0.774,
    "signal": "Could be luck",
    "signalKey": "few",
-   "z": 0.78,
-   "games": 215
+   "z": 0.85,
+   "games": 217
   }
  }
 }
