@@ -1,9 +1,9 @@
 {
- "updated": 1794999350,
+ "updated": 1794999943,
  "mode": "paper",
  "startedAt": 1794969372,
  "real": {
-  "orders": 17,
+  "orders": 18,
   "fills": 14,
   "settled": 13,
   "w": 4,
@@ -27,12 +27,12 @@
   "takerPct": 85.71,
   "liveQuotePct": 100,
   "open": 1,
-  "resting": 0,
+  "resting": 1,
   "cancelled": 3
  },
  "byRule": {
   "pmSharp3h": {
-   "orders": 17,
+   "orders": 18,
    "fills": 14,
    "settled": 13,
    "w": 4,
@@ -56,13 +56,13 @@
    "takerPct": 85.71,
    "liveQuotePct": 100,
    "open": 1,
-   "resting": 0,
+   "resting": 1,
    "cancelled": 3
   }
  },
  "byShadow": {
   "pmSharp3hML": {
-   "orders": 1,
+   "orders": 2,
    "fills": 1,
    "settled": 0,
    "w": 0,
@@ -86,7 +86,7 @@
    "takerPct": 100,
    "liveQuotePct": 100,
    "open": 1,
-   "resting": 0,
+   "resting": 1,
    "cancelled": 0
   },
   "flowAgree2080s70": {
@@ -107,13 +107,13 @@
    ],
    "whaleUnits": -2.45,
    "whaleRoi": -16.31,
-   "clvN": 15,
-   "clvAvgCents": 2.3,
-   "clvAvgPct": 5.23,
-   "clvBeatPct": 26.67,
+   "clvN": 16,
+   "clvAvgCents": 2.97,
+   "clvAvgPct": 7.22,
+   "clvBeatPct": 31.25,
    "clvCI": [
-    -6.05,
-    10.65
+    -4.93,
+    10.86
    ],
    "medianSlipCents": 0,
    "avgSlipCents": -2.11,
@@ -236,8 +236,8 @@
    "cancelled": 0
   }
  },
- "openUnits": 1,
- "unitsToday": 1,
+ "openUnits": 2,
+ "unitsToday": 2,
  "drawdown": {
   "units": -5.46,
   "max": 9.11,
@@ -270,8 +270,8 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.012391699735449735,
-   "detail": "0.0 weeks, 13 settled bets"
+   "progress": 0.01263682208994709,
+   "detail": "0.1 weeks, 13 settled bets"
   }
  ],
  "config": {
@@ -320,18 +320,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1794999350,
+  "at": 1794999943,
   "status": "ok",
-  "candidates": 31,
-  "ordered": 0,
+  "candidates": 33,
+  "ordered": 1,
   "filled": 0,
-  "rested": 0,
+  "rested": 1,
   "skipped": 0,
-  "shadowOrdered": 0,
+  "shadowOrdered": 1,
   "settled": 0,
   "cancelled": 0,
-  "closes": 36
+  "closes": 35
  },
- "dataUpdated": 1794999293,
+ "dataUpdated": 1794999890,
  "killSwitch": false
 }
