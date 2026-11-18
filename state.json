@@ -801,8 +801,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1794985540,
-    "minsBefore": 6854,
+    "at": 1794986151,
+    "minsBefore": 6844,
     "source": "kalshi market"
    }
   },
@@ -855,8 +855,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1794985540,
-    "minsBefore": 2529,
+    "at": 1794986151,
+    "minsBefore": 2519,
     "source": "kalshi market"
    }
   },
@@ -898,7 +898,7 @@
     "at": 1794969373,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.73,
    "filledAt": 1794969372,
    "taker": true,
@@ -912,7 +912,12 @@
     "at": 1794974156,
     "minsBefore": 4,
     "source": "kalshi market"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.3699,
+   "units": 0.351,
+   "whaleUnits": 0.3333333333333333,
+   "settledAt": 1794986148
   },
   {
    "id": "1794969372-17",
@@ -963,8 +968,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1794985540,
-    "minsBefore": 5094,
+    "at": 1794986151,
+    "minsBefore": 5084,
     "source": "kalshi market"
    }
   },
@@ -1076,8 +1081,8 @@
     "bid": 0.63,
     "ask": 0.64,
     "mid": 0.635,
-    "at": 1794985540,
-    "minsBefore": 5094,
+    "at": 1794986151,
+    "minsBefore": 5084,
     "source": "kalshi market"
    }
   },
@@ -1189,8 +1194,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1794985540,
-    "minsBefore": 6414,
+    "at": 1794986151,
+    "minsBefore": 6404,
     "source": "kalshi market"
    }
   },
@@ -1243,8 +1248,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1794985540,
-    "minsBefore": 6414,
+    "at": 1794986151,
+    "minsBefore": 6404,
     "source": "kalshi market"
    }
   },
@@ -1356,8 +1361,8 @@
     "bid": 0.64,
     "ask": 0.65,
     "mid": 0.645,
-    "at": 1794985541,
-    "minsBefore": 684,
+    "at": 1794986151,
+    "minsBefore": 674,
     "source": "polymarket book"
    }
   },
@@ -1523,8 +1528,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1794985541,
-    "minsBefore": 2529,
+    "at": 1794986151,
+    "minsBefore": 2519,
     "source": "polymarket book"
    }
   },
@@ -1636,8 +1641,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1794985541,
-    "minsBefore": 354,
+    "at": 1794986151,
+    "minsBefore": 344,
     "source": "polymarket book"
    }
   },
@@ -1690,8 +1695,8 @@
     "bid": 0.64,
     "ask": 0.65,
     "mid": 0.645,
-    "at": 1794985541,
-    "minsBefore": 684,
+    "at": 1794986151,
+    "minsBefore": 674,
     "source": "polymarket book"
    }
   },
@@ -2023,7 +2028,7 @@
     "at": 1794971752,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.28,
    "filledAt": 1794971751,
    "taker": true,
@@ -2037,7 +2042,12 @@
     "at": 1794974156,
     "minsBefore": 4,
     "source": "kalshi market"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0504,
+   "whaleUnits": -1,
+   "settledAt": 1794986148
   },
   {
    "id": "1794972357-37",
@@ -2198,8 +2208,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1794985541,
-    "minsBefore": 294,
+    "at": 1794986151,
+    "minsBefore": 284,
     "source": "polymarket book"
    }
   },
@@ -2241,7 +2251,7 @@
     "at": 1794973558,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.48,
    "filledAt": 1794973557,
    "taker": true,
@@ -2255,7 +2265,12 @@
     "at": 1794974156,
     "minsBefore": 4,
     "source": "kalshi market"
-   }
+   },
+   "result": "W",
+   "grossUnits": 1.0833,
+   "units": 1.0469,
+   "whaleUnits": 1.0408163265306123,
+   "settledAt": 1794986148
   },
   {
    "id": "1794973557-41",
@@ -2306,8 +2321,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1794985541,
-    "minsBefore": 84,
+    "at": 1794986151,
+    "minsBefore": 74,
     "source": "kalshi market"
    }
   },
@@ -2349,7 +2364,7 @@
     "at": 1794973558,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.58,
    "filledAt": 1794973557,
    "taker": true,
@@ -2363,7 +2378,12 @@
     "at": 1794974156,
     "minsBefore": 4,
     "source": "kalshi market"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0294,
+   "whaleUnits": -1,
+   "settledAt": 1794986148
   },
   {
    "id": "1794974154-43",
@@ -2414,8 +2434,8 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1794985541,
-    "minsBefore": 2529,
+    "at": 1794986151,
+    "minsBefore": 2519,
     "source": "kalshi market"
    }
   },
@@ -2465,11 +2485,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -1,
    "close": {
-    "bid": 0.8,
-    "ask": 0.81,
-    "mid": 0.805,
-    "at": 1794985541,
-    "minsBefore": 1194,
+    "bid": 0.79,
+    "ask": 0.8,
+    "mid": 0.795,
+    "at": 1794986152,
+    "minsBefore": 1184,
     "source": "polymarket book"
    }
   },
@@ -2522,8 +2542,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1794985541,
-    "minsBefore": 1014,
+    "at": 1794986151,
+    "minsBefore": 1004,
     "source": "kalshi market"
    }
   },
@@ -2630,10 +2650,10 @@
    "slippageCents": 1,
    "close": {
     "bid": 0.47,
-    "ask": 0.49,
-    "mid": 0.48,
-    "at": 1794985541,
-    "minsBefore": 1014,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1794986151,
+    "minsBefore": 1004,
     "source": "kalshi market"
    }
   },
@@ -2686,8 +2706,8 @@
     "bid": 0.51,
     "ask": 0.53,
     "mid": 0.52,
-    "at": 1794985541,
-    "minsBefore": 774,
+    "at": 1794986151,
+    "minsBefore": 764,
     "source": "kalshi market"
    }
   },
@@ -2740,8 +2760,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1794985541,
-    "minsBefore": 1074,
+    "at": 1794986152,
+    "minsBefore": 1064,
     "source": "polymarket book"
    }
   },
@@ -2794,8 +2814,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1794985541,
-    "minsBefore": 264,
+    "at": 1794986152,
+    "minsBefore": 254,
     "source": "polymarket book"
    }
   },
@@ -2845,11 +2865,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 0,
    "close": {
-    "bid": 0.52,
+    "bid": 0.51,
     "ask": 0.53,
-    "mid": 0.525,
-    "at": 1794985541,
-    "minsBefore": 1014,
+    "mid": 0.52,
+    "at": 1794986151,
+    "minsBefore": 1004,
     "source": "kalshi market"
    }
   },
@@ -2902,8 +2922,8 @@
     "bid": 0.72,
     "ask": 0.74,
     "mid": 0.73,
-    "at": 1794985541,
-    "minsBefore": 2184,
+    "at": 1794986152,
+    "minsBefore": 2174,
     "source": "polymarket book"
    }
   },
@@ -2953,12 +2973,66 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.83,
+    "bid": null,
     "ask": 0.84,
-    "mid": 0.835,
-    "at": 1794985541,
+    "mid": 0.84,
+    "at": 1794985539,
     "minsBefore": 114,
-    "source": "kalshi market"
+    "source": "last fill in feed (not a live quote)"
+   }
+  },
+  {
+   "id": "1794986148-54",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:072658a4-3e81-9bd1-a47d-6e5716392b37|KXITFMATCH-26NOV18HANKAL-KAL|1",
+   "pickKey": "Kalshi|KXITFMATCH-26NOV18HANKAL-KAL|1",
+   "marketKey": "Kalshi|KXITFMATCH-26NOV18HANKAL-KAL",
+   "venue": "Kalshi",
+   "conditionId": "KXITFMATCH-26NOV18HANKAL-KAL",
+   "idx": 1,
+   "name": "Not Adil Kalyanpur",
+   "title": "Adil Kalyanpur wins",
+   "slug": "KXITFMATCH-26NOV18HANKAL",
+   "league": "Other",
+   "marketType": "moneyline",
+   "start": 1794992400,
+   "whale": {
+    "q": 0.78,
+    "usd": 1217,
+    "score": 71,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794985168,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.79,
+   "createdAt": 1794986148,
+   "quoteAtOrder": {
+    "ask": 0.78,
+    "bid": null,
+    "mid": 0.78,
+    "depth": null,
+    "at": 1794985168,
+    "source": "last fill in feed (not a live quote)"
+   },
+   "status": "filled",
+   "fillPrice": 0.78,
+   "filledAt": 1794986148,
+   "taker": true,
+   "feeUnits": 0.0154,
+   "priceSource": "last fill in feed (not a live quote)",
+   "slippageCents": 0,
+   "close": {
+    "bid": null,
+    "ask": 0.78,
+    "mid": 0.78,
+    "at": 1794985168,
+    "minsBefore": 121,
+    "source": "last fill in feed (not a live quote)"
    }
   }
  ],
