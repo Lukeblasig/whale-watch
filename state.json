@@ -811,8 +811,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795041977,
-    "minsBefore": 5914,
+    "at": 1795042559,
+    "minsBefore": 5904,
     "source": "kalshi market"
    }
   },
@@ -865,8 +865,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1795041977,
-    "minsBefore": 1589,
+    "at": 1795042559,
+    "minsBefore": 1579,
     "source": "kalshi market"
    }
   },
@@ -978,8 +978,8 @@
     "bid": 0.72,
     "ask": 0.74,
     "mid": 0.73,
-    "at": 1795041977,
-    "minsBefore": 4154,
+    "at": 1795042559,
+    "minsBefore": 4144,
     "source": "kalshi market"
    }
   },
@@ -1091,8 +1091,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795041977,
-    "minsBefore": 4154,
+    "at": 1795042559,
+    "minsBefore": 4144,
     "source": "kalshi market"
    }
   },
@@ -1204,8 +1204,8 @@
     "bid": 0.41,
     "ask": 0.43,
     "mid": 0.42,
-    "at": 1795041977,
-    "minsBefore": 5474,
+    "at": 1795042559,
+    "minsBefore": 5464,
     "source": "kalshi market"
    }
   },
@@ -1258,8 +1258,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1795041977,
-    "minsBefore": 5474,
+    "at": 1795042559,
+    "minsBefore": 5464,
     "source": "kalshi market"
    }
   },
@@ -1548,8 +1548,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795041977,
-    "minsBefore": 1589,
+    "at": 1795042560,
+    "minsBefore": 1579,
     "source": "polymarket book"
    }
   },
@@ -2481,8 +2481,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795041977,
-    "minsBefore": 1589,
+    "at": 1795042559,
+    "minsBefore": 1579,
     "source": "kalshi market"
    }
   },
@@ -2535,8 +2535,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795041977,
-    "minsBefore": 254,
+    "at": 1795042560,
+    "minsBefore": 244,
     "source": "polymarket book"
    }
   },
@@ -2586,11 +2586,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 1,
    "close": {
-    "bid": 0.74,
-    "ask": 0.75,
-    "mid": 0.745,
-    "at": 1795041977,
-    "minsBefore": 74,
+    "bid": 0.75,
+    "ask": 0.76,
+    "mid": 0.755,
+    "at": 1795042559,
+    "minsBefore": 64,
     "source": "kalshi market"
    }
   },
@@ -2696,11 +2696,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 1,
    "close": {
-    "bid": 0.5,
-    "ask": 0.51,
-    "mid": 0.505,
-    "at": 1795041977,
-    "minsBefore": 74,
+    "bid": 0.55,
+    "ask": 0.56,
+    "mid": 0.555,
+    "at": 1795042559,
+    "minsBefore": 64,
     "source": "kalshi market"
    }
   },
@@ -2804,11 +2804,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.63,
-    "ask": 0.64,
-    "mid": 0.635,
-    "at": 1795041977,
-    "minsBefore": 134,
+    "bid": 0.64,
+    "ask": 0.65,
+    "mid": 0.645,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -2917,11 +2917,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 0,
    "close": {
-    "bid": 0.49,
-    "ask": 0.5,
-    "mid": 0.495,
-    "at": 1795041977,
-    "minsBefore": 74,
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795042559,
+    "minsBefore": 64,
     "source": "kalshi market"
    }
   },
@@ -2974,8 +2974,8 @@
     "bid": 0.7,
     "ask": 0.71,
     "mid": 0.705,
-    "at": 1795041977,
-    "minsBefore": 1244,
+    "at": 1795042560,
+    "minsBefore": 1234,
     "source": "polymarket book"
    }
   },
@@ -3317,11 +3317,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 1,
    "close": {
-    "bid": 0.53,
-    "ask": 0.54,
-    "mid": 0.535,
-    "at": 1795041977,
-    "minsBefore": 74,
+    "bid": 0.55,
+    "ask": 0.56,
+    "mid": 0.555,
+    "at": 1795042560,
+    "minsBefore": 64,
     "source": "kalshi market"
    }
   },
@@ -3433,8 +3433,8 @@
     "bid": 0.85,
     "ask": 0.87,
     "mid": 0.86,
-    "at": 1795041977,
-    "minsBefore": 104,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -3605,8 +3605,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795041977,
-    "minsBefore": 254,
+    "at": 1795042560,
+    "minsBefore": 244,
     "source": "polymarket book"
    }
   },
@@ -3879,8 +3879,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795041977,
-    "minsBefore": 254,
+    "at": 1795042560,
+    "minsBefore": 244,
     "source": "polymarket book"
    }
   },
@@ -4222,11 +4222,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.74,
-    "ask": 0.75,
-    "mid": 0.745,
-    "at": 1795041977,
-    "minsBefore": 74,
+    "bid": 0.75,
+    "ask": 0.76,
+    "mid": 0.755,
+    "at": 1795042560,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -4801,8 +4801,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795041977,
-    "minsBefore": 254,
+    "at": 1795042560,
+    "minsBefore": 244,
     "source": "kalshi market"
    }
   },
@@ -4855,8 +4855,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795041977,
-    "minsBefore": 104,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "kalshi market"
    }
   },
@@ -4906,11 +4906,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.74,
-    "ask": 0.75,
-    "mid": 0.745,
-    "at": 1795041977,
-    "minsBefore": 74,
+    "bid": 0.75,
+    "ask": 0.76,
+    "mid": 0.755,
+    "at": 1795042560,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -4963,8 +4963,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795041977,
-    "minsBefore": 134,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -5017,8 +5017,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1795041977,
-    "minsBefore": 44,
+    "at": 1795042560,
+    "minsBefore": 34,
     "source": "polymarket book"
    }
   },
@@ -5237,8 +5237,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795041978,
-    "minsBefore": 104,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -5342,11 +5342,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.63,
-    "ask": 0.64,
-    "mid": 0.635,
-    "at": 1795041977,
-    "minsBefore": 134,
+    "bid": 0.64,
+    "ask": 0.65,
+    "mid": 0.645,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -5504,11 +5504,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.5,
-    "ask": 0.51,
-    "mid": 0.505,
-    "at": 1795041978,
-    "minsBefore": 74,
+    "bid": 0.45,
+    "ask": 0.46,
+    "mid": 0.455,
+    "at": 1795042560,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -5620,8 +5620,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795041978,
-    "minsBefore": 44,
+    "at": 1795042560,
+    "minsBefore": 34,
     "source": "polymarket book"
    }
   },
@@ -5674,8 +5674,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795041978,
-    "minsBefore": 104,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -5728,8 +5728,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795041978,
-    "minsBefore": 104,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -5838,8 +5838,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795041978,
-    "minsBefore": 104,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -5889,11 +5889,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.55,
-    "ask": 0.56,
-    "mid": 0.555,
-    "at": 1795041978,
-    "minsBefore": 104,
+    "bid": 0.57,
+    "ask": 0.58,
+    "mid": 0.575,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "kalshi market"
    }
   },
@@ -6177,8 +6177,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795041978,
-    "minsBefore": 5474,
+    "at": 1795042560,
+    "minsBefore": 5464,
     "source": "polymarket book"
    }
   },
@@ -6523,8 +6523,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795041978,
-    "minsBefore": 254,
+    "at": 1795042560,
+    "minsBefore": 244,
     "source": "kalshi market"
    }
   },
@@ -6574,11 +6574,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 0,
    "close": {
-    "bid": 0.39,
-    "ask": 0.41,
-    "mid": 0.4,
-    "at": 1795041978,
-    "minsBefore": 6974,
+    "bid": 0.43,
+    "ask": 0.44,
+    "mid": 0.435,
+    "at": 1795042560,
+    "minsBefore": 6964,
     "source": "kalshi market"
    }
   },
@@ -6631,8 +6631,8 @@
     "bid": 0.69,
     "ask": 0.7,
     "mid": 0.695,
-    "at": 1795041978,
-    "minsBefore": 134,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -6790,11 +6790,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.43,
-    "ask": 0.44,
-    "mid": 0.435,
-    "at": 1795041978,
-    "minsBefore": 104,
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -6844,11 +6844,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.36,
-    "ask": 0.37,
-    "mid": 0.365,
-    "at": 1795041978,
-    "minsBefore": 104,
+    "bid": 0.39,
+    "ask": 0.4,
+    "mid": 0.395,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "kalshi market"
    }
   },
@@ -6898,11 +6898,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.56,
-    "ask": 0.57,
-    "mid": 0.565,
-    "at": 1795041978,
-    "minsBefore": 104,
+    "bid": 0.58,
+    "ask": 0.59,
+    "mid": 0.585,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -6955,8 +6955,8 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795041978,
-    "minsBefore": 134,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "kalshi market"
    }
   },
@@ -7006,11 +7006,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 0,
    "close": {
-    "bid": 0.54,
-    "ask": 0.55,
-    "mid": 0.545,
-    "at": 1795041978,
-    "minsBefore": 74,
+    "bid": 0.55,
+    "ask": 0.56,
+    "mid": 0.555,
+    "at": 1795042560,
+    "minsBefore": 64,
     "source": "kalshi market"
    }
   },
@@ -7171,8 +7171,8 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795041978,
-    "minsBefore": 74,
+    "at": 1795042560,
+    "minsBefore": 64,
     "source": "kalshi market"
    }
   },
@@ -7504,8 +7504,8 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1795041978,
-    "minsBefore": 134,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -7558,8 +7558,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795041978,
-    "minsBefore": 134,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -7609,11 +7609,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.35,
-    "ask": 0.36,
-    "mid": 0.355,
-    "at": 1795041978,
-    "minsBefore": 134,
+    "bid": 0.36,
+    "ask": 0.37,
+    "mid": 0.365,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "kalshi market"
    }
   },
@@ -7666,8 +7666,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795041978,
-    "minsBefore": 134,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -7720,8 +7720,8 @@
     "bid": 0.63,
     "ask": 0.64,
     "mid": 0.635,
-    "at": 1795041978,
-    "minsBefore": 134,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -7774,8 +7774,8 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1795041978,
-    "minsBefore": 134,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -7828,8 +7828,8 @@
     "bid": 0.63,
     "ask": 0.64,
     "mid": 0.635,
-    "at": 1795041978,
-    "minsBefore": 134,
+    "at": 1795042560,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -7882,8 +7882,8 @@
     "bid": 0.69,
     "ask": 0.7,
     "mid": 0.695,
-    "at": 1795041979,
-    "minsBefore": 3704,
+    "at": 1795042561,
+    "minsBefore": 3694,
     "source": "polymarket book"
    }
   },
@@ -7936,8 +7936,8 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795041979,
-    "minsBefore": 134,
+    "at": 1795042561,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -7990,8 +7990,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795041978,
-    "minsBefore": 194,
+    "at": 1795042560,
+    "minsBefore": 184,
     "source": "kalshi market"
    }
   },
@@ -8044,8 +8044,8 @@
     "bid": 0.51,
     "ask": 0.52,
     "mid": 0.515,
-    "at": 1795041978,
-    "minsBefore": 104,
+    "at": 1795042560,
+    "minsBefore": 94,
     "source": "kalshi market"
    }
   },
@@ -8152,8 +8152,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795041979,
-    "minsBefore": 74,
+    "at": 1795042561,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -8206,8 +8206,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795041978,
-    "minsBefore": 74,
+    "at": 1795042561,
+    "minsBefore": 64,
     "source": "kalshi market"
    }
   },
@@ -8314,8 +8314,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795041979,
-    "minsBefore": 4154,
+    "at": 1795042561,
+    "minsBefore": 4144,
     "source": "polymarket book"
    }
   },
@@ -8368,8 +8368,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795041979,
-    "minsBefore": 5174,
+    "at": 1795042561,
+    "minsBefore": 5164,
     "source": "polymarket book"
    }
   },
@@ -8422,8 +8422,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795041977,
-    "minsBefore": 1589,
+    "at": 1795042560,
+    "minsBefore": 1579,
     "source": "polymarket book"
    }
   },
@@ -8476,8 +8476,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795041979,
-    "minsBefore": 104,
+    "at": 1795042561,
+    "minsBefore": 94,
     "source": "kalshi market"
    }
   },
@@ -8527,11 +8527,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 0,
    "close": {
-    "bid": 0.44,
-    "ask": 0.46,
-    "mid": 0.45,
-    "at": 1795041979,
-    "minsBefore": 104,
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795042561,
+    "minsBefore": 94,
     "source": "kalshi market"
    }
   },
@@ -8638,8 +8638,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795041979,
-    "minsBefore": 104,
+    "at": 1795042561,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -8692,8 +8692,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795041979,
-    "minsBefore": 104,
+    "at": 1795042561,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -8746,8 +8746,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795041979,
-    "minsBefore": 104,
+    "at": 1795042561,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -8800,8 +8800,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795041979,
-    "minsBefore": 104,
+    "at": 1795042561,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -8854,8 +8854,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795041979,
-    "minsBefore": 104,
+    "at": 1795042561,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -8908,8 +8908,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795041979,
-    "minsBefore": 134,
+    "at": 1795042561,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -8962,8 +8962,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795041979,
-    "minsBefore": 134,
+    "at": 1795042561,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -9016,8 +9016,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795041979,
-    "minsBefore": 104,
+    "at": 1795042561,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -9070,8 +9070,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795041979,
-    "minsBefore": 134,
+    "at": 1795042561,
+    "minsBefore": 124,
     "source": "polymarket book"
    }
   },
@@ -9124,8 +9124,8 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795041979,
-    "minsBefore": 104,
+    "at": 1795042561,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -9178,8 +9178,8 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795041979,
-    "minsBefore": 74,
+    "at": 1795042561,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -9229,11 +9229,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.74,
-    "ask": 0.75,
-    "mid": 0.745,
-    "at": 1795041977,
-    "minsBefore": 74,
+    "bid": 0.75,
+    "ask": 0.76,
+    "mid": 0.755,
+    "at": 1795042560,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -9286,8 +9286,8 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795041979,
-    "minsBefore": 74,
+    "at": 1795042561,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -9337,11 +9337,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.74,
-    "ask": 0.75,
-    "mid": 0.745,
-    "at": 1795041977,
-    "minsBefore": 74,
+    "bid": 0.75,
+    "ask": 0.76,
+    "mid": 0.755,
+    "at": 1795042560,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -9391,11 +9391,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 1,
    "close": {
-    "bid": 0.51,
-    "ask": 0.52,
-    "mid": 0.515,
-    "at": 1795041979,
-    "minsBefore": 134,
+    "bid": 0.52,
+    "ask": 0.53,
+    "mid": 0.525,
+    "at": 1795042561,
+    "minsBefore": 124,
     "source": "kalshi market"
    }
   },
@@ -9448,8 +9448,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795041978,
-    "minsBefore": 44,
+    "at": 1795042560,
+    "minsBefore": 34,
     "source": "polymarket book"
    }
   },
@@ -9502,8 +9502,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795041978,
-    "minsBefore": 44,
+    "at": 1795042560,
+    "minsBefore": 34,
     "source": "polymarket book"
    }
   },
@@ -9556,8 +9556,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795041980,
-    "minsBefore": 74,
+    "at": 1795042561,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -9607,11 +9607,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.49,
-    "ask": 0.5,
-    "mid": 0.495,
-    "at": 1795041979,
-    "minsBefore": 74,
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795042561,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -9664,8 +9664,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795041979,
-    "minsBefore": 74,
+    "at": 1795042561,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -9715,11 +9715,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.49,
-    "ask": 0.5,
-    "mid": 0.495,
-    "at": 1795041979,
-    "minsBefore": 74,
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795042561,
+    "minsBefore": 64,
     "source": "polymarket book"
    }
   },
@@ -9772,9 +9772,765 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795041979,
-    "minsBefore": 74,
+    "at": 1795042561,
+    "minsBefore": 64,
     "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1795042559-176",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067|0",
+   "pickKey": "Polymarket|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067|0",
+   "marketKey": "Polymarket|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067",
+   "venue": "Polymarket",
+   "conditionId": "0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Cruzeiro EC win on 2026-11-18?",
+   "slug": "bra-cru-pal-2026-11-18",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795044600,
+   "whale": {
+    "q": 0.4099,
+    "usd": 47233,
+    "score": 47,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795041676,
+    "wallet": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.41,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.42,
+    "bid": 0.41,
+    "mid": 0.415,
+    "depth": 12648.55,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.41,
+    "ask": 0.42,
+    "mid": 0.415,
+    "at": 1795042561,
+    "minsBefore": 34,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-177",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c|1",
+   "pickKey": "Polymarket|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c|1",
+   "marketKey": "Polymarket|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c",
+   "venue": "Polymarket",
+   "conditionId": "0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c",
+   "idx": 1,
+   "name": "No",
+   "title": "Will SE Palmeiras win on 2026-11-18?",
+   "slug": "bra-cru-pal-2026-11-18",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795044600,
+   "whale": {
+    "q": 0.6711,
+    "usd": 15470,
+    "score": 55,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795041688,
+    "wallet": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.68,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.67,
+    "bid": 0.66,
+    "mid": 0.665,
+    "depth": 1972.48,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.67,
+   "filledAt": 1795042559,
+   "taker": true,
+   "feeUnits": 0.0099,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.1,
+   "close": {
+    "bid": 0.66,
+    "ask": 0.67,
+    "mid": 0.665,
+    "at": 1795042561,
+    "minsBefore": 34,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-178",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0xbfd40a4fcb43d80eb4fb425f75d4fa090c61526f|0x71905582dfc0161febdb3cf9848fab5d9a0edcd4bbe7063f1f1bc83a8abdc4fe|1",
+   "pickKey": "Polymarket|0x71905582dfc0161febdb3cf9848fab5d9a0edcd4bbe7063f1f1bc83a8abdc4fe|1",
+   "marketKey": "Polymarket|0x71905582dfc0161febdb3cf9848fab5d9a0edcd4bbe7063f1f1bc83a8abdc4fe",
+   "venue": "Polymarket",
+   "conditionId": "0x71905582dfc0161febdb3cf9848fab5d9a0edcd4bbe7063f1f1bc83a8abdc4fe",
+   "idx": 1,
+   "name": "Under",
+   "title": "Central Michigan vs. Buffalo: O/U 45.5",
+   "slug": "cfb-cmich-buf-2026-11-18",
+   "league": "CFB",
+   "marketType": "total",
+   "start": 1795048200,
+   "whale": {
+    "q": 0.49,
+    "usd": 2000,
+    "score": 42,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795041761,
+    "wallet": "0xbfd40a4fcb43d80eb4fb425f75d4fa090c61526f"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.5,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.49,
+    "bid": 0.48,
+    "mid": 0.485,
+    "depth": 5215.17,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.49,
+   "filledAt": 1795042559,
+   "taker": true,
+   "feeUnits": 0.0153,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.48,
+    "ask": 0.49,
+    "mid": 0.485,
+    "at": 1795042561,
+    "minsBefore": 94,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-179",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746|0",
+   "pickKey": "Polymarket|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746|0",
+   "marketKey": "Polymarket|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746",
+   "venue": "Polymarket",
+   "conditionId": "0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746",
+   "idx": 0,
+   "name": "Wizards",
+   "title": "Wizards vs. Raptors",
+   "slug": "nba-was-tor-2026-11-18",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795048200,
+   "whale": {
+    "q": 0.37,
+    "usd": 3163,
+    "score": 39,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795042156,
+    "wallet": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.38,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.4,
+    "bid": 0.39,
+    "mid": 0.395,
+    "depth": 44139.4,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.39,
+    "ask": 0.4,
+    "mid": 0.395,
+    "at": 1795042561,
+    "minsBefore": 94,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-180",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xee3026a9d3cce4d8355cecdaede97dfd729d4f22bd5d446f6561f7c3ea6d45d6|1",
+   "pickKey": "Polymarket|0xee3026a9d3cce4d8355cecdaede97dfd729d4f22bd5d446f6561f7c3ea6d45d6|1",
+   "marketKey": "Polymarket|0xee3026a9d3cce4d8355cecdaede97dfd729d4f22bd5d446f6561f7c3ea6d45d6",
+   "venue": "Polymarket",
+   "conditionId": "0xee3026a9d3cce4d8355cecdaede97dfd729d4f22bd5d446f6561f7c3ea6d45d6",
+   "idx": 1,
+   "name": "Wizards",
+   "title": "Spread: Raptors (-7.5)",
+   "slug": "nba-was-tor-2026-11-18",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1795048200,
+   "whale": {
+    "q": 0.59,
+    "usd": 2823,
+    "score": 57,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795042166,
+    "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.6,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.61,
+    "bid": 0.6,
+    "mid": 0.605,
+    "depth": 325,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.6,
+    "ask": 0.61,
+    "mid": 0.605,
+    "at": 1795042561,
+    "minsBefore": 94,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-181",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531|1",
+   "pickKey": "Polymarket|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531|1",
+   "marketKey": "Polymarket|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531",
+   "venue": "Polymarket",
+   "conditionId": "0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531",
+   "idx": 1,
+   "name": "Wizards",
+   "title": "Spread: Raptors (-8.5)",
+   "slug": "nba-was-tor-2026-11-18",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1795048200,
+   "whale": {
+    "q": 0.62,
+    "usd": 1900,
+    "score": 58,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795042240,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.63,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.62,
+    "bid": 0.61,
+    "mid": 0.615,
+    "depth": 12221.04,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.62,
+   "filledAt": 1795042559,
+   "taker": true,
+   "feeUnits": 0.0114,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.61,
+    "ask": 0.62,
+    "mid": 0.615,
+    "at": 1795042561,
+    "minsBefore": 94,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-182",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "pmSharp3hML",
+   "alsoMatched": [],
+   "sigKey": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746|0",
+   "pickKey": "Polymarket|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746|0",
+   "marketKey": "Polymarket|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746",
+   "venue": "Polymarket",
+   "conditionId": "0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746",
+   "idx": 0,
+   "name": "Wizards",
+   "title": "Wizards vs. Raptors",
+   "slug": "nba-was-tor-2026-11-18",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795048200,
+   "whale": {
+    "q": 0.37,
+    "usd": 3163,
+    "score": 39,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795042156,
+    "wallet": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.38,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.4,
+    "bid": 0.39,
+    "mid": 0.395,
+    "depth": 44139.4,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.39,
+    "ask": 0.4,
+    "mid": 0.395,
+    "at": 1795042561,
+    "minsBefore": 94,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-183",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "pmSharp3hML",
+   "alsoMatched": [],
+   "sigKey": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067|0",
+   "pickKey": "Polymarket|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067|0",
+   "marketKey": "Polymarket|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067",
+   "venue": "Polymarket",
+   "conditionId": "0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Cruzeiro EC win on 2026-11-18?",
+   "slug": "bra-cru-pal-2026-11-18",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795044600,
+   "whale": {
+    "q": 0.4099,
+    "usd": 47233,
+    "score": 47,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795041676,
+    "wallet": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.41,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.42,
+    "bid": 0.41,
+    "mid": 0.415,
+    "depth": 12648.55,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.41,
+    "ask": 0.42,
+    "mid": 0.415,
+    "at": 1795042561,
+    "minsBefore": 34,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-184",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "pmSharp3hML",
+   "alsoMatched": [],
+   "sigKey": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c|1",
+   "pickKey": "Polymarket|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c|1",
+   "marketKey": "Polymarket|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c",
+   "venue": "Polymarket",
+   "conditionId": "0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c",
+   "idx": 1,
+   "name": "No",
+   "title": "Will SE Palmeiras win on 2026-11-18?",
+   "slug": "bra-cru-pal-2026-11-18",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795044600,
+   "whale": {
+    "q": 0.6711,
+    "usd": 15470,
+    "score": 55,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795041688,
+    "wallet": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.68,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.67,
+    "bid": 0.66,
+    "mid": 0.665,
+    "depth": 1972.48,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.67,
+   "filledAt": 1795042559,
+   "taker": true,
+   "feeUnits": 0.0099,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.1,
+   "close": {
+    "bid": 0.66,
+    "ask": 0.67,
+    "mid": 0.665,
+    "at": 1795042561,
+    "minsBefore": 34,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-185",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x6572c08990d732a23fd1913bc48459cd813fb2fe0b1fdcdd644e0d9880fd8ed3|1",
+   "pickKey": "Polymarket|0x6572c08990d732a23fd1913bc48459cd813fb2fe0b1fdcdd644e0d9880fd8ed3|1",
+   "marketKey": "Polymarket|0x6572c08990d732a23fd1913bc48459cd813fb2fe0b1fdcdd644e0d9880fd8ed3",
+   "venue": "Polymarket",
+   "conditionId": "0x6572c08990d732a23fd1913bc48459cd813fb2fe0b1fdcdd644e0d9880fd8ed3",
+   "idx": 1,
+   "name": "Wizards",
+   "title": "Spread: Raptors (-4.5)",
+   "slug": "nba-was-tor-2026-11-18",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1795048200,
+   "whale": {
+    "q": 0.5087,
+    "usd": 13399,
+    "score": 71,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795023568,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.51,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.53,
+    "bid": 0.52,
+    "mid": 0.525,
+    "depth": 1625,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.52,
+    "ask": 0.53,
+    "mid": 0.525,
+    "at": 1795042561,
+    "minsBefore": 94,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-186",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "p7090ok",
+   "alsoMatched": [],
+   "sigKey": "0x511f9c771449162349795d17becf8b37031acbe1|0x6f1094562499f3da42e1c6332c2e4533eec810c314f472e7ab4e082d26a3a66c|1",
+   "pickKey": "Polymarket|0x6f1094562499f3da42e1c6332c2e4533eec810c314f472e7ab4e082d26a3a66c|1",
+   "marketKey": "Polymarket|0x6f1094562499f3da42e1c6332c2e4533eec810c314f472e7ab4e082d26a3a66c",
+   "venue": "Polymarket",
+   "conditionId": "0x6f1094562499f3da42e1c6332c2e4533eec810c314f472e7ab4e082d26a3a66c",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Cruzeiro EC vs. SE Palmeiras end in a draw?",
+   "slug": "bra-cru-pal-2026-11-18",
+   "league": "Other soccer",
+   "marketType": "draw",
+   "start": 1795044600,
+   "whale": {
+    "q": 0.75,
+    "usd": 2671,
+    "score": 38,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795041677,
+    "wallet": "0x511f9c771449162349795d17becf8b37031acbe1"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.76,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.75,
+    "bid": 0.74,
+    "mid": 0.745,
+    "depth": 22314.27,
+    "at": 1795042562,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.75,
+   "filledAt": 1795042559,
+   "taker": true,
+   "feeUnits": 0.0075,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.74,
+    "ask": 0.75,
+    "mid": 0.745,
+    "at": 1795042562,
+    "minsBefore": 34,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-187",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "sharp6090agree",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531|1",
+   "pickKey": "Polymarket|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531|1",
+   "marketKey": "Polymarket|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531",
+   "venue": "Polymarket",
+   "conditionId": "0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531",
+   "idx": 1,
+   "name": "Wizards",
+   "title": "Spread: Raptors (-8.5)",
+   "slug": "nba-was-tor-2026-11-18",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1795048200,
+   "whale": {
+    "q": 0.62,
+    "usd": 1900,
+    "score": 58,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795042240,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.63,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.62,
+    "bid": 0.61,
+    "mid": 0.615,
+    "depth": 12221.04,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.62,
+   "filledAt": 1795042559,
+   "taker": true,
+   "feeUnits": 0.0114,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.61,
+    "ask": 0.62,
+    "mid": 0.615,
+    "at": 1795042561,
+    "minsBefore": 94,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-188",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "socAgree40",
+   "alsoMatched": [],
+   "sigKey": "0xaeaa7466b55793b4f3403e5a46e6379d8e8df0c1|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067|0",
+   "pickKey": "Polymarket|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067|0",
+   "marketKey": "Polymarket|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067",
+   "venue": "Polymarket",
+   "conditionId": "0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Cruzeiro EC win on 2026-11-18?",
+   "slug": "bra-cru-pal-2026-11-18",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795044600,
+   "whale": {
+    "q": 0.4,
+    "usd": 4000,
+    "score": 48,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795041773,
+    "wallet": "0xaeaa7466b55793b4f3403e5a46e6379d8e8df0c1"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.41,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.42,
+    "bid": 0.41,
+    "mid": 0.415,
+    "depth": 12648.55,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.41,
+    "ask": 0.42,
+    "mid": 0.415,
+    "at": 1795042561,
+    "minsBefore": 34,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795042559-189",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "socAgree40",
+   "alsoMatched": [],
+   "sigKey": "0x511f9c771449162349795d17becf8b37031acbe1|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c|1",
+   "pickKey": "Polymarket|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c|1",
+   "marketKey": "Polymarket|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c",
+   "venue": "Polymarket",
+   "conditionId": "0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c",
+   "idx": 1,
+   "name": "No",
+   "title": "Will SE Palmeiras win on 2026-11-18?",
+   "slug": "bra-cru-pal-2026-11-18",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795044600,
+   "whale": {
+    "q": 0.65,
+    "usd": 2315,
+    "score": 47,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795041677,
+    "wallet": "0x511f9c771449162349795d17becf8b37031acbe1"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.66,
+   "createdAt": 1795042559,
+   "quoteAtOrder": {
+    "ask": 0.67,
+    "bid": 0.66,
+    "mid": 0.665,
+    "depth": 1972.48,
+    "at": 1795042561,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.66,
+    "ask": 0.67,
+    "mid": 0.665,
+    "at": 1795042561,
+    "minsBefore": 34,
+    "source": "polymarket book"
    }
   }
  ],
@@ -9808,7 +10564,8 @@
   "p7090ok|Polymarket|0x55d7ab4736966fbd555cb3e5d2569fa7df7e7b4b9b8eab1ffaa3b581aa2a88e7|0|starts in under 10 min": 1795032000,
   "soc7090agree40|Polymarket|0xc559ea2f2bf125e738235678dd5e1900a479fa845a31c9b942c4068971544e53|0|starts in under 10 min": 1795032000,
   "socAgree40|Polymarket|0xc559ea2f2bf125e738235678dd5e1900a479fa845a31c9b942c4068971544e53|0|starts in under 10 min": 1795032000,
-  "flowAgree2080s70|Kalshi|KXNCAAMBSPREAD-26NOV18HOUFLA-FLA3|1|starts in under 10 min": 1795037400
+  "flowAgree2080s70|Kalshi|KXNCAAMBSPREAD-26NOV18HOUFLA-FLA3|1|starts in under 10 min": 1795037400,
+  "p7090ok|Polymarket|0x4264f4beeab93bc0b6ef72601945753a04a3cfd57334fa8e1a7e370a70cc14e2|1|starts in under 10 min": 1795042800
  },
  "firstAlert": {
   "pmSharp3h|Polymarket|0x4634b27dc17dffe88c1bd72e7b21d52c217d541a784ae2ae30a73a56d39ca88b": {
@@ -10294,6 +11051,42 @@
   "pmSharp3hML|Polymarket|0x559ca9498eba90b68476a9788fa29cb000e691ef6ab02f1e3bfdf07f11da4572": {
    "key": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0x559ca9498eba90b68476a9788fa29cb000e691ef6ab02f1e3bfdf07f11da4572|0",
    "start": 1795046400
+  },
+  "pmSharp3h|Polymarket|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531|1",
+   "start": 1795048200
+  },
+  "pmSharp3h|Polymarket|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746": {
+   "key": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746|0",
+   "start": 1795048200
+  },
+  "pmSharp3h|Polymarket|0xee3026a9d3cce4d8355cecdaede97dfd729d4f22bd5d446f6561f7c3ea6d45d6": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xee3026a9d3cce4d8355cecdaede97dfd729d4f22bd5d446f6561f7c3ea6d45d6|1",
+   "start": 1795048200
+  },
+  "pmSharp3h|Polymarket|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067": {
+   "key": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067|0",
+   "start": 1795044600
+  },
+  "pmSharp3h|Polymarket|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c": {
+   "key": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c|1",
+   "start": 1795044600
+  },
+  "pmSharp3h|Polymarket|0x71905582dfc0161febdb3cf9848fab5d9a0edcd4bbe7063f1f1bc83a8abdc4fe": {
+   "key": "0xbfd40a4fcb43d80eb4fb425f75d4fa090c61526f|0x71905582dfc0161febdb3cf9848fab5d9a0edcd4bbe7063f1f1bc83a8abdc4fe|1",
+   "start": 1795048200
+  },
+  "pmSharp3hML|Polymarket|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746": {
+   "key": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746|0",
+   "start": 1795048200
+  },
+  "pmSharp3hML|Polymarket|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067": {
+   "key": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067|0",
+   "start": 1795044600
+  },
+  "pmSharp3hML|Polymarket|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c": {
+   "key": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c|1",
+   "start": 1795044600
   }
  }
 }
