@@ -1,0 +1,1956 @@
+{
+ "version": 1,
+ "orders": [
+  {
+   "id": "1794969372-1",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x9d556907d239211fa56438cfe927f6f1231f091c3f4e4d901d82fb95f90c00ff|0",
+   "pickKey": "Polymarket|0x9d556907d239211fa56438cfe927f6f1231f091c3f4e4d901d82fb95f90c00ff|0",
+   "marketKey": "Polymarket|0x9d556907d239211fa56438cfe927f6f1231f091c3f4e4d901d82fb95f90c00ff",
+   "venue": "Polymarket",
+   "conditionId": "0x9d556907d239211fa56438cfe927f6f1231f091c3f4e4d901d82fb95f90c00ff",
+   "idx": 0,
+   "name": "Golden Knights",
+   "title": "Spread: Golden Knights (-1.5)",
+   "slug": "nhl-dal-las-2026-11-17",
+   "league": "NHL",
+   "marketType": "spread",
+   "start": 1794970800,
+   "whale": {
+    "q": 0.32,
+    "usd": 3767,
+    "score": 47,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1794966694,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.33,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.32,
+    "bid": 0.31,
+    "mid": 0.315,
+    "depth": 3077.16,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.32,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0204,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.31,
+    "ask": 0.32,
+    "mid": 0.315,
+    "at": 1794969373,
+    "minsBefore": 24,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-2",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xe02874894921d7078c3ec1ad3be9e178ad54b09c0374325b5bc7ee7afc2b8a4a|0",
+   "pickKey": "Polymarket|0xe02874894921d7078c3ec1ad3be9e178ad54b09c0374325b5bc7ee7afc2b8a4a|0",
+   "marketKey": "Polymarket|0xe02874894921d7078c3ec1ad3be9e178ad54b09c0374325b5bc7ee7afc2b8a4a",
+   "venue": "Polymarket",
+   "conditionId": "0xe02874894921d7078c3ec1ad3be9e178ad54b09c0374325b5bc7ee7afc2b8a4a",
+   "idx": 0,
+   "name": "Over",
+   "title": "Stars vs. Golden Knights: O/U 5.5",
+   "slug": "nhl-dal-las-2026-11-17",
+   "league": "NHL",
+   "marketType": "total",
+   "start": 1794970800,
+   "whale": {
+    "q": 0.54,
+    "usd": 1705,
+    "score": 51,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1794966721,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.55,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.55,
+    "bid": 0.54,
+    "mid": 0.545,
+    "depth": 38327.7,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.55,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0135,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.54,
+    "ask": 0.55,
+    "mid": 0.545,
+    "at": 1794969373,
+    "minsBefore": 24,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-3",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x0147726109a63208e94a3c37e578bbbaaf6a61aceab9f67b43633612392f8fa5|0",
+   "pickKey": "Polymarket|0x0147726109a63208e94a3c37e578bbbaaf6a61aceab9f67b43633612392f8fa5|0",
+   "marketKey": "Polymarket|0x0147726109a63208e94a3c37e578bbbaaf6a61aceab9f67b43633612392f8fa5",
+   "venue": "Polymarket",
+   "conditionId": "0x0147726109a63208e94a3c37e578bbbaaf6a61aceab9f67b43633612392f8fa5",
+   "idx": 0,
+   "name": "Over",
+   "title": "Jazz vs. Clippers: O/U 225.5",
+   "slug": "nba-uta-lac-2026-11-17",
+   "league": "NBA",
+   "marketType": "total",
+   "start": 1794972600,
+   "whale": {
+    "q": 0.52,
+    "usd": 36472,
+    "score": 66,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1794962990,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.53,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.55,
+    "bid": 0.54,
+    "mid": 0.545,
+    "depth": 75498.6,
+    "at": 1794969372,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.54,
+    "ask": 0.55,
+    "mid": 0.545,
+    "at": 1794969372,
+    "minsBefore": 54,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-4",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x9c9e6f1cf783e46bb686969d65fa584bdd48ab27c8e3ac6e8fe834080c302d05|0",
+   "pickKey": "Polymarket|0x9c9e6f1cf783e46bb686969d65fa584bdd48ab27c8e3ac6e8fe834080c302d05|0",
+   "marketKey": "Polymarket|0x9c9e6f1cf783e46bb686969d65fa584bdd48ab27c8e3ac6e8fe834080c302d05",
+   "venue": "Polymarket",
+   "conditionId": "0x9c9e6f1cf783e46bb686969d65fa584bdd48ab27c8e3ac6e8fe834080c302d05",
+   "idx": 0,
+   "name": "Over",
+   "title": "Jazz vs. Clippers: O/U 224.5",
+   "slug": "nba-uta-lac-2026-11-17",
+   "league": "NBA",
+   "marketType": "total",
+   "start": 1794972600,
+   "whale": {
+    "q": 0.54,
+    "usd": 12710,
+    "score": 71,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1794963733,
+    "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.55,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.58,
+    "bid": 0.57,
+    "mid": 0.575,
+    "depth": 22590.21,
+    "at": 1794969372,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.57,
+    "ask": 0.58,
+    "mid": 0.575,
+    "at": 1794969372,
+    "minsBefore": 54,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-5",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8|1",
+   "pickKey": "Polymarket|0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8|1",
+   "marketKey": "Polymarket|0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8",
+   "venue": "Polymarket",
+   "conditionId": "0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8",
+   "idx": 1,
+   "name": "Jazz",
+   "title": "Spread: Clippers (-6.5)",
+   "slug": "nba-uta-lac-2026-11-17",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1794972600,
+   "whale": {
+    "q": 0.52,
+    "usd": 5200,
+    "score": 73,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1794965537,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.53,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.52,
+    "bid": 0.51,
+    "mid": 0.515,
+    "depth": 360333.81,
+    "at": 1794969372,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.52,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0144,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.51,
+    "ask": 0.52,
+    "mid": 0.515,
+    "at": 1794969372,
+    "minsBefore": 54,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-6",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a|0",
+   "pickKey": "Polymarket|0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a|0",
+   "marketKey": "Polymarket|0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a",
+   "venue": "Polymarket",
+   "conditionId": "0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a",
+   "idx": 0,
+   "name": "Over",
+   "title": "Jazz vs. Clippers: O/U 226.5",
+   "slug": "nba-uta-lac-2026-11-17",
+   "league": "NBA",
+   "marketType": "total",
+   "start": 1794972600,
+   "whale": {
+    "q": 0.51,
+    "usd": 1638,
+    "score": 61,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1794966451,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.52,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.51,
+    "bid": 0.5,
+    "mid": 0.505,
+    "depth": 39179.46,
+    "at": 1794969372,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.51,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0147,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.5,
+    "ask": 0.51,
+    "mid": 0.505,
+    "at": 1794969372,
+    "minsBefore": 54,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-7",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x34d27f7247ec27ee27c441d9f51b2ea99be244431421f98779a0f3bae15abd47|0",
+   "pickKey": "Polymarket|0x34d27f7247ec27ee27c441d9f51b2ea99be244431421f98779a0f3bae15abd47|0",
+   "marketKey": "Polymarket|0x34d27f7247ec27ee27c441d9f51b2ea99be244431421f98779a0f3bae15abd47",
+   "venue": "Polymarket",
+   "conditionId": "0x34d27f7247ec27ee27c441d9f51b2ea99be244431421f98779a0f3bae15abd47",
+   "idx": 0,
+   "name": "Over",
+   "title": "Jazz vs. Clippers: O/U 227.5",
+   "slug": "nba-uta-lac-2026-11-17",
+   "league": "NBA",
+   "marketType": "total",
+   "start": 1794972600,
+   "whale": {
+    "q": 0.49,
+    "usd": 2660,
+    "score": 57,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1794967684,
+    "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.5,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.5,
+    "bid": 0.49,
+    "mid": 0.495,
+    "depth": 9896.99,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.5,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.015,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.49,
+    "ask": 0.5,
+    "mid": 0.495,
+    "at": 1794969373,
+    "minsBefore": 54,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-8",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x9cb990f1862568a63d8601efeebe0304225c32f2|0x941c3787299be8687b6ebdbb5470cd73c1f869bca79933a7fb1f7dfbedcea745|0",
+   "pickKey": "Polymarket|0x941c3787299be8687b6ebdbb5470cd73c1f869bca79933a7fb1f7dfbedcea745|0",
+   "marketKey": "Polymarket|0x941c3787299be8687b6ebdbb5470cd73c1f869bca79933a7fb1f7dfbedcea745",
+   "venue": "Polymarket",
+   "conditionId": "0x941c3787299be8687b6ebdbb5470cd73c1f869bca79933a7fb1f7dfbedcea745",
+   "idx": 0,
+   "name": "Clippers",
+   "title": "Spread: Clippers (-5.5)",
+   "slug": "nba-uta-lac-2026-11-17",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1794972600,
+   "whale": {
+    "q": 0.53,
+    "usd": 1590,
+    "score": 27,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1794968944,
+    "wallet": "0x9cb990f1862568a63d8601efeebe0304225c32f2"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.54,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.53,
+    "bid": 0.52,
+    "mid": 0.525,
+    "depth": 65032.97,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.53,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0141,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.52,
+    "ask": 0.53,
+    "mid": 0.525,
+    "at": 1794969373,
+    "minsBefore": 54,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-9",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x7a345fd14e1c93efc480596b788fcb839cfff4e4cc20320b6a7e65f7097f123b|1",
+   "pickKey": "Polymarket|0x7a345fd14e1c93efc480596b788fcb839cfff4e4cc20320b6a7e65f7097f123b|1",
+   "marketKey": "Polymarket|0x7a345fd14e1c93efc480596b788fcb839cfff4e4cc20320b6a7e65f7097f123b",
+   "venue": "Polymarket",
+   "conditionId": "0x7a345fd14e1c93efc480596b788fcb839cfff4e4cc20320b6a7e65f7097f123b",
+   "idx": 1,
+   "name": "Under",
+   "title": "Hornets vs. Lakers: O/U 222.5",
+   "slug": "nba-cha-lal-2026-11-17",
+   "league": "NBA",
+   "marketType": "total",
+   "start": 1794974400,
+   "whale": {
+    "q": 0.51,
+    "usd": 3194,
+    "score": 69,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1794967766,
+    "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.52,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.53,
+    "bid": 0.52,
+    "mid": 0.525,
+    "depth": 26,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.52,
+    "ask": 0.53,
+    "mid": 0.525,
+    "at": 1794969373,
+    "minsBefore": 84,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-10",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xd22cbfe8320f317dd5dc6fc360ef11bf8f43b0715db6d837a590ed94a032248d|1",
+   "pickKey": "Polymarket|0xd22cbfe8320f317dd5dc6fc360ef11bf8f43b0715db6d837a590ed94a032248d|1",
+   "marketKey": "Polymarket|0xd22cbfe8320f317dd5dc6fc360ef11bf8f43b0715db6d837a590ed94a032248d",
+   "venue": "Polymarket",
+   "conditionId": "0xd22cbfe8320f317dd5dc6fc360ef11bf8f43b0715db6d837a590ed94a032248d",
+   "idx": 1,
+   "name": "Under",
+   "title": "Hornets vs. Lakers: O/U 220.5",
+   "slug": "nba-cha-lal-2026-11-17",
+   "league": "NBA",
+   "marketType": "total",
+   "start": 1794974400,
+   "whale": {
+    "q": 0.48,
+    "usd": 1034,
+    "score": 48,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1794968086,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.49,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.48,
+    "bid": 0.47,
+    "mid": 0.475,
+    "depth": 58246.73,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.48,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0156,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1794969373,
+    "minsBefore": 84,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-11",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x230377d4da66c5e838859bc9a4db8149be3288856dda3a0f18e8ee7f449e933a|1",
+   "pickKey": "Polymarket|0x230377d4da66c5e838859bc9a4db8149be3288856dda3a0f18e8ee7f449e933a|1",
+   "marketKey": "Polymarket|0x230377d4da66c5e838859bc9a4db8149be3288856dda3a0f18e8ee7f449e933a",
+   "venue": "Polymarket",
+   "conditionId": "0x230377d4da66c5e838859bc9a4db8149be3288856dda3a0f18e8ee7f449e933a",
+   "idx": 1,
+   "name": "Under",
+   "title": "Hornets vs. Lakers: O/U 219.5",
+   "slug": "nba-cha-lal-2026-11-17",
+   "league": "NBA",
+   "marketType": "total",
+   "start": 1794974400,
+   "whale": {
+    "q": 0.45,
+    "usd": 1661,
+    "score": 46,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1794968086,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.46,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.46,
+    "bid": 0.45,
+    "mid": 0.455,
+    "depth": 1217.83,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.46,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0162,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.45,
+    "ask": 0.46,
+    "mid": 0.455,
+    "at": 1794969373,
+    "minsBefore": 84,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-12",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x4df332e27f9ee3224f52ce30e3ce15c1075e788f|0x61d485e96294fd320a9c1a8df936ada1f35d632e89ec3391aa583ca01e898a34|0",
+   "pickKey": "Polymarket|0x61d485e96294fd320a9c1a8df936ada1f35d632e89ec3391aa583ca01e898a34|0",
+   "marketKey": "Polymarket|0x61d485e96294fd320a9c1a8df936ada1f35d632e89ec3391aa583ca01e898a34",
+   "venue": "Polymarket",
+   "conditionId": "0x61d485e96294fd320a9c1a8df936ada1f35d632e89ec3391aa583ca01e898a34",
+   "idx": 0,
+   "name": "Lakers",
+   "title": "Spread: Lakers (-8.5)",
+   "slug": "nba-cha-lal-2026-11-17",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1794974400,
+   "whale": {
+    "q": 0.44,
+    "usd": 2109,
+    "score": 58,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1794968218,
+    "wallet": "0x4df332e27f9ee3224f52ce30e3ce15c1075e788f"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.45,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.44,
+    "bid": 0.43,
+    "mid": 0.435,
+    "depth": 13230.03,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.44,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0168,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.43,
+    "ask": 0.44,
+    "mid": 0.435,
+    "at": 1794969373,
+    "minsBefore": 84,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-13",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x9cb990f1862568a63d8601efeebe0304225c32f2|0x82a95d6db40a1b8efadc5fa6f516fe749015af2ef9107f35730154b31ddab623|0",
+   "pickKey": "Polymarket|0x82a95d6db40a1b8efadc5fa6f516fe749015af2ef9107f35730154b31ddab623|0",
+   "marketKey": "Polymarket|0x82a95d6db40a1b8efadc5fa6f516fe749015af2ef9107f35730154b31ddab623",
+   "venue": "Polymarket",
+   "conditionId": "0x82a95d6db40a1b8efadc5fa6f516fe749015af2ef9107f35730154b31ddab623",
+   "idx": 0,
+   "name": "Lakers",
+   "title": "Spread: Lakers (-6.5)",
+   "slug": "nba-cha-lal-2026-11-17",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1794974400,
+   "whale": {
+    "q": 0.53,
+    "usd": 2120,
+    "score": 49,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1794968957,
+    "wallet": "0x9cb990f1862568a63d8601efeebe0304225c32f2"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.54,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.53,
+    "bid": 0.52,
+    "mid": 0.525,
+    "depth": 128109.96,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.53,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0141,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.52,
+    "ask": 0.53,
+    "mid": 0.525,
+    "at": 1794969373,
+    "minsBefore": 84,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-14",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:0726686e-f0c1-9712-a303-4cbb41a53eff|KXNFLGAME-26NOV22MINSF-MIN|0",
+   "pickKey": "Kalshi|KXNFLGAME-26NOV22MINSF-MIN|0",
+   "marketKey": "Kalshi|KXNFLGAME-26NOV22MINSF-MIN",
+   "venue": "Kalshi",
+   "conditionId": "KXNFLGAME-26NOV22MINSF-MIN",
+   "idx": 0,
+   "name": "Minnesota",
+   "title": "Minnesota wins",
+   "slug": "KXNFLGAME-26NOV22MINSF",
+   "league": "NFL",
+   "marketType": "moneyline",
+   "start": 1795396800,
+   "whale": {
+    "q": 0.45,
+    "usd": 23087,
+    "score": 85,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794803308,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.46,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.41,
+    "bid": 0.4,
+    "mid": 0.405,
+    "depth": null,
+    "at": 1794969373,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.41,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0413,
+   "priceSource": "kalshi market",
+   "slippageCents": -4,
+   "close": {
+    "bid": 0.4,
+    "ask": 0.41,
+    "mid": 0.405,
+    "at": 1794969373,
+    "minsBefore": 7124,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794969372-15",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:0726779d-7061-acce-c4ae-553000ec000c|KXNFLSPREAD-26NOV19INDHOU-HOU11|0",
+   "pickKey": "Kalshi|KXNFLSPREAD-26NOV19INDHOU-HOU11|0",
+   "marketKey": "Kalshi|KXNFLSPREAD-26NOV19INDHOU-HOU11",
+   "venue": "Kalshi",
+   "conditionId": "KXNFLSPREAD-26NOV19INDHOU-HOU11",
+   "idx": 0,
+   "name": "Houston wins by over 10.5 points",
+   "title": "Houston wins by over 10.5 points?",
+   "slug": "KXNFLSPREAD-26NOV19INDHOU",
+   "league": "NFL",
+   "marketType": "total",
+   "start": 1795137300,
+   "whale": {
+    "q": 0.52,
+    "usd": 96592,
+    "score": 90,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794842660,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.53,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.55,
+    "bid": 0.54,
+    "mid": 0.545,
+    "depth": null,
+    "at": 1794969373,
+    "source": "kalshi market"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.54,
+    "ask": 0.55,
+    "mid": 0.545,
+    "at": 1794969373,
+    "minsBefore": 2799,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794969372-16",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:072678b9-e839-bffa-94fb-f78886b1b476|KXNBAGAME-26NOV17CHALAL-LAL|0",
+   "pickKey": "Kalshi|KXNBAGAME-26NOV17CHALAL-LAL|0",
+   "marketKey": "Kalshi|KXNBAGAME-26NOV17CHALAL-LAL",
+   "venue": "Kalshi",
+   "conditionId": "KXNBAGAME-26NOV17CHALAL-LAL",
+   "idx": 0,
+   "name": "Los Angeles L",
+   "title": "Los Angeles L wins",
+   "slug": "KXNBAGAME-26NOV17CHALAL",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1794974400,
+   "whale": {
+    "q": 0.75,
+    "usd": 7071,
+    "score": 76,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794889916,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.76,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.73,
+    "bid": 0.72,
+    "mid": 0.725,
+    "depth": null,
+    "at": 1794969373,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.73,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0189,
+   "priceSource": "kalshi market",
+   "slippageCents": -2,
+   "close": {
+    "bid": 0.72,
+    "ask": 0.73,
+    "mid": 0.725,
+    "at": 1794969373,
+    "minsBefore": 84,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794969372-17",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07267832-e8f9-bda0-1473-0290ae4f8bed|KXNCAAFGAME-26NOV21ARIZKSU-ARIZ|0",
+   "pickKey": "Kalshi|KXNCAAFGAME-26NOV21ARIZKSU-ARIZ|0",
+   "marketKey": "Kalshi|KXNCAAFGAME-26NOV21ARIZKSU-ARIZ",
+   "venue": "Kalshi",
+   "conditionId": "KXNCAAFGAME-26NOV21ARIZKSU-ARIZ",
+   "idx": 0,
+   "name": "Arizona",
+   "title": "Arizona wins",
+   "slug": "KXNCAAFGAME-26NOV21ARIZKSU",
+   "league": "CFB",
+   "marketType": "moneyline",
+   "start": 1795291200,
+   "whale": {
+    "q": 0.73,
+    "usd": 11403,
+    "score": 81,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794893372,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.74,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.74,
+    "bid": 0.73,
+    "mid": 0.735,
+    "depth": null,
+    "at": 1794969373,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.74,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0182,
+   "priceSource": "kalshi market",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.73,
+    "ask": 0.74,
+    "mid": 0.735,
+    "at": 1794969373,
+    "minsBefore": 5364,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794969372-18",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07264eb1-8919-b1f5-78aa-ac8bf5eaac21|KXNBAGAME-26NOV17UTALAC-LAC|0",
+   "pickKey": "Kalshi|KXNBAGAME-26NOV17UTALAC-LAC|0",
+   "marketKey": "Kalshi|KXNBAGAME-26NOV17UTALAC-LAC",
+   "venue": "Kalshi",
+   "conditionId": "KXNBAGAME-26NOV17UTALAC-LAC",
+   "idx": 0,
+   "name": "Los Angeles C",
+   "title": "Los Angeles C wins",
+   "slug": "KXNBAGAME-26NOV17UTALAC",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1794972600,
+   "whale": {
+    "q": 0.7,
+    "usd": 25532,
+    "score": 83,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794923943,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.71,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.68,
+    "bid": 0.67,
+    "mid": 0.675,
+    "depth": null,
+    "at": 1794969373,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.68,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0224,
+   "priceSource": "kalshi market",
+   "slippageCents": -2,
+   "close": {
+    "bid": 0.67,
+    "ask": 0.68,
+    "mid": 0.675,
+    "at": 1794969373,
+    "minsBefore": 54,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794969372-19",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07264312-8679-b262-2b97-b948ed22dc0e|KXNCAAFGAME-26NOV21TTUBAY-TTU|0",
+   "pickKey": "Kalshi|KXNCAAFGAME-26NOV21TTUBAY-TTU|0",
+   "marketKey": "Kalshi|KXNCAAFGAME-26NOV21TTUBAY-TTU",
+   "venue": "Kalshi",
+   "conditionId": "KXNCAAFGAME-26NOV21TTUBAY-TTU",
+   "idx": 0,
+   "name": "Texas Tech",
+   "title": "Texas Tech wins",
+   "slug": "KXNCAAFGAME-26NOV21TTUBAY",
+   "league": "CFB",
+   "marketType": "moneyline",
+   "start": 1795291200,
+   "whale": {
+    "q": 0.67,
+    "usd": 24545,
+    "score": 83,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794937494,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.68,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.64,
+    "bid": 0.63,
+    "mid": 0.635,
+    "depth": null,
+    "at": 1794969373,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.64,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0252,
+   "priceSource": "kalshi market",
+   "slippageCents": -3,
+   "close": {
+    "bid": 0.63,
+    "ask": 0.64,
+    "mid": 0.635,
+    "at": 1794969373,
+    "minsBefore": 5364,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794969372-20",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07264433-5cb9-b523-fea4-04e57c83c18a|KXNCAAMBTOTAL-26NOV17SEACBU-135|1",
+   "pickKey": "Kalshi|KXNCAAMBTOTAL-26NOV17SEACBU-135|1",
+   "marketKey": "Kalshi|KXNCAAMBTOTAL-26NOV17SEACBU-135",
+   "venue": "Kalshi",
+   "conditionId": "KXNCAAMBTOTAL-26NOV17SEACBU-135",
+   "idx": 1,
+   "name": "Not Over 134.5 points",
+   "title": "Full Game: Over 134.5 points scored",
+   "slug": "KXNCAAMBTOTAL-26NOV17SEACBU",
+   "league": "CBB",
+   "marketType": "total",
+   "start": 1794970800,
+   "whale": {
+    "q": 0.54,
+    "usd": 4890,
+    "score": 76,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794951983,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.55,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.54,
+    "bid": 0.53,
+    "mid": 0.535,
+    "depth": null,
+    "at": 1794969373,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.54,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0322,
+   "priceSource": "kalshi market",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.53,
+    "ask": 0.54,
+    "mid": 0.535,
+    "at": 1794969373,
+    "minsBefore": 24,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794969372-21",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07264714-5131-87d6-fbac-a4c4c2bc6877|KXNFLSPREAD-26NOV22TBDET-DET10|0",
+   "pickKey": "Kalshi|KXNFLSPREAD-26NOV22TBDET-DET10|0",
+   "marketKey": "Kalshi|KXNFLSPREAD-26NOV22TBDET-DET10",
+   "venue": "Kalshi",
+   "conditionId": "KXNFLSPREAD-26NOV22TBDET-DET10",
+   "idx": 0,
+   "name": "Detroit wins by over 9.5 points",
+   "title": "Detroit wins by over 9.5 points?",
+   "slug": "KXNFLSPREAD-26NOV22TBDET",
+   "league": "NFL",
+   "marketType": "total",
+   "start": 1795370400,
+   "whale": {
+    "q": 0.38,
+    "usd": 19000,
+    "score": 83,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794954537,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.39,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.44,
+    "bid": 0.43,
+    "mid": 0.435,
+    "depth": null,
+    "at": 1794969373,
+    "source": "kalshi market"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.43,
+    "ask": 0.44,
+    "mid": 0.435,
+    "at": 1794969373,
+    "minsBefore": 6684,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794969372-22",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:072647ea-1271-9880-6f2b-704f3f0150b9|KXNFLGAME-26NOV22TBDET-DET|0",
+   "pickKey": "Kalshi|KXNFLGAME-26NOV22TBDET-DET|0",
+   "marketKey": "Kalshi|KXNFLGAME-26NOV22TBDET-DET",
+   "venue": "Kalshi",
+   "conditionId": "KXNFLGAME-26NOV22TBDET-DET",
+   "idx": 0,
+   "name": "Detroit",
+   "title": "Detroit wins",
+   "slug": "KXNFLGAME-26NOV22TBDET",
+   "league": "NFL",
+   "marketType": "moneyline",
+   "start": 1795370400,
+   "whale": {
+    "q": 0.72,
+    "usd": 154117,
+    "score": 89,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794954443,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.73,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.76,
+    "bid": 0.75,
+    "mid": 0.755,
+    "depth": null,
+    "at": 1794969373,
+    "source": "kalshi market"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.75,
+    "ask": 0.76,
+    "mid": 0.755,
+    "at": 1794969373,
+    "minsBefore": 6684,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794969372-23",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8|1",
+   "pickKey": "Polymarket|0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8|1",
+   "marketKey": "Polymarket|0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8",
+   "venue": "Polymarket",
+   "conditionId": "0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8",
+   "idx": 1,
+   "name": "Jazz",
+   "title": "Spread: Clippers (-6.5)",
+   "slug": "nba-uta-lac-2026-11-17",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1794972600,
+   "whale": {
+    "q": 0.52,
+    "usd": 5200,
+    "score": 73,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1794965537,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.53,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.52,
+    "bid": 0.51,
+    "mid": 0.515,
+    "depth": 360333.81,
+    "at": 1794969372,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.52,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0144,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.51,
+    "ask": 0.52,
+    "mid": 0.515,
+    "at": 1794969372,
+    "minsBefore": 54,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-24",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x4edcdebcf7588673551c18c4bd81ee1ddcad38ffce2fc60af0dc764902cb251c|0",
+   "pickKey": "Polymarket|0x4edcdebcf7588673551c18c4bd81ee1ddcad38ffce2fc60af0dc764902cb251c|0",
+   "marketKey": "Polymarket|0x4edcdebcf7588673551c18c4bd81ee1ddcad38ffce2fc60af0dc764902cb251c",
+   "venue": "Polymarket",
+   "conditionId": "0x4edcdebcf7588673551c18c4bd81ee1ddcad38ffce2fc60af0dc764902cb251c",
+   "idx": 0,
+   "name": "NIP",
+   "title": "Counter-Strike: NIP vs Luminosity (BO3) - Stake Ranked Episode 6 Playoffs",
+   "slug": "cs2-nip-lg6-2026-11-18",
+   "league": "Esports",
+   "marketType": "moneyline",
+   "start": 1795026600,
+   "whale": {
+    "q": 0.64,
+    "usd": 13273,
+    "score": 79,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1794965533,
+    "wallet": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.65,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.66,
+    "bid": 0.65,
+    "mid": 0.655,
+    "depth": 8890.09,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.65,
+    "ask": 0.66,
+    "mid": 0.655,
+    "at": 1794969373,
+    "minsBefore": 954,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-25",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a|0",
+   "pickKey": "Polymarket|0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a|0",
+   "marketKey": "Polymarket|0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a",
+   "venue": "Polymarket",
+   "conditionId": "0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a",
+   "idx": 0,
+   "name": "Over",
+   "title": "Jazz vs. Clippers: O/U 226.5",
+   "slug": "nba-uta-lac-2026-11-17",
+   "league": "NBA",
+   "marketType": "total",
+   "start": 1794972600,
+   "whale": {
+    "q": 0.51,
+    "usd": 5377,
+    "score": 77,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1794967684,
+    "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.52,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.51,
+    "bid": 0.5,
+    "mid": 0.505,
+    "depth": 39179.46,
+    "at": 1794969372,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.51,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0147,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.5,
+    "ask": 0.51,
+    "mid": 0.505,
+    "at": 1794969372,
+    "minsBefore": 54,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-26",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "p7090ok",
+   "alsoMatched": [],
+   "sigKey": "0x8861bcb388f3cd0a4bde4553b02ffe7f57b039f7|0x43cd2b241bfa0a17f1835ea5600c3018cd059eebd73ed30299b70922426b043b|1",
+   "pickKey": "Polymarket|0x43cd2b241bfa0a17f1835ea5600c3018cd059eebd73ed30299b70922426b043b|1",
+   "marketKey": "Polymarket|0x43cd2b241bfa0a17f1835ea5600c3018cd059eebd73ed30299b70922426b043b",
+   "venue": "Polymarket",
+   "conditionId": "0x43cd2b241bfa0a17f1835ea5600c3018cd059eebd73ed30299b70922426b043b",
+   "idx": 1,
+   "name": "Lakers",
+   "title": "Hornets vs. Lakers",
+   "slug": "nba-cha-lal-2026-11-17",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1794974400,
+   "whale": {
+    "q": 0.73,
+    "usd": 13673,
+    "score": 62,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794961271,
+    "wallet": "0x8861bcb388f3cd0a4bde4553b02ffe7f57b039f7"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.74,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.73,
+    "bid": 0.72,
+    "mid": 0.725,
+    "depth": 134931.94,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.73,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0081,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.72,
+    "ask": 0.73,
+    "mid": 0.725,
+    "at": 1794969373,
+    "minsBefore": 84,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-27",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "p7090ok",
+   "alsoMatched": [],
+   "sigKey": "0x613c67c3db8a9d20beb30d56aeeb9c3d2a1430fb|0x8fea0f418f6acf73de54f3652e4a7c9644e6d2c13819ad3fef90e6ea74270587|1",
+   "pickKey": "Polymarket|0x8fea0f418f6acf73de54f3652e4a7c9644e6d2c13819ad3fef90e6ea74270587|1",
+   "marketKey": "Polymarket|0x8fea0f418f6acf73de54f3652e4a7c9644e6d2c13819ad3fef90e6ea74270587",
+   "venue": "Polymarket",
+   "conditionId": "0x8fea0f418f6acf73de54f3652e4a7c9644e6d2c13819ad3fef90e6ea74270587",
+   "idx": 1,
+   "name": "Texans",
+   "title": "Colts vs. Texans",
+   "slug": "nfl-ind-hou-2026-11-20",
+   "league": "NFL",
+   "marketType": "moneyline",
+   "start": 1795137300,
+   "whale": {
+    "q": 0.85,
+    "usd": 2971,
+    "score": 28,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1794897251,
+    "wallet": "0x613c67c3db8a9d20beb30d56aeeb9c3d2a1430fb"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.86,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.85,
+    "bid": 0.84,
+    "mid": 0.845,
+    "depth": 292116.26,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.85,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0045,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.84,
+    "ask": 0.85,
+    "mid": 0.845,
+    "at": 1794969373,
+    "minsBefore": 2799,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-28",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "p7090ok",
+   "alsoMatched": [],
+   "sigKey": "0x81fa86d4bc777ee0b2d0b7dd644ca3e8bcc6c4d6|0x883423abf82b63a6ad8372d2127ca4a62bad50bc09c0730d8dd1b99fea15c3ba|1",
+   "pickKey": "Polymarket|0x883423abf82b63a6ad8372d2127ca4a62bad50bc09c0730d8dd1b99fea15c3ba|1",
+   "marketKey": "Polymarket|0x883423abf82b63a6ad8372d2127ca4a62bad50bc09c0730d8dd1b99fea15c3ba",
+   "venue": "Polymarket",
+   "conditionId": "0x883423abf82b63a6ad8372d2127ca4a62bad50bc09c0730d8dd1b99fea15c3ba",
+   "idx": 1,
+   "name": "Stars",
+   "title": "Spread: Golden Knights (-2.5)",
+   "slug": "nhl-dal-las-2026-11-17",
+   "league": "NHL",
+   "marketType": "spread",
+   "start": 1794970800,
+   "whale": {
+    "q": 0.7948,
+    "usd": 1797,
+    "score": 36,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1794942407,
+    "wallet": "0x81fa86d4bc777ee0b2d0b7dd644ca3e8bcc6c4d6"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.8,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.79,
+    "bid": 0.78,
+    "mid": 0.785,
+    "depth": 914,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.79,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0063,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.5,
+   "close": {
+    "bid": 0.78,
+    "ask": 0.79,
+    "mid": 0.785,
+    "at": 1794969373,
+    "minsBefore": 24,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-29",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "p7090ok",
+   "alsoMatched": [],
+   "sigKey": "0x56c9fbdeccf198f1f5ad95ace39b24f5f7fb0d9e|0xe697cdfd6f6b50f6428be20c1adfceeec982ba7fa991b3ac721f3b5c1284f551|0",
+   "pickKey": "Polymarket|0xe697cdfd6f6b50f6428be20c1adfceeec982ba7fa991b3ac721f3b5c1284f551|0",
+   "marketKey": "Polymarket|0xe697cdfd6f6b50f6428be20c1adfceeec982ba7fa991b3ac721f3b5c1284f551",
+   "venue": "Polymarket",
+   "conditionId": "0xe697cdfd6f6b50f6428be20c1adfceeec982ba7fa991b3ac721f3b5c1284f551",
+   "idx": 0,
+   "name": "Carlos Alcaraz",
+   "title": "ATP World Tour Finals, Ivan Lendl Group: Carlos Alcaraz vs Daniil Medvedev",
+   "slug": "atp-alcaraz-medvede-2026-11-17",
+   "league": "Tennis",
+   "marketType": "moneyline",
+   "start": 1795006800,
+   "whale": {
+    "q": 0.78,
+    "usd": 1560,
+    "score": 29,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1794942923,
+    "wallet": "0x56c9fbdeccf198f1f5ad95ace39b24f5f7fb0d9e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.79,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.78,
+    "bid": 0.77,
+    "mid": 0.775,
+    "depth": 3813.85,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.78,
+   "filledAt": 1794969372,
+   "taker": true,
+   "feeUnits": 0.0066,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.77,
+    "ask": 0.78,
+    "mid": 0.775,
+    "at": 1794969373,
+    "minsBefore": 624,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794969372-30",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "sharp6090agree",
+   "alsoMatched": [],
+   "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x4edcdebcf7588673551c18c4bd81ee1ddcad38ffce2fc60af0dc764902cb251c|0",
+   "pickKey": "Polymarket|0x4edcdebcf7588673551c18c4bd81ee1ddcad38ffce2fc60af0dc764902cb251c|0",
+   "marketKey": "Polymarket|0x4edcdebcf7588673551c18c4bd81ee1ddcad38ffce2fc60af0dc764902cb251c",
+   "venue": "Polymarket",
+   "conditionId": "0x4edcdebcf7588673551c18c4bd81ee1ddcad38ffce2fc60af0dc764902cb251c",
+   "idx": 0,
+   "name": "NIP",
+   "title": "Counter-Strike: NIP vs Luminosity (BO3) - Stake Ranked Episode 6 Playoffs",
+   "slug": "cs2-nip-lg6-2026-11-18",
+   "league": "Esports",
+   "marketType": "moneyline",
+   "start": 1795026600,
+   "whale": {
+    "q": 0.64,
+    "usd": 13273,
+    "score": 79,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1794965533,
+    "wallet": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.65,
+   "createdAt": 1794969372,
+   "quoteAtOrder": {
+    "ask": 0.66,
+    "bid": 0.65,
+    "mid": 0.655,
+    "depth": 8890.09,
+    "at": 1794969373,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.65,
+    "ask": 0.66,
+    "mid": 0.655,
+    "at": 1794969373,
+    "minsBefore": 954,
+    "source": "polymarket book"
+   }
+  }
+ ],
+ "logged": {},
+ "firstAlert": {
+  "pmSharp3h|Polymarket|0xdf22a9d7f8b773539e9b23a5a772eef13d28626fae68ee64d467efeefb0a76c7": {
+   "key": "0xad5353afe30c2da57709e2704ef3ccdcf67eef24|0xdf22a9d7f8b773539e9b23a5a772eef13d28626fae68ee64d467efeefb0a76c7|1",
+   "start": 1794944700
+  },
+  "pmSharp3h|Polymarket|0xe76c77e3c5ef89379ba12258e1c2df431684869b925a68c8c569e67c952aaa8b": {
+   "key": "0xad5353afe30c2da57709e2704ef3ccdcf67eef24|0xe76c77e3c5ef89379ba12258e1c2df431684869b925a68c8c569e67c952aaa8b|1",
+   "start": 1794944700
+  },
+  "pmSharp3h|Polymarket|0x4634b27dc17dffe88c1bd72e7b21d52c217d541a784ae2ae30a73a56d39ca88b": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x4634b27dc17dffe88c1bd72e7b21d52c217d541a784ae2ae30a73a56d39ca88b|0",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0xf67e227002e19cd36e56b3556a812df9ea20792f57c90f4b052e4453c17ad2b1": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xf67e227002e19cd36e56b3556a812df9ea20792f57c90f4b052e4453c17ad2b1|0",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0xefe674eda5754a93610852d10432a50de79ea696b2583119634c5fe8944753b1": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xefe674eda5754a93610852d10432a50de79ea696b2583119634c5fe8944753b1|0",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0xa68b3fd5030f42c319414d1b8bba1562ac94a8cad77fd094ed05f60c73cc602e": {
+   "key": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0xa68b3fd5030f42c319414d1b8bba1562ac94a8cad77fd094ed05f60c73cc602e|0",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0x6539864ddede40ce34e6838c69a61f39a6c035426cf27d2d0fa8384a2acad40a": {
+   "key": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0x6539864ddede40ce34e6838c69a61f39a6c035426cf27d2d0fa8384a2acad40a|0",
+   "start": 1794956400
+  },
+  "pmSharp3h|Polymarket|0xa3a39c77ff65834905249d6970a071e3dd09211742ce232210671683ee917c8b": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xa3a39c77ff65834905249d6970a071e3dd09211742ce232210671683ee917c8b|1",
+   "start": 1794956400
+  },
+  "pmSharp3h|Polymarket|0x169f091aa4bf0e94005204bfe89a0134039cc3a4aa450daaf912f0f5a40fb1f7": {
+   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0x169f091aa4bf0e94005204bfe89a0134039cc3a4aa450daaf912f0f5a40fb1f7|0",
+   "start": 1794956400
+  },
+  "pmSharp3h|Polymarket|0xfbba3babd80ae9631bb4c49baec66675b77f6e04ba500c62b9b3408095a65f76": {
+   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0xfbba3babd80ae9631bb4c49baec66675b77f6e04ba500c62b9b3408095a65f76|0",
+   "start": 1794956400
+  },
+  "pmSharp3h|Polymarket|0xe5cee6991686b4eec216d5c97766d2d34098d523a607cf9756be1b96e9320859": {
+   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0xe5cee6991686b4eec216d5c97766d2d34098d523a607cf9756be1b96e9320859|0",
+   "start": 1794956400
+  },
+  "pmSharp3h|Polymarket|0x94a2abd40a848a82c1691927d833f967fbea1e937294131e662e87f732c4243b": {
+   "key": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x94a2abd40a848a82c1691927d833f967fbea1e937294131e662e87f732c4243b|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x9dde472149bcd641eed8dc652609b83a21eeab42b86fd2ed233106eecdc2ccc9": {
+   "key": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0x9dde472149bcd641eed8dc652609b83a21eeab42b86fd2ed233106eecdc2ccc9|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x61100ed04d2ddc6e66d59e5985cee4e1d77d8873d0a33bd458ff1d941b842abc": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x61100ed04d2ddc6e66d59e5985cee4e1d77d8873d0a33bd458ff1d941b842abc|0",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0x67b990b90ba5681220f6a76f92e25236c3326d3bc01ab6d7e6376fad51d439be": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x67b990b90ba5681220f6a76f92e25236c3326d3bc01ab6d7e6376fad51d439be|1",
+   "start": 1794956400
+  },
+  "pmSharp3h|Polymarket|0xd7408ed91aa5ee319a7f07f01d3f89f96bc76a611c6e91cd3ae8bc25fc0c38e5": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xd7408ed91aa5ee319a7f07f01d3f89f96bc76a611c6e91cd3ae8bc25fc0c38e5|1",
+   "start": 1794956400
+  },
+  "pmSharp3h|Polymarket|0xbeb98384f95fbd6ee0a695e4faac9f249c3f1731ff3dfd5bc2ec937df09ddad1": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xbeb98384f95fbd6ee0a695e4faac9f249c3f1731ff3dfd5bc2ec937df09ddad1|0",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0x573752346be682b34b711085c431fc60a68836332b524854055f21bef1125294": {
+   "key": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0x573752346be682b34b711085c431fc60a68836332b524854055f21bef1125294|0",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0x6f1c12bd377a6602b4664a70f68ea39365f597ee6b3885890aecd9b607ae0d92": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x6f1c12bd377a6602b4664a70f68ea39365f597ee6b3885890aecd9b607ae0d92|0",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x47463db8bac7dee7d833b1379ab1404de239bbc827ccc7cc499d5a862904ed33": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x47463db8bac7dee7d833b1379ab1404de239bbc827ccc7cc499d5a862904ed33|1",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0x71e58ba84eb68468c01e00ca89cd848d4b9fd74713cd243ccf4d33463e0599b2": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x71e58ba84eb68468c01e00ca89cd848d4b9fd74713cd243ccf4d33463e0599b2|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x5c654c100f0ed834ae57ac98001859b5131fa42c17d8db8ca4b91cd947682d59": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x5c654c100f0ed834ae57ac98001859b5131fa42c17d8db8ca4b91cd947682d59|0",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x6d3aad326f0253554c1d01b1d842c6906798bf96afeffe4ecff5704363150e3e": {
+   "key": "0x2c866881290c2197960f06448d3a236d9f20d939|0x6d3aad326f0253554c1d01b1d842c6906798bf96afeffe4ecff5704363150e3e|0",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0x293f36d9dcf13d2126b1d188973ce9742ac3b569bc4d9e586f9dad46601091f1": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x293f36d9dcf13d2126b1d188973ce9742ac3b569bc4d9e586f9dad46601091f1|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0xc98d9b9c5b158d83eb96db65df4c2bdd6279e9d0d1258cea9a7f9a47435cbb9f": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xc98d9b9c5b158d83eb96db65df4c2bdd6279e9d0d1258cea9a7f9a47435cbb9f|0",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0xc155e862ef2c220b4609272728b2086a20c7c2fbfe8697fbeaec91c94935cd12": {
+   "key": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0xc155e862ef2c220b4609272728b2086a20c7c2fbfe8697fbeaec91c94935cd12|0",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0xf1a85c314f4bfded1112d3621b501a0e831accb229794d7aed7b60887d69dd0e": {
+   "key": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0xf1a85c314f4bfded1112d3621b501a0e831accb229794d7aed7b60887d69dd0e|0",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0xcb218d9d3212ccaebb64c1b46ee2d7410ba94f9fffc66561eb7ba29f2c1f41df": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xcb218d9d3212ccaebb64c1b46ee2d7410ba94f9fffc66561eb7ba29f2c1f41df|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0xffe197d6f90bd41b1dc73043651aa44573c86dbbfc7a364995da3cfe9e6df6fd": {
+   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0xffe197d6f90bd41b1dc73043651aa44573c86dbbfc7a364995da3cfe9e6df6fd|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0xf6fcff2d85a3d46a825403cfc9a016649b5df0669efc823f05ad3c462648b208": {
+   "key": "0x958bdb8aa30b8e5bd1fe4ee071f309c84e97f826|0xf6fcff2d85a3d46a825403cfc9a016649b5df0669efc823f05ad3c462648b208|0",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x16db640047c0b6019a955ade2147ead85bcb0f942ec7b0e69b1a7f4c5ba2a8c6": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x16db640047c0b6019a955ade2147ead85bcb0f942ec7b0e69b1a7f4c5ba2a8c6|0",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x9f83f1e6f1ead4824b23843684060c026c08773b3859e7daa482062e57313d34": {
+   "key": "0xa2cced8bfae7d645f7f437fb76becf2fcbb70cbc|0x9f83f1e6f1ead4824b23843684060c026c08773b3859e7daa482062e57313d34|0",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0xe71f885c25e43775bf293b0fdcd094837011c6bdd5811fee32b8e18fdd46ac85": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xe71f885c25e43775bf293b0fdcd094837011c6bdd5811fee32b8e18fdd46ac85|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x0c309e56355220439ae8e89de9519c61ad89fc0b537a9632a34b7c49b9b46f97": {
+   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0x0c309e56355220439ae8e89de9519c61ad89fc0b537a9632a34b7c49b9b46f97|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x9034a1c033bc7e9f9a13f72a00946109891601014a6bd90a9b061e6cd287e3ab": {
+   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0x9034a1c033bc7e9f9a13f72a00946109891601014a6bd90a9b061e6cd287e3ab|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0xa115ea4290e30c6ff86346b4b1fc232e865d88710a9a92d856d41efa1284fcd3": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xa115ea4290e30c6ff86346b4b1fc232e865d88710a9a92d856d41efa1284fcd3|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x3e171009172ebc069016a52cd90b0a6066d0926a2762976d920155f24407699e": {
+   "key": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x3e171009172ebc069016a52cd90b0a6066d0926a2762976d920155f24407699e|1",
+   "start": 1794960000
+  },
+  "pmSharp3h|Polymarket|0x3d3095b0d53c525850f6a849f442ef6a713e19e135caecf3253bcb430e0ae26c": {
+   "key": "0x285faa3e3d1465cf3ff1bff1e1d14891f5b8495f|0x3d3095b0d53c525850f6a849f442ef6a713e19e135caecf3253bcb430e0ae26c|0",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0x7d8a4fb129bb3c0064d79681d2922e32eba5420c8166c9899fcb9029841db845": {
+   "key": "0x492442eab586f242b53bda933fd5de859c8a3782|0x7d8a4fb129bb3c0064d79681d2922e32eba5420c8166c9899fcb9029841db845|1",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0x2ce054dcf9a496919118d060b73e8f36c0357202fd12cb95ff9ed622f6365189": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x2ce054dcf9a496919118d060b73e8f36c0357202fd12cb95ff9ed622f6365189|1",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0x2fe7159e77645183051bc0d4be927222354190bbff9bd37f3d0ff09abfa034b5": {
+   "key": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x2fe7159e77645183051bc0d4be927222354190bbff9bd37f3d0ff09abfa034b5|1",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0xdc3e8fef8566fcdb2d09f2d32fe03b56b7f232f6da7d6dbc440669d59cdc436f": {
+   "key": "0x2c866881290c2197960f06448d3a236d9f20d939|0xdc3e8fef8566fcdb2d09f2d32fe03b56b7f232f6da7d6dbc440669d59cdc436f|0",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0xc813c2e14df76fe25442ae24659b85916b326faed2c9a48e127bde080f9c567b": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xc813c2e14df76fe25442ae24659b85916b326faed2c9a48e127bde080f9c567b|1",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0x9658c65e58e7719b5154401608a44a85069eaf575b7200f36e6c309ed4fc597e": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x9658c65e58e7719b5154401608a44a85069eaf575b7200f36e6c309ed4fc597e|1",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0x61b7d6ad93320fabebd6fb2211b41d78ed4163e33b027da45172052a51c44040": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x61b7d6ad93320fabebd6fb2211b41d78ed4163e33b027da45172052a51c44040|1",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0xd20c8f180292dbd539a49c69cb45dd3226ace39ff87781eb78ae7de0e6fb1da7": {
+   "key": "0x492442eab586f242b53bda933fd5de859c8a3782|0xd20c8f180292dbd539a49c69cb45dd3226ace39ff87781eb78ae7de0e6fb1da7|1",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0x10512a725e1dd449fc7b94fb3387cde549f5a7809a7fa0fab8f2dbe7770c9826": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x10512a725e1dd449fc7b94fb3387cde549f5a7809a7fa0fab8f2dbe7770c9826|1",
+   "start": 1794961800
+  },
+  "pmSharp3h|Polymarket|0x0147726109a63208e94a3c37e578bbbaaf6a61aceab9f67b43633612392f8fa5": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x0147726109a63208e94a3c37e578bbbaaf6a61aceab9f67b43633612392f8fa5|0",
+   "start": 1794972600
+  },
+  "pmSharp3h|Polymarket|0x68783b9fb5d2dcaf7066479a4ce8fa6295e9b5cc3ff5b4e5de92f42dd452af73": {
+   "key": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x68783b9fb5d2dcaf7066479a4ce8fa6295e9b5cc3ff5b4e5de92f42dd452af73|0",
+   "start": 1794969000
+  },
+  "pmSharp3h|Polymarket|0x434a0fe2142cbac0ccf504dbfec459d2fe8794ea6e41b4a4d6c192adb1189522": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x434a0fe2142cbac0ccf504dbfec459d2fe8794ea6e41b4a4d6c192adb1189522|1",
+   "start": 1794963600
+  },
+  "pmSharp3h|Polymarket|0x9c9e6f1cf783e46bb686969d65fa584bdd48ab27c8e3ac6e8fe834080c302d05": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x9c9e6f1cf783e46bb686969d65fa584bdd48ab27c8e3ac6e8fe834080c302d05|0",
+   "start": 1794972600
+  },
+  "pmSharp3h|Polymarket|0xdbfa35a9b24c73803d2a44a50448ef1bee4e778df5f7e0bcab84a3a9417de593": {
+   "key": "0xb4f978be63cdf75554b0b46a4262a6db597cc9a7|0xdbfa35a9b24c73803d2a44a50448ef1bee4e778df5f7e0bcab84a3a9417de593|1",
+   "start": 1794967800
+  },
+  "pmSharp3h|Polymarket|0x47c1d2a15f922c2889787431df4d1b6d013b7208e994c57fca4919adcf04e40e": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x47c1d2a15f922c2889787431df4d1b6d013b7208e994c57fca4919adcf04e40e|0",
+   "start": 1794969000
+  },
+  "pmSharp3h|Polymarket|0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8|1",
+   "start": 1794972600
+  },
+  "pmSharp3h|Polymarket|0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a|0",
+   "start": 1794972600
+  },
+  "pmSharp3h|Polymarket|0xe02874894921d7078c3ec1ad3be9e178ad54b09c0374325b5bc7ee7afc2b8a4a": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xe02874894921d7078c3ec1ad3be9e178ad54b09c0374325b5bc7ee7afc2b8a4a|0",
+   "start": 1794970800
+  },
+  "pmSharp3h|Polymarket|0x9d556907d239211fa56438cfe927f6f1231f091c3f4e4d901d82fb95f90c00ff": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x9d556907d239211fa56438cfe927f6f1231f091c3f4e4d901d82fb95f90c00ff|0",
+   "start": 1794970800
+  },
+  "pmSharp3h|Polymarket|0x7a345fd14e1c93efc480596b788fcb839cfff4e4cc20320b6a7e65f7097f123b": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x7a345fd14e1c93efc480596b788fcb839cfff4e4cc20320b6a7e65f7097f123b|1",
+   "start": 1794974400
+  },
+  "pmSharp3h|Polymarket|0x34d27f7247ec27ee27c441d9f51b2ea99be244431421f98779a0f3bae15abd47": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x34d27f7247ec27ee27c441d9f51b2ea99be244431421f98779a0f3bae15abd47|0",
+   "start": 1794972600
+  },
+  "pmSharp3h|Polymarket|0xc36e10c9c0cfe112631128389dd7e2c1bf1b8ff92cb33be49838b840cc4bea2b": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xc36e10c9c0cfe112631128389dd7e2c1bf1b8ff92cb33be49838b840cc4bea2b|0",
+   "start": 1794969000
+  },
+  "pmSharp3h|Polymarket|0x61d485e96294fd320a9c1a8df936ada1f35d632e89ec3391aa583ca01e898a34": {
+   "key": "0x4df332e27f9ee3224f52ce30e3ce15c1075e788f|0x61d485e96294fd320a9c1a8df936ada1f35d632e89ec3391aa583ca01e898a34|0",
+   "start": 1794974400
+  },
+  "pmSharp3h|Polymarket|0xd22cbfe8320f317dd5dc6fc360ef11bf8f43b0715db6d837a590ed94a032248d": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xd22cbfe8320f317dd5dc6fc360ef11bf8f43b0715db6d837a590ed94a032248d|1",
+   "start": 1794974400
+  },
+  "pmSharp3h|Polymarket|0x230377d4da66c5e838859bc9a4db8149be3288856dda3a0f18e8ee7f449e933a": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x230377d4da66c5e838859bc9a4db8149be3288856dda3a0f18e8ee7f449e933a|1",
+   "start": 1794974400
+  },
+  "pmSharp3h|Polymarket|0x82a95d6db40a1b8efadc5fa6f516fe749015af2ef9107f35730154b31ddab623": {
+   "key": "0x9cb990f1862568a63d8601efeebe0304225c32f2|0x82a95d6db40a1b8efadc5fa6f516fe749015af2ef9107f35730154b31ddab623|0",
+   "start": 1794974400
+  },
+  "pmSharp3h|Polymarket|0x941c3787299be8687b6ebdbb5470cd73c1f869bca79933a7fb1f7dfbedcea745": {
+   "key": "0x9cb990f1862568a63d8601efeebe0304225c32f2|0x941c3787299be8687b6ebdbb5470cd73c1f869bca79933a7fb1f7dfbedcea745|0",
+   "start": 1794972600
+  },
+  "pmSharp3hML|Polymarket|0xdf22a9d7f8b773539e9b23a5a772eef13d28626fae68ee64d467efeefb0a76c7": {
+   "key": "0xad5353afe30c2da57709e2704ef3ccdcf67eef24|0xdf22a9d7f8b773539e9b23a5a772eef13d28626fae68ee64d467efeefb0a76c7|1",
+   "start": 1794944700
+  },
+  "pmSharp3hML|Polymarket|0xe76c77e3c5ef89379ba12258e1c2df431684869b925a68c8c569e67c952aaa8b": {
+   "key": "0xad5353afe30c2da57709e2704ef3ccdcf67eef24|0xe76c77e3c5ef89379ba12258e1c2df431684869b925a68c8c569e67c952aaa8b|1",
+   "start": 1794944700
+  },
+  "pmSharp3hML|Polymarket|0xefe674eda5754a93610852d10432a50de79ea696b2583119634c5fe8944753b1": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xefe674eda5754a93610852d10432a50de79ea696b2583119634c5fe8944753b1|0",
+   "start": 1794961800
+  },
+  "pmSharp3hML|Polymarket|0xa3a39c77ff65834905249d6970a071e3dd09211742ce232210671683ee917c8b": {
+   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xa3a39c77ff65834905249d6970a071e3dd09211742ce232210671683ee917c8b|1",
+   "start": 1794956400
+  },
+  "pmSharp3hML|Polymarket|0x9dde472149bcd641eed8dc652609b83a21eeab42b86fd2ed233106eecdc2ccc9": {
+   "key": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0x9dde472149bcd641eed8dc652609b83a21eeab42b86fd2ed233106eecdc2ccc9|1",
+   "start": 1794960000
+  },
+  "pmSharp3hML|Polymarket|0x71e58ba84eb68468c01e00ca89cd848d4b9fd74713cd243ccf4d33463e0599b2": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x71e58ba84eb68468c01e00ca89cd848d4b9fd74713cd243ccf4d33463e0599b2|1",
+   "start": 1794960000
+  },
+  "pmSharp3hML|Polymarket|0x293f36d9dcf13d2126b1d188973ce9742ac3b569bc4d9e586f9dad46601091f1": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x293f36d9dcf13d2126b1d188973ce9742ac3b569bc4d9e586f9dad46601091f1|1",
+   "start": 1794960000
+  },
+  "pmSharp3hML|Polymarket|0xc98d9b9c5b158d83eb96db65df4c2bdd6279e9d0d1258cea9a7f9a47435cbb9f": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xc98d9b9c5b158d83eb96db65df4c2bdd6279e9d0d1258cea9a7f9a47435cbb9f|0",
+   "start": 1794960000
+  },
+  "pmSharp3hML|Polymarket|0xf6fcff2d85a3d46a825403cfc9a016649b5df0669efc823f05ad3c462648b208": {
+   "key": "0x958bdb8aa30b8e5bd1fe4ee071f309c84e97f826|0xf6fcff2d85a3d46a825403cfc9a016649b5df0669efc823f05ad3c462648b208|0",
+   "start": 1794960000
+  },
+  "pmSharp3hML|Polymarket|0x16db640047c0b6019a955ade2147ead85bcb0f942ec7b0e69b1a7f4c5ba2a8c6": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x16db640047c0b6019a955ade2147ead85bcb0f942ec7b0e69b1a7f4c5ba2a8c6|0",
+   "start": 1794960000
+  },
+  "pmSharp3hML|Polymarket|0x9f83f1e6f1ead4824b23843684060c026c08773b3859e7daa482062e57313d34": {
+   "key": "0xa2cced8bfae7d645f7f437fb76becf2fcbb70cbc|0x9f83f1e6f1ead4824b23843684060c026c08773b3859e7daa482062e57313d34|0",
+   "start": 1794961800
+  },
+  "pmSharp3hML|Polymarket|0x2fe7159e77645183051bc0d4be927222354190bbff9bd37f3d0ff09abfa034b5": {
+   "key": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x2fe7159e77645183051bc0d4be927222354190bbff9bd37f3d0ff09abfa034b5|1",
+   "start": 1794963600
+  },
+  "pmSharp3hML|Polymarket|0xd20c8f180292dbd539a49c69cb45dd3226ace39ff87781eb78ae7de0e6fb1da7": {
+   "key": "0x492442eab586f242b53bda933fd5de859c8a3782|0xd20c8f180292dbd539a49c69cb45dd3226ace39ff87781eb78ae7de0e6fb1da7|1",
+   "start": 1794963600
+  },
+  "pmSharp3hML|Polymarket|0x10512a725e1dd449fc7b94fb3387cde549f5a7809a7fa0fab8f2dbe7770c9826": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x10512a725e1dd449fc7b94fb3387cde549f5a7809a7fa0fab8f2dbe7770c9826|1",
+   "start": 1794961800
+  },
+  "pmSharp3hML|Polymarket|0x434a0fe2142cbac0ccf504dbfec459d2fe8794ea6e41b4a4d6c192adb1189522": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x434a0fe2142cbac0ccf504dbfec459d2fe8794ea6e41b4a4d6c192adb1189522|1",
+   "start": 1794963600
+  },
+  "pmSharp3hML|Polymarket|0xdbfa35a9b24c73803d2a44a50448ef1bee4e778df5f7e0bcab84a3a9417de593": {
+   "key": "0xb4f978be63cdf75554b0b46a4262a6db597cc9a7|0xdbfa35a9b24c73803d2a44a50448ef1bee4e778df5f7e0bcab84a3a9417de593|1",
+   "start": 1794967800
+  },
+  "pmSharp3hML|Polymarket|0x47c1d2a15f922c2889787431df4d1b6d013b7208e994c57fca4919adcf04e40e": {
+   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x47c1d2a15f922c2889787431df4d1b6d013b7208e994c57fca4919adcf04e40e|0",
+   "start": 1794969000
+  }
+ }
+}
