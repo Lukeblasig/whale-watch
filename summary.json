@@ -1,5 +1,5 @@
 {
- "updated": 1794987935,
+ "updated": 1794988542,
  "mode": "paper",
  "startedAt": 1794969372,
  "real": {
@@ -90,7 +90,7 @@
    "cancelled": 0
   },
   "flowAgree2080s70": {
-   "orders": 30,
+   "orders": 31,
    "fills": 23,
    "settled": 11,
    "w": 4,
@@ -120,7 +120,7 @@
    "takerPct": 86.96,
    "liveQuotePct": 95.65,
    "open": 12,
-   "resting": 6,
+   "resting": 7,
    "cancelled": 1
   },
   "p7090ok": {
@@ -320,9 +320,9 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1794987935,
+  "at": 1794988542,
   "status": "ok",
-  "candidates": 26,
+  "candidates": 25,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
@@ -330,8 +330,8 @@
   "shadowOrdered": 1,
   "settled": 0,
   "cancelled": 0,
-  "closes": 26
+  "closes": 27
  },
- "dataUpdated": 1794987894,
+ "dataUpdated": 1794988495,
  "killSwitch": false
 }
