@@ -1,5 +1,5 @@
 {
- "updated": 1794988542,
+ "updated": 1794989145,
  "mode": "paper",
  "startedAt": 1794969372,
  "real": {
@@ -91,7 +91,7 @@
   },
   "flowAgree2080s70": {
    "orders": 31,
-   "fills": 23,
+   "fills": 24,
    "settled": 11,
    "w": 4,
    "l": 7,
@@ -116,16 +116,16 @@
     0.2
    ],
    "medianSlipCents": 0,
-   "avgSlipCents": -0.39,
-   "takerPct": 86.96,
-   "liveQuotePct": 95.65,
-   "open": 12,
-   "resting": 7,
+   "avgSlipCents": -0.71,
+   "takerPct": 83.33,
+   "liveQuotePct": 95.83,
+   "open": 13,
+   "resting": 6,
    "cancelled": 1
   },
   "p7090ok": {
-   "orders": 11,
-   "fills": 11,
+   "orders": 12,
+   "fills": 12,
    "settled": 3,
    "w": 3,
    "l": 0,
@@ -144,10 +144,10 @@
    "clvBeatPct": 33.33,
    "clvCI": null,
    "medianSlipCents": 0,
-   "avgSlipCents": 0.05,
+   "avgSlipCents": -0.02,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 8,
+   "open": 9,
    "resting": 0,
    "cancelled": 0
   },
@@ -180,8 +180,8 @@
    "cancelled": 0
   },
   "sharp6090agree": {
-   "orders": 1,
-   "fills": 1,
+   "orders": 2,
+   "fills": 2,
    "settled": 0,
    "w": 0,
    "l": 0,
@@ -199,11 +199,11 @@
    "clvAvgPct": null,
    "clvBeatPct": null,
    "clvCI": null,
-   "medianSlipCents": 1,
-   "avgSlipCents": 1,
-   "takerPct": 0,
+   "medianSlipCents": 0.5,
+   "avgSlipCents": 0.5,
+   "takerPct": 50,
    "liveQuotePct": 100,
-   "open": 1,
+   "open": 2,
    "resting": 0,
    "cancelled": 0
   },
@@ -320,18 +320,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1794988542,
+  "at": 1794989145,
   "status": "ok",
-  "candidates": 25,
+  "candidates": 27,
   "ordered": 0,
-  "filled": 0,
+  "filled": 1,
   "rested": 0,
   "skipped": 0,
-  "shadowOrdered": 1,
+  "shadowOrdered": 2,
   "settled": 0,
   "cancelled": 0,
-  "closes": 27
+  "closes": 28
  },
- "dataUpdated": 1794988495,
+ "dataUpdated": 1794989097,
  "killSwitch": false
 }
