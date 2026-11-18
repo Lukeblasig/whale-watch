@@ -1,5 +1,5 @@
 {
- "updated": 1795038948,
+ "updated": 1795039580,
  "mode": "paper",
  "startedAt": 1794969372,
  "real": {
@@ -102,8 +102,8 @@
    "cancelled": 1
   },
   "flowAgree2080s70": {
-   "orders": 77,
-   "fills": 54,
+   "orders": 79,
+   "fills": 55,
    "settled": 27,
    "w": 12,
    "l": 15,
@@ -119,25 +119,25 @@
    ],
    "whaleUnits": -7.17,
    "whaleRoi": -26.57,
-   "clvN": 31,
-   "clvAvgCents": 6.19,
-   "clvAvgPct": 50.13,
-   "clvBeatPct": 41.94,
+   "clvN": 32,
+   "clvAvgCents": 6.45,
+   "clvAvgPct": 49.28,
+   "clvBeatPct": 43.75,
    "clvCI": [
-    0,
-    12.38
+    0.44,
+    12.47
    ],
    "medianSlipCents": 0,
-   "avgSlipCents": -3.02,
-   "takerPct": 85.19,
-   "liveQuotePct": 98.15,
-   "open": 27,
-   "resting": 12,
+   "avgSlipCents": -2.96,
+   "takerPct": 85.45,
+   "liveQuotePct": 98.18,
+   "open": 28,
+   "resting": 13,
    "cancelled": 11
   },
   "p7090ok": {
-   "orders": 29,
-   "fills": 29,
+   "orders": 30,
+   "fills": 30,
    "settled": 8,
    "w": 7,
    "l": 1,
@@ -159,10 +159,10 @@
     1.62
    ],
    "medianSlipCents": 0,
-   "avgSlipCents": 0,
+   "avgSlipCents": -0.03,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 21,
+   "open": 22,
    "resting": 0,
    "cancelled": 0
   },
@@ -285,7 +285,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.028759920634920635,
+   "progress": 0.02902116402116402,
    "detail": "0.1 weeks, 17 settled bets"
   }
  ],
@@ -335,18 +335,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795038948,
+  "at": 1795039580,
   "status": "ok",
-  "candidates": 54,
+  "candidates": 57,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
   "skipped": 0,
-  "shadowOrdered": 1,
-  "settled": 1,
+  "shadowOrdered": 3,
+  "settled": 0,
   "cancelled": 0,
   "closes": 58
  },
- "dataUpdated": 1795038895,
+ "dataUpdated": 1795039518,
  "killSwitch": false
 }
