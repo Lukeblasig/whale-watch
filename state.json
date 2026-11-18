@@ -756,8 +756,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1794975367,
-    "minsBefore": 7024,
+    "at": 1794975960,
+    "minsBefore": 7014,
     "source": "kalshi market"
    }
   },
@@ -810,8 +810,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1794975367,
-    "minsBefore": 2699,
+    "at": 1794975960,
+    "minsBefore": 2689,
     "source": "kalshi market"
    }
   },
@@ -918,8 +918,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1794975367,
-    "minsBefore": 5264,
+    "at": 1794975960,
+    "minsBefore": 5254,
     "source": "kalshi market"
    }
   },
@@ -1026,8 +1026,8 @@
     "bid": 0.63,
     "ask": 0.64,
     "mid": 0.635,
-    "at": 1794975367,
-    "minsBefore": 5264,
+    "at": 1794975960,
+    "minsBefore": 5254,
     "source": "kalshi market"
    }
   },
@@ -1134,8 +1134,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1794975367,
-    "minsBefore": 6584,
+    "at": 1794975960,
+    "minsBefore": 6574,
     "source": "kalshi market"
    }
   },
@@ -1188,8 +1188,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1794975367,
-    "minsBefore": 6584,
+    "at": 1794975960,
+    "minsBefore": 6574,
     "source": "kalshi market"
    }
   },
@@ -1296,8 +1296,8 @@
     "bid": 0.66,
     "ask": 0.67,
     "mid": 0.665,
-    "at": 1794975368,
-    "minsBefore": 854,
+    "at": 1794975960,
+    "minsBefore": 844,
     "source": "polymarket book"
    }
   },
@@ -1458,8 +1458,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1794975367,
-    "minsBefore": 2699,
+    "at": 1794975960,
+    "minsBefore": 2689,
     "source": "polymarket book"
    }
   },
@@ -1566,8 +1566,8 @@
     "bid": 0.78,
     "ask": 0.79,
     "mid": 0.785,
-    "at": 1794975368,
-    "minsBefore": 524,
+    "at": 1794975960,
+    "minsBefore": 514,
     "source": "polymarket book"
    }
   },
@@ -1620,8 +1620,8 @@
     "bid": 0.66,
     "ask": 0.67,
     "mid": 0.665,
-    "at": 1794975368,
-    "minsBefore": 854,
+    "at": 1794975960,
+    "minsBefore": 844,
     "source": "polymarket book"
    }
   },
@@ -2108,8 +2108,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1794975367,
-    "minsBefore": 464,
+    "at": 1794975960,
+    "minsBefore": 454,
     "source": "polymarket book"
    }
   },
@@ -2213,11 +2213,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.62,
-    "ask": 0.63,
-    "mid": 0.625,
-    "at": 1794975367,
-    "minsBefore": 254,
+    "bid": 0.7,
+    "ask": 0.71,
+    "mid": 0.705,
+    "at": 1794975960,
+    "minsBefore": 244,
     "source": "kalshi market"
    }
   },
@@ -2324,8 +2324,8 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1794975367,
-    "minsBefore": 2699,
+    "at": 1794975960,
+    "minsBefore": 2689,
     "source": "kalshi market"
    }
   },
@@ -2378,9 +2378,171 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1794975368,
-    "minsBefore": 1364,
+    "at": 1794975960,
+    "minsBefore": 1354,
     "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1794975959-45",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07265f3a-76f1-ac5e-28ba-1faa08d1add0|KXNBAGAME-26NOV18HOUIND-HOU|0",
+   "pickKey": "Kalshi|KXNBAGAME-26NOV18HOUIND-HOU|0",
+   "marketKey": "Kalshi|KXNBAGAME-26NOV18HOUIND-HOU",
+   "venue": "Kalshi",
+   "conditionId": "KXNBAGAME-26NOV18HOUIND-HOU",
+   "idx": 0,
+   "name": "Houston",
+   "title": "Houston wins",
+   "slug": "KXNBAGAME-26NOV18HOUIND",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795046400,
+   "whale": {
+    "q": 0.71,
+    "usd": 14205,
+    "score": 80,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794974997,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.72,
+   "createdAt": 1794975959,
+   "quoteAtOrder": {
+    "ask": 0.72,
+    "bid": 0.71,
+    "mid": 0.715,
+    "depth": null,
+    "at": 1794975960,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.72,
+   "filledAt": 1794975959,
+   "taker": true,
+   "feeUnits": 0.0196,
+   "priceSource": "kalshi market",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.71,
+    "ask": 0.72,
+    "mid": 0.715,
+    "at": 1794975960,
+    "minsBefore": 1174,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794975959-46",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07265f9c-9409-81c4-9674-50b41dd54c62|KXITFMATCH-26NOV17ALVRUB-ALV|1",
+   "pickKey": "Kalshi|KXITFMATCH-26NOV17ALVRUB-ALV|1",
+   "marketKey": "Kalshi|KXITFMATCH-26NOV17ALVRUB-ALV",
+   "venue": "Kalshi",
+   "conditionId": "KXITFMATCH-26NOV17ALVRUB-ALV",
+   "idx": 1,
+   "name": "Not Alberto Odiseo Alvarado Berrospi",
+   "title": "Alberto Odiseo Alvarado Berrospi wins",
+   "slug": "KXITFMATCH-26NOV17ALVRUB",
+   "league": "Other",
+   "marketType": "moneyline",
+   "start": 1794978000,
+   "whale": {
+    "q": 0.78,
+    "usd": 1581,
+    "score": 74,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794974640,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.79,
+   "createdAt": 1794975959,
+   "quoteAtOrder": {
+    "ask": 0.97,
+    "bid": 0.96,
+    "mid": 0.965,
+    "depth": null,
+    "at": 1794975960,
+    "source": "kalshi market"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.96,
+    "ask": 0.97,
+    "mid": 0.965,
+    "at": 1794975960,
+    "minsBefore": 34,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1794975959-47",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07265ff5-7971-860e-91c7-1571a3c08b14|KXNBAGAME-26NOV18PHIORL-ORL|0",
+   "pickKey": "Kalshi|KXNBAGAME-26NOV18PHIORL-ORL|0",
+   "marketKey": "Kalshi|KXNBAGAME-26NOV18PHIORL-ORL",
+   "venue": "Kalshi",
+   "conditionId": "KXNBAGAME-26NOV18PHIORL-ORL",
+   "idx": 0,
+   "name": "Orlando",
+   "title": "Orlando wins",
+   "slug": "KXNBAGAME-26NOV18PHIORL",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795046400,
+   "whale": {
+    "q": 0.47,
+    "usd": 11624,
+    "score": 80,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1794974617,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.48,
+   "createdAt": 1794975959,
+   "quoteAtOrder": {
+    "ask": 0.48,
+    "bid": 0.47,
+    "mid": 0.475,
+    "depth": null,
+    "at": 1794975960,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.48,
+   "filledAt": 1794975959,
+   "taker": true,
+   "feeUnits": 0.0364,
+   "priceSource": "kalshi market",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1794975960,
+    "minsBefore": 1174,
+    "source": "kalshi market"
    }
   }
  ],
