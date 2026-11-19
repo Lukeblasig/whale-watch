@@ -811,8 +811,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795062949,
-    "minsBefore": 5564,
+    "at": 1795063559,
+    "minsBefore": 5554,
     "source": "kalshi market"
    }
   },
@@ -865,8 +865,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1795062949,
-    "minsBefore": 1239,
+    "at": 1795063559,
+    "minsBefore": 1229,
     "source": "kalshi market"
    }
   },
@@ -978,8 +978,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795062949,
-    "minsBefore": 3804,
+    "at": 1795063559,
+    "minsBefore": 3794,
     "source": "kalshi market"
    }
   },
@@ -1091,8 +1091,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795062949,
-    "minsBefore": 3804,
+    "at": 1795063559,
+    "minsBefore": 3794,
     "source": "kalshi market"
    }
   },
@@ -1204,8 +1204,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795062949,
-    "minsBefore": 5124,
+    "at": 1795063559,
+    "minsBefore": 5114,
     "source": "kalshi market"
    }
   },
@@ -1258,8 +1258,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1795062949,
-    "minsBefore": 5124,
+    "at": 1795063559,
+    "minsBefore": 5114,
     "source": "kalshi market"
    }
   },
@@ -1548,8 +1548,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795062949,
-    "minsBefore": 1239,
+    "at": 1795063559,
+    "minsBefore": 1229,
     "source": "polymarket book"
    }
   },
@@ -2481,8 +2481,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795062949,
-    "minsBefore": 1239,
+    "at": 1795063559,
+    "minsBefore": 1229,
     "source": "kalshi market"
    }
   },
@@ -2999,8 +2999,8 @@
     "bid": 0.7,
     "ask": 0.71,
     "mid": 0.705,
-    "at": 1795062949,
-    "minsBefore": 894,
+    "at": 1795063559,
+    "minsBefore": 884,
     "source": "polymarket book"
    }
   },
@@ -6300,8 +6300,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795062949,
-    "minsBefore": 5124,
+    "at": 1795063559,
+    "minsBefore": 5114,
     "source": "polymarket book"
    }
   },
@@ -6698,10 +6698,10 @@
    "slippageCents": 0,
    "close": {
     "bid": 0.46,
-    "ask": 0.47,
-    "mid": 0.465,
-    "at": 1795062949,
-    "minsBefore": 6624,
+    "ask": 0.48,
+    "mid": 0.47,
+    "at": 1795063559,
+    "minsBefore": 6614,
     "source": "kalshi market"
    }
   },
@@ -8093,8 +8093,8 @@
     "bid": 0.69,
     "ask": 0.7,
     "mid": 0.695,
-    "at": 1795062949,
-    "minsBefore": 3354,
+    "at": 1795063559,
+    "minsBefore": 3344,
     "source": "polymarket book"
    }
   },
@@ -8195,7 +8195,7 @@
     "at": 1795034136,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.5,
    "filledAt": 1795034133,
    "taker": true,
@@ -8209,7 +8209,12 @@
     "at": 1795053373,
     "minsBefore": 4,
     "source": "kalshi market"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.035,
+   "whaleUnits": -1,
+   "settledAt": 1795063558
   },
   {
    "id": "1795034760-143",
@@ -8555,8 +8560,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795062949,
-    "minsBefore": 3804,
+    "at": 1795063559,
+    "minsBefore": 3794,
     "source": "polymarket book"
    }
   },
@@ -8609,8 +8614,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795062949,
-    "minsBefore": 4824,
+    "at": 1795063559,
+    "minsBefore": 4814,
     "source": "polymarket book"
    }
   },
@@ -8663,8 +8668,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795062949,
-    "minsBefore": 1239,
+    "at": 1795063559,
+    "minsBefore": 1229,
     "source": "polymarket book"
    }
   },
@@ -13866,7 +13871,7 @@
     "at": 1795047366,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.61,
    "filledAt": 1795047359,
    "taker": true,
@@ -13880,7 +13885,12 @@
     "at": 1795053373,
     "minsBefore": 4,
     "source": "kalshi market"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.6393,
+   "units": 0.612,
+   "whaleUnits": 0.6666666666666667,
+   "settledAt": 1795063558
   },
   {
    "id": "1795047359-241",
@@ -14459,8 +14469,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795062950,
-    "minsBefore": 3504,
+    "at": 1795063559,
+    "minsBefore": 3494,
     "source": "polymarket book"
    }
   },
@@ -14858,8 +14868,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795062950,
-    "minsBefore": 1944,
+    "at": 1795063559,
+    "minsBefore": 1934,
     "source": "polymarket book"
    }
   },
@@ -15564,8 +15574,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795062949,
-    "minsBefore": 5124,
+    "at": 1795063559,
+    "minsBefore": 5114,
     "source": "kalshi market"
    }
   },
@@ -15618,8 +15628,8 @@
     "bid": 0.85,
     "ask": 0.87,
     "mid": 0.86,
-    "at": 1795062950,
-    "minsBefore": 489,
+    "at": 1795063560,
+    "minsBefore": 479,
     "source": "polymarket book"
    }
   },
@@ -15672,8 +15682,116 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795062950,
-    "minsBefore": 4239,
+    "at": 1795063559,
+    "minsBefore": 4229,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1795063558-273",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07263a21-93a9-b2e7-a93c-8a5a245df045|KXITFMATCH-26NOV18EICTRI-EIC|0",
+   "pickKey": "Kalshi|KXITFMATCH-26NOV18EICTRI-EIC|0",
+   "marketKey": "Kalshi|KXITFMATCH-26NOV18EICTRI-EIC",
+   "venue": "Kalshi",
+   "conditionId": "KXITFMATCH-26NOV18EICTRI-EIC",
+   "idx": 0,
+   "name": "David Eichenseher",
+   "title": "David Eichenseher wins",
+   "slug": "KXITFMATCH-26NOV18EICTRI",
+   "league": "Other",
+   "marketType": "moneyline",
+   "start": 1795064400,
+   "whale": {
+    "q": 0.67,
+    "usd": 2100,
+    "score": 71,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795062154,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.68,
+   "createdAt": 1795063558,
+   "quoteAtOrder": {
+    "ask": 0.01,
+    "bid": null,
+    "mid": 0.01,
+    "depth": null,
+    "at": 1795063559,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.01,
+   "filledAt": 1795063558,
+   "taker": true,
+   "feeUnits": 0.0693,
+   "priceSource": "kalshi market",
+   "slippageCents": -66,
+   "close": {
+    "bid": null,
+    "ask": 0.01,
+    "mid": 0.01,
+    "at": 1795063559,
+    "minsBefore": 14,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1795063558-274",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "flowAgree2080s70",
+   "alsoMatched": [],
+   "sigKey": "anon:07263a6a-3de9-af18-268b-9f4171979b70|KXWT20MATCH-26NOV182340PSWHHW-PSW|0",
+   "pickKey": "Kalshi|KXWT20MATCH-26NOV182340PSWHHW-PSW|0",
+   "marketKey": "Kalshi|KXWT20MATCH-26NOV182340PSWHHW-PSW",
+   "venue": "Kalshi",
+   "conditionId": "KXWT20MATCH-26NOV182340PSWHHW-PSW",
+   "idx": 0,
+   "name": "Perth Scorchers Women",
+   "title": "Perth Scorchers Women wins",
+   "slug": "KXWT20MATCH-26NOV182340PSWHHW",
+   "league": "Other",
+   "marketType": "moneyline",
+   "start": 1795066800,
+   "whale": {
+    "q": 0.58,
+    "usd": 2094,
+    "score": 70,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795063413,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.59,
+   "createdAt": 1795063558,
+   "quoteAtOrder": {
+    "ask": 0.57,
+    "bid": 0.56,
+    "mid": 0.565,
+    "depth": null,
+    "at": 1795063559,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.57,
+   "filledAt": 1795063558,
+   "taker": true,
+   "feeUnits": 0.0301,
+   "priceSource": "kalshi market",
+   "slippageCents": -1,
+   "close": {
+    "bid": 0.56,
+    "ask": 0.57,
+    "mid": 0.565,
+    "at": 1795063559,
+    "minsBefore": 54,
     "source": "kalshi market"
    }
   }
