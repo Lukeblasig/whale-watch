@@ -517,8 +517,22 @@ const newSettled = Object.values(months).reduce((a, o) => a + Object.keys(o).len
 if (newSettled < prevSettled) { console.error(`Settled results would drop from ${prevSettled} to ${newSettled}. Stopping without saving.`); process.exit(1); }
 // GitHub refuses any file over 100 MB (November hit 105 MB and every save failed), so a busy month is split
 // into parts of at most PART_SIZE bets, oldest first: settled-2026-11.1.json, settled-2026-11.2.json, ...
-const PART_SIZE = 40000, parts = {};
-fs.readdirSync(STORE).filter(f => /^settled-\d{4}-\d{2}(\.\d+)?\.json$/.test(f)).forEach(f => fs.unlinkSync(`${STORE}/${f}`));
+const PART_SIZE = 40000, parts = {}, lite = {};
+fs.readdirSync(STORE).filter(f => /^(settled|lite)-\d{4}-\d{2}(\.\d+)?\.json$/.test(f)).forEach(f => fs.unlinkSync(`${STORE}/${f}`));
+// The page reads "lite" copies: only the fields it uses, as rows with a shared string table (much smaller to download and parse).
+// lite[k] = a signature that changes only when that part's content does, so the page re-downloads only changed parts.
+const LITE_COLS = ["owner", "venue", "conditionId", "title", "slug", "league", "idx", "name", "q", "shares", "usd", "ts", "score", "sharp", "entryBuy",
+  "source", "result", "relKnown", "rel", "flow", "n", "block", "start", "settledAt", "a0score", "a0flow", "a0n"];
+function toLite(list) {
+  const S = [], si = new Map();
+  const s = x => { x = x == null ? "" : String(x); let i = si.get(x); if (i === undefined) { i = S.length; S.push(x); si.set(x, i); } return i; };
+  const rows = list.map(e => { const f = e.f || {}, a = e.a0 || {};
+    return [s(e.key.split("|")[0]), s(e.venue || "Polymarket"), s(e.conditionId), s(e.title), s(e.slug), s(e.league), e.idx, s(e.name), e.q, e.shares, e.usd, e.ts,
+      e.score, e.sharp ? 1 : 0, e.entryBuy ? 1 : 0, s(e.source), s(e.result), f.relKnown ? 1 : 0, e.f ? f.rel ?? null : null, e.f ? f.flow ?? null : null, e.f ? f.n ?? null : null,
+      e.block ? 1 : 0, e.start || 0, e.settledAt || 0, e.a0 ? a.score : null, e.a0 ? a.flow : null, e.a0 ? a.n : null]; });
+  return { v: 1, cols: LITE_COLS, s: S, rows };
+}
+const sigOf = list => { let h = 0; for (const e of list) h = (h * 31 + (e.ts % 100000) + Math.round(e.q * 1000) + (e.result === "W" ? 7 : e.result === "L" ? 3 : 1) + (e.a0 ? e.a0.score : 0)) % 1000000007; return list.length + "-" + h; };
 Object.entries(months).forEach(([m, o]) => {
   const list = Object.values(o).sort((a, b) => a.ts - b.ts || (a.key < b.key ? -1 : 1));
   const n = Math.max(1, Math.ceil(list.length / PART_SIZE));
@@ -527,6 +541,9 @@ Object.entries(months).forEach(([m, o]) => {
     const k = n === 1 ? m : `${m}.${i + 1}`, part = {};
     list.slice(i * PART_SIZE, (i + 1) * PART_SIZE).forEach(e => part[e.key] = e);
     fs.writeFileSync(`${STORE}/settled-${k}.json`, JSON.stringify(part));
+    const slice = list.slice(i * PART_SIZE, (i + 1) * PART_SIZE);
+    fs.writeFileSync(`${STORE}/lite-${k}.json`, JSON.stringify(toLite(slice)));
+    lite[k] = sigOf(slice);
     parts[m].push(k);
   }
 });
@@ -567,6 +584,6 @@ if (elapsed() > 640) skipped.push("Polymarket US links"); else try {
 } catch (e) { errors.push("Polymarket US links: " + e.message); }
 fs.writeFileSync(`${STORE}/feed.json`, JSON.stringify({ updated: meta.updated, sharps: S, names: feedNames, vols: feedVols, usLinks, trades: feedTrades }));
 const counts = Object.fromEntries(Object.entries(months).map(([m, o]) => [m, Object.keys(o).length]));
-fs.writeFileSync(`${STORE}/index.json`, JSON.stringify({ updated: meta.updated, months: Object.keys(months).sort(), parts, counts, pending: Object.keys(pending).length, meta }));
+fs.writeFileSync(`${STORE}/index.json`, JSON.stringify({ updated: meta.updated, months: Object.keys(months).sort(), parts, lite, counts, pending: Object.keys(pending).length, meta }));
 console.log('Kalshi check:', JSON.stringify(kDiag));
 console.log(`Polymarket ${pm.length}, Kalshi ${k.length} fills this run. Settled ${Object.values(counts).reduce((a, b) => a + b, 0)}, pending ${Object.keys(pending).length}. Errors: ${errors.length}`);

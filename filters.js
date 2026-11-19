@@ -117,9 +117,12 @@
     return r("few", "Could be luck");
   }
   // A filter's settled record (same numbers the Best tab shows)
+  // normL of a settled bet never changes, so it is worked out once per bet (records run 47 filters over every bet)
+  const normMemo = new WeakMap();
+  const normOnce = e => { let b = normMemo.get(e); if (!b) { b = normL(e); normMemo.set(e, b); } return b; };
   function presetRecord(pr, picks) {
     const seen = new Set(), list = [];
-    picks.forEach(e => { const b = normL(e); if ((PRE_ONLY && b.timing !== "pre") || !venueOk(pr, b.venue) || !pr.t(b)) return;
+    picks.forEach(e => { const b = normOnce(e); if ((PRE_ONLY && b.timing !== "pre") || !venueOk(pr, b.venue) || !pr.t(b)) return;
       const k = pickKey(e); if (seen.has(k)) return; seen.add(k); list.push(e); });
     const n = list.length, u = list.reduce((a, e) => a + (e.units || 0), 0);
     return { id: pr.id, name: pr.name, list, n, w: list.filter(e => e.result === "W").length, l: list.filter(e => e.result === "L").length,

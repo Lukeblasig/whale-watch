@@ -636,6 +636,33 @@ function dataBases(){
   return b;
 }
 async function fetchJ(u){ const r = await fetch(u + "?t=" + Date.now()); if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }
+// Settled parts are cached in memory by their signature: an unchanged part is never downloaded twice
+const partCache = new Map(); let lastLoadKey = "";
+function fromLite(o){
+  const S = o.s, out = {};
+  for (const r of o.rows){
+    const own = S[r[0]], venue = S[r[1]], cid = S[r[2]], idx = r[6], q = r[8], shares = r[9], result = S[r[16]] || null;
+    const e = { key: own + "|" + cid + "|" + idx, venue, wallet: venue === "Kalshi" ? "" : own, conditionId: cid, title: S[r[3]], slug: S[r[4]], league: S[r[5]], idx,
+      name: S[r[7]], q, shares, usd: r[10], ts: r[11], score: r[12], sharp: !!r[13], entryBuy: !!r[14], source: S[r[15]], result, block: !!r[21],
+      start: r[22] || null, sv: 2 };
+    if (r[23]) e.settledAt = r[23];
+    if (r[18] != null || r[19] != null) e.f = { rel: r[18], relKnown: !!r[17], flow: r[19], n: r[20] };
+    if (r[24] != null) e.a0 = { score: r[24], flow: r[25], n: r[26] };
+    if (result === "W") { e.units = (1 - q) / q; e.whale = shares * (1 - q); } else if (result === "L") { e.units = -1; e.whale = -shares * q; } else { e.units = 0; e.whale = 0; }
+    out[e.key] = e;
+  }
+  return out;
+}
+async function loadPart(k){
+  const sig = storeIndex.lite && storeIndex.lite[k];
+  const c = partCache.get(k);
+  if (c && sig && c.sig === sig) return c.obj;
+  // lite copy when the collector made one (cacheable by its signature), else the full file
+  const obj = sig ? fromLite(await fetch(storeBase + `lite-${k}.json?s=${sig}`).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }))
+    : await fetchJ(storeBase + `settled-${k}.json`);
+  partCache.set(k, { sig, obj });
+  return obj;
+}
 async function loadHosted(){
   let feed, L = {};
   storeIndex = null;
@@ -645,11 +672,15 @@ async function loadHosted(){
   if (storeIndex){
     const months = storeIndex.months || [];
     loadedMonths = wantAllMonths ? months : months.slice(-2);
+    // nothing new since the last load: keep everything as it is
+    const loadKey = storeIndex.updated + "|" + loadedMonths.join(",");
+    if (loadKey === lastLoadKey && ledger && Object.keys(ledger).length) return true;
     // busy months are saved as several part files (settled-2026-11.1.json, .2, ...)
     const files = loadedMonths.flatMap(m => (storeIndex.parts || {})[m] || [m]);
     const [f, pend, ...ms] = await Promise.all([fetchJ(storeBase + "feed.json"), fetchJ(storeBase + "pending.json").catch(() => ({})),
-      ...files.map(k => fetchJ(storeBase + `settled-${k}.json`).catch(() => ({})))]);
+      ...files.map(k => loadPart(k).catch(() => ({})))]);
     feed = f; ms.forEach(o => Object.assign(L, o)); Object.assign(L, pend);
+    lastLoadKey = loadKey;
   } else {
     let f;
     try { f = await fetch("data/feed.json?t=" + Date.now()); } catch(e){ return false; }
@@ -786,10 +817,13 @@ function presetTrades(pr){
   return trades.filter(t => { const p = posMap.get(t.pos); return venueOk(pr, t.venue) && t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!PRE_ONLY || upcoming(p)); });
 }
 let openPreset = null;
+// Settled records only change when new results load; work them out once per load, not on every click
+let recCache = { src: null, recs: null };
 function presetStats(){
   const picks = presetPicks();
+  if (recCache.src !== picks) recCache = { src: picks, recs: new Map(PRESETS.map(pr => [pr.id, WWFilters.presetRecord(pr, picks)])) };
   const livePos = [...posMap.values()].filter(p => p.usd >= 1000 && p.q >= 0.03 && p.q <= 0.97 && (!PRE_ONLY || upcoming(p))).map(p => normP(p));
-  return PRESETS.map(pr => ({ ...pr, ...WWFilters.presetRecord(pr, picks), name: pr.name,
+  return PRESETS.map(pr => ({ ...pr, ...recCache.recs.get(pr.id), name: pr.name,
     live: livePos.filter(b => venueOk(pr, b.venue) && pr.t(b)).length })).sort((a, b) => (b.n >= 10) - (a.n >= 10) || b.roi - a.roi);
 }
 const ZONES = [["", "All prices"], ["lo", "Under 60¢"], ["hi", "60¢ and up"]];
