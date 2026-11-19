@@ -811,8 +811,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795085758,
-    "minsBefore": 5184,
+    "at": 1795086359,
+    "minsBefore": 5174,
     "source": "kalshi market"
    }
   },
@@ -865,8 +865,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1795085758,
-    "minsBefore": 859,
+    "at": 1795086359,
+    "minsBefore": 849,
     "source": "kalshi market"
    }
   },
@@ -978,8 +978,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795085758,
-    "minsBefore": 3424,
+    "at": 1795086359,
+    "minsBefore": 3414,
     "source": "kalshi market"
    }
   },
@@ -1091,8 +1091,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795085758,
-    "minsBefore": 3424,
+    "at": 1795086359,
+    "minsBefore": 3414,
     "source": "kalshi market"
    }
   },
@@ -1204,8 +1204,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795085758,
-    "minsBefore": 4744,
+    "at": 1795086360,
+    "minsBefore": 4734,
     "source": "kalshi market"
    }
   },
@@ -1258,8 +1258,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795085758,
-    "minsBefore": 4744,
+    "at": 1795086359,
+    "minsBefore": 4734,
     "source": "kalshi market"
    }
   },
@@ -1548,8 +1548,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795085758,
-    "minsBefore": 859,
+    "at": 1795086360,
+    "minsBefore": 849,
     "source": "polymarket book"
    }
   },
@@ -2481,8 +2481,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795085758,
-    "minsBefore": 859,
+    "at": 1795086359,
+    "minsBefore": 849,
     "source": "kalshi market"
    }
   },
@@ -3001,11 +3001,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.7,
-    "ask": 0.71,
-    "mid": 0.705,
-    "at": 1795085758,
-    "minsBefore": 514,
+    "bid": 0.69,
+    "ask": 0.7,
+    "mid": 0.695,
+    "at": 1795086360,
+    "minsBefore": 504,
     "source": "polymarket book"
    }
   },
@@ -6320,8 +6320,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795085758,
-    "minsBefore": 4744,
+    "at": 1795086360,
+    "minsBefore": 4734,
     "source": "polymarket book"
    }
   },
@@ -6725,8 +6725,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795085758,
-    "minsBefore": 6244,
+    "at": 1795086360,
+    "minsBefore": 6234,
     "source": "kalshi market"
    }
   },
@@ -8118,8 +8118,8 @@
     "bid": 0.69,
     "ask": 0.7,
     "mid": 0.695,
-    "at": 1795085758,
-    "minsBefore": 2974,
+    "at": 1795086360,
+    "minsBefore": 2964,
     "source": "polymarket book"
    }
   },
@@ -8585,8 +8585,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795085758,
-    "minsBefore": 3424,
+    "at": 1795086360,
+    "minsBefore": 3414,
     "source": "polymarket book"
    }
   },
@@ -8639,8 +8639,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795085758,
-    "minsBefore": 4444,
+    "at": 1795086360,
+    "minsBefore": 4434,
     "source": "polymarket book"
    }
   },
@@ -8693,8 +8693,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795085758,
-    "minsBefore": 859,
+    "at": 1795086360,
+    "minsBefore": 849,
     "source": "polymarket book"
    }
   },
@@ -14519,8 +14519,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795085758,
-    "minsBefore": 3124,
+    "at": 1795086360,
+    "minsBefore": 3114,
     "source": "polymarket book"
    }
   },
@@ -14915,11 +14915,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0.4,
    "close": {
-    "bid": 0.61,
-    "ask": 0.65,
-    "mid": 0.63,
-    "at": 1795085758,
-    "minsBefore": 1564,
+    "bid": 0.71,
+    "ask": 0.72,
+    "mid": 0.715,
+    "at": 1795086360,
+    "minsBefore": 1554,
     "source": "polymarket book"
    }
   },
@@ -15674,8 +15674,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795085758,
-    "minsBefore": 4744,
+    "at": 1795086360,
+    "minsBefore": 4734,
     "source": "kalshi market"
    }
   },
@@ -15728,8 +15728,8 @@
     "bid": 0.87,
     "ask": 0.88,
     "mid": 0.875,
-    "at": 1795085759,
-    "minsBefore": 109,
+    "at": 1795086360,
+    "minsBefore": 99,
     "source": "polymarket book"
    }
   },
@@ -15782,8 +15782,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795085758,
-    "minsBefore": 3859,
+    "at": 1795086360,
+    "minsBefore": 3849,
     "source": "kalshi market"
    }
   },
@@ -16062,8 +16062,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795085758,
-    "minsBefore": 3694,
+    "at": 1795086360,
+    "minsBefore": 3684,
     "source": "kalshi market"
    }
   },
@@ -16175,8 +16175,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795085759,
-    "minsBefore": 4744,
+    "at": 1795086361,
+    "minsBefore": 4734,
     "source": "polymarket book"
    }
   },
@@ -16229,8 +16229,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795085759,
-    "minsBefore": 784,
+    "at": 1795086361,
+    "minsBefore": 774,
     "source": "polymarket book"
    }
   },
@@ -16283,8 +16283,8 @@
     "bid": 0.79,
     "ask": 0.8,
     "mid": 0.795,
-    "at": 1795085759,
-    "minsBefore": 844,
+    "at": 1795086361,
+    "minsBefore": 834,
     "source": "polymarket book"
    }
   },
@@ -16389,10 +16389,10 @@
    "slippageCents": 0,
    "close": {
     "bid": 0.53,
-    "ask": 0.55,
-    "mid": 0.54,
-    "at": 1795085759,
-    "minsBefore": 844,
+    "ask": 0.54,
+    "mid": 0.535,
+    "at": 1795086361,
+    "minsBefore": 834,
     "source": "kalshi market"
    }
   },
@@ -16445,8 +16445,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795085759,
-    "minsBefore": 39,
+    "at": 1795086361,
+    "minsBefore": 29,
     "source": "polymarket book"
    }
   },
@@ -16499,8 +16499,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795085759,
-    "minsBefore": 124,
+    "at": 1795086361,
+    "minsBefore": 114,
     "source": "polymarket book"
    }
   },
@@ -16553,8 +16553,8 @@
     "bid": 0.78,
     "ask": 0.79,
     "mid": 0.785,
-    "at": 1795085759,
-    "minsBefore": 39,
+    "at": 1795086361,
+    "minsBefore": 29,
     "source": "polymarket book"
    }
   },
@@ -16604,11 +16604,11 @@
    "priceSource": "kalshi market",
    "slippageCents": -25,
    "close": {
-    "bid": 0.39,
-    "ask": 0.4,
-    "mid": 0.395,
-    "at": 1795085759,
-    "minsBefore": 34,
+    "bid": 0.49,
+    "ask": 0.5,
+    "mid": 0.495,
+    "at": 1795086361,
+    "minsBefore": 24,
     "source": "kalshi market"
    }
   },
@@ -16664,6 +16664,168 @@
     "at": 1795084962,
     "minsBefore": 47,
     "source": "last fill in feed (not a live quote)"
+   }
+  },
+  {
+   "id": "1795086359-289",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0x7843fd22e207f819964c056f87e12068ac95a1be5ac5d86b7a903af040fbdd18|1",
+   "pickKey": "Polymarket|0x7843fd22e207f819964c056f87e12068ac95a1be5ac5d86b7a903af040fbdd18|1",
+   "marketKey": "Polymarket|0x7843fd22e207f819964c056f87e12068ac95a1be5ac5d86b7a903af040fbdd18",
+   "venue": "Polymarket",
+   "conditionId": "0x7843fd22e207f819964c056f87e12068ac95a1be5ac5d86b7a903af040fbdd18",
+   "idx": 1,
+   "name": "Borna Gojo",
+   "title": "Set Handicap: Nishesh Basavareddy (-1.5) vs Borna Gojo (+1.5)",
+   "slug": "atp-gojo-basavar-2026-11-19",
+   "league": "Tennis",
+   "marketType": "spread",
+   "start": 1795087800,
+   "whale": {
+    "q": 0.6555,
+    "usd": 2500,
+    "score": 47,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795084483,
+    "wallet": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.66,
+   "createdAt": 1795086359,
+   "quoteAtOrder": {
+    "ask": 0.64,
+    "bid": 0.63,
+    "mid": 0.635,
+    "depth": 334.79,
+    "at": 1795086361,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.64,
+   "filledAt": 1795086359,
+   "taker": true,
+   "feeUnits": 0.0108,
+   "priceSource": "polymarket book",
+   "slippageCents": -1.5,
+   "close": {
+    "bid": 0.63,
+    "ask": 0.64,
+    "mid": 0.635,
+    "at": 1795086361,
+    "minsBefore": 24,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795086359-290",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "pmSharp3h",
+   "alsoMatched": [],
+   "sigKey": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc|0",
+   "pickKey": "Polymarket|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc|0",
+   "marketKey": "Polymarket|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc",
+   "venue": "Polymarket",
+   "conditionId": "0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc",
+   "idx": 0,
+   "name": "Borna Gojo",
+   "title": "Helsinki: Borna Gojo vs Nishesh Basavareddy",
+   "slug": "atp-gojo-basavar-2026-11-19",
+   "league": "Tennis",
+   "marketType": "moneyline",
+   "start": 1795087800,
+   "whale": {
+    "q": 0.41,
+    "usd": 2500,
+    "score": 44,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795084493,
+    "wallet": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.42,
+   "createdAt": 1795086359,
+   "quoteAtOrder": {
+    "ask": 0.42,
+    "bid": 0.41,
+    "mid": 0.415,
+    "depth": 5474,
+    "at": 1795086361,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.42,
+   "filledAt": 1795086359,
+   "taker": true,
+   "feeUnits": 0.0174,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.41,
+    "ask": 0.42,
+    "mid": 0.415,
+    "at": 1795086361,
+    "minsBefore": 24,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795086359-291",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "pmSharp3hML",
+   "alsoMatched": [],
+   "sigKey": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc|0",
+   "pickKey": "Polymarket|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc|0",
+   "marketKey": "Polymarket|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc",
+   "venue": "Polymarket",
+   "conditionId": "0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc",
+   "idx": 0,
+   "name": "Borna Gojo",
+   "title": "Helsinki: Borna Gojo vs Nishesh Basavareddy",
+   "slug": "atp-gojo-basavar-2026-11-19",
+   "league": "Tennis",
+   "marketType": "moneyline",
+   "start": 1795087800,
+   "whale": {
+    "q": 0.41,
+    "usd": 2500,
+    "score": 44,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795084493,
+    "wallet": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.42,
+   "createdAt": 1795086359,
+   "quoteAtOrder": {
+    "ask": 0.42,
+    "bid": 0.41,
+    "mid": 0.415,
+    "depth": 5474,
+    "at": 1795086361,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.42,
+   "filledAt": 1795086359,
+   "taker": true,
+   "feeUnits": 0.0174,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.41,
+    "ask": 0.42,
+    "mid": 0.415,
+    "at": 1795086361,
+    "minsBefore": 24,
+    "source": "polymarket book"
    }
   }
  ],
@@ -17231,6 +17393,18 @@
   "pmSharp3h|Polymarket|0x42d5029888dab83b849bf55f77abe51cb9ee8b621a8d6ac2e8e5b23c847e6619": {
    "key": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0x42d5029888dab83b849bf55f77abe51cb9ee8b621a8d6ac2e8e5b23c847e6619|0",
    "start": 1795088100
+  },
+  "pmSharp3h|Polymarket|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc": {
+   "key": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc|0",
+   "start": 1795087800
+  },
+  "pmSharp3h|Polymarket|0x7843fd22e207f819964c056f87e12068ac95a1be5ac5d86b7a903af040fbdd18": {
+   "key": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0x7843fd22e207f819964c056f87e12068ac95a1be5ac5d86b7a903af040fbdd18|1",
+   "start": 1795087800
+  },
+  "pmSharp3hML|Polymarket|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc": {
+   "key": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc|0",
+   "start": 1795087800
   }
  }
 }
