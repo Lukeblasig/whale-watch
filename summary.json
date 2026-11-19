@@ -1,5 +1,5 @@
 {
- "updated": 1795074952,
+ "updated": 1795075550,
  "mode": "paper",
  "startedAt": 1794969372,
  "real": {
@@ -350,7 +350,7 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795074952,
+  "at": 1795075550,
   "status": "ok",
   "candidates": 21,
   "ordered": 0,
@@ -362,6 +362,6 @@
   "cancelled": 0,
   "closes": 22
  },
- "dataUpdated": 1795074904,
+ "dataUpdated": 1795075497,
  "killSwitch": false
 }
