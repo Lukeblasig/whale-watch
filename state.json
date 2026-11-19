@@ -811,8 +811,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795103766,
-    "minsBefore": 4884,
+    "at": 1795104357,
+    "minsBefore": 4874,
     "source": "kalshi market"
    }
   },
@@ -865,8 +865,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1795103766,
-    "minsBefore": 559,
+    "at": 1795104357,
+    "minsBefore": 549,
     "source": "kalshi market"
    }
   },
@@ -978,8 +978,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795103766,
-    "minsBefore": 3124,
+    "at": 1795104357,
+    "minsBefore": 3114,
     "source": "kalshi market"
    }
   },
@@ -1091,8 +1091,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795103766,
-    "minsBefore": 3124,
+    "at": 1795104357,
+    "minsBefore": 3114,
     "source": "kalshi market"
    }
   },
@@ -1204,8 +1204,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795103767,
-    "minsBefore": 4444,
+    "at": 1795104357,
+    "minsBefore": 4434,
     "source": "kalshi market"
    }
   },
@@ -1258,8 +1258,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795103766,
-    "minsBefore": 4444,
+    "at": 1795104357,
+    "minsBefore": 4434,
     "source": "kalshi market"
    }
   },
@@ -1548,8 +1548,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795103767,
-    "minsBefore": 559,
+    "at": 1795104358,
+    "minsBefore": 549,
     "source": "polymarket book"
    }
   },
@@ -2481,8 +2481,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795103766,
-    "minsBefore": 559,
+    "at": 1795104357,
+    "minsBefore": 549,
     "source": "kalshi market"
    }
   },
@@ -3004,8 +3004,8 @@
     "bid": 0.7,
     "ask": 0.71,
     "mid": 0.705,
-    "at": 1795103767,
-    "minsBefore": 214,
+    "at": 1795104358,
+    "minsBefore": 204,
     "source": "polymarket book"
    }
   },
@@ -6320,8 +6320,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795103767,
-    "minsBefore": 4444,
+    "at": 1795104358,
+    "minsBefore": 4434,
     "source": "polymarket book"
    }
   },
@@ -6722,11 +6722,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 0,
    "close": {
-    "bid": 0.46,
-    "ask": 0.47,
-    "mid": 0.465,
-    "at": 1795103767,
-    "minsBefore": 5944,
+    "bid": 0.45,
+    "ask": 0.46,
+    "mid": 0.455,
+    "at": 1795104357,
+    "minsBefore": 5934,
     "source": "kalshi market"
    }
   },
@@ -8118,8 +8118,8 @@
     "bid": 0.69,
     "ask": 0.7,
     "mid": 0.695,
-    "at": 1795103767,
-    "minsBefore": 2674,
+    "at": 1795104358,
+    "minsBefore": 2664,
     "source": "polymarket book"
    }
   },
@@ -8585,8 +8585,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795103767,
-    "minsBefore": 3124,
+    "at": 1795104358,
+    "minsBefore": 3114,
     "source": "polymarket book"
    }
   },
@@ -8639,8 +8639,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795103767,
-    "minsBefore": 4144,
+    "at": 1795104358,
+    "minsBefore": 4134,
     "source": "polymarket book"
    }
   },
@@ -8693,8 +8693,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795103767,
-    "minsBefore": 559,
+    "at": 1795104358,
+    "minsBefore": 549,
     "source": "polymarket book"
    }
   },
@@ -14519,8 +14519,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795103767,
-    "minsBefore": 2824,
+    "at": 1795104358,
+    "minsBefore": 2814,
     "source": "polymarket book"
    }
   },
@@ -14915,11 +14915,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0.4,
    "close": {
-    "bid": 0.81,
-    "ask": 0.82,
-    "mid": 0.815,
-    "at": 1795103767,
-    "minsBefore": 1264,
+    "bid": 0.8,
+    "ask": 0.81,
+    "mid": 0.805,
+    "at": 1795104358,
+    "minsBefore": 1254,
     "source": "polymarket book"
    }
   },
@@ -15674,8 +15674,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795103767,
-    "minsBefore": 4444,
+    "at": 1795104358,
+    "minsBefore": 4434,
     "source": "kalshi market"
    }
   },
@@ -15782,8 +15782,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795103767,
-    "minsBefore": 3559,
+    "at": 1795104358,
+    "minsBefore": 3549,
     "source": "kalshi market"
    }
   },
@@ -16072,8 +16072,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795103767,
-    "minsBefore": 3394,
+    "at": 1795104358,
+    "minsBefore": 3384,
     "source": "kalshi market"
    }
   },
@@ -16185,8 +16185,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795103767,
-    "minsBefore": 4444,
+    "at": 1795104358,
+    "minsBefore": 4434,
     "source": "polymarket book"
    }
   },
@@ -16239,8 +16239,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795103768,
-    "minsBefore": 484,
+    "at": 1795104358,
+    "minsBefore": 474,
     "source": "polymarket book"
    }
   },
@@ -16293,8 +16293,8 @@
     "bid": 0.79,
     "ask": 0.8,
     "mid": 0.795,
-    "at": 1795103768,
-    "minsBefore": 544,
+    "at": 1795104358,
+    "minsBefore": 534,
     "source": "polymarket book"
    }
   },
@@ -16406,8 +16406,8 @@
     "bid": 0.49,
     "ask": 0.51,
     "mid": 0.5,
-    "at": 1795103767,
-    "minsBefore": 544,
+    "at": 1795104358,
+    "minsBefore": 534,
     "source": "kalshi market"
    }
   },
@@ -16929,8 +16929,8 @@
     "bid": 0.68,
     "ask": 0.69,
     "mid": 0.685,
-    "at": 1795103768,
-    "minsBefore": 544,
+    "at": 1795104358,
+    "minsBefore": 534,
     "source": "polymarket book"
    }
   },
@@ -17259,11 +17259,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.87,
-    "ask": 0.88,
-    "mid": 0.875,
-    "at": 1795103768,
-    "minsBefore": 544,
+    "bid": 0.88,
+    "ask": 0.89,
+    "mid": 0.885,
+    "at": 1795104358,
+    "minsBefore": 534,
     "source": "polymarket book"
    }
   },
@@ -17316,8 +17316,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795103768,
-    "minsBefore": 2824,
+    "at": 1795104358,
+    "minsBefore": 2814,
     "source": "polymarket book"
    }
   },
@@ -17478,8 +17478,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795103768,
-    "minsBefore": 664,
+    "at": 1795104358,
+    "minsBefore": 654,
     "source": "kalshi market"
    }
   },
@@ -17532,8 +17532,8 @@
     "bid": 0.38,
     "ask": 0.39,
     "mid": 0.385,
-    "at": 1795103768,
-    "minsBefore": 484,
+    "at": 1795104358,
+    "minsBefore": 474,
     "source": "kalshi market"
    }
   },
@@ -17642,8 +17642,8 @@
     "bid": 0.79,
     "ask": 0.8,
     "mid": 0.795,
-    "at": 1795103768,
-    "minsBefore": 544,
+    "at": 1795104358,
+    "minsBefore": 534,
     "source": "polymarket book"
    }
   },
@@ -17693,11 +17693,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -2,
    "close": {
-    "bid": 0.43,
-    "ask": 0.44,
-    "mid": 0.435,
-    "at": 1795103768,
-    "minsBefore": 34,
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795104358,
+    "minsBefore": 24,
     "source": "polymarket book"
    }
   },
@@ -17747,11 +17747,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -2,
    "close": {
-    "bid": 0.43,
-    "ask": 0.44,
-    "mid": 0.435,
-    "at": 1795103768,
-    "minsBefore": 34,
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795104358,
+    "minsBefore": 24,
     "source": "polymarket book"
    }
   },
@@ -17801,11 +17801,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.77,
+    "bid": 0.78,
     "ask": 0.79,
-    "mid": 0.78,
-    "at": 1795103768,
-    "minsBefore": 124,
+    "mid": 0.785,
+    "at": 1795104358,
+    "minsBefore": 114,
     "source": "polymarket book"
    }
   },
@@ -17858,8 +17858,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795103768,
-    "minsBefore": 544,
+    "at": 1795104358,
+    "minsBefore": 534,
     "source": "polymarket book"
    }
   },
@@ -17912,8 +17912,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795103768,
-    "minsBefore": 544,
+    "at": 1795104358,
+    "minsBefore": 534,
     "source": "kalshi market"
    }
   },
@@ -17966,8 +17966,8 @@
     "bid": 0.79,
     "ask": 0.8,
     "mid": 0.795,
-    "at": 1795103768,
-    "minsBefore": 544,
+    "at": 1795104358,
+    "minsBefore": 534,
     "source": "polymarket book"
    }
   },
@@ -18076,8 +18076,62 @@
     "bid": 0.76,
     "ask": 0.78,
     "mid": 0.77,
-    "at": 1795103768,
-    "minsBefore": 1804,
+    "at": 1795104358,
+    "minsBefore": 1794,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795104357-314",
+   "mode": "paper",
+   "shadow": true,
+   "rule": "sharp6090agree",
+   "alsoMatched": [],
+   "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xa2e36e8bcbfb990c2877acdb33cfb76e3e27f700c60fd5222a7e1d22c5b854fe|1",
+   "pickKey": "Polymarket|0xa2e36e8bcbfb990c2877acdb33cfb76e3e27f700c60fd5222a7e1d22c5b854fe|1",
+   "marketKey": "Polymarket|0xa2e36e8bcbfb990c2877acdb33cfb76e3e27f700c60fd5222a7e1d22c5b854fe",
+   "venue": "Polymarket",
+   "conditionId": "0xa2e36e8bcbfb990c2877acdb33cfb76e3e27f700c60fd5222a7e1d22c5b854fe",
+   "idx": 1,
+   "name": "Spurs",
+   "title": "Clippers vs. Spurs",
+   "slug": "nba-lac-sas-2026-11-19",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795136400,
+   "whale": {
+    "q": 0.88,
+    "usd": 26910,
+    "score": 61,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795104025,
+    "wallet": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.89,
+   "createdAt": 1795104357,
+   "quoteAtOrder": {
+    "ask": 0.89,
+    "bid": 0.88,
+    "mid": 0.885,
+    "depth": 24821.14,
+    "at": 1795104358,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.89,
+   "filledAt": 1795104357,
+   "taker": true,
+   "feeUnits": 0.0033,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.88,
+    "ask": 0.89,
+    "mid": 0.885,
+    "at": 1795104358,
+    "minsBefore": 534,
     "source": "polymarket book"
    }
   }
