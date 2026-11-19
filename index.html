@@ -69,8 +69,8 @@ select{background:var(--chip);border:1px solid var(--line);border-radius:8px;pad
 /* bet cards (tape + consensus share this shape) */
 .bet{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;cursor:pointer}
 .bet:hover{border-color:color-mix(in srgb, var(--buy) 50%, var(--line))}
-.bet.is-sharp{border-left:5px solid var(--sharp)}
-.amt{font:700 30px/1 var(--num);grid-row:span 2;min-width:78px}
+.bet.is-sharp{box-shadow:inset 4px 0 0 var(--sharp)}
+.amt{font:700 30px/1 var(--num);grid-row:span 2;min-width:98px}
 .amt small{display:block;font:500 12px/1.3 var(--body);color:var(--muted);margin-top:4px}
 .score{grid-row:span 2;align-self:start;text-align:center;border-radius:12px;padding:5px 8px 4px;min-width:52px;font:700 28px/1 var(--num);border:2px solid currentColor;cursor:pointer;background:color-mix(in srgb, currentColor 12%, transparent)}
 .score small{display:block;font:500 10px/1.2 var(--body);color:var(--muted)}
@@ -78,7 +78,9 @@ select{background:var(--chip);border:1px solid var(--line);border-radius:8px;pad
 .pick .odds{color:var(--muted);font-weight:500}
 .side{font-weight:700}
 .side.buy{color:var(--buy)} .side.sell{color:var(--sell)}
-.mkt{color:var(--muted);font-size:13px;overflow:hidden;text-overflow:ellipsis}
+.mkt{color:var(--muted);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.mline{display:flex;align-items:baseline;gap:10px;min-width:0}
+.mline .uslink{font-size:12px;flex:none}
 .who{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;color:var(--muted);margin-top:4px}
 .why{grid-column:1 / -1;font-size:13px;color:var(--muted);background:var(--panel2);border-radius:8px;padding:8px 10px;display:none}
 .why.open{display:block}
@@ -915,8 +917,8 @@ function betCard(t, bs, crowd){
       <div class="amt">${money(t.usd)}<small>${ago(t.timestamp)}</small></div>
       <div class="pick"><span class="side ${t.side === "BUY" ? "buy" : "sell"}">${t.side === "BUY" ? "Bought" : "Sold"}</span> ${esc(t.outcome)} @ ${Math.round(t.price*100)}¢ <span class="odds">(${american(t.price)})</span></div>
       <button class="score" data-why="${esc(t.id)}" style="color:${scoreColor(p.score)}" aria-label="Score ${p.score}, show breakdown">${p.score}<small>score</small></button>
-      <a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>
-      <div class="who">${startLabel(startOf(t))}<span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>${usA(t)}
+      <div class="mline"><a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>${usA(t)}</div>
+      <div class="who">${startLabel(startOf(t))}<span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>
         ${s ? `<span class="badge">Sharp #${s.rank}, +${money(s.pnl)}</span>` : ""}
         ${t.block ? `<span class="badge">Block trade</span>` : ""}
         ${kal ? `<span>${name}</span>` : `<a href="https://polymarket.com/profile/${esc(t.wallet)}" target="_blank" rel="noopener">${esc(name)}</a>`}
@@ -988,9 +990,9 @@ function renderCons(out){
       <div class="amt">${money(t.net)}<small>sharp money</small></div>
       <div class="pick">${esc(t.name)} @ ${Math.round(avg*100)}¢ <span class="odds">(${american(avg)})</span></div>
       <button class="score" data-why="${esc(wid)}" style="color:${scoreColor(b.score)}" aria-label="Score ${b.score}, show breakdown">${b.score}<small>score</small></button>
-      <a class="mkt" href="${linkFor({ venue: "Polymarket", slug: r.slug })}" target="_blank" rel="noopener">${esc(r.title)}</a>
+      <div class="mline"><a class="mkt" href="${linkFor({ venue: "Polymarket", slug: r.slug })}" target="_blank" rel="noopener">${esc(r.title)}</a>${usA({ venue: "Polymarket", slug: r.slug })}</div>
       <div class="bar"><i style="width:${pct}%;background:var(--sharp)"></i><i style="width:${100-pct}%;background:var(--line)"></i></div>
-      <div class="who"><span class="lg">${esc(r.league)}</span>${usA({ venue: "Polymarket", slug: r.slug })}
+      <div class="who"><span class="lg">${esc(r.league)}</span>
         <span>${t.wallets.size} sharp${t.wallets.size > 1 ? "s" : ""} on this side${other ? `, ${money(other.net)} on ${esc(other.name)}` : ", none on the other side"}</span>
         <button class="crowd" data-open="1">See who took it</button></div>
       <div class="why ${openWhy.has(wid) ? "open" : ""}">Best bet on this side: ${whyText(b.parts, "Polymarket")}</div>
