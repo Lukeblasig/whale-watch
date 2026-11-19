@@ -923,3 +923,5 @@
 {"t":1795098333,"type":"run","status":"ok","candidates":30,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":33,"openUnits":3,"unitsToday":6}
 {"t":1795098974,"type":"run","status":"ok","candidates":30,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":33,"openUnits":3,"unitsToday":6}
 {"t":1795099549,"type":"run","status":"ok","candidates":30,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":33,"openUnits":3,"unitsToday":6}
+{"t":1795100139,"type":"skip","shadow":true,"reason":"starts in under 10 min","rule":"flowAgree2080s70","pick":{"venue":"Kalshi","league":"Other","title":"Alena Kovackova wins","side":"Not Alena Kovackova","start":1795100400,"whaleKey":"anon:072624d4-4ef1-a30d-b423-bc077c5cf9ba|KXITFWMATCH-26NOV19KOVPON-KOV|1","q":0.77,"score":70,"sharp":false,"marketType":"moneyline"}}
+{"t":1795100139,"type":"run","status":"ok","candidates":31,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":33,"openUnits":3,"unitsToday":6}
