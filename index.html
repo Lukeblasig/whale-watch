@@ -664,6 +664,9 @@ async function loadHosted(){
   usLinks = toMap(feed.usLinks);
   volMap = toMap(feed.vols);
   Object.values(L).forEach(e => { if (e.league === "Other" && venueOf(e) === "Polymarket"){ const l = leagueOf(e.slug); if (l !== "Other") e.league = l; } });
+  // Results judge every bet on its score and money flow at the alert (a0); the later, final values are kept beside them
+  Object.values(L).forEach(e => { if (!e.a0 || e.scoreFinal != null) return; e.scoreFinal = e.score; e.score = e.a0.score;
+    if (e.f) { e.fFinal = e.f; e.f = { ...e.f, flow: e.a0.flow, n: e.a0.n }; } });
   ledger = L;
   const staleMin = (Date.now() / 1000 - feed.updated) / 60;
   window.__kErr = ` Server log updated ${ago(feed.updated)}${staleMin > 45 ? " (later than usual; GitHub sometimes delays scheduled runs)" : ""}.`;
@@ -770,18 +773,13 @@ function filtered(){
 
 /* ---------- best filters (presets) ---------- */
 // The Best filter rules live in filters.js, shared with the auto-bettor (bot/) so the two can never disagree.
-const { SOCCER, PRESETS, flowOf, normL, normP, PRE_ONLY, upcoming, venueOk } = window.WWFilters;
+const { SOCCER, PRESETS, flowOf, normL, normP, PRE_ONLY, upcoming, venueOk, gameKey, netUnits } = window.WWFilters;
 let pickCache = { src: null, n: -1, list: [] };
+// Every settled bet that can count, oldest first; each filter keeps the first alert per market side that matched it
 function presetPicks(){
   const all = Object.values(ledger);
   if (pickCache.src === ledger && pickCache.n === all.length) return pickCache.list;
-  const g = new Map();
-  all.forEach(e => {
-    if (!e.result || e.usd < 1000 || e.source === "backfill" || e.q < 0.03 || e.q > 0.97 || e.junk) return;
-    const k = venueOf(e) + "|" + e.conditionId + "|" + e.idx, c = g.get(k);
-    if (!c || e.score > c.score) g.set(k, e);
-  });
-  pickCache = { src: ledger, n: all.length, list: [...g.values()] };
+  pickCache = { src: ledger, n: all.length, list: WWFilters.presetPicks(all) };
   return pickCache.list;
 }
 function presetTrades(pr){
@@ -789,14 +787,10 @@ function presetTrades(pr){
 }
 let openPreset = null;
 function presetStats(){
-  const picks = presetPicks().map(e => [e, normL(e)]).filter(([, b]) => !PRE_ONLY || b.timing === "pre");
+  const picks = presetPicks();
   const livePos = [...posMap.values()].filter(p => p.usd >= 1000 && p.q >= 0.03 && p.q <= 0.97 && (!PRE_ONLY || upcoming(p))).map(p => normP(p));
-  return PRESETS.map(pr => {
-    const list = picks.filter(([, b]) => venueOk(pr, b.venue) && pr.t(b)).map(([e]) => e);
-    const n = list.length, u = list.reduce((a, e) => a + (e.units || 0), 0);
-    return { ...pr, list, n, w: list.filter(e => e.result === "W").length, l: list.filter(e => e.result === "L").length,
-      u, roi: n ? u / n * 100 : 0, live: livePos.filter(b => venueOk(pr, b.venue) && pr.t(b)).length };
-  }).sort((a, b) => (b.n >= 10) - (a.n >= 10) || b.roi - a.roi);
+  return PRESETS.map(pr => ({ ...pr, ...WWFilters.presetRecord(pr, picks), name: pr.name,
+    live: livePos.filter(b => venueOk(pr, b.venue) && pr.t(b)).length })).sort((a, b) => (b.n >= 10) - (a.n >= 10) || b.roi - a.roi);
 }
 const ZONES = [["", "All prices"], ["lo", "Under 60¢"], ["hi", "60¢ and up"]];
 const presetZone = s => { const qs = s.list.map(e => e.q); if (!qs.length) return ""; const avg = qs.reduce((a, b) => a + b, 0) / qs.length; return avg < .6 ? "lo" : "hi"; };
@@ -855,24 +849,25 @@ function resultsHTML(s){
   const mon = e => new Date(e.ts * 1000).toLocaleDateString([], { month: "short", year: "numeric" });
   const months = [...new Set(list.map(mon))];
   const recent = list.slice(-12).reverse();
-  return `<h3>${esc(s.name)}</h3><div class="rpsub">${esc(tag)} · pre-game bets · one bet per pick</div>
+  const net = n ? list.reduce((a, e) => a + netUnits(e), 0) / n * 100 : 0;
+  return `<h3>${esc(s.name)}</h3><div class="rpsub">${esc(tag)} · pre-game · first alert per pick, judged on what was known at the alert</div>
     <div class="rpstats">
       <div>${w}-${l}${pu ? "-" + pu : ""}<small>${n} settled bets</small></div>
       <div class="${cls(u)}">${sg(u)}u<small>profit, 1u each</small></div>
-      <div class="${cls(roi)}">${sg(roi)}%<small>ROI</small></div>
-      <div>${n ? Math.round(w / Math.max(1, w + l) * 100) : 0}%<small>win rate</small></div>
+      <div class="${cls(roi)}">${sg(roi)}%<small>ROI at whale's price</small></div>
+      <div class="${cls(net)}">${sg(net)}%<small>ROI after fees, 1¢ worse</small></div>
       <div>${n ? american(avgQ) : "—"}<small>avg odds</small></div>
       <div>${s.live}<small>live now</small></div>
     </div>
     <div>${n ? signal(list) : ""}</div>
     ${n ? chart : `<p class="hint">No settled bets yet.</p>`}
     ${table("By price", e => band(PB, e.q), PB.map(b => b[2]).reverse())}
-    ${table("By score", e => band(SB, e.score), SB.map(b => b[2]))}
+    ${table("By score", e => band(SB, normL(e).score), SB.map(b => b[2]))}
     ${table("By venue", e => venueOf(e))}
     ${table("By league", e => e.league || "Other")}
     ${table("By month", mon, [...months].reverse())}
     ${recent.length ? `<h4>Latest results</h4>${recent.map(e => `<div class="rl"><span class="res ${e.result}">${e.result}</span>
-      <span>@ ${Math.round(e.q * 100)}¢ (${american(e.q)}) · score ${e.score}</span><span class="${cls(e.units || 0)}">${sg(e.units || 0)}u</span>
+      <span>@ ${Math.round(e.q * 100)}¢ (${american(e.q)}) · score ${normL(e).score}</span><span class="${cls(e.units || 0)}">${sg(e.units || 0)}u</span>
       <span class="t" title="${esc(e.title || "")}">${esc(e.title || "")}</span><span class="t">${new Date(e.ts * 1000).toLocaleDateString([], { month: "short", day: "numeric" })}</span></div>`).join("")}` : ""}`;
 }
 function renderBest(out){
@@ -883,7 +878,7 @@ function renderBest(out){
   out.innerHTML = `<div class="row" style="margin-bottom:4px">${ZONES.map(([v, l]) => `<button class="chip" data-zone="${v}" aria-pressed="${(state.bestZone || "") === v}">${l}</button>`).join("")}</div>` + st.map((s, i) => `<div class="pwrap"><div class="phead"><button class="preset ${s.id === openPreset ? "on" : ""}" data-preset="${s.id}" aria-expanded="${s.id === openPreset}">
       <span class="prank">${i + 1}</span>
       <span class="pmain"><span class="pname">${esc(s.name)}${(s.venues || []).includes("Kalshi") ? ` <span class="badge rec">${s.venues.includes("Polymarket") ? "Poly + Kalshi" : "Kalshi only"}</span>` : ""}${s.id === RECOMMENDED.preset ? ` <span class="badge rec">Recommended</span>` : ""}</span>
-        <span class="psub">${s.w}-${s.l} on ${s.n} bets ${s.n >= 10 && s.n < 60 && s.roi >= 15 ? `<span class="badge hot">Hot · small sample</span>` : signal(s.list)}</span></span>
+        <span class="psub">${s.w}-${s.l} on ${s.n} bets ${s.n >= 10 && s.n < 60 && s.roi >= 15 && s.signal.key !== "up" ? `<span class="badge hot">Hot · small sample</span>` : signal(s.list)}</span></span>
       <span class="proi ${s.roi > 0 ? "pos" : s.roi < 0 ? "neg" : ""}">${s.roi > 0 ? "+" : ""}${s.roi.toFixed(1)}%<small>ROI</small></span>
       <span class="plive ${s.live ? "has" : ""}">${s.live}<small>live now ${s.id === openPreset ? "▴" : "▾"}</small></span>
     </button><button class="pres ${s.id === panelPreset ? "on" : ""}" data-res="${s.id}" aria-label="Show results for ${esc(s.name)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Results</button></div>${s.id === openPreset ? (() => { const l = sortS(presetTrades(s));
@@ -1055,7 +1050,7 @@ function signal(list){
   if (n < 30) return `<span class="sig few">Too few bets</span>`;
   const mean = list.reduce((a, e) => a + (e.units || 0), 0) / n;
   const g = new Map();
-  list.forEach(e => { const k = (e.venue || "") + "|" + (e.slug || e.eventSlug || e.conditionId); g.set(k, (g.get(k) || 0) + (e.units || 0) - mean); });
+  list.forEach(e => { const k = gameKey(e); g.set(k, (g.get(k) || 0) + (e.units || 0) - mean); });
   const G = g.size; if (G < 15) return `<span class="sig few">Too few games</span>`;
   let ss = 0; g.forEach(v => ss += v * v);
   const se = Math.sqrt(ss * G / (G - 1)) / n || 1, z = mean / se;

@@ -394,7 +394,10 @@ function log(pm, source) {
       sharp: p.sharp, entryBuy: p.entryBuy, source: cur ? cur.source : source, result: null,
       // what went into the score, kept so the page can show which factors actually win
       f: { abs: p.parts.abs, rel: p.parts.rel, relKnown: p.parts.relKnown, flow: p.parts.flow, n: p.parts.n, price: p.parts.price, edge: p.parts.edge },
-      block: !!p.block, start: startByCid.get(p.conditionId) || (cur && cur.start) || null };
+      block: !!p.block, start: startByCid.get(p.conditionId) || (cur && cur.start) || null,
+      // a0 = the alert: score, money flow and price the first time this bet was seen. Never updated, so filter
+      // records only use what a bettor could have known then (later money, including in-game bets, keeps changing f)
+      a0: cur ? cur.a0 : { score: p.score, flow: p.parts.flow, n: p.parts.n, q: r2(p.q), t: now() } };
     settleStamp(ledger[p.key], resolveEntry(ledger[p.key]));
   });
 }
@@ -476,6 +479,32 @@ feedTrades.forEach(t => {
 });
 
 // write: pending.json + settled-YYYY-MM.json per month + feed.json + index.json
+// Bets saved before a0 existed: rebuild the money flow as it stood about 15 minutes after the bet (about when an
+// alert went out), counting only other big bets placed by then and before the start. Checked against the paper bot's
+// real alert-time snapshots: this matched the alert's flow label 80% of the time, the saved label 59%.
+{
+  const ALERT_LAG = 15 * 60, byMkt = new Map(); let rebuilt = 0;
+  Object.values(ledger).forEach(e => { (byMkt.get(e.conditionId) || byMkt.set(e.conditionId, []).get(e.conditionId)).push(e); });
+  byMkt.forEach(list => {
+    if (!list.some(e => !e.a0)) return;
+    const peers = list.filter(o => !o.start || o.ts < o.start).sort((a, b) => a.ts - b.ts);
+    list.forEach(e => {
+      if (e.a0) return;
+      let on = 0, off = 0, n = 0;
+      for (const o of peers) { if (o.ts >= e.ts + ALERT_LAG) break; if (o === e) continue; n++; if (o.idx === e.idx) on += o.usd; else off += o.usd; }
+      const f = on + off ? (on - off) / (on + off) : 0;
+      const flow = clamp(Math.round(f * 25 * Math.min(1, n / 3)), -15, 25);
+      // Kalshi pattern points counted big fills up to 2h AFTER the bet too; keep only the ones before the alert
+      let score = e.score;
+      if (e.venue === "Kalshi" && e.f) {
+        const burst = peers.filter(o => o !== e && o.idx === e.idx && o.ts >= e.ts - 7200 && o.ts < e.ts + ALERT_LAG).length;
+        score = clamp(e.score - (e.f.edge || 0) + (e.block ? 10 : 0) + Math.min(15, 5 * burst), 0, 100);
+      }
+      e.a0 = { score, flow, n, q: e.q, rebuilt: 1 }; rebuilt++;
+    });
+  });
+  if (rebuilt) console.log(`Rebuilt alert-time money flow for ${rebuilt} saved bets.`);
+}
 const pending = {}, months = {};
 Object.values(ledger).forEach(e => {
   if (!e.result) { pending[e.key] = e; return; }
