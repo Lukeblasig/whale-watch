@@ -4,11 +4,12 @@
   "mode": "paper",
   "killSwitch": false,
 
-  "_filters": "Rules the bot trades (paper), in priority order. pmSharp3h is the Nov 17 audit's best-supported rule set: Polymarket, sharp wallet, whale bet 10 min to 3 h before start, first alert per market only.",
-  "filters": ["pmSharp3h"],
+  "_filters": "Rules the bot trades (paper), in priority order. \"autoBest\" = every Best filter whose settled record is at least autoBest.minNetRoiPct after fees and a 1c worse fill (from the daily baseline), best first. Rule ids from filters.js can be listed too.",
+  "filters": ["autoBest"],
+  "autoBest": { "minNetRoiPct": 2, "minBets": 0 },
 
   "_shadowFilters": "Paper-tracked separately with the same price rules but no stake limits, so their forward records can be compared. They never use up a pick or a limit for the real rules.",
-  "shadowFilters": ["pmSharp3hML", "flowAgree2080s70", "p7090ok", "soc7090agree40", "sharp6090agree", "socAgree40"],
+  "shadowFilters": [],
 
   "_unitUsd": "Dollars per unit. Not needed for paper (everything is in units). Live mode refuses to start while this is null.",
   "unitUsd": null,
@@ -23,12 +24,14 @@
   "lossStopResetAt": null,
 
   "checks": {
+    "minPrice": 0.10,
+    "maxPrice": 0.90,
     "maxPriceRiseCents": 1,
     "maxPriceDropCents": null,
     "startCutoffMinutes": 10,
     "maxDataAgeMinutes": 45,
     "maxQuoteAgeMinutes": 30,
-    "_note": "Limit price = whale's price + maxPriceRiseCents (audit: don't chase past +1¢). Above it the order rests until it fills or hits the cutoff. maxPriceDropCents null = take a better price than the whale's. A quote older than maxQuoteAgeMinutes is treated as no quote."
+    "_note": "Limit price = whale's price + maxPriceRiseCents (audit: don't chase past +1¢). Above it the order rests until it fills or hits the cutoff. maxPriceDropCents null = take a better price than the whale's. A quote older than maxQuoteAgeMinutes is treated as no quote. minPrice / maxPrice: only bets where the whale paid 10c to 90c, and never fill above 90c."
   },
 
   "fees": {

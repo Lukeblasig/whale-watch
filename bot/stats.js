@@ -97,7 +97,7 @@ function summarize(orders, cfg, now) {
     openUnits: sum(active, o => o.stakeUnits), unitsToday: sum(counted.filter(o => dayKey(o.createdAt) === dayKey(now)), o => o.stakeUnits),
     drawdown: { units: r2(eq), max: r2(dd), current: r2(peak - eq) }, lossStop: peak - eq >= cfg.limits.lossStopUnits,
     gates: gates(rec, cfg.trialGates, startedAt, now),
-    config: { filters: cfg.filters, shadowFilters: cfg.shadowFilters, limits: cfg.limits, checks: cfg.checks, fees: cfg.fees, trialGates: cfg.trialGates, unitUsd: cfg.unitUsd, lossStopResetAt: cfg.lossStopResetAt },
+    config: { filters: cfg.filters, autoBest: cfg.autoBest || null, autoPicked: cfg.autoPicked || null, shadowFilters: cfg.shadowFilters, limits: cfg.limits, checks: cfg.checks, fees: cfg.fees, trialGates: cfg.trialGates, unitUsd: cfg.unitUsd, lossStopResetAt: cfg.lossStopResetAt },
     note: "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill"
   };
 }

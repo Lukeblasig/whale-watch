@@ -10,13 +10,16 @@
 //   real    the rules in config.filters, with every limit applied. This is the trial.
 //   shadow  the rules in config.shadowFilters, same price rules but no stake limits, each with its own record.
 import path from "node:path"; import { fileURLToPath } from "node:url";
-import { loadConfig, killed } from "./lib/config.mjs";
+import fs from "node:fs";
+import { loadConfig, killed, expandFilters } from "./lib/config.mjs";
 import { getData, partsForTs } from "./lib/data.mjs";
 import { findCandidates, tradeSignals, pruneFirstAlert } from "./lib/signals.mjs";
 import { decide, updateResting, unitsFor, feeUnits } from "./lib/limits.mjs";
 import { getQuote } from "./lib/prices.mjs";
 import { openStore } from "./lib/store.mjs";
 import { summarize } from "./lib/summary.mjs";
+import { createRequire } from "node:module";
+const F = createRequire(import.meta.url)("../filters.js");
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const NOW = Number(process.env.WW_NOW) || Math.floor(Date.now() / 1000);
@@ -37,8 +40,16 @@ async function pool(items, n, fn) {
 
 async function main() {
   // 1. Config. Anything wrong here stops the run before it can place anything.
-  const cfg = loadConfig(process.env.BOT_CONFIG || path.join(here, "config.json"));
+  // "autoBest" becomes the Best filters whose records clear the bar, read from the daily baseline in the log folder
+  let baseline = null;
+  try { baseline = JSON.parse(fs.readFileSync(path.join(process.env.BOT_LOG_DIR || "botlog", "baseline.json"), "utf8")); } catch {}
+  const cfg = expandFilters(loadConfig(process.env.BOT_CONFIG || path.join(here, "config.json")), baseline && baseline.version >= 2 ? baseline : null);
   const allowFallback = cfg.mode === "paper";
+  if (cfg.autoPicked) console.log(`Trading ${cfg.filters.length} Best filters at ${cfg.autoBest.minNetRoiPct}%+ after fees: ` + cfg.autoPicked.map(r => `${r.id} ${r.net}%`).join(", "));
+  // Earlier trial orders from rules that are no longer traded (e.g. pmSharp3h) keep their record as shadow history,
+  // so the new trial starts clean
+  const presetIds = new Set(F.PRESETS.map(p => p.id));
+  for (const o of orders) if (!o.shadow && !cfg.filters.includes(o.rule) && !presetIds.has(o.rule)) { o.shadow = true; o.archived = "trial ended " + new Date(NOW * 1000).toISOString().slice(0, 10); }
 
   // 2. Data the site reads
   const [idx, feed, pending] = await Promise.all(["index.json", "feed.json", "pending.json"].map(f => getData(f, dataOpts)));

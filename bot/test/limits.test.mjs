@@ -4,7 +4,7 @@ import { decide, drawdown, updateResting, unitsFor, dayKey, openUnits, feeUnits,
 import { findCandidates, tradeSignals } from "../lib/signals.mjs";
 import { createRequire } from "node:module";
 const F = createRequire(import.meta.url)("../../filters.js");
-import { validateConfig, killed } from "../lib/config.mjs";
+import { validateConfig, killed, expandFilters } from "../lib/config.mjs";
 import fs from "node:fs";
 
 const base = JSON.parse(fs.readFileSync(new URL("../config.json", import.meta.url)));
@@ -43,8 +43,8 @@ test("start-time cutoff keeps every bet pre-game", () => {
 test("one bet per pick, and never both sides of a market", () => {
   assert.match(decide(sig(), [ord({ pickKey: "Polymarket|c1|0", marketKey: "Polymarket|c1" })], cfg(), quote(0.8), NOW).reason, /already bet this pick/);
   assert.match(decide(sig(), [ord({ pickKey: "Polymarket|c1|1", marketKey: "Polymarket|c1" })], cfg(), quote(0.8), NOW).reason, /other side/);
-  // a cancelled (never filled) order doesn't use up the pick
-  assert.equal(decide(sig(), [ord({ pickKey: "Polymarket|c1|0", marketKey: "Polymarket|c1", status: "cancelled" })], cfg(), quote(0.8), NOW).action, "order");
+  // each bet is taken once: a cancelled (never filled) order isn't retried
+  assert.match(decide(sig(), [ord({ pickKey: "Polymarket|c1|0", marketKey: "Polymarket|c1", status: "cancelled" })], cfg(), quote(0.8), NOW).reason, /already tried/);
 });
 test("daily limit counts resting, filled and settled orders placed today (Central time)", () => {
   const today = Array.from({ length: base.limits.maxUnitsPerDay }, (_, i) => ord({ pickKey: "P|" + i, marketKey: "P|" + i, status: i % 2 ? "settled" : "resting", settledAt: NOW, units: 0 }));
@@ -85,7 +85,8 @@ test("days roll over at midnight Central, not UTC", () => {
 test("config: the shipped file is valid; broken values stop the bot", () => {
   assert.doesNotThrow(() => validateConfig(base));
   assert.throws(() => validateConfig({ ...base, filters: ["nope"] }), /unknown filter/);
-  assert.throws(() => validateConfig({ ...base, shadowFilters: ["pmSharp3h"] }), /both/);
+  assert.throws(() => validateConfig({ ...base, filters: ["pmSharp3h"], shadowFilters: ["pmSharp3h"] }), /both/);
+  assert.throws(() => validateConfig({ ...base, filters: ["autoBest"], autoBest: { minBets: 0 } }), /minNetRoiPct/);
   assert.throws(() => validateConfig({ ...base, fees: { Polymarket: 0.03 } }), /Kalshi/);
   assert.throws(() => validateConfig({ ...base, limits: { ...base.limits, maxOpenUnits: null } }), /maxOpenUnits/);
   assert.throws(() => validateConfig({ ...base, limits: { ...base.limits, stakeUnits: 2 } }), /flat 1 unit/);
@@ -126,4 +127,23 @@ test("pmSharp3h: Polymarket, sharp, whale bet 10 min to 3 h before start, first 
   const { a, ...rest } = pend;
   assert.deepEqual(findCandidates(rest, cfgT, NOW, mem).map(c => c.sigKey), []);
   assert.equal(tradeSignals(c1, cfgT)[0].rule, "pmSharp3h");
+});
+
+test("autoBest: trades only Best filters at the after-fee bar, best first", () => {
+  const baseline = { version: 2, filters: { soc7090agree40: { n: 186, net: 10.4 }, p7090ok: { n: 2282, net: -0.3 }, sharp8090agree: { n: 95, net: 12.8 }, ucl7090s60: { n: 20, net: 26.8 }, notAPreset: { n: 500, net: 50 } } };
+  const c = { ...base, filters: ["autoBest"], autoBest: { minNetRoiPct: 2, minBets: 0 }, shadowFilters: [] };
+  assert.deepEqual(expandFilters(c, baseline).filters, ["ucl7090s60", "sharp8090agree", "soc7090agree40"]);
+  assert.deepEqual(expandFilters({ ...c, autoBest: { minNetRoiPct: 2, minBets: 50 } }, baseline).filters, ["sharp8090agree", "soc7090agree40"]);
+  assert.deepEqual(expandFilters(c, null).filters, []);
+});
+
+test("price band and one try per pick", () => {
+  const cfg = { ...base, checks: { ...base.checks, minPrice: 0.10, maxPrice: 0.90 } };
+  const now = 1795000000, sig = { pickKey: "P|m|0", marketKey: "P|m", q: 0.5, start: now + 7200, venue: "Polymarket" };
+  const quote = { ask: 0.5, at: now, source: "test" };
+  assert.equal(decide({ ...sig, q: 0.08 }, [], cfg, { ...quote, ask: 0.08 }, now).action, "skip");
+  assert.equal(decide({ ...sig, q: 0.93 }, [], cfg, { ...quote, ask: 0.93 }, now).action, "skip");
+  assert.equal(decide({ ...sig, q: 0.895 }, [], cfg, { ...quote, ask: 0.895 }, now).limitPrice, 0.9);
+  assert.equal(decide(sig, [], cfg, quote, now).action, "order");
+  assert.match(decide(sig, [{ pickKey: sig.pickKey, marketKey: sig.marketKey, status: "cancelled", stakeUnits: 1 }], cfg, quote, now).reason, /already tried/);
 });

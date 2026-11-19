@@ -15,7 +15,8 @@ for (const pr of F.PRESETS) {
   const r = F.presetRecord(pr, picks);
   const avgQ = r.n ? r.list.reduce((a, e) => a + e.q, 0) / r.n : null;
   filters[pr.id] = { name: pr.name, venues: pr.venues || ["Polymarket"], n: r.n, w: r.w, l: r.l, units: +r.u.toFixed(2), roi: +r.roi.toFixed(2),
-    avgPrice: avgQ && +avgQ.toFixed(3), signal: r.signal.label, signalKey: r.signal.key, z: r.signal.z == null ? null : +r.signal.z.toFixed(2), games: r.signal.games };
+    net: +r.net.toFixed(2), avgPrice: avgQ && +avgQ.toFixed(3), signal: r.signal.label, signalKey: r.signal.key, z: r.signal.z == null ? null : +r.signal.z.toFixed(2), games: r.signal.games };
 }
-fs.writeFileSync(out, JSON.stringify({ updated: Math.floor(Date.now() / 1000), dataUpdated: idx.updated, picks: picks.length, filters }, null, 1));
+// version 2: alert-time records (first alert per pick) with net = ROI after fees and a 1c worse fill
+fs.writeFileSync(out, JSON.stringify({ version: 2, updated: Math.floor(Date.now() / 1000), dataUpdated: idx.updated, picks: picks.length, filters }, null, 1));
 console.log(`Baseline: ${picks.length} settled picks, ${F.PRESETS.length} filters -> ${out}`);

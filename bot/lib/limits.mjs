@@ -30,6 +30,10 @@ export function decide(sig, orders, cfg, quote, now) {
   const K = cfg.checks, L = cfg.limits, stake = L.stakeUnits;
   if (!(sig.start > now)) return skip("game already started");
   if (orders.some(o => o.pickKey === sig.pickKey && COUNTED.has(o.status))) return skip("already bet this pick");
+  // each bet is taken once: a pick whose order went unfilled and was cancelled isn't tried again
+  if (orders.some(o => o.pickKey === sig.pickKey && o.status === "cancelled")) return skip("already tried this pick");
+  if (K.minPrice != null && sig.q < K.minPrice - 1e-9) return skip(`whale's price ${c(sig.q)} is under ${c(K.minPrice)}`);
+  if (K.maxPrice != null && sig.q > K.maxPrice + 1e-9) return skip(`whale's price ${c(sig.q)} is over ${c(K.maxPrice)}`);
   if (orders.some(o => o.marketKey === sig.marketKey && o.pickKey !== sig.pickKey && COUNTED.has(o.status))) return skip("already bet the other side of this market");
   if ((sig.start - now) / 60 < K.startCutoffMinutes) return skip(`starts in under ${K.startCutoffMinutes} min`);
   const ls = lossStopHit(orders, cfg);
@@ -42,7 +46,8 @@ export function decide(sig, orders, cfg, quote, now) {
   const q = sig.q, limitPrice = Math.min(0.99, Math.floor((q + K.maxPriceRiseCents / 100) * 100 + 1e-6) / 100);
   if (K.maxPriceDropCents !== null && quote.ask < q - K.maxPriceDropCents / 100 - 1e-9)
     return skip(`price fell ${c(q - quote.ask)} below the whale's ${c(q)}: market moved against it`);
-  return { action: "order", limitPrice, fill: quote.ask <= limitPrice + 1e-9 ? quote.ask : null };
+  if (K.maxPrice != null && quote.ask > K.maxPrice + 1e-9 && quote.ask > limitPrice) return skip(`price ${c(quote.ask)} is over ${c(K.maxPrice)}`);
+  return { action: "order", limitPrice: K.maxPrice != null ? Math.min(limitPrice, K.maxPrice) : limitPrice, fill: quote.ask <= (K.maxPrice != null ? Math.min(limitPrice, K.maxPrice) : limitPrice) + 1e-9 ? quote.ask : null };
 }
 const skip = (reason, kind = "skip") => ({ action: "skip", reason, kind });
 const c = x => Math.round(x * 100) + "¢";

@@ -206,7 +206,7 @@ function render(){
   if (s.killSwitch) pills.push(`<span class="pill bad">Kill switch <b>ON</b></span>`);
   if (s.lossStop) pills.push(`<span class="pill bad">Loss stop hit: paused</span>`);
   if (rec.liveQuotePct != null && rec.liveQuotePct < 100) pills.push(`<span class="pill warn"><b>${Math.round(100 - rec.liveQuotePct)}%</b> of fills used a past fill, not a live quote</span>`);
-  pills.push(`<span class="pill">Trading <b>${esc(cfg.filters.join(", "))}</b></span>`);
+  pills.push(cfg.autoPicked ? `<span class="pill">Trading <b>${cfg.filters.length} Best filters</b> at ${cfg.autoBest.minNetRoiPct}%+ ROI after fees</span>` : `<span class="pill">Trading <b>${esc(cfg.filters.join(", "))}</b></span>`);
   $("#pills").innerHTML = pills.join("");
 
   const L = cfg.limits;
@@ -219,7 +219,7 @@ function render(){
   ${real.length ? "" : `<div class="empty" style="margin-bottom:16px">No paper bets yet. The trial starts with the first bet that matches the rule; everything below fills in from the bot's own log.</div>`}
   <section aria-labelledby="h-trial">
     <h2 id="h-trial">The trial</h2>
-    <p class="hint">${esc(ruleName(cfg.filters[0]))}. 1 unit flat. Closing line value (CLV) reads fastest: it compares our fill with the mid price at the last check before the game starts.</p>
+    <p class="hint">${cfg.autoPicked ? `Every Best filter whose record is ${cfg.autoBest.minNetRoiPct}%+ ROI after fees and a 1¢ worse fill, bet at the first alert` : esc(ruleName(cfg.filters[0]))}. 1 unit flat. Closing line value (CLV) reads fastest: it compares our fill with the mid price at the last check before the game starts.</p>
     <div class="stats">
       <div class="stat hero"><div class="k">Closing line value</div>
         <div class="v ${cls(rec.clvAvgCents)}">${rec.clvAvgCents == null ? "–" : sg(rec.clvAvgCents, 2) + "¢"}</div>
@@ -366,7 +366,7 @@ function rulesTab(){
   const { orders, cfg, baseline } = D;
   const row = (id, list, kind) => {
     const r = W.record(list), b = baseline && baseline.filters && baseline.filters[id];
-    const ref = REFERENCE[id] || (b ? `Site record (counts later bets): ${sg(b.roi)}% on ${b.n} bets · ${b.signal}` : "");
+    const ref = REFERENCE[id] || (b ? `Site record: ${sg(b.roi)}% on ${b.n} bets${b.net != null ? `, ${sg(b.net)}% after fees` : ""} · ${b.signal}` : "");
     return `<tr><td><b>${esc(ruleName(id))}</b><small>${esc(id)} · ${kind}</small>${ref ? `<small>${esc(ref)}</small>` : ""}</td>
       <td>${r.orders}<small>${r.open} open</small></td><td>${r.w}-${r.l}</td>
       <td class="${cls(r.netRoi)}">${r.netRoi == null ? "–" : sg(r.netRoi) + "%"}${r.netRoiCI ? `<small>${sg(r.netRoiCI[0])} to ${sg(r.netRoiCI[1])}</small>` : ""}</td>
@@ -379,7 +379,7 @@ function rulesTab(){
     ${cfg.filters.map(id => row(id, orders.filter(o => !o.shadow && o.rule === id), "trial")).join("")}
     ${cfg.shadowFilters.map(id => row(id, orders.filter(o => o.shadow && o.rule === id), "shadow")).join("")}
     </tbody></table></div>
-    ${baseline ? `<p class="hint" style="margin-top:8px">Site records refreshed ${ago(baseline.updated)}. They count big bets placed after the whale's bet, so they read high (see the Nov 17 audit).</p>` : ""}`;
+    ${baseline ? `<p class="hint" style="margin-top:8px">Site records refreshed ${ago(baseline.updated)}. Since Nov 19 they judge each bet on what was known at the alert.</p>` : ""}`;
 }
 function logTab(){
   const ds = D.decisions.filter(d => !d.shadow);
