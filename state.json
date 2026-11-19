@@ -4,7 +4,7 @@
   {
    "id": "1794969372-1",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x9d556907d239211fa56438cfe927f6f1231f091c3f4e4d901d82fb95f90c00ff|0",
@@ -58,12 +58,13 @@
    "grossUnits": -1,
    "units": -1.0204,
    "whaleUnits": -1,
-   "settledAt": 1794982538
+   "settledAt": 1794982538,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-2",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xe02874894921d7078c3ec1ad3be9e178ad54b09c0374325b5bc7ee7afc2b8a4a|0",
@@ -117,12 +118,13 @@
    "grossUnits": 0.8182,
    "units": 0.8047,
    "whaleUnits": 0.8518518518518517,
-   "settledAt": 1794981952
+   "settledAt": 1794981952,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-3",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x0147726109a63208e94a3c37e578bbbaaf6a61aceab9f67b43633612392f8fa5|0",
@@ -173,12 +175,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1794972357,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-4",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x9c9e6f1cf783e46bb686969d65fa584bdd48ab27c8e3ac6e8fe834080c302d05|0",
@@ -229,12 +232,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1794972357,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-5",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xc60edd60d821c9e33fe43977fe9244ea630c03446d1a842035b5f3d39e4a57b8|1",
@@ -288,12 +292,13 @@
    "grossUnits": 0.9231,
    "units": 0.9087,
    "whaleUnits": 0.923076923076923,
-   "settledAt": 1794981952
+   "settledAt": 1794981952,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-6",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x462fc1b8975baaff3b61c132cf4e276c93d5ffd95e9694d4031589d4a0c9b86a|0",
@@ -347,12 +352,13 @@
    "grossUnits": 0.9608,
    "units": 0.9461,
    "whaleUnits": 0.9607843137254901,
-   "settledAt": 1794981952
+   "settledAt": 1794981952,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-7",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x34d27f7247ec27ee27c441d9f51b2ea99be244431421f98779a0f3bae15abd47|0",
@@ -406,12 +412,13 @@
    "grossUnits": 1,
    "units": 0.985,
    "whaleUnits": 1.0408163265306123,
-   "settledAt": 1794981952
+   "settledAt": 1794981952,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-8",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x9cb990f1862568a63d8601efeebe0304225c32f2|0x941c3787299be8687b6ebdbb5470cd73c1f869bca79933a7fb1f7dfbedcea745|0",
@@ -465,12 +472,13 @@
    "grossUnits": -1,
    "units": -1.0141,
    "whaleUnits": -1,
-   "settledAt": 1794981952
+   "settledAt": 1794981952,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-9",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x7a345fd14e1c93efc480596b788fcb839cfff4e4cc20320b6a7e65f7097f123b|1",
@@ -524,12 +532,13 @@
    "grossUnits": -1,
    "units": -1,
    "whaleUnits": -1,
-   "settledAt": 1794985539
+   "settledAt": 1794985539,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-10",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xd22cbfe8320f317dd5dc6fc360ef11bf8f43b0715db6d837a590ed94a032248d|1",
@@ -583,12 +592,13 @@
    "grossUnits": -1,
    "units": -1.0156,
    "whaleUnits": -1,
-   "settledAt": 1794985539
+   "settledAt": 1794985539,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-11",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x230377d4da66c5e838859bc9a4db8149be3288856dda3a0f18e8ee7f449e933a|1",
@@ -642,12 +652,13 @@
    "grossUnits": -1,
    "units": -1.0162,
    "whaleUnits": -1,
-   "settledAt": 1794985539
+   "settledAt": 1794985539,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-12",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x4df332e27f9ee3224f52ce30e3ce15c1075e788f|0x61d485e96294fd320a9c1a8df936ada1f35d632e89ec3391aa583ca01e898a34|0",
@@ -701,12 +712,13 @@
    "grossUnits": -1,
    "units": -1.0168,
    "whaleUnits": -1,
-   "settledAt": 1794986738
+   "settledAt": 1794986738,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-13",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x9cb990f1862568a63d8601efeebe0304225c32f2|0x82a95d6db40a1b8efadc5fa6f516fe749015af2ef9107f35730154b31ddab623|0",
@@ -760,7 +772,8 @@
    "grossUnits": -1,
    "units": -1.0141,
    "whaleUnits": -1,
-   "settledAt": 1794986738
+   "settledAt": 1794986738,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969372-14",
@@ -811,8 +824,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795112188,
-    "minsBefore": 4744,
+    "at": 1795112374,
+    "minsBefore": 4740,
     "source": "kalshi market"
    }
   },
@@ -865,8 +878,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1795112188,
-    "minsBefore": 419,
+    "at": 1795112374,
+    "minsBefore": 415,
     "source": "kalshi market"
    }
   },
@@ -978,8 +991,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795112188,
-    "minsBefore": 2984,
+    "at": 1795112374,
+    "minsBefore": 2980,
     "source": "kalshi market"
    }
   },
@@ -1091,8 +1104,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795112188,
-    "minsBefore": 2984,
+    "at": 1795112374,
+    "minsBefore": 2980,
     "source": "kalshi market"
    }
   },
@@ -1204,8 +1217,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795112188,
-    "minsBefore": 4304,
+    "at": 1795112374,
+    "minsBefore": 4300,
     "source": "kalshi market"
    }
   },
@@ -1258,8 +1271,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795112188,
-    "minsBefore": 4304,
+    "at": 1795112374,
+    "minsBefore": 4300,
     "source": "kalshi market"
    }
   },
@@ -1548,8 +1561,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795112189,
-    "minsBefore": 419,
+    "at": 1795112374,
+    "minsBefore": 415,
     "source": "polymarket book"
    }
   },
@@ -1733,7 +1746,7 @@
   {
    "id": "1794969946-31",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xa41d86052ef4bd4198f4b6cc512499ac1b42883198672589f8e8b47b6b1bf543|1",
@@ -1787,7 +1800,8 @@
    "grossUnits": -1,
    "units": -1,
    "whaleUnits": -1,
-   "settledAt": 1794985539
+   "settledAt": 1794985539,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794969946-32",
@@ -1969,7 +1983,7 @@
   {
    "id": "1794971751-35",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x9fa7bc4ff40352958643d9f4710964213424b5a048a7765fbe42de95565dd6e1|0",
@@ -2023,7 +2037,8 @@
    "grossUnits": -1,
    "units": -1.012,
    "whaleUnits": -1,
-   "settledAt": 1794986738
+   "settledAt": 1794986738,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794971751-36",
@@ -2087,7 +2102,7 @@
   {
    "id": "1794972357-37",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xf68a281980f8c13828e84e147e3822381d6e5b1b|0xcedea38178a3973fbd7c9a8d07905e19643c66aef74b77973177edbe84b9c2ca|1",
@@ -2138,7 +2153,8 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1794974154,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794972357-38",
@@ -2481,8 +2497,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795112188,
-    "minsBefore": 419,
+    "at": 1795112374,
+    "minsBefore": 415,
     "source": "kalshi market"
    }
   },
@@ -3004,8 +3020,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795112189,
-    "minsBefore": 74,
+    "at": 1795112374,
+    "minsBefore": 70,
     "source": "polymarket book"
    }
   },
@@ -4121,7 +4137,7 @@
   {
    "id": "1794997527-72",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0xe697cdfd6f6b50f6428be20c1adfceeec982ba7fa991b3ac721f3b5c1284f551|0",
@@ -4175,7 +4191,8 @@
    "grossUnits": 0.2658,
    "units": 0.2595,
    "whaleUnits": 0.2658227848101265,
-   "settledAt": 1795014370
+   "settledAt": 1795014370,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794997527-73",
@@ -4357,7 +4374,7 @@
   {
    "id": "1794999943-76",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0x03f6cf945d1b562b990bd0f89a3b5209545ca37f7c010a0dba7280e88d26cd61|1",
@@ -4408,7 +4425,8 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795001157,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1794999943-77",
@@ -4528,7 +4546,7 @@
   {
    "id": "1795002344-79",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x2612ba0bcf5154dff32c9da237ce2cf889360bfb3712b9fdb4d9a26a821aff09|0",
@@ -4582,7 +4600,8 @@
    "grossUnits": -1,
    "units": -1.0219,
    "whaleUnits": -1,
-   "settledAt": 1795021552
+   "settledAt": 1795021552,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795002344-80",
@@ -6097,7 +6116,7 @@
   {
    "id": "1795019776-106",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x088ec48fdeec71c0b5f26b0bd095e7dc69843c70ada63b03715526bb6e65767f|0",
@@ -6151,7 +6170,8 @@
    "grossUnits": 2.8462,
    "units": 2.824,
    "whaleUnits": 2.846153846153846,
-   "settledAt": 1795035952
+   "settledAt": 1795035952,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795019776-107",
@@ -6320,8 +6340,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795112189,
-    "minsBefore": 4304,
+    "at": 1795112374,
+    "minsBefore": 4300,
     "source": "polymarket book"
    }
   },
@@ -6443,7 +6463,7 @@
   {
    "id": "1795022167-112",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x051adea0d16c85df8a8a9c7e400e0655905d1db9|0xa5de56057087074ea0d8250d3593e71edf05becf939a4291b3fbafd69d1e4613|0",
@@ -6497,7 +6517,8 @@
    "grossUnits": -1,
    "units": -1.0168,
    "whaleUnits": -1,
-   "settledAt": 1795038344
+   "settledAt": 1795038344,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795022167-113",
@@ -6725,8 +6746,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795112188,
-    "minsBefore": 5804,
+    "at": 1795112374,
+    "minsBefore": 5800,
     "source": "kalshi market"
    }
   },
@@ -6792,7 +6813,7 @@
   {
    "id": "1795023944-118",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x85dbf208d2545744674811dba06fa673ef812f4b035662edec995d6e26f6f61c|0",
@@ -6846,7 +6867,8 @@
    "grossUnits": -1,
    "units": -1.0147,
    "whaleUnits": -1,
-   "settledAt": 1795047963
+   "settledAt": 1795047963,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795023944-119",
@@ -7199,7 +7221,7 @@
   {
    "id": "1795026946-125",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xf406b6904c51df52bed3a270670304a27bd1f1f197f83a5cd3ada47c129165b6|0",
@@ -7253,7 +7275,8 @@
    "grossUnits": 1.1277,
    "units": 1.1118,
    "whaleUnits": 1.1276595744680853,
-   "settledAt": 1795047359
+   "settledAt": 1795047359,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795026946-126",
@@ -8118,8 +8141,8 @@
     "bid": 0.69,
     "ask": 0.7,
     "mid": 0.695,
-    "at": 1795112189,
-    "minsBefore": 2534,
+    "at": 1795112374,
+    "minsBefore": 2530,
     "source": "polymarket book"
    }
   },
@@ -8303,7 +8326,7 @@
   {
    "id": "1795035346-144",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6157d529ae129fe08f22a27ed42e741d2eaa9fb4|0x1819ec77ec6ee5a8621dc123115a9e347e20b69c9503272bd3dfe7a22db7563d|0",
@@ -8357,7 +8380,8 @@
    "grossUnits": 0.9231,
    "units": 0.9087,
    "whaleUnits": 0.8867924528301886,
-   "settledAt": 1795053371
+   "settledAt": 1795053371,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795036560-145",
@@ -8585,8 +8609,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795112189,
-    "minsBefore": 2984,
+    "at": 1795112375,
+    "minsBefore": 2980,
     "source": "polymarket book"
    }
   },
@@ -8639,8 +8663,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795112189,
-    "minsBefore": 4004,
+    "at": 1795112375,
+    "minsBefore": 4000,
     "source": "polymarket book"
    }
   },
@@ -8693,8 +8717,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795112189,
-    "minsBefore": 419,
+    "at": 1795112374,
+    "minsBefore": 415,
     "source": "polymarket book"
    }
   },
@@ -8875,7 +8899,7 @@
   {
    "id": "1795040164-154",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xb761a572952a92b5b1b1403ca7508669726f3328855663bc06f48e05eedf64ee|0",
@@ -8929,12 +8953,13 @@
    "grossUnits": 1.1739,
    "units": 1.1739,
    "whaleUnits": 1.2222222222222223,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795040164-155",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0x42f0eeb4df3aba0c9087574366fed131d531cf2fcb3127150fe2cd5348066f1d|1",
@@ -8988,12 +9013,13 @@
    "grossUnits": 0.7857,
    "units": 0.7725,
    "whaleUnits": 0.818181818181818,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795040164-156",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x2cacc5b0c3172cd5aba4a99f6cbc837e5bcd2e5970514c67b4c85f62a2f25e41|1",
@@ -9047,12 +9073,13 @@
    "grossUnits": 1.0408,
    "units": 1.0408,
    "whaleUnits": 1.0525451559934316,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795040164-157",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xb5adad2ae89a1243719e235014cc516cc91d93c80fc4a2513c565146a284f700|1",
@@ -9106,12 +9133,13 @@
    "grossUnits": 0.6667,
    "units": 0.6547,
    "whaleUnits": 0.6786973308712438,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795040164-158",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xbb6418f9db6d1c765965dc4c9d48cd5b4d2bdb86|0x10212c9484119d5bf771b3ddb9370aeb38e9feee4b0bf899cfc323cd884e97e2|0",
@@ -9165,12 +9193,13 @@
    "grossUnits": -1,
    "units": -1.0156,
    "whaleUnits": -1,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795040164-159",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x9364854a35956a4a5d75287ca4054aa370ead6b50e4413f8ccd44dd333e1814d|0",
@@ -9224,7 +9253,8 @@
    "grossUnits": -1,
    "units": -1.0189,
    "whaleUnits": -1,
-   "settledAt": 1795059961
+   "settledAt": 1795059961,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795040164-160",
@@ -9347,7 +9377,7 @@
   {
    "id": "1795040744-162",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0x5ab96e2e869fbe233b47cc022e3e2ed8dd4c5484d90513dc61bf4c0f79e97847|0",
@@ -9401,7 +9431,8 @@
    "grossUnits": -1,
    "units": -1.015,
    "whaleUnits": -1,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795040744-163",
@@ -9465,7 +9496,7 @@
   {
    "id": "1795041349-164",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x5ee92964df4c1577000768dddeafcd690e299a16c720bfef16030dab56dbaffa|0",
@@ -9516,12 +9547,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795046153,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795041349-165",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x4c0d26453bd40b5c51cb161b06f430feb5ba7a3393d775f1b3ced6357dbba7b7|0",
@@ -9572,12 +9604,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795046153,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795041349-166",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0xacf91fb9bef476f3a32fecb96f0c4c842451a5e3fe27f045673984eb0f64139e|0",
@@ -9631,7 +9664,8 @@
    "grossUnits": -1,
    "units": -1.0138,
    "whaleUnits": -1,
-   "settledAt": 1795056401
+   "settledAt": 1795056401,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795041349-167",
@@ -9863,7 +9897,7 @@
   {
    "id": "1795041976-171",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xbfd40a4fcb43d80eb4fb425f75d4fa090c61526f|0x12ecbdd5fa2e9b9c70274addd033a6339578f89f19147b1612eadeec4ba9d83e|0",
@@ -9917,12 +9951,13 @@
    "grossUnits": -1,
    "units": -1.0147,
    "whaleUnits": -1,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795041976-172",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0x559ca9498eba90b68476a9788fa29cb000e691ef6ab02f1e3bfdf07f11da4572|0",
@@ -9976,12 +10011,13 @@
    "grossUnits": 1,
    "units": 0.985,
    "whaleUnits": 1.0777062123415748,
-   "settledAt": 1795056969
+   "settledAt": 1795056969,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795041976-173",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xbfd40a4fcb43d80eb4fb425f75d4fa090c61526f|0x908a98011573d6eb01c9838613b7d6d38b532f671df45ab2e36090a8a6283f6d|1",
@@ -10035,7 +10071,8 @@
    "grossUnits": -1,
    "units": -1.0147,
    "whaleUnits": -1,
-   "settledAt": 1795054551
+   "settledAt": 1795054551,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795041976-174",
@@ -10158,7 +10195,7 @@
   {
    "id": "1795042559-176",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0xfc1eec8d334fc26901eab33d719c10e14cb5c9cfe3fc09fbd82e4f488c25c067|0",
@@ -10212,12 +10249,13 @@
    "grossUnits": 1.5,
    "units": 1.5,
    "whaleUnits": 1.4324981756263682,
-   "settledAt": 1795059961
+   "settledAt": 1795059961,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795042559-177",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0x5e0a7d0663daddec7e752efb524fb1cabe9dc96cfb60c7e4adad9c0d7866f81c|1",
@@ -10271,12 +10309,13 @@
    "grossUnits": 0.4925,
    "units": 0.4826,
    "whaleUnits": 0.49009089554462815,
-   "settledAt": 1795059961
+   "settledAt": 1795059961,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795042559-178",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xbfd40a4fcb43d80eb4fb425f75d4fa090c61526f|0x71905582dfc0161febdb3cf9848fab5d9a0edcd4bbe7063f1f1bc83a8abdc4fe|1",
@@ -10330,12 +10369,13 @@
    "grossUnits": -1,
    "units": -1.0153,
    "whaleUnits": -1,
-   "settledAt": 1795056969
+   "settledAt": 1795056969,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795042559-179",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3|0xf082f47aa62f36fd0a11c791180f72fca8e61ce742b244ff779d8fdbd5791746|0",
@@ -10386,12 +10426,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795047963,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795042559-180",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xee3026a9d3cce4d8355cecdaede97dfd729d4f22bd5d446f6561f7c3ea6d45d6|1",
@@ -10442,12 +10483,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795047963,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795042559-181",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531|1",
@@ -10501,7 +10543,8 @@
    "grossUnits": 0.6129,
    "units": 0.6015,
    "whaleUnits": 0.6129032258064516,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795042559-182",
@@ -10969,7 +11012,7 @@
   {
    "id": "1795043178-190",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x2c866881290c2197960f06448d3a236d9f20d939|0xdb9fb8e9670e4f0d9d4077d5ef2d8aaac7516f81d321cb529c5eae9412583ff1|1",
@@ -11020,12 +11063,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795046153,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043178-191",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x2c866881290c2197960f06448d3a236d9f20d939|0x5039871c61d02caab4292d60e202b8ed2865e03980a571e7b13efa88fa779d68|0",
@@ -11076,12 +11120,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795046153,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043178-192",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x2c866881290c2197960f06448d3a236d9f20d939|0x4613eb6c7948e51998dc3653f1d2ad924628c8186c4bdbefe43d03ca8845cf5d|1",
@@ -11132,12 +11177,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795046153,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043178-193",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0x3ee6da8c2d6c327fe4b1dd002c2fb2bfeb45c21671a06c9b0b5f79c34a6474db|0",
@@ -11188,12 +11234,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795046153,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043178-194",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xb83d6c949ccd8198c5f9a54ab6d601f5cbbf864fdae8ef7af6428a667a0150bf|1",
@@ -11247,12 +11294,13 @@
    "grossUnits": 0.7544,
    "units": 0.7415,
    "whaleUnits": 0.7543859649122808,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043178-195",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xe44925612c1794fa232f0824bb2f70d0d9777a1b65a4258de769414abae98fa5|0",
@@ -11306,7 +11354,8 @@
    "grossUnits": 0.9608,
    "units": 0.9461,
    "whaleUnits": 0.9607843137254901,
-   "settledAt": 1795060564
+   "settledAt": 1795060564,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043178-196",
@@ -11547,7 +11596,7 @@
   {
    "id": "1795043750-200",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0x4c782fe4fc71fea1003c274ee835f0f523a471e32006c9c433a2a0e046d0287e|0",
@@ -11601,12 +11650,13 @@
    "grossUnits": 0.5152,
    "units": 0.505,
    "whaleUnits": 0.47058823529411753,
-   "settledAt": 1795056401
+   "settledAt": 1795056401,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043750-201",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0x7401c86619bdd07d847562096573ec2e51517cae54f06c80d129dc93c15b755e|1",
@@ -11657,12 +11707,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795046153,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043750-202",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0xd090b450aa71413e33c4b35392ae02cbbe87f48b984ca57cb5c814eba47a47de|0",
@@ -11716,12 +11767,13 @@
    "grossUnits": 1.5,
    "units": 1.5,
    "whaleUnits": 1.541942043721403,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043750-203",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0x4411d502c053793f8501f658225ea5187e5b17071cbfd8636e99324989527ed8|1",
@@ -11775,12 +11827,13 @@
    "grossUnits": 1.2727,
    "units": 1.2559,
    "whaleUnits": 1.3255813953488373,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043750-204",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0x2035438749d1fba36105e926919b75b5dd7afe394dae3387f9b6cca60c65ea7f|1",
@@ -11834,12 +11887,13 @@
    "grossUnits": 1.1739,
    "units": 1.1577,
    "whaleUnits": 1.2222222222222223,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043750-205",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xa2cced8bfae7d645f7f437fb76becf2fcbb70cbc|0xa81182b6ef5d8a5930eb218a6905a634d38f4d4c537a7059a7ad3b218e25ecea|1",
@@ -11893,7 +11947,8 @@
    "grossUnits": -1,
    "units": -1.0147,
    "whaleUnits": -1,
-   "settledAt": 1795056401
+   "settledAt": 1795056401,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795043750-206",
@@ -11957,7 +12012,7 @@
   {
    "id": "1795044389-207",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xa2cced8bfae7d645f7f437fb76becf2fcbb70cbc|0xba47fc527a55c4df0b8f22e6e203712c565ee9da63b5d37fa0874fa3015c8c87|0",
@@ -12011,12 +12066,13 @@
    "grossUnits": 0.8868,
    "units": 0.8727,
    "whaleUnits": 0.923076923076923,
-   "settledAt": 1795056401
+   "settledAt": 1795056401,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795044389-208",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x85b1b9241e3253609ac1b9b9c955df87cfa41e4bb5b04342ac51a4df6b34d91a|0",
@@ -12070,12 +12126,13 @@
    "grossUnits": 1.5641,
    "units": 1.5458,
    "whaleUnits": 1.631578947368421,
-   "settledAt": 1795056969
+   "settledAt": 1795056969,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795044389-209",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xc5a9b485dcf72b254bf0385573d9e448d6210ad8170ae421003aa87a2a6784cc|1",
@@ -12129,12 +12186,13 @@
    "grossUnits": 0.1494,
    "units": 0.1455,
    "whaleUnits": 0.16279069767441862,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795044389-210",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0xeee403ae143c344f3149e3b12609cf818870312f7abf3c445dd51173f87d0832|1",
@@ -12188,7 +12246,8 @@
    "grossUnits": 0.7857,
    "units": 0.7725,
    "whaleUnits": 0.7857142857142856,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795044389-211",
@@ -12541,7 +12600,7 @@
   {
    "id": "1795044969-217",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0x8ea7487554daa4f2401c9f4d8a2c5482c358627a56c069a4a42f7ebc85192339|0",
@@ -12595,12 +12654,13 @@
    "grossUnits": 0.9231,
    "units": 0.9087,
    "whaleUnits": 0.923076923076923,
-   "settledAt": 1795059961
+   "settledAt": 1795059961,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795044969-218",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xde40bafeaf8f33a995a935b06d385be8e77e6f0e807966ecb617e62c3eafb60e|1",
@@ -12654,7 +12714,8 @@
    "grossUnits": 0.9231,
    "units": 0.9087,
    "whaleUnits": 0.9607843137254901,
-   "settledAt": 1795059961
+   "settledAt": 1795059961,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795044969-219",
@@ -12833,7 +12894,7 @@
   {
    "id": "1795045559-222",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x8a83a5f29c1661874a59d5a45f6975e6723fc7b205b20a95514b448eada66111|0",
@@ -12884,12 +12945,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795046153,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795045559-223",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x5cbcefc6102cf2eb15a45c4f2ba3f017f653e1262dd09b70cf6f920c7b15103e|0",
@@ -12940,12 +13002,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795046153,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795045559-224",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xf68a281980f8c13828e84e147e3822381d6e5b1b|0xb3e796c6d2fa2ddf52e39dc697ecf4f4ea19de69305519e362287e41e67d92e0|0",
@@ -12999,7 +13062,8 @@
    "grossUnits": 0.8182,
    "units": 0.8047,
    "whaleUnits": 0.818181818181818,
-   "settledAt": 1795056401
+   "settledAt": 1795056401,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795045559-225",
@@ -13178,7 +13242,7 @@
   {
    "id": "1795046153-228",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x77878ec9c4ffea6ae87dc19f724d49343189dff4ee2f8d96877cd90be29ae43a|0",
@@ -13232,7 +13296,8 @@
    "grossUnits": -1,
    "units": -1.015,
    "whaleUnits": -1,
-   "settledAt": 1795066552
+   "settledAt": 1795066552,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795046153-229",
@@ -13296,7 +13361,7 @@
   {
    "id": "1795046773-230",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x07cdb7ff59205f9f5de337bca7a76e39b68d71397bc6159fb040084e2711905c|0",
@@ -13350,12 +13415,13 @@
    "grossUnits": 1,
    "units": 0.985,
    "whaleUnits": 1,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795046773-231",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0x94ad79c07bed4b7c690ec8e2cd84787f525e09dd6abcc3fd3b7f0272b3808b2d|0",
@@ -13409,12 +13475,13 @@
    "grossUnits": -1,
    "units": -1.0135,
    "whaleUnits": -1,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795046773-232",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x9fa53e486664ab9b206b330d39b6b40d6288be7b5bb1f71de4a4b7a14b7f26fe|1",
@@ -13468,7 +13535,8 @@
    "grossUnits": 0.6393,
    "units": 0.6276,
    "whaleUnits": 0.639344262295082,
-   "settledAt": 1795070751
+   "settledAt": 1795070751,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795046773-233",
@@ -13709,7 +13777,7 @@
   {
    "id": "1795047359-237",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xcfc7fb15c0e126d0f0b48b7d345185cc69c9230da166b072f32d8a91548b7d84|1",
@@ -13763,12 +13831,13 @@
    "grossUnits": 1.0408,
    "units": 1.0255,
    "whaleUnits": 1.0247013565499088,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795047359-238",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x05b52b66a4ca33a69109bfc83ab2097f812ab5f172d8dec86e7d4762e5107e17|1",
@@ -13822,12 +13891,13 @@
    "grossUnits": 1.2222,
    "units": 1.2057,
    "whaleUnits": 1.2222222222222223,
-   "settledAt": 1795058760
+   "settledAt": 1795058760,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795047359-239",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x67f4c72d85cde7d8df2c4f408d4f5e1115f375597549ab9da870919f1857f5a1|0",
@@ -13881,7 +13951,8 @@
    "grossUnits": 0.9231,
    "units": 0.9087,
    "whaleUnits": 0.9607843137254901,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795047359-240",
@@ -14004,7 +14075,7 @@
   {
    "id": "1795047963-242",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xe99db0912d2a522942706314a31e73ec0a108dffc6ffc0f9c2baaf61c851d7f0|0",
@@ -14058,12 +14129,13 @@
    "grossUnits": 1.1739,
    "units": 1.1739,
    "whaleUnits": 1.0833333333333335,
-   "settledAt": 1795060564
+   "settledAt": 1795060564,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795047963-243",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x5e6e2c3f06686f2607b86c90e35f536e81a1be00|0xb0d7d50cdbf678cba5b476692179cc36c492588db0e22949babb0a6756066bea|1",
@@ -14117,12 +14189,13 @@
    "grossUnits": -1,
    "units": -1.0087,
    "whaleUnits": -1,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795047963-244",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0x0fc4d2631c92f56228c6ef8deb1d8d5be48065c07c73c7e59e75be1bfda313b1|0",
@@ -14176,7 +14249,8 @@
    "grossUnits": 1.1277,
    "units": 1.1277,
    "whaleUnits": 0.923076923076923,
-   "settledAt": 1795060564
+   "settledAt": 1795060564,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795047963-245",
@@ -14240,7 +14314,7 @@
   {
    "id": "1795048551-246",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x5294de501c538f9bef89782876d532da2302005e69f97858e7125d4edabb0595|0",
@@ -14294,12 +14368,13 @@
    "grossUnits": -1,
    "units": -1.015,
    "whaleUnits": -1,
-   "settledAt": 1795059357
+   "settledAt": 1795059357,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795048551-247",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0x22bd72030a3b39b69009b60a1e276842d8a6669528c65ca6f07eb97d046bb896|1",
@@ -14353,12 +14428,13 @@
    "grossUnits": -1,
    "units": -1.0177,
    "whaleUnits": -1,
-   "settledAt": 1795060564
+   "settledAt": 1795060564,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795048551-248",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x2c866881290c2197960f06448d3a236d9f20d939|0x819a02808006c909fe7c586c05c21b20824354533b6a156ca9647175b026859c|1",
@@ -14409,7 +14485,8 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795049752,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795048551-249",
@@ -14519,15 +14596,15 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795112189,
-    "minsBefore": 2684,
+    "at": 1795112375,
+    "minsBefore": 2680,
     "source": "polymarket book"
    }
   },
   {
    "id": "1795049150-251",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x9c535157d67cf405243b07ac568173f1b6dcf6b4dcf75b438ccbc6fcb6de56ca|1",
@@ -14578,12 +14655,13 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795049752,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795049150-252",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3|0x674c1b4a7fe1b20968a88525ec98460cf758afeddbd6fcae60527353e4967f17|0",
@@ -14637,7 +14715,8 @@
    "grossUnits": 1,
    "units": 0.985,
    "whaleUnits": 1.012477359629704,
-   "settledAt": 1795059961
+   "settledAt": 1795059961,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795049150-253",
@@ -14918,15 +14997,15 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795112189,
-    "minsBefore": 1124,
+    "at": 1795112375,
+    "minsBefore": 1120,
     "source": "polymarket book"
    }
   },
   {
    "id": "1795050945-258",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xfca40be61371e4de34728e2a2ad4ebf42d4096f880ce6ef6dc446bc7bce0a342|1",
@@ -14980,12 +15059,13 @@
    "grossUnits": 0.9231,
    "units": 0.9087,
    "whaleUnits": 0.9138755980861245,
-   "settledAt": 1795066552
+   "settledAt": 1795066552,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795050945-259",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x3e509b54f893e30e8b7066c14b157a06fe5cc1ff830beea76c196ff669f7c671|1",
@@ -15039,7 +15119,8 @@
    "grossUnits": 1,
    "units": 0.985,
    "whaleUnits": 1.0132876988121604,
-   "settledAt": 1795066552
+   "settledAt": 1795066552,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795050945-260",
@@ -15100,7 +15181,7 @@
   {
    "id": "1795051889-261",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x004a0168d1784db6f2adabd79efaefa395bfd8357ae8b172f06254f2db7411f0|0",
@@ -15154,7 +15235,8 @@
    "grossUnits": -1,
    "units": -1.0141,
    "whaleUnits": -1,
-   "settledAt": 1795066552
+   "settledAt": 1795066552,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795051889-262",
@@ -15333,7 +15415,7 @@
   {
    "id": "1795055151-265",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xd002247e5bcc98a259ab7fd68e2ea6349e01aa96f77c9c7114b700daca070adf|1",
@@ -15387,12 +15469,13 @@
    "grossUnits": 0.8519,
    "units": 0.8381,
    "whaleUnits": 0.8642803877703207,
-   "settledAt": 1795067765
+   "settledAt": 1795067765,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795055151-266",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x4df332e27f9ee3224f52ce30e3ce15c1075e788f|0x724226817f07511a942a37ca6ec70d8f42f7ae34d8185c32818294537cab857f|1",
@@ -15446,12 +15529,13 @@
    "grossUnits": 0.8182,
    "units": 0.8047,
    "whaleUnits": 0.8518518518518517,
-   "settledAt": 1795067765
+   "settledAt": 1795067765,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795055753-267",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x9cb990f1862568a63d8601efeebe0304225c32f2|0xcbef2e0841bd87f631fa678fa5c36a4ba13548b447458e070ef28b6db66b0729|0",
@@ -15505,12 +15589,13 @@
    "grossUnits": -1,
    "units": -1.0153,
    "whaleUnits": -1,
-   "settledAt": 1795067765
+   "settledAt": 1795067765,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795055753-268",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x9cb990f1862568a63d8601efeebe0304225c32f2|0xed098c8f07cbdc5f36b4c29b822ce18b31294fce9d4746ab6cef9be6c7bb74b8|0",
@@ -15564,7 +15649,8 @@
    "grossUnits": 0.9231,
    "units": 0.9087,
    "whaleUnits": 0.923076923076923,
-   "settledAt": 1795066552
+   "settledAt": 1795066552,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795056401-269",
@@ -15674,8 +15760,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795112189,
-    "minsBefore": 4304,
+    "at": 1795112375,
+    "minsBefore": 4300,
     "source": "kalshi market"
    }
   },
@@ -15787,8 +15873,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795112189,
-    "minsBefore": 3419,
+    "at": 1795112375,
+    "minsBefore": 3415,
     "source": "kalshi market"
    }
   },
@@ -16077,8 +16163,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795112189,
-    "minsBefore": 3254,
+    "at": 1795112375,
+    "minsBefore": 3250,
     "source": "kalshi market"
    }
   },
@@ -16190,8 +16276,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795112189,
-    "minsBefore": 4304,
+    "at": 1795112375,
+    "minsBefore": 4300,
     "source": "polymarket book"
    }
   },
@@ -16244,8 +16330,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795112189,
-    "minsBefore": 344,
+    "at": 1795112375,
+    "minsBefore": 340,
     "source": "polymarket book"
    }
   },
@@ -16298,8 +16384,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "polymarket book"
    }
   },
@@ -16411,15 +16497,15 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "kalshi market"
    }
   },
   {
    "id": "1795085160-284",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0x42d5029888dab83b849bf55f77abe51cb9ee8b621a8d6ac2e8e5b23c847e6619|0",
@@ -16473,7 +16559,8 @@
    "grossUnits": 0.6949,
    "units": 0.6826,
    "whaleUnits": 0.6697278343629989,
-   "settledAt": 1795097737
+   "settledAt": 1795097737,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795085160-285",
@@ -16711,7 +16798,7 @@
   {
    "id": "1795086359-289",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0x7843fd22e207f819964c056f87e12068ac95a1be5ac5d86b7a903af040fbdd18|1",
@@ -16765,12 +16852,13 @@
    "grossUnits": 0.5625,
    "units": 0.5517,
    "whaleUnits": 0.5255530129672007,
-   "settledAt": 1795092347
+   "settledAt": 1795092347,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795086359-290",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x61a3f1ef9c9618f532eb49f0cb260486c168e508|0xabc88296ad7e0042be8f3c83bf77d27d04e967dd651c61a7bd3150a3b1593cdc|0",
@@ -16824,7 +16912,8 @@
    "grossUnits": -1,
    "units": -1.0174,
    "whaleUnits": -1,
-   "settledAt": 1795095974
+   "settledAt": 1795095974,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795086359-291",
@@ -16934,8 +17023,8 @@
     "bid": 0.68,
     "ask": 0.69,
     "mid": 0.685,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "polymarket book"
    }
   },
@@ -17057,7 +17146,7 @@
   {
    "id": "1795089952-295",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x269380254638e5ec0b309485faa587c3d5c860f71c4985dba63d521e1c8e5ce8|0",
@@ -17111,7 +17200,8 @@
    "grossUnits": -1,
    "units": -1,
    "whaleUnits": -1,
-   "settledAt": 1795107958
+   "settledAt": 1795107958,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795089952-296",
@@ -17277,8 +17367,8 @@
     "bid": 0.88,
     "ask": 0.89,
     "mid": 0.885,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "polymarket book"
    }
   },
@@ -17331,15 +17421,15 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795112189,
-    "minsBefore": 2684,
+    "at": 1795112375,
+    "minsBefore": 2680,
     "source": "polymarket book"
    }
   },
   {
    "id": "1795092347-300",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x076daa87c4fe1a85402a9b6b8e0a866224388d4c|0xda9a6acc1ae58794f3e614f3b8df9c2e6528301c89debbd3742120df4697ec98|1",
@@ -17393,7 +17483,8 @@
    "grossUnits": -1,
    "units": -1.0129,
    "whaleUnits": -1,
-   "settledAt": 1795111628
+   "settledAt": 1795111628,
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795092347-301",
@@ -17503,8 +17594,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795112189,
-    "minsBefore": 524,
+    "at": 1795112375,
+    "minsBefore": 520,
     "source": "kalshi market"
    }
   },
@@ -17557,8 +17648,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795112189,
-    "minsBefore": 344,
+    "at": 1795112375,
+    "minsBefore": 340,
     "source": "kalshi market"
    }
   },
@@ -17667,15 +17758,15 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "polymarket book"
    }
   },
   {
    "id": "1795097737-306",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x076daa87c4fe1a85402a9b6b8e0a866224388d4c|0xa73b0870c5c195578cbab7046bc924c12e1322299a5184a9e1ba7dbd4f289e38|0",
@@ -17724,7 +17815,8 @@
     "at": 1795105576,
     "minsBefore": 4,
     "source": "polymarket book"
-   }
+   },
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795097737-307",
@@ -17883,8 +17975,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "polymarket book"
    }
   },
@@ -17937,8 +18029,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "kalshi market"
    }
   },
@@ -17991,8 +18083,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "polymarket book"
    }
   },
@@ -18101,8 +18193,8 @@
     "bid": 0.76,
     "ask": 0.78,
     "mid": 0.77,
-    "at": 1795112189,
-    "minsBefore": 1664,
+    "at": 1795112375,
+    "minsBefore": 1660,
     "source": "polymarket book"
    }
   },
@@ -18155,8 +18247,8 @@
     "bid": 0.88,
     "ask": 0.89,
     "mid": 0.885,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "polymarket book"
    }
   },
@@ -18321,8 +18413,8 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795112189,
-    "minsBefore": 74,
+    "at": 1795112375,
+    "minsBefore": 70,
     "source": "kalshi market"
    }
   },
@@ -18375,8 +18467,8 @@
     "bid": 0.68,
     "ask": 0.69,
     "mid": 0.685,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
     "source": "kalshi market"
    }
   },
@@ -18429,8 +18521,8 @@
     "bid": 0.51,
     "ask": 0.52,
     "mid": 0.515,
-    "at": 1795112189,
-    "minsBefore": 4304,
+    "at": 1795112375,
+    "minsBefore": 4300,
     "source": "kalshi market"
    }
   },
@@ -18483,8 +18575,8 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1795112189,
-    "minsBefore": 4304,
+    "at": 1795112375,
+    "minsBefore": 4300,
     "source": "kalshi market"
    }
   },
@@ -18537,15 +18629,15 @@
     "bid": 0.52,
     "ask": 0.53,
     "mid": 0.525,
-    "at": 1795112189,
-    "minsBefore": 344,
+    "at": 1795112375,
+    "minsBefore": 340,
     "source": "kalshi market"
    }
   },
   {
    "id": "1795109151-322",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x051adea0d16c85df8a8a9c7e400e0655905d1db9|0x4b5b75fab91691c6211e2d08e1d6e728eb04b54f24334d3324c7a77155c55df2|0",
@@ -18594,7 +18686,8 @@
     "at": 1795110973,
     "minsBefore": 4,
     "source": "polymarket book"
-   }
+   },
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795109151-323",
@@ -18753,8 +18846,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795112189,
-    "minsBefore": 4304,
+    "at": 1795112375,
+    "minsBefore": 4300,
     "source": "kalshi market"
    }
   },
@@ -18807,8 +18900,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795112189,
-    "minsBefore": 74,
+    "at": 1795112375,
+    "minsBefore": 70,
     "source": "kalshi market"
    }
   },
@@ -18915,8 +19008,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795112189,
-    "minsBefore": 419,
+    "at": 1795112375,
+    "minsBefore": 415,
     "source": "kalshi market"
    }
   },
@@ -18969,15 +19062,15 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795112189,
-    "minsBefore": 419,
+    "at": 1795112375,
+    "minsBefore": 415,
     "source": "kalshi market"
    }
   },
   {
    "id": "1795110372-330",
    "mode": "paper",
-   "shadow": false,
+   "shadow": true,
    "rule": "pmSharp3h",
    "alsoMatched": [],
    "sigKey": "0x076daa87c4fe1a85402a9b6b8e0a866224388d4c|0x78d32d3e20968425365dad78f0589a61be4e67360a168e516d2c1c01e8c05120|0",
@@ -19028,7 +19121,8 @@
     "source": "polymarket book"
    },
    "cancelledAt": 1795110971,
-   "cancelReason": "unfilled at the start-time cutoff"
+   "cancelReason": "unfilled at the start-time cutoff",
+   "archived": "trial ended 2026-11-19"
   },
   {
    "id": "1795110372-331",
@@ -19191,8 +19285,8 @@
     "bid": 0.78,
     "ask": 0.79,
     "mid": 0.785,
-    "at": 1795112189,
-    "minsBefore": 104,
+    "at": 1795112375,
+    "minsBefore": 100,
     "source": "polymarket book"
    }
   },
@@ -19245,8 +19339,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795112190,
-    "minsBefore": 254,
+    "at": 1795112375,
+    "minsBefore": 250,
     "source": "polymarket book"
    }
   },
@@ -19353,8 +19447,834 @@
     "bid": 0.83,
     "ask": 0.88,
     "mid": 0.855,
-    "at": 1795112189,
-    "minsBefore": 404,
+    "at": 1795112375,
+    "minsBefore": 400,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-337",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "tenP50",
+   "alsoMatched": [
+    "ten50"
+   ],
+   "sigKey": "0x9a933a2a83188b28efaf1d07d45228ea6ee82793|0x3da741c90a327217e96e05465d1de86350f7b20a014ac9f3a0c9eab521f4dff6|1",
+   "pickKey": "Polymarket|0x3da741c90a327217e96e05465d1de86350f7b20a014ac9f3a0c9eab521f4dff6|1",
+   "marketKey": "Polymarket|0x3da741c90a327217e96e05465d1de86350f7b20a014ac9f3a0c9eab521f4dff6",
+   "venue": "Polymarket",
+   "conditionId": "0x3da741c90a327217e96e05465d1de86350f7b20a014ac9f3a0c9eab521f4dff6",
+   "idx": 1,
+   "name": "Arthur Fils",
+   "title": "ATP World Tour Finals, John McEnroe Group: Alexander Zverev vs Arthur Fils",
+   "slug": "atp-zverev-fils-2026-11-17",
+   "league": "Tennis",
+   "marketType": "moneyline",
+   "start": 1795116600,
+   "whale": {
+    "q": 0.3022,
+    "usd": 57220,
+    "score": 54,
+    "sharp": false,
+    "flow": "disagree",
+    "ts": 1795070351,
+    "wallet": "0x9a933a2a83188b28efaf1d07d45228ea6ee82793"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.31,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.27,
+    "bid": 0.26,
+    "mid": 0.265,
+    "depth": 20054.82,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.27,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0219,
+   "priceSource": "polymarket book",
+   "slippageCents": -3.2,
+   "close": {
+    "bid": 0.26,
+    "ask": 0.27,
+    "mid": 0.265,
+    "at": 1795112375,
+    "minsBefore": 70,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-338",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "ten50",
+   "alsoMatched": [],
+   "sigKey": "anon:07262133-4721-bb09-b32f-31d67304b94e|KXATPGSPREAD-26NOV17ZVEFIL-ZVE3|0",
+   "pickKey": "Kalshi|KXATPGSPREAD-26NOV17ZVEFIL-ZVE3|0",
+   "marketKey": "Kalshi|KXATPGSPREAD-26NOV17ZVEFIL-ZVE3",
+   "venue": "Kalshi",
+   "conditionId": "KXATPGSPREAD-26NOV17ZVEFIL-ZVE3",
+   "idx": 0,
+   "name": "Alexander Zverev -2.5 games",
+   "title": "Will Alexander Zverev win at least 2.5 more games than Arthur Fils?",
+   "slug": "KXATPGSPREAD-26NOV17ZVEFIL",
+   "league": "Tennis",
+   "marketType": "moneyline",
+   "start": 1795116600,
+   "whale": {
+    "q": 0.55,
+    "usd": 4950,
+    "score": 71,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795106751,
+    "wallet": null
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.56,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.56,
+    "bid": 0.55,
+    "mid": 0.555,
+    "depth": null,
+    "at": 1795112375,
+    "source": "kalshi market"
+   },
+   "status": "filled",
+   "fillPrice": 0.56,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0308,
+   "priceSource": "kalshi market",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.55,
+    "ask": 0.56,
+    "mid": 0.555,
+    "at": 1795112375,
+    "minsBefore": 70,
+    "source": "kalshi market"
+   }
+  },
+  {
+   "id": "1795112374-339",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc60",
+   "alsoMatched": [
+    "soc50"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x41ada9a79365158af1b76253494e41612093874177f7464109ba231890f0c5b4|0",
+   "pickKey": "Polymarket|0x41ada9a79365158af1b76253494e41612093874177f7464109ba231890f0c5b4|0",
+   "marketKey": "Polymarket|0x41ada9a79365158af1b76253494e41612093874177f7464109ba231890f0c5b4",
+   "venue": "Polymarket",
+   "conditionId": "0x41ada9a79365158af1b76253494e41612093874177f7464109ba231890f0c5b4",
+   "idx": 0,
+   "name": "Over",
+   "title": "FC Barcelona vs. Servette FC Chênois Féminin: O/U 5.5",
+   "slug": "uwcl-fcb-ser-2026-11-19-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795118400,
+   "whale": {
+    "q": 0.55,
+    "usd": 8981,
+    "score": 65,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795096694,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.56,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.65,
+    "bid": 0.64,
+    "mid": 0.645,
+    "depth": 112,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.64,
+    "ask": 0.65,
+    "mid": 0.645,
+    "at": 1795112375,
+    "minsBefore": 100,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-340",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050",
+    "soc60",
+    "soc50"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x41492756bb050c1385b474ac9148cf43b20efe474f7fdf7e525ac78a61f4eefa|0",
+   "pickKey": "Polymarket|0x41492756bb050c1385b474ac9148cf43b20efe474f7fdf7e525ac78a61f4eefa|0",
+   "marketKey": "Polymarket|0x41492756bb050c1385b474ac9148cf43b20efe474f7fdf7e525ac78a61f4eefa",
+   "venue": "Polymarket",
+   "conditionId": "0x41492756bb050c1385b474ac9148cf43b20efe474f7fdf7e525ac78a61f4eefa",
+   "idx": 0,
+   "name": "Over",
+   "title": "FC Barcelona vs. Servette FC Chênois Féminin: O/U 6.5",
+   "slug": "uwcl-fcb-ser-2026-11-19-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795118400,
+   "whale": {
+    "q": 0.4,
+    "usd": 7783,
+    "score": 64,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795096700,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.41,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.51,
+    "bid": 0.49,
+    "mid": 0.5,
+    "depth": 629.19,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.49,
+    "ask": 0.51,
+    "mid": 0.5,
+    "at": 1795112375,
+    "minsBefore": 100,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-341",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0xa278b41b5afda5d18da683eb7f851a7b2dc13369|0x044cd36cc2c3cf63cd6b3d3708988eaa5edd52f6d0875e2af29f4266a2209f01|0",
+   "pickKey": "Polymarket|0x044cd36cc2c3cf63cd6b3d3708988eaa5edd52f6d0875e2af29f4266a2209f01|0",
+   "marketKey": "Polymarket|0x044cd36cc2c3cf63cd6b3d3708988eaa5edd52f6d0875e2af29f4266a2209f01",
+   "venue": "Polymarket",
+   "conditionId": "0x044cd36cc2c3cf63cd6b3d3708988eaa5edd52f6d0875e2af29f4266a2209f01",
+   "idx": 0,
+   "name": "Over",
+   "title": "FC Barcelona vs. Servette FC Chênois Féminin: O/U 4.5",
+   "slug": "uwcl-fcb-ser-2026-11-19-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795118400,
+   "whale": {
+    "q": 0.8161,
+    "usd": 1427,
+    "score": 23,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795109630,
+    "wallet": "0xa278b41b5afda5d18da683eb7f851a7b2dc13369"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.82,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.79,
+    "bid": 0.78,
+    "mid": 0.785,
+    "depth": 504.11,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.79,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0063,
+   "priceSource": "polymarket book",
+   "slippageCents": -2.6,
+   "close": {
+    "bid": 0.78,
+    "ask": 0.79,
+    "mid": 0.785,
+    "at": 1795112375,
+    "minsBefore": 100,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-342",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0xbf6c600a11ca0a72b799d16265301df68b348ce4|0x93ac8ef85f9ff0540f8fd01233162685a22665c404c625ba631cc83bd4548b9b|1",
+   "pickKey": "Polymarket|0x93ac8ef85f9ff0540f8fd01233162685a22665c404c625ba631cc83bd4548b9b|1",
+   "marketKey": "Polymarket|0x93ac8ef85f9ff0540f8fd01233162685a22665c404c625ba631cc83bd4548b9b",
+   "venue": "Polymarket",
+   "conditionId": "0x93ac8ef85f9ff0540f8fd01233162685a22665c404c625ba631cc83bd4548b9b",
+   "idx": 1,
+   "name": "SC Internacional",
+   "title": "Spread: CR Vasco da Gama (-2.5)",
+   "slug": "bra-vas-int-2026-11-19-more-markets",
+   "league": "Other soccer",
+   "marketType": "spread",
+   "start": 1795127400,
+   "whale": {
+    "q": 0.8232,
+    "usd": 6483,
+    "score": 31,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795109455,
+    "wallet": "0xbf6c600a11ca0a72b799d16265301df68b348ce4"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.83,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.82,
+    "bid": 0.81,
+    "mid": 0.815,
+    "depth": 227.47,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.82,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0054,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.3,
+   "close": {
+    "bid": 0.81,
+    "ask": 0.82,
+    "mid": 0.815,
+    "at": 1795112375,
+    "minsBefore": 250,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-343",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharpMl70",
+   "alsoMatched": [],
+   "sigKey": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x6aa0f07a07c0c0de3d978cbcc65069b92c5caf802495eeafe7df03df5a84996f|0",
+   "pickKey": "Polymarket|0x6aa0f07a07c0c0de3d978cbcc65069b92c5caf802495eeafe7df03df5a84996f|0",
+   "marketKey": "Polymarket|0x6aa0f07a07c0c0de3d978cbcc65069b92c5caf802495eeafe7df03df5a84996f",
+   "venue": "Polymarket",
+   "conditionId": "0x6aa0f07a07c0c0de3d978cbcc65069b92c5caf802495eeafe7df03df5a84996f",
+   "idx": 0,
+   "name": "Trail Blazers",
+   "title": "Trail Blazers vs. Bucks",
+   "slug": "nba-por-mil-2026-11-19",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795136400,
+   "whale": {
+    "q": 0.7834,
+    "usd": 3328,
+    "score": 72,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795078544,
+    "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.79,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.81,
+    "bid": 0.8,
+    "mid": 0.805,
+    "depth": 12648.92,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.8,
+    "ask": 0.81,
+    "mid": 0.805,
+    "at": 1795112375,
+    "minsBefore": 400,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-344",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp8090agree",
+   "alsoMatched": [
+    "sharp6090agree"
+   ],
+   "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xa2e36e8bcbfb990c2877acdb33cfb76e3e27f700c60fd5222a7e1d22c5b854fe|1",
+   "pickKey": "Polymarket|0xa2e36e8bcbfb990c2877acdb33cfb76e3e27f700c60fd5222a7e1d22c5b854fe|1",
+   "marketKey": "Polymarket|0xa2e36e8bcbfb990c2877acdb33cfb76e3e27f700c60fd5222a7e1d22c5b854fe",
+   "venue": "Polymarket",
+   "conditionId": "0xa2e36e8bcbfb990c2877acdb33cfb76e3e27f700c60fd5222a7e1d22c5b854fe",
+   "idx": 1,
+   "name": "Spurs",
+   "title": "Clippers vs. Spurs",
+   "slug": "nba-lac-sas-2026-11-19",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795136400,
+   "whale": {
+    "q": 0.88,
+    "usd": 26910,
+    "score": 63,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795104025,
+    "wallet": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.89,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.89,
+    "bid": 0.88,
+    "mid": 0.885,
+    "depth": 75018.78,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.89,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0033,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.88,
+    "ask": 0.89,
+    "mid": 0.885,
+    "at": 1795112375,
+    "minsBefore": 400,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-345",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp8090agree",
+   "alsoMatched": [
+    "sharp6090agree"
+   ],
+   "sigKey": "0x958bdb8aa30b8e5bd1fe4ee071f309c84e97f826|0x8fea0f418f6acf73de54f3652e4a7c9644e6d2c13819ad3fef90e6ea74270587|1",
+   "pickKey": "Polymarket|0x8fea0f418f6acf73de54f3652e4a7c9644e6d2c13819ad3fef90e6ea74270587|1",
+   "marketKey": "Polymarket|0x8fea0f418f6acf73de54f3652e4a7c9644e6d2c13819ad3fef90e6ea74270587",
+   "venue": "Polymarket",
+   "conditionId": "0x8fea0f418f6acf73de54f3652e4a7c9644e6d2c13819ad3fef90e6ea74270587",
+   "idx": 1,
+   "name": "Texans",
+   "title": "Colts vs. Texans",
+   "slug": "nfl-ind-hou-2026-11-20",
+   "league": "NFL",
+   "marketType": "moneyline",
+   "start": 1795137300,
+   "whale": {
+    "q": 0.85,
+    "usd": 9504,
+    "score": 56,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795033507,
+    "wallet": "0x958bdb8aa30b8e5bd1fe4ee071f309c84e97f826"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.86,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.85,
+    "bid": 0.84,
+    "mid": 0.845,
+    "depth": 539327.57,
+    "at": 1795112374,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.85,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0045,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.84,
+    "ask": 0.85,
+    "mid": 0.845,
+    "at": 1795112374,
+    "minsBefore": 415,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-346",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "tenP50",
+   "alsoMatched": [
+    "ten50"
+   ],
+   "sigKey": "0x8a90be28c217aabc6eaee5d7746c72976bf17e68|0x73d58d8535df0a3f5efb1d5baaf81a44845de8108d6173b03d703cd1a4daadf9|0",
+   "pickKey": "Polymarket|0x73d58d8535df0a3f5efb1d5baaf81a44845de8108d6173b03d703cd1a4daadf9|0",
+   "marketKey": "Polymarket|0x73d58d8535df0a3f5efb1d5baaf81a44845de8108d6173b03d703cd1a4daadf9",
+   "venue": "Polymarket",
+   "conditionId": "0x73d58d8535df0a3f5efb1d5baaf81a44845de8108d6173b03d703cd1a4daadf9",
+   "idx": 0,
+   "name": "Carlos Alcaraz",
+   "title": "ATP World Tour Finals, Ivan Lendl Group: Carlos Alcaraz vs Flavio Cobolli",
+   "slug": "atp-alcaraz-cobolli-2026-11-17",
+   "league": "Tennis",
+   "marketType": "moneyline",
+   "start": 1795179600,
+   "whale": {
+    "q": 0.8223,
+    "usd": 12236,
+    "score": 52,
+    "sharp": false,
+    "flow": "mixed",
+    "ts": 1795067248,
+    "wallet": "0x8a90be28c217aabc6eaee5d7746c72976bf17e68"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.83,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.78,
+    "bid": 0.77,
+    "mid": 0.775,
+    "depth": 5087,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.78,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0066,
+   "priceSource": "polymarket book",
+   "slippageCents": -4.2,
+   "close": {
+    "bid": 0.77,
+    "ask": 0.78,
+    "mid": 0.775,
+    "at": 1795112375,
+    "minsBefore": 1120,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-347",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "ufc5070",
+   "alsoMatched": [],
+   "sigKey": "0x38337de21ff0bb0a11a40761507d51e318d633d1|0xdc8303985c6259152c8ff6b70e365b2a4ebfcc23110a7d70af81548d4e91dd57|1",
+   "pickKey": "Polymarket|0xdc8303985c6259152c8ff6b70e365b2a4ebfcc23110a7d70af81548d4e91dd57|1",
+   "marketKey": "Polymarket|0xdc8303985c6259152c8ff6b70e365b2a4ebfcc23110a7d70af81548d4e91dd57",
+   "venue": "Polymarket",
+   "conditionId": "0xdc8303985c6259152c8ff6b70e365b2a4ebfcc23110a7d70af81548d4e91dd57",
+   "idx": 1,
+   "name": "Navajo Stirling",
+   "title": "UFC Fight Night: Jirí Procházka vs. Navajo Stirling (Light Heavyweight, Main Card)",
+   "slug": "ufc-jproch-nav-2026-11-21",
+   "league": "UFC",
+   "marketType": "moneyline",
+   "start": 1795273200,
+   "whale": {
+    "q": 0.6,
+    "usd": 9782,
+    "score": 40,
+    "sharp": false,
+    "flow": "disagree",
+    "ts": 1795046815,
+    "wallet": "0x38337de21ff0bb0a11a40761507d51e318d633d1"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.61,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.61,
+    "bid": 0.6,
+    "mid": 0.605,
+    "depth": 649.26,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.61,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0117,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.6,
+    "ask": 0.61,
+    "mid": 0.605,
+    "at": 1795112375,
+    "minsBefore": 2680,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-348",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "ufc5070",
+   "alsoMatched": [],
+   "sigKey": "0x56acab44cfca2e88bb9b3406890aea7bfa0cd77e|0x31404d5ca18a175b8bdccfc7109f9dbef807b82d2b5bd790922762cf96066e28|0",
+   "pickKey": "Polymarket|0x31404d5ca18a175b8bdccfc7109f9dbef807b82d2b5bd790922762cf96066e28|0",
+   "marketKey": "Polymarket|0x31404d5ca18a175b8bdccfc7109f9dbef807b82d2b5bd790922762cf96066e28",
+   "venue": "Polymarket",
+   "conditionId": "0x31404d5ca18a175b8bdccfc7109f9dbef807b82d2b5bd790922762cf96066e28",
+   "idx": 0,
+   "name": "Amir Albazi",
+   "title": "UFC Fight Night: Amir Albazi vs. Alessandro Costa (Flyweight, Prelims)",
+   "slug": "ufc-ami-ale35-2026-11-21",
+   "league": "UFC",
+   "marketType": "moneyline",
+   "start": 1795273200,
+   "whale": {
+    "q": 0.5,
+    "usd": 4615,
+    "score": 35,
+    "sharp": false,
+    "flow": "disagree",
+    "ts": 1795048253,
+    "wallet": "0x56acab44cfca2e88bb9b3406890aea7bfa0cd77e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.51,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.5,
+    "bid": 0.49,
+    "mid": 0.495,
+    "depth": 5583.96,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.5,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.015,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.49,
+    "ask": 0.5,
+    "mid": 0.495,
+    "at": 1795112375,
+    "minsBefore": 2680,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-349",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc6090agree",
+   "alsoMatched": [],
+   "sigKey": "0xd3d3d44acadda7bf4aea7769db7379383635bb8e|0xc6b10683300f0b81dcc0f4c70ce31204e0a71cfd3317f872c19a563563845a0d|0",
+   "pickKey": "Polymarket|0xc6b10683300f0b81dcc0f4c70ce31204e0a71cfd3317f872c19a563563845a0d|0",
+   "marketKey": "Polymarket|0xc6b10683300f0b81dcc0f4c70ce31204e0a71cfd3317f872c19a563563845a0d",
+   "venue": "Polymarket",
+   "conditionId": "0xc6b10683300f0b81dcc0f4c70ce31204e0a71cfd3317f872c19a563563845a0d",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Arsenal FC win on 2026-11-21?",
+   "slug": "epl-new-ars-2026-11-21",
+   "league": "EPL",
+   "marketType": "moneyline",
+   "start": 1795282200,
+   "whale": {
+    "q": 0.6224,
+    "usd": 1000,
+    "score": 34,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795108180,
+    "wallet": "0xd3d3d44acadda7bf4aea7769db7379383635bb8e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.63,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.62,
+    "bid": 0.61,
+    "mid": 0.615,
+    "depth": 1389,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.62,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0114,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.2,
+   "close": {
+    "bid": 0.61,
+    "ask": 0.62,
+    "mid": 0.615,
+    "at": 1795112375,
+    "minsBefore": 2830,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-350",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc6090agree",
+   "alsoMatched": [
+    "soc8090ok"
+   ],
+   "sigKey": "0x994ec8e910b433265f3a46eaf666bfa28b1a6136|0x2717d2d6259b48059d6a329e83fb390fe6ebbfabcaa856ea322e29ad959480c1|0",
+   "pickKey": "Polymarket|0x2717d2d6259b48059d6a329e83fb390fe6ebbfabcaa856ea322e29ad959480c1|0",
+   "marketKey": "Polymarket|0x2717d2d6259b48059d6a329e83fb390fe6ebbfabcaa856ea322e29ad959480c1",
+   "venue": "Polymarket",
+   "conditionId": "0x2717d2d6259b48059d6a329e83fb390fe6ebbfabcaa856ea322e29ad959480c1",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Real Madrid CF win on 2026-11-21?",
+   "slug": "lal-rea-cel-2026-11-21",
+   "league": "La Liga",
+   "marketType": "moneyline",
+   "start": 1795291200,
+   "whale": {
+    "q": 0.84,
+    "usd": 1820,
+    "score": 39,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795036612,
+    "wallet": "0x994ec8e910b433265f3a46eaf666bfa28b1a6136"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.85,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.85,
+    "bid": 0.84,
+    "mid": 0.845,
+    "depth": 62646.31,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.85,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0045,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.84,
+    "ask": 0.85,
+    "mid": 0.845,
+    "at": 1795112375,
+    "minsBefore": 2980,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795112374-351",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0x994ec8e910b433265f3a46eaf666bfa28b1a6136|0x0a798d7c48acab019ab858160fbdef87b672f733689079e4316ecd84eec3280c|0",
+   "pickKey": "Polymarket|0x0a798d7c48acab019ab858160fbdef87b672f733689079e4316ecd84eec3280c|0",
+   "marketKey": "Polymarket|0x0a798d7c48acab019ab858160fbdef87b672f733689079e4316ecd84eec3280c",
+   "venue": "Polymarket",
+   "conditionId": "0x0a798d7c48acab019ab858160fbdef87b672f733689079e4316ecd84eec3280c",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will FC Barcelona win on 2026-11-22?",
+   "slug": "lal-bar-vil-2026-11-22",
+   "league": "La Liga",
+   "marketType": "moneyline",
+   "start": 1795352400,
+   "whale": {
+    "q": 0.82,
+    "usd": 8200,
+    "score": 31,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795036595,
+    "wallet": "0x994ec8e910b433265f3a46eaf666bfa28b1a6136"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.83,
+   "createdAt": 1795112374,
+   "quoteAtOrder": {
+    "ask": 0.82,
+    "bid": 0.81,
+    "mid": 0.815,
+    "depth": 6700.38,
+    "at": 1795112375,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.82,
+   "filledAt": 1795112374,
+   "taker": true,
+   "feeUnits": 0.0054,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.81,
+    "ask": 0.82,
+    "mid": 0.815,
+    "at": 1795112375,
+    "minsBefore": 4000,
     "source": "polymarket book"
    }
   }
