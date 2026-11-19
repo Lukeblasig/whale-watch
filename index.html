@@ -172,8 +172,8 @@ td .caret{display:inline-block;width:14px;color:var(--muted);font:500 12px var(-
 .badge.hot{background:color-mix(in srgb, var(--sharp) 20%, transparent);color:var(--sharp)}
 .badge.rec{background:color-mix(in srgb, var(--win) 18%, transparent);color:var(--win)}
 .pwrap{display:grid;gap:6px}
-.uslink{font-weight:600;color:var(--buy);text-decoration:none;white-space:nowrap}
-.uslink:hover{text-decoration:underline}
+.uslink{font-weight:700;font-size:12px;color:var(--buy);border:1px solid var(--buy);border-radius:6px;padding:0 6px;text-decoration:none;white-space:nowrap}
+.uslink:hover{background:color-mix(in srgb, var(--buy) 15%, transparent)}
 /* Filter results: side panel on wide screens, sheet on small ones */
 .phead{position:relative}
 .phead .preset{padding-right:78px}
@@ -474,7 +474,7 @@ const linkFor = x => x.venue === "Kalshi" ? kalshiLink(x.conditionId) : "https:/
 // Same game on Polymarket US (its own slugs, matched by the collector); null when the US exchange doesn't list it
 let usLinks = new Map();
 const usLinkFor = x => { if (x.venue === "Kalshi") return null; const s = usLinks.get(x.slug || x.eventSlug); return s ? `https://polymarket.us/sports/${encodeURIComponent(s.split("-")[0])}/${encodeURIComponent(s)}` : null; };
-const usA = x => { const u = usLinkFor(x); return u ? `<a class="uslink" href="${u}" target="_blank" rel="noopener">Polymarket US ↗</a>` : ""; };
+const usA = x => { const u = usLinkFor(x); return u ? `<a class="uslink" href="${u}" target="_blank" rel="noopener" title="Open this game on Polymarket US">US</a>` : ""; };
 
 /* ---------- scoring ---------- */
 function outcomeNames(cid){
@@ -912,8 +912,8 @@ function betCard(t, bs, crowd){
       <div class="amt">${money(t.usd)}<small>${ago(t.timestamp)}</small></div>
       <div class="pick"><span class="side ${t.side === "BUY" ? "buy" : "sell"}">${t.side === "BUY" ? "Bought" : "Sold"}</span> ${esc(t.outcome)} @ ${Math.round(t.price*100)}¢ <span class="odds">(${american(t.price)})</span></div>
       <button class="score" data-why="${esc(t.id)}" style="color:${scoreColor(p.score)}" aria-label="Score ${p.score}, show breakdown">${p.score}<small>score</small></button>
-      <div class="mline"><a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>${usA(t)}</div>
-      <div class="who">${startLabel(startOf(t))}<span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>
+      <a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>
+      <div class="who">${startLabel(startOf(t))}<span class="venue ${kal ? "k" : "p"}">${t.venue}</span>${usA(t)}<span class="lg">${esc(t.league)}</span>
         ${s ? `<span class="badge">Sharp #${s.rank}, +${money(s.pnl)}</span>` : ""}
         ${t.block ? `<span class="badge">Block trade</span>` : ""}
         ${kal ? `<span>${name}</span>` : `<a href="https://polymarket.com/profile/${esc(t.wallet)}" target="_blank" rel="noopener">${esc(name)}</a>`}
@@ -985,9 +985,9 @@ function renderCons(out){
       <div class="amt">${money(t.net)}<small>sharp money</small></div>
       <div class="pick">${esc(t.name)} @ ${Math.round(avg*100)}¢ <span class="odds">(${american(avg)})</span></div>
       <button class="score" data-why="${esc(wid)}" style="color:${scoreColor(b.score)}" aria-label="Score ${b.score}, show breakdown">${b.score}<small>score</small></button>
-      <div class="mline"><a class="mkt" href="${linkFor({ venue: "Polymarket", slug: r.slug })}" target="_blank" rel="noopener">${esc(r.title)}</a>${usA({ venue: "Polymarket", slug: r.slug })}</div>
+      <a class="mkt" href="${linkFor({ venue: "Polymarket", slug: r.slug })}" target="_blank" rel="noopener">${esc(r.title)}</a>
       <div class="bar"><i style="width:${pct}%;background:var(--sharp)"></i><i style="width:${100-pct}%;background:var(--line)"></i></div>
-      <div class="who"><span class="lg">${esc(r.league)}</span>
+      <div class="who">${usA({ venue: "Polymarket", slug: r.slug })}<span class="lg">${esc(r.league)}</span>
         <span>${t.wallets.size} sharp${t.wallets.size > 1 ? "s" : ""} on this side${other ? `, ${money(other.net)} on ${esc(other.name)}` : ", none on the other side"}</span>
         <button class="crowd" data-open="1">See who took it</button></div>
       <div class="why ${openWhy.has(wid) ? "open" : ""}">Best bet on this side: ${whyText(b.parts, "Polymarket")}</div>
