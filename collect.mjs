@@ -503,7 +503,40 @@ Object.entries(months).forEach(([m, o]) => {
 });
 fs.writeFileSync(`${STORE}/pending.json`, JSON.stringify(pending));
 meta.updated = now(); meta.errors = errors.slice(0, 10); meta.kalshi = kDiag; meta.runSeconds = Math.round(elapsed()); meta.skipped = skipped;
-fs.writeFileSync(`${STORE}/feed.json`, JSON.stringify({ updated: meta.updated, sharps: S, names: feedNames, vols: feedVols, trades: feedTrades }));
+// Polymarket US (polymarket.us) is a separate exchange with its own slugs (it has nba-gs-mem where polymarket.com has
+// nba-gsw-mem), so each polymarket.com game is matched to its US event by start time plus both team or player names.
+// The page builds the link as https://polymarket.us/sports/<first part of slug>/<slug>. No match (most soccer) = no link.
+const usLinks = {};
+if (elapsed() > 640) skipped.push("Polymarket US links"); else try {
+  const US = [];
+  for (let off = 0; off < 6000; off += 500) {
+    const j = await getJSON(`https://gateway.polymarket.us/v1/events?limit=500&offset=${off}&active=true&closed=false&tagSlug=games`, 2);
+    const ev = (j && j.events) || []; US.push(...ev); if (ev.length < 500) break;
+  }
+  const GENERIC = new Set(["state", "university", "city", "united", "women", "the", "club", "team", "basketball", "basket", "saint", "san", "los", "new", "north", "south", "east", "west"]);
+  const words = s => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").split(" ").filter(w => w.length >= 3 && !GENERIC.has(w));
+  const usEv = US.map(e => ({ slug: e.slug, t: Date.parse(e.startTime || e.startDate) / 1000,
+    sides: (e.teams && e.teams.length === 2 ? e.teams.map(x => `${x.name} ${x.safeName || ""} ${x.alias || ""}`) : String(e.title || "").split(/\s+vs\.?\s+/i)).map(words) }))
+    .filter(e => e.slug && e.t && e.sides.length === 2 && e.sides.every(s => s.length));
+  // what we know about each polymarket.com game: words from its market titles and picks, and its start time
+  const intl = new Map();
+  const add = (slug, text, start) => { if (!slug) return; const g = intl.get(slug) || { w: new Set(), start: 0 }; words(text).forEach(w => g.w.add(w)); if (start) g.start = start; intl.set(slug, g); };
+  feedTrades.forEach(t => { if (t.venue === "Polymarket") add(t.eventSlug, `${t.title} ${t.outcome}`, t.start); });
+  Object.values(pending).forEach(e => { if (e.venue !== "Kalshi") add(e.slug, `${e.title} ${e.name}`, e.start); });
+  // same league code and team codes in both slugs (e.g. nfl-bal-car) is enough on its own; the date can differ by a day
+  const teamsKey = s => String(s).replace(/-\d{4}-\d{2}-\d{2}.*$/, "");
+  const byKey = new Map(); usEv.forEach(u => (byKey.get(teamsKey(u.slug)) || byKey.set(teamsKey(u.slug), []).get(teamsKey(u.slug))).push(u));
+  intl.forEach((g, slug) => {
+    if (!g.start) return;
+    let best = null;
+    const near = (byKey.get(teamsKey(slug)) || []).filter(u => Math.abs(u.t - g.start) <= 36 * 3600);
+    if (near.length === 1) best = { slug: near[0].slug };
+    else usEv.forEach(u => { const d = Math.abs(u.t - g.start); if (d <= 12 * 3600 && u.sides.every(s => s.some(w => g.w.has(w))) && (!best || d < best.d)) best = { d, slug: u.slug }; });
+    if (best) usLinks[slug] = best.slug;
+  });
+  console.log(`Polymarket US: ${usEv.length} games listed, ${Object.keys(usLinks).length} of ${intl.size} polymarket.com games matched.`);
+} catch (e) { errors.push("Polymarket US links: " + e.message); }
+fs.writeFileSync(`${STORE}/feed.json`, JSON.stringify({ updated: meta.updated, sharps: S, names: feedNames, vols: feedVols, usLinks, trades: feedTrades }));
 const counts = Object.fromEntries(Object.entries(months).map(([m, o]) => [m, Object.keys(o).length]));
 fs.writeFileSync(`${STORE}/index.json`, JSON.stringify({ updated: meta.updated, months: Object.keys(months).sort(), parts, counts, pending: Object.keys(pending).length, meta }));
 console.log('Kalshi check:', JSON.stringify(kDiag));

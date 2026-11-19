@@ -170,6 +170,8 @@ td .caret{display:inline-block;width:14px;color:var(--muted);font:500 12px var(-
 .badge.hot{background:color-mix(in srgb, var(--sharp) 20%, transparent);color:var(--sharp)}
 .badge.rec{background:color-mix(in srgb, var(--win) 18%, transparent);color:var(--win)}
 .pwrap{display:grid;gap:6px}
+.uslink{font-weight:600;color:var(--buy);text-decoration:none;white-space:nowrap}
+.uslink:hover{text-decoration:underline}
 /* Filter results: side panel on wide screens, sheet on small ones */
 .phead{position:relative}
 .phead .preset{padding-right:78px}
@@ -467,6 +469,10 @@ async function loadKalshi(){
   return out;
 }
 const linkFor = x => x.venue === "Kalshi" ? kalshiLink(x.conditionId) : "https://polymarket.com/event/" + encodeURIComponent(x.slug || x.eventSlug);
+// Same game on Polymarket US (its own slugs, matched by the collector); null when the US exchange doesn't list it
+let usLinks = new Map();
+const usLinkFor = x => { if (x.venue === "Kalshi") return null; const s = usLinks.get(x.slug || x.eventSlug); return s ? `https://polymarket.us/sports/${encodeURIComponent(s.split("-")[0])}/${encodeURIComponent(s)}` : null; };
+const usA = x => { const u = usLinkFor(x); return u ? `<a class="uslink" href="${u}" target="_blank" rel="noopener">Polymarket US ↗</a>` : ""; };
 
 /* ---------- scoring ---------- */
 function outcomeNames(cid){
@@ -653,6 +659,7 @@ async function loadHosted(){
   const toMap = o => new Map(Object.entries(o || {}));
   sharpsBy = { WEEK: toMap(feed.sharps.WEEK), MONTH: toMap(feed.sharps.MONTH), ALL: toMap(feed.sharps.ALL) };
   seenNames = toMap(feed.names);
+  usLinks = toMap(feed.usLinks);
   volMap = toMap(feed.vols);
   Object.values(L).forEach(e => { if (e.league === "Other" && venueOf(e) === "Polymarket"){ const l = leagueOf(e.slug); if (l !== "Other") e.league = l; } });
   ledger = L;
@@ -909,7 +916,7 @@ function betCard(t, bs, crowd){
       <div class="pick"><span class="side ${t.side === "BUY" ? "buy" : "sell"}">${t.side === "BUY" ? "Bought" : "Sold"}</span> ${esc(t.outcome)} @ ${Math.round(t.price*100)}¢ <span class="odds">(${american(t.price)})</span></div>
       <button class="score" data-why="${esc(t.id)}" style="color:${scoreColor(p.score)}" aria-label="Score ${p.score}, show breakdown">${p.score}<small>score</small></button>
       <a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>
-      <div class="who">${startLabel(startOf(t))}<span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>
+      <div class="who">${startLabel(startOf(t))}<span class="venue ${kal ? "k" : "p"}">${t.venue}</span><span class="lg">${esc(t.league)}</span>${usA(t)}
         ${s ? `<span class="badge">Sharp #${s.rank}, +${money(s.pnl)}</span>` : ""}
         ${t.block ? `<span class="badge">Block trade</span>` : ""}
         ${kal ? `<span>${name}</span>` : `<a href="https://polymarket.com/profile/${esc(t.wallet)}" target="_blank" rel="noopener">${esc(name)}</a>`}
@@ -983,7 +990,7 @@ function renderCons(out){
       <button class="score" data-why="${esc(wid)}" style="color:${scoreColor(b.score)}" aria-label="Score ${b.score}, show breakdown">${b.score}<small>score</small></button>
       <a class="mkt" href="${linkFor({ venue: "Polymarket", slug: r.slug })}" target="_blank" rel="noopener">${esc(r.title)}</a>
       <div class="bar"><i style="width:${pct}%;background:var(--sharp)"></i><i style="width:${100-pct}%;background:var(--line)"></i></div>
-      <div class="who"><span class="lg">${esc(r.league)}</span>
+      <div class="who"><span class="lg">${esc(r.league)}</span>${usA({ venue: "Polymarket", slug: r.slug })}
         <span>${t.wallets.size} sharp${t.wallets.size > 1 ? "s" : ""} on this side${other ? `, ${money(other.net)} on ${esc(other.name)}` : ", none on the other side"}</span>
         <button class="crowd" data-open="1">See who took it</button></div>
       <div class="why ${openWhy.has(wid) ? "open" : ""}">Best bet on this side: ${whyText(b.parts, "Polymarket")}</div>
@@ -1025,7 +1032,7 @@ function openPlay(cid, idx, from){
   const bg = document.createElement("div");
   bg.className = "sheet-bg";
   bg.innerHTML = `<div class="sheet" role="dialog" aria-modal="true" aria-label="Who took this bet">
-    <header><div><h2>${esc(title)}</h2><div class="sub"><a href="${link}" target="_blank" rel="noopener">Open on ${venue}</a> · ${items.length} whale bet${items.length === 1 ? "" : "s"} ${from === "ledger" ? "logged" : "in the last 24h"}</div></div>
+    <header><div><h2>${esc(title)}</h2><div class="sub"><a href="${link}" target="_blank" rel="noopener">Open on ${venue}</a>${usLinkFor({ venue, slug }) ? ` · <a href="${usLinkFor({ venue, slug })}" target="_blank" rel="noopener">Open on Polymarket US</a>` : ""} · ${items.length} whale bet${items.length === 1 ? "" : "s"} ${from === "ledger" ? "logged" : "in the last 24h"}</div></div>
       <button class="x" aria-label="Close">✕</button></header>
     ${ordered.map(s => `<div class="sidehead ${s.idx === idx ? "mine" : ""}">${esc(s.name)}, ${s.list.length} bet${s.list.length === 1 ? "" : "s"}<span>${money(s.usd)}</span></div>
       ${s.list.sort((a, b) => b.usd - a.usd).map(row).join("")}`).join("")}
