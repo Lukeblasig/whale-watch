@@ -1,10 +1,10 @@
 {
- "updated": 1795054551,
+ "updated": 1795055151,
  "mode": "paper",
  "startedAt": 1794969372,
  "real": {
-  "orders": 82,
-  "fills": 65,
+  "orders": 84,
+  "fills": 67,
   "settled": 21,
   "w": 8,
   "l": 13,
@@ -29,17 +29,17 @@
    -0.1
   ],
   "medianSlipCents": 0,
-  "avgSlipCents": 0.27,
-  "takerPct": 87.69,
+  "avgSlipCents": 0.28,
+  "takerPct": 88.06,
   "liveQuotePct": 100,
-  "open": 44,
+  "open": 46,
   "resting": 0,
   "cancelled": 17
  },
  "byRule": {
   "pmSharp3h": {
-   "orders": 82,
-   "fills": 65,
+   "orders": 84,
+   "fills": 67,
    "settled": 21,
    "w": 8,
    "l": 13,
@@ -64,10 +64,10 @@
     -0.1
    ],
    "medianSlipCents": 0,
-   "avgSlipCents": 0.27,
-   "takerPct": 87.69,
+   "avgSlipCents": 0.28,
+   "takerPct": 88.06,
    "liveQuotePct": 100,
-   "open": 44,
+   "open": 46,
    "resting": 0,
    "cancelled": 17
   }
@@ -135,8 +135,8 @@
    "takerPct": 85.53,
    "liveQuotePct": 98.68,
    "open": 46,
-   "resting": 5,
-   "cancelled": 26
+   "resting": 3,
+   "cancelled": 28
   },
   "p7090ok": {
    "orders": 33,
@@ -260,8 +260,8 @@
    "cancelled": 3
   }
  },
- "openUnits": 44,
- "unitsToday": 52,
+ "openUnits": 46,
+ "unitsToday": 54,
  "drawdown": {
   "units": -4.43,
   "max": 9.87,
@@ -288,13 +288,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 65 fills"
+   "detail": "Median 0.00¢ over 67 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.03520957341269841,
+   "progress": 0.03545758928571428,
    "detail": "0.1 weeks, 21 settled bets"
   }
  ],
@@ -344,18 +344,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795054551,
+  "at": 1795055151,
   "status": "ok",
-  "candidates": 32,
-  "ordered": 0,
-  "filled": 0,
+  "candidates": 34,
+  "ordered": 2,
+  "filled": 2,
   "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
-  "settled": 1,
-  "cancelled": 0,
+  "settled": 0,
+  "cancelled": 2,
   "closes": 33
  },
- "dataUpdated": 1795054499,
+ "dataUpdated": 1795055101,
  "killSwitch": false
 }
