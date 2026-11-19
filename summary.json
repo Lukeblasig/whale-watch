@@ -1,5 +1,5 @@
 {
- "updated": 1795117595,
+ "updated": 1795118200,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -27,8 +27,8 @@
   "takerPct": 100,
   "liveQuotePct": 100,
   "open": 13,
-  "resting": 3,
-  "cancelled": 0
+  "resting": 1,
+  "cancelled": 2
  },
  "byRule": {
   "soc4050ml40": {
@@ -392,8 +392,8 @@
    "takerPct": null,
    "liveQuotePct": null,
    "open": 0,
-   "resting": 1,
-   "cancelled": 0
+   "resting": 0,
+   "cancelled": 1
   },
   "osoc70": {
    "orders": 0,
@@ -756,8 +756,8 @@
    "takerPct": null,
    "liveQuotePct": null,
    "open": 0,
-   "resting": 1,
-   "cancelled": 0
+   "resting": 0,
+   "cancelled": 1
   },
   "osoc4060s60agree": {
    "orders": 0,
@@ -1013,8 +1013,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 16,
- "unitsToday": 16,
+ "openUnits": 14,
+ "unitsToday": 14,
  "drawdown": {
   "units": 0,
   "max": 0,
@@ -1047,7 +1047,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.002158151455026455,
+   "progress": 0.002408234126984127,
    "detail": "0.0 weeks, 0 settled bets"
   }
  ],
@@ -1307,18 +1307,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795117595,
+  "at": 1795118200,
   "status": "ok",
   "candidates": 23,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
-  "skipped": 0,
+  "skipped": 2,
   "shadowOrdered": 0,
-  "settled": 0,
-  "cancelled": 0,
+  "settled": 1,
+  "cancelled": 2,
   "closes": 57
  },
- "dataUpdated": 1795117505,
+ "dataUpdated": 1795118114,
  "killSwitch": false
 }
