@@ -1,5 +1,5 @@
 {
- "updated": 1795136190,
+ "updated": 1795136533,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -17,11 +17,14 @@
   "netRoiCI": null,
   "whaleUnits": 1.04,
   "whaleRoi": 25.98,
-  "clvN": 9,
-  "clvAvgCents": -0.61,
-  "clvAvgPct": -1.13,
+  "clvN": 12,
+  "clvAvgCents": -0.5,
+  "clvAvgPct": -0.96,
   "clvBeatPct": 33.33,
-  "clvCI": null,
+  "clvCI": [
+   -1.11,
+   0.11
+  ],
   "medianSlipCents": 0,
   "avgSlipCents": -0.32,
   "takerPct": 94.74,
@@ -298,10 +301,10 @@
    "netRoiCI": null,
    "whaleUnits": 0,
    "whaleRoi": null,
-   "clvN": 0,
-   "clvAvgCents": null,
-   "clvAvgPct": null,
-   "clvBeatPct": null,
+   "clvN": 2,
+   "clvAvgCents": 0,
+   "clvAvgPct": -0.41,
+   "clvBeatPct": 50,
    "clvCI": null,
    "medianSlipCents": -0.67,
    "avgSlipCents": -0.67,
@@ -438,10 +441,10 @@
    "netRoiCI": null,
    "whaleUnits": 0,
    "whaleRoi": null,
-   "clvN": 0,
-   "clvAvgCents": null,
-   "clvAvgPct": null,
-   "clvBeatPct": null,
+   "clvN": 1,
+   "clvAvgCents": -0.5,
+   "clvAvgPct": -0.56,
+   "clvBeatPct": 0,
    "clvCI": null,
    "medianSlipCents": 0.5,
    "avgSlipCents": 0.5,
@@ -1026,8 +1029,8 @@
    "id": "clv",
    "label": "Beat the close after 500 bets",
    "status": "pending",
-   "progress": 0.018,
-   "detail": "9 of 500 bets have a closing price; average so far -0.61¢"
+   "progress": 0.024,
+   "detail": "12 of 500 bets have a closing price; average so far -0.50¢"
   },
   {
    "id": "roi",
@@ -1047,7 +1050,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.00984457671957672,
+   "progress": 0.009986359126984127,
    "detail": "0.0 weeks, 4 settled bets"
   }
  ],
@@ -1307,18 +1310,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795136190,
+  "at": 1795136533,
   "status": "ok",
-  "candidates": 17,
+  "candidates": 10,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
-  "skipped": 1,
+  "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
-  "cancelled": 1,
-  "closes": 49
+  "cancelled": 0,
+  "closes": 35
  },
- "dataUpdated": 1795136107,
+ "dataUpdated": 1795136444,
  "killSwitch": false
 }
