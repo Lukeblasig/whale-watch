@@ -1206,3 +1206,4 @@
 {"t":1795178793,"type":"run","status":"ok","candidates":22,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":31,"openUnits":11,"unitsToday":2}
 {"t":1795179401,"type":"settle","id":"1795158967-363","rule":"soc8090ok","shadow":false,"result":"W","units":0.244,"fee":0.006,"whaleUnits":0.2437810945273631,"fill":0.8,"whaleQ":0.804,"closeMid":0.805}
 {"t":1795179403,"type":"run","status":"ok","candidates":22,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":1,"cancelled":0,"closes":31,"openUnits":10,"unitsToday":2}
+{"t":1795179993,"type":"run","status":"ok","candidates":22,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":29,"openUnits":10,"unitsToday":2}
