@@ -824,8 +824,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795132583,
-    "minsBefore": 4404,
+    "at": 1795133172,
+    "minsBefore": 4394,
     "source": "kalshi market"
    }
   },
@@ -878,8 +878,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1795132583,
-    "minsBefore": 79,
+    "at": 1795133172,
+    "minsBefore": 69,
     "source": "kalshi market"
    }
   },
@@ -991,8 +991,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795132583,
-    "minsBefore": 2644,
+    "at": 1795133172,
+    "minsBefore": 2634,
     "source": "kalshi market"
    }
   },
@@ -1104,8 +1104,8 @@
     "bid": 0.65,
     "ask": 0.66,
     "mid": 0.655,
-    "at": 1795132583,
-    "minsBefore": 2644,
+    "at": 1795133172,
+    "minsBefore": 2634,
     "source": "kalshi market"
    }
   },
@@ -1217,8 +1217,8 @@
     "bid": 0.37,
     "ask": 0.39,
     "mid": 0.38,
-    "at": 1795132583,
-    "minsBefore": 3964,
+    "at": 1795133172,
+    "minsBefore": 3954,
     "source": "kalshi market"
    }
   },
@@ -1271,8 +1271,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795132583,
-    "minsBefore": 3964,
+    "at": 1795133172,
+    "minsBefore": 3954,
     "source": "kalshi market"
    }
   },
@@ -1561,8 +1561,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795132583,
-    "minsBefore": 79,
+    "at": 1795133172,
+    "minsBefore": 69,
     "source": "polymarket book"
    }
   },
@@ -2497,8 +2497,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795132583,
-    "minsBefore": 79,
+    "at": 1795133172,
+    "minsBefore": 69,
     "source": "kalshi market"
    }
   },
@@ -6345,8 +6345,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795132583,
-    "minsBefore": 3964,
+    "at": 1795133172,
+    "minsBefore": 3954,
     "source": "polymarket book"
    }
   },
@@ -6748,11 +6748,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 0,
    "close": {
-    "bid": 0.46,
-    "ask": 0.48,
-    "mid": 0.47,
-    "at": 1795132583,
-    "minsBefore": 5464,
+    "bid": 0.45,
+    "ask": 0.46,
+    "mid": 0.455,
+    "at": 1795133172,
+    "minsBefore": 5454,
     "source": "kalshi market"
    }
   },
@@ -8146,8 +8146,8 @@
     "bid": 0.7,
     "ask": 0.71,
     "mid": 0.705,
-    "at": 1795132584,
-    "minsBefore": 2194,
+    "at": 1795133172,
+    "minsBefore": 2184,
     "source": "polymarket book"
    }
   },
@@ -8614,8 +8614,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795132584,
-    "minsBefore": 2644,
+    "at": 1795133172,
+    "minsBefore": 2634,
     "source": "polymarket book"
    }
   },
@@ -8668,8 +8668,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795132584,
-    "minsBefore": 3664,
+    "at": 1795133172,
+    "minsBefore": 3654,
     "source": "polymarket book"
    }
   },
@@ -8722,8 +8722,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795132583,
-    "minsBefore": 79,
+    "at": 1795133172,
+    "minsBefore": 69,
     "source": "polymarket book"
    }
   },
@@ -14601,8 +14601,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795132584,
-    "minsBefore": 2344,
+    "at": 1795133172,
+    "minsBefore": 2334,
     "source": "polymarket book"
    }
   },
@@ -15000,10 +15000,10 @@
    "slippageCents": 0.4,
    "close": {
     "bid": 0.78,
-    "ask": 0.8,
-    "mid": 0.79,
-    "at": 1795132584,
-    "minsBefore": 784,
+    "ask": 0.79,
+    "mid": 0.785,
+    "at": 1795133172,
+    "minsBefore": 774,
     "source": "polymarket book"
    }
   },
@@ -15765,8 +15765,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1795132584,
-    "minsBefore": 3964,
+    "at": 1795133172,
+    "minsBefore": 3954,
     "source": "kalshi market"
    }
   },
@@ -15878,8 +15878,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795132584,
-    "minsBefore": 3079,
+    "at": 1795133172,
+    "minsBefore": 3069,
     "source": "kalshi market"
    }
   },
@@ -16168,8 +16168,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795132584,
-    "minsBefore": 2914,
+    "at": 1795133172,
+    "minsBefore": 2904,
     "source": "kalshi market"
    }
   },
@@ -16281,8 +16281,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795132584,
-    "minsBefore": 3964,
+    "at": 1795133172,
+    "minsBefore": 3954,
     "source": "polymarket book"
    }
   },
@@ -16389,8 +16389,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133172,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -16499,11 +16499,11 @@
    "priceSource": "kalshi market",
    "slippageCents": 0,
    "close": {
-    "bid": 0.46,
-    "ask": 0.47,
-    "mid": 0.465,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795133172,
+    "minsBefore": 54,
     "source": "kalshi market"
    }
   },
@@ -17028,8 +17028,8 @@
     "bid": 0.66,
     "ask": 0.67,
     "mid": 0.665,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133173,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -17372,8 +17372,8 @@
     "bid": 0.88,
     "ask": 0.89,
     "mid": 0.885,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133173,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -17426,8 +17426,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795132584,
-    "minsBefore": 2344,
+    "at": 1795133173,
+    "minsBefore": 2334,
     "source": "polymarket book"
    }
   },
@@ -17599,8 +17599,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795132584,
-    "minsBefore": 184,
+    "at": 1795133173,
+    "minsBefore": 174,
     "source": "kalshi market"
    }
   },
@@ -17763,8 +17763,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133172,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -17995,8 +17995,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133173,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -18049,8 +18049,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133173,
+    "minsBefore": 54,
     "source": "kalshi market"
    }
   },
@@ -18103,8 +18103,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133172,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -18213,8 +18213,8 @@
     "bid": 0.76,
     "ask": 0.78,
     "mid": 0.77,
-    "at": 1795132585,
-    "minsBefore": 1324,
+    "at": 1795133173,
+    "minsBefore": 1314,
     "source": "polymarket book"
    }
   },
@@ -18267,8 +18267,8 @@
     "bid": 0.88,
     "ask": 0.89,
     "mid": 0.885,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133173,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -18492,8 +18492,8 @@
     "bid": 0.66,
     "ask": 0.67,
     "mid": 0.665,
-    "at": 1795132585,
-    "minsBefore": 64,
+    "at": 1795133173,
+    "minsBefore": 54,
     "source": "kalshi market"
    }
   },
@@ -18546,8 +18546,8 @@
     "bid": 0.52,
     "ask": 0.53,
     "mid": 0.525,
-    "at": 1795132585,
-    "minsBefore": 3964,
+    "at": 1795133173,
+    "minsBefore": 3954,
     "source": "kalshi market"
    }
   },
@@ -18600,8 +18600,8 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1795132585,
-    "minsBefore": 3964,
+    "at": 1795133173,
+    "minsBefore": 3954,
     "source": "kalshi market"
    }
   },
@@ -18886,8 +18886,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795132585,
-    "minsBefore": 3964,
+    "at": 1795133173,
+    "minsBefore": 3954,
     "source": "kalshi market"
    }
   },
@@ -19058,8 +19058,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795132585,
-    "minsBefore": 79,
+    "at": 1795133173,
+    "minsBefore": 69,
     "source": "kalshi market"
    }
   },
@@ -19112,8 +19112,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795132585,
-    "minsBefore": 79,
+    "at": 1795133173,
+    "minsBefore": 69,
     "source": "kalshi market"
    }
   },
@@ -19507,8 +19507,8 @@
     "bid": 0.85,
     "ask": 0.9,
     "mid": 0.875,
-    "at": 1795132585,
-    "minsBefore": 64,
+    "at": 1795133173,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -19912,8 +19912,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133172,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -19968,8 +19968,8 @@
     "bid": 0.88,
     "ask": 0.89,
     "mid": 0.885,
-    "at": 1795132584,
-    "minsBefore": 64,
+    "at": 1795133173,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -20024,8 +20024,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795132583,
-    "minsBefore": 79,
+    "at": 1795133172,
+    "minsBefore": 69,
     "source": "polymarket book"
    }
   },
@@ -20078,10 +20078,10 @@
    "slippageCents": -4.2,
    "close": {
     "bid": 0.78,
-    "ask": 0.8,
-    "mid": 0.79,
-    "at": 1795132584,
-    "minsBefore": 784,
+    "ask": 0.79,
+    "mid": 0.785,
+    "at": 1795133172,
+    "minsBefore": 774,
     "source": "polymarket book"
    }
   },
@@ -20134,8 +20134,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795132585,
-    "minsBefore": 2344,
+    "at": 1795133173,
+    "minsBefore": 2334,
     "source": "polymarket book"
    }
   },
@@ -20188,8 +20188,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795132585,
-    "minsBefore": 2344,
+    "at": 1795133173,
+    "minsBefore": 2334,
     "source": "polymarket book"
    }
   },
@@ -20242,8 +20242,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795132585,
-    "minsBefore": 2494,
+    "at": 1795133173,
+    "minsBefore": 2484,
     "source": "polymarket book"
    }
   },
@@ -20298,8 +20298,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795132584,
-    "minsBefore": 2644,
+    "at": 1795133172,
+    "minsBefore": 2634,
     "source": "polymarket book"
    }
   },
@@ -20352,8 +20352,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795132584,
-    "minsBefore": 3664,
+    "at": 1795133172,
+    "minsBefore": 3654,
     "source": "polymarket book"
    }
   },
@@ -20631,8 +20631,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795132585,
-    "minsBefore": 34,
+    "at": 1795133173,
+    "minsBefore": 24,
     "source": "polymarket book"
    }
   }
@@ -20784,38 +20784,6 @@
    "key": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0x5ab96e2e869fbe233b47cc022e3e2ed8dd4c5484d90513dc61bf4c0f79e97847|0",
    "start": 1795050000
   },
-  "pmSharp3h|Polymarket|0xacf91fb9bef476f3a32fecb96f0c4c842451a5e3fe27f045673984eb0f64139e": {
-   "key": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0xacf91fb9bef476f3a32fecb96f0c4c842451a5e3fe27f045673984eb0f64139e|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x4c0d26453bd40b5c51cb161b06f430feb5ba7a3393d775f1b3ced6357dbba7b7": {
-   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x4c0d26453bd40b5c51cb161b06f430feb5ba7a3393d775f1b3ced6357dbba7b7|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x5ee92964df4c1577000768dddeafcd690e299a16c720bfef16030dab56dbaffa": {
-   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x5ee92964df4c1577000768dddeafcd690e299a16c720bfef16030dab56dbaffa|0",
-   "start": 1795046400
-  },
-  "pmSharp3hML|Polymarket|0x4c0d26453bd40b5c51cb161b06f430feb5ba7a3393d775f1b3ced6357dbba7b7": {
-   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x4c0d26453bd40b5c51cb161b06f430feb5ba7a3393d775f1b3ced6357dbba7b7|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x908a98011573d6eb01c9838613b7d6d38b532f671df45ab2e36090a8a6283f6d": {
-   "key": "0xbfd40a4fcb43d80eb4fb425f75d4fa090c61526f|0x908a98011573d6eb01c9838613b7d6d38b532f671df45ab2e36090a8a6283f6d|1",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x559ca9498eba90b68476a9788fa29cb000e691ef6ab02f1e3bfdf07f11da4572": {
-   "key": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0x559ca9498eba90b68476a9788fa29cb000e691ef6ab02f1e3bfdf07f11da4572|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x12ecbdd5fa2e9b9c70274addd033a6339578f89f19147b1612eadeec4ba9d83e": {
-   "key": "0xbfd40a4fcb43d80eb4fb425f75d4fa090c61526f|0x12ecbdd5fa2e9b9c70274addd033a6339578f89f19147b1612eadeec4ba9d83e|0",
-   "start": 1795046400
-  },
-  "pmSharp3hML|Polymarket|0x559ca9498eba90b68476a9788fa29cb000e691ef6ab02f1e3bfdf07f11da4572": {
-   "key": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0x559ca9498eba90b68476a9788fa29cb000e691ef6ab02f1e3bfdf07f11da4572|0",
-   "start": 1795046400
-  },
   "pmSharp3h|Polymarket|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531": {
    "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x0ff649c5028a6a3f9bc824f7615fbbfa94063679c4759facfd4924fbb6c74531|1",
    "start": 1795048200
@@ -20840,77 +20808,13 @@
    "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xe44925612c1794fa232f0824bb2f70d0d9777a1b65a4258de769414abae98fa5|0",
    "start": 1795048200
   },
-  "pmSharp3h|Polymarket|0x3ee6da8c2d6c327fe4b1dd002c2fb2bfeb45c21671a06c9b0b5f79c34a6474db": {
-   "key": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0x3ee6da8c2d6c327fe4b1dd002c2fb2bfeb45c21671a06c9b0b5f79c34a6474db|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0xdb9fb8e9670e4f0d9d4077d5ef2d8aaac7516f81d321cb529c5eae9412583ff1": {
-   "key": "0x2c866881290c2197960f06448d3a236d9f20d939|0xdb9fb8e9670e4f0d9d4077d5ef2d8aaac7516f81d321cb529c5eae9412583ff1|1",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x5039871c61d02caab4292d60e202b8ed2865e03980a571e7b13efa88fa779d68": {
-   "key": "0x2c866881290c2197960f06448d3a236d9f20d939|0x5039871c61d02caab4292d60e202b8ed2865e03980a571e7b13efa88fa779d68|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x4613eb6c7948e51998dc3653f1d2ad924628c8186c4bdbefe43d03ca8845cf5d": {
-   "key": "0x2c866881290c2197960f06448d3a236d9f20d939|0x4613eb6c7948e51998dc3653f1d2ad924628c8186c4bdbefe43d03ca8845cf5d|1",
-   "start": 1795046400
-  },
   "pmSharp3h|Polymarket|0xb83d6c949ccd8198c5f9a54ab6d601f5cbbf864fdae8ef7af6428a667a0150bf": {
    "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xb83d6c949ccd8198c5f9a54ab6d601f5cbbf864fdae8ef7af6428a667a0150bf|1",
    "start": 1795048200
   },
-  "pmSharp3h|Polymarket|0xa81182b6ef5d8a5930eb218a6905a634d38f4d4c537a7059a7ad3b218e25ecea": {
-   "key": "0xa2cced8bfae7d645f7f437fb76becf2fcbb70cbc|0xa81182b6ef5d8a5930eb218a6905a634d38f4d4c537a7059a7ad3b218e25ecea|1",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x7401c86619bdd07d847562096573ec2e51517cae54f06c80d129dc93c15b755e": {
-   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0x7401c86619bdd07d847562096573ec2e51517cae54f06c80d129dc93c15b755e|1",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0xd090b450aa71413e33c4b35392ae02cbbe87f48b984ca57cb5c814eba47a47de": {
-   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0xd090b450aa71413e33c4b35392ae02cbbe87f48b984ca57cb5c814eba47a47de|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x4411d502c053793f8501f658225ea5187e5b17071cbfd8636e99324989527ed8": {
-   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0x4411d502c053793f8501f658225ea5187e5b17071cbfd8636e99324989527ed8|1",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x2035438749d1fba36105e926919b75b5dd7afe394dae3387f9b6cca60c65ea7f": {
-   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0x2035438749d1fba36105e926919b75b5dd7afe394dae3387f9b6cca60c65ea7f|1",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x4c782fe4fc71fea1003c274ee835f0f523a471e32006c9c433a2a0e046d0287e": {
-   "key": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0x4c782fe4fc71fea1003c274ee835f0f523a471e32006c9c433a2a0e046d0287e|0",
-   "start": 1795046400
-  },
-  "pmSharp3hML|Polymarket|0xd090b450aa71413e33c4b35392ae02cbbe87f48b984ca57cb5c814eba47a47de": {
-   "key": "0xd38b71f3e8ed1af71983e5c309eac3dfa9b35029|0xd090b450aa71413e33c4b35392ae02cbbe87f48b984ca57cb5c814eba47a47de|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0xc5a9b485dcf72b254bf0385573d9e448d6210ad8170ae421003aa87a2a6784cc": {
-   "key": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xc5a9b485dcf72b254bf0385573d9e448d6210ad8170ae421003aa87a2a6784cc|1",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x85b1b9241e3253609ac1b9b9c955df87cfa41e4bb5b04342ac51a4df6b34d91a": {
-   "key": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x85b1b9241e3253609ac1b9b9c955df87cfa41e4bb5b04342ac51a4df6b34d91a|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0xba47fc527a55c4df0b8f22e6e203712c565ee9da63b5d37fa0874fa3015c8c87": {
-   "key": "0xa2cced8bfae7d645f7f437fb76becf2fcbb70cbc|0xba47fc527a55c4df0b8f22e6e203712c565ee9da63b5d37fa0874fa3015c8c87|0",
-   "start": 1795046400
-  },
   "pmSharp3h|Polymarket|0xeee403ae143c344f3149e3b12609cf818870312f7abf3c445dd51173f87d0832": {
    "key": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0xeee403ae143c344f3149e3b12609cf818870312f7abf3c445dd51173f87d0832|1",
    "start": 1795048200
-  },
-  "pmSharp3hML|Polymarket|0xc5a9b485dcf72b254bf0385573d9e448d6210ad8170ae421003aa87a2a6784cc": {
-   "key": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xc5a9b485dcf72b254bf0385573d9e448d6210ad8170ae421003aa87a2a6784cc|1",
-   "start": 1795046400
-  },
-  "pmSharp3hML|Polymarket|0x85b1b9241e3253609ac1b9b9c955df87cfa41e4bb5b04342ac51a4df6b34d91a": {
-   "key": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x85b1b9241e3253609ac1b9b9c955df87cfa41e4bb5b04342ac51a4df6b34d91a|0",
-   "start": 1795046400
   },
   "pmSharp3h|Polymarket|0xde40bafeaf8f33a995a935b06d385be8e77e6f0e807966ecb617e62c3eafb60e": {
    "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xde40bafeaf8f33a995a935b06d385be8e77e6f0e807966ecb617e62c3eafb60e|1",
@@ -20920,33 +20824,9 @@
    "key": "0x84cfffc3f16dcc353094de30d4a45226eccd2f63|0x8ea7487554daa4f2401c9f4d8a2c5482c358627a56c069a4a42f7ebc85192339|0",
    "start": 1795050000
   },
-  "pmSharp3h|Polymarket|0x8a83a5f29c1661874a59d5a45f6975e6723fc7b205b20a95514b448eada66111": {
-   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x8a83a5f29c1661874a59d5a45f6975e6723fc7b205b20a95514b448eada66111|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0xb3e796c6d2fa2ddf52e39dc697ecf4f4ea19de69305519e362287e41e67d92e0": {
-   "key": "0xf68a281980f8c13828e84e147e3822381d6e5b1b|0xb3e796c6d2fa2ddf52e39dc697ecf4f4ea19de69305519e362287e41e67d92e0|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x5cbcefc6102cf2eb15a45c4f2ba3f017f653e1262dd09b70cf6f920c7b15103e": {
-   "key": "0x5268527977f700f9bf9b6d5cd843859e4e70135d|0x5cbcefc6102cf2eb15a45c4f2ba3f017f653e1262dd09b70cf6f920c7b15103e|0",
-   "start": 1795046400
-  },
   "pmSharp3h|Polymarket|0x77878ec9c4ffea6ae87dc19f724d49343189dff4ee2f8d96877cd90be29ae43a": {
    "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x77878ec9c4ffea6ae87dc19f724d49343189dff4ee2f8d96877cd90be29ae43a|0",
    "start": 1795055400
-  },
-  "pmSharp3h|Polymarket|0x153bff0e2667b7c7aff953d619bfce430a03ab9ada73906a0640c6822a7511d7": {
-   "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x153bff0e2667b7c7aff953d619bfce430a03ab9ada73906a0640c6822a7511d7|1",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0x286ef655448cad1b19811703d1ae949963bf2a8591868bc59d38c99ed37557c8": {
-   "key": "0x4df332e27f9ee3224f52ce30e3ce15c1075e788f|0x286ef655448cad1b19811703d1ae949963bf2a8591868bc59d38c99ed37557c8|0",
-   "start": 1795046400
-  },
-  "pmSharp3h|Polymarket|0xbc7541c20e28a3662b2076b436c4d4c4f519ac5fcf1219e425646623849b1277": {
-   "key": "0xf0318c32136c2db7fec88b84869aee6a1106c80c|0xbc7541c20e28a3662b2076b436c4d4c4f519ac5fcf1219e425646623849b1277|0",
-   "start": 1795046400
   },
   "pmSharp3h|Polymarket|0x07cdb7ff59205f9f5de337bca7a76e39b68d71397bc6159fb040084e2711905c": {
    "key": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x07cdb7ff59205f9f5de337bca7a76e39b68d71397bc6159fb040084e2711905c|0",
