@@ -1196,3 +1196,4 @@
 {"t":1795173977,"type":"cancel","id":"1795172767-365","rule":"soc50","shadow":false,"reason":"unfilled at the start-time cutoff"}
 {"t":1795173977,"type":"skip","reason":"already tried this pick","rule":"soc50","pick":{"venue":"Polymarket","league":"Other soccer","title":"East Bengal FC vs. SC Delhi: O/U 3.5","side":"Over","start":1795174200,"whaleKey":"0xf059aff5075d2bb73405d9fe301f8ae20ed46dd9|0x1caa98023753c0e8a628d7aec1faa6aac9c32bad9669b9b6238230a01e47f289|0","q":0.51,"score":51,"sharp":false,"marketType":"total"},"quote":{"ask":0.56,"source":"polymarket book"}}
 {"t":1795173977,"type":"run","status":"ok","candidates":23,"ordered":0,"filled":0,"rested":0,"skipped":1,"shadowOrdered":0,"settled":0,"cancelled":1,"closes":32,"openUnits":11,"unitsToday":2}
+{"t":1795174594,"type":"run","status":"ok","candidates":22,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":31,"openUnits":11,"unitsToday":2}
