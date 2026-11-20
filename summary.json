@@ -1,5 +1,5 @@
 {
- "updated": 1795184179,
+ "updated": 1795184804,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -37,34 +37,6 @@
   "cancelled": 3
  },
  "byRule": {
-  "soc4050ml40": {
-   "orders": 0,
-   "fills": 0,
-   "settled": 0,
-   "w": 0,
-   "l": 0,
-   "p": 0,
-   "netUnits": 0,
-   "grossUnits": 0,
-   "fees": 0,
-   "netRoi": null,
-   "grossRoi": null,
-   "netRoiCI": null,
-   "whaleUnits": 0,
-   "whaleRoi": null,
-   "clvN": 0,
-   "clvAvgCents": null,
-   "clvAvgPct": null,
-   "clvBeatPct": null,
-   "clvCI": null,
-   "medianSlipCents": null,
-   "avgSlipCents": null,
-   "takerPct": null,
-   "liveQuotePct": null,
-   "open": 0,
-   "resting": 0,
-   "cancelled": 0
-  },
   "sharp4060ml70": {
    "orders": 2,
    "fills": 2,
@@ -89,6 +61,34 @@
    "avgSlipCents": 1,
    "takerPct": 50,
    "liveQuotePct": 100,
+   "open": 0,
+   "resting": 0,
+   "cancelled": 0
+  },
+  "soc4050ml40": {
+   "orders": 0,
+   "fills": 0,
+   "settled": 0,
+   "w": 0,
+   "l": 0,
+   "p": 0,
+   "netUnits": 0,
+   "grossUnits": 0,
+   "fees": 0,
+   "netRoi": null,
+   "grossRoi": null,
+   "netRoiCI": null,
+   "whaleUnits": 0,
+   "whaleRoi": null,
+   "clvN": 0,
+   "clvAvgCents": null,
+   "clvAvgPct": null,
+   "clvBeatPct": null,
+   "clvCI": null,
+   "medianSlipCents": null,
+   "avgSlipCents": null,
+   "takerPct": null,
+   "liveQuotePct": null,
    "open": 0,
    "resting": 0,
    "cancelled": 0
@@ -373,6 +373,34 @@
    "resting": 0,
    "cancelled": 0
   },
+  "osoc70": {
+   "orders": 0,
+   "fills": 0,
+   "settled": 0,
+   "w": 0,
+   "l": 0,
+   "p": 0,
+   "netUnits": 0,
+   "grossUnits": 0,
+   "fees": 0,
+   "netRoi": null,
+   "grossRoi": null,
+   "netRoiCI": null,
+   "whaleUnits": 0,
+   "whaleRoi": null,
+   "clvN": 0,
+   "clvAvgCents": null,
+   "clvAvgPct": null,
+   "clvBeatPct": null,
+   "clvCI": null,
+   "medianSlipCents": null,
+   "avgSlipCents": null,
+   "takerPct": null,
+   "liveQuotePct": null,
+   "open": 0,
+   "resting": 0,
+   "cancelled": 0
+  },
   "socSharp4050s50": {
    "orders": 3,
    "fills": 0,
@@ -401,7 +429,7 @@
    "resting": 2,
    "cancelled": 1
   },
-  "osoc70": {
+  "ten70": {
    "orders": 0,
    "fills": 0,
    "settled": 0,
@@ -453,34 +481,6 @@
    "avgSlipCents": 0.5,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 0,
-   "resting": 0,
-   "cancelled": 0
-  },
-  "ten70": {
-   "orders": 0,
-   "fills": 0,
-   "settled": 0,
-   "w": 0,
-   "l": 0,
-   "p": 0,
-   "netUnits": 0,
-   "grossUnits": 0,
-   "fees": 0,
-   "netRoi": null,
-   "grossRoi": null,
-   "netRoiCI": null,
-   "whaleUnits": 0,
-   "whaleRoi": null,
-   "clvN": 0,
-   "clvAvgCents": null,
-   "clvAvgPct": null,
-   "clvBeatPct": null,
-   "clvCI": null,
-   "medianSlipCents": null,
-   "avgSlipCents": null,
-   "takerPct": null,
-   "liveQuotePct": null,
    "open": 0,
    "resting": 0,
    "cancelled": 0
@@ -597,6 +597,34 @@
    "resting": 0,
    "cancelled": 0
   },
+  "tenK70": {
+   "orders": 0,
+   "fills": 0,
+   "settled": 0,
+   "w": 0,
+   "l": 0,
+   "p": 0,
+   "netUnits": 0,
+   "grossUnits": 0,
+   "fees": 0,
+   "netRoi": null,
+   "grossRoi": null,
+   "netRoiCI": null,
+   "whaleUnits": 0,
+   "whaleRoi": null,
+   "clvN": 0,
+   "clvAvgCents": null,
+   "clvAvgPct": null,
+   "clvBeatPct": null,
+   "clvCI": null,
+   "medianSlipCents": null,
+   "avgSlipCents": null,
+   "takerPct": null,
+   "liveQuotePct": null,
+   "open": 0,
+   "resting": 0,
+   "cancelled": 0
+  },
   "seraSharp50": {
    "orders": 0,
    "fills": 0,
@@ -654,34 +682,6 @@
    "cancelled": 0
   },
   "socSharpAgree60": {
-   "orders": 0,
-   "fills": 0,
-   "settled": 0,
-   "w": 0,
-   "l": 0,
-   "p": 0,
-   "netUnits": 0,
-   "grossUnits": 0,
-   "fees": 0,
-   "netRoi": null,
-   "grossRoi": null,
-   "netRoiCI": null,
-   "whaleUnits": 0,
-   "whaleRoi": null,
-   "clvN": 0,
-   "clvAvgCents": null,
-   "clvAvgPct": null,
-   "clvBeatPct": null,
-   "clvCI": null,
-   "medianSlipCents": null,
-   "avgSlipCents": null,
-   "takerPct": null,
-   "liveQuotePct": null,
-   "open": 0,
-   "resting": 0,
-   "cancelled": 0
-  },
-  "tenK70": {
    "orders": 0,
    "fills": 0,
    "settled": 0,
@@ -877,34 +877,6 @@
    "resting": 0,
    "cancelled": 0
   },
-  "ucl50agree": {
-   "orders": 0,
-   "fills": 0,
-   "settled": 0,
-   "w": 0,
-   "l": 0,
-   "p": 0,
-   "netUnits": 0,
-   "grossUnits": 0,
-   "fees": 0,
-   "netRoi": null,
-   "grossRoi": null,
-   "netRoiCI": null,
-   "whaleUnits": 0,
-   "whaleRoi": null,
-   "clvN": 0,
-   "clvAvgCents": null,
-   "clvAvgPct": null,
-   "clvBeatPct": null,
-   "clvCI": null,
-   "medianSlipCents": null,
-   "avgSlipCents": null,
-   "takerPct": null,
-   "liveQuotePct": null,
-   "open": 0,
-   "resting": 0,
-   "cancelled": 0
-  },
   "soc50": {
    "orders": 1,
    "fills": 0,
@@ -932,6 +904,34 @@
    "open": 0,
    "resting": 0,
    "cancelled": 1
+  },
+  "ucl50agree": {
+   "orders": 0,
+   "fills": 0,
+   "settled": 0,
+   "w": 0,
+   "l": 0,
+   "p": 0,
+   "netUnits": 0,
+   "grossUnits": 0,
+   "fees": 0,
+   "netRoi": null,
+   "grossRoi": null,
+   "netRoiCI": null,
+   "whaleUnits": 0,
+   "whaleRoi": null,
+   "clvN": 0,
+   "clvAvgCents": null,
+   "clvAvgPct": null,
+   "clvBeatPct": null,
+   "clvCI": null,
+   "medianSlipCents": null,
+   "avgSlipCents": null,
+   "takerPct": null,
+   "liveQuotePct": null,
+   "open": 0,
+   "resting": 0,
+   "cancelled": 0
   },
   "soc6090agree": {
    "orders": 3,
@@ -961,34 +961,6 @@
    "resting": 0,
    "cancelled": 0
   },
-  "sharp6090agree": {
-   "orders": 0,
-   "fills": 0,
-   "settled": 0,
-   "w": 0,
-   "l": 0,
-   "p": 0,
-   "netUnits": 0,
-   "grossUnits": 0,
-   "fees": 0,
-   "netRoi": null,
-   "grossRoi": null,
-   "netRoiCI": null,
-   "whaleUnits": 0,
-   "whaleRoi": null,
-   "clvN": 0,
-   "clvAvgCents": null,
-   "clvAvgPct": null,
-   "clvBeatPct": null,
-   "clvCI": null,
-   "medianSlipCents": null,
-   "avgSlipCents": null,
-   "takerPct": null,
-   "liveQuotePct": null,
-   "open": 0,
-   "resting": 0,
-   "cancelled": 0
-  },
   "soc8090ok": {
    "orders": 6,
    "fills": 6,
@@ -1014,6 +986,34 @@
    "takerPct": 100,
    "liveQuotePct": 100,
    "open": 1,
+   "resting": 0,
+   "cancelled": 0
+  },
+  "sharp6090agree": {
+   "orders": 0,
+   "fills": 0,
+   "settled": 0,
+   "w": 0,
+   "l": 0,
+   "p": 0,
+   "netUnits": 0,
+   "grossUnits": 0,
+   "fees": 0,
+   "netRoi": null,
+   "grossRoi": null,
+   "netRoiCI": null,
+   "whaleUnits": 0,
+   "whaleRoi": null,
+   "clvN": 0,
+   "clvAvgCents": null,
+   "clvAvgPct": null,
+   "clvBeatPct": null,
+   "clvCI": null,
+   "medianSlipCents": null,
+   "avgSlipCents": null,
+   "takerPct": null,
+   "liveQuotePct": null,
+   "open": 0,
    "resting": 0,
    "cancelled": 0
   }
@@ -1053,14 +1053,14 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.029681299603174602,
+   "progress": 0.02993964947089947,
    "detail": "0.1 weeks, 16 settled bets"
   }
  ],
  "config": {
   "filters": [
-   "soc4050ml40",
    "sharp4060ml70",
+   "soc4050ml40",
    "ucl7090s60",
    "mls50",
    "tenP70",
@@ -1071,29 +1071,29 @@
    "sharpMl70",
    "soc7090s60",
    "osoc60agree",
-   "socSharp4050s50",
    "osoc70",
-   "sharp8090agree",
+   "socSharp4050s50",
    "ten70",
+   "sharp8090agree",
    "sera6090agree",
    "ufc5070",
    "soc7090agree40",
    "esp6090s70",
+   "tenK70",
    "seraSharp50",
    "socSharp4060agree60",
    "socSharpAgree60",
-   "tenK70",
    "socSharp4050",
    "soc60",
    "osoc4060s60agree",
    "tenP50",
    "ten50",
    "socSharp6090agree50",
-   "ucl50agree",
    "soc50",
+   "ucl50agree",
    "soc6090agree",
-   "sharp6090agree",
-   "soc8090ok"
+   "soc8090ok",
+   "sharp6090agree"
   ],
   "autoBest": {
    "minNetRoiPct": 2,
@@ -1101,14 +1101,14 @@
   },
   "autoPicked": [
    {
+    "id": "sharp4060ml70",
+    "net": 28.47,
+    "n": 149
+   },
+   {
     "id": "soc4050ml40",
     "net": 28.43,
     "n": 238
-   },
-   {
-    "id": "sharp4060ml70",
-    "net": 27.44,
-    "n": 146
    },
    {
     "id": "ucl7090s60",
@@ -1127,8 +1127,8 @@
    },
    {
     "id": "ten7090sharp3h",
-    "net": 19.51,
-    "n": 48
+    "net": 19.74,
+    "n": 49
    },
    {
     "id": "ucl4060agree",
@@ -1147,23 +1147,18 @@
    },
    {
     "id": "sharpMl70",
-    "net": 16.57,
-    "n": 322
+    "net": 16.45,
+    "n": 328
    },
    {
     "id": "soc7090s60",
-    "net": 16.01,
-    "n": 90
-   },
-   {
-    "id": "osoc60agree",
-    "net": 15.75,
+    "net": 16.09,
     "n": 91
    },
    {
-    "id": "socSharp4050s50",
-    "net": 15.42,
-    "n": 262
+    "id": "osoc60agree",
+    "net": 15.82,
+    "n": 92
    },
    {
     "id": "osoc70",
@@ -1171,14 +1166,19 @@
     "n": 58
    },
    {
-    "id": "sharp8090agree",
-    "net": 12.76,
-    "n": 95
+    "id": "socSharp4050s50",
+    "net": 14.97,
+    "n": 263
    },
    {
     "id": "ten70",
-    "net": 12.16,
-    "n": 61
+    "net": 13.04,
+    "n": 62
+   },
+   {
+    "id": "sharp8090agree",
+    "net": 12.81,
+    "n": 97
    },
    {
     "id": "sera6090agree",
@@ -1192,13 +1192,18 @@
    },
    {
     "id": "soc7090agree40",
-    "net": 10.39,
-    "n": 186
+    "net": 10.56,
+    "n": 188
    },
    {
     "id": "esp6090s70",
     "net": 9.76,
     "n": 30
+   },
+   {
+    "id": "tenK70",
+    "net": 9.7,
+    "n": 43
    },
    {
     "id": "seraSharp50",
@@ -1216,19 +1221,14 @@
     "n": 221
    },
    {
-    "id": "tenK70",
-    "net": 8.34,
-    "n": 42
-   },
-   {
     "id": "socSharp4050",
-    "net": 7.52,
-    "n": 725
+    "net": 7.22,
+    "n": 727
    },
    {
     "id": "soc60",
-    "net": 6.93,
-    "n": 224
+    "net": 6.83,
+    "n": 227
    },
    {
     "id": "osoc4060s60agree",
@@ -1237,13 +1237,13 @@
    },
    {
     "id": "tenP50",
-    "net": 6.32,
-    "n": 230
+    "net": 5.77,
+    "n": 233
    },
    {
     "id": "ten50",
-    "net": 5.63,
-    "n": 347
+    "net": 5,
+    "n": 354
    },
    {
     "id": "socSharp6090agree50",
@@ -1251,29 +1251,29 @@
     "n": 129
    },
    {
+    "id": "soc50",
+    "net": 3.82,
+    "n": 649
+   },
+   {
     "id": "ucl50agree",
     "net": 3.58,
     "n": 90
    },
    {
-    "id": "soc50",
-    "net": 3.46,
-    "n": 643
-   },
-   {
     "id": "soc6090agree",
-    "net": 2.46,
-    "n": 381
-   },
-   {
-    "id": "sharp6090agree",
-    "net": 2.28,
-    "n": 451
+    "net": 2.87,
+    "n": 385
    },
    {
     "id": "soc8090ok",
-    "net": 2.06,
-    "n": 643
+    "net": 2.37,
+    "n": 657
+   },
+   {
+    "id": "sharp6090agree",
+    "net": 2.17,
+    "n": 455
    }
   ],
   "shadowFilters": [],
@@ -1313,7 +1313,7 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795184179,
+  "at": 1795184804,
   "status": "ok",
   "candidates": 19,
   "ordered": 0,
@@ -1325,6 +1325,6 @@
   "cancelled": 0,
   "closes": 29
  },
- "dataUpdated": 1795184102,
+ "dataUpdated": 1795184705,
  "killSwitch": false
 }
