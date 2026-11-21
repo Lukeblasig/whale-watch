@@ -1,10 +1,10 @@
 {
- "updated": 1795242400,
+ "updated": 1795242996,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 68,
-  "fills": 54,
+  "orders": 69,
+  "fills": 55,
   "settled": 32,
   "w": 21,
   "l": 11,
@@ -29,10 +29,10 @@
    0.31
   ],
   "medianSlipCents": 0,
-  "avgSlipCents": 0.06,
-  "takerPct": 94.44,
+  "avgSlipCents": 0.08,
+  "takerPct": 92.73,
   "liveQuotePct": 100,
-  "open": 22,
+  "open": 23,
   "resting": 7,
   "cancelled": 7
  },
@@ -738,8 +738,8 @@
    "cancelled": 1
   },
   "soc60": {
-   "orders": 9,
-   "fills": 4,
+   "orders": 10,
+   "fills": 5,
    "settled": 1,
    "w": 0,
    "l": 1,
@@ -758,10 +758,10 @@
    "clvBeatPct": 100,
    "clvCI": null,
    "medianSlipCents": 1,
-   "avgSlipCents": 0.75,
-   "takerPct": 75,
+   "avgSlipCents": 0.8,
+   "takerPct": 60,
    "liveQuotePct": 100,
-   "open": 3,
+   "open": 4,
    "resting": 3,
    "cancelled": 2
   },
@@ -1019,8 +1019,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 29,
- "unitsToday": 4,
+ "openUnits": 30,
+ "unitsToday": 5,
  "drawdown": {
   "units": -3.12,
   "max": 7.53,
@@ -1047,13 +1047,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 54 fills"
+   "detail": "Median 0.00¢ over 55 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.05374751984126984,
+   "progress": 0.05399388227513228,
    "detail": "0.2 weeks, 32 settled bets"
   }
  ],
@@ -1313,18 +1313,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795242400,
+  "at": 1795242996,
   "status": "ok",
-  "candidates": 49,
+  "candidates": 51,
   "ordered": 1,
   "filled": 1,
-  "rested": 0,
+  "rested": 1,
   "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 45
+  "closes": 46
  },
- "dataUpdated": 1795242320,
+ "dataUpdated": 1795242917,
  "killSwitch": false
 }
