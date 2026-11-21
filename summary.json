@@ -1,10 +1,10 @@
 {
- "updated": 1795240599,
+ "updated": 1795241206,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 64,
-  "fills": 50,
+  "orders": 67,
+  "fills": 53,
   "settled": 32,
   "w": 21,
   "l": 11,
@@ -29,10 +29,10 @@
    0.31
   ],
   "medianSlipCents": 0,
-  "avgSlipCents": 0.03,
-  "takerPct": 94,
+  "avgSlipCents": 0.06,
+  "takerPct": 94.34,
   "liveQuotePct": 100,
-  "open": 18,
+  "open": 21,
   "resting": 7,
   "cancelled": 7
  },
@@ -710,8 +710,8 @@
    "cancelled": 1
   },
   "socSharp4050": {
-   "orders": 3,
-   "fills": 2,
+   "orders": 4,
+   "fills": 3,
    "settled": 1,
    "w": 0,
    "l": 1,
@@ -733,13 +733,13 @@
    "avgSlipCents": 0,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 1,
+   "open": 2,
    "resting": 0,
    "cancelled": 1
   },
   "soc60": {
-   "orders": 7,
-   "fills": 2,
+   "orders": 9,
+   "fills": 4,
    "settled": 1,
    "w": 0,
    "l": 1,
@@ -757,11 +757,11 @@
    "clvAvgPct": 0.86,
    "clvBeatPct": 100,
    "clvCI": null,
-   "medianSlipCents": 0.5,
-   "avgSlipCents": 0.5,
-   "takerPct": 50,
+   "medianSlipCents": 1,
+   "avgSlipCents": 0.75,
+   "takerPct": 75,
    "liveQuotePct": 100,
-   "open": 1,
+   "open": 3,
    "resting": 3,
    "cancelled": 2
   },
@@ -1019,8 +1019,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 25,
- "unitsToday": 33,
+ "openUnits": 28,
+ "unitsToday": 3,
  "drawdown": {
   "units": -3.12,
   "max": 7.53,
@@ -1047,13 +1047,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 50 fills"
+   "detail": "Median 0.00¢ over 53 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.05300305886243386,
+   "progress": 0.053253968253968255,
    "detail": "0.2 weeks, 32 settled bets"
   }
  ],
@@ -1313,18 +1313,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795240599,
+  "at": 1795241206,
   "status": "ok",
-  "candidates": 43,
-  "ordered": 1,
-  "filled": 1,
+  "candidates": 48,
+  "ordered": 3,
+  "filled": 3,
   "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 41
+  "closes": 42
  },
- "dataUpdated": 1795240518,
+ "dataUpdated": 1795241122,
  "killSwitch": false
 }
