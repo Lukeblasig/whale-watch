@@ -824,8 +824,8 @@
     "bid": 0.38,
     "ask": 0.39,
     "mid": 0.385,
-    "at": 1795300600,
-    "minsBefore": 1603,
+    "at": 1795301204,
+    "minsBefore": 1593,
     "source": "kalshi market"
    }
   },
@@ -1219,8 +1219,8 @@
     "bid": 0.32,
     "ask": 0.33,
     "mid": 0.325,
-    "at": 1795300600,
-    "minsBefore": 1163,
+    "at": 1795301204,
+    "minsBefore": 1153,
     "source": "kalshi market"
    }
   },
@@ -1273,8 +1273,8 @@
     "bid": 0.68,
     "ask": 0.69,
     "mid": 0.685,
-    "at": 1795300600,
-    "minsBefore": 1163,
+    "at": 1795301204,
+    "minsBefore": 1153,
     "source": "kalshi market"
    }
   },
@@ -6357,8 +6357,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795300600,
-    "minsBefore": 1163,
+    "at": 1795301205,
+    "minsBefore": 1153,
     "source": "polymarket book"
    }
   },
@@ -6763,8 +6763,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795300600,
-    "minsBefore": 2663,
+    "at": 1795301204,
+    "minsBefore": 2653,
     "source": "kalshi market"
    }
   },
@@ -8690,8 +8690,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795300600,
-    "minsBefore": 863,
+    "at": 1795301205,
+    "minsBefore": 853,
     "source": "polymarket book"
    }
   },
@@ -15802,8 +15802,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1795300600,
-    "minsBefore": 1163,
+    "at": 1795301204,
+    "minsBefore": 1153,
     "source": "kalshi market"
    }
   },
@@ -15915,8 +15915,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795300600,
-    "minsBefore": 278,
+    "at": 1795301204,
+    "minsBefore": 268,
     "source": "kalshi market"
    }
   },
@@ -16205,8 +16205,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795300600,
-    "minsBefore": 113,
+    "at": 1795301204,
+    "minsBefore": 103,
     "source": "kalshi market"
    }
   },
@@ -16318,8 +16318,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795300600,
-    "minsBefore": 1163,
+    "at": 1795301205,
+    "minsBefore": 1153,
     "source": "polymarket book"
    }
   },
@@ -18658,8 +18658,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795300600,
-    "minsBefore": 1163,
+    "at": 1795301204,
+    "minsBefore": 1153,
     "source": "kalshi market"
    }
   },
@@ -18712,8 +18712,8 @@
     "bid": 0.63,
     "ask": 0.64,
     "mid": 0.635,
-    "at": 1795300600,
-    "minsBefore": 1163,
+    "at": 1795301205,
+    "minsBefore": 1153,
     "source": "kalshi market"
    }
   },
@@ -19003,8 +19003,8 @@
     "bid": 0.52,
     "ask": 0.53,
     "mid": 0.525,
-    "at": 1795300600,
-    "minsBefore": 1163,
+    "at": 1795301205,
+    "minsBefore": 1153,
     "source": "kalshi market"
    }
   },
@@ -20531,8 +20531,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795300600,
-    "minsBefore": 863,
+    "at": 1795301205,
+    "minsBefore": 853,
     "source": "polymarket book"
    }
   },
@@ -26882,8 +26882,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795300600,
-    "minsBefore": 1223,
+    "at": 1795301205,
+    "minsBefore": 1213,
     "source": "polymarket book"
    }
   },
@@ -26936,8 +26936,62 @@
     "bid": 0.63,
     "ask": 0.64,
     "mid": 0.635,
-    "at": 1795300600,
-    "minsBefore": 113,
+    "at": 1795301205,
+    "minsBefore": 103,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795301203-460",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0xe4a2930ba2737aa8eee5a79413647e1b1f847301d810b56bb1f3eaf09ca48022|1",
+   "pickKey": "Polymarket|0xe4a2930ba2737aa8eee5a79413647e1b1f847301d810b56bb1f3eaf09ca48022|1",
+   "marketKey": "Polymarket|0xe4a2930ba2737aa8eee5a79413647e1b1f847301d810b56bb1f3eaf09ca48022",
+   "venue": "Polymarket",
+   "conditionId": "0xe4a2930ba2737aa8eee5a79413647e1b1f847301d810b56bb1f3eaf09ca48022",
+   "idx": 1,
+   "name": "Under",
+   "title": "Inter Miami CF vs. Columbus Crew: O/U 3.5",
+   "slug": "mls-mia-clb-2026-11-21-more-markets",
+   "league": "MLS",
+   "marketType": "total",
+   "start": 1795302000,
+   "whale": {
+    "q": 0.49,
+    "usd": 3542,
+    "score": 42,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795300012,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.5,
+   "createdAt": 1795301203,
+   "quoteAtOrder": {
+    "ask": 0.48,
+    "bid": 0.47,
+    "mid": 0.475,
+    "depth": 5086.5,
+    "at": 1795301205,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.48,
+   "filledAt": 1795301203,
+   "taker": true,
+   "feeUnits": 0.0156,
+   "priceSource": "polymarket book",
+   "slippageCents": -1,
+   "close": {
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795301205,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   }
