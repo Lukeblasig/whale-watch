@@ -1618,3 +1618,4 @@
 {"t":1795291602,"type":"settle","id":"1795262812-426","rule":"socSharp4050s50","shadow":false,"result":"L","units":-1.0171,"fee":0.0171,"whaleUnits":-1,"fill":0.43,"whaleQ":0.4369,"closeMid":0.425}
 {"t":1795291603,"type":"run","status":"ok","candidates":3,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":2,"cancelled":0,"closes":15,"openUnits":20,"unitsToday":50}
 {"t":1795292178,"type":"run","status":"ok","candidates":3,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":15,"openUnits":20,"unitsToday":50}
+{"t":1795292810,"type":"run","status":"ok","candidates":3,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":15,"openUnits":20,"unitsToday":50}
