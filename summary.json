@@ -1,10 +1,10 @@
 {
- "updated": 1795239985,
+ "updated": 1795240599,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 63,
-  "fills": 49,
+  "orders": 64,
+  "fills": 50,
   "settled": 32,
   "w": 21,
   "l": 11,
@@ -30,9 +30,9 @@
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.03,
-  "takerPct": 93.88,
+  "takerPct": 94,
   "liveQuotePct": 100,
-  "open": 17,
+  "open": 18,
   "resting": 7,
   "cancelled": 7
  },
@@ -822,8 +822,8 @@
    "cancelled": 0
   },
   "ten50": {
-   "orders": 2,
-   "fills": 2,
+   "orders": 3,
+   "fills": 3,
    "settled": 2,
    "w": 1,
    "l": 1,
@@ -841,11 +841,11 @@
    "clvAvgPct": 0,
    "clvBeatPct": 50,
    "clvCI": null,
-   "medianSlipCents": 0.5,
-   "avgSlipCents": 0.5,
+   "medianSlipCents": 0,
+   "avgSlipCents": 0.33,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 0,
+   "open": 1,
    "resting": 0,
    "cancelled": 0
   },
@@ -1019,8 +1019,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 24,
- "unitsToday": 32,
+ "openUnits": 25,
+ "unitsToday": 33,
  "drawdown": {
   "units": -3.12,
   "max": 7.53,
@@ -1045,15 +1045,15 @@
   {
    "id": "slip",
    "label": "Median fill no more than 1¢ worse than the whale",
-   "status": "pending",
-   "progress": 0.98,
-   "detail": "Median 0.00¢ over 49 fills"
+   "status": "pass",
+   "progress": 1,
+   "detail": "Median 0.00¢ over 50 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.052749255952380954,
+   "progress": 0.05300305886243386,
    "detail": "0.2 weeks, 32 settled bets"
   }
  ],
@@ -1313,18 +1313,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795239985,
+  "at": 1795240599,
   "status": "ok",
-  "candidates": 42,
+  "candidates": 43,
   "ordered": 1,
-  "filled": 0,
-  "rested": 1,
+  "filled": 1,
+  "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 40
+  "closes": 41
  },
- "dataUpdated": 1795239899,
+ "dataUpdated": 1795240518,
  "killSwitch": false
 }
