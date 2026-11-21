@@ -813,8 +813,15 @@ function presetPicks(){
   pickCache = { src: ledger, n: all.length, list: WWFilters.presetPicks(all) };
   return pickCache.list;
 }
+// One card per whale position: a whale buying in several fills shows once, with the whole position's size and average price
 function presetTrades(pr){
-  return trades.filter(t => { const p = posMap.get(t.pos); return venueOk(pr, t.venue) && t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!PRE_ONLY || upcoming(p)); });
+  const byPos = new Map();
+  trades.forEach(t => { const p = posMap.get(t.pos);
+    if (!(venueOk(pr, t.venue) && t.price >= 0.03 && t.price <= 0.97 && t.usd >= 1000 && p && pr.t(normP(p)) && (!PRE_ONLY || upcoming(p)))) return;
+    const c = byPos.get(t.pos);
+    if (!c) byPos.set(t.pos, { t, n: 1 }); else { c.n++; if (t.timestamp > c.t.timestamp) c.t = t; } });
+  return [...byPos.values()].map(({ t, n }) => { const p = posMap.get(t.pos);
+    return n === 1 ? t : { ...t, id: t.id + "|pos", usd: p.usd, price: p.q, fills: n }; });
 }
 let openPreset = null;
 // Settled records only change when new results load; work them out once per load, not on every click
@@ -943,7 +950,7 @@ function betCard(t, bs, crowd){
     const name = kal ? "Anonymous" : nameOf(t.wallet, t.name || t.pseudonym);
     const c = crowd.get(t.conditionId + "|" + p.idx) || { n: 1 };
     return `<div class="bet ${s ? "is-sharp" : ""}" data-play="${esc(t.conditionId)}|${p.idx}|live">
-      <div class="amt">${money(t.usd)}<small>${ago(t.timestamp)}</small></div>
+      <div class="amt">${money(t.usd)}<small>${t.fills ? `${t.fills} buys, last ${ago(t.timestamp)}` : ago(t.timestamp)}</small></div>
       <div class="pick"><span class="side ${t.side === "BUY" ? "buy" : "sell"}">${t.side === "BUY" ? "Bought" : "Sold"}</span> ${esc(t.outcome)} @ ${Math.round(t.price*100)}¢ <span class="odds">(${american(t.price)})</span></div>
       <button class="score" data-why="${esc(t.id)}" style="color:${scoreColor(p.score)}" aria-label="Score ${p.score}, show breakdown">${p.score}<small>score</small></button>
       <a class="mkt" href="${linkFor(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>
