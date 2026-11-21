@@ -1459,3 +1459,5 @@
 {"t":1795265815,"type":"skip","reason":"already tried this pick","rule":"osoc70","pick":{"venue":"Polymarket","league":"Other soccer","title":"Spread: Galatasaray SK (-2.5)","side":"Samsunspor","start":1795266000,"whaleKey":"0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x838620e755333e19e530a2246af9fda50a9cfd3c5ce4f9132c15bf9e52c38788|1","q":0.58,"score":70,"sharp":true,"marketType":"spread"},"quote":{"ask":0.69,"source":"polymarket book"}}
 {"t":1795265815,"type":"run","status":"ok","candidates":73,"ordered":0,"filled":0,"rested":0,"skipped":3,"shadowOrdered":0,"settled":0,"cancelled":3,"closes":54,"openUnits":45,"unitsToday":23}
 {"t":1795266404,"type":"run","status":"ok","candidates":58,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":49,"openUnits":45,"unitsToday":23}
+{"t":1795267011,"type":"fill","id":"1795255007-419","rule":"soc50","shadow":false,"price":0.34,"maker":true,"source":"polymarket book"}
+{"t":1795267011,"type":"run","status":"ok","candidates":58,"ordered":0,"filled":1,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":49,"openUnits":45,"unitsToday":23}
