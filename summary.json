@@ -1,10 +1,10 @@
 {
- "updated": 1795250187,
+ "updated": 1795250806,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 77,
-  "fills": 60,
+  "orders": 78,
+  "fills": 61,
   "settled": 34,
   "w": 21,
   "l": 13,
@@ -29,10 +29,10 @@
    0.31
   ],
   "medianSlipCents": 0,
-  "avgSlipCents": 0.04,
-  "takerPct": 93.33,
+  "avgSlipCents": 0.02,
+  "takerPct": 93.44,
   "liveQuotePct": 100,
-  "open": 26,
+  "open": 27,
   "resting": 10,
   "cancelled": 7
  },
@@ -402,8 +402,8 @@
    "cancelled": 0
   },
   "socSharp4050s50": {
-   "orders": 6,
-   "fills": 2,
+   "orders": 7,
+   "fills": 3,
    "settled": 2,
    "w": 0,
    "l": 2,
@@ -422,10 +422,10 @@
    "clvBeatPct": 50,
    "clvCI": null,
    "medianSlipCents": 1,
-   "avgSlipCents": 1,
+   "avgSlipCents": 0.33,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 0,
+   "open": 1,
    "resting": 3,
    "cancelled": 1
   },
@@ -1019,8 +1019,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 36,
- "unitsToday": 13,
+ "openUnits": 37,
+ "unitsToday": 14,
  "drawdown": {
   "units": -5.15,
   "max": 8.19,
@@ -1047,13 +1047,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 60 fills"
+   "detail": "Median 0.00¢ over 61 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.056966352513227514,
+   "progress": 0.05722222222222222,
    "detail": "0.2 weeks, 34 settled bets"
   }
  ],
@@ -1313,18 +1313,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795250187,
+  "at": 1795250806,
   "status": "ok",
-  "candidates": 64,
-  "ordered": 2,
-  "filled": 0,
-  "rested": 2,
+  "candidates": 67,
+  "ordered": 1,
+  "filled": 1,
+  "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 53
+  "closes": 55
  },
- "dataUpdated": 1795250099,
+ "dataUpdated": 1795250729,
  "killSwitch": false
 }
