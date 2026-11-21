@@ -1,5 +1,5 @@
 {
- "updated": 1795264018,
+ "updated": 1795264430,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -20,13 +20,13 @@
   ],
   "whaleUnits": -4.74,
   "whaleRoi": -13.93,
-  "clvN": 36,
-  "clvAvgCents": -0.19,
-  "clvAvgPct": -0.54,
-  "clvBeatPct": 36.11,
+  "clvN": 44,
+  "clvAvgCents": -0.3,
+  "clvAvgPct": -0.74,
+  "clvBeatPct": 34.09,
   "clvCI": [
-   -0.72,
-   0.33
+   -0.73,
+   0.14
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.01,
@@ -332,9 +332,9 @@
    "netRoiCI": null,
    "whaleUnits": -1,
    "whaleRoi": -100,
-   "clvN": 1,
+   "clvN": 2,
    "clvAvgCents": -0.5,
-   "clvAvgPct": -0.71,
+   "clvAvgPct": -0.64,
    "clvBeatPct": 0,
    "clvCI": null,
    "medianSlipCents": -1,
@@ -724,10 +724,10 @@
    "netRoiCI": null,
    "whaleUnits": -2,
    "whaleRoi": -100,
-   "clvN": 2,
-   "clvAvgCents": 0,
-   "clvAvgPct": 0.04,
-   "clvBeatPct": 50,
+   "clvN": 5,
+   "clvAvgCents": -1.1,
+   "clvAvgPct": -2.43,
+   "clvBeatPct": 20,
    "clvCI": null,
    "medianSlipCents": 0,
    "avgSlipCents": -0.33,
@@ -976,11 +976,14 @@
    "netRoiCI": null,
    "whaleUnits": 1.55,
    "whaleRoi": 19.35,
-   "clvN": 8,
-   "clvAvgCents": -0.62,
-   "clvAvgPct": -0.77,
-   "clvBeatPct": 37.5,
-   "clvCI": null,
+   "clvN": 12,
+   "clvAvgCents": -0.42,
+   "clvAvgPct": -0.52,
+   "clvBeatPct": 41.67,
+   "clvCI": [
+    -1.01,
+    0.17
+   ],
    "medianSlipCents": 0,
    "avgSlipCents": -0.03,
    "takerPct": 100,
@@ -1032,8 +1035,8 @@
    "id": "clv",
    "label": "Beat the close after 500 bets",
    "status": "pending",
-   "progress": 0.072,
-   "detail": "36 of 500 bets have a closing price; average so far -0.19¢"
+   "progress": 0.088,
+   "detail": "44 of 500 bets have a closing price; average so far -0.30¢"
   },
   {
    "id": "roi",
@@ -1053,7 +1056,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.06268353174603175,
+   "progress": 0.06285383597883598,
    "detail": "0.3 weeks, 34 settled bets"
   }
  ],
@@ -1313,18 +1316,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795264018,
+  "at": 1795264430,
   "status": "ok",
-  "candidates": 91,
+  "candidates": 77,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
-  "skipped": 2,
+  "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
-  "cancelled": 1,
-  "closes": 66
+  "cancelled": 0,
+  "closes": 56
  },
- "dataUpdated": 1795263922,
+ "dataUpdated": 1795264354,
  "killSwitch": false
 }
