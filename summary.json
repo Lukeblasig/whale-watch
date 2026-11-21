@@ -1,25 +1,25 @@
 {
- "updated": 1795281371,
+ "updated": 1795281993,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
   "orders": 112,
   "fills": 92,
-  "settled": 58,
-  "w": 37,
+  "settled": 61,
+  "w": 40,
   "l": 21,
   "p": 0,
-  "netUnits": -3.37,
-  "grossUnits": -2.73,
-  "fees": 0.64,
-  "netRoi": -5.82,
-  "grossRoi": -4.71,
+  "netUnits": -2.73,
+  "grossUnits": -2.07,
+  "fees": 0.66,
+  "netRoi": -4.47,
+  "grossRoi": -3.39,
   "netRoiCI": [
-   -22.45,
-   10.81
+   -20.39,
+   11.44
   ],
-  "whaleUnits": -2.66,
-  "whaleRoi": -4.59,
+  "whaleUnits": -2,
+  "whaleRoi": -3.28,
   "clvN": 81,
   "clvAvgCents": -0.3,
   "clvAvgPct": -0.52,
@@ -32,9 +32,9 @@
   "avgSlipCents": 0.09,
   "takerPct": 92.39,
   "liveQuotePct": 100,
-  "open": 34,
-  "resting": 3,
-  "cancelled": 17
+  "open": 31,
+  "resting": 1,
+  "cancelled": 19
  },
  "byRule": {
   "sharp4060ml70": {
@@ -90,8 +90,8 @@
    "takerPct": 100,
    "liveQuotePct": 100,
    "open": 2,
-   "resting": 1,
-   "cancelled": 1
+   "resting": 0,
+   "cancelled": 2
   },
   "ucl7090s60": {
    "orders": 0,
@@ -320,18 +320,18 @@
   "soc7090s60": {
    "orders": 3,
    "fills": 3,
-   "settled": 2,
-   "w": 1,
+   "settled": 3,
+   "w": 2,
    "l": 1,
    "p": 0,
-   "netUnits": -0.88,
-   "grossUnits": -0.86,
-   "fees": 0.01,
-   "netRoi": -43.81,
-   "grossRoi": -43.18,
+   "netUnits": -0.7,
+   "grossUnits": -0.69,
+   "fees": 0.02,
+   "netRoi": -23.47,
+   "grossRoi": -22.9,
    "netRoiCI": null,
-   "whaleUnits": -0.86,
-   "whaleRoi": -43.18,
+   "whaleUnits": -0.68,
+   "whaleRoi": -22.74,
    "clvN": 3,
    "clvAvgCents": -0.5,
    "clvAvgPct": -0.62,
@@ -341,7 +341,7 @@
    "avgSlipCents": -0.33,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 1,
+   "open": 0,
    "resting": 0,
    "cancelled": 0
   },
@@ -734,8 +734,8 @@
    "takerPct": 100,
    "liveQuotePct": 100,
    "open": 3,
-   "resting": 1,
-   "cancelled": 2
+   "resting": 0,
+   "cancelled": 3
   },
   "tenP50": {
    "orders": 4,
@@ -964,21 +964,21 @@
   "soc8090ok": {
    "orders": 24,
    "fills": 24,
-   "settled": 16,
-   "w": 14,
+   "settled": 18,
+   "w": 16,
    "l": 2,
    "p": 0,
-   "netUnits": 0.58,
-   "grossUnits": 0.65,
-   "fees": 0.08,
-   "netRoi": 3.61,
-   "grossRoi": 4.09,
+   "netUnits": 1.05,
+   "grossUnits": 1.14,
+   "fees": 0.09,
+   "netRoi": 5.83,
+   "grossRoi": 6.33,
    "netRoiCI": [
-    -11.93,
-    19.14
+    -8.59,
+    20.25
    ],
-   "whaleUnits": 0.64,
-   "whaleRoi": 4.02,
+   "whaleUnits": 1.13,
+   "whaleRoi": 6.27,
    "clvN": 22,
    "clvAvgCents": -0.66,
    "clvAvgPct": -0.81,
@@ -991,7 +991,7 @@
    "avgSlipCents": 0.06,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 8,
+   "open": 6,
    "resting": 0,
    "cancelled": 0
   },
@@ -1025,12 +1025,12 @@
   }
  },
  "byShadow": {},
- "openUnits": 37,
- "unitsToday": 43,
+ "openUnits": 32,
+ "unitsToday": 41,
  "drawdown": {
-  "units": -3.37,
+  "units": -2.73,
   "max": 10.89,
-  "current": 6.42
+  "current": 5.77
  },
  "lossStop": false,
  "gates": [
@@ -1045,8 +1045,8 @@
    "id": "roi",
    "label": "Net ROI above -2% after 1000 bets",
    "status": "pending",
-   "progress": 0.058,
-   "detail": "58 of 1000 settled; -5.82% so far"
+   "progress": 0.061,
+   "detail": "61 of 1000 settled; -4.47% so far"
   },
   {
    "id": "slip",
@@ -1059,8 +1059,8 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.06985656415343916,
-   "detail": "0.3 weeks, 58 settled bets"
+   "progress": 0.07011367394179895,
+   "detail": "0.3 weeks, 61 settled bets"
   }
  ],
  "config": {
@@ -1319,18 +1319,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795281371,
+  "at": 1795281993,
   "status": "ok",
   "candidates": 32,
-  "ordered": 1,
-  "filled": 1,
+  "ordered": 0,
+  "filled": 0,
   "rested": 0,
-  "skipped": 1,
+  "skipped": 2,
   "shadowOrdered": 0,
-  "settled": 5,
-  "cancelled": 0,
-  "closes": 29
+  "settled": 3,
+  "cancelled": 2,
+  "closes": 30
  },
- "dataUpdated": 1795281298,
+ "dataUpdated": 1795281909,
  "killSwitch": false
 }
