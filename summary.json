@@ -1,25 +1,25 @@
 {
- "updated": 1795377432,
+ "updated": 1795377993,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
   "orders": 194,
   "fills": 161,
-  "settled": 147,
-  "w": 90,
+  "settled": 149,
+  "w": 92,
   "l": 57,
   "p": 0,
-  "netUnits": -8.13,
-  "grossUnits": -6.4,
-  "fees": 1.73,
-  "netRoi": -5.53,
-  "grossRoi": -4.36,
+  "netUnits": -6.13,
+  "grossUnits": -4.38,
+  "fees": 1.76,
+  "netRoi": -4.12,
+  "grossRoi": -2.94,
   "netRoiCI": [
-   -16.37,
-   5.31
+   -15.07,
+   6.84
   ],
-  "whaleUnits": -6.99,
-  "whaleRoi": -4.76,
+  "whaleUnits": -5.05,
+  "whaleRoi": -3.39,
   "clvN": 157,
   "clvAvgCents": -0.24,
   "clvAvgPct": -0.37,
@@ -32,7 +32,7 @@
   "avgSlipCents": 0.07,
   "takerPct": 93.17,
   "liveQuotePct": 100,
-  "open": 14,
+  "open": 12,
   "resting": 0,
   "cancelled": 33
  },
@@ -715,21 +715,21 @@
   "socSharp4050": {
    "orders": 26,
    "fills": 21,
-   "settled": 20,
-   "w": 7,
+   "settled": 21,
+   "w": 8,
    "l": 13,
    "p": 0,
-   "netUnits": -4.28,
-   "grossUnits": -3.94,
-   "fees": 0.34,
-   "netRoi": -21.39,
-   "grossRoi": -19.71,
+   "netUnits": -2.86,
+   "grossUnits": -2.5,
+   "fees": 0.36,
+   "netRoi": -13.61,
+   "grossRoi": -11.92,
    "netRoiCI": [
-    -62.89,
-    20.1
+    -55.1,
+    27.89
    ],
-   "whaleUnits": -5.32,
-   "whaleRoi": -26.58,
+   "whaleUnits": -3.94,
+   "whaleRoi": -18.74,
    "clvN": 21,
    "clvAvgCents": -0.43,
    "clvAvgPct": -0.92,
@@ -742,7 +742,7 @@
    "avgSlipCents": -0.52,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 1,
+   "open": 0,
    "resting": 0,
    "cancelled": 5
   },
@@ -833,18 +833,18 @@
   "soc60": {
    "orders": 14,
    "fills": 9,
-   "settled": 7,
-   "w": 2,
+   "settled": 8,
+   "w": 3,
    "l": 5,
    "p": 0,
-   "netUnits": -3.6,
-   "grossUnits": -3.55,
-   "fees": 0.05,
-   "netRoi": -51.45,
-   "grossRoi": -50.72,
+   "netUnits": -3.03,
+   "grossUnits": -2.96,
+   "fees": 0.06,
+   "netRoi": -37.82,
+   "grossRoi": -37.04,
    "netRoiCI": null,
-   "whaleUnits": -3.49,
-   "whaleRoi": -49.86,
+   "whaleUnits": -2.93,
+   "whaleRoi": -36.6,
    "clvN": 9,
    "clvAvgCents": -0.78,
    "clvAvgPct": -1.38,
@@ -854,7 +854,7 @@
    "avgSlipCents": 0.33,
    "takerPct": 66.67,
    "liveQuotePct": 100,
-   "open": 2,
+   "open": 1,
    "resting": 0,
    "cancelled": 5
   },
@@ -1009,12 +1009,12 @@
   }
  },
  "byShadow": {},
- "openUnits": 14,
+ "openUnits": 12,
  "unitsToday": 52,
  "drawdown": {
-  "units": -8.13,
+  "units": -6.13,
   "max": 11.17,
-  "current": 11.17
+  "current": 9.18
  },
  "lossStop": false,
  "gates": [
@@ -1029,8 +1029,8 @@
    "id": "roi",
    "label": "Net ROI above -2% after 1000 bets",
    "status": "pending",
-   "progress": 0.147,
-   "detail": "147 of 1000 settled; -5.53% so far"
+   "progress": 0.149,
+   "detail": "149 of 1000 settled; -4.12% so far"
   },
   {
    "id": "slip",
@@ -1043,8 +1043,8 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.10956431878306878,
-   "detail": "0.4 weeks, 147 settled bets"
+   "progress": 0.10979621362433863,
+   "detail": "0.4 weeks, 149 settled bets"
   }
  ],
  "config": {
@@ -1297,18 +1297,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795377432,
+  "at": 1795377993,
   "status": "ok",
-  "candidates": 9,
+  "candidates": 8,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
-  "skipped": 1,
+  "skipped": 0,
   "shadowOrdered": 0,
-  "settled": 0,
-  "cancelled": 1,
-  "closes": 7
+  "settled": 2,
+  "cancelled": 0,
+  "closes": 6
  },
- "dataUpdated": 1795377319,
+ "dataUpdated": 1795377901,
  "killSwitch": false
 }
