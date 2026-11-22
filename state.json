@@ -824,8 +824,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795382819,
-    "minsBefore": 233,
+    "at": 1795383396,
+    "minsBefore": 223,
     "source": "kalshi market"
    }
   },
@@ -6788,8 +6788,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795382819,
-    "minsBefore": 1293,
+    "at": 1795383396,
+    "minsBefore": 1283,
     "source": "kalshi market"
    }
   },
@@ -28377,10 +28377,10 @@
    "slippageCents": 1,
    "close": {
     "bid": 0.61,
-    "ask": 0.93,
-    "mid": 0.77,
-    "at": 1795382819,
-    "minsBefore": 5538,
+    "ask": 0.89,
+    "mid": 0.75,
+    "at": 1795383396,
+    "minsBefore": 5528,
     "source": "polymarket book"
    }
   },
@@ -30385,8 +30385,8 @@
     "bid": 0.64,
     "ask": 0.65,
     "mid": 0.645,
-    "at": 1795382819,
-    "minsBefore": 233,
+    "at": 1795383396,
+    "minsBefore": 223,
     "source": "polymarket book"
    }
   },
@@ -30839,7 +30839,7 @@
     "at": 1795366584,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.67,
    "filledAt": 1795366582,
    "taker": true,
@@ -30853,7 +30853,12 @@
     "at": 1795370214,
     "minsBefore": 3,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.4925,
+   "units": 0.4826,
+   "whaleUnits": 0.515151515151515,
+   "settledAt": 1795383393
   },
   {
    "id": "1795367805-525",
@@ -31251,6 +31256,168 @@
    },
    "cancelledAt": 1795379215,
    "cancelReason": "unfilled at the start-time cutoff"
+  },
+  {
+   "id": "1795383393-532",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0xbf6c600a11ca0a72b799d16265301df68b348ce4|0xae7c787d455d1701c976655a86d09cc5bbd23e87020faed11b974b69efb7f7c1|1",
+   "pickKey": "Polymarket|0xae7c787d455d1701c976655a86d09cc5bbd23e87020faed11b974b69efb7f7c1|1",
+   "marketKey": "Polymarket|0xae7c787d455d1701c976655a86d09cc5bbd23e87020faed11b974b69efb7f7c1",
+   "venue": "Polymarket",
+   "conditionId": "0xae7c787d455d1701c976655a86d09cc5bbd23e87020faed11b974b69efb7f7c1",
+   "idx": 1,
+   "name": "Under",
+   "title": "Red Bull Bragantino vs. CR Vasco da Gama: O/U 4.5",
+   "slug": "bra-bra-vas-2026-11-22-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795386600,
+   "whale": {
+    "q": 0.8286,
+    "usd": 11397,
+    "score": 33,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795382338,
+    "wallet": "0xbf6c600a11ca0a72b799d16265301df68b348ce4"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.83,
+   "createdAt": 1795383393,
+   "quoteAtOrder": {
+    "ask": 0.82,
+    "bid": 0.81,
+    "mid": 0.815,
+    "depth": 2263.77,
+    "at": 1795383396,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.82,
+   "filledAt": 1795383393,
+   "taker": true,
+   "feeUnits": 0.0054,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.9,
+   "close": {
+    "bid": 0.81,
+    "ask": 0.82,
+    "mid": 0.815,
+    "at": 1795383396,
+    "minsBefore": 53,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795383393-533",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp6090agree",
+   "alsoMatched": [],
+   "sigKey": "0x032eb1bc893940263ad0b01889f262fc232f2a9e|0x71c59551fa3035fe4e78c04a8d2a899c7f6e00b2e5847a4535a821ef42b0e825|1",
+   "pickKey": "Polymarket|0x71c59551fa3035fe4e78c04a8d2a899c7f6e00b2e5847a4535a821ef42b0e825|1",
+   "marketKey": "Polymarket|0x71c59551fa3035fe4e78c04a8d2a899c7f6e00b2e5847a4535a821ef42b0e825",
+   "venue": "Polymarket",
+   "conditionId": "0x71c59551fa3035fe4e78c04a8d2a899c7f6e00b2e5847a4535a821ef42b0e825",
+   "idx": 1,
+   "name": "Heat",
+   "title": "Thunder vs. Heat",
+   "slug": "nba-okc-mia-2026-11-22",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795388400,
+   "whale": {
+    "q": 0.7215,
+    "usd": 6980,
+    "score": 59,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795383007,
+    "wallet": "0x032eb1bc893940263ad0b01889f262fc232f2a9e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.73,
+   "createdAt": 1795383393,
+   "quoteAtOrder": {
+    "ask": 0.69,
+    "bid": 0.68,
+    "mid": 0.685,
+    "depth": 210,
+    "at": 1795383396,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.69,
+   "filledAt": 1795383393,
+   "taker": true,
+   "feeUnits": 0.0093,
+   "priceSource": "polymarket book",
+   "slippageCents": -3.2,
+   "close": {
+    "bid": 0.68,
+    "ask": 0.69,
+    "mid": 0.685,
+    "at": 1795383396,
+    "minsBefore": 83,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795383393-534",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp6090agree",
+   "alsoMatched": [],
+   "sigKey": "0x2c866881290c2197960f06448d3a236d9f20d939|0x13533ce49f400a05968dd1dc296f463d0942c7c776485e99169893a1bc7c990f|0",
+   "pickKey": "Polymarket|0x13533ce49f400a05968dd1dc296f463d0942c7c776485e99169893a1bc7c990f|0",
+   "marketKey": "Polymarket|0x13533ce49f400a05968dd1dc296f463d0942c7c776485e99169893a1bc7c990f",
+   "venue": "Polymarket",
+   "conditionId": "0x13533ce49f400a05968dd1dc296f463d0942c7c776485e99169893a1bc7c990f",
+   "idx": 0,
+   "name": "Heat",
+   "title": "Spread: Heat (-1.5)",
+   "slug": "nba-okc-mia-2026-11-22",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1795388400,
+   "whale": {
+    "q": 0.6296,
+    "usd": 1342,
+    "score": 61,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795383007,
+    "wallet": "0x2c866881290c2197960f06448d3a236d9f20d939"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.63,
+   "createdAt": 1795383393,
+   "quoteAtOrder": {
+    "ask": 0.67,
+    "bid": 0.66,
+    "mid": 0.665,
+    "depth": 366,
+    "at": 1795383396,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.66,
+    "ask": 0.67,
+    "mid": 0.665,
+    "at": 1795383396,
+    "minsBefore": 83,
+    "source": "polymarket book"
+   }
   }
  ],
  "logged": {
