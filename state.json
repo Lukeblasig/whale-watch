@@ -824,8 +824,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795383396,
-    "minsBefore": 223,
+    "at": 1795384013,
+    "minsBefore": 213,
     "source": "kalshi market"
    }
   },
@@ -6788,8 +6788,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795383396,
-    "minsBefore": 1283,
+    "at": 1795384013,
+    "minsBefore": 1273,
     "source": "kalshi market"
    }
   },
@@ -28376,11 +28376,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.61,
-    "ask": 0.89,
-    "mid": 0.75,
-    "at": 1795383396,
-    "minsBefore": 5528,
+    "bid": 0.62,
+    "ask": 0.93,
+    "mid": 0.775,
+    "at": 1795384013,
+    "minsBefore": 5518,
     "source": "polymarket book"
    }
   },
@@ -30385,8 +30385,8 @@
     "bid": 0.64,
     "ask": 0.65,
     "mid": 0.645,
-    "at": 1795383396,
-    "minsBefore": 223,
+    "at": 1795384013,
+    "minsBefore": 213,
     "source": "polymarket book"
    }
   },
@@ -31306,8 +31306,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795383396,
-    "minsBefore": 53,
+    "at": 1795384013,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -31360,8 +31360,8 @@
     "bid": 0.68,
     "ask": 0.69,
     "mid": 0.685,
-    "at": 1795383396,
-    "minsBefore": 83,
+    "at": 1795384013,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -31411,11 +31411,65 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.66,
-    "ask": 0.67,
-    "mid": 0.665,
-    "at": 1795383396,
-    "minsBefore": 83,
+    "bid": 0.67,
+    "ask": 0.68,
+    "mid": 0.675,
+    "at": 1795384014,
+    "minsBefore": 73,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795384013-535",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp6090agree",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xa545d9305d8ce4b26d12b83989175a3a93e1cb7b5f200294b52e549d0fea6afd|0",
+   "pickKey": "Polymarket|0xa545d9305d8ce4b26d12b83989175a3a93e1cb7b5f200294b52e549d0fea6afd|0",
+   "marketKey": "Polymarket|0xa545d9305d8ce4b26d12b83989175a3a93e1cb7b5f200294b52e549d0fea6afd",
+   "venue": "Polymarket",
+   "conditionId": "0xa545d9305d8ce4b26d12b83989175a3a93e1cb7b5f200294b52e549d0fea6afd",
+   "idx": 0,
+   "name": "Heat",
+   "title": "Spread: Heat (-2.5)",
+   "slug": "nba-okc-mia-2026-11-22",
+   "league": "NBA",
+   "marketType": "spread",
+   "start": 1795388400,
+   "whale": {
+    "q": 0.62,
+    "usd": 1239,
+    "score": 58,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795383518,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.63,
+   "createdAt": 1795384013,
+   "quoteAtOrder": {
+    "ask": 0.65,
+    "bid": 0.64,
+    "mid": 0.645,
+    "depth": 389,
+    "at": 1795384014,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.64,
+    "ask": 0.65,
+    "mid": 0.645,
+    "at": 1795384014,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   }
