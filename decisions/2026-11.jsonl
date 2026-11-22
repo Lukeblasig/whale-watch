@@ -1762,3 +1762,5 @@
 {"t":1795339005,"type":"run","status":"ok","candidates":40,"ordered":1,"filled":1,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":35,"openUnits":25,"unitsToday":16}
 {"t":1795339600,"type":"run","status":"ok","candidates":40,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":36,"openUnits":25,"unitsToday":16}
 {"t":1795340294,"type":"run","status":"ok","candidates":40,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":36,"openUnits":25,"unitsToday":16}
+{"t":1795340795,"type":"fill","id":"1795335386-482","rule":"soc8090ok","shadow":false,"price":0.86,"maker":true,"source":"polymarket book"}
+{"t":1795340795,"type":"run","status":"ok","candidates":40,"ordered":0,"filled":1,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":36,"openUnits":25,"unitsToday":16}
