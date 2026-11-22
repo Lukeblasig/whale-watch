@@ -824,8 +824,8 @@
     "bid": 0.37,
     "ask": 0.38,
     "mid": 0.375,
-    "at": 1795374383,
-    "minsBefore": 374,
+    "at": 1795375006,
+    "minsBefore": 363,
     "source": "kalshi market"
    }
   },
@@ -6773,8 +6773,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795374383,
-    "minsBefore": 1434,
+    "at": 1795375006,
+    "minsBefore": 1423,
     "source": "kalshi market"
    }
   },
@@ -27687,7 +27687,7 @@
     "at": 1795329345,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.39,
    "filledAt": 1795329344,
    "taker": true,
@@ -27701,7 +27701,12 @@
     "at": 1795366583,
     "minsBefore": 4,
     "source": "polymarket book"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0183,
+   "whaleUnits": -1,
+   "settledAt": 1795375004
   },
   {
    "id": "1795329756-472",
@@ -27741,7 +27746,7 @@
     "at": 1795329758,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.46,
    "filledAt": 1795329756,
    "taker": true,
@@ -27755,7 +27760,12 @@
     "at": 1795366583,
     "minsBefore": 4,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 1.1739,
+   "units": 1.1577,
+   "whaleUnits": 1.0408163265306123,
+   "settledAt": 1795375004
   },
   {
    "id": "1795330604-473",
@@ -28316,11 +28326,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.63,
-    "ask": 0.93,
-    "mid": 0.78,
-    "at": 1795374384,
-    "minsBefore": 5679,
+    "bid": 0.61,
+    "ask": 0.92,
+    "mid": 0.765,
+    "at": 1795375006,
+    "minsBefore": 5668,
     "source": "polymarket book"
    }
   },
@@ -30207,8 +30217,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795374384,
-    "minsBefore": 139,
+    "at": 1795375006,
+    "minsBefore": 128,
     "source": "polymarket book"
    }
   },
@@ -30250,7 +30260,7 @@
     "at": 1795358203,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.57,
    "filledAt": 1795358201,
    "taker": true,
@@ -30264,7 +30274,12 @@
     "at": 1795359373,
     "minsBefore": 4,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.7544,
+   "units": 0.7415,
+   "whaleUnits": 0.6949152542372882,
+   "settledAt": 1795375004
   },
   {
    "id": "1795358800-516",
@@ -30315,8 +30330,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795374384,
-    "minsBefore": 374,
+    "at": 1795375006,
+    "minsBefore": 363,
     "source": "polymarket book"
    }
   },
@@ -30544,11 +30559,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.82,
-    "ask": 0.83,
-    "mid": 0.825,
-    "at": 1795374384,
-    "minsBefore": 139,
+    "bid": 0.83,
+    "ask": 0.84,
+    "mid": 0.835,
+    "at": 1795375006,
+    "minsBefore": 128,
     "source": "polymarket book"
    }
   },
@@ -30705,7 +30720,7 @@
     "at": 1795365386,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.86,
    "filledAt": 1795365383,
    "taker": true,
@@ -30719,7 +30734,12 @@
     "at": 1795366584,
     "minsBefore": 4,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.1628,
+   "units": 0.1586,
+   "whaleUnits": 0.14942528735632185,
+   "settledAt": 1795375004
   },
   {
    "id": "1795366582-524",
@@ -30937,8 +30957,8 @@
     "bid": 0.63,
     "ask": 0.64,
     "mid": 0.635,
-    "at": 1795374384,
-    "minsBefore": 39,
+    "at": 1795375006,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -30989,10 +31009,64 @@
    "slippageCents": null,
    "close": {
     "bid": 0.44,
-    "ask": 0.46,
-    "mid": 0.45,
-    "at": 1795374384,
-    "minsBefore": 54,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795375006,
+    "minsBefore": 43,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795375004-529",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0xb19f4b9c0c60d16243c3ecd90a6e1648f639f155|0xe67119f86cc8da85f3d2a3062a625828f0cfcf05635f0cc91e5fe71864a1bf44|0",
+   "pickKey": "Polymarket|0xe67119f86cc8da85f3d2a3062a625828f0cfcf05635f0cc91e5fe71864a1bf44|0",
+   "marketKey": "Polymarket|0xe67119f86cc8da85f3d2a3062a625828f0cfcf05635f0cc91e5fe71864a1bf44",
+   "venue": "Polymarket",
+   "conditionId": "0xe67119f86cc8da85f3d2a3062a625828f0cfcf05635f0cc91e5fe71864a1bf44",
+   "idx": 0,
+   "name": "Over",
+   "title": "Olympique de Marseille vs. Le Mans FC: O/U 1.5",
+   "slug": "fl1-olm-lmf-2026-11-22-more-markets",
+   "league": "Ligue 1",
+   "marketType": "total",
+   "start": 1795376700,
+   "whale": {
+    "q": 0.83,
+    "usd": 1008,
+    "score": 24,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795372709,
+    "wallet": "0xb19f4b9c0c60d16243c3ecd90a6e1648f639f155"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.84,
+   "createdAt": 1795375004,
+   "quoteAtOrder": {
+    "ask": 0.83,
+    "bid": 0.82,
+    "mid": 0.825,
+    "depth": 6943.19,
+    "at": 1795375006,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.83,
+   "filledAt": 1795375004,
+   "taker": true,
+   "feeUnits": 0.0051,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.82,
+    "ask": 0.83,
+    "mid": 0.825,
+    "at": 1795375006,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   }
