@@ -1,5 +1,5 @@
 {
- "updated": 1795322767,
+ "updated": 1795323401,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -1065,7 +1065,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.08696800595238095,
+   "progress": 0.08723007605820106,
    "detail": "0.3 weeks, 100 settled bets"
   }
  ],
@@ -1325,18 +1325,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795322767,
+  "at": 1795323401,
   "status": "ok",
   "candidates": 7,
-  "ordered": 1,
-  "filled": 1,
+  "ordered": 0,
+  "filled": 0,
   "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 15
+  "closes": 16
  },
- "dataUpdated": 1795322689,
+ "dataUpdated": 1795323318,
  "killSwitch": false
 }
