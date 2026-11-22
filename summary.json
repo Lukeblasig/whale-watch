@@ -1,10 +1,10 @@
 {
- "updated": 1795353980,
+ "updated": 1795354613,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 172,
-  "fills": 143,
+  "orders": 175,
+  "fills": 146,
   "settled": 101,
   "w": 63,
   "l": 38,
@@ -20,19 +20,19 @@
   ],
   "whaleUnits": -2.11,
   "whaleRoi": -2.09,
-  "clvN": 119,
-  "clvAvgCents": -0.18,
-  "clvAvgPct": -0.28,
-  "clvBeatPct": 36.97,
+  "clvN": 121,
+  "clvAvgCents": -0.23,
+  "clvAvgPct": -0.38,
+  "clvBeatPct": 36.36,
   "clvCI": [
-   -0.47,
-   0.12
+   -0.53,
+   0.06
   ],
   "medianSlipCents": 0,
-  "avgSlipCents": 0.04,
-  "takerPct": 93.01,
+  "avgSlipCents": 0.05,
+  "takerPct": 93.15,
   "liveQuotePct": 100,
-  "open": 42,
+  "open": 45,
   "resting": 4,
   "cancelled": 25
  },
@@ -528,10 +528,10 @@
    "netRoiCI": null,
    "whaleUnits": -3.67,
    "whaleRoi": -61.24,
-   "clvN": 6,
-   "clvAvgCents": -0.75,
-   "clvAvgPct": -1.58,
-   "clvBeatPct": 16.67,
+   "clvN": 7,
+   "clvAvgCents": -1.29,
+   "clvAvgPct": -2.66,
+   "clvBeatPct": 14.29,
    "clvCI": null,
    "medianSlipCents": 0.14,
    "avgSlipCents": 0.05,
@@ -626,8 +626,8 @@
    "cancelled": 0
   },
   "seraSharp50": {
-   "orders": 5,
-   "fills": 5,
+   "orders": 6,
+   "fills": 6,
    "settled": 1,
    "w": 0,
    "l": 1,
@@ -646,16 +646,16 @@
    "clvBeatPct": 75,
    "clvCI": null,
    "medianSlipCents": 1,
-   "avgSlipCents": 0.6,
-   "takerPct": 80,
+   "avgSlipCents": 0.67,
+   "takerPct": 83.33,
    "liveQuotePct": 100,
-   "open": 4,
+   "open": 5,
    "resting": 0,
    "cancelled": 0
   },
   "socSharp4060agree60": {
-   "orders": 1,
-   "fills": 1,
+   "orders": 2,
+   "fills": 2,
    "settled": 0,
    "w": 0,
    "l": 0,
@@ -673,11 +673,11 @@
    "clvAvgPct": 4.9,
    "clvBeatPct": 100,
    "clvCI": null,
-   "medianSlipCents": -0.67,
-   "avgSlipCents": -0.67,
+   "medianSlipCents": 0.16,
+   "avgSlipCents": 0.16,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 1,
+   "open": 2,
    "resting": 0,
    "cancelled": 0
   },
@@ -710,8 +710,8 @@
    "cancelled": 0
   },
   "socSharp4050": {
-   "orders": 24,
-   "fills": 20,
+   "orders": 25,
+   "fills": 21,
    "settled": 12,
    "w": 5,
    "l": 7,
@@ -736,10 +736,10 @@
     -0.13
    ],
    "medianSlipCents": 0,
-   "avgSlipCents": -0.55,
+   "avgSlipCents": -0.52,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 8,
+   "open": 9,
    "resting": 1,
    "cancelled": 3
   },
@@ -985,13 +985,13 @@
    ],
    "whaleUnits": 0,
    "whaleRoi": -0.01,
-   "clvN": 31,
-   "clvAvgCents": -0.45,
-   "clvAvgPct": -0.55,
-   "clvBeatPct": 38.71,
+   "clvN": 32,
+   "clvAvgCents": -0.52,
+   "clvAvgPct": -0.63,
+   "clvBeatPct": 37.5,
    "clvCI": [
-    -0.91,
-    0.01
+    -0.98,
+    -0.05
    ],
    "medianSlipCents": 0,
    "avgSlipCents": 0.09,
@@ -1003,8 +1003,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 46,
- "unitsToday": 37,
+ "openUnits": 49,
+ "unitsToday": 40,
  "drawdown": {
   "units": -2.3,
   "max": 10.89,
@@ -1016,8 +1016,8 @@
    "id": "clv",
    "label": "Beat the close after 500 bets",
    "status": "pending",
-   "progress": 0.238,
-   "detail": "119 of 500 bets have a closing price; average so far -0.18¢"
+   "progress": 0.242,
+   "detail": "121 of 500 bets have a closing price; average so far -0.23¢"
   },
   {
    "id": "roi",
@@ -1031,13 +1031,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 143 fills"
+   "detail": "Median 0.00¢ over 146 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.09987020502645502,
+   "progress": 0.10013186177248677,
    "detail": "0.4 weeks, 101 settled bets"
   }
  ],
@@ -1291,18 +1291,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795353980,
+  "at": 1795354613,
   "status": "ok",
-  "candidates": 48,
-  "ordered": 0,
-  "filled": 0,
+  "candidates": 47,
+  "ordered": 3,
+  "filled": 3,
   "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 38
+  "closes": 36
  },
- "dataUpdated": 1795353900,
+ "dataUpdated": 1795354518,
  "killSwitch": false
 }
