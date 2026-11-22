@@ -1,5 +1,5 @@
 {
- "updated": 1795355193,
+ "updated": 1795355811,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -33,8 +33,8 @@
   "takerPct": 93.2,
   "liveQuotePct": 100,
   "open": 41,
-  "resting": 5,
-  "cancelled": 25
+  "resting": 1,
+  "cancelled": 29
  },
  "byRule": {
   "sharp4060ml70": {
@@ -118,8 +118,8 @@
    "takerPct": 100,
    "liveQuotePct": 100,
    "open": 1,
-   "resting": 1,
-   "cancelled": 4
+   "resting": 0,
+   "cancelled": 5
   },
   "mls50": {
    "orders": 0,
@@ -314,8 +314,8 @@
    "takerPct": 80,
    "liveQuotePct": 100,
    "open": 0,
-   "resting": 1,
-   "cancelled": 1
+   "resting": 0,
+   "cancelled": 2
   },
   "ten70": {
    "orders": 2,
@@ -740,8 +740,8 @@
    "takerPct": 100,
    "liveQuotePct": 100,
    "open": 9,
-   "resting": 1,
-   "cancelled": 3
+   "resting": 0,
+   "cancelled": 4
   },
   "socSharpAgree60": {
    "orders": 3,
@@ -908,8 +908,8 @@
    "takerPct": 88.89,
    "liveQuotePct": 100,
    "open": 3,
-   "resting": 1,
-   "cancelled": 4
+   "resting": 0,
+   "cancelled": 5
   },
   "socSharp6090agree50": {
    "orders": 0,
@@ -1003,8 +1003,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 46,
- "unitsToday": 42,
+ "openUnits": 42,
+ "unitsToday": 39,
  "drawdown": {
   "units": -3.36,
   "max": 10.89,
@@ -1037,7 +1037,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.10037161044973544,
+   "progress": 0.1006270667989418,
    "detail": "0.4 weeks, 106 settled bets"
   }
  ],
@@ -1291,18 +1291,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795355193,
+  "at": 1795355811,
   "status": "ok",
-  "candidates": 52,
-  "ordered": 2,
-  "filled": 1,
-  "rested": 1,
-  "skipped": 0,
+  "candidates": 56,
+  "ordered": 0,
+  "filled": 0,
+  "rested": 0,
+  "skipped": 5,
   "shadowOrdered": 0,
-  "settled": 5,
-  "cancelled": 0,
-  "closes": 39
+  "settled": 0,
+  "cancelled": 4,
+  "closes": 41
  },
- "dataUpdated": 1795355111,
+ "dataUpdated": 1795355720,
  "killSwitch": false
 }
