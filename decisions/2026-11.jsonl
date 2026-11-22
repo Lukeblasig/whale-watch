@@ -1668,3 +1668,4 @@
 {"t":1795307183,"type":"cancel","id":"1795300006-459","rule":"sharp6090agree","shadow":false,"reason":"unfilled at the start-time cutoff"}
 {"t":1795307183,"type":"skip","reason":"already tried this pick","rule":"sharp6090agree","pick":{"venue":"Polymarket","league":"NBA","title":"Spread: Knicks (-4.5)","side":"Trail Blazers","start":1795307400,"whaleKey":"0x5268527977f700f9bf9b6d5cd843859e4e70135d|0xb07f4429cb1e1d1549686c0d132e4b6371514831d71d598e11617a2f8a44152e|1","q":0.6,"score":67,"sharp":true,"marketType":"spread"},"quote":{"ask":0.65,"source":"polymarket book"}}
 {"t":1795307183,"type":"run","status":"ok","candidates":5,"ordered":0,"filled":0,"rested":0,"skipped":1,"shadowOrdered":0,"settled":0,"cancelled":1,"closes":16,"openUnits":4,"unitsToday":51}
+{"t":1795307805,"type":"run","status":"ok","candidates":4,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":14,"openUnits":4,"unitsToday":51}
