@@ -824,8 +824,8 @@
     "bid": 0.37,
     "ask": 0.38,
     "mid": 0.375,
-    "at": 1795373804,
-    "minsBefore": 383,
+    "at": 1795374383,
+    "minsBefore": 374,
     "source": "kalshi market"
    }
   },
@@ -6773,8 +6773,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795373804,
-    "minsBefore": 1443,
+    "at": 1795374383,
+    "minsBefore": 1434,
     "source": "kalshi market"
    }
   },
@@ -28316,11 +28316,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.62,
+    "bid": 0.63,
     "ask": 0.93,
-    "mid": 0.775,
-    "at": 1795373804,
-    "minsBefore": 5688,
+    "mid": 0.78,
+    "at": 1795374384,
+    "minsBefore": 5679,
     "source": "polymarket book"
    }
   },
@@ -30207,8 +30207,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795373804,
-    "minsBefore": 148,
+    "at": 1795374384,
+    "minsBefore": 139,
     "source": "polymarket book"
    }
   },
@@ -30315,8 +30315,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795373804,
-    "minsBefore": 383,
+    "at": 1795374384,
+    "minsBefore": 374,
     "source": "polymarket book"
    }
   },
@@ -30547,8 +30547,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795373804,
-    "minsBefore": 148,
+    "at": 1795374384,
+    "minsBefore": 139,
     "source": "polymarket book"
    }
   },
@@ -30937,8 +30937,62 @@
     "bid": 0.63,
     "ask": 0.64,
     "mid": 0.635,
-    "at": 1795373804,
-    "minsBefore": 48,
+    "at": 1795374384,
+    "minsBefore": 39,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795374383-528",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0|0x802a96c1e36b0d3c5bab0bd7f52bc7928dd082a6c2599e11c5c8e5ca487ca6a3|0",
+   "pickKey": "Polymarket|0x802a96c1e36b0d3c5bab0bd7f52bc7928dd082a6c2599e11c5c8e5ca487ca6a3|0",
+   "marketKey": "Polymarket|0x802a96c1e36b0d3c5bab0bd7f52bc7928dd082a6c2599e11c5c8e5ca487ca6a3",
+   "venue": "Polymarket",
+   "conditionId": "0x802a96c1e36b0d3c5bab0bd7f52bc7928dd082a6c2599e11c5c8e5ca487ca6a3",
+   "idx": 0,
+   "name": "Over",
+   "title": "Getafe CF vs. Club Atlético de Madrid: O/U 2.5",
+   "slug": "lal-get-mad-2026-11-22-more-markets",
+   "league": "La Liga",
+   "marketType": "total",
+   "start": 1795377600,
+   "whale": {
+    "q": 0.43,
+    "usd": 6593,
+    "score": 38,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795373749,
+    "wallet": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.44,
+   "createdAt": 1795374383,
+   "quoteAtOrder": {
+    "ask": 0.46,
+    "bid": 0.44,
+    "mid": 0.45,
+    "depth": 21171.51,
+    "at": 1795374384,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.44,
+    "ask": 0.46,
+    "mid": 0.45,
+    "at": 1795374384,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   }
@@ -30947,8 +31001,6 @@
   "socAgree40|Polymarket|0xb1aa4afa4abffed0f6b04a1237f1370a293d62108e27133cbea530a217af5f8b|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x56aed2130ecbca8523f31b52acfa47df16927e9d76b303203bdf18f26cfb2ee4|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x20c34f68662f47fa7c283d469853f6b3f645c6a92dc1ae7c5df24285f2210cfc|1|price is over 30 min old": 1795715100,
-  "Kalshi|KXWTAMATCH-26NOV20LEMAND-AND|0|price is over 30 min old": 1795201200,
-  "Polymarket|0xbe7f5029d2a04e1e1d6fd3a2de48ba7364ad1023bbd37d8d0564bb77ed4e5224|0|already tried this pick": 1795201200,
   "Polymarket|0xf1e3dd77c964a7050685ec380f88bd14509f667f8903308711ebd09685a82aab|0|whale's price 91¢ is over 90¢": 1795203000,
   "Polymarket|0x5ce8d5f7681cbd10628a39f5f9fcd4711d72770330ab19469aad4edd1eebd234|1|already tried this pick": 1795203000,
   "Polymarket|0xbce2b8334fd481e833b2fdd13687dbf5f1897affc0bc139db07352a641726e3b|1|already tried this pick": 1795203000,
