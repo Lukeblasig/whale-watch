@@ -1,5 +1,5 @@
 {
- "updated": 1795306612,
+ "updated": 1795307182,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -33,8 +33,8 @@
   "takerPct": 93.14,
   "liveQuotePct": 100,
   "open": 4,
-  "resting": 1,
-  "cancelled": 21
+  "resting": 0,
+  "cancelled": 22
  },
  "byRule": {
   "sharp4060ml70": {
@@ -964,8 +964,8 @@
    "takerPct": 100,
    "liveQuotePct": 100,
    "open": 0,
-   "resting": 1,
-   "cancelled": 0
+   "resting": 0,
+   "cancelled": 1
   },
   "soc8090ok": {
    "orders": 27,
@@ -1031,8 +1031,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 5,
- "unitsToday": 52,
+ "openUnits": 4,
+ "unitsToday": 51,
  "drawdown": {
   "units": -3.84,
   "max": 10.89,
@@ -1065,7 +1065,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.08029017857142857,
+   "progress": 0.08052579365079365,
    "detail": "0.3 weeks, 98 settled bets"
   }
  ],
@@ -1325,18 +1325,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795306612,
+  "at": 1795307182,
   "status": "ok",
   "candidates": 5,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
-  "skipped": 0,
+  "skipped": 1,
   "shadowOrdered": 0,
   "settled": 0,
-  "cancelled": 0,
+  "cancelled": 1,
   "closes": 16
  },
- "dataUpdated": 1795306522,
+ "dataUpdated": 1795307101,
  "killSwitch": false
 }
