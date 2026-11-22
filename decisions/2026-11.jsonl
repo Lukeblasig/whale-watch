@@ -1908,3 +1908,5 @@
 {"t":1795367806,"type":"run","status":"ok","candidates":13,"ordered":1,"filled":1,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":18,"openUnits":28,"unitsToday":49}
 {"t":1795368402,"type":"settle","id":"1795351015-500","rule":"soc8090ok","shadow":false,"result":"W","units":0.2289,"fee":0.0057,"whaleUnits":0.20481927710843378,"fill":0.81,"whaleQ":0.83,"closeMid":0.785}
 {"t":1795368403,"type":"run","status":"ok","candidates":13,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":1,"cancelled":0,"closes":19,"openUnits":27,"unitsToday":49}
+{"t":1795369002,"type":"settle","id":"1795324587-468","rule":"socSharp4050s50","shadow":false,"result":"W","units":1.0408,"fee":0,"whaleUnits":1.0833333333333335,"fill":0.49,"whaleQ":0.48,"closeMid":0.445}
+{"t":1795369003,"type":"run","status":"ok","candidates":12,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":1,"cancelled":0,"closes":18,"openUnits":26,"unitsToday":49}
