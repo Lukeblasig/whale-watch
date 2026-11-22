@@ -824,8 +824,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795386395,
-    "minsBefore": 173,
+    "at": 1795387020,
+    "minsBefore": 163,
     "source": "kalshi market"
    }
   },
@@ -6788,8 +6788,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795386395,
-    "minsBefore": 1233,
+    "at": 1795387020,
+    "minsBefore": 1223,
     "source": "kalshi market"
    }
   },
@@ -28379,8 +28379,8 @@
     "bid": 0.62,
     "ask": 0.93,
     "mid": 0.775,
-    "at": 1795386395,
-    "minsBefore": 5478,
+    "at": 1795387020,
+    "minsBefore": 5468,
     "source": "polymarket book"
    }
   },
@@ -30385,8 +30385,8 @@
     "bid": 0.64,
     "ask": 0.65,
     "mid": 0.645,
-    "at": 1795386395,
-    "minsBefore": 173,
+    "at": 1795387020,
+    "minsBefore": 163,
     "source": "polymarket book"
    }
   },
@@ -31375,8 +31375,8 @@
     "bid": 0.63,
     "ask": 0.64,
     "mid": 0.635,
-    "at": 1795386395,
-    "minsBefore": 33,
+    "at": 1795387020,
+    "minsBefore": 23,
     "source": "polymarket book"
    }
   },
@@ -31426,11 +31426,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.6,
+    "bid": 0.59,
     "ask": 0.61,
-    "mid": 0.605,
-    "at": 1795386395,
-    "minsBefore": 33,
+    "mid": 0.6,
+    "at": 1795387020,
+    "minsBefore": 23,
     "source": "polymarket book"
    }
   },
@@ -31483,8 +31483,64 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795386395,
-    "minsBefore": 33,
+    "at": 1795387020,
+    "minsBefore": 23,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795387019-536",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "ucl7090s60",
+   "alsoMatched": [
+    "soc7090s60"
+   ],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x99f9c9626eaa340d600ee69a2f484189f27524ec45b5c3c09f0b5a537606b67d|0",
+   "pickKey": "Polymarket|0x99f9c9626eaa340d600ee69a2f484189f27524ec45b5c3c09f0b5a537606b67d|0",
+   "marketKey": "Polymarket|0x99f9c9626eaa340d600ee69a2f484189f27524ec45b5c3c09f0b5a537606b67d",
+   "venue": "Polymarket",
+   "conditionId": "0x99f9c9626eaa340d600ee69a2f484189f27524ec45b5c3c09f0b5a537606b67d",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Como 1907 win on 2026-11-24?",
+   "slug": "ucl-com-aek1-2026-11-24",
+   "league": "UCL",
+   "marketType": "moneyline",
+   "start": 1795550400,
+   "whale": {
+    "q": 0.76,
+    "usd": 2253,
+    "score": 62,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795379173,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.77,
+   "createdAt": 1795387019,
+   "quoteAtOrder": {
+    "ask": 0.77,
+    "bid": 0.76,
+    "mid": 0.765,
+    "depth": 11471.61,
+    "at": 1795387020,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.77,
+   "filledAt": 1795387019,
+   "taker": true,
+   "feeUnits": 0.0069,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.76,
+    "ask": 0.77,
+    "mid": 0.765,
+    "at": 1795387020,
+    "minsBefore": 2723,
     "source": "polymarket book"
    }
   }
