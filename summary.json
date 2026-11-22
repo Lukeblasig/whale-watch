@@ -1,10 +1,10 @@
 {
- "updated": 1795333611,
+ "updated": 1795334209,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 143,
-  "fills": 117,
+  "orders": 144,
+  "fills": 118,
   "settled": 100,
   "w": 62,
   "l": 38,
@@ -30,9 +30,9 @@
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.07,
-  "takerPct": 94.02,
+  "takerPct": 94.07,
   "liveQuotePct": 100,
-  "open": 17,
+  "open": 18,
   "resting": 3,
   "cancelled": 23
  },
@@ -968,8 +968,8 @@
    "cancelled": 1
   },
   "soc8090ok": {
-   "orders": 31,
-   "fills": 31,
+   "orders": 32,
+   "fills": 32,
    "settled": 25,
    "w": 21,
    "l": 4,
@@ -994,17 +994,17 @@
     -0.17
    ],
    "medianSlipCents": 0,
-   "avgSlipCents": 0.09,
+   "avgSlipCents": 0.07,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 6,
+   "open": 7,
    "resting": 0,
    "cancelled": 0
   }
  },
  "byShadow": {},
- "openUnits": 20,
- "unitsToday": 10,
+ "openUnits": 21,
+ "unitsToday": 11,
  "drawdown": {
   "units": -3.78,
   "max": 10.89,
@@ -1031,13 +1031,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 117 fills"
+   "detail": "Median 0.00¢ over 118 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.09145047949735449,
+   "progress": 0.09169766865079365,
    "detail": "0.4 weeks, 100 settled bets"
   }
  ],
@@ -1291,9 +1291,9 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795333611,
+  "at": 1795334209,
   "status": "ok",
-  "candidates": 28,
+  "candidates": 30,
   "ordered": 1,
   "filled": 1,
   "rested": 0,
@@ -1301,8 +1301,8 @@
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 29
+  "closes": 30
  },
- "dataUpdated": 1795333514,
+ "dataUpdated": 1795334114,
  "killSwitch": false
 }
