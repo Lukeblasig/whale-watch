@@ -824,8 +824,8 @@
     "bid": 0.37,
     "ask": 0.38,
     "mid": 0.375,
-    "at": 1795371999,
-    "minsBefore": 413,
+    "at": 1795372572,
+    "minsBefore": 404,
     "source": "kalshi market"
    }
   },
@@ -6773,8 +6773,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795371999,
-    "minsBefore": 1473,
+    "at": 1795372572,
+    "minsBefore": 1464,
     "source": "kalshi market"
    }
   },
@@ -26933,11 +26933,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.86,
-    "ask": 0.87,
-    "mid": 0.865,
-    "at": 1795372000,
-    "minsBefore": 33,
+    "bid": 0.87,
+    "ask": 0.88,
+    "mid": 0.875,
+    "at": 1795372572,
+    "minsBefore": 24,
     "source": "polymarket book"
    }
   },
@@ -28316,11 +28316,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.57,
-    "ask": 0.93,
-    "mid": 0.75,
-    "at": 1795372000,
-    "minsBefore": 5718,
+    "bid": 0.61,
+    "ask": 0.91,
+    "mid": 0.76,
+    "at": 1795372572,
+    "minsBefore": 5709,
     "source": "polymarket book"
    }
   },
@@ -28719,8 +28719,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795372000,
-    "minsBefore": 33,
+    "at": 1795372572,
+    "minsBefore": 24,
     "source": "polymarket book"
    }
   },
@@ -28770,11 +28770,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -3,
    "close": {
-    "bid": 0.28,
-    "ask": 0.29,
-    "mid": 0.285,
-    "at": 1795372000,
-    "minsBefore": 33,
+    "bid": 0.29,
+    "ask": 0.3,
+    "mid": 0.295,
+    "at": 1795372572,
+    "minsBefore": 24,
     "source": "polymarket book"
    }
   },
@@ -30187,8 +30187,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795372000,
-    "minsBefore": 178,
+    "at": 1795372572,
+    "minsBefore": 169,
     "source": "polymarket book"
    }
   },
@@ -30295,8 +30295,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795372000,
-    "minsBefore": 413,
+    "at": 1795372572,
+    "minsBefore": 404,
     "source": "polymarket book"
    }
   },
@@ -30398,7 +30398,7 @@
     "at": 1795360610,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.74,
    "filledAt": 1795360607,
    "taker": true,
@@ -30412,7 +30412,12 @@
     "at": 1795363594,
     "minsBefore": 8,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.3514,
+   "units": 0.3436,
+   "whaleUnits": 0.36986301369863017,
+   "settledAt": 1795372569
   },
   {
    "id": "1795361806-519",
@@ -30522,8 +30527,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795372000,
-    "minsBefore": 178,
+    "at": 1795372572,
+    "minsBefore": 169,
     "source": "polymarket book"
    }
   },
@@ -30796,6 +30801,63 @@
     "mid": 0.605,
     "at": 1795368403,
     "minsBefore": 3,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795372569-526",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050",
+    "soc50"
+   ],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x13a27f67a1284260454fe0739836354090c4383938b8797fd41c4e3c552f9e31|1",
+   "pickKey": "Polymarket|0x13a27f67a1284260454fe0739836354090c4383938b8797fd41c4e3c552f9e31|1",
+   "marketKey": "Polymarket|0x13a27f67a1284260454fe0739836354090c4383938b8797fd41c4e3c552f9e31",
+   "venue": "Polymarket",
+   "conditionId": "0x13a27f67a1284260454fe0739836354090c4383938b8797fd41c4e3c552f9e31",
+   "idx": 1,
+   "name": "Under",
+   "title": "CA Paranaense vs. Clube do Remo: O/U 2.5",
+   "slug": "bra-cap-cre-2026-11-22-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795374000,
+   "whale": {
+    "q": 0.4416,
+    "usd": 26323,
+    "score": 51,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795370933,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.45,
+   "createdAt": 1795372569,
+   "quoteAtOrder": {
+    "ask": 0.48,
+    "bid": 0.47,
+    "mid": 0.475,
+    "depth": 15841.51,
+    "at": 1795372572,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795372572,
+    "minsBefore": 24,
     "source": "polymarket book"
    }
   }
