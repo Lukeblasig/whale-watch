@@ -1987,3 +1987,4 @@
 {"t":1795385201,"type":"fill","id":"1795383393-534","rule":"sharp6090agree","shadow":false,"price":0.63,"maker":true,"source":"polymarket book"}
 {"t":1795385201,"type":"fill","id":"1795384013-535","rule":"sharp6090agree","shadow":false,"price":0.6,"maker":true,"source":"polymarket book"}
 {"t":1795385201,"type":"run","status":"ok","candidates":7,"ordered":0,"filled":2,"rested":0,"skipped":0,"shadowOrdered":0,"settled":3,"cancelled":0,"closes":8,"openUnits":11,"unitsToday":56}
+{"t":1795385814,"type":"run","status":"ok","candidates":7,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":8,"openUnits":11,"unitsToday":56}
