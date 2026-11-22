@@ -824,8 +824,8 @@
     "bid": 0.37,
     "ask": 0.38,
     "mid": 0.375,
-    "at": 1795375006,
-    "minsBefore": 363,
+    "at": 1795375594,
+    "minsBefore": 353,
     "source": "kalshi market"
    }
   },
@@ -6773,8 +6773,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795375006,
-    "minsBefore": 1423,
+    "at": 1795375594,
+    "minsBefore": 1413,
     "source": "kalshi market"
    }
   },
@@ -27805,7 +27805,7 @@
     "at": 1795330606,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.67,
    "filledAt": 1795330604,
    "taker": true,
@@ -27819,7 +27819,12 @@
     "at": 1795345016,
     "minsBefore": 3,
     "source": "kalshi market"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.4925,
+   "units": 0.4694,
+   "whaleUnits": 0.49253731343283574,
+   "settledAt": 1795375592
   },
   {
    "id": "1795331802-474",
@@ -27969,7 +27974,7 @@
     "at": 1795332395,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.35,
    "filledAt": 1795332393,
    "taker": true,
@@ -27983,7 +27988,12 @@
     "at": 1795345016,
     "minsBefore": 3,
     "source": "kalshi market"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0455,
+   "whaleUnits": -1,
+   "settledAt": 1795375592
   },
   {
    "id": "1795332393-477",
@@ -28329,8 +28339,8 @@
     "bid": 0.61,
     "ask": 0.92,
     "mid": 0.765,
-    "at": 1795375006,
-    "minsBefore": 5668,
+    "at": 1795375594,
+    "minsBefore": 5658,
     "source": "polymarket book"
    }
   },
@@ -28372,7 +28382,7 @@
     "at": 1795335993,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.51,
    "filledAt": 1795335991,
    "taker": true,
@@ -28386,7 +28396,12 @@
     "at": 1795366583,
     "minsBefore": 4,
     "source": "kalshi market"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0343,
+   "whaleUnits": -1,
+   "settledAt": 1795375592
   },
   {
    "id": "1795338393-484",
@@ -30217,8 +30232,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795375006,
-    "minsBefore": 128,
+    "at": 1795375594,
+    "minsBefore": 118,
     "source": "polymarket book"
    }
   },
@@ -30327,11 +30342,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.62,
-    "ask": 0.63,
-    "mid": 0.625,
-    "at": 1795375006,
-    "minsBefore": 363,
+    "bid": 0.63,
+    "ask": 0.64,
+    "mid": 0.635,
+    "at": 1795375594,
+    "minsBefore": 353,
     "source": "polymarket book"
    }
   },
@@ -30562,8 +30577,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795375006,
-    "minsBefore": 128,
+    "at": 1795375594,
+    "minsBefore": 118,
     "source": "polymarket book"
    }
   },
@@ -30954,11 +30969,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.63,
-    "ask": 0.64,
-    "mid": 0.635,
-    "at": 1795375006,
-    "minsBefore": 28,
+    "bid": 0.62,
+    "ask": 0.63,
+    "mid": 0.625,
+    "at": 1795375594,
+    "minsBefore": 18,
     "source": "polymarket book"
    }
   },
@@ -31011,8 +31026,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795375006,
-    "minsBefore": 43,
+    "at": 1795375594,
+    "minsBefore": 33,
     "source": "polymarket book"
    }
   },
@@ -31065,8 +31080,65 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795375006,
-    "minsBefore": 28,
+    "at": 1795375594,
+    "minsBefore": 18,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795375592-530",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "seraSharp50",
+    "socSharp4050"
+   ],
+   "sigKey": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0x45a2f79a1136b7bfd1ac47834e44a3bc00877bd74ba4e92c95f0c99646305b47|0",
+   "pickKey": "Polymarket|0x45a2f79a1136b7bfd1ac47834e44a3bc00877bd74ba4e92c95f0c99646305b47|0",
+   "marketKey": "Polymarket|0x45a2f79a1136b7bfd1ac47834e44a3bc00877bd74ba4e92c95f0c99646305b47",
+   "venue": "Polymarket",
+   "conditionId": "0x45a2f79a1136b7bfd1ac47834e44a3bc00877bd74ba4e92c95f0c99646305b47",
+   "idx": 0,
+   "name": "Over",
+   "title": "Atalanta BC vs. FC Internazionale Milano: O/U 3.5",
+   "slug": "sea-ata-int-2026-11-22-more-markets",
+   "league": "Serie A",
+   "marketType": "total",
+   "start": 1795376700,
+   "whale": {
+    "q": 0.47,
+    "usd": 2415,
+    "score": 53,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795375091,
+    "wallet": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.48,
+   "createdAt": 1795375592,
+   "quoteAtOrder": {
+    "ask": 0.47,
+    "bid": 0.46,
+    "mid": 0.465,
+    "depth": 10827.27,
+    "at": 1795375594,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.47,
+   "filledAt": 1795375592,
+   "taker": true,
+   "feeUnits": 0.0159,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.46,
+    "ask": 0.47,
+    "mid": 0.465,
+    "at": 1795375594,
+    "minsBefore": 18,
     "source": "polymarket book"
    }
   }
