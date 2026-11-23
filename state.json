@@ -28389,8 +28389,8 @@
     "bid": 0.53,
     "ask": 0.93,
     "mid": 0.73,
-    "at": 1795459024,
-    "minsBefore": 4268,
+    "at": 1795459598,
+    "minsBefore": 4258,
     "source": "polymarket book"
    }
   },
@@ -31594,8 +31594,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795459024,
-    "minsBefore": 1523,
+    "at": 1795459598,
+    "minsBefore": 1513,
     "source": "polymarket book"
    }
   },
@@ -31771,8 +31771,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795459024,
-    "minsBefore": 83,
+    "at": 1795459598,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -31822,11 +31822,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.55,
-    "ask": 0.56,
-    "mid": 0.555,
-    "at": 1795459024,
-    "minsBefore": 323,
+    "bid": 0.56,
+    "ask": 0.57,
+    "mid": 0.565,
+    "at": 1795459598,
+    "minsBefore": 313,
     "source": "polymarket book"
    }
   },
@@ -31879,8 +31879,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795459024,
-    "minsBefore": 1523,
+    "at": 1795459598,
+    "minsBefore": 1513,
     "source": "polymarket book"
    }
   },
@@ -32267,8 +32267,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795459024,
-    "minsBefore": 83,
+    "at": 1795459598,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -32491,8 +32491,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795459024,
-    "minsBefore": 83,
+    "at": 1795459598,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -32601,8 +32601,123 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795459024,
-    "minsBefore": 68,
+    "at": 1795459599,
+    "minsBefore": 58,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795459597-555",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "osoc60agree",
+   "alsoMatched": [
+    "socSharp4060agree60",
+    "soc60",
+    "osoc4060s60agree"
+   ],
+   "sigKey": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c|0xcc8f08f954e303712669cdecc6382f7dede99a8f552474cf9786df8e54636b0e|0",
+   "pickKey": "Polymarket|0xcc8f08f954e303712669cdecc6382f7dede99a8f552474cf9786df8e54636b0e|0",
+   "marketKey": "Polymarket|0xcc8f08f954e303712669cdecc6382f7dede99a8f552474cf9786df8e54636b0e",
+   "venue": "Polymarket",
+   "conditionId": "0xcc8f08f954e303712669cdecc6382f7dede99a8f552474cf9786df8e54636b0e",
+   "idx": 0,
+   "name": "Over",
+   "title": "AD Ceuta FC vs. UD Almería: O/U 2.5",
+   "slug": "es2-ceu-alm-2026-11-23-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795462200,
+   "whale": {
+    "q": 0.5458,
+    "usd": 12245,
+    "score": 68,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795458871,
+    "wallet": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.55,
+   "createdAt": 1795459597,
+   "quoteAtOrder": {
+    "ask": 0.56,
+    "bid": 0.55,
+    "mid": 0.555,
+    "depth": 3887.86,
+    "at": 1795459599,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.55,
+    "ask": 0.56,
+    "mid": 0.555,
+    "at": 1795459599,
+    "minsBefore": 43,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795459597-556",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050",
+    "soc60"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0xa56ef1069760d16f81ddeae0455485b3cd77183da9fbeaa2b01b2fab1f228d9d|0",
+   "pickKey": "Polymarket|0xa56ef1069760d16f81ddeae0455485b3cd77183da9fbeaa2b01b2fab1f228d9d|0",
+   "marketKey": "Polymarket|0xa56ef1069760d16f81ddeae0455485b3cd77183da9fbeaa2b01b2fab1f228d9d",
+   "venue": "Polymarket",
+   "conditionId": "0xa56ef1069760d16f81ddeae0455485b3cd77183da9fbeaa2b01b2fab1f228d9d",
+   "idx": 0,
+   "name": "Over",
+   "title": "Calcio Lecco 1912 vs. AC Lumezzane: O/U 2.5",
+   "slug": "serc-lec-acl-2026-11-23-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795463100,
+   "whale": {
+    "q": 0.49,
+    "usd": 14284,
+    "score": 64,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795458047,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.5,
+   "createdAt": 1795459597,
+   "quoteAtOrder": {
+    "ask": 0.51,
+    "bid": 0.5,
+    "mid": 0.505,
+    "depth": 86.19,
+    "at": 1795459599,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.5,
+    "ask": 0.51,
+    "mid": 0.505,
+    "at": 1795459599,
+    "minsBefore": 58,
     "source": "polymarket book"
    }
   }
