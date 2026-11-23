@@ -28394,8 +28394,8 @@
     "bid": 0.55,
     "ask": 0.93,
     "mid": 0.74,
-    "at": 1795472812,
-    "minsBefore": 4038,
+    "at": 1795473408,
+    "minsBefore": 4028,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795472812,
-    "minsBefore": 1293,
+    "at": 1795473408,
+    "minsBefore": 1283,
     "source": "polymarket book"
    }
   },
@@ -31835,8 +31835,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795472812,
-    "minsBefore": 93,
+    "at": 1795473408,
+    "minsBefore": 83,
     "source": "polymarket book"
    }
   },
@@ -31889,8 +31889,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795472812,
-    "minsBefore": 1293,
+    "at": 1795473408,
+    "minsBefore": 1283,
     "source": "polymarket book"
    }
   },
@@ -33303,8 +33303,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795472812,
-    "minsBefore": 273,
+    "at": 1795473408,
+    "minsBefore": 263,
     "source": "polymarket book"
    }
   },
@@ -33357,8 +33357,62 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795472812,
-    "minsBefore": 168,
+    "at": 1795473409,
+    "minsBefore": 158,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795473407-567",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0xf715c858be7e4893f5fd0bcb77edd8d07a06bbf0|0x1150cf295974954c9aaca1d712a3b774255d48a9620f4d7e7aa21fb86f8bd400|1",
+   "pickKey": "Polymarket|0x1150cf295974954c9aaca1d712a3b774255d48a9620f4d7e7aa21fb86f8bd400|1",
+   "marketKey": "Polymarket|0x1150cf295974954c9aaca1d712a3b774255d48a9620f4d7e7aa21fb86f8bd400",
+   "venue": "Polymarket",
+   "conditionId": "0x1150cf295974954c9aaca1d712a3b774255d48a9620f4d7e7aa21fb86f8bd400",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Manchester City FC vs. SSC Napoli end in a draw?",
+   "slug": "ucl-mnc-nap-2026-11-24",
+   "league": "UCL",
+   "marketType": "draw",
+   "start": 1795550400,
+   "whale": {
+    "q": 0.85,
+    "usd": 2372,
+    "score": 26,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795453357,
+    "wallet": "0xf715c858be7e4893f5fd0bcb77edd8d07a06bbf0"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.86,
+   "createdAt": 1795473407,
+   "quoteAtOrder": {
+    "ask": 0.86,
+    "bid": 0.85,
+    "mid": 0.855,
+    "depth": 36349.3,
+    "at": 1795473409,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.86,
+   "filledAt": 1795473407,
+   "taker": true,
+   "feeUnits": 0.0042,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.85,
+    "ask": 0.86,
+    "mid": 0.855,
+    "at": 1795473409,
+    "minsBefore": 1283,
     "source": "polymarket book"
    }
   }
