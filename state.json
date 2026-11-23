@@ -6782,7 +6782,7 @@
     "at": 1795022763,
     "source": "kalshi market"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.5,
    "filledAt": 1795022761,
    "taker": true,
@@ -6796,7 +6796,12 @@
     "at": 1795409213,
     "minsBefore": 853,
     "source": "kalshi market"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.035,
+   "whaleUnits": -1,
+   "settledAt": 1795464423
   },
   {
    "id": "1795023351-117",
@@ -28389,8 +28394,8 @@
     "bid": 0.53,
     "ask": 0.93,
     "mid": 0.73,
-    "at": 1795463832,
-    "minsBefore": 4188,
+    "at": 1795464431,
+    "minsBefore": 4178,
     "source": "polymarket book"
    }
   },
@@ -31594,8 +31599,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795463832,
-    "minsBefore": 1443,
+    "at": 1795464431,
+    "minsBefore": 1433,
     "source": "polymarket book"
    }
   },
@@ -31825,8 +31830,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795463832,
-    "minsBefore": 243,
+    "at": 1795464431,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -31879,8 +31884,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795463832,
-    "minsBefore": 1443,
+    "at": 1795464432,
+    "minsBefore": 1433,
     "source": "polymarket book"
    }
   },
