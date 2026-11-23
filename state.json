@@ -28389,8 +28389,8 @@
     "bid": 0.53,
     "ask": 0.94,
     "mid": 0.735,
-    "at": 1795455418,
-    "minsBefore": 4328,
+    "at": 1795456010,
+    "minsBefore": 4318,
     "source": "polymarket book"
    }
   },
@@ -31594,8 +31594,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795455418,
-    "minsBefore": 1583,
+    "at": 1795456010,
+    "minsBefore": 1573,
     "source": "polymarket book"
    }
   },
@@ -31771,8 +31771,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795455418,
-    "minsBefore": 143,
+    "at": 1795456010,
+    "minsBefore": 133,
     "source": "polymarket book"
    }
   },
@@ -31825,8 +31825,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1795455418,
-    "minsBefore": 383,
+    "at": 1795456011,
+    "minsBefore": 373,
     "source": "polymarket book"
    }
   },
@@ -31879,8 +31879,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795455418,
-    "minsBefore": 1583,
+    "at": 1795456011,
+    "minsBefore": 1573,
     "source": "polymarket book"
    }
   },
@@ -31935,8 +31935,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795455418,
-    "minsBefore": 38,
+    "at": 1795456011,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -31989,8 +31989,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795455418,
-    "minsBefore": 38,
+    "at": 1795456011,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -32032,7 +32032,7 @@
     "at": 1795439199,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.89,
    "filledAt": 1795439198,
    "taker": true,
@@ -32046,7 +32046,12 @@
     "at": 1795441009,
     "minsBefore": 8,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.1236,
+   "units": 0.1203,
+   "whaleUnits": 0.13636363636363635,
+   "settledAt": 1795456008
   },
   {
    "id": "1795440392-545",
@@ -32208,8 +32213,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795455418,
-    "minsBefore": 23,
+    "at": 1795456011,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -32262,8 +32267,8 @@
     "bid": 0.85,
     "ask": 0.87,
     "mid": 0.86,
-    "at": 1795455419,
-    "minsBefore": 143,
+    "at": 1795456011,
+    "minsBefore": 133,
     "source": "polymarket book"
    }
   },
@@ -32373,8 +32378,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795455418,
-    "minsBefore": 23,
+    "at": 1795456011,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -32430,8 +32435,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795455419,
-    "minsBefore": 23,
+    "at": 1795456011,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -32484,8 +32489,62 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795455419,
-    "minsBefore": 143,
+    "at": 1795456011,
+    "minsBefore": 133,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795456008-553",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0xad494094e355999ad09bd07e51861c2a1541c53e|0x54c03000d29da0401c88f0af38457e113d8ca200796cec445093743ccd33adf5|0",
+   "pickKey": "Polymarket|0x54c03000d29da0401c88f0af38457e113d8ca200796cec445093743ccd33adf5|0",
+   "marketKey": "Polymarket|0x54c03000d29da0401c88f0af38457e113d8ca200796cec445093743ccd33adf5",
+   "venue": "Polymarket",
+   "conditionId": "0x54c03000d29da0401c88f0af38457e113d8ca200796cec445093743ccd33adf5",
+   "idx": 0,
+   "name": "Over",
+   "title": "Al-Ittihad Club vs. Pakhtakor: O/U 1.5",
+   "slug": "acle-itj-pak-2026-11-23-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795457700,
+   "whale": {
+    "q": 0.84,
+    "usd": 2010,
+    "score": 25,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795455253,
+    "wallet": "0xad494094e355999ad09bd07e51861c2a1541c53e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.85,
+   "createdAt": 1795456008,
+   "quoteAtOrder": {
+    "ask": 0.84,
+    "bid": 0.83,
+    "mid": 0.835,
+    "depth": 7751.9,
+    "at": 1795456012,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.84,
+   "filledAt": 1795456008,
+   "taker": true,
+   "feeUnits": 0.0048,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.83,
+    "ask": 0.84,
+    "mid": 0.835,
+    "at": 1795456012,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   }
@@ -32494,7 +32553,6 @@
   "socAgree40|Polymarket|0xb1aa4afa4abffed0f6b04a1237f1370a293d62108e27133cbea530a217af5f8b|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x56aed2130ecbca8523f31b52acfa47df16927e9d76b303203bdf18f26cfb2ee4|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x20c34f68662f47fa7c283d469853f6b3f645c6a92dc1ae7c5df24285f2210cfc|1|price is over 30 min old": 1795715100,
-  "Polymarket|0x1a1dd8976d80ef9ccae6d82d85f3e9cc37eb015e681a37980d1d76421273fc4d|0|already bet the other side of this market": 1795283100,
   "Polymarket|0x07765ea9421cd42f2a00607ce50ee4355f93793d77f1217bc2fafcb2a032e943|0|already tried this pick": 1795284000,
   "Polymarket|0x3d70337cad0a6b7c9527def367687f074b5c99e6626820b6c4a5b8a60facf993|1|starts in under 10 min": 1795284000,
   "Polymarket|0xd290bdbed3cf959a293e997a4ae05efb1cc29c264328d60ca995efa384850536|1|whale's price 92¢ is over 90¢": 1795309200,
