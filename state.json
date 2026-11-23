@@ -28389,8 +28389,8 @@
     "bid": 0.53,
     "ask": 0.93,
     "mid": 0.73,
-    "at": 1795460784,
-    "minsBefore": 4239,
+    "at": 1795461407,
+    "minsBefore": 4228,
     "source": "polymarket book"
    }
   },
@@ -31594,8 +31594,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795460784,
-    "minsBefore": 1494,
+    "at": 1795461407,
+    "minsBefore": 1483,
     "source": "polymarket book"
    }
   },
@@ -31771,8 +31771,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795460784,
-    "minsBefore": 54,
+    "at": 1795461407,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -31822,11 +31822,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.56,
-    "ask": 0.57,
-    "mid": 0.565,
-    "at": 1795460784,
-    "minsBefore": 294,
+    "bid": 0.55,
+    "ask": 0.56,
+    "mid": 0.555,
+    "at": 1795461407,
+    "minsBefore": 283,
     "source": "polymarket book"
    }
   },
@@ -31879,8 +31879,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795460784,
-    "minsBefore": 1494,
+    "at": 1795461407,
+    "minsBefore": 1483,
     "source": "polymarket book"
    }
   },
@@ -32267,8 +32267,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795460785,
-    "minsBefore": 54,
+    "at": 1795461407,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -32493,11 +32493,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.56,
-    "ask": 0.57,
-    "mid": 0.565,
-    "at": 1795460785,
-    "minsBefore": 54,
+    "bid": 0.54,
+    "ask": 0.55,
+    "mid": 0.545,
+    "at": 1795461407,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -32603,11 +32603,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.73,
-    "ask": 0.74,
-    "mid": 0.735,
-    "at": 1795460784,
-    "minsBefore": 39,
+    "bid": 0.74,
+    "ask": 0.75,
+    "mid": 0.745,
+    "at": 1795461407,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -32664,8 +32664,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795460785,
-    "minsBefore": 24,
+    "at": 1795461407,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -32721,8 +32721,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795460785,
-    "minsBefore": 39,
+    "at": 1795461408,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -32775,8 +32775,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795460785,
-    "minsBefore": 39,
+    "at": 1795461408,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -32829,8 +32829,8 @@
     "bid": 0.86,
     "ask": 0.88,
     "mid": 0.87,
-    "at": 1795460785,
-    "minsBefore": 39,
+    "at": 1795461408,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -32885,8 +32885,119 @@
     "bid": 0.51,
     "ask": 0.52,
     "mid": 0.515,
-    "at": 1795460785,
-    "minsBefore": 39,
+    "at": 1795461408,
+    "minsBefore": 28,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795461406-560",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0x0346afae2603313d2bbee96b628536c8cbe352a5|0x54bc1b11fc521998ac55997d8bf85a7ad98963f1e75a40f65620c2cffdadca30|1",
+   "pickKey": "Polymarket|0x54bc1b11fc521998ac55997d8bf85a7ad98963f1e75a40f65620c2cffdadca30|1",
+   "marketKey": "Polymarket|0x54bc1b11fc521998ac55997d8bf85a7ad98963f1e75a40f65620c2cffdadca30",
+   "venue": "Polymarket",
+   "conditionId": "0x54bc1b11fc521998ac55997d8bf85a7ad98963f1e75a40f65620c2cffdadca30",
+   "idx": 1,
+   "name": "Under",
+   "title": "Levante UD vs. Elche CF: O/U 4.5",
+   "slug": "lal-lev-elc-2026-11-23-more-markets",
+   "league": "La Liga",
+   "marketType": "total",
+   "start": 1795464000,
+   "whale": {
+    "q": 0.82,
+    "usd": 1033,
+    "score": 24,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795460251,
+    "wallet": "0x0346afae2603313d2bbee96b628536c8cbe352a5"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.83,
+   "createdAt": 1795461406,
+   "quoteAtOrder": {
+    "ask": 0.84,
+    "bid": 0.83,
+    "mid": 0.835,
+    "depth": 12958.8,
+    "at": 1795461408,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.83,
+    "ask": 0.84,
+    "mid": 0.835,
+    "at": 1795461408,
+    "minsBefore": 43,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795461406-561",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharpMl70",
+   "alsoMatched": [
+    "soc7090s60",
+    "soc7090agree40"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x1e27ee2ab2865d6abc31d28246d3c13637f572b4153390d55e94f592bafd647e|1",
+   "pickKey": "Polymarket|0x1e27ee2ab2865d6abc31d28246d3c13637f572b4153390d55e94f592bafd647e|1",
+   "marketKey": "Polymarket|0x1e27ee2ab2865d6abc31d28246d3c13637f572b4153390d55e94f592bafd647e",
+   "venue": "Polymarket",
+   "conditionId": "0x1e27ee2ab2865d6abc31d28246d3c13637f572b4153390d55e94f592bafd647e",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Everton FC win on 2026-11-23?",
+   "slug": "epl-bre-eve-2026-11-23",
+   "league": "EPL",
+   "marketType": "moneyline",
+   "start": 1795464000,
+   "whale": {
+    "q": 0.7,
+    "usd": 584864,
+    "score": 92,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795460527,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.71,
+   "createdAt": 1795461406,
+   "quoteAtOrder": {
+    "ask": 0.72,
+    "bid": 0.71,
+    "mid": 0.715,
+    "depth": 70407.54,
+    "at": 1795461408,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.71,
+    "ask": 0.72,
+    "mid": 0.715,
+    "at": 1795461408,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   }
