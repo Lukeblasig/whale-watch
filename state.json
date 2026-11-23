@@ -6788,8 +6788,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795401420,
-    "minsBefore": 983,
+    "at": 1795402016,
+    "minsBefore": 973,
     "source": "kalshi market"
    }
   },
@@ -28382,10 +28382,10 @@
    "slippageCents": 1,
    "close": {
     "bid": 0.62,
-    "ask": 0.89,
-    "mid": 0.755,
-    "at": 1795401420,
-    "minsBefore": 5228,
+    "ask": 0.93,
+    "mid": 0.775,
+    "at": 1795402016,
+    "minsBefore": 5218,
     "source": "polymarket book"
    }
   },
@@ -31584,8 +31584,8 @@
     "bid": 0.76,
     "ask": 0.77,
     "mid": 0.765,
-    "at": 1795401420,
-    "minsBefore": 2483,
+    "at": 1795402016,
+    "minsBefore": 2473,
     "source": "polymarket book"
    }
   },
@@ -31688,7 +31688,7 @@
     "at": 1795389393,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.45,
    "filledAt": 1795389392,
    "taker": true,
@@ -31701,6 +31701,68 @@
     "mid": 0.445,
     "at": 1795391801,
     "minsBefore": 3,
+    "source": "polymarket book"
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0165,
+   "whaleUnits": -1,
+   "settledAt": 1795402016
+  },
+  {
+   "id": "1795402016-539",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc4050ml40",
+   "alsoMatched": [
+    "socSharp4060ml40",
+    "socSharp4050"
+   ],
+   "sigKey": "0xa3358ec2bd77abb2287f8d0db21597fa98cd7624|0x9c183fba1441c3917b7e3a99c0103626285576b0d6b8e1bcabf3e10cb8e3a239|0",
+   "pickKey": "Polymarket|0x9c183fba1441c3917b7e3a99c0103626285576b0d6b8e1bcabf3e10cb8e3a239|0",
+   "marketKey": "Polymarket|0x9c183fba1441c3917b7e3a99c0103626285576b0d6b8e1bcabf3e10cb8e3a239",
+   "venue": "Polymarket",
+   "conditionId": "0x9c183fba1441c3917b7e3a99c0103626285576b0d6b8e1bcabf3e10cb8e3a239",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Brentford FC win on 2026-11-23?",
+   "slug": "epl-bre-eve-2026-11-23",
+   "league": "EPL",
+   "marketType": "moneyline",
+   "start": 1795464000,
+   "whale": {
+    "q": 0.42,
+    "usd": 3780,
+    "score": 46,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795401113,
+    "wallet": "0xa3358ec2bd77abb2287f8d0db21597fa98cd7624"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.43,
+   "createdAt": 1795402016,
+   "quoteAtOrder": {
+    "ask": 0.42,
+    "bid": 0.41,
+    "mid": 0.415,
+    "depth": 1113.24,
+    "at": 1795402016,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.42,
+   "filledAt": 1795402016,
+   "taker": true,
+   "feeUnits": 0.0174,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.41,
+    "ask": 0.42,
+    "mid": 0.415,
+    "at": 1795402016,
+    "minsBefore": 1033,
     "source": "polymarket book"
    }
   }
