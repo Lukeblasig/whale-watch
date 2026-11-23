@@ -1,10 +1,10 @@
 {
- "updated": 1795469782,
+ "updated": 1795470147,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 229,
-  "fills": 189,
+  "orders": 230,
+  "fills": 190,
   "settled": 168,
   "w": 104,
   "l": 64,
@@ -30,9 +30,9 @@
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.1,
-  "takerPct": 92.06,
+  "takerPct": 92.11,
   "liveQuotePct": 100,
-  "open": 21,
+  "open": 22,
   "resting": 1,
   "cancelled": 39
  },
@@ -318,8 +318,8 @@
    "cancelled": 0
   },
   "sharpMl70": {
-   "orders": 14,
-   "fills": 11,
+   "orders": 15,
+   "fills": 12,
    "settled": 10,
    "w": 7,
    "l": 3,
@@ -344,10 +344,10 @@
     1.29
    ],
    "medianSlipCents": 1,
-   "avgSlipCents": 0.51,
-   "takerPct": 90.91,
+   "avgSlipCents": 0.56,
+   "takerPct": 91.67,
    "liveQuotePct": 100,
-   "open": 1,
+   "open": 2,
    "resting": 0,
    "cancelled": 3
   },
@@ -906,8 +906,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 22,
- "unitsToday": 19,
+ "openUnits": 23,
+ "unitsToday": 20,
  "drawdown": {
   "units": -7.84,
   "max": 11.17,
@@ -934,13 +934,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 189 fills"
+   "detail": "Median 0.00¢ over 190 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.14773809523809525,
+   "progress": 0.14788897156084657,
    "detail": "0.6 weeks, 168 settled bets"
   }
  ],
@@ -1170,11 +1170,11 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795469782,
+  "at": 1795470147,
   "status": "ok",
-  "candidates": 6,
-  "ordered": 0,
-  "filled": 0,
+  "candidates": 7,
+  "ordered": 1,
+  "filled": 1,
   "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
@@ -1182,6 +1182,6 @@
   "cancelled": 0,
   "closes": 5
  },
- "dataUpdated": 1795469690,
+ "dataUpdated": 1795470049,
  "killSwitch": false
 }
