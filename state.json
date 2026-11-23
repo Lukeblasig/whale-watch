@@ -28389,8 +28389,8 @@
     "bid": 0.56,
     "ask": 0.96,
     "mid": 0.76,
-    "at": 1795420603,
-    "minsBefore": 4908,
+    "at": 1795421199,
+    "minsBefore": 4898,
     "source": "polymarket book"
    }
   },
@@ -31594,8 +31594,8 @@
     "bid": 0.76,
     "ask": 0.77,
     "mid": 0.765,
-    "at": 1795420603,
-    "minsBefore": 2163,
+    "at": 1795421199,
+    "minsBefore": 2153,
     "source": "polymarket book"
    }
   },
@@ -31771,8 +31771,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1795420603,
-    "minsBefore": 723,
+    "at": 1795421199,
+    "minsBefore": 713,
     "source": "polymarket book"
    }
   },
@@ -31825,8 +31825,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795420603,
-    "minsBefore": 963,
+    "at": 1795421199,
+    "minsBefore": 953,
     "source": "polymarket book"
    }
   },
@@ -31879,8 +31879,118 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795420603,
-    "minsBefore": 2163,
+    "at": 1795421199,
+    "minsBefore": 2153,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795421198-542",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x3acef91be874168bd41c6f60d31a74b055ca7dfbb531cb0b12b12c4ed57bc645|0",
+   "pickKey": "Polymarket|0x3acef91be874168bd41c6f60d31a74b055ca7dfbb531cb0b12b12c4ed57bc645|0",
+   "marketKey": "Polymarket|0x3acef91be874168bd41c6f60d31a74b055ca7dfbb531cb0b12b12c4ed57bc645",
+   "venue": "Polymarket",
+   "conditionId": "0x3acef91be874168bd41c6f60d31a74b055ca7dfbb531cb0b12b12c4ed57bc645",
+   "idx": 0,
+   "name": "Over",
+   "title": "Al-Ittihad Club vs. Pakhtakor: O/U 3.5",
+   "slug": "acle-itj-pak-2026-11-23-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795457700,
+   "whale": {
+    "q": 0.41,
+    "usd": 11143,
+    "score": 54,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795419812,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.42,
+   "createdAt": 1795421198,
+   "quoteAtOrder": {
+    "ask": 0.44,
+    "bid": 0.42,
+    "mid": 0.43,
+    "depth": 1553.88,
+    "at": 1795421199,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.42,
+    "ask": 0.44,
+    "mid": 0.43,
+    "at": 1795421199,
+    "minsBefore": 608,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795421198-543",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc60",
+   "alsoMatched": [],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x80ede07c154673b369a864803e89c056aeb61451e077a17f7382f0fdaa324aba|0",
+   "pickKey": "Polymarket|0x80ede07c154673b369a864803e89c056aeb61451e077a17f7382f0fdaa324aba|0",
+   "marketKey": "Polymarket|0x80ede07c154673b369a864803e89c056aeb61451e077a17f7382f0fdaa324aba",
+   "venue": "Polymarket",
+   "conditionId": "0x80ede07c154673b369a864803e89c056aeb61451e077a17f7382f0fdaa324aba",
+   "idx": 0,
+   "name": "Over",
+   "title": "Al-Ittihad Club vs. Pakhtakor: O/U 2.5",
+   "slug": "acle-itj-pak-2026-11-23-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795457700,
+   "whale": {
+    "q": 0.64,
+    "usd": 6253,
+    "score": 63,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795420472,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.65,
+   "createdAt": 1795421198,
+   "quoteAtOrder": {
+    "ask": 0.66,
+    "bid": 0.65,
+    "mid": 0.655,
+    "depth": 151.9,
+    "at": 1795421199,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.65,
+    "ask": 0.66,
+    "mid": 0.655,
+    "at": 1795421199,
+    "minsBefore": 608,
     "source": "polymarket book"
    }
   }
