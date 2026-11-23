@@ -28389,8 +28389,8 @@
     "bid": 0.53,
     "ask": 0.93,
     "mid": 0.73,
-    "at": 1795460206,
-    "minsBefore": 4248,
+    "at": 1795460784,
+    "minsBefore": 4239,
     "source": "polymarket book"
    }
   },
@@ -31594,8 +31594,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795460206,
-    "minsBefore": 1503,
+    "at": 1795460784,
+    "minsBefore": 1494,
     "source": "polymarket book"
    }
   },
@@ -31768,11 +31768,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.41,
-    "ask": 0.42,
-    "mid": 0.415,
-    "at": 1795460206,
-    "minsBefore": 63,
+    "bid": 0.43,
+    "ask": 0.44,
+    "mid": 0.435,
+    "at": 1795460784,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -31825,8 +31825,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795460206,
-    "minsBefore": 303,
+    "at": 1795460784,
+    "minsBefore": 294,
     "source": "polymarket book"
    }
   },
@@ -31879,8 +31879,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795460207,
-    "minsBefore": 1503,
+    "at": 1795460784,
+    "minsBefore": 1494,
     "source": "polymarket book"
    }
   },
@@ -32267,8 +32267,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795460206,
-    "minsBefore": 63,
+    "at": 1795460785,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -32310,7 +32310,7 @@
     "at": 1795445198,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.58,
    "filledAt": 1795445196,
    "taker": true,
@@ -32324,7 +32324,12 @@
     "at": 1795445802,
     "minsBefore": 3,
     "source": "polymarket book"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0126,
+   "whaleUnits": -1,
+   "settledAt": 1795460782
   },
   {
    "id": "1795454211-550",
@@ -32488,11 +32493,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.55,
-    "ask": 0.56,
-    "mid": 0.555,
-    "at": 1795460207,
-    "minsBefore": 63,
+    "bid": 0.56,
+    "ask": 0.57,
+    "mid": 0.565,
+    "at": 1795460785,
+    "minsBefore": 54,
     "source": "polymarket book"
    }
   },
@@ -32598,11 +32603,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.74,
-    "ask": 0.75,
-    "mid": 0.745,
-    "at": 1795460207,
-    "minsBefore": 48,
+    "bid": 0.73,
+    "ask": 0.74,
+    "mid": 0.735,
+    "at": 1795460784,
+    "minsBefore": 39,
     "source": "polymarket book"
    }
   },
@@ -32659,8 +32664,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795460207,
-    "minsBefore": 33,
+    "at": 1795460785,
+    "minsBefore": 24,
     "source": "polymarket book"
    }
   },
@@ -32716,8 +32721,172 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795460207,
-    "minsBefore": 48,
+    "at": 1795460785,
+    "minsBefore": 39,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795460782-557",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0x2117ae94a97d69b78cbc81b6680a62deb1955c26|0x45b7e43ab4f52ae4baca0207b2d07670e0f031464cd92090785a772753c4262a|0",
+   "pickKey": "Polymarket|0x45b7e43ab4f52ae4baca0207b2d07670e0f031464cd92090785a772753c4262a|0",
+   "marketKey": "Polymarket|0x45b7e43ab4f52ae4baca0207b2d07670e0f031464cd92090785a772753c4262a",
+   "venue": "Polymarket",
+   "conditionId": "0x45b7e43ab4f52ae4baca0207b2d07670e0f031464cd92090785a772753c4262a",
+   "idx": 0,
+   "name": "Over",
+   "title": "AC Monza vs. ACF Fiorentina: O/U 1.5",
+   "slug": "sea-mon-fio-2026-11-23-more-markets",
+   "league": "Serie A",
+   "marketType": "total",
+   "start": 1795463100,
+   "whale": {
+    "q": 0.8298,
+    "usd": 4755,
+    "score": 29,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795459888,
+    "wallet": "0x2117ae94a97d69b78cbc81b6680a62deb1955c26"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.83,
+   "createdAt": 1795460782,
+   "quoteAtOrder": {
+    "ask": 0.82,
+    "bid": 0.81,
+    "mid": 0.815,
+    "depth": 9629.96,
+    "at": 1795460785,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.82,
+   "filledAt": 1795460782,
+   "taker": true,
+   "feeUnits": 0.0054,
+   "priceSource": "polymarket book",
+   "slippageCents": -1,
+   "close": {
+    "bid": 0.81,
+    "ask": 0.82,
+    "mid": 0.815,
+    "at": 1795460785,
+    "minsBefore": 39,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795460782-558",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0xf7d3d605e9705d3e11e499e49758e958751784a5f25ef7ba9d8655344c71804c|1",
+   "pickKey": "Polymarket|0xf7d3d605e9705d3e11e499e49758e958751784a5f25ef7ba9d8655344c71804c|1",
+   "marketKey": "Polymarket|0xf7d3d605e9705d3e11e499e49758e958751784a5f25ef7ba9d8655344c71804c",
+   "venue": "Polymarket",
+   "conditionId": "0xf7d3d605e9705d3e11e499e49758e958751784a5f25ef7ba9d8655344c71804c",
+   "idx": 1,
+   "name": "Under",
+   "title": "AC Monza vs. ACF Fiorentina: AC Monza O/U 2.5",
+   "slug": "sea-mon-fio-2026-11-23-more-markets",
+   "league": "Serie A",
+   "marketType": "total",
+   "start": 1795463100,
+   "whale": {
+    "q": 0.87,
+    "usd": 4350,
+    "score": 34,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795459951,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.88,
+   "createdAt": 1795460782,
+   "quoteAtOrder": {
+    "ask": 0.88,
+    "bid": 0.86,
+    "mid": 0.87,
+    "depth": 1264.76,
+    "at": 1795460785,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.88,
+   "filledAt": 1795460782,
+   "taker": true,
+   "feeUnits": 0.0036,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.86,
+    "ask": 0.88,
+    "mid": 0.87,
+    "at": 1795460785,
+    "minsBefore": 39,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795460782-559",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [
+    "seraSharp50"
+   ],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x60ed71484ea900745b7b524e74903fa3d54c3a366d76d6468f8032d46e147190|1",
+   "pickKey": "Polymarket|0x60ed71484ea900745b7b524e74903fa3d54c3a366d76d6468f8032d46e147190|1",
+   "marketKey": "Polymarket|0x60ed71484ea900745b7b524e74903fa3d54c3a366d76d6468f8032d46e147190",
+   "venue": "Polymarket",
+   "conditionId": "0x60ed71484ea900745b7b524e74903fa3d54c3a366d76d6468f8032d46e147190",
+   "idx": 1,
+   "name": "No",
+   "title": "Will ACF Fiorentina win on 2026-11-23?",
+   "slug": "sea-mon-fio-2026-11-23",
+   "league": "Serie A",
+   "marketType": "moneyline",
+   "start": 1795463100,
+   "whale": {
+    "q": 0.51,
+    "usd": 16627,
+    "score": 56,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795460255,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.52,
+   "createdAt": 1795460782,
+   "quoteAtOrder": {
+    "ask": 0.52,
+    "bid": 0.51,
+    "mid": 0.515,
+    "depth": 40140.93,
+    "at": 1795460785,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.52,
+   "filledAt": 1795460782,
+   "taker": true,
+   "feeUnits": 0.0144,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.51,
+    "ask": 0.52,
+    "mid": 0.515,
+    "at": 1795460785,
+    "minsBefore": 39,
     "source": "polymarket book"
    }
   }
