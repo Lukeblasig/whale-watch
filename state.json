@@ -6788,8 +6788,8 @@
     "bid": null,
     "ask": 0.01,
     "mid": 0.01,
-    "at": 1795399006,
-    "minsBefore": 1023,
+    "at": 1795399623,
+    "minsBefore": 1013,
     "source": "kalshi market"
    }
   },
@@ -28382,10 +28382,10 @@
    "slippageCents": 1,
    "close": {
     "bid": 0.62,
-    "ask": 0.91,
-    "mid": 0.765,
-    "at": 1795399007,
-    "minsBefore": 5268,
+    "ask": 0.88,
+    "mid": 0.75,
+    "at": 1795399623,
+    "minsBefore": 5258,
     "source": "polymarket book"
    }
   },
@@ -31579,8 +31579,8 @@
     "bid": 0.76,
     "ask": 0.77,
     "mid": 0.765,
-    "at": 1795399007,
-    "minsBefore": 2523,
+    "at": 1795399623,
+    "minsBefore": 2513,
     "source": "polymarket book"
    }
   },
@@ -31622,7 +31622,7 @@
     "at": 1795387618,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.49,
    "filledAt": 1795387617,
    "taker": true,
@@ -31636,7 +31636,12 @@
     "at": 1795390009,
     "minsBefore": 3,
     "source": "polymarket book"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0153,
+   "whaleUnits": -1,
+   "settledAt": 1795399621
   },
   {
    "id": "1795389392-538",
@@ -31699,7 +31704,6 @@
   "socAgree40|Polymarket|0xb1aa4afa4abffed0f6b04a1237f1370a293d62108e27133cbea530a217af5f8b|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x56aed2130ecbca8523f31b52acfa47df16927e9d76b303203bdf18f26cfb2ee4|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x20c34f68662f47fa7c283d469853f6b3f645c6a92dc1ae7c5df24285f2210cfc|1|price is over 30 min old": 1795715100,
-  "Polymarket|0x12492d285d0c42d8cd7568ffc3c7442e1e1fe0b18bf1b3e6e99177b24523cf33|0|already tried this pick": 1795226400,
   "Polymarket|0x75101e2363cd30fd007986e95094295f4d0a8c4f868468a96ddc3a7e9d3d5609|1|already tried this pick": 1795264200,
   "Polymarket|0xce6d340d05124b43a73e7e58662ddd0d541a35081da603d96bf40643c6260f2e|0|starts in under 10 min": 1795264200,
   "Polymarket|0x3e86b28ba9d24a66a8a7075e2f7304e8fd506de439fec1f450b577eea1972e13|1|already tried this pick": 1795266000,
