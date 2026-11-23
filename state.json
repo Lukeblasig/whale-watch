@@ -28386,11 +28386,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.53,
-    "ask": 0.94,
-    "mid": 0.735,
-    "at": 1795456617,
-    "minsBefore": 4308,
+    "bid": 0.52,
+    "ask": 0.96,
+    "mid": 0.74,
+    "at": 1795457222,
+    "minsBefore": 4298,
     "source": "polymarket book"
    }
   },
@@ -31594,8 +31594,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795456617,
-    "minsBefore": 1563,
+    "at": 1795457222,
+    "minsBefore": 1553,
     "source": "polymarket book"
    }
   },
@@ -31771,8 +31771,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795456617,
-    "minsBefore": 123,
+    "at": 1795457222,
+    "minsBefore": 113,
     "source": "polymarket book"
    }
   },
@@ -31825,8 +31825,8 @@
     "bid": 0.54,
     "ask": 0.55,
     "mid": 0.545,
-    "at": 1795456617,
-    "minsBefore": 363,
+    "at": 1795457222,
+    "minsBefore": 353,
     "source": "polymarket book"
    }
   },
@@ -31879,8 +31879,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795456617,
-    "minsBefore": 1563,
+    "at": 1795457222,
+    "minsBefore": 1553,
     "source": "polymarket book"
    }
   },
@@ -31932,11 +31932,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.39,
-    "ask": 0.4,
-    "mid": 0.395,
-    "at": 1795456617,
-    "minsBefore": 18,
+    "bid": 0.35,
+    "ask": 0.36,
+    "mid": 0.355,
+    "at": 1795457222,
+    "minsBefore": 8,
     "source": "polymarket book"
    }
   },
@@ -31986,11 +31986,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.61,
-    "ask": 0.62,
-    "mid": 0.615,
-    "at": 1795456617,
-    "minsBefore": 18,
+    "bid": 0.58,
+    "ask": 0.59,
+    "mid": 0.585,
+    "at": 1795457222,
+    "minsBefore": 8,
     "source": "polymarket book"
    }
   },
@@ -32264,11 +32264,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.85,
+    "bid": 0.86,
     "ask": 0.87,
-    "mid": 0.86,
-    "at": 1795456617,
-    "minsBefore": 123,
+    "mid": 0.865,
+    "at": 1795457222,
+    "minsBefore": 113,
     "source": "polymarket book"
    }
   },
@@ -32491,8 +32491,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795456618,
-    "minsBefore": 123,
+    "at": 1795457222,
+    "minsBefore": 113,
     "source": "polymarket book"
    }
   },
@@ -32542,11 +32542,67 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.82,
-    "ask": 0.83,
-    "mid": 0.825,
-    "at": 1795456618,
-    "minsBefore": 18,
+    "bid": 0.8,
+    "ask": 0.81,
+    "mid": 0.805,
+    "at": 1795457222,
+    "minsBefore": 8,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795457221-554",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sera6090agree",
+   "alsoMatched": [
+    "soc7090agree40"
+   ],
+   "sigKey": "0x4f0cc169ca12fd516369422a073a61784936a47c|0x4a81c44c316e5de3c25a14acb7649c7cb0bcdb4bbd9d07be74531c7026564829|1",
+   "pickKey": "Polymarket|0x4a81c44c316e5de3c25a14acb7649c7cb0bcdb4bbd9d07be74531c7026564829|1",
+   "marketKey": "Polymarket|0x4a81c44c316e5de3c25a14acb7649c7cb0bcdb4bbd9d07be74531c7026564829",
+   "venue": "Polymarket",
+   "conditionId": "0x4a81c44c316e5de3c25a14acb7649c7cb0bcdb4bbd9d07be74531c7026564829",
+   "idx": 1,
+   "name": "No",
+   "title": "Will AC Monza win on 2026-11-23?",
+   "slug": "sea-mon-fio-2026-11-23",
+   "league": "Serie A",
+   "marketType": "moneyline",
+   "start": 1795463100,
+   "whale": {
+    "q": 0.75,
+    "usd": 2100,
+    "score": 41,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795456706,
+    "wallet": "0x4f0cc169ca12fd516369422a073a61784936a47c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.76,
+   "createdAt": 1795457221,
+   "quoteAtOrder": {
+    "ask": 0.75,
+    "bid": 0.74,
+    "mid": 0.745,
+    "depth": 7888.03,
+    "at": 1795457223,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.75,
+   "filledAt": 1795457221,
+   "taker": true,
+   "feeUnits": 0.0075,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.74,
+    "ask": 0.75,
+    "mid": 0.745,
+    "at": 1795457223,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   }
@@ -32555,8 +32611,6 @@
   "socAgree40|Polymarket|0xb1aa4afa4abffed0f6b04a1237f1370a293d62108e27133cbea530a217af5f8b|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x56aed2130ecbca8523f31b52acfa47df16927e9d76b303203bdf18f26cfb2ee4|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x20c34f68662f47fa7c283d469853f6b3f645c6a92dc1ae7c5df24285f2210cfc|1|price is over 30 min old": 1795715100,
-  "Polymarket|0x07765ea9421cd42f2a00607ce50ee4355f93793d77f1217bc2fafcb2a032e943|0|already tried this pick": 1795284000,
-  "Polymarket|0x3d70337cad0a6b7c9527def367687f074b5c99e6626820b6c4a5b8a60facf993|1|starts in under 10 min": 1795284000,
   "Polymarket|0xd290bdbed3cf959a293e997a4ae05efb1cc29c264328d60ca995efa384850536|1|whale's price 92¢ is over 90¢": 1795309200,
   "Polymarket|0x608f21e038d0cf79e3a51600d36b23a796d7927d983dc7ef6558307cd2446558|0|already tried this pick": 1795289400,
   "Polymarket|0x75d6afdaf2b447aacc21efdf4912a9b37f740c8dab6144c8b51d260f15fd82e7|1|starts in under 10 min": 1795305600,
