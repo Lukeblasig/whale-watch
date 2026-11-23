@@ -2132,3 +2132,6 @@
 {"t":1795451193,"type":"run","status":"ok","candidates":13,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":9,"openUnits":13,"unitsToday":8}
 {"t":1795451819,"type":"run","status":"ok","candidates":13,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":9,"openUnits":13,"unitsToday":8}
 {"t":1795452419,"type":"run","status":"ok","candidates":13,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":9,"openUnits":13,"unitsToday":8}
+{"t":1795453014,"type":"fill","id":"1795421198-542","rule":"socSharp4050s50","shadow":false,"price":0.42,"maker":true,"source":"polymarket book"}
+{"t":1795453014,"type":"fill","id":"1795421198-543","rule":"soc60","shadow":false,"price":0.65,"maker":true,"source":"polymarket book"}
+{"t":1795453014,"type":"run","status":"ok","candidates":13,"ordered":0,"filled":2,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":9,"openUnits":13,"unitsToday":8}

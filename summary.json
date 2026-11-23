@@ -1,10 +1,10 @@
 {
- "updated": 1795452418,
+ "updated": 1795453012,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
   "orders": 213,
-  "fills": 177,
+  "fills": 179,
   "settled": 166,
   "w": 103,
   "l": 63,
@@ -29,11 +29,11 @@
    -0.01
   ],
   "medianSlipCents": 0,
-  "avgSlipCents": 0.07,
-  "takerPct": 92.66,
+  "avgSlipCents": 0.08,
+  "takerPct": 91.62,
   "liveQuotePct": 100,
-  "open": 11,
-  "resting": 2,
+  "open": 13,
+  "resting": 0,
   "cancelled": 34
  },
  "byRule": {
@@ -605,7 +605,7 @@
   },
   "socSharp4050s50": {
    "orders": 16,
-   "fills": 10,
+   "fills": 11,
    "settled": 10,
    "w": 4,
    "l": 6,
@@ -629,12 +629,12 @@
     -1.73,
     -0.17
    ],
-   "medianSlipCents": 0.07,
-   "avgSlipCents": 0.05,
-   "takerPct": 80,
+   "medianSlipCents": 0.14,
+   "avgSlipCents": 0.13,
+   "takerPct": 72.73,
    "liveQuotePct": 100,
-   "open": 0,
-   "resting": 1,
+   "open": 1,
+   "resting": 0,
    "cancelled": 5
   },
   "tenP50": {
@@ -813,7 +813,7 @@
   },
   "soc60": {
    "orders": 15,
-   "fills": 9,
+   "fills": 10,
    "settled": 9,
    "w": 3,
    "l": 6,
@@ -832,11 +832,11 @@
    "clvBeatPct": 44.44,
    "clvCI": null,
    "medianSlipCents": 1,
-   "avgSlipCents": 0.33,
-   "takerPct": 66.67,
+   "avgSlipCents": 0.4,
+   "takerPct": 60,
    "liveQuotePct": 100,
-   "open": 0,
-   "resting": 1,
+   "open": 1,
+   "resting": 0,
    "cancelled": 5
   },
   "osoc4060s60agree": {
@@ -931,13 +931,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 177 fills"
+   "detail": "Median 0.00¢ over 179 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.14056051587301588,
+   "progress": 0.14080605158730158,
    "detail": "0.6 weeks, 166 settled bets"
   }
  ],
@@ -1167,11 +1167,11 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795452418,
+  "at": 1795453012,
   "status": "ok",
   "candidates": 13,
   "ordered": 0,
-  "filled": 0,
+  "filled": 2,
   "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
@@ -1179,6 +1179,6 @@
   "cancelled": 0,
   "closes": 9
  },
- "dataUpdated": 1795452317,
+ "dataUpdated": 1795452911,
  "killSwitch": false
 }
