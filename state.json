@@ -28394,8 +28394,8 @@
     "bid": 0.54,
     "ask": 0.96,
     "mid": 0.75,
-    "at": 1795516020,
-    "minsBefore": 3318,
+    "at": 1795516623,
+    "minsBefore": 3308,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795516020,
-    "minsBefore": 573,
+    "at": 1795516623,
+    "minsBefore": 563,
     "source": "polymarket book"
    }
   },
@@ -31894,8 +31894,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795516020,
-    "minsBefore": 573,
+    "at": 1795516623,
+    "minsBefore": 563,
     "source": "polymarket book"
    }
   },
@@ -33426,8 +33426,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795516020,
-    "minsBefore": 573,
+    "at": 1795516623,
+    "minsBefore": 563,
     "source": "polymarket book"
    }
   },
@@ -33663,8 +33663,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795516020,
-    "minsBefore": 573,
+    "at": 1795516623,
+    "minsBefore": 563,
     "source": "polymarket book"
    }
   },
@@ -33778,11 +33778,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.36,
+    "bid": 0.37,
     "ask": 0.38,
-    "mid": 0.37,
-    "at": 1795516020,
-    "minsBefore": 108,
+    "mid": 0.375,
+    "at": 1795516623,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -33835,8 +33835,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795516021,
-    "minsBefore": 108,
+    "at": 1795516623,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -33892,8 +33892,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795516020,
-    "minsBefore": 108,
+    "at": 1795516623,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -33946,8 +33946,8 @@
     "bid": 0.65,
     "ask": 0.67,
     "mid": 0.66,
-    "at": 1795516021,
-    "minsBefore": 213,
+    "at": 1795516623,
+    "minsBefore": 203,
     "source": "polymarket book"
    }
   },
@@ -34003,8 +34003,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795516021,
-    "minsBefore": 333,
+    "at": 1795516623,
+    "minsBefore": 323,
     "source": "polymarket book"
    }
   },
@@ -34059,8 +34059,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1795516021,
-    "minsBefore": 773,
+    "at": 1795516623,
+    "minsBefore": 763,
     "source": "polymarket book"
    }
   },
@@ -34113,8 +34113,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795516021,
-    "minsBefore": 633,
+    "at": 1795516624,
+    "minsBefore": 623,
     "source": "polymarket book"
    }
   },
@@ -34169,8 +34169,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795516021,
-    "minsBefore": 558,
+    "at": 1795516624,
+    "minsBefore": 548,
     "source": "polymarket book"
    }
   },
@@ -34226,8 +34226,8 @@
     "bid": 0.48,
     "ask": 0.5,
     "mid": 0.49,
-    "at": 1795516021,
-    "minsBefore": 573,
+    "at": 1795516624,
+    "minsBefore": 563,
     "source": "polymarket book"
    }
   },
@@ -34339,8 +34339,8 @@
     "bid": 0.8,
     "ask": 0.83,
     "mid": 0.815,
-    "at": 1795516021,
-    "minsBefore": 573,
+    "at": 1795516624,
+    "minsBefore": 563,
     "source": "polymarket book"
    }
   },
@@ -34393,8 +34393,67 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795516021,
-    "minsBefore": 438,
+    "at": 1795516624,
+    "minsBefore": 428,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795516623-585",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharpMl70",
+   "alsoMatched": [
+    "osoc60agree",
+    "osoc70",
+    "socSharpAgree60",
+    "soc60"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0xd6f786af4e3c5955403bb2e8a54846ddf39fb5209598ca9ca09d3aa933bdce5f|1",
+   "pickKey": "Polymarket|0xd6f786af4e3c5955403bb2e8a54846ddf39fb5209598ca9ca09d3aa933bdce5f|1",
+   "marketKey": "Polymarket|0xd6f786af4e3c5955403bb2e8a54846ddf39fb5209598ca9ca09d3aa933bdce5f",
+   "venue": "Polymarket",
+   "conditionId": "0xd6f786af4e3c5955403bb2e8a54846ddf39fb5209598ca9ca09d3aa933bdce5f",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Bristol City FC win on 2026-11-24?",
+   "slug": "elc-bri-wre-2026-11-24",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795549500,
+   "whale": {
+    "q": 0.6,
+    "usd": 3707,
+    "score": 77,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795515745,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.61,
+   "createdAt": 1795516623,
+   "quoteAtOrder": {
+    "ask": 0.62,
+    "bid": 0.61,
+    "mid": 0.615,
+    "depth": 19089.54,
+    "at": 1795516624,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.61,
+    "ask": 0.62,
+    "mid": 0.615,
+    "at": 1795516624,
+    "minsBefore": 548,
     "source": "polymarket book"
    }
   }
