@@ -28392,10 +28392,10 @@
    "slippageCents": 1,
    "close": {
     "bid": 0.54,
-    "ask": 0.94,
-    "mid": 0.74,
-    "at": 1795535821,
-    "minsBefore": 2988,
+    "ask": 0.96,
+    "mid": 0.75,
+    "at": 1795536426,
+    "minsBefore": 2978,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.76,
     "ask": 0.77,
     "mid": 0.765,
-    "at": 1795535821,
-    "minsBefore": 243,
+    "at": 1795536425,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -31894,8 +31894,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795535821,
-    "minsBefore": 243,
+    "at": 1795536426,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -33426,8 +33426,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795535821,
-    "minsBefore": 243,
+    "at": 1795536426,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -33663,8 +33663,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795535821,
-    "minsBefore": 243,
+    "at": 1795536426,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -34061,8 +34061,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1795535821,
-    "minsBefore": 443,
+    "at": 1795536426,
+    "minsBefore": 433,
     "source": "polymarket book"
    }
   },
@@ -34115,8 +34115,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795535821,
-    "minsBefore": 303,
+    "at": 1795536426,
+    "minsBefore": 293,
     "source": "polymarket book"
    }
   },
@@ -34171,8 +34171,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795535821,
-    "minsBefore": 228,
+    "at": 1795536426,
+    "minsBefore": 218,
     "source": "polymarket book"
    }
   },
@@ -34228,8 +34228,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795535821,
-    "minsBefore": 243,
+    "at": 1795536426,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -34346,8 +34346,8 @@
     "bid": 0.81,
     "ask": 0.83,
     "mid": 0.82,
-    "at": 1795535821,
-    "minsBefore": 243,
+    "at": 1795536426,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -34400,8 +34400,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795535821,
-    "minsBefore": 108,
+    "at": 1795536426,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -34459,8 +34459,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795535821,
-    "minsBefore": 228,
+    "at": 1795536426,
+    "minsBefore": 218,
     "source": "polymarket book"
    }
   },
@@ -34515,8 +34515,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795535821,
-    "minsBefore": 108,
+    "at": 1795536426,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -34572,8 +34572,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795535821,
-    "minsBefore": 108,
+    "at": 1795536426,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -34741,8 +34741,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795535821,
-    "minsBefore": 108,
+    "at": 1795536426,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -34798,8 +34798,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795535821,
-    "minsBefore": 663,
+    "at": 1795536426,
+    "minsBefore": 653,
     "source": "polymarket book"
    }
   },
@@ -34852,8 +34852,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795535821,
-    "minsBefore": 108,
+    "at": 1795536426,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -34908,8 +34908,8 @@
     "bid": 0.7,
     "ask": 0.71,
     "mid": 0.705,
-    "at": 1795535821,
-    "minsBefore": 108,
+    "at": 1795536426,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -34959,11 +34959,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.45,
-    "ask": 0.46,
-    "mid": 0.455,
-    "at": 1795535821,
-    "minsBefore": 243,
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795536426,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -35015,11 +35015,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.44,
-    "ask": 0.45,
-    "mid": 0.445,
-    "at": 1795535821,
-    "minsBefore": 108,
+    "bid": 0.45,
+    "ask": 0.46,
+    "mid": 0.455,
+    "at": 1795536426,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -35132,8 +35132,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795535822,
-    "minsBefore": 243,
+    "at": 1795536426,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -35186,8 +35186,116 @@
     "bid": 0.31,
     "ask": 0.32,
     "mid": 0.315,
-    "at": 1795535822,
-    "minsBefore": 483,
+    "at": 1795536426,
+    "minsBefore": 473,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795536425-599",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x59d29d8f7ab522c04c427c86d56e118a79c3b92bec39ac9bc61ed2439cb790fc|0",
+   "pickKey": "Polymarket|0x59d29d8f7ab522c04c427c86d56e118a79c3b92bec39ac9bc61ed2439cb790fc|0",
+   "marketKey": "Polymarket|0x59d29d8f7ab522c04c427c86d56e118a79c3b92bec39ac9bc61ed2439cb790fc",
+   "venue": "Polymarket",
+   "conditionId": "0x59d29d8f7ab522c04c427c86d56e118a79c3b92bec39ac9bc61ed2439cb790fc",
+   "idx": 0,
+   "name": "Over",
+   "title": "Galatasaray SK vs. Aston Villa FC: Aston Villa FC O/U 0.5",
+   "slug": "ucl-gal-ast-2026-11-24-more-markets",
+   "league": "UCL",
+   "marketType": "total",
+   "start": 1795542300,
+   "whale": {
+    "q": 0.85,
+    "usd": 1234,
+    "score": 40,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795535798,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.86,
+   "createdAt": 1795536425,
+   "quoteAtOrder": {
+    "ask": 0.85,
+    "bid": 0.83,
+    "mid": 0.84,
+    "depth": 173.5,
+    "at": 1795536427,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.85,
+   "filledAt": 1795536425,
+   "taker": true,
+   "feeUnits": 0.0045,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.83,
+    "ask": 0.85,
+    "mid": 0.84,
+    "at": 1795536427,
+    "minsBefore": 98,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795536425-600",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc8090ok",
+   "alsoMatched": [],
+   "sigKey": "0x6ff62a12bc3628582256ef5abf74bb256e042067|0xec0dd8ba6cbff1153c189f94874c2249b3fa0e49033e4dbc2802fa71495ec8c3|1",
+   "pickKey": "Polymarket|0xec0dd8ba6cbff1153c189f94874c2249b3fa0e49033e4dbc2802fa71495ec8c3|1",
+   "marketKey": "Polymarket|0xec0dd8ba6cbff1153c189f94874c2249b3fa0e49033e4dbc2802fa71495ec8c3",
+   "venue": "Polymarket",
+   "conditionId": "0xec0dd8ba6cbff1153c189f94874c2249b3fa0e49033e4dbc2802fa71495ec8c3",
+   "idx": 1,
+   "name": "No",
+   "title": "Will BV Borussia 09 Dortmund win on 2026-11-24?",
+   "slug": "ucl-ars-bvb-2026-11-24",
+   "league": "UCL",
+   "marketType": "moneyline",
+   "start": 1795550400,
+   "whale": {
+    "q": 0.87,
+    "usd": 1064,
+    "score": 25,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795536023,
+    "wallet": "0x6ff62a12bc3628582256ef5abf74bb256e042067"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.88,
+   "createdAt": 1795536425,
+   "quoteAtOrder": {
+    "ask": 0.87,
+    "bid": 0.86,
+    "mid": 0.865,
+    "depth": 12859.12,
+    "at": 1795536427,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.87,
+   "filledAt": 1795536425,
+   "taker": true,
+   "feeUnits": 0.0039,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.86,
+    "ask": 0.87,
+    "mid": 0.865,
+    "at": 1795536427,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   }
