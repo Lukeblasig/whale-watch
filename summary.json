@@ -1,10 +1,10 @@
 {
- "updated": 1795547812,
+ "updated": 1795548415,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 279,
-  "fills": 229,
+  "orders": 280,
+  "fills": 231,
   "settled": 194,
   "w": 116,
   "l": 78,
@@ -29,11 +29,11 @@
    -0.18
   ],
   "medianSlipCents": 0,
-  "avgSlipCents": 0.14,
-  "takerPct": 90.83,
+  "avgSlipCents": 0.15,
+  "takerPct": 90.48,
   "liveQuotePct": 100,
-  "open": 35,
-  "resting": 5,
+  "open": 37,
+  "resting": 4,
   "cancelled": 45
  },
  "byRule": {
@@ -95,7 +95,7 @@
   },
   "soc4050ml40": {
    "orders": 19,
-   "fills": 11,
+   "fills": 12,
    "settled": 8,
    "w": 5,
    "l": 3,
@@ -113,12 +113,12 @@
    "clvAvgPct": 1.24,
    "clvBeatPct": 66.67,
    "clvCI": null,
-   "medianSlipCents": 0,
-   "avgSlipCents": 0.31,
-   "takerPct": 100,
+   "medianSlipCents": 0.06,
+   "avgSlipCents": 0.37,
+   "takerPct": 91.67,
    "liveQuotePct": 100,
-   "open": 3,
-   "resting": 1,
+   "open": 4,
+   "resting": 0,
    "cancelled": 7
   },
   "ten7090sharp3h": {
@@ -604,8 +604,8 @@
    "cancelled": 0
   },
   "socSharp4050s50": {
-   "orders": 25,
-   "fills": 17,
+   "orders": 26,
+   "fills": 18,
    "settled": 14,
    "w": 4,
    "l": 10,
@@ -630,10 +630,10 @@
     0.19
    ],
    "medianSlipCents": 1,
-   "avgSlipCents": 0.38,
-   "takerPct": 70.59,
+   "avgSlipCents": 0.39,
+   "takerPct": 72.22,
    "liveQuotePct": 100,
-   "open": 3,
+   "open": 4,
    "resting": 1,
    "cancelled": 7
   },
@@ -869,8 +869,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 40,
- "unitsToday": 29,
+ "openUnits": 41,
+ "unitsToday": 30,
  "drawdown": {
   "units": -15.16,
   "max": 18.2,
@@ -897,13 +897,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 229 fills"
+   "detail": "Median 0.00¢ over 231 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.17999255952380952,
+   "progress": 0.18024181547619048,
    "detail": "0.7 weeks, 194 settled bets"
   }
  ],
@@ -1127,18 +1127,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795547812,
+  "at": 1795548415,
   "status": "ok",
-  "candidates": 59,
+  "candidates": 63,
   "ordered": 1,
-  "filled": 1,
+  "filled": 2,
   "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 28
+  "closes": 29
  },
- "dataUpdated": 1795547707,
+ "dataUpdated": 1795548323,
  "killSwitch": false
 }
