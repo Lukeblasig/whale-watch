@@ -28394,8 +28394,8 @@
     "bid": 0.55,
     "ask": 0.93,
     "mid": 0.74,
-    "at": 1795478801,
-    "minsBefore": 3938,
+    "at": 1795479416,
+    "minsBefore": 3928,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795478801,
-    "minsBefore": 1193,
+    "at": 1795479416,
+    "minsBefore": 1183,
     "source": "polymarket book"
    }
   },
@@ -31889,8 +31889,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795478801,
-    "minsBefore": 1193,
+    "at": 1795479416,
+    "minsBefore": 1183,
     "source": "polymarket book"
    }
   },
@@ -33303,8 +33303,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795478801,
-    "minsBefore": 173,
+    "at": 1795479416,
+    "minsBefore": 163,
     "source": "polymarket book"
    }
   },
@@ -33357,8 +33357,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795478801,
-    "minsBefore": 68,
+    "at": 1795479416,
+    "minsBefore": 58,
     "source": "polymarket book"
    }
   },
@@ -33411,8 +33411,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795478801,
-    "minsBefore": 1193,
+    "at": 1795479416,
+    "minsBefore": 1183,
     "source": "polymarket book"
    }
   },
@@ -33465,8 +33465,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795478801,
-    "minsBefore": 53,
+    "at": 1795479417,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -33519,11 +33519,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.43,
-    "ask": 0.44,
-    "mid": 0.435,
-    "at": 1795478801,
-    "minsBefore": 53,
+    "bid": 0.45,
+    "ask": 0.46,
+    "mid": 0.455,
+    "at": 1795479416,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -33576,8 +33576,8 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1795478801,
-    "minsBefore": 353,
+    "at": 1795479417,
+    "minsBefore": 343,
     "source": "polymarket book"
    }
   }
