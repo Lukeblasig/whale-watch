@@ -28394,8 +28394,8 @@
     "bid": 0.55,
     "ask": 0.93,
     "mid": 0.74,
-    "at": 1795478221,
-    "minsBefore": 3948,
+    "at": 1795478801,
+    "minsBefore": 3938,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.77,
     "ask": 0.78,
     "mid": 0.775,
-    "at": 1795478221,
-    "minsBefore": 1203,
+    "at": 1795478801,
+    "minsBefore": 1193,
     "source": "polymarket book"
    }
   },
@@ -31889,8 +31889,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795478221,
-    "minsBefore": 1203,
+    "at": 1795478801,
+    "minsBefore": 1193,
     "source": "polymarket book"
    }
   },
@@ -33303,8 +33303,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795478222,
-    "minsBefore": 183,
+    "at": 1795478801,
+    "minsBefore": 173,
     "source": "polymarket book"
    }
   },
@@ -33357,8 +33357,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795478222,
-    "minsBefore": 78,
+    "at": 1795478801,
+    "minsBefore": 68,
     "source": "polymarket book"
    }
   },
@@ -33411,8 +33411,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795478222,
-    "minsBefore": 1203,
+    "at": 1795478801,
+    "minsBefore": 1193,
     "source": "polymarket book"
    }
   },
@@ -33465,8 +33465,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795478222,
-    "minsBefore": 63,
+    "at": 1795478801,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -33522,8 +33522,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795478222,
-    "minsBefore": 63,
+    "at": 1795478801,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -33576,8 +33576,8 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1795478222,
-    "minsBefore": 363,
+    "at": 1795478801,
+    "minsBefore": 353,
     "source": "polymarket book"
    }
   }
@@ -33587,7 +33587,6 @@
   "socAgree40|Polymarket|0x56aed2130ecbca8523f31b52acfa47df16927e9d76b303203bdf18f26cfb2ee4|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x20c34f68662f47fa7c283d469853f6b3f645c6a92dc1ae7c5df24285f2210cfc|1|price is over 30 min old": 1795715100,
   "Polymarket|0xd290bdbed3cf959a293e997a4ae05efb1cc29c264328d60ca995efa384850536|1|whale's price 92¢ is over 90¢": 1795309200,
-  "Polymarket|0x75d6afdaf2b447aacc21efdf4912a9b37f740c8dab6144c8b51d260f15fd82e7|1|starts in under 10 min": 1795305600,
   "Polymarket|0xb07f4429cb1e1d1549686c0d132e4b6371514831d71d598e11617a2f8a44152e|1|already tried this pick": 1795307400,
   "Polymarket|0xd878ee4681a0a960ba658a7c5d67cb682aaa724f3f87c7441da1b486bada3128|1|starts in under 10 min": 1795309200,
   "Polymarket|0xc81a8e94f617ea198ad583ca77eb46c6b46509ed2658529c05295ae7a376f67f|0|already bet the other side of this market": 1795316400,
