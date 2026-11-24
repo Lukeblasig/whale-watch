@@ -28394,8 +28394,8 @@
     "bid": 0.55,
     "ask": 0.94,
     "mid": 0.745,
-    "at": 1795494393,
-    "minsBefore": 3678,
+    "at": 1795495002,
+    "minsBefore": 3668,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.78,
     "ask": 0.79,
     "mid": 0.785,
-    "at": 1795494393,
-    "minsBefore": 933,
+    "at": 1795495002,
+    "minsBefore": 923,
     "source": "polymarket book"
    }
   },
@@ -31894,8 +31894,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795494393,
-    "minsBefore": 933,
+    "at": 1795495002,
+    "minsBefore": 923,
     "source": "polymarket book"
    }
   },
@@ -33416,8 +33416,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795494393,
-    "minsBefore": 933,
+    "at": 1795495002,
+    "minsBefore": 923,
     "source": "polymarket book"
    }
   },
@@ -33591,8 +33591,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795494393,
-    "minsBefore": 93,
+    "at": 1795495003,
+    "minsBefore": 83,
     "source": "polymarket book"
    }
   },
@@ -33648,8 +33648,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795494393,
-    "minsBefore": 933,
+    "at": 1795495003,
+    "minsBefore": 923,
     "source": "polymarket book"
    }
   },
@@ -33761,8 +33761,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795494393,
-    "minsBefore": 468,
+    "at": 1795495003,
+    "minsBefore": 458,
     "source": "polymarket book"
    }
   },
@@ -33815,8 +33815,8 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795494393,
-    "minsBefore": 468,
+    "at": 1795495003,
+    "minsBefore": 458,
     "source": "polymarket book"
    }
   },
@@ -33872,8 +33872,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795494394,
-    "minsBefore": 468,
+    "at": 1795495003,
+    "minsBefore": 458,
     "source": "polymarket book"
    }
   },
@@ -33926,8 +33926,8 @@
     "bid": 0.62,
     "ask": 0.63,
     "mid": 0.625,
-    "at": 1795494394,
-    "minsBefore": 573,
+    "at": 1795495003,
+    "minsBefore": 563,
     "source": "polymarket book"
    }
   },
@@ -33983,8 +33983,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795494394,
-    "minsBefore": 693,
+    "at": 1795495003,
+    "minsBefore": 683,
     "source": "polymarket book"
    }
   },
@@ -34039,8 +34039,62 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1795494394,
-    "minsBefore": 1133,
+    "at": 1795495003,
+    "minsBefore": 1123,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795495001-579",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x5fb42570de0058f3e6e97e08bd189d8ddf643578dd7229c5040b1ce6925c8e95|1",
+   "pickKey": "Polymarket|0x5fb42570de0058f3e6e97e08bd189d8ddf643578dd7229c5040b1ce6925c8e95|1",
+   "marketKey": "Polymarket|0x5fb42570de0058f3e6e97e08bd189d8ddf643578dd7229c5040b1ce6925c8e95",
+   "venue": "Polymarket",
+   "conditionId": "0x5fb42570de0058f3e6e97e08bd189d8ddf643578dd7229c5040b1ce6925c8e95",
+   "idx": 1,
+   "name": "No",
+   "title": "Will SE Palmeiras win on 2026-11-24?",
+   "slug": "bra-cha-pal-2026-11-24",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795554000,
+   "whale": {
+    "q": 0.56,
+    "usd": 1263,
+    "score": 43,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795493297,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.57,
+   "createdAt": 1795495001,
+   "quoteAtOrder": {
+    "ask": 0.54,
+    "bid": 0.53,
+    "mid": 0.535,
+    "depth": 2849.02,
+    "at": 1795495003,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.54,
+   "filledAt": 1795495001,
+   "taker": true,
+   "feeUnits": 0.0138,
+   "priceSource": "polymarket book",
+   "slippageCents": -2,
+   "close": {
+    "bid": 0.53,
+    "ask": 0.54,
+    "mid": 0.535,
+    "at": 1795495003,
+    "minsBefore": 983,
     "source": "polymarket book"
    }
   }
