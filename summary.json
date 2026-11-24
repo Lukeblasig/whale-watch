@@ -1,5 +1,5 @@
 {
- "updated": 1795499807,
+ "updated": 1795500421,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -20,13 +20,13 @@
   ],
   "whaleUnits": -12.15,
   "whaleRoi": -6.43,
-  "clvN": 191,
+  "clvN": 192,
   "clvAvgCents": -0.43,
-  "clvAvgPct": -0.68,
-  "clvBeatPct": 35.6,
+  "clvAvgPct": -0.66,
+  "clvBeatPct": 35.94,
   "clvCI": [
-   -0.73,
-   -0.14
+   -0.72,
+   -0.13
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.11,
@@ -450,10 +450,10 @@
    "netRoiCI": null,
    "whaleUnits": 0,
    "whaleRoi": null,
-   "clvN": 0,
-   "clvAvgCents": null,
-   "clvAvgPct": null,
-   "clvBeatPct": null,
+   "clvN": 1,
+   "clvAvgCents": 1,
+   "clvAvgPct": 1.67,
+   "clvBeatPct": 100,
    "clvCI": null,
    "medianSlipCents": -0.82,
    "avgSlipCents": -0.82,
@@ -938,7 +938,7 @@
  },
  "byShadow": {},
  "openUnits": 17,
- "unitsToday": 35,
+ "unitsToday": 0,
  "drawdown": {
   "units": -13.54,
   "max": 16.85,
@@ -950,8 +950,8 @@
    "id": "clv",
    "label": "Beat the close after 500 bets",
    "status": "pending",
-   "progress": 0.382,
-   "detail": "191 of 500 bets have a closing price; average so far -0.43¢"
+   "progress": 0.384,
+   "detail": "192 of 500 bets have a closing price; average so far -0.43¢"
   },
   {
    "id": "roi",
@@ -971,7 +971,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.1601492228835979,
+   "progress": 0.1604030257936508,
    "detail": "0.6 weeks, 189 settled bets"
   }
  ],
@@ -1207,9 +1207,9 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795499807,
+  "at": 1795500421,
   "status": "ok",
-  "candidates": 29,
+  "candidates": 28,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
@@ -1217,8 +1217,8 @@
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 15
+  "closes": 14
  },
- "dataUpdated": 1795499719,
+ "dataUpdated": 1795500319,
  "killSwitch": false
 }
