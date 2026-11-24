@@ -28394,8 +28394,8 @@
     "bid": 0.55,
     "ask": 0.94,
     "mid": 0.745,
-    "at": 1795493228,
-    "minsBefore": 3698,
+    "at": 1795493793,
+    "minsBefore": 3688,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.78,
     "ask": 0.79,
     "mid": 0.785,
-    "at": 1795493228,
-    "minsBefore": 953,
+    "at": 1795493793,
+    "minsBefore": 943,
     "source": "polymarket book"
    }
   },
@@ -31894,8 +31894,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795493228,
-    "minsBefore": 953,
+    "at": 1795493793,
+    "minsBefore": 943,
     "source": "polymarket book"
    }
   },
@@ -33416,8 +33416,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795493228,
-    "minsBefore": 953,
+    "at": 1795493793,
+    "minsBefore": 943,
     "source": "polymarket book"
    }
   },
@@ -33591,8 +33591,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795493229,
-    "minsBefore": 113,
+    "at": 1795493793,
+    "minsBefore": 103,
     "source": "polymarket book"
    }
   },
@@ -33648,8 +33648,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795493229,
-    "minsBefore": 953,
+    "at": 1795493793,
+    "minsBefore": 943,
     "source": "polymarket book"
    }
   },
@@ -33761,8 +33761,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795493229,
-    "minsBefore": 488,
+    "at": 1795493793,
+    "minsBefore": 478,
     "source": "polymarket book"
    }
   },
@@ -33812,11 +33812,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.56,
-    "ask": 0.57,
-    "mid": 0.565,
-    "at": 1795493229,
-    "minsBefore": 488,
+    "bid": 0.54,
+    "ask": 0.55,
+    "mid": 0.545,
+    "at": 1795493793,
+    "minsBefore": 478,
     "source": "polymarket book"
    }
   },
@@ -33861,19 +33861,19 @@
     "at": 1795493229,
     "source": "polymarket book"
    },
-   "status": "resting",
-   "fillPrice": null,
-   "filledAt": null,
-   "taker": null,
-   "feeUnits": null,
-   "priceSource": null,
-   "slippageCents": null,
+   "status": "filled",
+   "fillPrice": 0.44,
+   "filledAt": 1795493792,
+   "taker": false,
+   "feeUnits": 0,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
    "close": {
-    "bid": 0.44,
-    "ask": 0.45,
-    "mid": 0.445,
-    "at": 1795493229,
-    "minsBefore": 488,
+    "bid": 0.43,
+    "ask": 0.44,
+    "mid": 0.435,
+    "at": 1795493794,
+    "minsBefore": 478,
     "source": "polymarket book"
    }
   },
@@ -33926,8 +33926,121 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795493229,
-    "minsBefore": 593,
+    "at": 1795493794,
+    "minsBefore": 583,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795493792-577",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050",
+    "soc60"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x9e476917250fa5e68abfb47a059ad3e921eae6fcca265d09545e89b35651be81|1",
+   "pickKey": "Polymarket|0x9e476917250fa5e68abfb47a059ad3e921eae6fcca265d09545e89b35651be81|1",
+   "marketKey": "Polymarket|0x9e476917250fa5e68abfb47a059ad3e921eae6fcca265d09545e89b35651be81",
+   "venue": "Polymarket",
+   "conditionId": "0x9e476917250fa5e68abfb47a059ad3e921eae6fcca265d09545e89b35651be81",
+   "idx": 1,
+   "name": "Under",
+   "title": "Shabab Al Ahli Dubai vs. Al Qadsiah: O/U 2.5",
+   "slug": "acle-sah-qad-2026-11-24-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795536000,
+   "whale": {
+    "q": 0.44,
+    "usd": 8765,
+    "score": 63,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795492291,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.45,
+   "createdAt": 1795493792,
+   "quoteAtOrder": {
+    "ask": 0.45,
+    "bid": 0.44,
+    "mid": 0.445,
+    "depth": 20,
+    "at": 1795493794,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.45,
+   "filledAt": 1795493792,
+   "taker": true,
+   "feeUnits": 0.0165,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795493794,
+    "minsBefore": 703,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795493792-578",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc7090s60",
+   "alsoMatched": [
+    "soc60"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x060da817f9c6effb11650c2d205bbd084b38639f216d4d1e02e454565a4f7c09|1",
+   "pickKey": "Polymarket|0x060da817f9c6effb11650c2d205bbd084b38639f216d4d1e02e454565a4f7c09|1",
+   "marketKey": "Polymarket|0x060da817f9c6effb11650c2d205bbd084b38639f216d4d1e02e454565a4f7c09",
+   "venue": "Polymarket",
+   "conditionId": "0x060da817f9c6effb11650c2d205bbd084b38639f216d4d1e02e454565a4f7c09",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Millonarios FC vs. CA Bucaramanga end in a draw?",
+   "slug": "col1-mif-cab-2026-11-24",
+   "league": "Other soccer",
+   "marketType": "draw",
+   "start": 1795562400,
+   "whale": {
+    "q": 0.75,
+    "usd": 6336,
+    "score": 63,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795492777,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.76,
+   "createdAt": 1795493792,
+   "quoteAtOrder": {
+    "ask": 0.76,
+    "bid": 0.75,
+    "mid": 0.755,
+    "depth": 1167.5,
+    "at": 1795493794,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.76,
+   "filledAt": 1795493792,
+   "taker": true,
+   "feeUnits": 0.0072,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.75,
+    "ask": 0.76,
+    "mid": 0.755,
+    "at": 1795493794,
+    "minsBefore": 1143,
     "source": "polymarket book"
    }
   }
