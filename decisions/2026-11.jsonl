@@ -2297,3 +2297,4 @@
 {"t":1795503413,"type":"run","status":"ok","candidates":36,"ordered":0,"filled":1,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":15,"openUnits":18,"unitsToday":1}
 {"t":1795504008,"type":"fill","id":"1795496800-580","rule":"socSharp4050s50","shadow":false,"price":0.42,"maker":true,"source":"polymarket book"}
 {"t":1795504008,"type":"run","status":"ok","candidates":36,"ordered":0,"filled":1,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":15,"openUnits":18,"unitsToday":1}
+{"t":1795504622,"type":"run","status":"ok","candidates":36,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":15,"openUnits":18,"unitsToday":1}
