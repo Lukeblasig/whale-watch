@@ -28394,8 +28394,8 @@
     "bid": 0.55,
     "ask": 0.94,
     "mid": 0.745,
-    "at": 1795501647,
-    "minsBefore": 3558,
+    "at": 1795502219,
+    "minsBefore": 3548,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.78,
     "ask": 0.79,
     "mid": 0.785,
-    "at": 1795501647,
-    "minsBefore": 813,
+    "at": 1795502219,
+    "minsBefore": 803,
     "source": "polymarket book"
    }
   },
@@ -31894,8 +31894,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795501647,
-    "minsBefore": 813,
+    "at": 1795502219,
+    "minsBefore": 803,
     "source": "polymarket book"
    }
   },
@@ -33426,8 +33426,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795501647,
-    "minsBefore": 813,
+    "at": 1795502219,
+    "minsBefore": 803,
     "source": "polymarket book"
    }
   },
@@ -33658,8 +33658,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795501647,
-    "minsBefore": 813,
+    "at": 1795502220,
+    "minsBefore": 803,
     "source": "polymarket book"
    }
   },
@@ -33776,8 +33776,8 @@
     "bid": 0.38,
     "ask": 0.39,
     "mid": 0.385,
-    "at": 1795501647,
-    "minsBefore": 348,
+    "at": 1795502220,
+    "minsBefore": 338,
     "source": "polymarket book"
    }
   },
@@ -33830,8 +33830,8 @@
     "bid": 0.52,
     "ask": 0.53,
     "mid": 0.525,
-    "at": 1795501647,
-    "minsBefore": 348,
+    "at": 1795502220,
+    "minsBefore": 338,
     "source": "polymarket book"
    }
   },
@@ -33887,8 +33887,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1795501647,
-    "minsBefore": 348,
+    "at": 1795502220,
+    "minsBefore": 338,
     "source": "polymarket book"
    }
   },
@@ -33941,8 +33941,8 @@
     "bid": 0.64,
     "ask": 0.65,
     "mid": 0.645,
-    "at": 1795501647,
-    "minsBefore": 453,
+    "at": 1795502220,
+    "minsBefore": 443,
     "source": "polymarket book"
    }
   },
@@ -33998,8 +33998,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795501647,
-    "minsBefore": 573,
+    "at": 1795502220,
+    "minsBefore": 563,
     "source": "polymarket book"
    }
   },
@@ -34054,8 +34054,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1795501647,
-    "minsBefore": 1013,
+    "at": 1795502220,
+    "minsBefore": 1003,
     "source": "polymarket book"
    }
   },
@@ -34108,8 +34108,8 @@
     "bid": 0.53,
     "ask": 0.54,
     "mid": 0.535,
-    "at": 1795501647,
-    "minsBefore": 873,
+    "at": 1795502220,
+    "minsBefore": 863,
     "source": "polymarket book"
    }
   },
@@ -34162,10 +34162,10 @@
    "slippageCents": null,
    "close": {
     "bid": 0.42,
-    "ask": 0.43,
-    "mid": 0.425,
-    "at": 1795501648,
-    "minsBefore": 798,
+    "ask": 0.44,
+    "mid": 0.43,
+    "at": 1795502220,
+    "minsBefore": 788,
     "source": "polymarket book"
    }
   },
@@ -34221,8 +34221,67 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795501648,
-    "minsBefore": 813,
+    "at": 1795502220,
+    "minsBefore": 803,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795502219-582",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharpMl70",
+   "alsoMatched": [
+    "osoc60agree",
+    "osoc70",
+    "socSharpAgree60",
+    "soc60"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0xbb2aad867dc6cc4794dbdcf6066a53e484e23e691e576bbc560b76a5303e12f6|1",
+   "pickKey": "Polymarket|0xbb2aad867dc6cc4794dbdcf6066a53e484e23e691e576bbc560b76a5303e12f6|1",
+   "marketKey": "Polymarket|0xbb2aad867dc6cc4794dbdcf6066a53e484e23e691e576bbc560b76a5303e12f6",
+   "venue": "Polymarket",
+   "conditionId": "0xbb2aad867dc6cc4794dbdcf6066a53e484e23e691e576bbc560b76a5303e12f6",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Daejeon Citizen FC win on 2026-11-24?",
+   "slug": "acle-daj-bjg-2026-11-24",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795514400,
+   "whale": {
+    "q": 0.38,
+    "usd": 29407,
+    "score": 83,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795500880,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.39,
+   "createdAt": 1795502219,
+   "quoteAtOrder": {
+    "ask": 0.4,
+    "bid": 0.38,
+    "mid": 0.39,
+    "depth": 2788.46,
+    "at": 1795502220,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.38,
+    "ask": 0.4,
+    "mid": 0.39,
+    "at": 1795502220,
+    "minsBefore": 203,
     "source": "polymarket book"
    }
   }
