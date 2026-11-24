@@ -28394,8 +28394,8 @@
     "bid": 0.55,
     "ask": 0.93,
     "mid": 0.74,
-    "at": 1795484214,
-    "minsBefore": 3848,
+    "at": 1795484807,
+    "minsBefore": 3838,
     "source": "polymarket book"
    }
   },
@@ -31596,11 +31596,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.77,
-    "ask": 0.78,
-    "mid": 0.775,
-    "at": 1795484214,
-    "minsBefore": 1103,
+    "bid": 0.78,
+    "ask": 0.79,
+    "mid": 0.785,
+    "at": 1795484807,
+    "minsBefore": 1093,
     "source": "polymarket book"
    }
   },
@@ -31889,8 +31889,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795484214,
-    "minsBefore": 1103,
+    "at": 1795484807,
+    "minsBefore": 1093,
     "source": "polymarket book"
    }
   },
@@ -33300,11 +33300,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -1.4,
    "close": {
-    "bid": 0.73,
-    "ask": 0.74,
-    "mid": 0.735,
-    "at": 1795484214,
-    "minsBefore": 83,
+    "bid": 0.72,
+    "ask": 0.73,
+    "mid": 0.725,
+    "at": 1795484807,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -33411,8 +33411,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795484215,
-    "minsBefore": 1103,
+    "at": 1795484807,
+    "minsBefore": 1093,
     "source": "polymarket book"
    }
   },
@@ -33576,8 +33576,65 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1795484215,
-    "minsBefore": 263,
+    "at": 1795484807,
+    "minsBefore": 253,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795484806-571",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc4050ml40",
+   "alsoMatched": [
+    "socSharp4060ml40",
+    "socSharp4050"
+   ],
+   "sigKey": "0xa3358ec2bd77abb2287f8d0db21597fa98cd7624|0x621e71e0493d99c1d1bb1c55faea8b7ad3f46f8695eab52b53532095160279b7|0",
+   "pickKey": "Polymarket|0x621e71e0493d99c1d1bb1c55faea8b7ad3f46f8695eab52b53532095160279b7|0",
+   "marketKey": "Polymarket|0x621e71e0493d99c1d1bb1c55faea8b7ad3f46f8695eab52b53532095160279b7",
+   "venue": "Polymarket",
+   "conditionId": "0x621e71e0493d99c1d1bb1c55faea8b7ad3f46f8695eab52b53532095160279b7",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will FC Porto win on 2026-11-24?",
+   "slug": "ucl-fey-por-2026-11-24",
+   "league": "UCL",
+   "marketType": "moneyline",
+   "start": 1795550400,
+   "whale": {
+    "q": 0.43,
+    "usd": 4300,
+    "score": 46,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795483615,
+    "wallet": "0xa3358ec2bd77abb2287f8d0db21597fa98cd7624"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.44,
+   "createdAt": 1795484806,
+   "quoteAtOrder": {
+    "ask": 0.43,
+    "bid": 0.42,
+    "mid": 0.425,
+    "depth": 314.46,
+    "at": 1795484807,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.43,
+   "filledAt": 1795484806,
+   "taker": true,
+   "feeUnits": 0.0171,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.42,
+    "ask": 0.43,
+    "mid": 0.425,
+    "at": 1795484807,
+    "minsBefore": 1093,
     "source": "polymarket book"
    }
   }
