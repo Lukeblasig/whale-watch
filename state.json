@@ -28392,10 +28392,10 @@
    "slippageCents": 1,
    "close": {
     "bid": 0.54,
-    "ask": 0.94,
-    "mid": 0.74,
-    "at": 1795545407,
-    "minsBefore": 2828,
+    "ask": 0.96,
+    "mid": 0.75,
+    "at": 1795546001,
+    "minsBefore": 2818,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.76,
     "ask": 0.77,
     "mid": 0.765,
-    "at": 1795545407,
-    "minsBefore": 83,
+    "at": 1795546001,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -31894,8 +31894,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795545407,
-    "minsBefore": 83,
+    "at": 1795546001,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -33426,8 +33426,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795545407,
-    "minsBefore": 83,
+    "at": 1795546001,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -33663,8 +33663,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795545407,
-    "minsBefore": 83,
+    "at": 1795546001,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -34076,8 +34076,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1795545407,
-    "minsBefore": 283,
+    "at": 1795546001,
+    "minsBefore": 273,
     "source": "polymarket book"
    }
   },
@@ -34130,8 +34130,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795545407,
-    "minsBefore": 143,
+    "at": 1795546001,
+    "minsBefore": 133,
     "source": "polymarket book"
    }
   },
@@ -34183,11 +34183,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.39,
-    "ask": 0.4,
-    "mid": 0.395,
-    "at": 1795545407,
-    "minsBefore": 68,
+    "bid": 0.38,
+    "ask": 0.39,
+    "mid": 0.385,
+    "at": 1795546001,
+    "minsBefore": 58,
     "source": "polymarket book"
    }
   },
@@ -34243,8 +34243,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795545408,
-    "minsBefore": 83,
+    "at": 1795546001,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -34361,8 +34361,8 @@
     "bid": 0.81,
     "ask": 0.83,
     "mid": 0.82,
-    "at": 1795545408,
-    "minsBefore": 83,
+    "at": 1795546001,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -34474,8 +34474,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795545408,
-    "minsBefore": 68,
+    "at": 1795546001,
+    "minsBefore": 58,
     "source": "polymarket book"
    }
   },
@@ -34817,8 +34817,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795545408,
-    "minsBefore": 503,
+    "at": 1795546001,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -34981,8 +34981,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795545408,
-    "minsBefore": 83,
+    "at": 1795546001,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -35151,8 +35151,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795545408,
-    "minsBefore": 83,
+    "at": 1795546001,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -35205,8 +35205,8 @@
     "bid": 0.32,
     "ask": 0.33,
     "mid": 0.325,
-    "at": 1795545408,
-    "minsBefore": 323,
+    "at": 1795546001,
+    "minsBefore": 313,
     "source": "polymarket book"
    }
   },
@@ -35313,8 +35313,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795545408,
-    "minsBefore": 83,
+    "at": 1795546002,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -35369,8 +35369,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795545408,
-    "minsBefore": 923,
+    "at": 1795546002,
+    "minsBefore": 913,
     "source": "polymarket book"
    }
   },
@@ -35425,8 +35425,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795545408,
-    "minsBefore": 923,
+    "at": 1795546002,
+    "minsBefore": 913,
     "source": "polymarket book"
    }
   },
@@ -35481,8 +35481,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795545408,
-    "minsBefore": 923,
+    "at": 1795546002,
+    "minsBefore": 913,
     "source": "polymarket book"
    }
   },
@@ -35535,8 +35535,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795545408,
-    "minsBefore": 83,
+    "at": 1795546002,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -35591,11 +35591,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.6,
-    "ask": 0.61,
-    "mid": 0.605,
-    "at": 1795545408,
-    "minsBefore": 23,
+    "bid": 0.61,
+    "ask": 0.62,
+    "mid": 0.615,
+    "at": 1795546002,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -35648,8 +35648,116 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795545408,
-    "minsBefore": 23,
+    "at": 1795546002,
+    "minsBefore": 13,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795546000-607",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c|0x8ab6526bd084e8d5b70b89a28a2ebe3e38bba6bcdb14a9565cc12414e4d58c7f|0",
+   "pickKey": "Polymarket|0x8ab6526bd084e8d5b70b89a28a2ebe3e38bba6bcdb14a9565cc12414e4d58c7f|0",
+   "marketKey": "Polymarket|0x8ab6526bd084e8d5b70b89a28a2ebe3e38bba6bcdb14a9565cc12414e4d58c7f",
+   "venue": "Polymarket",
+   "conditionId": "0x8ab6526bd084e8d5b70b89a28a2ebe3e38bba6bcdb14a9565cc12414e4d58c7f",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Norwich City FC win on 2026-11-24?",
+   "slug": "elc-nor-qpr-2026-11-24",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795549500,
+   "whale": {
+    "q": 0.4969,
+    "usd": 12458,
+    "score": 36,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795545140,
+    "wallet": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.5,
+   "createdAt": 1795546000,
+   "quoteAtOrder": {
+    "ask": 0.51,
+    "bid": 0.5,
+    "mid": 0.505,
+    "depth": 45036.02,
+    "at": 1795546002,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.5,
+    "ask": 0.51,
+    "mid": 0.505,
+    "at": 1795546002,
+    "minsBefore": 58,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795546000-608",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0x2005d16a84ceefa912d4e380cd32e7ff827875ea|0x34b02a1250931b2f058f872f8c4ee5f2b7b0402aa5c645f83cb272f9eb8ab08e|1",
+   "pickKey": "Polymarket|0x34b02a1250931b2f058f872f8c4ee5f2b7b0402aa5c645f83cb272f9eb8ab08e|1",
+   "marketKey": "Polymarket|0x34b02a1250931b2f058f872f8c4ee5f2b7b0402aa5c645f83cb272f9eb8ab08e",
+   "venue": "Polymarket",
+   "conditionId": "0x34b02a1250931b2f058f872f8c4ee5f2b7b0402aa5c645f83cb272f9eb8ab08e",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Sheffield United FC win on 2026-11-24?",
+   "slug": "elc-she-sot-2026-11-24",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795549500,
+   "whale": {
+    "q": 0.58,
+    "usd": 2900,
+    "score": 40,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795545265,
+    "wallet": "0x2005d16a84ceefa912d4e380cd32e7ff827875ea"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.59,
+   "createdAt": 1795546000,
+   "quoteAtOrder": {
+    "ask": 0.57,
+    "bid": 0.56,
+    "mid": 0.565,
+    "depth": 20471.57,
+    "at": 1795546002,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.57,
+   "filledAt": 1795546000,
+   "taker": true,
+   "feeUnits": 0.0129,
+   "priceSource": "polymarket book",
+   "slippageCents": -1,
+   "close": {
+    "bid": 0.56,
+    "ask": 0.57,
+    "mid": 0.565,
+    "at": 1795546002,
+    "minsBefore": 58,
     "source": "polymarket book"
    }
   }
