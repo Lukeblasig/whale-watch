@@ -1,5 +1,5 @@
 {
- "updated": 1795488998,
+ "updated": 1795489600,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -20,13 +20,13 @@
   ],
   "whaleUnits": -8.39,
   "whaleRoi": -4.56,
-  "clvN": 190,
-  "clvAvgCents": -0.4,
-  "clvAvgPct": -0.64,
-  "clvBeatPct": 35.79,
+  "clvN": 191,
+  "clvAvgCents": -0.43,
+  "clvAvgPct": -0.68,
+  "clvBeatPct": 35.6,
   "clvCI": [
-   -0.69,
-   -0.11
+   -0.73,
+   -0.14
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.11,
@@ -478,9 +478,9 @@
    "netRoiCI": null,
    "whaleUnits": 0.34,
    "whaleRoi": 17.06,
-   "clvN": 2,
-   "clvAvgCents": -0.5,
-   "clvAvgPct": -0.58,
+   "clvN": 3,
+   "clvAvgCents": -2.5,
+   "clvAvgPct": -3.13,
    "clvBeatPct": 0,
    "clvCI": null,
    "medianSlipCents": 0,
@@ -950,8 +950,8 @@
    "id": "clv",
    "label": "Beat the close after 500 bets",
    "status": "pending",
-   "progress": 0.38,
-   "detail": "190 of 500 bets have a closing price; average so far -0.40¢"
+   "progress": 0.382,
+   "detail": "191 of 500 bets have a closing price; average so far -0.43¢"
   },
   {
    "id": "roi",
@@ -971,7 +971,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.15568121693121692,
+   "progress": 0.15593005952380953,
    "detail": "0.6 weeks, 184 settled bets"
   }
  ],
@@ -1207,9 +1207,9 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795488998,
+  "at": 1795489600,
   "status": "ok",
-  "candidates": 10,
+  "candidates": 9,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
@@ -1217,8 +1217,8 @@
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 7
+  "closes": 6
  },
- "dataUpdated": 1795488905,
+ "dataUpdated": 1795489503,
  "killSwitch": false
 }
