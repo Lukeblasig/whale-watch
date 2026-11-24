@@ -1,10 +1,10 @@
 {
- "updated": 1795534018,
+ "updated": 1795534623,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 261,
-  "fills": 216,
+  "orders": 262,
+  "fills": 217,
   "settled": 191,
   "w": 115,
   "l": 76,
@@ -30,9 +30,9 @@
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.13,
-  "takerPct": 90.74,
+  "takerPct": 90.78,
   "liveQuotePct": 100,
-  "open": 25,
+  "open": 26,
   "resting": 5,
   "cancelled": 40
  },
@@ -318,8 +318,8 @@
    "cancelled": 0
   },
   "sharpMl70": {
-   "orders": 18,
-   "fills": 14,
+   "orders": 19,
+   "fills": 15,
    "settled": 13,
    "w": 7,
    "l": 6,
@@ -344,10 +344,10 @@
     0.91
    ],
    "medianSlipCents": 1,
-   "avgSlipCents": 0.55,
-   "takerPct": 78.57,
+   "avgSlipCents": 0.58,
+   "takerPct": 80,
    "liveQuotePct": 100,
-   "open": 1,
+   "open": 2,
    "resting": 1,
    "cancelled": 3
   },
@@ -937,8 +937,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 30,
- "unitsToday": 16,
+ "openUnits": 31,
+ "unitsToday": 17,
  "drawdown": {
   "units": -13.88,
   "max": 16.93,
@@ -965,13 +965,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 216 fills"
+   "detail": "Median 0.00¢ over 217 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.1742906746031746,
+   "progress": 0.17454075727513227,
    "detail": "0.7 weeks, 191 settled bets"
   }
  ],
@@ -1207,9 +1207,9 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795534018,
+  "at": 1795534623,
   "status": "ok",
-  "candidates": 58,
+  "candidates": 59,
   "ordered": 1,
   "filled": 1,
   "rested": 0,
@@ -1217,8 +1217,8 @@
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
-  "closes": 24
+  "closes": 25
  },
- "dataUpdated": 1795533921,
+ "dataUpdated": 1795534510,
  "killSwitch": false
 }
