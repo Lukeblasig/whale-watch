@@ -28394,8 +28394,8 @@
     "bid": 0.54,
     "ask": 0.96,
     "mid": 0.75,
-    "at": 1795520216,
-    "minsBefore": 3248,
+    "at": 1795520840,
+    "minsBefore": 3238,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.76,
     "ask": 0.77,
     "mid": 0.765,
-    "at": 1795520216,
-    "minsBefore": 503,
+    "at": 1795520839,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -31894,8 +31894,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795520216,
-    "minsBefore": 503,
+    "at": 1795520839,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -33426,8 +33426,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795520216,
-    "minsBefore": 503,
+    "at": 1795520839,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -33663,8 +33663,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795520216,
-    "minsBefore": 503,
+    "at": 1795520840,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -33781,8 +33781,8 @@
     "bid": 0.38,
     "ask": 0.39,
     "mid": 0.385,
-    "at": 1795520216,
-    "minsBefore": 38,
+    "at": 1795520840,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -33835,8 +33835,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795520216,
-    "minsBefore": 38,
+    "at": 1795520840,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -33889,11 +33889,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.53,
-    "ask": 0.54,
-    "mid": 0.535,
-    "at": 1795520216,
-    "minsBefore": 38,
+    "bid": 0.51,
+    "ask": 0.52,
+    "mid": 0.515,
+    "at": 1795520840,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -33946,8 +33946,8 @@
     "bid": 0.66,
     "ask": 0.67,
     "mid": 0.665,
-    "at": 1795520216,
-    "minsBefore": 143,
+    "at": 1795520840,
+    "minsBefore": 133,
     "source": "polymarket book"
    }
   },
@@ -34003,8 +34003,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795520216,
-    "minsBefore": 263,
+    "at": 1795520840,
+    "minsBefore": 253,
     "source": "polymarket book"
    }
   },
@@ -34059,8 +34059,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795520216,
-    "minsBefore": 703,
+    "at": 1795520840,
+    "minsBefore": 693,
     "source": "polymarket book"
    }
   },
@@ -34113,8 +34113,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795520216,
-    "minsBefore": 563,
+    "at": 1795520840,
+    "minsBefore": 553,
     "source": "polymarket book"
    }
   },
@@ -34169,8 +34169,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795520216,
-    "minsBefore": 488,
+    "at": 1795520840,
+    "minsBefore": 478,
     "source": "polymarket book"
    }
   },
@@ -34226,8 +34226,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795520216,
-    "minsBefore": 503,
+    "at": 1795520841,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -34339,8 +34339,8 @@
     "bid": 0.8,
     "ask": 0.83,
     "mid": 0.815,
-    "at": 1795520216,
-    "minsBefore": 503,
+    "at": 1795520841,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -34393,8 +34393,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795520216,
-    "minsBefore": 368,
+    "at": 1795520841,
+    "minsBefore": 358,
     "source": "polymarket book"
    }
   },
@@ -34452,8 +34452,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795520217,
-    "minsBefore": 488,
+    "at": 1795520841,
+    "minsBefore": 478,
     "source": "polymarket book"
    }
   },
@@ -34508,8 +34508,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795520217,
-    "minsBefore": 368,
+    "at": 1795520841,
+    "minsBefore": 358,
     "source": "polymarket book"
    }
   },
@@ -34565,8 +34565,175 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795520217,
-    "minsBefore": 368,
+    "at": 1795520841,
+    "minsBefore": 358,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795520839-588",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x51a977566e95738bf3e6fa82e15e3c2eca80d86533171a5586d58002264efe69|1",
+   "pickKey": "Polymarket|0x51a977566e95738bf3e6fa82e15e3c2eca80d86533171a5586d58002264efe69|1",
+   "marketKey": "Polymarket|0x51a977566e95738bf3e6fa82e15e3c2eca80d86533171a5586d58002264efe69",
+   "venue": "Polymarket",
+   "conditionId": "0x51a977566e95738bf3e6fa82e15e3c2eca80d86533171a5586d58002264efe69",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Al Qadsiah win on 2026-11-24?",
+   "slug": "acle-sah-qad-2026-11-24",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795536000,
+   "whale": {
+    "q": 0.55,
+    "usd": 4927,
+    "score": 52,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795519751,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.56,
+   "createdAt": 1795520839,
+   "quoteAtOrder": {
+    "ask": 0.55,
+    "bid": 0.54,
+    "mid": 0.545,
+    "depth": 2498.35,
+    "at": 1795520841,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.55,
+   "filledAt": 1795520839,
+   "taker": true,
+   "feeUnits": 0.0135,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.54,
+    "ask": 0.55,
+    "mid": 0.545,
+    "at": 1795520841,
+    "minsBefore": 253,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795520839-589",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc7090s60",
+   "alsoMatched": [
+    "soc60"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x5fe2416e91c87a1b2dfde68c083278ca22dde25db4c5d2ee3ce4b44d140cc4f3|1",
+   "pickKey": "Polymarket|0x5fe2416e91c87a1b2dfde68c083278ca22dde25db4c5d2ee3ce4b44d140cc4f3|1",
+   "marketKey": "Polymarket|0x5fe2416e91c87a1b2dfde68c083278ca22dde25db4c5d2ee3ce4b44d140cc4f3",
+   "venue": "Polymarket",
+   "conditionId": "0x5fe2416e91c87a1b2dfde68c083278ca22dde25db4c5d2ee3ce4b44d140cc4f3",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Shabab Al Ahli Dubai vs. Al Qadsiah end in a draw?",
+   "slug": "acle-sah-qad-2026-11-24",
+   "league": "Other soccer",
+   "marketType": "draw",
+   "start": 1795536000,
+   "whale": {
+    "q": 0.73,
+    "usd": 3355,
+    "score": 60,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795519771,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.74,
+   "createdAt": 1795520839,
+   "quoteAtOrder": {
+    "ask": 0.75,
+    "bid": 0.74,
+    "mid": 0.745,
+    "depth": 2.77,
+    "at": 1795520841,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.74,
+    "ask": 0.75,
+    "mid": 0.745,
+    "at": 1795520841,
+    "minsBefore": 253,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795520839-590",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc7090agree40",
+   "alsoMatched": [
+    "ucl50agree",
+    "soc8090ok"
+   ],
+   "sigKey": "0x71ac3cbb40647cb6da6fa0dc2923999ad9c4d2b1|0x70dd6671f4577793e1d736596fb5224f74d76d5ead2b6eb712b3e3a68a94cd8a|0",
+   "pickKey": "Polymarket|0x70dd6671f4577793e1d736596fb5224f74d76d5ead2b6eb712b3e3a68a94cd8a|0",
+   "marketKey": "Polymarket|0x70dd6671f4577793e1d736596fb5224f74d76d5ead2b6eb712b3e3a68a94cd8a",
+   "venue": "Polymarket",
+   "conditionId": "0x70dd6671f4577793e1d736596fb5224f74d76d5ead2b6eb712b3e3a68a94cd8a",
+   "idx": 0,
+   "name": "Over",
+   "title": "Galatasaray SK vs. Aston Villa FC: O/U 1.5",
+   "slug": "ucl-gal-ast-2026-11-24-more-markets",
+   "league": "UCL",
+   "marketType": "total",
+   "start": 1795542300,
+   "whale": {
+    "q": 0.8736,
+    "usd": 20000,
+    "score": 52,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795520138,
+    "wallet": "0x71ac3cbb40647cb6da6fa0dc2923999ad9c4d2b1"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.88,
+   "createdAt": 1795520839,
+   "quoteAtOrder": {
+    "ask": 0.87,
+    "bid": 0.86,
+    "mid": 0.865,
+    "depth": 12865.27,
+    "at": 1795520841,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.87,
+   "filledAt": 1795520839,
+   "taker": true,
+   "feeUnits": 0.0039,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.4,
+   "close": {
+    "bid": 0.86,
+    "ask": 0.87,
+    "mid": 0.865,
+    "at": 1795520841,
+    "minsBefore": 358,
     "source": "polymarket book"
    }
   }
