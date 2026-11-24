@@ -1,10 +1,10 @@
 {
- "updated": 1795544809,
+ "updated": 1795545406,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 268,
-  "fills": 221,
+  "orders": 270,
+  "fills": 222,
   "settled": 194,
   "w": 116,
   "l": 78,
@@ -30,10 +30,10 @@
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.14,
-  "takerPct": 90.95,
+  "takerPct": 90.99,
   "liveQuotePct": 100,
-  "open": 27,
-  "resting": 3,
+  "open": 28,
+  "resting": 4,
   "cancelled": 44
  },
  "byRule": {
@@ -352,7 +352,7 @@
    "cancelled": 4
   },
   "osoc60agree": {
-   "orders": 2,
+   "orders": 3,
    "fills": 1,
    "settled": 1,
    "w": 0,
@@ -376,7 +376,7 @@
    "takerPct": 100,
    "liveQuotePct": 100,
    "open": 0,
-   "resting": 0,
+   "resting": 1,
    "cancelled": 1
   },
   "soc7090s60": {
@@ -750,8 +750,8 @@
    "cancelled": 0
   },
   "socSharp4050": {
-   "orders": 30,
-   "fills": 25,
+   "orders": 31,
+   "fills": 26,
    "settled": 23,
    "w": 8,
    "l": 15,
@@ -776,10 +776,10 @@
     -0.01
    ],
    "medianSlipCents": 0,
-   "avgSlipCents": -0.27,
+   "avgSlipCents": -0.26,
    "takerPct": 100,
    "liveQuotePct": 100,
-   "open": 2,
+   "open": 3,
    "resting": 0,
    "cancelled": 5
   },
@@ -937,8 +937,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 30,
- "unitsToday": 19,
+ "openUnits": 32,
+ "unitsToday": 21,
  "drawdown": {
   "units": -15.16,
   "max": 18.2,
@@ -965,13 +965,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 221 fills"
+   "detail": "Median 0.00¢ over 222 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.17875124007936508,
+   "progress": 0.17899801587301586,
    "detail": "0.7 weeks, 194 settled bets"
   }
  ],
@@ -1207,18 +1207,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795544809,
+  "at": 1795545406,
   "status": "ok",
-  "candidates": 42,
-  "ordered": 0,
-  "filled": 0,
-  "rested": 0,
+  "candidates": 48,
+  "ordered": 2,
+  "filled": 1,
+  "rested": 1,
   "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
   "cancelled": 0,
   "closes": 20
  },
- "dataUpdated": 1795544703,
+ "dataUpdated": 1795545321,
  "killSwitch": false
 }
