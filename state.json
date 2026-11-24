@@ -28392,10 +28392,10 @@
    "slippageCents": 1,
    "close": {
     "bid": 0.54,
-    "ask": 0.94,
-    "mid": 0.74,
-    "at": 1795546611,
-    "minsBefore": 2808,
+    "ask": 0.95,
+    "mid": 0.745,
+    "at": 1795547255,
+    "minsBefore": 2797,
     "source": "polymarket book"
    }
   },
@@ -31599,8 +31599,8 @@
     "bid": 0.76,
     "ask": 0.77,
     "mid": 0.765,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "at": 1795547255,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -31894,8 +31894,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "at": 1795547255,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -33426,8 +33426,8 @@
     "bid": 0.85,
     "ask": 0.86,
     "mid": 0.855,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "at": 1795547255,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -33663,8 +33663,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "at": 1795547255,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -34076,8 +34076,8 @@
     "bid": 0.75,
     "ask": 0.76,
     "mid": 0.755,
-    "at": 1795546611,
-    "minsBefore": 263,
+    "at": 1795547255,
+    "minsBefore": 252,
     "source": "polymarket book"
    }
   },
@@ -34130,8 +34130,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795546611,
-    "minsBefore": 123,
+    "at": 1795547255,
+    "minsBefore": 112,
     "source": "polymarket book"
    }
   },
@@ -34186,8 +34186,8 @@
     "bid": 0.37,
     "ask": 0.39,
     "mid": 0.38,
-    "at": 1795546611,
-    "minsBefore": 48,
+    "at": 1795547255,
+    "minsBefore": 37,
     "source": "polymarket book"
    }
   },
@@ -34243,8 +34243,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "at": 1795547256,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -34361,8 +34361,8 @@
     "bid": 0.81,
     "ask": 0.83,
     "mid": 0.82,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "at": 1795547256,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -34474,8 +34474,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795546611,
-    "minsBefore": 48,
+    "at": 1795547256,
+    "minsBefore": 37,
     "source": "polymarket book"
    }
   },
@@ -34817,8 +34817,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795546611,
-    "minsBefore": 483,
+    "at": 1795547256,
+    "minsBefore": 472,
     "source": "polymarket book"
    }
   },
@@ -34981,8 +34981,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "at": 1795547256,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -35148,11 +35148,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.71,
-    "ask": 0.72,
-    "mid": 0.715,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "bid": 0.7,
+    "ask": 0.71,
+    "mid": 0.705,
+    "at": 1795547256,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -35205,8 +35205,8 @@
     "bid": 0.32,
     "ask": 0.33,
     "mid": 0.325,
-    "at": 1795546611,
-    "minsBefore": 303,
+    "at": 1795547256,
+    "minsBefore": 292,
     "source": "polymarket book"
    }
   },
@@ -35313,8 +35313,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "at": 1795547256,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -35369,8 +35369,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795546611,
-    "minsBefore": 903,
+    "at": 1795547256,
+    "minsBefore": 892,
     "source": "polymarket book"
    }
   },
@@ -35425,8 +35425,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795546611,
-    "minsBefore": 903,
+    "at": 1795547256,
+    "minsBefore": 892,
     "source": "polymarket book"
    }
   },
@@ -35481,8 +35481,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795546611,
-    "minsBefore": 903,
+    "at": 1795547256,
+    "minsBefore": 892,
     "source": "polymarket book"
    }
   },
@@ -35535,8 +35535,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795546611,
-    "minsBefore": 63,
+    "at": 1795547256,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -35693,19 +35693,19 @@
     "at": 1795546002,
     "source": "polymarket book"
    },
-   "status": "resting",
-   "fillPrice": null,
-   "filledAt": null,
-   "taker": null,
-   "feeUnits": null,
-   "priceSource": null,
-   "slippageCents": null,
+   "status": "filled",
+   "fillPrice": 0.5,
+   "filledAt": 1795547254,
+   "taker": false,
+   "feeUnits": 0,
+   "priceSource": "polymarket book",
+   "slippageCents": 0.3,
    "close": {
-    "bid": 0.5,
-    "ask": 0.51,
-    "mid": 0.505,
-    "at": 1795546612,
-    "minsBefore": 48,
+    "bid": 0.49,
+    "ask": 0.5,
+    "mid": 0.495,
+    "at": 1795547257,
+    "minsBefore": 37,
     "source": "polymarket book"
    }
   },
@@ -35758,8 +35758,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795546612,
-    "minsBefore": 48,
+    "at": 1795547257,
+    "minsBefore": 37,
     "source": "polymarket book"
    }
   },
@@ -35818,8 +35818,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795546612,
-    "minsBefore": 63,
+    "at": 1795547257,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   },
@@ -35869,11 +35869,233 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
+    "bid": 0.48,
+    "ask": 0.49,
+    "mid": 0.485,
+    "at": 1795547257,
+    "minsBefore": 52,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795547254-611",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0x4da87ef56f53ea94365870d627c54322f866aef1118140323d616790b4480a85|1",
+   "pickKey": "Polymarket|0x4da87ef56f53ea94365870d627c54322f866aef1118140323d616790b4480a85|1",
+   "marketKey": "Polymarket|0x4da87ef56f53ea94365870d627c54322f866aef1118140323d616790b4480a85",
+   "venue": "Polymarket",
+   "conditionId": "0x4da87ef56f53ea94365870d627c54322f866aef1118140323d616790b4480a85",
+   "idx": 1,
+   "name": "Under",
+   "title": "Sheffield United FC vs. Southampton FC: O/U 2.5",
+   "slug": "elc-she-sot-2026-11-24-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795549500,
+   "whale": {
+    "q": 0.4555,
+    "usd": 16075,
+    "score": 56,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795545331,
+    "wallet": "0x018d6c652ca2f1d428a1186faafcf03b537eac8a"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.46,
+   "createdAt": 1795547254,
+   "quoteAtOrder": {
+    "ask": 0.5,
+    "bid": 0.49,
+    "mid": 0.495,
+    "depth": 8794.03,
+    "at": 1795547257,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795546612,
-    "minsBefore": 63,
+    "at": 1795547257,
+    "minsBefore": 37,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795547254-612",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0xb84d5763f34704fae0eb4b8afce7d2fcda90527032902d6bdc7624169ceb1c1f|0",
+   "pickKey": "Polymarket|0xb84d5763f34704fae0eb4b8afce7d2fcda90527032902d6bdc7624169ceb1c1f|0",
+   "marketKey": "Polymarket|0xb84d5763f34704fae0eb4b8afce7d2fcda90527032902d6bdc7624169ceb1c1f",
+   "venue": "Polymarket",
+   "conditionId": "0xb84d5763f34704fae0eb4b8afce7d2fcda90527032902d6bdc7624169ceb1c1f",
+   "idx": 0,
+   "name": "Over",
+   "title": "Blackpool FC vs. Leicester City FC: O/U 3.5",
+   "slug": "el1-bla-lei-2026-10-03-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795549500,
+   "whale": {
+    "q": 0.45,
+    "usd": 4552,
+    "score": 32,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795545539,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.46,
+   "createdAt": 1795547254,
+   "quoteAtOrder": {
+    "ask": 0.44,
+    "bid": 0.43,
+    "mid": 0.435,
+    "depth": 3317.99,
+    "at": 1795547257,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.44,
+   "filledAt": 1795547254,
+   "taker": true,
+   "feeUnits": 0.0168,
+   "priceSource": "polymarket book",
+   "slippageCents": -1,
+   "close": {
+    "bid": 0.43,
+    "ask": 0.44,
+    "mid": 0.435,
+    "at": 1795547257,
+    "minsBefore": 37,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795547254-613",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0x051adea0d16c85df8a8a9c7e400e0655905d1db9|0x5db4fcf09c06da101509033bfc908aa99f991fc9cb7518a026cedc345b840925|1",
+   "pickKey": "Polymarket|0x5db4fcf09c06da101509033bfc908aa99f991fc9cb7518a026cedc345b840925|1",
+   "marketKey": "Polymarket|0x5db4fcf09c06da101509033bfc908aa99f991fc9cb7518a026cedc345b840925",
+   "venue": "Polymarket",
+   "conditionId": "0x5db4fcf09c06da101509033bfc908aa99f991fc9cb7518a026cedc345b840925",
+   "idx": 1,
+   "name": "Under",
+   "title": "Manchester City FC vs. SSC Napoli: Manchester City FC O/U 2.5",
+   "slug": "ucl-mnc-nap-2026-11-24-more-markets",
+   "league": "UCL",
+   "marketType": "total",
+   "start": 1795550400,
+   "whale": {
+    "q": 0.46,
+    "usd": 1125,
+    "score": 45,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795546750,
+    "wallet": "0x051adea0d16c85df8a8a9c7e400e0655905d1db9"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.47,
+   "createdAt": 1795547254,
+   "quoteAtOrder": {
+    "ask": 0.47,
+    "bid": 0.45,
+    "mid": 0.46,
+    "depth": 5062.27,
+    "at": 1795547257,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.47,
+   "filledAt": 1795547254,
+   "taker": true,
+   "feeUnits": 0.0159,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.45,
+    "ask": 0.47,
+    "mid": 0.46,
+    "at": 1795547257,
+    "minsBefore": 52,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795547254-614",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "ucl4060agree",
+   "alsoMatched": [
+    "socSharp4050s50",
+    "socSharp4050",
+    "ucl50agree"
+   ],
+   "sigKey": "0x051adea0d16c85df8a8a9c7e400e0655905d1db9|0x77484b169e34d40254f00064d5c57a615214a242fd9590d4706e1dc2855339ef|1",
+   "pickKey": "Polymarket|0x77484b169e34d40254f00064d5c57a615214a242fd9590d4706e1dc2855339ef|1",
+   "marketKey": "Polymarket|0x77484b169e34d40254f00064d5c57a615214a242fd9590d4706e1dc2855339ef",
+   "venue": "Polymarket",
+   "conditionId": "0x77484b169e34d40254f00064d5c57a615214a242fd9590d4706e1dc2855339ef",
+   "idx": 1,
+   "name": "Under",
+   "title": "Manchester City FC vs. SSC Napoli: O/U 3.5",
+   "slug": "ucl-mnc-nap-2026-11-24-more-markets",
+   "league": "UCL",
+   "marketType": "total",
+   "start": 1795550400,
+   "whale": {
+    "q": 0.48,
+    "usd": 2831,
+    "score": 57,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795546763,
+    "wallet": "0x051adea0d16c85df8a8a9c7e400e0655905d1db9"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.49,
+   "createdAt": 1795547254,
+   "quoteAtOrder": {
+    "ask": 0.49,
+    "bid": 0.48,
+    "mid": 0.485,
+    "depth": 31700.49,
+    "at": 1795547257,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.49,
+   "filledAt": 1795547254,
+   "taker": true,
+   "feeUnits": 0.0153,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.48,
+    "ask": 0.49,
+    "mid": 0.485,
+    "at": 1795547257,
+    "minsBefore": 52,
     "source": "polymarket book"
    }
   }
@@ -35883,7 +36105,6 @@
   "socAgree40|Polymarket|0x56aed2130ecbca8523f31b52acfa47df16927e9d76b303203bdf18f26cfb2ee4|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x20c34f68662f47fa7c283d469853f6b3f645c6a92dc1ae7c5df24285f2210cfc|1|price is over 30 min old": 1795715100,
   "Polymarket|0x79909c27cec20878d54e1ae855c89982a7359a2a5f09b7c3c74431cdbf32d410|1|price 93¢ is over 90¢": 1795715100,
-  "Polymarket|0x13a27f67a1284260454fe0739836354090c4383938b8797fd41c4e3c552f9e31|1|already tried this pick": 1795374000,
   "Polymarket|0x56c7aec7b626f2b04733c80ec1807529dd353596e784233f8da69844394fe682|1|starts in under 10 min": 1795376700,
   "Polymarket|0x802a96c1e36b0d3c5bab0bd7f52bc7928dd082a6c2599e11c5c8e5ca487ca6a3|0|already tried this pick": 1795377600,
   "Polymarket|0x35e3a46eea4c56646973fb71aaa058336dcdf80d5b430f33fc67d950aa7a5027|0|already tried this pick": 1795379400,
@@ -35907,7 +36128,8 @@
   "Polymarket|0x8d6f433a6315d51e212af11cf0b8810a70300563864d7da41b6ac7bb14044073|1|already tried this pick": 1795536000,
   "Polymarket|0x1d64140ff46026b671a735b406604a3cfb550006a47b5965a012f3a2dc5448d8|1|already tried this pick": 1795542300,
   "Polymarket|0x90ebdcf4181f2e2795788ea5b50aea2bf35e12d9a287eb1278b31079bff2cfdb|0|already tried this pick": 1795542300,
-  "Polymarket|0x2a3a45199ad9bf62067c7af208f8d736b69ad94bf7cac691e2f268820951e932|1|already tried this pick": 1795546800
+  "Polymarket|0x2a3a45199ad9bf62067c7af208f8d736b69ad94bf7cac691e2f268820951e932|1|already tried this pick": 1795546800,
+  "Polymarket|0xd6f786af4e3c5955403bb2e8a54846ddf39fb5209598ca9ca09d3aa933bdce5f|0|already bet the other side of this market": 1795549500
  },
  "firstAlert": {}
 }
