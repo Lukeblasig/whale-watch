@@ -28394,8 +28394,8 @@
     "bid": 0.52,
     "ask": 0.96,
     "mid": 0.74,
-    "at": 1795563392,
-    "minsBefore": 2528,
+    "at": 1795563992,
+    "minsBefore": 2518,
     "source": "polymarket book"
    }
   },
@@ -34508,7 +34508,7 @@
     "at": 1795516624,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.61,
    "filledAt": 1795517225,
    "taker": false,
@@ -34522,7 +34522,12 @@
     "at": 1795549030,
     "minsBefore": 8,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.6393,
+   "units": 0.6393,
+   "whaleUnits": 0.6666666666666667,
+   "settledAt": 1795563989
   },
   {
    "id": "1795519595-586",
@@ -34872,8 +34877,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795563392,
-    "minsBefore": 203,
+    "at": 1795563992,
+    "minsBefore": 193,
     "source": "polymarket book"
    }
   },
@@ -35282,11 +35287,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.34,
-    "ask": 0.35,
-    "mid": 0.345,
-    "at": 1795563392,
-    "minsBefore": 23,
+    "bid": 0.35,
+    "ask": 0.36,
+    "mid": 0.355,
+    "at": 1795563992,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -35459,8 +35464,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795563392,
-    "minsBefore": 623,
+    "at": 1795563992,
+    "minsBefore": 613,
     "source": "polymarket book"
    }
   },
@@ -35515,8 +35520,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795563392,
-    "minsBefore": 623,
+    "at": 1795563992,
+    "minsBefore": 613,
     "source": "polymarket book"
    }
   },
@@ -35571,8 +35576,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795563392,
-    "minsBefore": 623,
+    "at": 1795563992,
+    "minsBefore": 613,
     "source": "polymarket book"
    }
   },
@@ -35793,7 +35798,7 @@
     "at": 1795546002,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.5,
    "filledAt": 1795547254,
    "taker": false,
@@ -35807,7 +35812,12 @@
     "at": 1795549031,
     "minsBefore": 8,
     "source": "polymarket book"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1,
+   "whaleUnits": -1,
+   "settledAt": 1795563989
   },
   {
    "id": "1795546000-608",
@@ -35847,7 +35857,7 @@
     "at": 1795546002,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.57,
    "filledAt": 1795546000,
    "taker": true,
@@ -35861,7 +35871,12 @@
     "at": 1795549031,
     "minsBefore": 8,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.7544,
+   "units": 0.7415,
+   "whaleUnits": 0.7241379310344829,
+   "settledAt": 1795563989
   },
   {
    "id": "1795546610-609",
