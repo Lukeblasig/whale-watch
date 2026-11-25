@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795611399,
-    "minsBefore": 1728,
+    "at": 1795611979,
+    "minsBefore": 1719,
     "source": "polymarket book"
    }
   },
@@ -36783,8 +36783,8 @@
     "bid": 0.35,
     "ask": 0.37,
     "mid": 0.36,
-    "at": 1795611399,
-    "minsBefore": 183,
+    "at": 1795611979,
+    "minsBefore": 174,
     "source": "polymarket book"
    }
   },
@@ -36837,8 +36837,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795611399,
-    "minsBefore": 288,
+    "at": 1795611979,
+    "minsBefore": 279,
     "source": "polymarket book"
    }
   },
@@ -36999,8 +36999,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795611399,
-    "minsBefore": 423,
+    "at": 1795611979,
+    "minsBefore": 414,
     "source": "polymarket book"
    }
   },
@@ -37179,8 +37179,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795611399,
-    "minsBefore": 423,
+    "at": 1795611979,
+    "minsBefore": 414,
     "source": "polymarket book"
    }
   },
@@ -37287,8 +37287,8 @@
     "bid": 0.72,
     "ask": 0.74,
     "mid": 0.73,
-    "at": 1795611399,
-    "minsBefore": 5763,
+    "at": 1795611979,
+    "minsBefore": 5754,
     "source": "polymarket book"
    }
   },
@@ -37397,8 +37397,8 @@
     "bid": 0.65,
     "ask": 0.66,
     "mid": 0.655,
-    "at": 1795611399,
-    "minsBefore": 423,
+    "at": 1795611979,
+    "minsBefore": 414,
     "source": "polymarket book"
    }
   },
@@ -37453,8 +37453,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795611399,
-    "minsBefore": 288,
+    "at": 1795611979,
+    "minsBefore": 279,
     "source": "polymarket book"
    }
   },
@@ -37507,8 +37507,64 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795611400,
-    "minsBefore": 423,
+    "at": 1795611979,
+    "minsBefore": 414,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795611979-637",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x8a03ea18b08ed3f21dcdc482e6d9f297b5877719827e57da58e0cc5dbb1a8499|0",
+   "pickKey": "Polymarket|0x8a03ea18b08ed3f21dcdc482e6d9f297b5877719827e57da58e0cc5dbb1a8499|0",
+   "marketKey": "Polymarket|0x8a03ea18b08ed3f21dcdc482e6d9f297b5877719827e57da58e0cc5dbb1a8499",
+   "venue": "Polymarket",
+   "conditionId": "0x8a03ea18b08ed3f21dcdc482e6d9f297b5877719827e57da58e0cc5dbb1a8499",
+   "idx": 0,
+   "name": "Over",
+   "title": "Independiente Santa Fe vs. Once Caldas: O/U 2.5",
+   "slug": "col1-isf-onc-2026-11-25-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795648800,
+   "whale": {
+    "q": 0.48,
+    "usd": 1864,
+    "score": 54,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795610252,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.49,
+   "createdAt": 1795611979,
+   "quoteAtOrder": {
+    "ask": 0.42,
+    "bid": 0.41,
+    "mid": 0.415,
+    "depth": 1058.4,
+    "at": 1795611980,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.42,
+   "filledAt": 1795611979,
+   "taker": true,
+   "feeUnits": 0.0174,
+   "priceSource": "polymarket book",
+   "slippageCents": -6,
+   "close": {
+    "bid": 0.41,
+    "ask": 0.42,
+    "mid": 0.415,
+    "at": 1795611980,
+    "minsBefore": 614,
     "source": "polymarket book"
    }
   }
