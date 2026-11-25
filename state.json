@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795600604,
-    "minsBefore": 1908,
+    "at": 1795601300,
+    "minsBefore": 1897,
     "source": "polymarket book"
    }
   },
@@ -36765,11 +36765,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -4,
    "close": {
-    "bid": 0.34,
+    "bid": 0.35,
     "ask": 0.36,
-    "mid": 0.35,
-    "at": 1795600604,
-    "minsBefore": 363,
+    "mid": 0.355,
+    "at": 1795601300,
+    "minsBefore": 352,
     "source": "polymarket book"
    }
   },
@@ -36822,8 +36822,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795600604,
-    "minsBefore": 468,
+    "at": 1795601300,
+    "minsBefore": 457,
     "source": "polymarket book"
    }
   },
@@ -36984,8 +36984,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795600605,
-    "minsBefore": 603,
+    "at": 1795601300,
+    "minsBefore": 592,
     "source": "polymarket book"
    }
   },
@@ -37154,8 +37154,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795600605,
-    "minsBefore": 603,
+    "at": 1795601300,
+    "minsBefore": 592,
     "source": "polymarket book"
    }
   },
@@ -37262,8 +37262,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795600605,
-    "minsBefore": 5943,
+    "at": 1795601300,
+    "minsBefore": 5932,
     "source": "polymarket book"
    }
   },
@@ -37320,6 +37320,60 @@
     "mid": 0.395,
     "at": 1795600605,
     "minsBefore": 3,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795601299-634",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "ucl50agree",
+   "alsoMatched": [],
+   "sigKey": "0x39d807a9c34f226e8c5b7d2a06822bc7ff47f064|0xc8e83d7ba078e6a717cc1102d12536f3eb5a8c830b7e44d8101544c2f5476d5c|0",
+   "pickKey": "Polymarket|0xc8e83d7ba078e6a717cc1102d12536f3eb5a8c830b7e44d8101544c2f5476d5c|0",
+   "marketKey": "Polymarket|0xc8e83d7ba078e6a717cc1102d12536f3eb5a8c830b7e44d8101544c2f5476d5c",
+   "venue": "Polymarket",
+   "conditionId": "0xc8e83d7ba078e6a717cc1102d12536f3eb5a8c830b7e44d8101544c2f5476d5c",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Paris Saint-Germain FC win on 2026-11-25?",
+   "slug": "ucl-psg-rom-2026-11-25",
+   "league": "UCL",
+   "marketType": "moneyline",
+   "start": 1795636800,
+   "whale": {
+    "q": 0.66,
+    "usd": 13700,
+    "score": 59,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795600325,
+    "wallet": "0x39d807a9c34f226e8c5b7d2a06822bc7ff47f064"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.67,
+   "createdAt": 1795601299,
+   "quoteAtOrder": {
+    "ask": 0.66,
+    "bid": 0.65,
+    "mid": 0.655,
+    "depth": 29197.04,
+    "at": 1795601300,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.66,
+   "filledAt": 1795601299,
+   "taker": true,
+   "feeUnits": 0.0102,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.65,
+    "ask": 0.66,
+    "mid": 0.655,
+    "at": 1795601300,
+    "minsBefore": 592,
     "source": "polymarket book"
    }
   }
