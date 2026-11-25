@@ -28394,8 +28394,8 @@
     "bid": 0.85,
     "ask": 0.95,
     "mid": 0.9,
-    "at": 1795632980,
-    "minsBefore": 1369,
+    "at": 1795633591,
+    "minsBefore": 1358,
     "source": "polymarket book"
    }
   },
@@ -37026,11 +37026,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -0.3,
    "close": {
-    "bid": 0.46,
-    "ask": 0.47,
-    "mid": 0.465,
-    "at": 1795632980,
-    "minsBefore": 64,
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795633591,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -37209,8 +37209,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795632980,
-    "minsBefore": 64,
+    "at": 1795633591,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -37322,8 +37322,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795632980,
-    "minsBefore": 5404,
+    "at": 1795633591,
+    "minsBefore": 5393,
     "source": "polymarket book"
    }
   },
@@ -37437,8 +37437,8 @@
     "bid": 0.64,
     "ask": 0.65,
     "mid": 0.645,
-    "at": 1795632981,
-    "minsBefore": 64,
+    "at": 1795633591,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -37547,8 +37547,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795632981,
-    "minsBefore": 64,
+    "at": 1795633591,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -37603,8 +37603,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795632981,
-    "minsBefore": 264,
+    "at": 1795633592,
+    "minsBefore": 253,
     "source": "polymarket book"
    }
   },
@@ -37711,8 +37711,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795632981,
-    "minsBefore": 394,
+    "at": 1795633592,
+    "minsBefore": 383,
     "source": "polymarket book"
    }
   },
@@ -37825,8 +37825,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795632981,
-    "minsBefore": 64,
+    "at": 1795633591,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -37879,8 +37879,8 @@
     "bid": 0.59,
     "ask": 0.6,
     "mid": 0.595,
-    "at": 1795632981,
-    "minsBefore": 64,
+    "at": 1795633592,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -38105,8 +38105,8 @@
     "bid": 0.84,
     "ask": 0.85,
     "mid": 0.845,
-    "at": 1795632981,
-    "minsBefore": 64,
+    "at": 1795633592,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -38156,11 +38156,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.51,
-    "ask": 0.52,
-    "mid": 0.515,
-    "at": 1795632981,
-    "minsBefore": 64,
+    "bid": 0.53,
+    "ask": 0.54,
+    "mid": 0.535,
+    "at": 1795633592,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -38215,8 +38215,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795632981,
-    "minsBefore": 64,
+    "at": 1795633592,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -38269,11 +38269,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.59,
-    "ask": 0.6,
-    "mid": 0.595,
-    "at": 1795632981,
-    "minsBefore": 64,
+    "bid": 0.6,
+    "ask": 0.61,
+    "mid": 0.605,
+    "at": 1795633592,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -38323,11 +38323,235 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.4,
-    "ask": 0.41,
-    "mid": 0.405,
-    "at": 1795632981,
-    "minsBefore": 64,
+    "bid": 0.42,
+    "ask": 0.43,
+    "mid": 0.425,
+    "at": 1795633592,
+    "minsBefore": 53,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795633590-651",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "ucl7090s60",
+   "alsoMatched": [
+    "soc7090s60",
+    "sharp8090agree",
+    "soc7090agree40",
+    "socSharpAgree60"
+   ],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x30486130e58ddedae2d3429f0a56950ea5e70178a6095d1f216e0bd0c120dfdd|1",
+   "pickKey": "Polymarket|0x30486130e58ddedae2d3429f0a56950ea5e70178a6095d1f216e0bd0c120dfdd|1",
+   "marketKey": "Polymarket|0x30486130e58ddedae2d3429f0a56950ea5e70178a6095d1f216e0bd0c120dfdd",
+   "venue": "Polymarket",
+   "conditionId": "0x30486130e58ddedae2d3429f0a56950ea5e70178a6095d1f216e0bd0c120dfdd",
+   "idx": 1,
+   "name": "No",
+   "title": "Will VfB Stuttgart win on 2026-11-25?",
+   "slug": "ucl-int-stu-2026-11-25",
+   "league": "UCL",
+   "marketType": "moneyline",
+   "start": 1795636800,
+   "whale": {
+    "q": 0.86,
+    "usd": 2214,
+    "score": 61,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795632726,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.87,
+   "createdAt": 1795633590,
+   "quoteAtOrder": {
+    "ask": 0.87,
+    "bid": 0.86,
+    "mid": 0.865,
+    "depth": 5427.48,
+    "at": 1795633592,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.87,
+   "filledAt": 1795633590,
+   "taker": true,
+   "feeUnits": 0.0039,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.86,
+    "ask": 0.87,
+    "mid": 0.865,
+    "at": 1795633592,
+    "minsBefore": 53,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795633590-652",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c|0x419b16927857d2a99bc79b4f3819fc0983381a4cc3ff70ee4a9ca8538eae45f7|0",
+   "pickKey": "Polymarket|0x419b16927857d2a99bc79b4f3819fc0983381a4cc3ff70ee4a9ca8538eae45f7|0",
+   "marketKey": "Polymarket|0x419b16927857d2a99bc79b4f3819fc0983381a4cc3ff70ee4a9ca8538eae45f7",
+   "venue": "Polymarket",
+   "conditionId": "0x419b16927857d2a99bc79b4f3819fc0983381a4cc3ff70ee4a9ca8538eae45f7",
+   "idx": 0,
+   "name": "FC Internazionale Milano",
+   "title": "Spread: FC Internazionale Milano (-1.5)",
+   "slug": "ucl-int-stu-2026-11-25-more-markets",
+   "league": "UCL",
+   "marketType": "spread",
+   "start": 1795636800,
+   "whale": {
+    "q": 0.4867,
+    "usd": 54266,
+    "score": 46,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795632726,
+    "wallet": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.49,
+   "createdAt": 1795633590,
+   "quoteAtOrder": {
+    "ask": 0.5,
+    "bid": 0.49,
+    "mid": 0.495,
+    "depth": 41830.96,
+    "at": 1795633592,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.49,
+    "ask": 0.5,
+    "mid": 0.495,
+    "at": 1795633592,
+    "minsBefore": 53,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795633590-653",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "ucl4060agree",
+   "alsoMatched": [
+    "socSharp4060agree60",
+    "socSharpAgree60"
+   ],
+   "sigKey": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0|0x4fce034c8184a5d06a810a33c73ef64e84a12aef133f2c2ffbb38e4cb2bef17b|0",
+   "pickKey": "Polymarket|0x4fce034c8184a5d06a810a33c73ef64e84a12aef133f2c2ffbb38e4cb2bef17b|0",
+   "marketKey": "Polymarket|0x4fce034c8184a5d06a810a33c73ef64e84a12aef133f2c2ffbb38e4cb2bef17b",
+   "venue": "Polymarket",
+   "conditionId": "0x4fce034c8184a5d06a810a33c73ef64e84a12aef133f2c2ffbb38e4cb2bef17b",
+   "idx": 0,
+   "name": "Club Atlético de Madrid",
+   "title": "Spread: Club Atlético de Madrid (-2.5)",
+   "slug": "ucl-atm-vf-2026-11-25-more-markets",
+   "league": "UCL",
+   "marketType": "spread",
+   "start": 1795636800,
+   "whale": {
+    "q": 0.53,
+    "usd": 7101,
+    "score": 61,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795632940,
+    "wallet": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.54,
+   "createdAt": 1795633590,
+   "quoteAtOrder": {
+    "ask": 0.54,
+    "bid": 0.53,
+    "mid": 0.535,
+    "depth": 7821.87,
+    "at": 1795633592,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.54,
+   "filledAt": 1795633590,
+   "taker": true,
+   "feeUnits": 0.0138,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.53,
+    "ask": 0.54,
+    "mid": 0.535,
+    "at": 1795633592,
+    "minsBefore": 53,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795633590-654",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0xbb6418f9db6d1c765965dc4c9d48cd5b4d2bdb86|0x184743de2502673ea8f801bab1c3143cc9e2e4f05545ff373ff8793c05848ccb|1",
+   "pickKey": "Polymarket|0x184743de2502673ea8f801bab1c3143cc9e2e4f05545ff373ff8793c05848ccb|1",
+   "marketKey": "Polymarket|0x184743de2502673ea8f801bab1c3143cc9e2e4f05545ff373ff8793c05848ccb",
+   "venue": "Polymarket",
+   "conditionId": "0x184743de2502673ea8f801bab1c3143cc9e2e4f05545ff373ff8793c05848ccb",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Liverpool FC win on 2026-11-25?",
+   "slug": "ucl-bru-liv-2026-11-25",
+   "league": "UCL",
+   "marketType": "moneyline",
+   "start": 1795636800,
+   "whale": {
+    "q": 0.42,
+    "usd": 1373,
+    "score": 28,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795633233,
+    "wallet": "0xbb6418f9db6d1c765965dc4c9d48cd5b4d2bdb86"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.43,
+   "createdAt": 1795633590,
+   "quoteAtOrder": {
+    "ask": 0.43,
+    "bid": 0.42,
+    "mid": 0.425,
+    "depth": 28262.55,
+    "at": 1795633592,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.43,
+   "filledAt": 1795633590,
+   "taker": true,
+   "feeUnits": 0.0171,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.42,
+    "ask": 0.43,
+    "mid": 0.425,
+    "at": 1795633592,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   }
