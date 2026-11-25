@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795625203,
-    "minsBefore": 1498,
+    "at": 1795625791,
+    "minsBefore": 1488,
     "source": "polymarket book"
    }
   },
@@ -36857,8 +36857,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795625203,
-    "minsBefore": 58,
+    "at": 1795625791,
+    "minsBefore": 48,
     "source": "polymarket book"
    }
   },
@@ -37029,8 +37029,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795625203,
-    "minsBefore": 193,
+    "at": 1795625791,
+    "minsBefore": 183,
     "source": "polymarket book"
    }
   },
@@ -37209,8 +37209,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795625203,
-    "minsBefore": 193,
+    "at": 1795625791,
+    "minsBefore": 183,
     "source": "polymarket book"
    }
   },
@@ -37322,8 +37322,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795625204,
-    "minsBefore": 5533,
+    "at": 1795625792,
+    "minsBefore": 5523,
     "source": "polymarket book"
    }
   },
@@ -37437,8 +37437,8 @@
     "bid": 0.64,
     "ask": 0.65,
     "mid": 0.645,
-    "at": 1795625204,
-    "minsBefore": 193,
+    "at": 1795625791,
+    "minsBefore": 183,
     "source": "polymarket book"
    }
   },
@@ -37493,8 +37493,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795625204,
-    "minsBefore": 58,
+    "at": 1795625791,
+    "minsBefore": 48,
     "source": "polymarket book"
    }
   },
@@ -37547,8 +37547,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795625204,
-    "minsBefore": 193,
+    "at": 1795625792,
+    "minsBefore": 183,
     "source": "polymarket book"
    }
   },
@@ -37603,8 +37603,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795625204,
-    "minsBefore": 393,
+    "at": 1795625792,
+    "minsBefore": 383,
     "source": "polymarket book"
    }
   },
@@ -37654,11 +37654,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.79,
-    "ask": 0.8,
-    "mid": 0.795,
-    "at": 1795625204,
-    "minsBefore": 58,
+    "bid": 0.8,
+    "ask": 0.81,
+    "mid": 0.805,
+    "at": 1795625792,
+    "minsBefore": 48,
     "source": "polymarket book"
    }
   },
@@ -37711,8 +37711,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795625204,
-    "minsBefore": 523,
+    "at": 1795625792,
+    "minsBefore": 513,
     "source": "polymarket book"
    }
   },
@@ -37769,8 +37769,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795625204,
-    "minsBefore": 133,
+    "at": 1795625792,
+    "minsBefore": 123,
     "source": "polymarket book"
    }
   },
@@ -37825,8 +37825,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795625204,
-    "minsBefore": 193,
+    "at": 1795625792,
+    "minsBefore": 183,
     "source": "polymarket book"
    }
   },
@@ -37876,11 +37876,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.58,
-    "ask": 0.59,
-    "mid": 0.585,
-    "at": 1795625204,
-    "minsBefore": 193,
+    "bid": 0.59,
+    "ask": 0.6,
+    "mid": 0.595,
+    "at": 1795625792,
+    "minsBefore": 183,
     "source": "polymarket book"
    }
   },
@@ -37979,6 +37979,60 @@
     "at": 1795625205,
     "source": "polymarket book"
    },
+   "status": "filled",
+   "fillPrice": 0.58,
+   "filledAt": 1795625790,
+   "taker": false,
+   "feeUnits": 0,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.57,
+    "ask": 0.58,
+    "mid": 0.575,
+    "at": 1795625792,
+    "minsBefore": 48,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795625790-645",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3|0x41055531c63f90eb4de19da789504733f1f662ac61400fe09fb1847ccf0e072d|1",
+   "pickKey": "Polymarket|0x41055531c63f90eb4de19da789504733f1f662ac61400fe09fb1847ccf0e072d|1",
+   "marketKey": "Polymarket|0x41055531c63f90eb4de19da789504733f1f662ac61400fe09fb1847ccf0e072d",
+   "venue": "Polymarket",
+   "conditionId": "0x41055531c63f90eb4de19da789504733f1f662ac61400fe09fb1847ccf0e072d",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Villarreal CF win on 2026-11-25?",
+   "slug": "ucl-slp-vil-2026-11-25",
+   "league": "UCL",
+   "marketType": "moneyline",
+   "start": 1795628700,
+   "whale": {
+    "q": 0.58,
+    "usd": 16680,
+    "score": 56,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795625018,
+    "wallet": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.59,
+   "createdAt": 1795625790,
+   "quoteAtOrder": {
+    "ask": 0.6,
+    "bid": 0.59,
+    "mid": 0.595,
+    "depth": 55131.62,
+    "at": 1795625792,
+    "source": "polymarket book"
+   },
    "status": "resting",
    "fillPrice": null,
    "filledAt": null,
@@ -37987,11 +38041,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.58,
-    "ask": 0.59,
-    "mid": 0.585,
-    "at": 1795625205,
-    "minsBefore": 58,
+    "bid": 0.59,
+    "ask": 0.6,
+    "mid": 0.595,
+    "at": 1795625792,
+    "minsBefore": 48,
     "source": "polymarket book"
    }
   }
