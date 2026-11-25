@@ -28394,8 +28394,8 @@
     "bid": 0.85,
     "ask": 0.93,
     "mid": 0.89,
-    "at": 1795642604,
-    "minsBefore": 1208,
+    "at": 1795643212,
+    "minsBefore": 1198,
     "source": "polymarket book"
    }
   },
@@ -37332,8 +37332,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795642604,
-    "minsBefore": 5243,
+    "at": 1795643212,
+    "minsBefore": 5233,
     "source": "polymarket book"
    }
   },
@@ -37618,8 +37618,8 @@
     "bid": 0.38,
     "ask": 0.39,
     "mid": 0.385,
-    "at": 1795642604,
-    "minsBefore": 103,
+    "at": 1795643212,
+    "minsBefore": 93,
     "source": "polymarket book"
    }
   },
@@ -37731,8 +37731,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795642604,
-    "minsBefore": 233,
+    "at": 1795643212,
+    "minsBefore": 223,
     "source": "polymarket book"
    }
   },
@@ -38745,6 +38745,62 @@
    },
    "cancelledAt": 1795636604,
    "cancelReason": "unfilled at the start-time cutoff"
+  },
+  {
+   "id": "1795643211-658",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp4060ml70",
+   "alsoMatched": [
+    "sharpMl70"
+   ],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0x1086efe8518a09ccfe6c89f4547d59b151ceae74ce0df9727bcd3ac1640631ca|1",
+   "pickKey": "Polymarket|0x1086efe8518a09ccfe6c89f4547d59b151ceae74ce0df9727bcd3ac1640631ca|1",
+   "marketKey": "Polymarket|0x1086efe8518a09ccfe6c89f4547d59b151ceae74ce0df9727bcd3ac1640631ca",
+   "venue": "Polymarket",
+   "conditionId": "0x1086efe8518a09ccfe6c89f4547d59b151ceae74ce0df9727bcd3ac1640631ca",
+   "idx": 1,
+   "name": "Knicks",
+   "title": "Cavaliers vs. Knicks",
+   "slug": "nba-cle-nyk-2026-11-25",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795653000,
+   "whale": {
+    "q": 0.5981,
+    "usd": 46144,
+    "score": 70,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795642264,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.6,
+   "createdAt": 1795643211,
+   "quoteAtOrder": {
+    "ask": 0.62,
+    "bid": 0.61,
+    "mid": 0.615,
+    "depth": 4552.06,
+    "at": 1795643212,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.61,
+    "ask": 0.62,
+    "mid": 0.615,
+    "at": 1795643212,
+    "minsBefore": 163,
+    "source": "polymarket book"
+   }
   }
  ],
  "logged": {
