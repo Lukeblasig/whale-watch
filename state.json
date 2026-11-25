@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795616807,
-    "minsBefore": 1638,
+    "at": 1795617384,
+    "minsBefore": 1629,
     "source": "polymarket book"
    }
   },
@@ -36803,8 +36803,8 @@
     "bid": 0.34,
     "ask": 0.36,
     "mid": 0.35,
-    "at": 1795616807,
-    "minsBefore": 93,
+    "at": 1795617384,
+    "minsBefore": 84,
     "source": "polymarket book"
    }
   },
@@ -36857,8 +36857,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795616807,
-    "minsBefore": 198,
+    "at": 1795617384,
+    "minsBefore": 189,
     "source": "polymarket book"
    }
   },
@@ -37029,8 +37029,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795616807,
-    "minsBefore": 333,
+    "at": 1795617384,
+    "minsBefore": 324,
     "source": "polymarket book"
    }
   },
@@ -37209,8 +37209,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795616807,
-    "minsBefore": 333,
+    "at": 1795617385,
+    "minsBefore": 324,
     "source": "polymarket book"
    }
   },
@@ -37322,8 +37322,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795616807,
-    "minsBefore": 5673,
+    "at": 1795617385,
+    "minsBefore": 5664,
     "source": "polymarket book"
    }
   },
@@ -37437,8 +37437,8 @@
     "bid": 0.65,
     "ask": 0.66,
     "mid": 0.655,
-    "at": 1795616807,
-    "minsBefore": 333,
+    "at": 1795617385,
+    "minsBefore": 324,
     "source": "polymarket book"
    }
   },
@@ -37493,8 +37493,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795616807,
-    "minsBefore": 198,
+    "at": 1795617385,
+    "minsBefore": 189,
     "source": "polymarket book"
    }
   },
@@ -37547,8 +37547,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795616807,
-    "minsBefore": 333,
+    "at": 1795617385,
+    "minsBefore": 324,
     "source": "polymarket book"
    }
   },
@@ -37603,8 +37603,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795616807,
-    "minsBefore": 533,
+    "at": 1795617385,
+    "minsBefore": 524,
     "source": "polymarket book"
    }
   },
@@ -37657,8 +37657,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795616807,
-    "minsBefore": 198,
+    "at": 1795617385,
+    "minsBefore": 189,
     "source": "polymarket book"
    }
   },
@@ -37711,8 +37711,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795616807,
-    "minsBefore": 663,
+    "at": 1795617385,
+    "minsBefore": 654,
     "source": "polymarket book"
    }
   },
@@ -37769,8 +37769,64 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795616807,
-    "minsBefore": 273,
+    "at": 1795617385,
+    "minsBefore": 264,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795617384-641",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0xd0900338a38a34b145501534d94cada6f5aaef40d5585c598e3c0a605d832f9e|1",
+   "pickKey": "Polymarket|0xd0900338a38a34b145501534d94cada6f5aaef40d5585c598e3c0a605d832f9e|1",
+   "marketKey": "Polymarket|0xd0900338a38a34b145501534d94cada6f5aaef40d5585c598e3c0a605d832f9e",
+   "venue": "Polymarket",
+   "conditionId": "0xd0900338a38a34b145501534d94cada6f5aaef40d5585c598e3c0a605d832f9e",
+   "idx": 1,
+   "name": "Under",
+   "title": "Lille OSC vs. FC Bayern München: O/U 2.5",
+   "slug": "ucl-lil-bay-2026-11-25-more-markets",
+   "league": "UCL",
+   "marketType": "total",
+   "start": 1795636800,
+   "whale": {
+    "q": 0.45,
+    "usd": 7725,
+    "score": 63,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795616641,
+    "wallet": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.46,
+   "createdAt": 1795617384,
+   "quoteAtOrder": {
+    "ask": 0.46,
+    "bid": 0.45,
+    "mid": 0.455,
+    "depth": 32791.9,
+    "at": 1795617385,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.46,
+   "filledAt": 1795617384,
+   "taker": true,
+   "feeUnits": 0.0162,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.45,
+    "ask": 0.46,
+    "mid": 0.455,
+    "at": 1795617385,
+    "minsBefore": 324,
     "source": "polymarket book"
    }
   }
