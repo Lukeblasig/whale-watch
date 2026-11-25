@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795580212,
-    "minsBefore": 2248,
+    "at": 1795580816,
+    "minsBefore": 2238,
     "source": "polymarket book"
    }
   },
@@ -35479,8 +35479,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795580212,
-    "minsBefore": 343,
+    "at": 1795580816,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -35535,8 +35535,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795580212,
-    "minsBefore": 343,
+    "at": 1795580816,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -35591,8 +35591,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795580212,
-    "minsBefore": 343,
+    "at": 1795580816,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -36532,11 +36532,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.42,
-    "ask": 0.43,
-    "mid": 0.425,
-    "at": 1795580212,
-    "minsBefore": 343,
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795580816,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -36591,8 +36591,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795580212,
-    "minsBefore": 343,
+    "at": 1795580817,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -36648,8 +36648,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795580212,
-    "minsBefore": 343,
+    "at": 1795580816,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -36704,8 +36704,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795580212,
-    "minsBefore": 343,
+    "at": 1795580816,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -36758,8 +36758,8 @@
     "bid": 0.39,
     "ask": 0.41,
     "mid": 0.4,
-    "at": 1795580212,
-    "minsBefore": 703,
+    "at": 1795580817,
+    "minsBefore": 693,
     "source": "polymarket book"
    }
   }
