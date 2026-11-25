@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795616224,
-    "minsBefore": 1648,
+    "at": 1795616807,
+    "minsBefore": 1638,
     "source": "polymarket book"
    }
   },
@@ -36803,8 +36803,8 @@
     "bid": 0.34,
     "ask": 0.36,
     "mid": 0.35,
-    "at": 1795616224,
-    "minsBefore": 103,
+    "at": 1795616807,
+    "minsBefore": 93,
     "source": "polymarket book"
    }
   },
@@ -36857,8 +36857,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795616224,
-    "minsBefore": 208,
+    "at": 1795616807,
+    "minsBefore": 198,
     "source": "polymarket book"
    }
   },
@@ -37029,8 +37029,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795616224,
-    "minsBefore": 343,
+    "at": 1795616807,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -37209,8 +37209,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795616224,
-    "minsBefore": 343,
+    "at": 1795616807,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -37322,8 +37322,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795616224,
-    "minsBefore": 5683,
+    "at": 1795616807,
+    "minsBefore": 5673,
     "source": "polymarket book"
    }
   },
@@ -37437,8 +37437,8 @@
     "bid": 0.65,
     "ask": 0.66,
     "mid": 0.655,
-    "at": 1795616224,
-    "minsBefore": 343,
+    "at": 1795616807,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -37493,8 +37493,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795616224,
-    "minsBefore": 208,
+    "at": 1795616807,
+    "minsBefore": 198,
     "source": "polymarket book"
    }
   },
@@ -37547,8 +37547,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795616224,
-    "minsBefore": 343,
+    "at": 1795616807,
+    "minsBefore": 333,
     "source": "polymarket book"
    }
   },
@@ -37603,8 +37603,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795616224,
-    "minsBefore": 543,
+    "at": 1795616807,
+    "minsBefore": 533,
     "source": "polymarket book"
    }
   },
@@ -37657,8 +37657,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795616224,
-    "minsBefore": 208,
+    "at": 1795616807,
+    "minsBefore": 198,
     "source": "polymarket book"
    }
   },
@@ -37711,8 +37711,66 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795616224,
-    "minsBefore": 673,
+    "at": 1795616807,
+    "minsBefore": 663,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795616806-640",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc4050ml40",
+   "alsoMatched": [
+    "socSharp4060ml40",
+    "socSharp4050s50",
+    "socSharp4050"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x1bb0aa2f2af5481e1064b33ef41225e596a5c3eb9331d9a0bf0a1e5e2d38471a|1",
+   "pickKey": "Polymarket|0x1bb0aa2f2af5481e1064b33ef41225e596a5c3eb9331d9a0bf0a1e5e2d38471a|1",
+   "marketKey": "Polymarket|0x1bb0aa2f2af5481e1064b33ef41225e596a5c3eb9331d9a0bf0a1e5e2d38471a",
+   "venue": "Polymarket",
+   "conditionId": "0x1bb0aa2f2af5481e1064b33ef41225e596a5c3eb9331d9a0bf0a1e5e2d38471a",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Mantova 1911 win on 2026-11-25?",
+   "slug": "itsb-man-are-2026-11-25",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795633200,
+   "whale": {
+    "q": 0.42,
+    "usd": 3260,
+    "score": 50,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795606408,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.43,
+   "createdAt": 1795616806,
+   "quoteAtOrder": {
+    "ask": 0.4,
+    "bid": 0.39,
+    "mid": 0.395,
+    "depth": 878.99,
+    "at": 1795616807,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.4,
+   "filledAt": 1795616806,
+   "taker": true,
+   "feeUnits": 0.018,
+   "priceSource": "polymarket book",
+   "slippageCents": -2,
+   "close": {
+    "bid": 0.39,
+    "ask": 0.4,
+    "mid": 0.395,
+    "at": 1795616807,
+    "minsBefore": 273,
     "source": "polymarket book"
    }
   }
