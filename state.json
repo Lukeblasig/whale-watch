@@ -28394,8 +28394,8 @@
     "bid": 0.85,
     "ask": 0.95,
     "mid": 0.9,
-    "at": 1795630602,
-    "minsBefore": 1408,
+    "at": 1795631178,
+    "minsBefore": 1399,
     "source": "polymarket book"
    }
   },
@@ -37029,8 +37029,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795630602,
-    "minsBefore": 103,
+    "at": 1795631178,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -37209,8 +37209,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795630602,
-    "minsBefore": 103,
+    "at": 1795631178,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -37322,8 +37322,8 @@
     "bid": 0.72,
     "ask": 0.74,
     "mid": 0.73,
-    "at": 1795630602,
-    "minsBefore": 5443,
+    "at": 1795631178,
+    "minsBefore": 5434,
     "source": "polymarket book"
    }
   },
@@ -37434,11 +37434,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.64,
-    "ask": 0.65,
-    "mid": 0.645,
-    "at": 1795630602,
-    "minsBefore": 103,
+    "bid": 0.63,
+    "ask": 0.64,
+    "mid": 0.635,
+    "at": 1795631178,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -37547,8 +37547,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795630602,
-    "minsBefore": 103,
+    "at": 1795631178,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -37603,8 +37603,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795630602,
-    "minsBefore": 303,
+    "at": 1795631178,
+    "minsBefore": 294,
     "source": "polymarket book"
    }
   },
@@ -37711,8 +37711,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795630602,
-    "minsBefore": 433,
+    "at": 1795631178,
+    "minsBefore": 424,
     "source": "polymarket book"
    }
   },
@@ -37769,8 +37769,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795630602,
-    "minsBefore": 43,
+    "at": 1795631178,
+    "minsBefore": 34,
     "source": "polymarket book"
    }
   },
@@ -37825,8 +37825,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795630602,
-    "minsBefore": 103,
+    "at": 1795631178,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -37879,8 +37879,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795630602,
-    "minsBefore": 103,
+    "at": 1795631178,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -38105,8 +38105,8 @@
     "bid": 0.83,
     "ask": 0.84,
     "mid": 0.835,
-    "at": 1795630602,
-    "minsBefore": 103,
+    "at": 1795631178,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   },
@@ -38159,8 +38159,64 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795630603,
-    "minsBefore": 103,
+    "at": 1795631179,
+    "minsBefore": 94,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795631177-648",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x88abaacde086687e39d344dd09da973050e385e3f59500ebcf07334ba32360fa|1",
+   "pickKey": "Polymarket|0x88abaacde086687e39d344dd09da973050e385e3f59500ebcf07334ba32360fa|1",
+   "marketKey": "Polymarket|0x88abaacde086687e39d344dd09da973050e385e3f59500ebcf07334ba32360fa",
+   "venue": "Polymarket",
+   "conditionId": "0x88abaacde086687e39d344dd09da973050e385e3f59500ebcf07334ba32360fa",
+   "idx": 1,
+   "name": "Under",
+   "title": "Club Brugge KV vs. Liverpool FC: O/U 3.5",
+   "slug": "ucl-bru-liv-2026-11-25-more-markets",
+   "league": "UCL",
+   "marketType": "total",
+   "start": 1795636800,
+   "whale": {
+    "q": 0.47,
+    "usd": 1959,
+    "score": 53,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795630275,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.48,
+   "createdAt": 1795631177,
+   "quoteAtOrder": {
+    "ask": 0.47,
+    "bid": 0.46,
+    "mid": 0.465,
+    "depth": 52506.53,
+    "at": 1795631179,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.47,
+   "filledAt": 1795631177,
+   "taker": true,
+   "feeUnits": 0.0159,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.46,
+    "ask": 0.47,
+    "mid": 0.465,
+    "at": 1795631179,
+    "minsBefore": 94,
     "source": "polymarket book"
    }
   }

@@ -1,10 +1,10 @@
 {
- "updated": 1795630601,
+ "updated": 1795631177,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 311,
-  "fills": 263,
+  "orders": 312,
+  "fills": 264,
   "settled": 243,
   "w": 143,
   "l": 100,
@@ -30,9 +30,9 @@
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.11,
-  "takerPct": 88.97,
+  "takerPct": 89.02,
   "liveQuotePct": 100,
-  "open": 20,
+  "open": 21,
   "resting": 0,
   "cancelled": 48
  },
@@ -644,8 +644,8 @@
    "cancelled": 0
   },
   "socSharp4050s50": {
-   "orders": 31,
-   "fills": 23,
+   "orders": 32,
+   "fills": 24,
    "settled": 21,
    "w": 7,
    "l": 14,
@@ -671,9 +671,9 @@
    ],
    "medianSlipCents": 1,
    "avgSlipCents": 0.17,
-   "takerPct": 78.26,
+   "takerPct": 79.17,
    "liveQuotePct": 100,
-   "open": 2,
+   "open": 3,
    "resting": 0,
    "cancelled": 8
   },
@@ -825,8 +825,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 20,
- "unitsToday": 22,
+ "openUnits": 21,
+ "unitsToday": 23,
  "drawdown": {
   "units": -15.76,
   "max": 27.23,
@@ -853,13 +853,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 263 fills"
+   "detail": "Median 0.00¢ over 264 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.21421420304232805,
+   "progress": 0.21445229828042328,
    "detail": "0.9 weeks, 243 settled bets"
   }
  ],
@@ -1071,11 +1071,11 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795630601,
+  "at": 1795631177,
   "status": "ok",
-  "candidates": 20,
-  "ordered": 0,
-  "filled": 0,
+  "candidates": 22,
+  "ordered": 1,
+  "filled": 1,
   "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
@@ -1083,6 +1083,6 @@
   "cancelled": 0,
   "closes": 13
  },
- "dataUpdated": 1795630505,
+ "dataUpdated": 1795631106,
  "killSwitch": false
 }
