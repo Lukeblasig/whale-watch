@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795590398,
-    "minsBefore": 2078,
+    "at": 1795590990,
+    "minsBefore": 2069,
     "source": "polymarket book"
    }
   },
@@ -35484,8 +35484,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795590398,
-    "minsBefore": 173,
+    "at": 1795590990,
+    "minsBefore": 164,
     "source": "polymarket book"
    }
   },
@@ -35540,8 +35540,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795590398,
-    "minsBefore": 173,
+    "at": 1795590990,
+    "minsBefore": 164,
     "source": "polymarket book"
    }
   },
@@ -35593,11 +35593,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.56,
-    "ask": 0.57,
-    "mid": 0.565,
-    "at": 1795590398,
-    "minsBefore": 173,
+    "bid": 0.55,
+    "ask": 0.56,
+    "mid": 0.555,
+    "at": 1795590990,
+    "minsBefore": 164,
     "source": "polymarket book"
    }
   },
@@ -36545,8 +36545,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795590398,
-    "minsBefore": 173,
+    "at": 1795590990,
+    "minsBefore": 164,
     "source": "polymarket book"
    }
   },
@@ -36601,8 +36601,8 @@
     "bid": 0.47,
     "ask": 0.49,
     "mid": 0.48,
-    "at": 1795590398,
-    "minsBefore": 173,
+    "at": 1795590990,
+    "minsBefore": 164,
     "source": "polymarket book"
    }
   },
@@ -36658,8 +36658,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795590398,
-    "minsBefore": 173,
+    "at": 1795590990,
+    "minsBefore": 164,
     "source": "polymarket book"
    }
   },
@@ -36714,8 +36714,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795590398,
-    "minsBefore": 173,
+    "at": 1795590990,
+    "minsBefore": 164,
     "source": "polymarket book"
    }
   },
@@ -36768,8 +36768,8 @@
     "bid": 0.38,
     "ask": 0.4,
     "mid": 0.39,
-    "at": 1795590398,
-    "minsBefore": 533,
+    "at": 1795590990,
+    "minsBefore": 524,
     "source": "polymarket book"
    }
   },
@@ -36822,8 +36822,170 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795590398,
-    "minsBefore": 638,
+    "at": 1795590990,
+    "minsBefore": 629,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795590989-625",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc7090s60",
+   "alsoMatched": [],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x5d06f16d03b905b764df76b4a6130a9db64db85ca945853bf32b99eba0b8b14e|1",
+   "pickKey": "Polymarket|0x5d06f16d03b905b764df76b4a6130a9db64db85ca945853bf32b99eba0b8b14e|1",
+   "marketKey": "Polymarket|0x5d06f16d03b905b764df76b4a6130a9db64db85ca945853bf32b99eba0b8b14e",
+   "venue": "Polymarket",
+   "conditionId": "0x5d06f16d03b905b764df76b4a6130a9db64db85ca945853bf32b99eba0b8b14e",
+   "idx": 1,
+   "name": "No",
+   "title": "Will RB Ōmiya Ardija vs. Tokushima Vortis end in a draw?",
+   "slug": "ja2-omi-tok-2026-11-25",
+   "league": "Other soccer",
+   "marketType": "draw",
+   "start": 1795600800,
+   "whale": {
+    "q": 0.73,
+    "usd": 13254,
+    "score": 66,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795590113,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.74,
+   "createdAt": 1795590989,
+   "quoteAtOrder": {
+    "ask": 0.74,
+    "bid": 0.73,
+    "mid": 0.735,
+    "depth": 38.56,
+    "at": 1795590990,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.74,
+   "filledAt": 1795590989,
+   "taker": true,
+   "feeUnits": 0.0078,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.73,
+    "ask": 0.74,
+    "mid": 0.735,
+    "at": 1795590990,
+    "minsBefore": 164,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795590989-626",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc7090s60",
+   "alsoMatched": [],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0xc1fdb668bd2751fb811775abcbf95388a1f6babe9e39e3db00e3922f2c80733d|1",
+   "pickKey": "Polymarket|0xc1fdb668bd2751fb811775abcbf95388a1f6babe9e39e3db00e3922f2c80733d|1",
+   "marketKey": "Polymarket|0xc1fdb668bd2751fb811775abcbf95388a1f6babe9e39e3db00e3922f2c80733d",
+   "venue": "Polymarket",
+   "conditionId": "0xc1fdb668bd2751fb811775abcbf95388a1f6babe9e39e3db00e3922f2c80733d",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Tokushima Vortis win on 2026-11-25?",
+   "slug": "ja2-omi-tok-2026-11-25",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795600800,
+   "whale": {
+    "q": 0.75,
+    "usd": 13652,
+    "score": 66,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795590130,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.76,
+   "createdAt": 1795590989,
+   "quoteAtOrder": {
+    "ask": 0.76,
+    "bid": 0.75,
+    "mid": 0.755,
+    "depth": 1089.16,
+    "at": 1795590990,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.76,
+   "filledAt": 1795590989,
+   "taker": true,
+   "feeUnits": 0.0072,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.75,
+    "ask": 0.76,
+    "mid": 0.755,
+    "at": 1795590990,
+    "minsBefore": 164,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795590989-627",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc4050ml40",
+   "alsoMatched": [],
+   "sigKey": "0x46072f22bc5624f7ff43489d570fdc7e745ad542|0x18cf868d35c8895164f27fed44483cfd1fd64b9346c61ba18396fdef0c47a4de|0",
+   "pickKey": "Polymarket|0x18cf868d35c8895164f27fed44483cfd1fd64b9346c61ba18396fdef0c47a4de|0",
+   "marketKey": "Polymarket|0x18cf868d35c8895164f27fed44483cfd1fd64b9346c61ba18396fdef0c47a4de",
+   "venue": "Polymarket",
+   "conditionId": "0x18cf868d35c8895164f27fed44483cfd1fd64b9346c61ba18396fdef0c47a4de",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Stoke City FC win on 2026-11-25?",
+   "slug": "elc-sto-mil-2026-11-25",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795636800,
+   "whale": {
+    "q": 0.4427,
+    "usd": 10000,
+    "score": 40,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795589596,
+    "wallet": "0x46072f22bc5624f7ff43489d570fdc7e745ad542"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.45,
+   "createdAt": 1795590989,
+   "quoteAtOrder": {
+    "ask": 0.44,
+    "bid": 0.43,
+    "mid": 0.435,
+    "depth": 8986.8,
+    "at": 1795590990,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.44,
+   "filledAt": 1795590989,
+   "taker": true,
+   "feeUnits": 0.0168,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.3,
+   "close": {
+    "bid": 0.43,
+    "ask": 0.44,
+    "mid": 0.435,
+    "at": 1795590990,
+    "minsBefore": 764,
     "source": "polymarket book"
    }
   }
