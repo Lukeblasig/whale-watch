@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795613212,
-    "minsBefore": 1698,
+    "at": 1795613788,
+    "minsBefore": 1689,
     "source": "polymarket book"
    }
   },
@@ -36780,11 +36780,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -4,
    "close": {
-    "bid": 0.34,
+    "bid": 0.35,
     "ask": 0.36,
-    "mid": 0.35,
-    "at": 1795613212,
-    "minsBefore": 153,
+    "mid": 0.355,
+    "at": 1795613788,
+    "minsBefore": 144,
     "source": "polymarket book"
    }
   },
@@ -36837,8 +36837,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795613212,
-    "minsBefore": 258,
+    "at": 1795613788,
+    "minsBefore": 249,
     "source": "polymarket book"
    }
   },
@@ -36999,8 +36999,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795613212,
-    "minsBefore": 393,
+    "at": 1795613788,
+    "minsBefore": 384,
     "source": "polymarket book"
    }
   },
@@ -37176,11 +37176,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.81,
-    "ask": 0.82,
-    "mid": 0.815,
-    "at": 1795613213,
-    "minsBefore": 393,
+    "bid": 0.82,
+    "ask": 0.85,
+    "mid": 0.835,
+    "at": 1795613788,
+    "minsBefore": 384,
     "source": "polymarket book"
    }
   },
@@ -37287,8 +37287,8 @@
     "bid": 0.72,
     "ask": 0.74,
     "mid": 0.73,
-    "at": 1795613213,
-    "minsBefore": 5733,
+    "at": 1795613788,
+    "minsBefore": 5724,
     "source": "polymarket book"
    }
   },
@@ -37397,8 +37397,8 @@
     "bid": 0.65,
     "ask": 0.66,
     "mid": 0.655,
-    "at": 1795613213,
-    "minsBefore": 393,
+    "at": 1795613788,
+    "minsBefore": 384,
     "source": "polymarket book"
    }
   },
@@ -37453,8 +37453,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795613213,
-    "minsBefore": 258,
+    "at": 1795613788,
+    "minsBefore": 249,
     "source": "polymarket book"
    }
   },
@@ -37507,8 +37507,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795613213,
-    "minsBefore": 393,
+    "at": 1795613788,
+    "minsBefore": 384,
     "source": "polymarket book"
    }
   },
@@ -37560,11 +37560,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -6,
    "close": {
-    "bid": 0.41,
-    "ask": 0.42,
-    "mid": 0.415,
-    "at": 1795613213,
-    "minsBefore": 593,
+    "bid": 0.4,
+    "ask": 0.41,
+    "mid": 0.405,
+    "at": 1795613788,
+    "minsBefore": 584,
     "source": "polymarket book"
    }
   }
