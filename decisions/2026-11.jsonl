@@ -2542,3 +2542,4 @@
 {"t":1795585632,"type":"fill","id":"1795539416-603","rule":"socSharp4060ml40","shadow":false,"price":0.57,"maker":true,"source":"polymarket book"}
 {"t":1795585632,"type":"fill","id":"1795579590-621","rule":"soc4050ml40","shadow":false,"price":0.46,"maker":true,"source":"polymarket book"}
 {"t":1795585632,"type":"run","status":"ok","candidates":14,"ordered":0,"filled":2,"rested":0,"skipped":0,"shadowOrdered":0,"settled":2,"cancelled":0,"closes":10,"openUnits":12,"unitsToday":36}
+{"t":1795586176,"type":"run","status":"ok","candidates":14,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":10,"openUnits":12,"unitsToday":36}
