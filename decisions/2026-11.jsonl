@@ -2537,3 +2537,8 @@
 {"t":1795583826,"type":"run","status":"ok","candidates":14,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":10,"openUnits":14,"unitsToday":36}
 {"t":1795584430,"type":"run","status":"ok","candidates":14,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":10,"openUnits":14,"unitsToday":36}
 {"t":1795585000,"type":"run","status":"ok","candidates":14,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":10,"openUnits":14,"unitsToday":36}
+{"t":1795585631,"type":"settle","id":"1795522032-591","rule":"soc4050ml40","shadow":false,"result":"W","units":0.985,"fee":0.015,"whaleUnits":1.0185708518368994,"fill":0.5,"whaleQ":0.4954,"closeMid":0.495}
+{"t":1795585631,"type":"settle","id":"1795571230-618","rule":"socSharp4050","shadow":false,"result":"L","units":-1.0171,"fee":0.0171,"whaleUnits":-1,"fill":0.43,"whaleQ":0.43,"closeMid":0.425}
+{"t":1795585632,"type":"fill","id":"1795539416-603","rule":"socSharp4060ml40","shadow":false,"price":0.57,"maker":true,"source":"polymarket book"}
+{"t":1795585632,"type":"fill","id":"1795579590-621","rule":"soc4050ml40","shadow":false,"price":0.46,"maker":true,"source":"polymarket book"}
+{"t":1795585632,"type":"run","status":"ok","candidates":14,"ordered":0,"filled":2,"rested":0,"skipped":0,"shadowOrdered":0,"settled":2,"cancelled":0,"closes":10,"openUnits":12,"unitsToday":36}
