@@ -2665,3 +2665,4 @@
 {"t":1795628787,"type":"run","status":"ok","candidates":20,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":13,"openUnits":20,"unitsToday":22}
 {"t":1795629402,"type":"run","status":"ok","candidates":20,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":13,"openUnits":20,"unitsToday":22}
 {"t":1795630014,"type":"run","status":"ok","candidates":20,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":13,"openUnits":20,"unitsToday":22}
+{"t":1795630603,"type":"run","status":"ok","candidates":20,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":13,"openUnits":20,"unitsToday":22}
