@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795579009,
-    "minsBefore": 2268,
+    "at": 1795579591,
+    "minsBefore": 2258,
     "source": "polymarket book"
    }
   },
@@ -35479,8 +35479,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795579009,
-    "minsBefore": 363,
+    "at": 1795579591,
+    "minsBefore": 353,
     "source": "polymarket book"
    }
   },
@@ -35532,11 +35532,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.48,
+    "bid": 0.49,
     "ask": 0.5,
-    "mid": 0.49,
-    "at": 1795579009,
-    "minsBefore": 363,
+    "mid": 0.495,
+    "at": 1795579591,
+    "minsBefore": 353,
     "source": "polymarket book"
    }
   },
@@ -35591,8 +35591,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795579009,
-    "minsBefore": 363,
+    "at": 1795579591,
+    "minsBefore": 353,
     "source": "polymarket book"
    }
   },
@@ -36483,6 +36483,229 @@
     "mid": 0.425,
     "at": 1795575425,
     "minsBefore": 3,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795579590-619",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0xf68a281980f8c13828e84e147e3822381d6e5b1b|0xa30a5690edfb281cd5f5187b4738ee3c341f5ed167cc0887e0284ed617884855|1",
+   "pickKey": "Polymarket|0xa30a5690edfb281cd5f5187b4738ee3c341f5ed167cc0887e0284ed617884855|1",
+   "marketKey": "Polymarket|0xa30a5690edfb281cd5f5187b4738ee3c341f5ed167cc0887e0284ed617884855",
+   "venue": "Polymarket",
+   "conditionId": "0xa30a5690edfb281cd5f5187b4738ee3c341f5ed167cc0887e0284ed617884855",
+   "idx": 1,
+   "name": "Under",
+   "title": "Iwaki FC vs. Kataller Toyama: O/U 2.5",
+   "slug": "ja2-iwa-kat-2026-11-25-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795600800,
+   "whale": {
+    "q": 0.4,
+    "usd": 5684,
+    "score": 44,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795577782,
+    "wallet": "0xf68a281980f8c13828e84e147e3822381d6e5b1b"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.41,
+   "createdAt": 1795579590,
+   "quoteAtOrder": {
+    "ask": 0.43,
+    "bid": 0.42,
+    "mid": 0.425,
+    "depth": 975.09,
+    "at": 1795579591,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.42,
+    "ask": 0.43,
+    "mid": 0.425,
+    "at": 1795579591,
+    "minsBefore": 353,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795579590-620",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x868009c5916c45e0e2ac7954b36a6440c3aaf82520bed93bf1f9b0c3629e0b27|1",
+   "pickKey": "Polymarket|0x868009c5916c45e0e2ac7954b36a6440c3aaf82520bed93bf1f9b0c3629e0b27|1",
+   "marketKey": "Polymarket|0x868009c5916c45e0e2ac7954b36a6440c3aaf82520bed93bf1f9b0c3629e0b27",
+   "venue": "Polymarket",
+   "conditionId": "0x868009c5916c45e0e2ac7954b36a6440c3aaf82520bed93bf1f9b0c3629e0b27",
+   "idx": 1,
+   "name": "Under",
+   "title": "Montedio Yamagata vs. Júbilo Iwata: O/U 2.5",
+   "slug": "ja2-mon-jub-2026-11-25-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795600800,
+   "whale": {
+    "q": 0.47,
+    "usd": 6702,
+    "score": 62,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795578047,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.48,
+   "createdAt": 1795579590,
+   "quoteAtOrder": {
+    "ask": 0.48,
+    "bid": 0.47,
+    "mid": 0.475,
+    "depth": 851.96,
+    "at": 1795579591,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.48,
+   "filledAt": 1795579590,
+   "taker": true,
+   "feeUnits": 0.0156,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795579591,
+    "minsBefore": 353,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795579590-621",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc4050ml40",
+   "alsoMatched": [
+    "socSharp4060ml40",
+    "socSharp4050"
+   ],
+   "sigKey": "0xf68a281980f8c13828e84e147e3822381d6e5b1b|0xa23972671e9bcc2c7a435d014d4c077b810e723bb74a510d5dac2e3ba1be13e5|1",
+   "pickKey": "Polymarket|0xa23972671e9bcc2c7a435d014d4c077b810e723bb74a510d5dac2e3ba1be13e5|1",
+   "marketKey": "Polymarket|0xa23972671e9bcc2c7a435d014d4c077b810e723bb74a510d5dac2e3ba1be13e5",
+   "venue": "Polymarket",
+   "conditionId": "0xa23972671e9bcc2c7a435d014d4c077b810e723bb74a510d5dac2e3ba1be13e5",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Júbilo Iwata win on 2026-11-25?",
+   "slug": "ja2-mon-jub-2026-11-25",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795600800,
+   "whale": {
+    "q": 0.45,
+    "usd": 8775,
+    "score": 46,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795578133,
+    "wallet": "0xf68a281980f8c13828e84e147e3822381d6e5b1b"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.46,
+   "createdAt": 1795579590,
+   "quoteAtOrder": {
+    "ask": 0.47,
+    "bid": 0.46,
+    "mid": 0.465,
+    "depth": 785.27,
+    "at": 1795579591,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.46,
+    "ask": 0.47,
+    "mid": 0.465,
+    "at": 1795579591,
+    "minsBefore": 353,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795579590-622",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0xb48dfc8261cdb4e1eb70dd17a777f138d153362303461ee7aa82c74b0c2c0d49|1",
+   "pickKey": "Polymarket|0xb48dfc8261cdb4e1eb70dd17a777f138d153362303461ee7aa82c74b0c2c0d49|1",
+   "marketKey": "Polymarket|0xb48dfc8261cdb4e1eb70dd17a777f138d153362303461ee7aa82c74b0c2c0d49",
+   "venue": "Polymarket",
+   "conditionId": "0xb48dfc8261cdb4e1eb70dd17a777f138d153362303461ee7aa82c74b0c2c0d49",
+   "idx": 1,
+   "name": "Under",
+   "title": "Shōnan Bellmāre vs. Ventforet Kōfu: O/U 2.5",
+   "slug": "ja2-sho-ven-2026-11-25-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795600800,
+   "whale": {
+    "q": 0.48,
+    "usd": 8871,
+    "score": 63,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795578283,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.49,
+   "createdAt": 1795579590,
+   "quoteAtOrder": {
+    "ask": 0.49,
+    "bid": 0.48,
+    "mid": 0.485,
+    "depth": 413.79,
+    "at": 1795579591,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.49,
+   "filledAt": 1795579590,
+   "taker": true,
+   "feeUnits": 0.0153,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.48,
+    "ask": 0.49,
+    "mid": 0.485,
+    "at": 1795579591,
+    "minsBefore": 353,
     "source": "polymarket book"
    }
   }
