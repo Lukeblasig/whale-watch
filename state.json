@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795615591,
-    "minsBefore": 1658,
+    "at": 1795616224,
+    "minsBefore": 1648,
     "source": "polymarket book"
    }
   },
@@ -36800,11 +36800,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -4,
    "close": {
-    "bid": 0.35,
+    "bid": 0.34,
     "ask": 0.36,
-    "mid": 0.355,
-    "at": 1795615591,
-    "minsBefore": 113,
+    "mid": 0.35,
+    "at": 1795616224,
+    "minsBefore": 103,
     "source": "polymarket book"
    }
   },
@@ -36857,8 +36857,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795615591,
-    "minsBefore": 218,
+    "at": 1795616224,
+    "minsBefore": 208,
     "source": "polymarket book"
    }
   },
@@ -37029,8 +37029,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795615591,
-    "minsBefore": 353,
+    "at": 1795616224,
+    "minsBefore": 343,
     "source": "polymarket book"
    }
   },
@@ -37209,8 +37209,8 @@
     "bid": 0.82,
     "ask": 0.83,
     "mid": 0.825,
-    "at": 1795615591,
-    "minsBefore": 353,
+    "at": 1795616224,
+    "minsBefore": 343,
     "source": "polymarket book"
    }
   },
@@ -37322,8 +37322,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795615591,
-    "minsBefore": 5693,
+    "at": 1795616224,
+    "minsBefore": 5683,
     "source": "polymarket book"
    }
   },
@@ -37437,8 +37437,8 @@
     "bid": 0.65,
     "ask": 0.66,
     "mid": 0.655,
-    "at": 1795615591,
-    "minsBefore": 353,
+    "at": 1795616224,
+    "minsBefore": 343,
     "source": "polymarket book"
    }
   },
@@ -37493,8 +37493,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795615591,
-    "minsBefore": 218,
+    "at": 1795616224,
+    "minsBefore": 208,
     "source": "polymarket book"
    }
   },
@@ -37547,8 +37547,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795615592,
-    "minsBefore": 353,
+    "at": 1795616224,
+    "minsBefore": 343,
     "source": "polymarket book"
    }
   },
@@ -37603,8 +37603,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795615592,
-    "minsBefore": 553,
+    "at": 1795616224,
+    "minsBefore": 543,
     "source": "polymarket book"
    }
   },
@@ -37657,8 +37657,62 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795615592,
-    "minsBefore": 218,
+    "at": 1795616224,
+    "minsBefore": 208,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795616223-639",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0xf68a281980f8c13828e84e147e3822381d6e5b1b|0x85d73a19fa9243dd78a145a7a1fa7e7de56a51d14c2a90b6cc9d19c0c0d7b63b|0",
+   "pickKey": "Polymarket|0x85d73a19fa9243dd78a145a7a1fa7e7de56a51d14c2a90b6cc9d19c0c0d7b63b|0",
+   "marketKey": "Polymarket|0x85d73a19fa9243dd78a145a7a1fa7e7de56a51d14c2a90b6cc9d19c0c0d7b63b",
+   "venue": "Polymarket",
+   "conditionId": "0x85d73a19fa9243dd78a145a7a1fa7e7de56a51d14c2a90b6cc9d19c0c0d7b63b",
+   "idx": 0,
+   "name": "Over",
+   "title": "Atlético Nacional vs. Independiente Medellín: O/U 2.5",
+   "slug": "col1-atn-inm-2026-11-25-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795656600,
+   "whale": {
+    "q": 0.46,
+    "usd": 4600,
+    "score": 45,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795581577,
+    "wallet": "0xf68a281980f8c13828e84e147e3822381d6e5b1b"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.47,
+   "createdAt": 1795616223,
+   "quoteAtOrder": {
+    "ask": 0.4,
+    "bid": 0.39,
+    "mid": 0.395,
+    "depth": 1240.68,
+    "at": 1795616224,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.4,
+   "filledAt": 1795616223,
+   "taker": true,
+   "feeUnits": 0.018,
+   "priceSource": "polymarket book",
+   "slippageCents": -6,
+   "close": {
+    "bid": 0.39,
+    "ask": 0.4,
+    "mid": 0.395,
+    "at": 1795616224,
+    "minsBefore": 673,
     "source": "polymarket book"
    }
   }
