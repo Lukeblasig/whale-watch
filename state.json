@@ -28394,8 +28394,8 @@
     "bid": 0.63,
     "ask": 0.95,
     "mid": 0.79,
-    "at": 1795570595,
-    "minsBefore": 2408,
+    "at": 1795571231,
+    "minsBefore": 2398,
     "source": "polymarket book"
    }
   },
@@ -34882,8 +34882,8 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795570595,
-    "minsBefore": 83,
+    "at": 1795571231,
+    "minsBefore": 73,
     "source": "polymarket book"
    }
   },
@@ -35469,8 +35469,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795570595,
-    "minsBefore": 503,
+    "at": 1795571231,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -35525,8 +35525,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795570595,
-    "minsBefore": 503,
+    "at": 1795571231,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -35581,8 +35581,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795570595,
-    "minsBefore": 503,
+    "at": 1795571232,
+    "minsBefore": 493,
     "source": "polymarket book"
    }
   },
@@ -36421,6 +36421,60 @@
    "units": -1.0069,
    "whaleUnits": -1,
    "settledAt": 1795558626
+  },
+  {
+   "id": "1795571230-618",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3|0xb903b43aa70a51e5ea95450c608a565d1fc06f72098238e4d1e37593b4381b5e|1",
+   "pickKey": "Polymarket|0xb903b43aa70a51e5ea95450c608a565d1fc06f72098238e4d1e37593b4381b5e|1",
+   "marketKey": "Polymarket|0xb903b43aa70a51e5ea95450c608a565d1fc06f72098238e4d1e37593b4381b5e",
+   "venue": "Polymarket",
+   "conditionId": "0xb903b43aa70a51e5ea95450c608a565d1fc06f72098238e4d1e37593b4381b5e",
+   "idx": 1,
+   "name": "Under",
+   "title": "San Jose Earthquakes vs. Houston Dynamo: O/U 2.5",
+   "slug": "mls-sje-hou-2026-11-24-more-markets",
+   "league": "MLS",
+   "marketType": "total",
+   "start": 1795575600,
+   "whale": {
+    "q": 0.43,
+    "usd": 1186,
+    "score": 31,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795570400,
+    "wallet": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.44,
+   "createdAt": 1795571230,
+   "quoteAtOrder": {
+    "ask": 0.43,
+    "bid": 0.42,
+    "mid": 0.425,
+    "depth": 3581.5,
+    "at": 1795571232,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.43,
+   "filledAt": 1795571230,
+   "taker": true,
+   "feeUnits": 0.0171,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.42,
+    "ask": 0.43,
+    "mid": 0.425,
+    "at": 1795571232,
+    "minsBefore": 73,
+    "source": "polymarket book"
+   }
   }
  ],
  "logged": {

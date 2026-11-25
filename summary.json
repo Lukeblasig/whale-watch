@@ -1,10 +1,10 @@
 {
- "updated": 1795570594,
+ "updated": 1795571230,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 281,
-  "fills": 232,
+  "orders": 282,
+  "fills": 233,
   "settled": 225,
   "w": 131,
   "l": 94,
@@ -30,9 +30,9 @@
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.15,
-  "takerPct": 90.52,
+  "takerPct": 90.56,
   "liveQuotePct": 100,
-  "open": 7,
+  "open": 8,
   "resting": 2,
   "cancelled": 47
  },
@@ -762,8 +762,8 @@
    "cancelled": 0
   },
   "socSharp4050": {
-   "orders": 36,
-   "fills": 31,
+   "orders": 37,
+   "fills": 32,
    "settled": 31,
    "w": 11,
    "l": 20,
@@ -789,9 +789,9 @@
    ],
    "medianSlipCents": 0,
    "avgSlipCents": -0.14,
-   "takerPct": 96.77,
+   "takerPct": 96.88,
    "liveQuotePct": 100,
-   "open": 0,
+   "open": 1,
    "resting": 0,
    "cancelled": 5
   },
@@ -881,8 +881,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 9,
- "unitsToday": 29,
+ "openUnits": 10,
+ "unitsToday": 30,
  "drawdown": {
   "units": -21.58,
   "max": 27.23,
@@ -909,13 +909,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 232 fills"
+   "detail": "Median 0.00¢ over 233 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.18940972222222222,
+   "progress": 0.18967261904761903,
    "detail": "0.8 weeks, 225 settled bets"
   }
  ],
@@ -1139,11 +1139,11 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795570594,
+  "at": 1795571230,
   "status": "ok",
-  "candidates": 7,
-  "ordered": 0,
-  "filled": 0,
+  "candidates": 8,
+  "ordered": 1,
+  "filled": 1,
   "rested": 0,
   "skipped": 0,
   "shadowOrdered": 0,
@@ -1151,6 +1151,6 @@
   "cancelled": 0,
   "closes": 5
  },
- "dataUpdated": 1795570528,
+ "dataUpdated": 1795571144,
  "killSwitch": false
 }
