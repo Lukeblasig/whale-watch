@@ -28392,10 +28392,10 @@
    "slippageCents": 1,
    "close": {
     "bid": 0.84,
-    "ask": 0.94,
-    "mid": 0.89,
-    "at": 1795712194,
-    "minsBefore": 48,
+    "ask": 0.92,
+    "mid": 0.88,
+    "at": 1795712819,
+    "minsBefore": 38,
     "source": "polymarket book"
    }
   },
@@ -37342,8 +37342,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795712194,
-    "minsBefore": 4083,
+    "at": 1795712819,
+    "minsBefore": 4073,
     "source": "polymarket book"
    }
   },
@@ -39071,8 +39071,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795712194,
-    "minsBefore": 48,
+    "at": 1795712819,
+    "minsBefore": 38,
     "source": "polymarket book"
    }
   },
@@ -39129,8 +39129,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795712194,
-    "minsBefore": 48,
+    "at": 1795712819,
+    "minsBefore": 38,
     "source": "polymarket book"
    }
   },
@@ -39247,8 +39247,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795712194,
-    "minsBefore": 183,
+    "at": 1795712819,
+    "minsBefore": 173,
     "source": "polymarket book"
    }
   },
@@ -39305,8 +39305,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795712194,
-    "minsBefore": 183,
+    "at": 1795712819,
+    "minsBefore": 173,
     "source": "polymarket book"
    }
   },
@@ -39359,8 +39359,8 @@
     "bid": 0.66,
     "ask": 0.67,
     "mid": 0.665,
-    "at": 1795712194,
-    "minsBefore": 48,
+    "at": 1795712819,
+    "minsBefore": 38,
     "source": "polymarket book"
    }
   },
@@ -39413,8 +39413,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795712194,
-    "minsBefore": 48,
+    "at": 1795712819,
+    "minsBefore": 38,
     "source": "polymarket book"
    }
   },
@@ -39467,8 +39467,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795712194,
-    "minsBefore": 48,
+    "at": 1795712819,
+    "minsBefore": 38,
     "source": "polymarket book"
    }
   },
@@ -39521,8 +39521,121 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795712194,
-    "minsBefore": 48,
+    "at": 1795712819,
+    "minsBefore": 38,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795712818-670",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4060agree60",
+    "socSharp4050"
+   ],
+   "sigKey": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0|0x460c491158d0c249e422e95ea22b2ec5af34a2695ec86ba969cfa446a102f1ea|1",
+   "pickKey": "Polymarket|0x460c491158d0c249e422e95ea22b2ec5af34a2695ec86ba969cfa446a102f1ea|1",
+   "marketKey": "Polymarket|0x460c491158d0c249e422e95ea22b2ec5af34a2695ec86ba969cfa446a102f1ea",
+   "venue": "Polymarket",
+   "conditionId": "0x460c491158d0c249e422e95ea22b2ec5af34a2695ec86ba969cfa446a102f1ea",
+   "idx": 1,
+   "name": "MH Hapoel Beer Sheva",
+   "title": "Spread: Beşiktaş JK (-1.5)",
+   "slug": "uel-bes-hbs-2026-11-26-more-markets",
+   "league": "UEL",
+   "marketType": "spread",
+   "start": 1795715100,
+   "whale": {
+    "q": 0.48,
+    "usd": 1841,
+    "score": 56,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795711563,
+    "wallet": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.49,
+   "createdAt": 1795712818,
+   "quoteAtOrder": {
+    "ask": 0.52,
+    "bid": 0.51,
+    "mid": 0.515,
+    "depth": 2660.34,
+    "at": 1795712820,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.51,
+    "ask": 0.52,
+    "mid": 0.515,
+    "at": 1795712820,
+    "minsBefore": 38,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795712818-671",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98|0xfc0398b6bf00c7580030166d2315cbcb70cb2d0702de74a9b2935f264e40b976|0",
+   "pickKey": "Polymarket|0xfc0398b6bf00c7580030166d2315cbcb70cb2d0702de74a9b2935f264e40b976|0",
+   "marketKey": "Polymarket|0xfc0398b6bf00c7580030166d2315cbcb70cb2d0702de74a9b2935f264e40b976",
+   "venue": "Polymarket",
+   "conditionId": "0xfc0398b6bf00c7580030166d2315cbcb70cb2d0702de74a9b2935f264e40b976",
+   "idx": 0,
+   "name": "Over",
+   "title": "RU Saint-Gilloise vs. KKS Lech Poznań: O/U 3.5",
+   "slug": "uel-usg-lep-2026-11-26-more-markets",
+   "league": "UEL",
+   "marketType": "total",
+   "start": 1795715100,
+   "whale": {
+    "q": 0.409,
+    "usd": 3907,
+    "score": 52,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795711797,
+    "wallet": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.41,
+   "createdAt": 1795712818,
+   "quoteAtOrder": {
+    "ask": 0.41,
+    "bid": 0.4,
+    "mid": 0.405,
+    "depth": 1322.29,
+    "at": 1795712819,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.41,
+   "filledAt": 1795712818,
+   "taker": true,
+   "feeUnits": 0.0177,
+   "priceSource": "polymarket book",
+   "slippageCents": 0.1,
+   "close": {
+    "bid": 0.4,
+    "ask": 0.41,
+    "mid": 0.405,
+    "at": 1795712819,
+    "minsBefore": 38,
     "source": "polymarket book"
    }
   }
