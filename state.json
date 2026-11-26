@@ -28394,8 +28394,8 @@
     "bid": 0.92,
     "ask": 0.93,
     "mid": 0.925,
-    "at": 1795708606,
-    "minsBefore": 108,
+    "at": 1795709208,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -37342,8 +37342,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795708606,
-    "minsBefore": 4143,
+    "at": 1795709208,
+    "minsBefore": 4133,
     "source": "polymarket book"
    }
   },
@@ -39071,8 +39071,8 @@
     "bid": 0.51,
     "ask": 0.52,
     "mid": 0.515,
-    "at": 1795708606,
-    "minsBefore": 108,
+    "at": 1795709208,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -39129,8 +39129,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795708606,
-    "minsBefore": 108,
+    "at": 1795709208,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -39247,8 +39247,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795708606,
-    "minsBefore": 243,
+    "at": 1795709208,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -39305,8 +39305,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795708606,
-    "minsBefore": 243,
+    "at": 1795709208,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -39359,8 +39359,62 @@
     "bid": 0.65,
     "ask": 0.66,
     "mid": 0.655,
-    "at": 1795708606,
-    "minsBefore": 108,
+    "at": 1795709208,
+    "minsBefore": 98,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795709207-667",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc4050ml40",
+   "alsoMatched": [],
+   "sigKey": "0x9bfe3b19bdbb654414dd167624cbe2dddab54a26|0x7498f897c196713524b59dcf1547a3290b50132515de29a4056290b3515126fe|0",
+   "pickKey": "Polymarket|0x7498f897c196713524b59dcf1547a3290b50132515de29a4056290b3515126fe|0",
+   "marketKey": "Polymarket|0x7498f897c196713524b59dcf1547a3290b50132515de29a4056290b3515126fe",
+   "venue": "Polymarket",
+   "conditionId": "0x7498f897c196713524b59dcf1547a3290b50132515de29a4056290b3515126fe",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will FC Lugano win on 2026-11-26?",
+   "slug": "col-jab-lug-2026-11-26",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795715100,
+   "whale": {
+    "q": 0.4604,
+    "usd": 19657,
+    "score": 42,
+    "sharp": false,
+    "flow": "none",
+    "ts": 1795707865,
+    "wallet": "0x9bfe3b19bdbb654414dd167624cbe2dddab54a26"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.47,
+   "createdAt": 1795709207,
+   "quoteAtOrder": {
+    "ask": 0.45,
+    "bid": 0.44,
+    "mid": 0.445,
+    "depth": 914.28,
+    "at": 1795709208,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.45,
+   "filledAt": 1795709207,
+   "taker": true,
+   "feeUnits": 0.0165,
+   "priceSource": "polymarket book",
+   "slippageCents": -1,
+   "close": {
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795709208,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   }
@@ -39372,8 +39426,6 @@
   "Polymarket|0x79909c27cec20878d54e1ae855c89982a7359a2a5f09b7c3c74431cdbf32d410|1|price 93¢ is over 90¢": 1795715100,
   "Polymarket|0x96a19397dccb16b0f6c594a8d60a931c0ea0035a73accf97357a37a0caa2f3b9|1|whale's price 97¢ is over 90¢": 1795550400,
   "Polymarket|0x7ce053c2c6b9eec2fa7202f3d19f2ea1f47f6cd6717e31ebee64e645c89c2bae|1|already bet the other side of this market": 1795542300,
-  "Polymarket|0x5fe2416e91c87a1b2dfde68c083278ca22dde25db4c5d2ee3ce4b44d140cc4f3|1|already tried this pick": 1795536000,
-  "Polymarket|0x8d6f433a6315d51e212af11cf0b8810a70300563864d7da41b6ac7bb14044073|1|already tried this pick": 1795536000,
   "Polymarket|0x1d64140ff46026b671a735b406604a3cfb550006a47b5965a012f3a2dc5448d8|1|already tried this pick": 1795542300,
   "Polymarket|0x90ebdcf4181f2e2795788ea5b50aea2bf35e12d9a287eb1278b31079bff2cfdb|0|already tried this pick": 1795542300,
   "Polymarket|0x2a3a45199ad9bf62067c7af208f8d736b69ad94bf7cac691e2f268820951e932|1|already tried this pick": 1795546800,
