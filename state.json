@@ -28394,8 +28394,8 @@
     "bid": 0.84,
     "ask": 0.92,
     "mid": 0.88,
-    "at": 1795712819,
-    "minsBefore": 38,
+    "at": 1795713410,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -37342,8 +37342,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795712819,
-    "minsBefore": 4073,
+    "at": 1795713410,
+    "minsBefore": 4063,
     "source": "polymarket book"
    }
   },
@@ -39071,8 +39071,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795712819,
-    "minsBefore": 38,
+    "at": 1795713409,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -39129,8 +39129,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795712819,
-    "minsBefore": 38,
+    "at": 1795713410,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -39244,11 +39244,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.45,
-    "ask": 0.46,
-    "mid": 0.455,
-    "at": 1795712819,
-    "minsBefore": 173,
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795713410,
+    "minsBefore": 163,
     "source": "polymarket book"
    }
   },
@@ -39305,8 +39305,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795712819,
-    "minsBefore": 173,
+    "at": 1795713410,
+    "minsBefore": 163,
     "source": "polymarket book"
    }
   },
@@ -39356,11 +39356,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.66,
-    "ask": 0.67,
-    "mid": 0.665,
-    "at": 1795712819,
-    "minsBefore": 38,
+    "bid": 0.67,
+    "ask": 0.68,
+    "mid": 0.675,
+    "at": 1795713410,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -39413,8 +39413,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795712819,
-    "minsBefore": 38,
+    "at": 1795713410,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -39467,8 +39467,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795712819,
-    "minsBefore": 38,
+    "at": 1795713410,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -39521,8 +39521,8 @@
     "bid": 0.86,
     "ask": 0.87,
     "mid": 0.865,
-    "at": 1795712819,
-    "minsBefore": 38,
+    "at": 1795713410,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -39578,8 +39578,8 @@
     "bid": 0.51,
     "ask": 0.52,
     "mid": 0.515,
-    "at": 1795712820,
-    "minsBefore": 38,
+    "at": 1795713410,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   },
@@ -39634,8 +39634,62 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795712819,
-    "minsBefore": 38,
+    "at": 1795713410,
+    "minsBefore": 28,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795713409-672",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c|0x791f7a4888f5974f6fd3a4bf3598e5ac8ed4d8a28e2c6d99a9780ae88b965a68|1",
+   "pickKey": "Polymarket|0x791f7a4888f5974f6fd3a4bf3598e5ac8ed4d8a28e2c6d99a9780ae88b965a68|1",
+   "marketKey": "Polymarket|0x791f7a4888f5974f6fd3a4bf3598e5ac8ed4d8a28e2c6d99a9780ae88b965a68",
+   "venue": "Polymarket",
+   "conditionId": "0x791f7a4888f5974f6fd3a4bf3598e5ac8ed4d8a28e2c6d99a9780ae88b965a68",
+   "idx": 1,
+   "name": "Under",
+   "title": "FK Jablonec vs. FC Lugano: O/U 2.5",
+   "slug": "col-jab-lug-2026-11-26-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795715100,
+   "whale": {
+    "q": 0.4462,
+    "usd": 2074,
+    "score": 44,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795711783,
+    "wallet": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.45,
+   "createdAt": 1795713409,
+   "quoteAtOrder": {
+    "ask": 0.48,
+    "bid": 0.47,
+    "mid": 0.475,
+    "depth": 1107.33,
+    "at": 1795713410,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795713410,
+    "minsBefore": 28,
     "source": "polymarket book"
    }
   }
