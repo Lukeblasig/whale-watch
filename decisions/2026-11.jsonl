@@ -2807,3 +2807,4 @@
 {"t":1795680429,"type":"run","status":"ok","candidates":13,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":6,"openUnits":8,"unitsToday":2}
 {"t":1795681029,"type":"run","status":"ok","candidates":13,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":6,"openUnits":8,"unitsToday":2}
 {"t":1795681655,"type":"run","status":"ok","candidates":13,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":6,"openUnits":8,"unitsToday":2}
+{"t":1795682228,"type":"run","status":"ok","candidates":14,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":5,"openUnits":8,"unitsToday":2}
