@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795731406,
-    "minsBefore": 3763,
+    "at": 1795732028,
+    "minsBefore": 3753,
     "source": "polymarket book"
    }
   },
@@ -39478,7 +39478,7 @@
     "at": 1795709799,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.79,
    "filledAt": 1795709798,
    "taker": true,
@@ -39492,7 +39492,12 @@
     "at": 1795714596,
     "minsBefore": 8,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.2658,
+   "units": 0.2595,
+   "whaleUnits": 0.2658227848101265,
+   "settledAt": 1795732026
   },
   {
    "id": "1795711589-669",
@@ -40229,6 +40234,116 @@
     "mid": 0.795,
     "at": 1795728384,
     "minsBefore": 4,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795732026-682",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c|0xe889bd9abb8ffdb82e9d837553924ef108ae36d60c69e55cd50df3dde1a7774c|0",
+   "pickKey": "Polymarket|0xe889bd9abb8ffdb82e9d837553924ef108ae36d60c69e55cd50df3dde1a7774c|0",
+   "marketKey": "Polymarket|0xe889bd9abb8ffdb82e9d837553924ef108ae36d60c69e55cd50df3dde1a7774c",
+   "venue": "Polymarket",
+   "conditionId": "0xe889bd9abb8ffdb82e9d837553924ef108ae36d60c69e55cd50df3dde1a7774c",
+   "idx": 0,
+   "name": "São Paulo FC",
+   "title": "Spread: São Paulo FC (-1.5)",
+   "slug": "bra-sao-cre-2026-11-26-more-markets",
+   "league": "Other soccer",
+   "marketType": "spread",
+   "start": 1795734000,
+   "whale": {
+    "q": 0.4699,
+    "usd": 1767,
+    "score": 41,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795731105,
+    "wallet": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.47,
+   "createdAt": 1795732026,
+   "quoteAtOrder": {
+    "ask": 0.46,
+    "bid": 0.45,
+    "mid": 0.455,
+    "depth": 4258.16,
+    "at": 1795732028,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.46,
+   "filledAt": 1795732026,
+   "taker": true,
+   "feeUnits": 0.0162,
+   "priceSource": "polymarket book",
+   "slippageCents": -1,
+   "close": {
+    "bid": 0.45,
+    "ask": 0.46,
+    "mid": 0.455,
+    "at": 1795732028,
+    "minsBefore": 33,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795732026-683",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [
+    "seraSharp50"
+   ],
+   "sigKey": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3|0x593c5873d5ad59611c5ab284bd1aedb29fe54676718f0d3b9e96674bec96a771|1",
+   "pickKey": "Polymarket|0x593c5873d5ad59611c5ab284bd1aedb29fe54676718f0d3b9e96674bec96a771|1",
+   "marketKey": "Polymarket|0x593c5873d5ad59611c5ab284bd1aedb29fe54676718f0d3b9e96674bec96a771",
+   "venue": "Polymarket",
+   "conditionId": "0x593c5873d5ad59611c5ab284bd1aedb29fe54676718f0d3b9e96674bec96a771",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Bologna FC 1909 win on 2026-11-27?",
+   "slug": "sea-ven-bol-2026-11-27",
+   "league": "Serie A",
+   "marketType": "moneyline",
+   "start": 1795808700,
+   "whale": {
+    "q": 0.57,
+    "usd": 2621,
+    "score": 55,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795722301,
+    "wallet": "0x2559b5bae55fc693e15896e816aae2761d8eb2e3"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.58,
+   "createdAt": 1795732026,
+   "quoteAtOrder": {
+    "ask": 0.58,
+    "bid": 0.57,
+    "mid": 0.575,
+    "depth": 8933.56,
+    "at": 1795732028,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.58,
+   "filledAt": 1795732026,
+   "taker": true,
+   "feeUnits": 0.0126,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.57,
+    "ask": 0.58,
+    "mid": 0.575,
+    "at": 1795732028,
+    "minsBefore": 1278,
     "source": "polymarket book"
    }
   }
