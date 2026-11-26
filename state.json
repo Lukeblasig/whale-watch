@@ -28394,8 +28394,8 @@
     "bid": 0.9,
     "ask": 0.93,
     "mid": 0.915,
-    "at": 1795689413,
-    "minsBefore": 428,
+    "at": 1795690001,
+    "minsBefore": 418,
     "source": "polymarket book"
    }
   },
@@ -37342,8 +37342,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795689413,
-    "minsBefore": 4463,
+    "at": 1795690001,
+    "minsBefore": 4453,
     "source": "polymarket book"
    }
   },
@@ -39071,8 +39071,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795689413,
-    "minsBefore": 428,
+    "at": 1795690001,
+    "minsBefore": 418,
     "source": "polymarket book"
    }
   },
@@ -39129,8 +39129,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795689413,
-    "minsBefore": 428,
+    "at": 1795690001,
+    "minsBefore": 418,
     "source": "polymarket book"
    }
   },
@@ -39242,8 +39242,66 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795689413,
-    "minsBefore": 563,
+    "at": 1795690001,
+    "minsBefore": 553,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795690000-665",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc4050ml40",
+   "alsoMatched": [
+    "socSharp4060ml40",
+    "socSharp4050s50",
+    "socSharp4050"
+   ],
+   "sigKey": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c|0x8a4a8416ee2c2a6f0e386133286c9e60350d865b67026473eb5e28ed42a892c2|1",
+   "pickKey": "Polymarket|0x8a4a8416ee2c2a6f0e386133286c9e60350d865b67026473eb5e28ed42a892c2|1",
+   "marketKey": "Polymarket|0x8a4a8416ee2c2a6f0e386133286c9e60350d865b67026473eb5e28ed42a892c2",
+   "venue": "Polymarket",
+   "conditionId": "0x8a4a8416ee2c2a6f0e386133286c9e60350d865b67026473eb5e28ed42a892c2",
+   "idx": 1,
+   "name": "No",
+   "title": "Will SC Freiburg win on 2026-11-26?",
+   "slug": "col-scf-twe-2026-11-26",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795723200,
+   "whale": {
+    "q": 0.47,
+    "usd": 6451,
+    "score": 51,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795688471,
+    "wallet": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.48,
+   "createdAt": 1795690000,
+   "quoteAtOrder": {
+    "ask": 0.48,
+    "bid": 0.47,
+    "mid": 0.475,
+    "depth": 8535.81,
+    "at": 1795690001,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.48,
+   "filledAt": 1795690000,
+   "taker": true,
+   "feeUnits": 0.0156,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795690001,
+    "minsBefore": 553,
     "source": "polymarket book"
    }
   }
