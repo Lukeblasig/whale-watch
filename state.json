@@ -28394,8 +28394,8 @@
     "bid": 0.89,
     "ask": 0.93,
     "mid": 0.91,
-    "at": 1795691806,
-    "minsBefore": 388,
+    "at": 1795692432,
+    "minsBefore": 378,
     "source": "polymarket book"
    }
   },
@@ -37342,8 +37342,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795691806,
-    "minsBefore": 4423,
+    "at": 1795692432,
+    "minsBefore": 4413,
     "source": "polymarket book"
    }
   },
@@ -39071,8 +39071,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795691806,
-    "minsBefore": 388,
+    "at": 1795692432,
+    "minsBefore": 378,
     "source": "polymarket book"
    }
   },
@@ -39129,8 +39129,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795691806,
-    "minsBefore": 388,
+    "at": 1795692432,
+    "minsBefore": 378,
     "source": "polymarket book"
    }
   },
@@ -39174,7 +39174,7 @@
     "at": 1795679242,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.78,
    "filledAt": 1795679241,
    "taker": true,
@@ -39188,7 +39188,12 @@
     "at": 1795681655,
     "minsBefore": 2,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.2821,
+   "units": 0.2755,
+   "whaleUnits": 0.282051282051282,
+   "settledAt": 1795692431
   },
   {
    "id": "1795679241-664",
@@ -39242,8 +39247,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795691806,
-    "minsBefore": 523,
+    "at": 1795692432,
+    "minsBefore": 513,
     "source": "polymarket book"
    }
   },
@@ -39300,8 +39305,62 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795691806,
-    "minsBefore": 523,
+    "at": 1795692432,
+    "minsBefore": 513,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795692431-666",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp6090agree50",
+   "alsoMatched": [],
+   "sigKey": "0xbb6418f9db6d1c765965dc4c9d48cd5b4d2bdb86|0x7684f45150b5db2b93a39c26481f305551d13611a7baf0164548cf4ea32e4056|1",
+   "pickKey": "Polymarket|0x7684f45150b5db2b93a39c26481f305551d13611a7baf0164548cf4ea32e4056|1",
+   "marketKey": "Polymarket|0x7684f45150b5db2b93a39c26481f305551d13611a7baf0164548cf4ea32e4056",
+   "venue": "Polymarket",
+   "conditionId": "0x7684f45150b5db2b93a39c26481f305551d13611a7baf0164548cf4ea32e4056",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Olympiakós SFP win on 2026-11-26?",
+   "slug": "uel-oly-mil1-2026-11-26",
+   "league": "UEL",
+   "marketType": "moneyline",
+   "start": 1795715100,
+   "whale": {
+    "q": 0.66,
+    "usd": 1889,
+    "score": 57,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795651900,
+    "wallet": "0xbb6418f9db6d1c765965dc4c9d48cd5b4d2bdb86"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.67,
+   "createdAt": 1795692431,
+   "quoteAtOrder": {
+    "ask": 0.66,
+    "bid": 0.65,
+    "mid": 0.655,
+    "depth": 3978.39,
+    "at": 1795692432,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.66,
+   "filledAt": 1795692431,
+   "taker": true,
+   "feeUnits": 0.0102,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.65,
+    "ask": 0.66,
+    "mid": 0.655,
+    "at": 1795692432,
+    "minsBefore": 378,
     "source": "polymarket book"
    }
   }
