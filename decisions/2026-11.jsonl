@@ -2746,3 +2746,4 @@
 {"t":1795652806,"type":"cancel","id":"1795643211-658","rule":"sharp4060ml70","shadow":false,"reason":"unfilled at the start-time cutoff"}
 {"t":1795652806,"type":"skip","reason":"already tried this pick","rule":"sharp4060ml70","pick":{"venue":"Polymarket","league":"NBA","title":"Cavaliers vs. Knicks","side":"Knicks","start":1795653000,"whaleKey":"0xdc41c39b95453c943174f369926018f6963bdd7e|0x1086efe8518a09ccfe6c89f4547d59b151ceae74ce0df9727bcd3ac1640631ca|1","q":0.5981,"score":71,"sharp":true,"marketType":"moneyline"},"quote":{"ask":0.63,"source":"polymarket book"}}
 {"t":1795652806,"type":"run","status":"ok","candidates":4,"ordered":0,"filled":0,"rested":0,"skipped":1,"shadowOrdered":0,"settled":0,"cancelled":1,"closes":4,"openUnits":8,"unitsToday":31}
+{"t":1795653392,"type":"run","status":"ok","candidates":2,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":3,"openUnits":8,"unitsToday":31}

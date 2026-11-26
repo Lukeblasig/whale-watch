@@ -28394,8 +28394,8 @@
     "bid": 0.86,
     "ask": 0.93,
     "mid": 0.895,
-    "at": 1795652806,
-    "minsBefore": 1038,
+    "at": 1795653392,
+    "minsBefore": 1028,
     "source": "polymarket book"
    }
   },
@@ -37342,8 +37342,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795652806,
-    "minsBefore": 5073,
+    "at": 1795653392,
+    "minsBefore": 5063,
     "source": "polymarket book"
    }
   },
@@ -37751,8 +37751,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795652806,
-    "minsBefore": 63,
+    "at": 1795653392,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   },
@@ -38946,7 +38946,6 @@
   "socAgree40|Polymarket|0x56aed2130ecbca8523f31b52acfa47df16927e9d76b303203bdf18f26cfb2ee4|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x20c34f68662f47fa7c283d469853f6b3f645c6a92dc1ae7c5df24285f2210cfc|1|price is over 30 min old": 1795715100,
   "Polymarket|0x79909c27cec20878d54e1ae855c89982a7359a2a5f09b7c3c74431cdbf32d410|1|price 93¢ is over 90¢": 1795715100,
-  "Polymarket|0xc518c24e640355315b6dfca3c12f7fba9a01114cd8f653a07281550458429260|1|starts in under 10 min": 1795480200,
   "Polymarket|0x96a19397dccb16b0f6c594a8d60a931c0ea0035a73accf97357a37a0caa2f3b9|1|whale's price 97¢ is over 90¢": 1795550400,
   "Polymarket|0x77a819105be83b066cefff0f5c43faae485b56c8186fc4cda20bc2d398fea34a|0|starts in under 10 min": 1795506300,
   "Polymarket|0x7ce053c2c6b9eec2fa7202f3d19f2ea1f47f6cd6717e31ebee64e645c89c2bae|1|already bet the other side of this market": 1795542300,
