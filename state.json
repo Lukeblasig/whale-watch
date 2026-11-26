@@ -37342,8 +37342,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795720609,
-    "minsBefore": 3943,
+    "at": 1795721210,
+    "minsBefore": 3933,
     "source": "polymarket book"
    }
   },
@@ -39249,8 +39249,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795720609,
-    "minsBefore": 43,
+    "at": 1795721210,
+    "minsBefore": 33,
     "source": "polymarket book"
    }
   },
@@ -39307,8 +39307,8 @@
     "bid": 0.52,
     "ask": 0.53,
     "mid": 0.525,
-    "at": 1795720609,
-    "minsBefore": 43,
+    "at": 1795721210,
+    "minsBefore": 33,
     "source": "polymarket book"
    }
   },
@@ -39748,8 +39748,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795720609,
-    "minsBefore": 43,
+    "at": 1795721210,
+    "minsBefore": 33,
     "source": "polymarket book"
    }
   },
@@ -39804,8 +39804,62 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795720609,
-    "minsBefore": 43,
+    "at": 1795721210,
+    "minsBefore": 33,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795721209-675",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x0a2283acd17455093f0668b82eb41392070ae7112343fbf1188b8eb439e13bb0|1",
+   "pickKey": "Polymarket|0x0a2283acd17455093f0668b82eb41392070ae7112343fbf1188b8eb439e13bb0|1",
+   "marketKey": "Polymarket|0x0a2283acd17455093f0668b82eb41392070ae7112343fbf1188b8eb439e13bb0",
+   "venue": "Polymarket",
+   "conditionId": "0x0a2283acd17455093f0668b82eb41392070ae7112343fbf1188b8eb439e13bb0",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Celtic FC win on 2026-11-26?",
+   "slug": "uel-ut-cel-2026-11-26",
+   "league": "UEL",
+   "marketType": "moneyline",
+   "start": 1795723200,
+   "whale": {
+    "q": 0.42,
+    "usd": 1143,
+    "score": 32,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795719661,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.43,
+   "createdAt": 1795721209,
+   "quoteAtOrder": {
+    "ask": 0.44,
+    "bid": 0.43,
+    "mid": 0.435,
+    "depth": 11481.23,
+    "at": 1795721210,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.43,
+    "ask": 0.44,
+    "mid": 0.435,
+    "at": 1795721210,
+    "minsBefore": 33,
     "source": "polymarket book"
    }
   }
