@@ -37342,8 +37342,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795726000,
-    "minsBefore": 3853,
+    "at": 1795726594,
+    "minsBefore": 3843,
     "source": "polymarket book"
    }
   },
@@ -40147,6 +40147,60 @@
    },
    "cancelledAt": 1795722990,
    "cancelReason": "unfilled at the start-time cutoff"
+  },
+  {
+   "id": "1795726593-681",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp8090agree",
+   "alsoMatched": [],
+   "sigKey": "0x0235dc24b38772bf3339a9e5ec5db3d3a05fcee5|0x6dec4720e43ba8dd413f37760e97af043c54926dfbae4ffccd732cca308068ed|1",
+   "pickKey": "Polymarket|0x6dec4720e43ba8dd413f37760e97af043c54926dfbae4ffccd732cca308068ed|1",
+   "marketKey": "Polymarket|0x6dec4720e43ba8dd413f37760e97af043c54926dfbae4ffccd732cca308068ed",
+   "venue": "Polymarket",
+   "conditionId": "0x6dec4720e43ba8dd413f37760e97af043c54926dfbae4ffccd732cca308068ed",
+   "idx": 1,
+   "name": "Cowboys",
+   "title": "Eagles vs. Cowboys",
+   "slug": "nfl-phi-dal-2026-11-26",
+   "league": "NFL",
+   "marketType": "moneyline",
+   "start": 1795728600,
+   "whale": {
+    "q": 0.8,
+    "usd": 10000,
+    "score": 57,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795726021,
+    "wallet": "0x0235dc24b38772bf3339a9e5ec5db3d3a05fcee5"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.81,
+   "createdAt": 1795726593,
+   "quoteAtOrder": {
+    "ask": 0.8,
+    "bid": 0.79,
+    "mid": 0.795,
+    "depth": 427006.28,
+    "at": 1795726594,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.8,
+   "filledAt": 1795726593,
+   "taker": true,
+   "feeUnits": 0.006,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.79,
+    "ask": 0.8,
+    "mid": 0.795,
+    "at": 1795726594,
+    "minsBefore": 33,
+    "source": "polymarket book"
+   }
   }
  ],
  "logged": {
