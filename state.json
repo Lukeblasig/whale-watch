@@ -37342,8 +37342,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795721795,
-    "minsBefore": 3923,
+    "at": 1795722407,
+    "minsBefore": 3913,
     "source": "polymarket book"
    }
   },
@@ -39246,11 +39246,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.52,
-    "ask": 0.53,
-    "mid": 0.525,
-    "at": 1795721795,
-    "minsBefore": 23,
+    "bid": 0.51,
+    "ask": 0.52,
+    "mid": 0.515,
+    "at": 1795722407,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -39304,11 +39304,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.52,
-    "ask": 0.53,
-    "mid": 0.525,
-    "at": 1795721795,
-    "minsBefore": 23,
+    "bid": 0.53,
+    "ask": 0.54,
+    "mid": 0.535,
+    "at": 1795722407,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -39748,8 +39748,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795721795,
-    "minsBefore": 23,
+    "at": 1795722407,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -39804,8 +39804,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795721795,
-    "minsBefore": 23,
+    "at": 1795722408,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -39858,8 +39858,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795721795,
-    "minsBefore": 23,
+    "at": 1795722408,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -39912,8 +39912,8 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795721795,
-    "minsBefore": 23,
+    "at": 1795722408,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -39968,8 +39968,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795721795,
-    "minsBefore": 23,
+    "at": 1795722408,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -40022,8 +40022,8 @@
     "bid": 0.47,
     "ask": 0.48,
     "mid": 0.475,
-    "at": 1795721795,
-    "minsBefore": 23,
+    "at": 1795722408,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -40076,8 +40076,65 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795721795,
-    "minsBefore": 23,
+    "at": 1795722408,
+    "minsBefore": 13,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795722406-680",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc4050ml40",
+   "alsoMatched": [
+    "socSharp4060ml40",
+    "socSharp4050"
+   ],
+   "sigKey": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c|0x81f3efc1de60c40713c8fe2cf73f46376f6086a0c6b95d072c57dd7a61b18cbe|0",
+   "pickKey": "Polymarket|0x81f3efc1de60c40713c8fe2cf73f46376f6086a0c6b95d072c57dd7a61b18cbe|0",
+   "marketKey": "Polymarket|0x81f3efc1de60c40713c8fe2cf73f46376f6086a0c6b95d072c57dd7a61b18cbe",
+   "venue": "Polymarket",
+   "conditionId": "0x81f3efc1de60c40713c8fe2cf73f46376f6086a0c6b95d072c57dd7a61b18cbe",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will HNK Hajduk Split win on 2026-11-26?",
+   "slug": "col-haj-kst-2026-11-26",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795723200,
+   "whale": {
+    "q": 0.4388,
+    "usd": 8173,
+    "score": 43,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795720296,
+    "wallet": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.44,
+   "createdAt": 1795722406,
+   "quoteAtOrder": {
+    "ask": 0.45,
+    "bid": 0.44,
+    "mid": 0.445,
+    "depth": 32698.61,
+    "at": 1795722408,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795722408,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   }
@@ -40088,8 +40145,6 @@
   "socAgree40|Polymarket|0x20c34f68662f47fa7c283d469853f6b3f645c6a92dc1ae7c5df24285f2210cfc|1|price is over 30 min old": 1795715100,
   "Polymarket|0x79909c27cec20878d54e1ae855c89982a7359a2a5f09b7c3c74431cdbf32d410|1|price 93¢ is over 90¢": 1795715100,
   "Polymarket|0x96a19397dccb16b0f6c594a8d60a931c0ea0035a73accf97357a37a0caa2f3b9|1|whale's price 97¢ is over 90¢": 1795550400,
-  "Polymarket|0xd6f786af4e3c5955403bb2e8a54846ddf39fb5209598ca9ca09d3aa933bdce5f|0|already bet the other side of this market": 1795549500,
-  "Polymarket|0x4da87ef56f53ea94365870d627c54322f866aef1118140323d616790b4480a85|1|already tried this pick": 1795549500,
   "Polymarket|0x25003145231b90522b017eeb56fd44a83ea64ab7432d0b4c181783d6a39455a8|1|already tried this pick": 1795550400,
   "Polymarket|0x4db31b31ce7819b7507e9da5afbf5a4f315e176fc16ccdd842231e5f17c003ea|0|already bet the other side of this market": 1795550400,
   "Polymarket|0x106e86616f6e2442f23bcc7fe06a2a3c92a8d8ef7c5b8bd92e0fbfc6976edf0f|1|whale's price 97¢ is over 90¢": 1795628700,
