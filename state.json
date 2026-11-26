@@ -37342,8 +37342,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795719978,
-    "minsBefore": 3954,
+    "at": 1795720609,
+    "minsBefore": 3943,
     "source": "polymarket book"
    }
   },
@@ -39249,8 +39249,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795719978,
-    "minsBefore": 54,
+    "at": 1795720609,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -39307,8 +39307,8 @@
     "bid": 0.52,
     "ask": 0.53,
     "mid": 0.525,
-    "at": 1795719978,
-    "minsBefore": 54,
+    "at": 1795720609,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -39698,6 +39698,116 @@
    },
    "cancelledAt": 1795714594,
    "cancelReason": "unfilled at the start-time cutoff"
+  },
+  {
+   "id": "1795720608-673",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0|0x652bab1321dbdc94ddc4c7076aa3673daaa568150cad7a7712e1a025b651676d|0",
+   "pickKey": "Polymarket|0x652bab1321dbdc94ddc4c7076aa3673daaa568150cad7a7712e1a025b651676d|0",
+   "marketKey": "Polymarket|0x652bab1321dbdc94ddc4c7076aa3673daaa568150cad7a7712e1a025b651676d",
+   "venue": "Polymarket",
+   "conditionId": "0x652bab1321dbdc94ddc4c7076aa3673daaa568150cad7a7712e1a025b651676d",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will RSC Anderlecht win on 2026-11-26?",
+   "slug": "uel-ofi-and-2026-11-26",
+   "league": "UEL",
+   "marketType": "moneyline",
+   "start": 1795723200,
+   "whale": {
+    "q": 0.5469,
+    "usd": 8386,
+    "score": 49,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795719585,
+    "wallet": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.55,
+   "createdAt": 1795720608,
+   "quoteAtOrder": {
+    "ask": 0.56,
+    "bid": 0.55,
+    "mid": 0.555,
+    "depth": 30939.79,
+    "at": 1795720609,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.55,
+    "ask": 0.56,
+    "mid": 0.555,
+    "at": 1795720609,
+    "minsBefore": 43,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795720608-674",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c|0x7a210b5f1662ceb494cec884b3d1bbea2a328e3fb59dcd1533ded29373bd145c|0",
+   "pickKey": "Polymarket|0x7a210b5f1662ceb494cec884b3d1bbea2a328e3fb59dcd1533ded29373bd145c|0",
+   "marketKey": "Polymarket|0x7a210b5f1662ceb494cec884b3d1bbea2a328e3fb59dcd1533ded29373bd145c",
+   "venue": "Polymarket",
+   "conditionId": "0x7a210b5f1662ceb494cec884b3d1bbea2a328e3fb59dcd1533ded29373bd145c",
+   "idx": 0,
+   "name": "Over",
+   "title": "Ferencvárosi TC vs. NK Celje: O/U 3.5",
+   "slug": "uel-ftc-cel2-2026-11-26-more-markets",
+   "league": "UEL",
+   "marketType": "total",
+   "start": 1795723200,
+   "whale": {
+    "q": 0.4387,
+    "usd": 9744,
+    "score": 52,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795719846,
+    "wallet": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.44,
+   "createdAt": 1795720608,
+   "quoteAtOrder": {
+    "ask": 0.45,
+    "bid": 0.44,
+    "mid": 0.445,
+    "depth": 8695.74,
+    "at": 1795720609,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795720609,
+    "minsBefore": 43,
+    "source": "polymarket book"
+   }
   }
  ],
  "logged": {
