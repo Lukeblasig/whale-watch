@@ -2790,3 +2790,4 @@
 {"t":1795672006,"type":"settle","id":"1795656431-660","rule":"sharpMl70","shadow":false,"result":"W","units":0.3258,"fee":0.0075,"whaleUnits":0.35135135135135137,"fill":0.75,"whaleQ":0.74,"closeMid":0.735}
 {"t":1795672007,"type":"run","status":"ok","candidates":8,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":1,"cancelled":0,"closes":4,"openUnits":6,"unitsToday":34}
 {"t":1795672634,"type":"run","status":"ok","candidates":8,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":4,"openUnits":6,"unitsToday":34}
+{"t":1795673202,"type":"run","status":"ok","candidates":8,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":4,"openUnits":6,"unitsToday":0}
