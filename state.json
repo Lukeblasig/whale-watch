@@ -28391,11 +28391,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.86,
+    "bid": 0.85,
     "ask": 0.93,
-    "mid": 0.895,
-    "at": 1795662384,
-    "minsBefore": 879,
+    "mid": 0.89,
+    "at": 1795662987,
+    "minsBefore": 869,
     "source": "polymarket book"
    }
   },
@@ -37342,8 +37342,8 @@
     "bid": 0.73,
     "ask": 0.74,
     "mid": 0.735,
-    "at": 1795662384,
-    "minsBefore": 4914,
+    "at": 1795662987,
+    "minsBefore": 4904,
     "source": "polymarket book"
    }
   },
