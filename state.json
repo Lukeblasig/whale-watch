@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795773402,
-    "minsBefore": 3063,
+    "at": 1795774017,
+    "minsBefore": 3053,
     "source": "polymarket book"
    }
   },
@@ -40377,8 +40377,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795773402,
-    "minsBefore": 588,
+    "at": 1795774017,
+    "minsBefore": 578,
     "source": "polymarket book"
    }
   },
@@ -40490,8 +40490,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795773402,
-    "minsBefore": 903,
+    "at": 1795774017,
+    "minsBefore": 893,
     "source": "polymarket book"
    }
   },
@@ -40544,8 +40544,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795773402,
-    "minsBefore": 543,
+    "at": 1795774017,
+    "minsBefore": 533,
     "source": "polymarket book"
    }
   },
@@ -40656,8 +40656,62 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795773403,
-    "minsBefore": 943,
+    "at": 1795774017,
+    "minsBefore": 933,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795774016-689",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc7090agree40",
+   "alsoMatched": [],
+   "sigKey": "0x599c2cf41b974242996ba9877d61729f717957cc|0x10fb2b8dcf42636b5868aeb916b0e199587ad6fe23ade02a4e9090326b745d04|0",
+   "pickKey": "Polymarket|0x10fb2b8dcf42636b5868aeb916b0e199587ad6fe23ade02a4e9090326b745d04|0",
+   "marketKey": "Polymarket|0x10fb2b8dcf42636b5868aeb916b0e199587ad6fe23ade02a4e9090326b745d04",
+   "venue": "Polymarket",
+   "conditionId": "0x10fb2b8dcf42636b5868aeb916b0e199587ad6fe23ade02a4e9090326b745d04",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will VVV Venlo vs. RKC Waalwijk end in a draw?",
+   "slug": "ned2-ven-waa-2026-11-27",
+   "league": "Other soccer",
+   "marketType": "draw",
+   "start": 1795806000,
+   "whale": {
+    "q": 0.73,
+    "usd": 1206,
+    "score": 42,
+    "sharp": false,
+    "flow": "agree",
+    "ts": 1795773316,
+    "wallet": "0x599c2cf41b974242996ba9877d61729f717957cc"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.74,
+   "createdAt": 1795774016,
+   "quoteAtOrder": {
+    "ask": 0.88,
+    "bid": 0.75,
+    "mid": 0.815,
+    "depth": 36,
+    "at": 1795774017,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.75,
+    "ask": 0.88,
+    "mid": 0.815,
+    "at": 1795774017,
+    "minsBefore": 533,
     "source": "polymarket book"
    }
   }
