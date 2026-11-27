@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795752390,
-    "minsBefore": 3414,
+    "at": 1795752992,
+    "minsBefore": 3403,
     "source": "polymarket book"
    }
   },
@@ -40377,8 +40377,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795752390,
-    "minsBefore": 939,
+    "at": 1795752992,
+    "minsBefore": 928,
     "source": "polymarket book"
    }
   },
@@ -40485,8 +40485,62 @@
     "bid": 0.49,
     "ask": 0.5,
     "mid": 0.495,
-    "at": 1795752390,
-    "minsBefore": 1254,
+    "at": 1795752992,
+    "minsBefore": 1243,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795752991-686",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x8555cbae517c355934a8ca22f055451d921514234cd72ee35fc1187faed1d0f9|0",
+   "pickKey": "Polymarket|0x8555cbae517c355934a8ca22f055451d921514234cd72ee35fc1187faed1d0f9|0",
+   "marketKey": "Polymarket|0x8555cbae517c355934a8ca22f055451d921514234cd72ee35fc1187faed1d0f9",
+   "venue": "Polymarket",
+   "conditionId": "0x8555cbae517c355934a8ca22f055451d921514234cd72ee35fc1187faed1d0f9",
+   "idx": 0,
+   "name": "Over",
+   "title": "FC Groningen vs. Willem II Tilburg: O/U 3.5",
+   "slug": "ere-gro-wii-2026-11-27-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795806000,
+   "whale": {
+    "q": 0.41,
+    "usd": 2348,
+    "score": 49,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795752168,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.42,
+   "createdAt": 1795752991,
+   "quoteAtOrder": {
+    "ask": 0.43,
+    "bid": 0.42,
+    "mid": 0.425,
+    "depth": 1981.84,
+    "at": 1795752992,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.42,
+    "ask": 0.43,
+    "mid": 0.425,
+    "at": 1795752992,
+    "minsBefore": 883,
     "source": "polymarket book"
    }
   }
