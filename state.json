@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795767986,
-    "minsBefore": 3154,
+    "at": 1795768613,
+    "minsBefore": 3143,
     "source": "polymarket book"
    }
   },
@@ -40377,8 +40377,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795767986,
-    "minsBefore": 679,
+    "at": 1795768613,
+    "minsBefore": 668,
     "source": "polymarket book"
    }
   },
@@ -40490,8 +40490,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795767986,
-    "minsBefore": 994,
+    "at": 1795768613,
+    "minsBefore": 983,
     "source": "polymarket book"
    }
   },
@@ -40544,8 +40544,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795767986,
-    "minsBefore": 634,
+    "at": 1795768613,
+    "minsBefore": 623,
     "source": "polymarket book"
    }
   },
@@ -40602,6 +40602,62 @@
     "mid": 0.615,
     "at": 1795767986,
     "minsBefore": 4,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795768612-688",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0xec4af962d86e47463af9e9f6e24f755b6fa301c5ca1930a97866c6cb56451b8f|0",
+   "pickKey": "Polymarket|0xec4af962d86e47463af9e9f6e24f755b6fa301c5ca1930a97866c6cb56451b8f|0",
+   "marketKey": "Polymarket|0xec4af962d86e47463af9e9f6e24f755b6fa301c5ca1930a97866c6cb56451b8f",
+   "venue": "Polymarket",
+   "conditionId": "0xec4af962d86e47463af9e9f6e24f755b6fa301c5ca1930a97866c6cb56451b8f",
+   "idx": 0,
+   "name": "Over",
+   "title": "Millonarios FC vs. América de Cali: O/U 2.5",
+   "slug": "col1-mif-ad1-2026-11-27-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795830000,
+   "whale": {
+    "q": 0.42,
+    "usd": 4218,
+    "score": 60,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795767579,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.43,
+   "createdAt": 1795768612,
+   "quoteAtOrder": {
+    "ask": 0.38,
+    "bid": 0.37,
+    "mid": 0.375,
+    "depth": 875.91,
+    "at": 1795768613,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.38,
+   "filledAt": 1795768612,
+   "taker": true,
+   "feeUnits": 0.0186,
+   "priceSource": "polymarket book",
+   "slippageCents": -4,
+   "close": {
+    "bid": 0.37,
+    "ask": 0.38,
+    "mid": 0.375,
+    "at": 1795768613,
+    "minsBefore": 1023,
     "source": "polymarket book"
    }
   }
