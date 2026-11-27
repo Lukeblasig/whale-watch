@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795808827,
-    "minsBefore": 2473,
+    "at": 1795809408,
+    "minsBefore": 2463,
     "source": "polymarket book"
    }
   },
@@ -40487,11 +40487,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.48,
-    "ask": 0.49,
-    "mid": 0.485,
-    "at": 1795808827,
-    "minsBefore": 313,
+    "bid": 0.47,
+    "ask": 0.48,
+    "mid": 0.475,
+    "at": 1795809408,
+    "minsBefore": 303,
     "source": "polymarket book"
    }
   },
@@ -40663,8 +40663,8 @@
     "bid": 0.36,
     "ask": 0.37,
     "mid": 0.365,
-    "at": 1795808827,
-    "minsBefore": 353,
+    "at": 1795809408,
+    "minsBefore": 343,
     "source": "polymarket book"
    }
   },
@@ -40834,8 +40834,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795808827,
-    "minsBefore": 13,
+    "at": 1795809408,
+    "minsBefore": 3,
     "source": "polymarket book"
    }
   },
@@ -40890,8 +40890,8 @@
     "bid": 0.5,
     "ask": 0.51,
     "mid": 0.505,
-    "at": 1795808827,
-    "minsBefore": 193,
+    "at": 1795809408,
+    "minsBefore": 183,
     "source": "polymarket book"
    }
   },
@@ -40944,8 +40944,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795808827,
-    "minsBefore": 1153,
+    "at": 1795809409,
+    "minsBefore": 1143,
     "source": "polymarket book"
    }
   },
@@ -41113,8 +41113,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795808827,
-    "minsBefore": 13,
+    "at": 1795809409,
+    "minsBefore": 3,
     "source": "polymarket book"
    }
   },
@@ -41164,11 +41164,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -1,
    "close": {
-    "bid": 0.47,
-    "ask": 0.48,
-    "mid": 0.475,
-    "at": 1795808827,
-    "minsBefore": 13,
+    "bid": 0.48,
+    "ask": 0.49,
+    "mid": 0.485,
+    "at": 1795809409,
+    "minsBefore": 3,
     "source": "polymarket book"
    }
   },
@@ -41276,11 +41276,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.53,
-    "ask": 0.54,
-    "mid": 0.535,
-    "at": 1795808827,
-    "minsBefore": 13,
+    "bid": 0.54,
+    "ask": 0.55,
+    "mid": 0.545,
+    "at": 1795809409,
+    "minsBefore": 3,
     "source": "polymarket book"
    }
   },
@@ -41330,11 +41330,11 @@
    "priceSource": "polymarket book",
    "slippageCents": 0,
    "close": {
-    "bid": 0.72,
-    "ask": 0.73,
-    "mid": 0.725,
-    "at": 1795808827,
-    "minsBefore": 13,
+    "bid": 0.73,
+    "ask": 0.74,
+    "mid": 0.735,
+    "at": 1795809409,
+    "minsBefore": 3,
     "source": "polymarket book"
    }
   },
@@ -41389,8 +41389,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795808828,
-    "minsBefore": 13,
+    "at": 1795809409,
+    "minsBefore": 3,
     "source": "polymarket book"
    }
   },
@@ -41434,7 +41434,7 @@
     "at": 1795808828,
     "source": "polymarket book"
    },
-   "status": "resting",
+   "status": "cancelled",
    "fillPrice": null,
    "filledAt": null,
    "taker": null,
@@ -41445,10 +41445,12 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795808828,
-    "minsBefore": 13,
+    "at": 1795809409,
+    "minsBefore": 3,
     "source": "polymarket book"
-   }
+   },
+   "cancelledAt": 1795809408,
+   "cancelReason": "unfilled at the start-time cutoff"
   }
  ],
  "logged": {
@@ -41482,7 +41484,9 @@
   "Polymarket|0x8555cbae517c355934a8ca22f055451d921514234cd72ee35fc1187faed1d0f9|0|already tried this pick": 1795806000,
   "Polymarket|0x10fb2b8dcf42636b5868aeb916b0e199587ad6fe23ade02a4e9090326b745d04|0|already tried this pick": 1795806000,
   "Polymarket|0x17a7966a4dcfd69067b054803af78c1add0a8941e4c9d3acb177c01e5041a760|1|already tried this pick": 1795808700,
-  "Polymarket|0x81c25d84cb437b8b31014763941c628ad3e3701998a125f7d5bb5e724cadb0df|1|starts in under 10 min": 1795808700
+  "Polymarket|0x81c25d84cb437b8b31014763941c628ad3e3701998a125f7d5bb5e724cadb0df|1|starts in under 10 min": 1795808700,
+  "Polymarket|0x8c2eb75988b3041e7c098529574d90cab044f42fae4778d6be7af916fe3b461a|1|already tried this pick": 1795809600,
+  "Polymarket|0xbec11310a30324181125d890a817d639716c0173c225e461c3292d7ed5044f6e|0|starts in under 10 min": 1795809600
  },
  "firstAlert": {}
 }
