@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795779388,
-    "minsBefore": 2964,
+    "at": 1795779971,
+    "minsBefore": 2954,
     "source": "polymarket book"
    }
   },
@@ -40377,8 +40377,8 @@
     "bid": 0.6,
     "ask": 0.61,
     "mid": 0.605,
-    "at": 1795779388,
-    "minsBefore": 489,
+    "at": 1795779971,
+    "minsBefore": 479,
     "source": "polymarket book"
    }
   },
@@ -40490,8 +40490,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795779388,
-    "minsBefore": 804,
+    "at": 1795779971,
+    "minsBefore": 794,
     "source": "polymarket book"
    }
   },
@@ -40544,8 +40544,8 @@
     "bid": 0.44,
     "ask": 0.45,
     "mid": 0.445,
-    "at": 1795779388,
-    "minsBefore": 444,
+    "at": 1795779971,
+    "minsBefore": 434,
     "source": "polymarket book"
    }
   },
@@ -40656,8 +40656,8 @@
     "bid": 0.39,
     "ask": 0.4,
     "mid": 0.395,
-    "at": 1795779388,
-    "minsBefore": 844,
+    "at": 1795779971,
+    "minsBefore": 834,
     "source": "polymarket book"
    }
   },
@@ -40707,11 +40707,121 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.942,
-    "ask": 0.969,
-    "mid": 0.9555,
-    "at": 1795779388,
-    "minsBefore": 444,
+    "bid": 0.963,
+    "ask": 0.988,
+    "mid": 0.9755,
+    "at": 1795779971,
+    "minsBefore": 434,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795779970-690",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "esp6090s70",
+   "alsoMatched": [
+    "sharpMl70"
+   ],
+   "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0xae96c6f3a068cfc5a99a6312ea8fa2fa3cd4e44bc3b8764145b39f1cee6f7ea0|1",
+   "pickKey": "Polymarket|0xae96c6f3a068cfc5a99a6312ea8fa2fa3cd4e44bc3b8764145b39f1cee6f7ea0|1",
+   "marketKey": "Polymarket|0xae96c6f3a068cfc5a99a6312ea8fa2fa3cd4e44bc3b8764145b39f1cee6f7ea0",
+   "venue": "Polymarket",
+   "conditionId": "0xae96c6f3a068cfc5a99a6312ea8fa2fa3cd4e44bc3b8764145b39f1cee6f7ea0",
+   "idx": 1,
+   "name": "100 Thieves",
+   "title": "Counter-Strike: M80 vs 100 Thieves (BO3) - PGL Major Singapore Stage 1",
+   "slug": "cs2-m80-100t-2026-11-27",
+   "league": "Esports",
+   "marketType": "moneyline",
+   "start": 1795780800,
+   "whale": {
+    "q": 0.66,
+    "usd": 25429,
+    "score": 73,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795779541,
+    "wallet": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.67,
+   "createdAt": 1795779970,
+   "quoteAtOrder": {
+    "ask": 0.67,
+    "bid": 0.66,
+    "mid": 0.665,
+    "depth": 117773.45,
+    "at": 1795779971,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.67,
+   "filledAt": 1795779970,
+   "taker": true,
+   "feeUnits": 0.0099,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.66,
+    "ask": 0.67,
+    "mid": 0.665,
+    "at": 1795779971,
+    "minsBefore": 14,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795779970-691",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c|0xa11481b786be5699c38c8b30f7c4d6790f85be287db789a43f3bb346daaa7aa6|1",
+   "pickKey": "Polymarket|0xa11481b786be5699c38c8b30f7c4d6790f85be287db789a43f3bb346daaa7aa6|1",
+   "marketKey": "Polymarket|0xa11481b786be5699c38c8b30f7c4d6790f85be287db789a43f3bb346daaa7aa6",
+   "venue": "Polymarket",
+   "conditionId": "0xa11481b786be5699c38c8b30f7c4d6790f85be287db789a43f3bb346daaa7aa6",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Middlesbrough FC win on 2026-11-27?",
+   "slug": "elc-sot-mid-2026-11-27",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795809600,
+   "whale": {
+    "q": 0.5567,
+    "usd": 9254,
+    "score": 48,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795778624,
+    "wallet": "0xb52e8b3afd9f0f0d502a5a76494b42816d67285c"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.56,
+   "createdAt": 1795779970,
+   "quoteAtOrder": {
+    "ask": 0.55,
+    "bid": 0.54,
+    "mid": 0.545,
+    "depth": 3265.76,
+    "at": 1795779971,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.55,
+   "filledAt": 1795779970,
+   "taker": true,
+   "feeUnits": 0.0135,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.7,
+   "close": {
+    "bid": 0.54,
+    "ask": 0.55,
+    "mid": 0.545,
+    "at": 1795779971,
+    "minsBefore": 494,
     "source": "polymarket book"
    }
   }
