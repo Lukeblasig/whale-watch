@@ -1,25 +1,25 @@
 {
- "updated": 1795844207,
+ "updated": 1795844815,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 372,
-  "fills": 308,
-  "settled": 300,
+  "orders": 374,
+  "fills": 309,
+  "settled": 301,
   "w": 180,
-  "l": 120,
+  "l": 121,
   "p": 0,
-  "netUnits": -6.65,
-  "grossUnits": -3.26,
-  "fees": 3.39,
-  "netRoi": -2.22,
-  "grossRoi": -1.09,
+  "netUnits": -7.66,
+  "grossUnits": -4.26,
+  "fees": 3.41,
+  "netRoi": -2.55,
+  "grossRoi": -1.41,
   "netRoiCI": [
-   -10.66,
-   6.22
+   -10.97,
+   5.88
   ],
-  "whaleUnits": -4.78,
-  "whaleRoi": -1.59,
+  "whaleUnits": -5.78,
+  "whaleRoi": -1.92,
   "clvN": 305,
   "clvAvgCents": -0.39,
   "clvAvgPct": -0.61,
@@ -30,10 +30,10 @@
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0.15,
-  "takerPct": 90.58,
+  "takerPct": 90.61,
   "liveQuotePct": 100,
   "open": 8,
-  "resting": 0,
+  "resting": 1,
   "cancelled": 64
  },
  "byRule": {
@@ -304,21 +304,21 @@
   "socSharp4060ml40": {
    "orders": 24,
    "fills": 21,
-   "settled": 18,
+   "settled": 19,
    "w": 13,
-   "l": 5,
+   "l": 6,
    "p": 0,
-   "netUnits": 5.52,
-   "grossUnits": 5.75,
-   "fees": 0.23,
-   "netRoi": 30.67,
-   "grossRoi": 31.95,
+   "netUnits": 4.51,
+   "grossUnits": 4.75,
+   "fees": 0.24,
+   "netRoi": 23.73,
+   "grossRoi": 25,
    "netRoiCI": [
-    -2.05,
-    63.39
+    -9.26,
+    56.71
    ],
-   "whaleUnits": 5.66,
-   "whaleRoi": 31.45,
+   "whaleUnits": 4.66,
+   "whaleRoi": 24.53,
    "clvN": 20,
    "clvAvgCents": -0.4,
    "clvAvgPct": -0.77,
@@ -331,7 +331,7 @@
    "avgSlipCents": 0.17,
    "takerPct": 95.24,
    "liveQuotePct": 100,
-   "open": 3,
+   "open": 2,
    "resting": 0,
    "cancelled": 3
   },
@@ -426,7 +426,7 @@
    "cancelled": 1
   },
   "sharp8090agree": {
-   "orders": 5,
+   "orders": 6,
    "fills": 4,
    "settled": 4,
    "w": 3,
@@ -450,7 +450,7 @@
    "takerPct": 75,
    "liveQuotePct": 100,
    "open": 0,
-   "resting": 0,
+   "resting": 1,
    "cancelled": 1
   },
   "ucl4060agree": {
@@ -684,8 +684,8 @@
    "cancelled": 0
   },
   "socSharp4050s50": {
-   "orders": 39,
-   "fills": 29,
+   "orders": 40,
+   "fills": 30,
    "settled": 27,
    "w": 12,
    "l": 15,
@@ -710,10 +710,10 @@
     0.14
    ],
    "medianSlipCents": 1,
-   "avgSlipCents": 0.07,
-   "takerPct": 82.76,
+   "avgSlipCents": 0.1,
+   "takerPct": 83.33,
    "liveQuotePct": 100,
-   "open": 2,
+   "open": 3,
    "resting": 0,
    "cancelled": 10
   },
@@ -837,12 +837,12 @@
   }
  },
  "byShadow": {},
- "openUnits": 8,
- "unitsToday": 18,
+ "openUnits": 9,
+ "unitsToday": 20,
  "drawdown": {
-  "units": -6.65,
+  "units": -7.66,
   "max": 27.23,
-  "current": 9.7
+  "current": 10.71
  },
  "lossStop": false,
  "gates": [
@@ -857,22 +857,22 @@
    "id": "roi",
    "label": "Net ROI above -2% after 1000 bets",
    "status": "pending",
-   "progress": 0.3,
-   "detail": "300 of 1000 settled; -2.22% so far"
+   "progress": 0.301,
+   "detail": "301 of 1000 settled; -2.55% so far"
   },
   {
    "id": "slip",
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 308 fills"
+   "detail": "Median 0.00¢ over 309 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.302510333994709,
-   "detail": "1.2 weeks, 300 settled bets"
+   "progress": 0.3027616567460317,
+   "detail": "1.2 weeks, 301 settled bets"
   }
  ],
  "config": {
@@ -1083,18 +1083,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795844207,
+  "at": 1795844815,
   "status": "ok",
-  "candidates": 4,
-  "ordered": 0,
-  "filled": 0,
-  "rested": 0,
+  "candidates": 7,
+  "ordered": 2,
+  "filled": 1,
+  "rested": 1,
   "skipped": 0,
   "shadowOrdered": 0,
-  "settled": 0,
+  "settled": 1,
   "cancelled": 0,
   "closes": 3
  },
- "dataUpdated": 1795844103,
+ "dataUpdated": 1795844717,
  "killSwitch": false
 }

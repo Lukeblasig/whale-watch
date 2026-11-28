@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795844208,
-    "minsBefore": 1883,
+    "at": 1795844817,
+    "minsBefore": 1873,
     "source": "polymarket book"
    }
   },
@@ -40964,8 +40964,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795844208,
-    "minsBefore": 563,
+    "at": 1795844817,
+    "minsBefore": 553,
     "source": "polymarket book"
    }
   },
@@ -41724,7 +41724,7 @@
     "at": 1795833426,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.6,
    "filledAt": 1795833425,
    "taker": true,
@@ -41738,7 +41738,12 @@
     "at": 1795834651,
     "minsBefore": 2,
     "source": "polymarket book"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.012,
+   "whaleUnits": -1,
+   "settledAt": 1795844815
   },
   {
    "id": "1795837014-707",
@@ -41842,11 +41847,121 @@
    "priceSource": "polymarket book",
    "slippageCents": 1,
    "close": {
-    "bid": 0.39,
-    "ask": 0.4,
-    "mid": 0.395,
-    "at": 1795844208,
-    "minsBefore": 518,
+    "bid": 0.41,
+    "ask": 0.42,
+    "mid": 0.415,
+    "at": 1795844817,
+    "minsBefore": 508,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795844815-709",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x1ae20a21394513a981cd77006347f6d0db5f1d8e59e62546362c26a175d9a0e1|0",
+   "pickKey": "Polymarket|0x1ae20a21394513a981cd77006347f6d0db5f1d8e59e62546362c26a175d9a0e1|0",
+   "marketKey": "Polymarket|0x1ae20a21394513a981cd77006347f6d0db5f1d8e59e62546362c26a175d9a0e1",
+   "venue": "Polymarket",
+   "conditionId": "0x1ae20a21394513a981cd77006347f6d0db5f1d8e59e62546362c26a175d9a0e1",
+   "idx": 0,
+   "name": "Over",
+   "title": "FK Partizan Belgrade vs. FK Radnicki Nis: O/U 3.5",
+   "slug": "srb-par-rdn-2026-11-28-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795887000,
+   "whale": {
+    "q": 0.4,
+    "usd": 11841,
+    "score": 64,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795843936,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.41,
+   "createdAt": 1795844815,
+   "quoteAtOrder": {
+    "ask": 0.41,
+    "bid": 0.4,
+    "mid": 0.405,
+    "depth": 278.63,
+    "at": 1795844817,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.41,
+   "filledAt": 1795844815,
+   "taker": true,
+   "feeUnits": 0.0177,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.4,
+    "ask": 0.41,
+    "mid": 0.405,
+    "at": 1795844817,
+    "minsBefore": 703,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795844815-710",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp8090agree",
+   "alsoMatched": [],
+   "sigKey": "0xf68a281980f8c13828e84e147e3822381d6e5b1b|0xc0314ef22bcc412b2445a83109b3274429e4f6c68d0117e61819463ad9c5d286|1",
+   "pickKey": "Polymarket|0xc0314ef22bcc412b2445a83109b3274429e4f6c68d0117e61819463ad9c5d286|1",
+   "marketKey": "Polymarket|0xc0314ef22bcc412b2445a83109b3274429e4f6c68d0117e61819463ad9c5d286",
+   "venue": "Polymarket",
+   "conditionId": "0xc0314ef22bcc412b2445a83109b3274429e4f6c68d0117e61819463ad9c5d286",
+   "idx": 1,
+   "name": "Rockets",
+   "title": "76ers vs. Rockets",
+   "slug": "nba-phi-hou-2026-11-28",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795915800,
+   "whale": {
+    "q": 0.8061,
+    "usd": 10487,
+    "score": 55,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795843891,
+    "wallet": "0xf68a281980f8c13828e84e147e3822381d6e5b1b"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.81,
+   "createdAt": 1795844815,
+   "quoteAtOrder": {
+    "ask": 0.82,
+    "bid": 0.81,
+    "mid": 0.815,
+    "depth": 13910.66,
+    "at": 1795844817,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.81,
+    "ask": 0.82,
+    "mid": 0.815,
+    "at": 1795844817,
+    "minsBefore": 1183,
     "source": "polymarket book"
    }
   }
