@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795832828,
-    "minsBefore": 2073,
+    "at": 1795833426,
+    "minsBefore": 2063,
     "source": "polymarket book"
    }
   },
@@ -40954,8 +40954,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795832827,
-    "minsBefore": 753,
+    "at": 1795833426,
+    "minsBefore": 743,
     "source": "polymarket book"
    }
   },
@@ -41663,6 +41663,60 @@
     "mid": 0.475,
     "at": 1795832828,
     "minsBefore": 3,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795833425-706",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0x95c6c9a6727ed203e97230dda61ab19a020e1508|0x07b900e6616db6ee55ab53727d6dc621f4b0191313566d180ae6f22169632224|1",
+   "pickKey": "Polymarket|0x07b900e6616db6ee55ab53727d6dc621f4b0191313566d180ae6f22169632224|1",
+   "marketKey": "Polymarket|0x07b900e6616db6ee55ab53727d6dc621f4b0191313566d180ae6f22169632224",
+   "venue": "Polymarket",
+   "conditionId": "0x07b900e6616db6ee55ab53727d6dc621f4b0191313566d180ae6f22169632224",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Vancouver Whitecaps FC win on 2026-11-27?",
+   "slug": "mls-rsl-vwh-2026-11-27",
+   "league": "MLS",
+   "marketType": "moneyline",
+   "start": 1795834800,
+   "whale": {
+    "q": 0.59,
+    "usd": 4651,
+    "score": 45,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795832374,
+    "wallet": "0x95c6c9a6727ed203e97230dda61ab19a020e1508"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.6,
+   "createdAt": 1795833425,
+   "quoteAtOrder": {
+    "ask": 0.6,
+    "bid": 0.59,
+    "mid": 0.595,
+    "depth": 34245,
+    "at": 1795833426,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.6,
+   "filledAt": 1795833425,
+   "taker": true,
+   "feeUnits": 0.012,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.59,
+    "ask": 0.6,
+    "mid": 0.595,
+    "at": 1795833426,
+    "minsBefore": 23,
     "source": "polymarket book"
    }
   }
