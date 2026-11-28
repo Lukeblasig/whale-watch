@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795883812,
-    "minsBefore": 1223,
+    "at": 1795884400,
+    "minsBefore": 1213,
     "source": "polymarket book"
    }
   },
@@ -41916,8 +41916,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795883812,
-    "minsBefore": 53,
+    "at": 1795884400,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -41970,8 +41970,8 @@
     "bid": 0.81,
     "ask": 0.82,
     "mid": 0.815,
-    "at": 1795883812,
-    "minsBefore": 533,
+    "at": 1795884400,
+    "minsBefore": 523,
     "source": "polymarket book"
    }
   },
@@ -42313,8 +42313,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795883812,
-    "minsBefore": 173,
+    "at": 1795884400,
+    "minsBefore": 163,
     "source": "polymarket book"
    }
   },
@@ -42367,8 +42367,8 @@
     "bid": 0.32,
     "ask": 0.37,
     "mid": 0.345,
-    "at": 1795883812,
-    "minsBefore": 1163,
+    "at": 1795884400,
+    "minsBefore": 1153,
     "source": "polymarket book"
    }
   },
@@ -42418,11 +42418,11 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.62,
-    "ask": 0.86,
+    "bid": 0.61,
+    "ask": 0.87,
     "mid": 0.74,
-    "at": 1795883812,
-    "minsBefore": 1163,
+    "at": 1795884400,
+    "minsBefore": 1153,
     "source": "polymarket book"
    }
   },
@@ -42585,8 +42585,8 @@
     "bid": 0.46,
     "ask": 0.47,
     "mid": 0.465,
-    "at": 1795883812,
-    "minsBefore": 23,
+    "at": 1795884400,
+    "minsBefore": 13,
     "source": "polymarket book"
    }
   },
@@ -42812,8 +42812,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795883812,
-    "minsBefore": 188,
+    "at": 1795884400,
+    "minsBefore": 178,
     "source": "polymarket book"
    }
   },
@@ -43088,7 +43088,7 @@
     "at": 1795874188,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.46,
    "filledAt": 1795874186,
    "taker": true,
@@ -43102,7 +43102,12 @@
     "at": 1795876004,
     "minsBefore": 3,
     "source": "polymarket book"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0162,
+   "whaleUnits": -1,
+   "settledAt": 1795884398
   },
   {
    "id": "1795874807-731",
@@ -43265,8 +43270,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795883812,
-    "minsBefore": 53,
+    "at": 1795884401,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -43319,8 +43324,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795883812,
-    "minsBefore": 53,
+    "at": 1795884401,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   },
@@ -43376,8 +43381,62 @@
     "bid": 0.55,
     "ask": 0.56,
     "mid": 0.555,
-    "at": 1795883812,
-    "minsBefore": 23,
+    "at": 1795884401,
+    "minsBefore": 13,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795884398-736",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0xdc41c39b95453c943174f369926018f6963bdd7e|0xc16a8411377f3c09d4a3948a10ca9612c941f4f2f12823a1a0a5d01e1ece551f|1",
+   "pickKey": "Polymarket|0xc16a8411377f3c09d4a3948a10ca9612c941f4f2f12823a1a0a5d01e1ece551f|1",
+   "marketKey": "Polymarket|0xc16a8411377f3c09d4a3948a10ca9612c941f4f2f12823a1a0a5d01e1ece551f",
+   "venue": "Polymarket",
+   "conditionId": "0xc16a8411377f3c09d4a3948a10ca9612c941f4f2f12823a1a0a5d01e1ece551f",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Chicago Fire FC win on 2026-11-28?",
+   "slug": "mls-clt-chi-2026-11-28",
+   "league": "MLS",
+   "marketType": "moneyline",
+   "start": 1795887000,
+   "whale": {
+    "q": 0.57,
+    "usd": 4278,
+    "score": 48,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795883532,
+    "wallet": "0xdc41c39b95453c943174f369926018f6963bdd7e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.58,
+   "createdAt": 1795884398,
+   "quoteAtOrder": {
+    "ask": 0.58,
+    "bid": 0.57,
+    "mid": 0.575,
+    "depth": 10203.85,
+    "at": 1795884401,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.58,
+   "filledAt": 1795884398,
+   "taker": true,
+   "feeUnits": 0.0126,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.57,
+    "ask": 0.58,
+    "mid": 0.575,
+    "at": 1795884401,
+    "minsBefore": 43,
     "source": "polymarket book"
    }
   }
@@ -43420,7 +43479,8 @@
   "Polymarket|0x8ad7d7bd5f27881c8770b68c32ebf5a93782c14f49d9ea5d407f966364f57e14|1|already tried this pick": 1795874400,
   "Polymarket|0x27a6efdf649a2daa74d9988c5f61cb146d01190b98e3208fa9a38fbb26fa6328|1|already tried this pick": 1795876200,
   "Polymarket|0x3ddd094e12d9a89cbc148887d86a615d88d3476dcf7bc2a257528e1278554460|0|already tried this pick": 1795878000,
-  "Polymarket|0x6ccd34d59d54585b8b8ef900c28a0ea4a8d0abe420482740afd3b4f7e482e2e5|1|starts in under 10 min": 1795878000
+  "Polymarket|0x6ccd34d59d54585b8b8ef900c28a0ea4a8d0abe420482740afd3b4f7e482e2e5|1|starts in under 10 min": 1795878000,
+  "Polymarket|0xc16a8411377f3c09d4a3948a10ca9612c941f4f2f12823a1a0a5d01e1ece551f|0|already bet the other side of this market": 1795887000
  },
  "firstAlert": {}
 }
