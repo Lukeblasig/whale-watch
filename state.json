@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795831627,
-    "minsBefore": 2093,
+    "at": 1795832242,
+    "minsBefore": 2083,
     "source": "polymarket book"
    }
   },
@@ -40954,8 +40954,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795831627,
-    "minsBefore": 773,
+    "at": 1795832242,
+    "minsBefore": 763,
     "source": "polymarket book"
    }
   },
@@ -41609,6 +41609,62 @@
    },
    "cancelledAt": 1795827401,
    "cancelReason": "unfilled at the start-time cutoff"
+  },
+  {
+   "id": "1795832241-705",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp4060ml70",
+   "alsoMatched": [
+    "sharpMl70"
+   ],
+   "sigKey": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e|0x012a84c4ead01cabff66df01d58f95cd10bc1909443a5ebfd0834338cce2f679|0",
+   "pickKey": "Polymarket|0x012a84c4ead01cabff66df01d58f95cd10bc1909443a5ebfd0834338cce2f679|0",
+   "marketKey": "Polymarket|0x012a84c4ead01cabff66df01d58f95cd10bc1909443a5ebfd0834338cce2f679",
+   "venue": "Polymarket",
+   "conditionId": "0x012a84c4ead01cabff66df01d58f95cd10bc1909443a5ebfd0834338cce2f679",
+   "idx": 0,
+   "name": "Pelicans",
+   "title": "Pelicans vs. Clippers",
+   "slug": "nba-nop-lac-2026-11-27",
+   "league": "NBA",
+   "marketType": "moneyline",
+   "start": 1795833000,
+   "whale": {
+    "q": 0.46,
+    "usd": 64342,
+    "score": 71,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795831640,
+    "wallet": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.47,
+   "createdAt": 1795832241,
+   "quoteAtOrder": {
+    "ask": 0.47,
+    "bid": 0.46,
+    "mid": 0.465,
+    "depth": 122418.55,
+    "at": 1795832242,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.47,
+   "filledAt": 1795832241,
+   "taker": true,
+   "feeUnits": 0.0159,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.46,
+    "ask": 0.47,
+    "mid": 0.465,
+    "at": 1795832242,
+    "minsBefore": 13,
+    "source": "polymarket book"
+   }
   }
  ],
  "logged": {
