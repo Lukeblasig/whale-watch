@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795854389,
-    "minsBefore": 1714,
+    "at": 1795855002,
+    "minsBefore": 1703,
     "source": "polymarket book"
    }
   },
@@ -40969,8 +40969,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795854389,
-    "minsBefore": 394,
+    "at": 1795855002,
+    "minsBefore": 383,
     "source": "polymarket book"
    }
   },
@@ -41860,8 +41860,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1795854389,
-    "minsBefore": 349,
+    "at": 1795855002,
+    "minsBefore": 338,
     "source": "polymarket book"
    }
   },
@@ -41916,8 +41916,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795854389,
-    "minsBefore": 544,
+    "at": 1795855002,
+    "minsBefore": 533,
     "source": "polymarket book"
    }
   },
@@ -41970,8 +41970,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795854389,
-    "minsBefore": 1024,
+    "at": 1795855002,
+    "minsBefore": 1013,
     "source": "polymarket book"
    }
   },
@@ -42078,8 +42078,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795854389,
-    "minsBefore": 424,
+    "at": 1795855002,
+    "minsBefore": 413,
     "source": "polymarket book"
    }
   }
@@ -42111,7 +42111,8 @@
   "Polymarket|0xbec11310a30324181125d890a817d639716c0173c225e461c3292d7ed5044f6e|0|starts in under 10 min": 1795809600,
   "Polymarket|0x0d757c8ac9c2cd46e4656fc8f29328d3f8cbcdcc8b1b63565ffe993289d60460|0|already bet the other side of this market": 1795820400,
   "Polymarket|0x097a14c71fe29279b4d410ac5d05defd53869afffcd2bcc43c7b49c08203f498|0|already tried this pick": 1795827600,
-  "Polymarket|0xdbf66636d6fc1ad6b96c5f1d5338ccec7edf39928638e830d4f437cd1919ad77|0|starts in under 10 min": 1795842000
+  "Polymarket|0xdbf66636d6fc1ad6b96c5f1d5338ccec7edf39928638e830d4f437cd1919ad77|0|starts in under 10 min": 1795842000,
+  "Polymarket|0x4f6ce160cd3f55859efe7d528a00fec621b9882fb02cf4284bf247bb99121a00|1|starts in under 10 min": 1795855200
  },
  "firstAlert": {}
 }
