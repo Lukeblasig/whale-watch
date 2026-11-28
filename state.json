@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795835847,
-    "minsBefore": 2023,
+    "at": 1795836415,
+    "minsBefore": 2013,
     "source": "polymarket book"
    }
   },
@@ -40959,8 +40959,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795835847,
-    "minsBefore": 703,
+    "at": 1795836415,
+    "minsBefore": 693,
     "source": "polymarket book"
    }
   },
@@ -41540,7 +41540,7 @@
     "at": 1795825016,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.25,
    "filledAt": 1795825015,
    "taker": true,
@@ -41554,7 +41554,12 @@
     "at": 1795825643,
     "minsBefore": 3,
     "source": "polymarket book"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.0225,
+   "whaleUnits": -1,
+   "settledAt": 1795836413
   },
   {
    "id": "1795826210-704",
