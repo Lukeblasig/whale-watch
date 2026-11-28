@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795861604,
-    "minsBefore": 1593,
+    "at": 1795862219,
+    "minsBefore": 1583,
     "source": "polymarket book"
    }
   },
@@ -40969,8 +40969,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795861604,
-    "minsBefore": 273,
+    "at": 1795862219,
+    "minsBefore": 263,
     "source": "polymarket book"
    }
   },
@@ -41860,8 +41860,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795861604,
-    "minsBefore": 228,
+    "at": 1795862219,
+    "minsBefore": 218,
     "source": "polymarket book"
    }
   },
@@ -41916,8 +41916,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1795861604,
-    "minsBefore": 423,
+    "at": 1795862219,
+    "minsBefore": 413,
     "source": "polymarket book"
    }
   },
@@ -41970,8 +41970,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795861604,
-    "minsBefore": 903,
+    "at": 1795862219,
+    "minsBefore": 893,
     "source": "polymarket book"
    }
   },
@@ -42078,8 +42078,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795861604,
-    "minsBefore": 303,
+    "at": 1795862219,
+    "minsBefore": 293,
     "source": "polymarket book"
    }
   },
@@ -42123,7 +42123,7 @@
     "at": 1795856818,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.56,
    "filledAt": 1795856817,
    "taker": true,
@@ -42137,7 +42137,12 @@
     "at": 1795858003,
     "minsBefore": 3,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 0.7857,
+   "units": 0.7725,
+   "whaleUnits": 0.7658484901995408,
+   "settledAt": 1795862217
   },
   {
    "id": "1795856817-714",
@@ -42188,8 +42193,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795861604,
-    "minsBefore": 123,
+    "at": 1795862219,
+    "minsBefore": 113,
     "source": "polymarket book"
    }
   },
@@ -42244,8 +42249,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795861604,
-    "minsBefore": 213,
+    "at": 1795862219,
+    "minsBefore": 203,
     "source": "polymarket book"
    }
   },
@@ -42298,8 +42303,8 @@
     "bid": 0.72,
     "ask": 0.74,
     "mid": 0.73,
-    "at": 1795861604,
-    "minsBefore": 543,
+    "at": 1795862219,
+    "minsBefore": 533,
     "source": "polymarket book"
    }
   },
@@ -42349,11 +42354,65 @@
    "priceSource": "polymarket book",
    "slippageCents": -45.3,
    "close": {
-    "bid": 0.4,
-    "ask": 0.41,
-    "mid": 0.405,
-    "at": 1795861604,
-    "minsBefore": 1533,
+    "bid": 0.37,
+    "ask": 0.4,
+    "mid": 0.385,
+    "at": 1795862219,
+    "minsBefore": 1523,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795862217-718",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0xbe7ab7f76a8324e09fa84d720f749ea41984dd9495c4efdd6fdc28a749f15442|1",
+   "pickKey": "Polymarket|0xbe7ab7f76a8324e09fa84d720f749ea41984dd9495c4efdd6fdc28a749f15442|1",
+   "marketKey": "Polymarket|0xbe7ab7f76a8324e09fa84d720f749ea41984dd9495c4efdd6fdc28a749f15442",
+   "venue": "Polymarket",
+   "conditionId": "0xbe7ab7f76a8324e09fa84d720f749ea41984dd9495c4efdd6fdc28a749f15442",
+   "idx": 1,
+   "name": "No",
+   "title": "Exact Score: FK Zemun 0 - 0 FK Radnicki 1923 Kragujevac?",
+   "slug": "srb-zem-rkg-2026-11-28-exact-score",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795953600,
+   "whale": {
+    "q": 0.5,
+    "usd": 1664,
+    "score": 52,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795859216,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.51,
+   "createdAt": 1795862217,
+   "quoteAtOrder": {
+    "ask": 0.89,
+    "bid": 0.66,
+    "mid": 0.775,
+    "depth": 20,
+    "at": 1795862219,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.66,
+    "ask": 0.89,
+    "mid": 0.775,
+    "at": 1795862219,
+    "minsBefore": 1523,
     "source": "polymarket book"
    }
   }
