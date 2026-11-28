@@ -3157,3 +3157,4 @@
 {"t":1795827402,"type":"cancel","id":"1795826210-704","rule":"soc4050ml40","shadow":false,"reason":"unfilled at the start-time cutoff"}
 {"t":1795827402,"type":"skip","reason":"already tried this pick","rule":"soc4050ml40","pick":{"venue":"Polymarket","league":"MLS","title":"Will Columbus Crew win on 2026-11-27?","side":"Yes","start":1795827600,"whaleKey":"0x018d6c652ca2f1d428a1186faafcf03b537eac8a|0x097a14c71fe29279b4d410ac5d05defd53869afffcd2bcc43c7b49c08203f498|0","q":0.4041,"score":41,"sharp":true,"marketType":"moneyline"},"quote":{"ask":0.42,"source":"polymarket book"}}
 {"t":1795827402,"type":"run","status":"ok","candidates":10,"ordered":0,"filled":0,"rested":0,"skipped":1,"shadowOrdered":0,"settled":0,"cancelled":1,"closes":5,"openUnits":8,"unitsToday":14}
+{"t":1795828045,"type":"run","status":"ok","candidates":4,"ordered":0,"filled":0,"rested":0,"skipped":0,"shadowOrdered":0,"settled":0,"cancelled":0,"closes":3,"openUnits":8,"unitsToday":14}
