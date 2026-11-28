@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795863409,
-    "minsBefore": 1563,
+    "at": 1795863993,
+    "minsBefore": 1553,
     "source": "polymarket book"
    }
   },
@@ -40969,8 +40969,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795863409,
-    "minsBefore": 243,
+    "at": 1795863993,
+    "minsBefore": 233,
     "source": "polymarket book"
    }
   },
@@ -41860,8 +41860,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795863409,
-    "minsBefore": 198,
+    "at": 1795863993,
+    "minsBefore": 188,
     "source": "polymarket book"
    }
   },
@@ -41916,8 +41916,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1795863409,
-    "minsBefore": 393,
+    "at": 1795863993,
+    "minsBefore": 383,
     "source": "polymarket book"
    }
   },
@@ -41970,8 +41970,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795863409,
-    "minsBefore": 873,
+    "at": 1795863993,
+    "minsBefore": 863,
     "source": "polymarket book"
    }
   },
@@ -42078,8 +42078,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795863409,
-    "minsBefore": 273,
+    "at": 1795863993,
+    "minsBefore": 263,
     "source": "polymarket book"
    }
   },
@@ -42193,8 +42193,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795863409,
-    "minsBefore": 93,
+    "at": 1795863993,
+    "minsBefore": 83,
     "source": "polymarket book"
    }
   },
@@ -42249,8 +42249,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795863409,
-    "minsBefore": 183,
+    "at": 1795863993,
+    "minsBefore": 173,
     "source": "polymarket book"
    }
   },
@@ -42303,8 +42303,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795863409,
-    "minsBefore": 513,
+    "at": 1795863993,
+    "minsBefore": 503,
     "source": "polymarket book"
    }
   },
@@ -42354,11 +42354,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -45.3,
    "close": {
-    "bid": 0.37,
+    "bid": 0.36,
     "ask": 0.38,
-    "mid": 0.375,
-    "at": 1795863409,
-    "minsBefore": 1503,
+    "mid": 0.37,
+    "at": 1795863993,
+    "minsBefore": 1493,
     "source": "polymarket book"
    }
   },
@@ -42408,11 +42408,119 @@
    "priceSource": null,
    "slippageCents": null,
    "close": {
-    "bid": 0.72,
+    "bid": 0.76,
     "ask": 0.9,
-    "mid": 0.81,
-    "at": 1795863409,
-    "minsBefore": 1503,
+    "mid": 0.83,
+    "at": 1795863993,
+    "minsBefore": 1493,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795863992-719",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc7090s60",
+   "alsoMatched": [],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x1d753a82b3a0b5277e35ef6bd5c34b9071a387702c0487eecc4b783b1dbee200|1",
+   "pickKey": "Polymarket|0x1d753a82b3a0b5277e35ef6bd5c34b9071a387702c0487eecc4b783b1dbee200|1",
+   "marketKey": "Polymarket|0x1d753a82b3a0b5277e35ef6bd5c34b9071a387702c0487eecc4b783b1dbee200",
+   "venue": "Polymarket",
+   "conditionId": "0x1d753a82b3a0b5277e35ef6bd5c34b9071a387702c0487eecc4b783b1dbee200",
+   "idx": 1,
+   "name": "No",
+   "title": "Will FK Teplice vs. FC Slovan Liberec end in a draw?",
+   "slug": "cze1-fkt-fsl-2026-11-28",
+   "league": "Other soccer",
+   "marketType": "draw",
+   "start": 1795874400,
+   "whale": {
+    "q": 0.71,
+    "usd": 7642,
+    "score": 64,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795855537,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.72,
+   "createdAt": 1795863992,
+   "quoteAtOrder": {
+    "ask": 0.72,
+    "bid": 0.71,
+    "mid": 0.715,
+    "depth": 199.2,
+    "at": 1795863993,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.72,
+   "filledAt": 1795863992,
+   "taker": true,
+   "feeUnits": 0.0084,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.71,
+    "ask": 0.72,
+    "mid": 0.715,
+    "at": 1795863993,
+    "minsBefore": 173,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795863992-720",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "soc7090s60",
+   "alsoMatched": [],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x8ad7d7bd5f27881c8770b68c32ebf5a93782c14f49d9ea5d407f966364f57e14|1",
+   "pickKey": "Polymarket|0x8ad7d7bd5f27881c8770b68c32ebf5a93782c14f49d9ea5d407f966364f57e14|1",
+   "marketKey": "Polymarket|0x8ad7d7bd5f27881c8770b68c32ebf5a93782c14f49d9ea5d407f966364f57e14",
+   "venue": "Polymarket",
+   "conditionId": "0x8ad7d7bd5f27881c8770b68c32ebf5a93782c14f49d9ea5d407f966364f57e14",
+   "idx": 1,
+   "name": "No",
+   "title": "Will FK Teplice win on 2026-11-28?",
+   "slug": "cze1-fkt-fsl-2026-11-28",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795874400,
+   "whale": {
+    "q": 0.71,
+    "usd": 6880,
+    "score": 63,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795862600,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.72,
+   "createdAt": 1795863992,
+   "quoteAtOrder": {
+    "ask": 0.73,
+    "bid": 0.72,
+    "mid": 0.725,
+    "depth": 2195.66,
+    "at": 1795863993,
+    "source": "polymarket book"
+   },
+   "status": "resting",
+   "fillPrice": null,
+   "filledAt": null,
+   "taker": null,
+   "feeUnits": null,
+   "priceSource": null,
+   "slippageCents": null,
+   "close": {
+    "bid": 0.72,
+    "ask": 0.73,
+    "mid": 0.725,
+    "at": 1795863993,
+    "minsBefore": 173,
     "source": "polymarket book"
    }
   }
