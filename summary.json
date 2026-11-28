@@ -1,5 +1,5 @@
 {
- "updated": 1795877206,
+ "updated": 1795877787,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
@@ -33,8 +33,8 @@
   "takerPct": 90.83,
   "liveQuotePct": 100,
   "open": 21,
-  "resting": 2,
-  "cancelled": 67
+  "resting": 1,
+  "cancelled": 68
  },
  "byRule": {
   "ucl7090s60": {
@@ -565,8 +565,8 @@
    "takerPct": 50,
    "liveQuotePct": 100,
    "open": 0,
-   "resting": 1,
-   "cancelled": 2
+   "resting": 0,
+   "cancelled": 3
   },
   "sera6090agree": {
    "orders": 2,
@@ -840,8 +840,8 @@
   }
  },
  "byShadow": {},
- "openUnits": 23,
- "unitsToday": 19,
+ "openUnits": 22,
+ "unitsToday": 18,
  "drawdown": {
   "units": -7.25,
   "max": 27.23,
@@ -874,7 +874,7 @@
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.3161507936507936,
+   "progress": 0.3163909556878307,
    "detail": "1.3 weeks, 306 settled bets"
   }
  ],
@@ -1086,18 +1086,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795877206,
+  "at": 1795877787,
   "status": "ok",
-  "candidates": 22,
+  "candidates": 23,
   "ordered": 0,
   "filled": 0,
   "rested": 0,
-  "skipped": 0,
+  "skipped": 2,
   "shadowOrdered": 0,
-  "settled": 1,
-  "cancelled": 0,
+  "settled": 0,
+  "cancelled": 1,
   "closes": 14
  },
- "dataUpdated": 1795877110,
+ "dataUpdated": 1795877704,
  "killSwitch": false
 }
