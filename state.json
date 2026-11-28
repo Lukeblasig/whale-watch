@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795850809,
-    "minsBefore": 1773,
+    "at": 1795851413,
+    "minsBefore": 1763,
     "source": "polymarket book"
    }
   },
@@ -40969,8 +40969,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795850809,
-    "minsBefore": 453,
+    "at": 1795851413,
+    "minsBefore": 443,
     "source": "polymarket book"
    }
   },
@@ -41860,8 +41860,8 @@
     "bid": 0.41,
     "ask": 0.43,
     "mid": 0.42,
-    "at": 1795850809,
-    "minsBefore": 408,
+    "at": 1795851413,
+    "minsBefore": 398,
     "source": "polymarket book"
    }
   },
@@ -41916,8 +41916,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795850809,
-    "minsBefore": 603,
+    "at": 1795851413,
+    "minsBefore": 593,
     "source": "polymarket book"
    }
   },
@@ -41970,8 +41970,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795850809,
-    "minsBefore": 1083,
+    "at": 1795851413,
+    "minsBefore": 1073,
     "source": "polymarket book"
    }
   },
@@ -42026,6 +42026,60 @@
     "mid": 0.405,
     "at": 1795850810,
     "minsBefore": 3,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795851412-712",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x14018773b2685d864fde9d3dda7effd7bdf093e2db2191c33a5465da93460724|1",
+   "pickKey": "Polymarket|0x14018773b2685d864fde9d3dda7effd7bdf093e2db2191c33a5465da93460724|1",
+   "marketKey": "Polymarket|0x14018773b2685d864fde9d3dda7effd7bdf093e2db2191c33a5465da93460724",
+   "venue": "Polymarket",
+   "conditionId": "0x14018773b2685d864fde9d3dda7effd7bdf093e2db2191c33a5465da93460724",
+   "idx": 1,
+   "name": "Under",
+   "title": "SBV Excelsior vs. Telstar 1963: O/U 2.5",
+   "slug": "ere-exc-tel-2026-11-28-more-markets",
+   "league": "Other soccer",
+   "marketType": "total",
+   "start": 1795879800,
+   "whale": {
+    "q": 0.45,
+    "usd": 1883,
+    "score": 44,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795850864,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.46,
+   "createdAt": 1795851412,
+   "quoteAtOrder": {
+    "ask": 0.45,
+    "bid": 0.44,
+    "mid": 0.445,
+    "depth": 2091.33,
+    "at": 1795851413,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.45,
+   "filledAt": 1795851412,
+   "taker": true,
+   "feeUnits": 0.0165,
+   "priceSource": "polymarket book",
+   "slippageCents": 0,
+   "close": {
+    "bid": 0.44,
+    "ask": 0.45,
+    "mid": 0.445,
+    "at": 1795851413,
+    "minsBefore": 473,
     "source": "polymarket book"
    }
   }
