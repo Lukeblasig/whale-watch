@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795847215,
-    "minsBefore": 1833,
+    "at": 1795847805,
+    "minsBefore": 1823,
     "source": "polymarket book"
    }
   },
@@ -40969,8 +40969,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795847215,
-    "minsBefore": 513,
+    "at": 1795847805,
+    "minsBefore": 503,
     "source": "polymarket book"
    }
   },
@@ -41855,8 +41855,8 @@
     "bid": 0.41,
     "ask": 0.42,
     "mid": 0.415,
-    "at": 1795847215,
-    "minsBefore": 468,
+    "at": 1795847805,
+    "minsBefore": 458,
     "source": "polymarket book"
    }
   },
@@ -41911,8 +41911,8 @@
     "bid": 0.4,
     "ask": 0.42,
     "mid": 0.41,
-    "at": 1795847215,
-    "minsBefore": 663,
+    "at": 1795847805,
+    "minsBefore": 653,
     "source": "polymarket book"
    }
   },
@@ -41965,8 +41965,62 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795847215,
-    "minsBefore": 1143,
+    "at": 1795847806,
+    "minsBefore": 1133,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795847805-711",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050",
+   "alsoMatched": [],
+   "sigKey": "0x821dab0565ebf5b327f51db06223fdcfe01acf16|0x4c058578d9af86173b62044419800521ef65db4cdb268860ec4b202be4c399ba|0",
+   "pickKey": "Polymarket|0x4c058578d9af86173b62044419800521ef65db4cdb268860ec4b202be4c399ba|0",
+   "marketKey": "Polymarket|0x4c058578d9af86173b62044419800521ef65db4cdb268860ec4b202be4c399ba",
+   "venue": "Polymarket",
+   "conditionId": "0x4c058578d9af86173b62044419800521ef65db4cdb268860ec4b202be4c399ba",
+   "idx": 0,
+   "name": "Yes",
+   "title": "Will Pohang Steelers FC win on 2026-11-28?",
+   "slug": "kor-poh-gwa-2026-11-28",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795851000,
+   "whale": {
+    "q": 0.49,
+    "usd": 1962,
+    "score": 36,
+    "sharp": true,
+    "flow": "disagree",
+    "ts": 1795846022,
+    "wallet": "0x821dab0565ebf5b327f51db06223fdcfe01acf16"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.5,
+   "createdAt": 1795847805,
+   "quoteAtOrder": {
+    "ask": 0.43,
+    "bid": 0.42,
+    "mid": 0.425,
+    "depth": 2320.48,
+    "at": 1795847806,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.43,
+   "filledAt": 1795847805,
+   "taker": true,
+   "feeUnits": 0.0171,
+   "priceSource": "polymarket book",
+   "slippageCents": -6,
+   "close": {
+    "bid": 0.42,
+    "ask": 0.43,
+    "mid": 0.425,
+    "at": 1795847806,
+    "minsBefore": 53,
     "source": "polymarket book"
    }
   }
