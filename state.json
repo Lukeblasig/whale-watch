@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795868199,
-    "minsBefore": 1483,
+    "at": 1795868566,
+    "minsBefore": 1477,
     "source": "polymarket book"
    }
   },
@@ -40969,8 +40969,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795868199,
-    "minsBefore": 163,
+    "at": 1795868566,
+    "minsBefore": 157,
     "source": "polymarket book"
    }
   },
@@ -41860,8 +41860,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795868199,
-    "minsBefore": 118,
+    "at": 1795868566,
+    "minsBefore": 112,
     "source": "polymarket book"
    }
   },
@@ -41916,8 +41916,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795868199,
-    "minsBefore": 313,
+    "at": 1795868566,
+    "minsBefore": 307,
     "source": "polymarket book"
    }
   },
@@ -41970,8 +41970,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795868199,
-    "minsBefore": 793,
+    "at": 1795868566,
+    "minsBefore": 787,
     "source": "polymarket book"
    }
   },
@@ -42083,8 +42083,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795868199,
-    "minsBefore": 193,
+    "at": 1795868566,
+    "minsBefore": 187,
     "source": "polymarket book"
    }
   },
@@ -42198,8 +42198,8 @@
     "bid": 0.57,
     "ask": 0.58,
     "mid": 0.575,
-    "at": 1795868199,
-    "minsBefore": 13,
+    "at": 1795868566,
+    "minsBefore": 7,
     "source": "polymarket book"
    }
   },
@@ -42254,8 +42254,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795868199,
-    "minsBefore": 103,
+    "at": 1795868566,
+    "minsBefore": 97,
     "source": "polymarket book"
    }
   },
@@ -42308,8 +42308,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795868200,
-    "minsBefore": 433,
+    "at": 1795868566,
+    "minsBefore": 427,
     "source": "polymarket book"
    }
   },
@@ -42360,10 +42360,10 @@
    "slippageCents": -45.3,
    "close": {
     "bid": 0.38,
-    "ask": 0.41,
-    "mid": 0.395,
-    "at": 1795868200,
-    "minsBefore": 1423,
+    "ask": 0.4,
+    "mid": 0.39,
+    "at": 1795868566,
+    "minsBefore": 1417,
     "source": "polymarket book"
    }
   },
@@ -42416,8 +42416,8 @@
     "bid": 0.62,
     "ask": 0.89,
     "mid": 0.755,
-    "at": 1795868200,
-    "minsBefore": 1423,
+    "at": 1795868566,
+    "minsBefore": 1417,
     "source": "polymarket book"
    }
   },
@@ -42470,8 +42470,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795868200,
-    "minsBefore": 103,
+    "at": 1795868566,
+    "minsBefore": 97,
     "source": "polymarket book"
    }
   },
@@ -42524,8 +42524,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795868200,
-    "minsBefore": 103,
+    "at": 1795868566,
+    "minsBefore": 97,
     "source": "polymarket book"
    }
   },
@@ -42578,8 +42578,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795868200,
-    "minsBefore": 283,
+    "at": 1795868566,
+    "minsBefore": 277,
     "source": "polymarket book"
    }
   },
@@ -42690,8 +42690,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795868200,
-    "minsBefore": 223,
+    "at": 1795868566,
+    "minsBefore": 217,
     "source": "polymarket book"
    }
   }
@@ -42725,7 +42725,8 @@
   "Polymarket|0x097a14c71fe29279b4d410ac5d05defd53869afffcd2bcc43c7b49c08203f498|0|already tried this pick": 1795827600,
   "Polymarket|0xdbf66636d6fc1ad6b96c5f1d5338ccec7edf39928638e830d4f437cd1919ad77|0|starts in under 10 min": 1795842000,
   "Polymarket|0x4f6ce160cd3f55859efe7d528a00fec621b9882fb02cf4284bf247bb99121a00|1|starts in under 10 min": 1795855200,
-  "Polymarket|0xa7cf90e88e23ffe99bd46076ef9f729d5d99b9febfd274a861e19276dcce1ac8|0|already tried this pick": 1795867200
+  "Polymarket|0xa7cf90e88e23ffe99bd46076ef9f729d5d99b9febfd274a861e19276dcce1ac8|0|already tried this pick": 1795867200,
+  "Polymarket|0x417c58cb9c219e9f964ca5b5f4b5f6ba48ea1fbd146d25835bed960763ed1eba|1|starts in under 10 min": 1795869000
  },
  "firstAlert": {}
 }
