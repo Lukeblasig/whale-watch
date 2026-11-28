@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795835251,
-    "minsBefore": 2032,
+    "at": 1795835847,
+    "minsBefore": 2023,
     "source": "polymarket book"
    }
   },
@@ -40959,8 +40959,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795835251,
-    "minsBefore": 712,
+    "at": 1795835847,
+    "minsBefore": 703,
     "source": "polymarket book"
    }
   },
@@ -41731,7 +41731,6 @@
   "socAgree40|Polymarket|0x56aed2130ecbca8523f31b52acfa47df16927e9d76b303203bdf18f26cfb2ee4|1|price is over 30 min old": 1795715100,
   "socAgree40|Polymarket|0x20c34f68662f47fa7c283d469853f6b3f645c6a92dc1ae7c5df24285f2210cfc|1|price is over 30 min old": 1795715100,
   "Polymarket|0x79909c27cec20878d54e1ae855c89982a7359a2a5f09b7c3c74431cdbf32d410|1|price 93¢ is over 90¢": 1795715100,
-  "Polymarket|0x130e1a84ee2a5605307c8bf91872d1eaab02c450aadc0695e5931630663573f5|0|starts in under 10 min": 1795662600,
   "Polymarket|0xb447ee1aeb6c897cd603a5c9048b632ff304df83e2a500659cb99f7a7c6a83c4|1|already bet the other side of this market": 1795715100,
   "Polymarket|0xd665e7f5fc43f5870989452a3a8d0b7bc7da87d09d9d230d494f622bc7bf3976|1|already tried this pick": 1795715100,
   "Polymarket|0x460c491158d0c249e422e95ea22b2ec5af34a2695ec86ba969cfa446a102f1ea|1|already tried this pick": 1795715100,
