@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795836415,
-    "minsBefore": 2013,
+    "at": 1795837017,
+    "minsBefore": 2003,
     "source": "polymarket book"
    }
   },
@@ -40484,7 +40484,7 @@
     "at": 1795747575,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.5,
    "filledAt": 1795747574,
    "taker": true,
@@ -40498,7 +40498,12 @@
     "at": 1795827402,
     "minsBefore": 3,
     "source": "polymarket book"
-   }
+   },
+   "result": "L",
+   "grossUnits": -1,
+   "units": -1.015,
+   "whaleUnits": -1,
+   "settledAt": 1795837014
   },
   {
    "id": "1795752991-686",
@@ -40959,8 +40964,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795836415,
-    "minsBefore": 693,
+    "at": 1795837017,
+    "minsBefore": 683,
     "source": "polymarket book"
    }
   },
@@ -41727,6 +41732,60 @@
     "mid": 0.595,
     "at": 1795834651,
     "minsBefore": 2,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795837014-707",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0|0xd8dcc883ccd3df7b41001a236014e019f7cdaaa756b9c882ee4854cc8af2deeb|1",
+   "pickKey": "Polymarket|0xd8dcc883ccd3df7b41001a236014e019f7cdaaa756b9c882ee4854cc8af2deeb|1",
+   "marketKey": "Polymarket|0xd8dcc883ccd3df7b41001a236014e019f7cdaaa756b9c882ee4854cc8af2deeb",
+   "venue": "Polymarket",
+   "conditionId": "0xd8dcc883ccd3df7b41001a236014e019f7cdaaa756b9c882ee4854cc8af2deeb",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Urawa Red Diamonds win on 2026-11-28?",
+   "slug": "jap-ssp-ura-2026-11-28",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795842000,
+   "whale": {
+    "q": 0.52,
+    "usd": 3770,
+    "score": 48,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795835354,
+    "wallet": "0xaa6c296af0ceea224b56fb7ee1e9cab1ccabe2d0"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.53,
+   "createdAt": 1795837014,
+   "quoteAtOrder": {
+    "ask": 0.53,
+    "bid": 0.52,
+    "mid": 0.525,
+    "depth": 1663.97,
+    "at": 1795837017,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.53,
+   "filledAt": 1795837014,
+   "taker": true,
+   "feeUnits": 0.0141,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.52,
+    "ask": 0.53,
+    "mid": 0.525,
+    "at": 1795837017,
+    "minsBefore": 83,
     "source": "polymarket book"
    }
   }
