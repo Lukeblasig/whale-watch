@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795842406,
-    "minsBefore": 1913,
+    "at": 1795843004,
+    "minsBefore": 1903,
     "source": "polymarket book"
    }
   },
@@ -40964,8 +40964,8 @@
     "bid": 0.56,
     "ask": 0.57,
     "mid": 0.565,
-    "at": 1795842406,
-    "minsBefore": 593,
+    "at": 1795843004,
+    "minsBefore": 583,
     "source": "polymarket book"
    }
   },
@@ -41665,7 +41665,7 @@
     "at": 1795832242,
     "source": "polymarket book"
    },
-   "status": "filled",
+   "status": "settled",
    "fillPrice": 0.47,
    "filledAt": 1795832241,
    "taker": true,
@@ -41679,7 +41679,12 @@
     "at": 1795832828,
     "minsBefore": 3,
     "source": "polymarket book"
-   }
+   },
+   "result": "W",
+   "grossUnits": 1.1277,
+   "units": 1.1118,
+   "whaleUnits": 1.154243860404998,
+   "settledAt": 1795843002
   },
   {
    "id": "1795833425-706",
@@ -41786,6 +41791,62 @@
     "mid": 0.575,
     "at": 1795841807,
     "minsBefore": 3,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795843002-708",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4050s50",
+   "alsoMatched": [
+    "socSharp4050"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0xaa77768beffd34e5dd66ff6e9b4d9a3d246d709f0c31c5d1ec0c63d8b3cb09eb|0",
+   "pickKey": "Polymarket|0xaa77768beffd34e5dd66ff6e9b4d9a3d246d709f0c31c5d1ec0c63d8b3cb09eb|0",
+   "marketKey": "Polymarket|0xaa77768beffd34e5dd66ff6e9b4d9a3d246d709f0c31c5d1ec0c63d8b3cb09eb",
+   "venue": "Polymarket",
+   "conditionId": "0xaa77768beffd34e5dd66ff6e9b4d9a3d246d709f0c31c5d1ec0c63d8b3cb09eb",
+   "idx": 0,
+   "name": "Al Wasl FC",
+   "title": "Spread: Al Wasl FC (-2.5)",
+   "slug": "uae1-aw-ald-2026-11-28-more-markets",
+   "league": "Other soccer",
+   "marketType": "spread",
+   "start": 1795875300,
+   "whale": {
+    "q": 0.4,
+    "usd": 2714,
+    "score": 58,
+    "sharp": true,
+    "flow": "none",
+    "ts": 1795841429,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.41,
+   "createdAt": 1795843002,
+   "quoteAtOrder": {
+    "ask": 0.41,
+    "bid": 0.4,
+    "mid": 0.405,
+    "depth": 110,
+    "at": 1795843004,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.41,
+   "filledAt": 1795843002,
+   "taker": true,
+   "feeUnits": 0.0177,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.4,
+    "ask": 0.41,
+    "mid": 0.405,
+    "at": 1795843004,
+    "minsBefore": 538,
     "source": "polymarket book"
    }
   }
