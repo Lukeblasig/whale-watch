@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795856206,
-    "minsBefore": 1683,
+    "at": 1795856817,
+    "minsBefore": 1673,
     "source": "polymarket book"
    }
   },
@@ -40969,8 +40969,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795856206,
-    "minsBefore": 363,
+    "at": 1795856817,
+    "minsBefore": 353,
     "source": "polymarket book"
    }
   },
@@ -41860,8 +41860,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1795856206,
-    "minsBefore": 318,
+    "at": 1795856817,
+    "minsBefore": 308,
     "source": "polymarket book"
    }
   },
@@ -41916,8 +41916,8 @@
     "bid": 0.42,
     "ask": 0.43,
     "mid": 0.425,
-    "at": 1795856206,
-    "minsBefore": 513,
+    "at": 1795856817,
+    "minsBefore": 503,
     "source": "polymarket book"
    }
   },
@@ -41970,8 +41970,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795856206,
-    "minsBefore": 993,
+    "at": 1795856817,
+    "minsBefore": 983,
     "source": "polymarket book"
    }
   },
@@ -42078,8 +42078,118 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795856206,
-    "minsBefore": 393,
+    "at": 1795856818,
+    "minsBefore": 383,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795856817-713",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "sharp4060ml70",
+   "alsoMatched": [
+    "sharpMl70"
+   ],
+   "sigKey": "0x0259b2054f046fe0ee8f3e075fdb85fc3ba9769e|0x09fe16b722554f2582d5ea6043c4156c722496fe632b96466c5ef200bd894408|0",
+   "pickKey": "Polymarket|0x09fe16b722554f2582d5ea6043c4156c722496fe632b96466c5ef200bd894408|0",
+   "marketKey": "Polymarket|0x09fe16b722554f2582d5ea6043c4156c722496fe632b96466c5ef200bd894408",
+   "venue": "Polymarket",
+   "conditionId": "0x09fe16b722554f2582d5ea6043c4156c722496fe632b96466c5ef200bd894408",
+   "idx": 0,
+   "name": "G2",
+   "title": "Counter-Strike: G2 vs NIP (BO1) - PGL Major Singapore Stage 2",
+   "slug": "cs2-g2-nip-2026-11-28",
+   "league": "Esports",
+   "marketType": "moneyline",
+   "start": 1795858200,
+   "whale": {
+    "q": 0.5661,
+    "usd": 479742,
+    "score": 70,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795855933,
+    "wallet": "0x0259b2054f046fe0ee8f3e075fdb85fc3ba9769e"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.57,
+   "createdAt": 1795856817,
+   "quoteAtOrder": {
+    "ask": 0.56,
+    "bid": 0.55,
+    "mid": 0.555,
+    "depth": 86356.72,
+    "at": 1795856818,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.56,
+   "filledAt": 1795856817,
+   "taker": true,
+   "feeUnits": 0.0132,
+   "priceSource": "polymarket book",
+   "slippageCents": -0.6,
+   "close": {
+    "bid": 0.55,
+    "ask": 0.56,
+    "mid": 0.555,
+    "at": 1795856818,
+    "minsBefore": 23,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795856817-714",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "socSharp4060ml40",
+   "alsoMatched": [],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x43dd610ea3bde73351845f3cd06ae51aae1e1c5ba10bae35783371dcd9da8fc6|1",
+   "pickKey": "Polymarket|0x43dd610ea3bde73351845f3cd06ae51aae1e1c5ba10bae35783371dcd9da8fc6|1",
+   "marketKey": "Polymarket|0x43dd610ea3bde73351845f3cd06ae51aae1e1c5ba10bae35783371dcd9da8fc6",
+   "venue": "Polymarket",
+   "conditionId": "0x43dd610ea3bde73351845f3cd06ae51aae1e1c5ba10bae35783371dcd9da8fc6",
+   "idx": 1,
+   "name": "No",
+   "title": "Will Peterborough United FC win on 2026-11-28?",
+   "slug": "el1-pet-cam-2026-11-28",
+   "league": "Other soccer",
+   "marketType": "moneyline",
+   "start": 1795869000,
+   "whale": {
+    "q": 0.54,
+    "usd": 4032,
+    "score": 58,
+    "sharp": true,
+    "flow": "mixed",
+    "ts": 1795855768,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.55,
+   "createdAt": 1795856817,
+   "quoteAtOrder": {
+    "ask": 0.55,
+    "bid": 0.54,
+    "mid": 0.545,
+    "depth": 709.63,
+    "at": 1795856817,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.55,
+   "filledAt": 1795856817,
+   "taker": true,
+   "feeUnits": 0.0135,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.54,
+    "ask": 0.55,
+    "mid": 0.545,
+    "at": 1795856817,
+    "minsBefore": 203,
     "source": "polymarket book"
    }
   }
