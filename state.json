@@ -37347,8 +37347,8 @@
     "bid": 0.74,
     "ask": 0.75,
     "mid": 0.745,
-    "at": 1795868938,
-    "minsBefore": 1471,
+    "at": 1795869402,
+    "minsBefore": 1463,
     "source": "polymarket book"
    }
   },
@@ -40969,8 +40969,8 @@
     "bid": 0.58,
     "ask": 0.59,
     "mid": 0.585,
-    "at": 1795868938,
-    "minsBefore": 151,
+    "at": 1795869402,
+    "minsBefore": 143,
     "source": "polymarket book"
    }
   },
@@ -41860,8 +41860,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795868938,
-    "minsBefore": 106,
+    "at": 1795869402,
+    "minsBefore": 98,
     "source": "polymarket book"
    }
   },
@@ -41916,8 +41916,8 @@
     "bid": 0.4,
     "ask": 0.41,
     "mid": 0.405,
-    "at": 1795868938,
-    "minsBefore": 301,
+    "at": 1795869402,
+    "minsBefore": 293,
     "source": "polymarket book"
    }
   },
@@ -41970,8 +41970,8 @@
     "bid": 0.8,
     "ask": 0.81,
     "mid": 0.805,
-    "at": 1795868938,
-    "minsBefore": 781,
+    "at": 1795869402,
+    "minsBefore": 773,
     "source": "polymarket book"
    }
   },
@@ -42083,8 +42083,8 @@
     "bid": 0.43,
     "ask": 0.44,
     "mid": 0.435,
-    "at": 1795868938,
-    "minsBefore": 181,
+    "at": 1795869402,
+    "minsBefore": 173,
     "source": "polymarket book"
    }
   },
@@ -42254,8 +42254,8 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795868938,
-    "minsBefore": 91,
+    "at": 1795869402,
+    "minsBefore": 83,
     "source": "polymarket book"
    }
   },
@@ -42308,8 +42308,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795868939,
-    "minsBefore": 421,
+    "at": 1795869402,
+    "minsBefore": 413,
     "source": "polymarket book"
    }
   },
@@ -42359,11 +42359,11 @@
    "priceSource": "polymarket book",
    "slippageCents": -45.3,
    "close": {
-    "bid": 0.36,
+    "bid": 0.35,
     "ask": 0.39,
-    "mid": 0.375,
-    "at": 1795868939,
-    "minsBefore": 1411,
+    "mid": 0.37,
+    "at": 1795869402,
+    "minsBefore": 1403,
     "source": "polymarket book"
    }
   },
@@ -42416,8 +42416,8 @@
     "bid": 0.62,
     "ask": 0.89,
     "mid": 0.755,
-    "at": 1795868939,
-    "minsBefore": 1411,
+    "at": 1795869402,
+    "minsBefore": 1403,
     "source": "polymarket book"
    }
   },
@@ -42470,8 +42470,8 @@
     "bid": 0.71,
     "ask": 0.72,
     "mid": 0.715,
-    "at": 1795868939,
-    "minsBefore": 91,
+    "at": 1795869402,
+    "minsBefore": 83,
     "source": "polymarket book"
    }
   },
@@ -42524,8 +42524,8 @@
     "bid": 0.72,
     "ask": 0.73,
     "mid": 0.725,
-    "at": 1795868939,
-    "minsBefore": 91,
+    "at": 1795869402,
+    "minsBefore": 83,
     "source": "polymarket book"
    }
   },
@@ -42578,8 +42578,8 @@
     "bid": 0.45,
     "ask": 0.46,
     "mid": 0.455,
-    "at": 1795868939,
-    "minsBefore": 271,
+    "at": 1795869402,
+    "minsBefore": 263,
     "source": "polymarket book"
    }
   },
@@ -42690,8 +42690,64 @@
     "bid": 0.48,
     "ask": 0.49,
     "mid": 0.485,
-    "at": 1795868939,
-    "minsBefore": 211,
+    "at": 1795869402,
+    "minsBefore": 203,
+    "source": "polymarket book"
+   }
+  },
+  {
+   "id": "1795869401-724",
+   "mode": "paper",
+   "shadow": false,
+   "rule": "esp6090s70",
+   "alsoMatched": [
+    "sharpMl70"
+   ],
+   "sigKey": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563|0x417c58cb9c219e9f964ca5b5f4b5f6ba48ea1fbd146d25835bed960763ed1eba|1",
+   "pickKey": "Polymarket|0x417c58cb9c219e9f964ca5b5f4b5f6ba48ea1fbd146d25835bed960763ed1eba|1",
+   "marketKey": "Polymarket|0x417c58cb9c219e9f964ca5b5f4b5f6ba48ea1fbd146d25835bed960763ed1eba",
+   "venue": "Polymarket",
+   "conditionId": "0x417c58cb9c219e9f964ca5b5f4b5f6ba48ea1fbd146d25835bed960763ed1eba",
+   "idx": 1,
+   "name": "PVISION",
+   "title": "Counter-Strike: FlyQuest vs PVISION (BO1) - PGL Major Singapore Stage 2",
+   "slug": "cs2-fly-pv-2026-11-28",
+   "league": "Esports",
+   "marketType": "moneyline",
+   "start": 1795870800,
+   "whale": {
+    "q": 0.66,
+    "usd": 106934,
+    "score": 91,
+    "sharp": true,
+    "flow": "agree",
+    "ts": 1795867960,
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+   },
+   "stakeUnits": 1,
+   "limitPrice": 0.67,
+   "createdAt": 1795869401,
+   "quoteAtOrder": {
+    "ask": 0.67,
+    "bid": 0.66,
+    "mid": 0.665,
+    "depth": 114907.32,
+    "at": 1795869402,
+    "source": "polymarket book"
+   },
+   "status": "filled",
+   "fillPrice": 0.67,
+   "filledAt": 1795869401,
+   "taker": true,
+   "feeUnits": 0.0099,
+   "priceSource": "polymarket book",
+   "slippageCents": 1,
+   "close": {
+    "bid": 0.66,
+    "ask": 0.67,
+    "mid": 0.665,
+    "at": 1795869402,
+    "minsBefore": 23,
     "source": "polymarket book"
    }
   }
