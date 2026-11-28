@@ -1,10 +1,10 @@
 {
- "updated": 1795874186,
+ "updated": 1795874807,
  "mode": "paper",
  "startedAt": 1795112374,
  "real": {
-  "orders": 394,
-  "fills": 326,
+  "orders": 396,
+  "fills": 327,
   "settled": 305,
   "w": 182,
   "l": 123,
@@ -20,20 +20,20 @@
   ],
   "whaleUnits": -6.09,
   "whaleRoi": -2,
-  "clvN": 309,
-  "clvAvgCents": -0.35,
-  "clvAvgPct": -0.54,
-  "clvBeatPct": 35.6,
+  "clvN": 313,
+  "clvAvgCents": -0.34,
+  "clvAvgPct": -0.52,
+  "clvBeatPct": 35.78,
   "clvCI": [
-   -0.61,
-   -0.09
+   -0.6,
+   -0.08
   ],
   "medianSlipCents": 0,
   "avgSlipCents": 0,
-  "takerPct": 90.8,
+  "takerPct": 90.83,
   "liveQuotePct": 100,
-  "open": 21,
-  "resting": 2,
+  "open": 22,
+  "resting": 3,
   "cancelled": 66
  },
  "byRule": {
@@ -117,13 +117,13 @@
    ],
    "whaleUnits": 6.6,
    "whaleRoi": 32.99,
-   "clvN": 20,
-   "clvAvgCents": 1,
-   "clvAvgPct": 2.26,
-   "clvBeatPct": 65,
+   "clvN": 21,
+   "clvAvgCents": 0.93,
+   "clvAvgPct": 2.1,
+   "clvBeatPct": 61.9,
    "clvCI": [
-    -0.3,
-    2.3
+    -0.31,
+    2.17
    ],
    "medianSlipCents": 0.06,
    "avgSlipCents": 0.14,
@@ -288,11 +288,14 @@
    "netRoiCI": null,
    "whaleUnits": 0.44,
    "whaleRoi": 4.9,
-   "clvN": 9,
-   "clvAvgCents": -0.83,
-   "clvAvgPct": -1.09,
-   "clvBeatPct": 0,
-   "clvCI": null,
+   "clvN": 10,
+   "clvAvgCents": -0.7,
+   "clvAvgPct": -0.91,
+   "clvBeatPct": 10,
+   "clvCI": [
+    -1.12,
+    -0.28
+   ],
    "medianSlipCents": 1,
    "avgSlipCents": 0.64,
    "takerPct": 90.91,
@@ -538,7 +541,7 @@
    "cancelled": 0
   },
   "osoc60agree": {
-   "orders": 4,
+   "orders": 5,
    "fills": 2,
    "settled": 2,
    "w": 1,
@@ -562,7 +565,7 @@
    "takerPct": 50,
    "liveQuotePct": 100,
    "open": 0,
-   "resting": 0,
+   "resting": 1,
    "cancelled": 2
   },
   "sera6090agree": {
@@ -642,10 +645,10 @@
    "netRoiCI": null,
    "whaleUnits": -3.49,
    "whaleRoi": -49.81,
-   "clvN": 7,
-   "clvAvgCents": 1.07,
-   "clvAvgPct": 2.95,
-   "clvBeatPct": 57.14,
+   "clvN": 8,
+   "clvAvgCents": 0.88,
+   "clvAvgPct": 2.46,
+   "clvBeatPct": 50,
    "clvCI": null,
    "medianSlipCents": 1,
    "avgSlipCents": 0.63,
@@ -701,13 +704,13 @@
    ],
    "whaleUnits": -1.92,
    "whaleRoi": -6.85,
-   "clvN": 28,
-   "clvAvgCents": -0.8,
-   "clvAvgPct": -1.83,
-   "clvBeatPct": 28.57,
+   "clvN": 29,
+   "clvAvgCents": -0.69,
+   "clvAvgPct": -1.58,
+   "clvBeatPct": 31.03,
    "clvCI": [
-    -1.75,
-    0.14
+    -1.62,
+    0.24
    ],
    "medianSlipCents": 1,
    "avgSlipCents": 0.06,
@@ -802,8 +805,8 @@
    "cancelled": 0
   },
   "socSharp4050": {
-   "orders": 59,
-   "fills": 48,
+   "orders": 60,
+   "fills": 49,
    "settled": 45,
    "w": 17,
    "l": 28,
@@ -828,17 +831,17 @@
     0.09
    ],
    "medianSlipCents": 0,
-   "avgSlipCents": -0.3,
-   "takerPct": 93.75,
+   "avgSlipCents": -0.27,
+   "takerPct": 93.88,
    "liveQuotePct": 100,
-   "open": 3,
+   "open": 4,
    "resting": 0,
    "cancelled": 11
   }
  },
  "byShadow": {},
- "openUnits": 23,
- "unitsToday": 18,
+ "openUnits": 25,
+ "unitsToday": 20,
  "drawdown": {
   "units": -8.05,
   "max": 27.23,
@@ -850,8 +853,8 @@
    "id": "clv",
    "label": "Beat the close after 500 bets",
    "status": "pending",
-   "progress": 0.618,
-   "detail": "309 of 500 bets have a closing price; average so far -0.35¢"
+   "progress": 0.626,
+   "detail": "313 of 500 bets have a closing price; average so far -0.34¢"
   },
   {
    "id": "roi",
@@ -865,13 +868,13 @@
    "label": "Median fill no more than 1¢ worse than the whale",
    "status": "pass",
    "progress": 1,
-   "detail": "Median 0.00¢ over 326 fills"
+   "detail": "Median 0.00¢ over 327 fills"
   },
   {
    "id": "length",
    "label": "Trial length: 4 weeks or 1500 bets",
    "status": "pending",
-   "progress": 0.3149024470899471,
+   "progress": 0.31515914351851854,
    "detail": "1.3 weeks, 305 settled bets"
   }
  ],
@@ -1083,18 +1086,18 @@
  },
  "note": "units are net of taker fees at our own fill price; whaleUnits are the same bets at the whale's price before fees; CLV = closing mid minus our fill",
  "lastRun": {
-  "at": 1795874186,
+  "at": 1795874807,
   "status": "ok",
-  "candidates": 36,
-  "ordered": 1,
+  "candidates": 28,
+  "ordered": 2,
   "filled": 1,
-  "rested": 0,
-  "skipped": 1,
+  "rested": 1,
+  "skipped": 0,
   "shadowOrdered": 0,
   "settled": 0,
-  "cancelled": 1,
-  "closes": 19
+  "cancelled": 0,
+  "closes": 15
  },
- "dataUpdated": 1795874107,
+ "dataUpdated": 1795874709,
  "killSwitch": false
 }
